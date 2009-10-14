@@ -1,0 +1,20 @@
+.skinButton {
+	width: 10px;
+	height: 10px;
+	cursor: pointer;
+}
+
+td.subject div {
+	overflow: hidden;
+	height: 15px;
+	width: 410px;
+	text-align:left;
+}
+td.writer div {
+	overflow: hidden;
+	height: 15px;
+	width: 60px;
+}
+td.when {
+	width : 90px;
+}

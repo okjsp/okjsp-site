@@ -1,0 +1,94 @@
+@import url("/site2009/okjsp2009.css");
+
+* {
+	margin: 0px;
+	padding: 0px;
+	font-size: 11px;
+	font-family: dotum;
+	line-height: 18px;
+}
+
+img,table {
+	border: 0px;
+}
+
+h1 {
+	font-size: x-large;
+	line-height: 1.2em;
+}
+
+#f0,#eventMsg,#footer {
+	clear: both;
+}
+
+#f0,#eventMsg {
+	margin-left: 134px;
+}
+
+#eventMsg ul {
+	list-style-type: none;
+	margin-left: 10px;
+}
+
+#eventMsg li,strong {
+	font-size: medium;
+	width: 620px;
+}
+
+#alliance {
+	list-style: none;
+	height: 300px;
+	text-align: center;
+	width: 600px;
+}
+
+.msgMore {
+	color: #808080;
+	margin-top: 1.0em;
+}
+
+#footer {
+	margin-left: 136px;
+}
+
+/*
+* =editor_jquery.jsp
+*/
+div.wysiwyg {
+	padding: 5px 0;
+}
+
+#form_div {
+	width: 644px;
+	float: left;
+	margin-left: 8px;
+}
+
+#form_div dt {
+	width: 80px;
+	border: 0;
+	border-bottom: 1px solid #888;
+	display: inline-block;
+	padding-right: 4px;
+	text-align: right;
+}
+
+#form_div dd {
+	display: inline-block;
+	width: 500px;
+}
+
+#form_div .write {
+	width: 500px;
+	border: 1px solid #ddd;
+	padding: 0;
+}
+
+#form_div #content {
+	width: 600px;
+}
+
+.form_write {
+	margin: 0 auto;
+	width: 600px;
+}

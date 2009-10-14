@@ -1,0 +1,227 @@
+@CHARSET "EUC-KR";
+
+body {
+	margin: 0;
+	font-size: small;
+	background: url(/images/okjspbg.gif);
+}
+
+img {
+	border: 0;
+}
+
+#top {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 780px;
+	height: 50px;
+	background-color: #1974ff
+}
+
+#logo {
+	float: left;
+	margin: 0;
+	padding: 0;
+	height: 50px;
+}
+
+#logo a:link,#logo a:visited,#logo a:hover,#logo a:active {
+	background-color: transparent;
+	background-image: url(/images/okjsp_160x50.png);
+	background-position: -12px 0;
+	background-repeat: no-repeat;
+	display: block;
+	height: 50px;
+	width: 135px;
+	text-indent: -200px;
+	border: 0;
+}
+
+#find {
+	float: right;
+	margin: -1px 5px 0 0;
+	padding: 0;
+}
+
+#navi {
+	margin: 0pt;
+	position: absolute;
+	top: 34px;
+	list-style-type: none;
+	list-style-image: none;
+	list-style-position: outside;
+	left: 660px;
+}
+
+.ln {
+	clear: both;
+	font-size: 3px;
+	width: 100%;
+	height: 3px;
+	background-color: #0033CC;
+	border-bottom: 1px solid #80A0FF
+}
+
+/* bbs */
+.tablestyle {
+	font: 9pt "gulimche";
+	margin-left: 2px;
+	width: 642px;
+}
+
+/* recent */
+#bookList {
+	margin: 20px 8px;
+	border: 1px solid #D0E0F3;
+	width: 600px;
+}
+
+#bookList div {
+	margin: 8px 2px
+}
+
+.book img {
+	border: 0;
+	cursor: pointer;
+}
+
+#banner_top {
+	width: 640px;
+	margin: 4px;
+	text-align: center;
+	overflow: hidden;
+}
+
+/* menu */
+#menuSect {
+	width: 120px;
+	margin: 0 5px 0 3px;
+}
+
+#bbslist {
+	font-size: small;
+	font-weight: normal;
+	width: 120px;
+}
+
+#bbslistmenu {
+	font-size: small;
+	font-style: italic;
+	margin-bottom: 0;
+	padding-left: 4px;
+}
+
+.noticemenu {
+	padding: 1px;
+	border: 1px dotted #888;
+	background-color: #FFFFF3;
+}
+
+/* view */
+#bbstitle {
+	font-size: midium;
+	margin: 5px;
+}
+
+#permlink {
+	color: #B0B0D0;
+	font-size: x-small;
+	text-align: right;
+	width: 640px;
+}
+
+#centent {
+	padding: 8px;
+}
+
+#centent a:link,#centent a:visited {
+	text-decoration: underline;
+}
+
+.quote {
+	border: 1px dotted;
+	padding: 6px;
+}
+
+/* allblet */
+#allblet {
+	padding-left: 40px;
+	width: 602px;
+}
+
+/* memo */
+#m img {
+	margin-right: 3px;
+}
+
+/* sub_panel */
+#sub_panel {
+	position: absolute;
+	top: 62px;
+	left: 790px;
+	width: 160px;
+}
+
+#ad_banners {
+	text-align: center;
+	border: 1px solid #0099B9;
+}
+
+#ad_banners ul {
+	margin: 4px 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+#adinfo {
+	margin-right: 10px;
+	margin-bottom: 4px;
+	text-align: right;
+}
+
+#adinfo a:link,#adinfo a:visited,#adinfo a:hover,#adinfo a:active {
+	font-size: 10px;
+	color: #888;
+}
+
+.sidebar-title {
+	display: block;
+	margin: 17px 0 0;
+	padding: 0;
+	font-size: large;
+}
+
+#imaso_div {
+	margin: 10px 0;
+}
+
+#twitter_update_list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border: 1px solid #0099B9;
+	font-size: smaller;
+	overflow: hidden;
+	word-break: break-all;
+}
+
+#twitter_update_list a:hover {
+	text-decoration: underline;
+}
+
+#twitter_update_list a,#twitter_update_list #content tr.hentry:hover a,#twitter_update_list body#profile #content div.hentry:hover a,#twitter_update_list #side .stats a:hover span.stats_count,#twitter_update_list #side div.user_icon a:hover,#twitter_update_list li.verified-profile a:hover,#twitter_update_list #side .promotion .definition strong
+	{
+	color: #0099B9;
+}
+
+#twitter_update_list li {
+	margin-bottom: 2px;
+}
+
+/* footer */
+#footer {
+	text-align: right;
+	padding-top: 8px;
+	border-top: 1px dotted #96c0ff;
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="Article" size="815,321" id="kr.pe.okjsp" metadata="uml2-1.0" initialized="true" tag="1000" key="32303037303533312D31303030206F6B6A7370323030372F6B656E75">
+  <children xsi:type="editmodel:ClassEditModel" name="Article" location="50,50" size="108,363" id="kr.pe.okjsp/Article" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel" size="85,324">
+      <children xsi:type="editmodel:AttributeEditModel" name="seq" id="kr.pe.okjsp/Article#seq"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="ref" id="kr.pe.okjsp/Article#ref"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="step" id="kr.pe.okjsp/Article#step"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lev" id="kr.pe.okjsp/Article#lev"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="read" id="kr.pe.okjsp/Article#read"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="memo" id="kr.pe.okjsp/Article#memo"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="bbs" id="kr.pe.okjsp/Article#bbs"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="id" id="kr.pe.okjsp/Article#id"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="writer" id="kr.pe.okjsp/Article#writer"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="subject" id="kr.pe.okjsp/Article#subject"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="content" id="kr.pe.okjsp/Article#content"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="password" id="kr.pe.okjsp/Article#password"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="email" id="kr.pe.okjsp/Article#email"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="homepage" id="kr.pe.okjsp/Article#homepage"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="html" id="kr.pe.okjsp/Article#html"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="ip" id="kr.pe.okjsp/Article#ip"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="when" id="kr.pe.okjsp/Article#when"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="ccl_id" id="kr.pe.okjsp/Article#ccl_id"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" interactive="false" properties="open=kr.pe.okjsp/Article;wireOptions=2;Product=eUML2;displayOptions=1"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" showDependencyStereotype="true" showInterfaceStereotype="true" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+</editmodel:ClassDiagramEditModel>

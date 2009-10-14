@@ -1,0 +1,101 @@
+@import "skin.css";
+.body	{
+	background-color:#FFFFFF;
+	color:#000033;
+	}
+.tablestyle {
+	background-color:#F0F0FF
+}
+p           {margin-top:4px;margin-bottom:8px;word-break:break-all}
+.wrap       {word-break:break-all}
+A:link      {font : 9pt "gulimche" ; color: #000000; text-decoration: none}
+A:visited   {font : 9pt "gulimche" ; color: #333333; text-decoration: none}
+A:active    {font : 9pt "gulimche" ; text-decoration: underline}
+A:hover     {border: 0; text-decoration: underline}
+img {
+	border: 0;
+}
+li a:link,a:visited {
+	text-decoration: none;
+}
+
+li a:hover,a:active {
+	border-bottom: 1px dashed #F08080;
+}
+
+.td         {
+            border-top-width: 0px;
+            border-right-width: 0px;
+            border-bottom-width: 1px;
+            border-left-width: 0px;
+            border-bottom-style: solid;
+            border-color: #9FB2B0;
+            }
+.th         {background-color: #c2d3fc;}
+.reply      {
+	color:#000000;
+}
+.tiny       {font : 10px "Arial Narrow" ;}
+.tiny:link  {font : 10px "Arial Narrow" ;}
+.tiny:visited, active, hover
+            {font : 10px "Arial Narrow" ;}
+.search     {color:#CB0000}
+
+#taglist .row {display:block; margin:3px;border-bottom: 1 solid #888888;}
+#taglist .bbs {display:inline; font-weight:bold;margin-right:10px}
+
+#m {font-size:9pt;}
+#m ul {
+	border-bottom:1px dashed #202020;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:3px;
+	padding:5px;
+	}
+#m li {display:inline;}
+#m li.w {font-weight:bold;}
+#m li.c {
+	display:block;
+	margin-right:10px
+	}
+#m li.d {margin-left:10px; font: smaller; color:#666}
+#m li.e a {margin-left:10px; color:#600}
+
+form {
+	margin: 0;
+}
+
+#formSection {
+	width: 238px;
+	height: 50px;
+	margin: 1px;
+	border: 1px solid #8080E0;
+}
+
+#formSection #keyword {
+	width: 140px;
+}
+input, select, textarea {
+	background-color:#FFFFFF;
+	color:#000000;
+	font-weight:bold;
+}
+input.memoid {
+	}
+input.memopw {
+	width: 80px;
+	}
+input.memodc {
+	width: 80px;
+	}
+
+li {
+	margin: 2px;
+}
+
+#selectBbs {
+	width: 50%;
+	height: 12em;
+	overflow: auto;
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMap      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="Member">
+
+  <typeAlias alias="Member" type="kr.pe.okjsp.member.Member"/>
+
+  <resultMap id="MemberResult" class="Member">
+    <result property="id" column="id"/>
+    <result property="password" column="password"/>
+    <result property="name" column="name"/>
+    <result property="email" column="email"/>
+    <result property="joindate" column="joindate"/>
+    <result property="homepage" column="homepage"/>
+    <result property="profile" column="profile"/>
+    <result property="mailing" column="mailing"/>
+    <result property="point" column="point"/>
+    <result property="sid" column="sid"/>
+  </resultMap>
+
+  <select id="selectAllMembers" resultMap="MemberResult">
+    select * from okmember order by sid
+  </select>
+
+</sqlMap>

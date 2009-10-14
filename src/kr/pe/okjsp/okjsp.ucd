@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="okjsp" size="3533,4160" id="kr.pe.okjsp" metadata="uml2-1.0" initialized="true" scrolledY="775" tag="1000" key="32303037303533312D31303030206F6B6A7370323030372F6B656E75">
+  <children xsi:type="editmodel:ClassEditModel" name="BbsController" location="500,1291" size="109,29" id="kr.pe.okjsp/BbsController" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="DownloadServlet" location="113,1575" size="125,75" id="kr.pe.okjsp/DownloadServlet" runTimeClassModel="map,dbCon">
+    <children xsi:type="editmodel:CompartmentEditModel" size="102,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="dbCon" id="kr.pe.okjsp/DownloadServlet#dbCon"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="map" id="kr.pe.okjsp/DownloadServlet#map"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="PopDb" location="45,15" size="76,29" id="kr.pe.okjsp/PopDb" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="MemoServlet" location="761,1515" size="149,139" id="kr.pe.okjsp/MemoServlet" runTimeClassModel="init(Ljavax.servlet.ServletConfig;),doPost(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;),qUERY_MEMO_DEL2,qUERY_MEMO_DEL,dbCon">
+    <children xsi:type="editmodel:CompartmentEditModel" size="126,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="dbCon" id="kr.pe.okjsp/MemoServlet#dbCon"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_MEMO_DEL" id="kr.pe.okjsp/MemoServlet#qUERY_MEMO_DEL"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_MEMO_DEL2" id="kr.pe.okjsp/MemoServlet#qUERY_MEMO_DEL2"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="56,36">
+      <children xsi:type="editmodel:MethodEditModel" name="doPost" id="kr.pe.okjsp/MemoServlet#doPost(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="init" id="kr.pe.okjsp/MemoServlet#init(Ljavax.servlet.ServletConfig;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kr.pe.okjsp/MemoServlet-Standard::Call->kr.pe.okjsp/MemoDao*kr.pe.okjsp/MemoServlet-Standard::Instantiate->kr.pe.okjsp/MemoDao*kr.pe.okjsp/MemoServlet-Soyatec::Import->kr.pe.okjsp/MemoDao" source="//@children.3" target="//@children.5" targetEnd="//@children.3/@sourceConnections.0/@children.2" label="//@children.3/@sourceConnections.0/@children.0" sourceEnd="//@children.3/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Instantiate, Call, Import»" location="605,1675" size="100,10" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="17,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="140,157"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="MoveBean" location="593,1515" size="97,175" id="kr.pe.okjsp/MoveBean" runTimeClassModel="perform(),newBbs,oldRef,seq,writer,oldBbs,ip">
+    <children xsi:type="editmodel:CompartmentEditModel" size="74,108">
+      <children xsi:type="editmodel:AttributeEditModel" name="ip" id="kr.pe.okjsp/MoveBean#ip"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="newBbs" id="kr.pe.okjsp/MoveBean#newBbs"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="oldBbs" id="kr.pe.okjsp/MoveBean#oldBbs"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="oldRef" id="kr.pe.okjsp/MoveBean#oldRef"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="seq" id="kr.pe.okjsp/MoveBean#seq"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="writer" id="kr.pe.okjsp/MoveBean#writer"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="59,18">
+      <children xsi:type="editmodel:MethodEditModel" name="perform" id="kr.pe.okjsp/MoveBean#perform()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kr.pe.okjsp/MoveBean-Standard::Call->kr.pe.okjsp/MemoDao*kr.pe.okjsp/MoveBean-Standard::Instantiate->kr.pe.okjsp/MemoDao*kr.pe.okjsp/MoveBean-Soyatec::Import->kr.pe.okjsp/MemoDao" source="//@children.4" target="//@children.5" targetEnd="//@children.4/@sourceConnections.0/@children.2" label="//@children.4/@sourceConnections.0/@children.0" sourceEnd="//@children.4/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Instantiate, Call, Import»" size="100,10" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="70,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="25,157"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.3/@sourceConnections.0 //@children.4/@sourceConnections.0" name="MemoDao" location="638,1291" size="158,157" id="kr.pe.okjsp/MemoDao" runTimeClassModel="qUERY_MEMO_SEQ,qUERY_MEMO_ADD,setCount(Ljava.sql.Connection;II),write(Ljava.sql.Connection;Ljava.lang.String;JLjava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;I),qUERY_MEMO_COUNT,dbCon">
+    <children xsi:type="editmodel:CompartmentEditModel" size="135,72">
+      <children xsi:type="editmodel:AttributeEditModel" name="dbCon" id="kr.pe.okjsp/MemoDao#dbCon"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_MEMO_ADD" id="kr.pe.okjsp/MemoDao#qUERY_MEMO_ADD"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_MEMO_COUNT" id="kr.pe.okjsp/MemoDao#qUERY_MEMO_COUNT"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_MEMO_SEQ" id="kr.pe.okjsp/MemoDao#qUERY_MEMO_SEQ"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="62,36">
+      <children xsi:type="editmodel:MethodEditModel" name="setCount" id="kr.pe.okjsp/MemoDao#setCount(Ljava.sql.Connection;II)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="write" id="kr.pe.okjsp/MemoDao#write(Ljava.sql.Connection;Ljava.lang.String;JLjava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;I)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="BookmarkServlet" location="120,1710" size="179,175" id="kr.pe.okjsp/BookmarkServlet" runTimeClassModel="init(Ljavax.servlet.ServletConfig;),doPost(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;),doGet(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;),qUERY_BOOKMARK_LIST,qUERY_BOOKMARK_DELETE,qUERY_BOOKMARK_ADD,dbCon">
+    <children xsi:type="editmodel:CompartmentEditModel" size="156,72">
+      <children xsi:type="editmodel:AttributeEditModel" name="dbCon" id="kr.pe.okjsp/BookmarkServlet#dbCon"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_BOOKMARK_ADD" id="kr.pe.okjsp/BookmarkServlet#qUERY_BOOKMARK_ADD"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_BOOKMARK_DELETE" id="kr.pe.okjsp/BookmarkServlet#qUERY_BOOKMARK_DELETE"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_BOOKMARK_LIST" id="kr.pe.okjsp/BookmarkServlet#qUERY_BOOKMARK_LIST"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="56,54">
+      <children xsi:type="editmodel:MethodEditModel" name="doGet" id="kr.pe.okjsp/BookmarkServlet#doGet(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="doPost" id="kr.pe.okjsp/BookmarkServlet#doPost(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="init" id="kr.pe.okjsp/BookmarkServlet#init(Ljavax.servlet.ServletConfig;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kr.pe.okjsp/BookmarkServlet-Standard::Call->kr.pe.okjsp/Bookmark*kr.pe.okjsp/BookmarkServlet-Standard::Instantiate->kr.pe.okjsp/Bookmark*kr.pe.okjsp/BookmarkServlet-Soyatec::Import->kr.pe.okjsp/Bookmark" source="//@children.6" target="//@children.28" targetEnd="//@children.6/@sourceConnections.0/@children.2" label="//@children.6/@sourceConnections.0/@children.0" sourceEnd="//@children.6/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Instantiate, Call, Import»" size="100,10" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="179,128" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,45"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="BookmarkHandler" location="345,1447" size="131,103" id="kr.pe.okjsp/BookmarkHandler" runTimeClassModel="getRecentList(I),getFavoriteList(I),dbCon">
+    <children xsi:type="editmodel:CompartmentEditModel" size="71,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="dbCon" id="kr.pe.okjsp/BookmarkHandler#dbCon"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="83,36">
+      <children xsi:type="editmodel:MethodEditModel" name="getFavoriteList" id="kr.pe.okjsp/BookmarkHandler#getFavoriteList(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getRecentList" id="kr.pe.okjsp/BookmarkHandler#getRecentList(I)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kr.pe.okjsp/BookmarkHandler-Standard::Call->kr.pe.okjsp/BookmarkExtension*kr.pe.okjsp/BookmarkHandler-Standard::Instantiate->kr.pe.okjsp/BookmarkExtension*kr.pe.okjsp/BookmarkHandler-Soyatec::Import->kr.pe.okjsp/BookmarkExtension" source="//@children.7" target="//@children.27" targetEnd="//@children.7/@sourceConnections.0/@children.2" label="//@children.7/@sourceConnections.0/@children.0" sourceEnd="//@children.7/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Instantiate, Call, Import»" size="100,10" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="65,103" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="65,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="PopBbsInfoMapServlet" location="535,1740" size="155,67" id="kr.pe.okjsp/PopBbsInfoMapServlet" runTimeClassModel="init()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="39,18">
+      <children xsi:type="editmodel:MethodEditModel" name="init" id="kr.pe.okjsp/PopBbsInfoMapServlet#init()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kr.pe.okjsp/PopBbsInfoMapServlet-Standard::Call->kr.pe.okjsp/BbsInfoBean*kr.pe.okjsp/PopBbsInfoMapServlet-Standard::Instantiate->kr.pe.okjsp/BbsInfoBean*kr.pe.okjsp/PopBbsInfoMapServlet-Soyatec::Import->kr.pe.okjsp/BbsInfoBean" source="//@children.8" target="//@children.10" targetEnd="//@children.8/@sourceConnections.0/@children.2" label="//@children.8/@sourceConnections.0/@children.0" sourceEnd="//@children.8/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Instantiate, Call, Import»" size="100,10" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="155,33" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,81"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SiteSearch" location="968,1719" size="109,121" id="kr.pe.okjsp/SiteSearch" runTimeClassModel="getKeywordKor(),keyword,keyfield,getResult()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="77,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="keyfield" id="kr.pe.okjsp/SiteSearch#keyfield"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="keyword" id="kr.pe.okjsp/SiteSearch#keyword"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="86,36">
+      <children xsi:type="editmodel:MethodEditModel" name="getKeywordKor" id="kr.pe.okjsp/SiteSearch#getKeywordKor()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getResult" id="kr.pe.okjsp/SiteSearch#getResult()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kr.pe.okjsp/SiteSearch-Standard::Instantiate->kr.pe.okjsp/BbsInfoBean" source="//@children.9" target="//@children.10" targetEnd="//@children.9/@sourceConnections.0/@children.2" label="//@children.9/@sourceConnections.0/@children.0" sourceEnd="//@children.9/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Instantiate»" size="54,10" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,60" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="105,87"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.8/@sourceConnections.0 //@children.9/@sourceConnections.0" name="BbsInfoBean" location="783,1692" size="105,175" id="kr.pe.okjsp/BbsInfoBean" runTimeClassModel="searchCount,BbsInfoBean(Ljava.lang.String;I),cseq,header,BbsInfoBean(),bbs,name">
+    <children xsi:type="editmodel:CompartmentEditModel" size="78,90">
+      <children xsi:type="editmodel:AttributeEditModel" name="bbs" id="kr.pe.okjsp/BbsInfoBean#bbs"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="cseq" id="kr.pe.okjsp/BbsInfoBean#cseq"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="header" id="kr.pe.okjsp/BbsInfoBean#header"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="name" id="kr.pe.okjsp/BbsInfoBean#name"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="searchCount" id="kr.pe.okjsp/BbsInfoBean#searchCount"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="75,36">
+      <children xsi:type="editmodel:MethodEditModel" name="BbsInfoBean" id="kr.pe.okjsp/BbsInfoBean#BbsInfoBean()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="BbsInfoBean" id="kr.pe.okjsp/BbsInfoBean#BbsInfoBean(Ljava.lang.String;I)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="WriteServlet" location="259,750" size="97,103" id="kr.pe.okjsp/WriteServlet" runTimeClassModel="init(Ljavax.servlet.ServletConfig;),doPost(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;),isSpam(Lkr.pe.okjsp.Article;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="56,54">
+      <children xsi:type="editmodel:MethodEditModel" name="doPost" id="kr.pe.okjsp/WriteServlet#doPost(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="init" id="kr.pe.okjsp/WriteServlet#init(Ljavax.servlet.ServletConfig;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isSpam" id="kr.pe.okjsp/WriteServlet#isSpam(Lkr.pe.okjsp.Article;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kr.pe.okjsp/WriteServlet-Standard::Call->kr.pe.okjsp/ArticleDao*kr.pe.okjsp/WriteServlet-Standard::Instantiate->kr.pe.okjsp/ArticleDao*kr.pe.okjsp/WriteServlet-Soyatec::Import->kr.pe.okjsp/ArticleDao" source="//@children.11" target="//@children.25" targetEnd="//@children.11/@sourceConnections.0/@children.2" label="//@children.11/@sourceConnections.0/@children.0" sourceEnd="//@children.11/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Instantiate, Call, Import»" size="100,10" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,81" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="178,21"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kr.pe.okjsp/WriteServlet-Standard::Call->kr.pe.okjsp/Article*kr.pe.okjsp/WriteServlet-Standard::Instantiate->kr.pe.okjsp/Article*kr.pe.okjsp/WriteServlet-Soyatec::Import->kr.pe.okjsp/Article" source="//@children.11" target="//@children.18" targetEnd="//@children.11/@sourceConnections.1/@children.2" label="//@children.11/@sourceConnections.1/@children.0" sourceEnd="//@children.11/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Instantiate, Call, Import»" size="100,10" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="97,51" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,237"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kr.pe.okjsp/WriteServlet-Standard::Instantiate->kr.pe.okjsp/DownFile" source="//@children.11" target="//@children.13" targetEnd="//@children.11/@sourceConnections.2/@children.2" label="//@children.11/@sourceConnections.2/@children.0" sourceEnd="//@children.11/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Instantiate»" size="54,10" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="37,103" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="84,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.24/@sourceConnections.0 //@children.21/@sourceConnections.0" name="BbsRoleHandler" location="809,934" size="120,103" id="kr.pe.okjsp/BbsRoleHandler" runTimeClassModel="init(),BbsRoleHandler(),getPermission(Lkr.pe.okjsp.member.Member;Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="85,54">
+      <children xsi:type="editmodel:MethodEditModel" name="BbsRoleHandler" id="kr.pe.okjsp/BbsRoleHandler#BbsRoleHandler()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPermission" id="kr.pe.okjsp/BbsRoleHandler#getPermission(Lkr.pe.okjsp.member.Member;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="init" id="kr.pe.okjsp/BbsRoleHandler#init()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.25/@sourceConnections.1 //@children.22/@sourceConnections.2 //@children.21/@sourceConnections.4 //@children.11/@sourceConnections.2" name="DownFile" location="120,1275" size="111,265" id="kr.pe.okjsp/DownFile" runTimeClassModel="isImageFile(),setFile(ILjava.lang.String;Ljava.lang.String;JI),download,fileName,DownFile(Ljava.io.File;I),getExtension(),fileSize,fseq,setExt(Ljava.lang.String;),DownFile(),DownFile(ILjava.lang.String;Ljava.lang.String;JI),maskName">
+    <children xsi:type="editmodel:CompartmentEditModel" size="88,90">
+      <children xsi:type="editmodel:AttributeEditModel" name="download" id="kr.pe.okjsp/DownFile#download"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="fileName" id="kr.pe.okjsp/DownFile#fileName"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="fileSize" id="kr.pe.okjsp/DownFile#fileSize"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="fseq" id="kr.pe.okjsp/DownFile#fseq"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="maskName" id="kr.pe.okjsp/DownFile#maskName"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="75,126">
+      <children xsi:type="editmodel:MethodEditModel" name="DownFile" id="kr.pe.okjsp/DownFile#DownFile()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="DownFile" id="kr.pe.okjsp/DownFile#DownFile(Ljava.io.File;I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="DownFile" id="kr.pe.okjsp/DownFile#DownFile(ILjava.lang.String;Ljava.lang.String;JI)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getExtension" id="kr.pe.okjsp/DownFile#getExtension()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isImageFile" id="kr.pe.okjsp/DownFile#isImageFile()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setExt" id="kr.pe.okjsp/DownFile#setExt(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setFile" id="kr.pe.okjsp/DownFile#setFile(ILjava.lang.String;Ljava.lang.String;JI)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="TagController" location="263,60" size="108,29" id="kr.pe.okjsp/TagController" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kr.pe.okjsp/TagController-Standard::Call->kr.pe.okjsp/TagHandler*kr.pe.okjsp/TagController-Standard::Instantiate->kr.pe.okjsp/TagHandler" source="//@children.14" target="//@children.19" targetEnd="//@children.14/@sourceConnections.0/@children.2" label="//@children.14/@sourceConnections.0/@children.0" sourceEnd="//@children.14/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Instantiate, Call»" size="71,10" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="79,14" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,59"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="ReplyServlet" location="293,990" size="100,67" id="kr.pe.okjsp/ReplyServlet" runTimeClassModel="doGet(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="52,18">
+      <children xsi:type="editmodel:MethodEditModel" name="doGet" id="kr.pe.okjsp/ReplyServlet#doGet(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kr.pe.okjsp/ReplyServlet-Standard::Call->kr.pe.okjsp/Article*kr.pe.okjsp/ReplyServlet-Soyatec::Import->kr.pe.okjsp/Article" source="//@children.15" target="//@children.18" targetEnd="//@children.15/@sourceConnections.0/@children.2" label="//@children.15/@sourceConnections.0/@children.0" sourceEnd="//@children.15/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Call, Import»" size="57,10" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="77,33" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,459"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kr.pe.okjsp/ReplyServlet-Standard::Call->kr.pe.okjsp/ArticleDao*kr.pe.okjsp/ReplyServlet-Standard::Instantiate->kr.pe.okjsp/ArticleDao" source="//@children.15" target="//@children.25" targetEnd="//@children.15/@sourceConnections.1/@children.2" label="//@children.15/@sourceConnections.1/@children.0" sourceEnd="//@children.15/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Instantiate, Call»" size="71,10" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,33" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="178,213"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.19/@sourceConnections.1" name="Tag" location="723,30" size="81,129" id="kr.pe.okjsp/Tag" runTimeClassModel="cnt,tagseq,seq,tag,id">
+    <children xsi:type="editmodel:CompartmentEditModel" size="58,90">
+      <children xsi:type="editmodel:AttributeEditModel" name="cnt" id="kr.pe.okjsp/Tag#cnt"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="id" id="kr.pe.okjsp/Tag#id"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="seq" id="kr.pe.okjsp/Tag#seq"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="tag" id="kr.pe.okjsp/Tag#tag"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="tagseq" id="kr.pe.okjsp/Tag#tagseq"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="ListHandler" location="12,195" size="174,589" id="kr.pe.okjsp/ListHandler" runTimeClassModel="getList(Ljava.lang.String;Ljava.util.ArrayList;),pg,cnt,getList(),bbs,manager,getRecentList(Ljava.lang.String;I),dbCon,keyword,setKeyword(Ljava.lang.String;),setBbs(Ljava.lang.String;),getCnt(),getBbs(),setPg(I),pageSize,aRTICLE_LIST_REF,aRTICLE_LIST_COUNT,aRTICLE_LIST_RECENT,getKeyword(),getAllRecentList(I),setPageSize(I),getPageSize(),keyfield,aRTICLE_LIST,getPg(),setCnt(),getKeyfield(),getRefList(Ljava.lang.String;I),aRTICLE_LIST_ALL_RECENT,setKeyfield(Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="151,234">
+      <children xsi:type="editmodel:AttributeEditModel" name="aRTICLE_LIST" id="kr.pe.okjsp/ListHandler#aRTICLE_LIST"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="aRTICLE_LIST_ALL_RECENT" id="kr.pe.okjsp/ListHandler#aRTICLE_LIST_ALL_RECENT"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="aRTICLE_LIST_COUNT" id="kr.pe.okjsp/ListHandler#aRTICLE_LIST_COUNT"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="aRTICLE_LIST_RECENT" id="kr.pe.okjsp/ListHandler#aRTICLE_LIST_RECENT"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="aRTICLE_LIST_REF" id="kr.pe.okjsp/ListHandler#aRTICLE_LIST_REF"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="bbs" id="kr.pe.okjsp/ListHandler#bbs"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="cnt" id="kr.pe.okjsp/ListHandler#cnt"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="dbCon" id="kr.pe.okjsp/ListHandler#dbCon"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="keyfield" id="kr.pe.okjsp/ListHandler#keyfield"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="keyword" id="kr.pe.okjsp/ListHandler#keyword"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="manager" id="kr.pe.okjsp/ListHandler#manager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="pageSize" id="kr.pe.okjsp/ListHandler#pageSize"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="pg" id="kr.pe.okjsp/ListHandler#pg"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="85,306">
+      <children xsi:type="editmodel:MethodEditModel" name="getAllRecentList" id="kr.pe.okjsp/ListHandler#getAllRecentList(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBbs" id="kr.pe.okjsp/ListHandler#getBbs()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCnt" id="kr.pe.okjsp/ListHandler#getCnt()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getKeyfield" id="kr.pe.okjsp/ListHandler#getKeyfield()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getKeyword" id="kr.pe.okjsp/ListHandler#getKeyword()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getList" id="kr.pe.okjsp/ListHandler#getList(Ljava.lang.String;Ljava.util.ArrayList;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getList" id="kr.pe.okjsp/ListHandler#getList()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPageSize" id="kr.pe.okjsp/ListHandler#getPageSize()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPg" id="kr.pe.okjsp/ListHandler#getPg()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getRecentList" id="kr.pe.okjsp/ListHandler#getRecentList(Ljava.lang.String;I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getRefList" id="kr.pe.okjsp/ListHandler#getRefList(Ljava.lang.String;I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setBbs" id="kr.pe.okjsp/ListHandler#setBbs(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setCnt" id="kr.pe.okjsp/ListHandler#setCnt()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setKeyfield" id="kr.pe.okjsp/ListHandler#setKeyfield(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setKeyword" id="kr.pe.okjsp/ListHandler#setKeyword(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setPageSize" id="kr.pe.okjsp/ListHandler#setPageSize(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setPg" id="kr.pe.okjsp/ListHandler#setPg(I)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kr.pe.okjsp/ListHandler-Standard::Call->kr.pe.okjsp/Article*kr.pe.okjsp/ListHandler-Standard::Instantiate->kr.pe.okjsp/Article*kr.pe.okjsp/ListHandler-Soyatec::Import->kr.pe.okjsp/Article" source="//@children.17" target="//@children.18" targetEnd="//@children.17/@sourceConnections.0/@children.2" label="//@children.17/@sourceConnections.0/@children.0" sourceEnd="//@children.17/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Instantiate, Call, Import»" size="100,10" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="174,479" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,110"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.25/@sourceConnections.0 //@children.24/@sourceConnections.1 //@children.26/@sourceConnections.0 //@children.17/@sourceConnections.0 //@children.22/@sourceConnections.1 //@children.15/@sourceConnections.0 //@children.19/@sourceConnections.0 //@children.21/@sourceConnections.2 //@children.11/@sourceConnections.1" name="Article" location="450,564" size="110,517" id="kr.pe.okjsp/Article" runTimeClassModel="sid,when,getContentView(),Article(Ljava.lang.String;IIIILjava.lang.String;JLjava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;ILjava.sql.Timestamp;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;),html,seq,bbs,homepage,setContents(Ljava.lang.String;IIIILjava.lang.String;JLjava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;ILjava.sql.Timestamp;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;),Article(),id,getWhen(Ljava.lang.String;),lev,writer,ip,read,password,memo,getSubject(I),content,getWriter(I),ccl_id,ref,email,subject,step">
+    <children xsi:type="editmodel:CompartmentEditModel" size="85,342">
+      <children xsi:type="editmodel:AttributeEditModel" name="bbs" id="kr.pe.okjsp/Article#bbs"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="ccl_id" id="kr.pe.okjsp/Article#ccl_id"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="content" id="kr.pe.okjsp/Article#content"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="email" id="kr.pe.okjsp/Article#email"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="homepage" id="kr.pe.okjsp/Article#homepage"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="html" id="kr.pe.okjsp/Article#html"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="id" id="kr.pe.okjsp/Article#id"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="ip" id="kr.pe.okjsp/Article#ip"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lev" id="kr.pe.okjsp/Article#lev"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="memo" id="kr.pe.okjsp/Article#memo"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="password" id="kr.pe.okjsp/Article#password"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="read" id="kr.pe.okjsp/Article#read"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="ref" id="kr.pe.okjsp/Article#ref"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="seq" id="kr.pe.okjsp/Article#seq"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="sid" id="kr.pe.okjsp/Article#sid"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="step" id="kr.pe.okjsp/Article#step"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="subject" id="kr.pe.okjsp/Article#subject"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="when" id="kr.pe.okjsp/Article#when"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="writer" id="kr.pe.okjsp/Article#writer"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="87,126">
+      <children xsi:type="editmodel:MethodEditModel" name="Article" id="kr.pe.okjsp/Article#Article(Ljava.lang.String;IIIILjava.lang.String;JLjava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;ILjava.sql.Timestamp;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Article" id="kr.pe.okjsp/Article#Article()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getContentView" id="kr.pe.okjsp/Article#getContentView()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSubject" id="kr.pe.okjsp/Article#getSubject(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getWhen" id="kr.pe.okjsp/Article#getWhen(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getWriter" id="kr.pe.okjsp/Article#getWriter(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setContents" id="kr.pe.okjsp/Article#setContents(Ljava.lang.String;IIIILjava.lang.String;JLjava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;ILjava.sql.Timestamp;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.14/@sourceConnections.0" name="TagHandler" location="445,15" size="175,373" id="kr.pe.okjsp/TagHandler" runTimeClassModel="qUERY_TAG_RECENT,add(Ljava.lang.String;Ljava.lang.String;I),qUERY_TAG_BY_SEQ,qUERY_TAG_BY_USERID,qUERY_TAG_CNT_UP,getTagsByUser(Ljava.lang.String;),getTag(I),qUERY_TAG_SELECT,dbCon,getArticlesByTagseq(I),qUERY_TAG_USER_INSERT,getRecentTags(I),qUERY_TAG_TAGSEQ,qUERY_TAG_INFO,qUERY_TAG_BY_TAGSEQ,qUERY_TAG_INSERT,getTagsBySeq(I),findTagseqByTag(Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="152,198">
+      <children xsi:type="editmodel:AttributeEditModel" name="dbCon" id="kr.pe.okjsp/TagHandler#dbCon"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_TAG_BY_SEQ" id="kr.pe.okjsp/TagHandler#qUERY_TAG_BY_SEQ"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_TAG_BY_TAGSEQ" id="kr.pe.okjsp/TagHandler#qUERY_TAG_BY_TAGSEQ"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_TAG_BY_USERID" id="kr.pe.okjsp/TagHandler#qUERY_TAG_BY_USERID"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_TAG_CNT_UP" id="kr.pe.okjsp/TagHandler#qUERY_TAG_CNT_UP"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_TAG_INFO" id="kr.pe.okjsp/TagHandler#qUERY_TAG_INFO"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_TAG_INSERT" id="kr.pe.okjsp/TagHandler#qUERY_TAG_INSERT"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_TAG_RECENT" id="kr.pe.okjsp/TagHandler#qUERY_TAG_RECENT"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_TAG_SELECT" id="kr.pe.okjsp/TagHandler#qUERY_TAG_SELECT"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_TAG_TAGSEQ" id="kr.pe.okjsp/TagHandler#qUERY_TAG_TAGSEQ"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_TAG_USER_INSERT" id="kr.pe.okjsp/TagHandler#qUERY_TAG_USER_INSERT"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="102,126">
+      <children xsi:type="editmodel:MethodEditModel" name="add" id="kr.pe.okjsp/TagHandler#add(Ljava.lang.String;Ljava.lang.String;I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findTagseqByTag" id="kr.pe.okjsp/TagHandler#findTagseqByTag(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getArticlesByTagseq" id="kr.pe.okjsp/TagHandler#getArticlesByTagseq(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getRecentTags" id="kr.pe.okjsp/TagHandler#getRecentTags(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTag" id="kr.pe.okjsp/TagHandler#getTag(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTagsBySeq" id="kr.pe.okjsp/TagHandler#getTagsBySeq(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTagsByUser" id="kr.pe.okjsp/TagHandler#getTagsByUser(Ljava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kr.pe.okjsp/TagHandler-Standard::Call->kr.pe.okjsp/Article*kr.pe.okjsp/TagHandler-Standard::Instantiate->kr.pe.okjsp/Article*kr.pe.okjsp/TagHandler-Soyatec::Import->kr.pe.okjsp/Article" source="//@children.19" target="//@children.18" targetEnd="//@children.19/@sourceConnections.0/@children.2" label="//@children.19/@sourceConnections.0/@children.0" sourceEnd="//@children.19/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Instantiate, Call, Import»" size="100,10" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="59,373" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="54,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kr.pe.okjsp/TagHandler-Standard::Call->kr.pe.okjsp/Tag*kr.pe.okjsp/TagHandler-Standard::Instantiate->kr.pe.okjsp/Tag*kr.pe.okjsp/TagHandler-Soyatec::Import->kr.pe.okjsp/Tag" source="//@children.19" target="//@children.16" targetEnd="//@children.19/@sourceConnections.1/@children.2" label="//@children.19/@sourceConnections.1/@children.0" sourceEnd="//@children.19/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Instantiate, Call, Import»" size="100,10" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="175,79" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,64"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.23/@sourceConnections.0" name="MemoBean" location="928,1455" size="111,211" id="kr.pe.okjsp/MemoBean" runTimeClassModel="mseq,getWriter(I),seq,writer,bcomment,wtime,ip,id,getWhen(Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="88,126">
+      <children xsi:type="editmodel:AttributeEditModel" name="bcomment" id="kr.pe.okjsp/MemoBean#bcomment"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="id" id="kr.pe.okjsp/MemoBean#id"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="ip" id="kr.pe.okjsp/MemoBean#ip"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mseq" id="kr.pe.okjsp/MemoBean#mseq"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="seq" id="kr.pe.okjsp/MemoBean#seq"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="writer" id="kr.pe.okjsp/MemoBean#writer"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="wtime" id="kr.pe.okjsp/MemoBean#wtime"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="63,36">
+      <children xsi:type="editmodel:MethodEditModel" name="getWhen" id="kr.pe.okjsp/MemoBean#getWhen(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getWriter" id="kr.pe.okjsp/MemoBean#getWriter(I)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="ViewServlet" location="619,1020" size="144,157" id="kr.pe.okjsp/ViewServlet" runTimeClassModel="qUERY_FILE,init(Ljavax.servlet.ServletConfig;),qUERY_NEXT,qUERY_COUNT_UP,doGet(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;),qUERY_PREV">
+    <children xsi:type="editmodel:CompartmentEditModel" size="121,72">
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_COUNT_UP" id="kr.pe.okjsp/ViewServlet#qUERY_COUNT_UP"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_FILE" id="kr.pe.okjsp/ViewServlet#qUERY_FILE"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_NEXT" id="kr.pe.okjsp/ViewServlet#qUERY_NEXT"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_PREV" id="kr.pe.okjsp/ViewServlet#qUERY_PREV"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="52,36">
+      <children xsi:type="editmodel:MethodEditModel" name="doGet" id="kr.pe.okjsp/ViewServlet#doGet(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="init" id="kr.pe.okjsp/ViewServlet#init(Ljavax.servlet.ServletConfig;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kr.pe.okjsp/ViewServlet-Standard::Call->kr.pe.okjsp/BbsRoleHandler*kr.pe.okjsp/ViewServlet-Standard::Instantiate->kr.pe.okjsp/BbsRoleHandler" source="//@children.21" target="//@children.12" targetEnd="//@children.21/@sourceConnections.0/@children.2" label="//@children.21/@sourceConnections.0/@children.0" sourceEnd="//@children.21/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Instantiate, Call»" size="71,10" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="144,8" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,94"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kr.pe.okjsp/ViewServlet-Standard::Call->kr.pe.okjsp/ArticleDao*kr.pe.okjsp/ViewServlet-Standard::Instantiate->kr.pe.okjsp/ArticleDao" source="//@children.21" target="//@children.25" targetEnd="//@children.21/@sourceConnections.1/@children.2" label="//@children.21/@sourceConnections.1/@children.0" sourceEnd="//@children.21/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Instantiate, Call»" size="71,10" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,78" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="178,288"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kr.pe.okjsp/ViewServlet-Standard::Call->kr.pe.okjsp/Article*kr.pe.okjsp/ViewServlet-Soyatec::Import->kr.pe.okjsp/Article" source="//@children.21" target="//@children.18" targetEnd="//@children.21/@sourceConnections.2/@children.2" label="//@children.21/@sourceConnections.2/@children.0" sourceEnd="//@children.21/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Call, Import»" size="57,10" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="19,30" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="110,486"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kr.pe.okjsp/ViewServlet-Standard::Call->kr.pe.okjsp/MemoHandler*kr.pe.okjsp/ViewServlet-Standard::Instantiate->kr.pe.okjsp/MemoHandler" source="//@children.21" target="//@children.23" targetEnd="//@children.21/@sourceConnections.3/@children.2" label="//@children.21/@sourceConnections.3/@children.0" sourceEnd="//@children.21/@sourceConnections.3/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Instantiate, Call»" size="71,10" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="144,123" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,33"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kr.pe.okjsp/ViewServlet-Standard::Instantiate->kr.pe.okjsp/DownFile" source="//@children.21" target="//@children.13" targetEnd="//@children.21/@sourceConnections.4/@children.2" label="//@children.21/@sourceConnections.4/@children.0" sourceEnd="//@children.21/@sourceConnections.4/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Instantiate»" size="54,10" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,121" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="111,98"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="ModifyServlet" location="329,1155" size="107,121" id="kr.pe.okjsp/ModifyServlet" runTimeClassModel="init(Ljavax.servlet.ServletConfig;),doPost(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;),doGet(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;),dbCon">
+    <children xsi:type="editmodel:CompartmentEditModel" size="71,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="dbCon" id="kr.pe.okjsp/ModifyServlet#dbCon"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="56,54">
+      <children xsi:type="editmodel:MethodEditModel" name="doGet" id="kr.pe.okjsp/ModifyServlet#doGet(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="doPost" id="kr.pe.okjsp/ModifyServlet#doPost(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="init" id="kr.pe.okjsp/ModifyServlet#init(Ljavax.servlet.ServletConfig;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kr.pe.okjsp/ModifyServlet-Standard::Call->kr.pe.okjsp/ArticleDao*kr.pe.okjsp/ModifyServlet-Standard::Instantiate->kr.pe.okjsp/ArticleDao" source="//@children.22" target="//@children.25" targetEnd="//@children.22/@sourceConnections.0/@children.2" label="//@children.22/@sourceConnections.0/@children.0" sourceEnd="//@children.22/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Instantiate, Call»" size="71,10" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,22" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="178,367"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kr.pe.okjsp/ModifyServlet-Standard::Call->kr.pe.okjsp/Article*kr.pe.okjsp/ModifyServlet-Soyatec::Import->kr.pe.okjsp/Article" source="//@children.22" target="//@children.18" targetEnd="//@children.22/@sourceConnections.1/@children.2" label="//@children.22/@sourceConnections.1/@children.0" sourceEnd="//@children.22/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Call, Import»" size="57,10" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="72,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,434"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kr.pe.okjsp/ModifyServlet-Standard::Instantiate->kr.pe.okjsp/DownFile" source="//@children.22" target="//@children.13" targetEnd="//@children.22/@sourceConnections.2/@children.2" label="//@children.22/@sourceConnections.2/@children.0" sourceEnd="//@children.22/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Instantiate»" size="54,10" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,120" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="111,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.21/@sourceConnections.3" name="MemoHandler" location="840,1110" size="179,283" id="kr.pe.okjsp/MemoHandler" runTimeClassModel="getList(I),mEMO_RECENT_WRITER,mEMO_RECENT_BCOMMENT,getRecent(I),dbCon,keyword,mEMO_QUERY,MemoHandler(),field,getCount(),pageSize,setKeyfield(Ljava.lang.String;),mEMO_COUNT">
+    <children xsi:type="editmodel:CompartmentEditModel" size="156,144">
+      <children xsi:type="editmodel:AttributeEditModel" name="dbCon" id="kr.pe.okjsp/MemoHandler#dbCon"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="field" id="kr.pe.okjsp/MemoHandler#field"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="keyword" id="kr.pe.okjsp/MemoHandler#keyword"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mEMO_COUNT" id="kr.pe.okjsp/MemoHandler#mEMO_COUNT"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mEMO_QUERY" id="kr.pe.okjsp/MemoHandler#mEMO_QUERY"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mEMO_RECENT_BCOMMENT" id="kr.pe.okjsp/MemoHandler#mEMO_RECENT_BCOMMENT"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mEMO_RECENT_WRITER" id="kr.pe.okjsp/MemoHandler#mEMO_RECENT_WRITER"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="pageSize" id="kr.pe.okjsp/MemoHandler#pageSize"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="80,90">
+      <children xsi:type="editmodel:MethodEditModel" name="MemoHandler" id="kr.pe.okjsp/MemoHandler#MemoHandler()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCount" id="kr.pe.okjsp/MemoHandler#getCount()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getList" id="kr.pe.okjsp/MemoHandler#getList(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getRecent" id="kr.pe.okjsp/MemoHandler#getRecent(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setKeyfield" id="kr.pe.okjsp/MemoHandler#setKeyfield(Ljava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kr.pe.okjsp/MemoHandler-Standard::Call->kr.pe.okjsp/MemoBean*kr.pe.okjsp/MemoHandler-Standard::Instantiate->kr.pe.okjsp/MemoBean*kr.pe.okjsp/MemoHandler-Soyatec::Import->kr.pe.okjsp/MemoBean" source="//@children.23" target="//@children.20" targetEnd="//@children.23/@sourceConnections.0/@children.2" label="//@children.23/@sourceConnections.0/@children.0" sourceEnd="//@children.23/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Instantiate, Call, Import»" size="100,10" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="133,283" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="45,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="ControllerServlet" location="809,675" size="120,121" id="kr.pe.okjsp/ControllerServlet" runTimeClassModel="destroy(),init(Ljavax.servlet.ServletConfig;),doPost(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;),doGet(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="57,72">
+      <children xsi:type="editmodel:MethodEditModel" name="destroy" id="kr.pe.okjsp/ControllerServlet#destroy()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="doGet" id="kr.pe.okjsp/ControllerServlet#doGet(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="doPost" id="kr.pe.okjsp/ControllerServlet#doPost(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="init" id="kr.pe.okjsp/ControllerServlet#init(Ljavax.servlet.ServletConfig;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kr.pe.okjsp/ControllerServlet-Standard::Call->kr.pe.okjsp/BbsRoleHandler*kr.pe.okjsp/ControllerServlet-Standard::Instantiate->kr.pe.okjsp/BbsRoleHandler" source="//@children.24" target="//@children.12" targetEnd="//@children.24/@sourceConnections.0/@children.2" label="//@children.24/@sourceConnections.0/@children.0" sourceEnd="//@children.24/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Instantiate, Call»" size="71,10" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="60,121" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="60,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kr.pe.okjsp/ControllerServlet-Standard::Call->kr.pe.okjsp/Article*kr.pe.okjsp/ControllerServlet-Standard::Instantiate->kr.pe.okjsp/Article*kr.pe.okjsp/ControllerServlet-Soyatec::Import->kr.pe.okjsp/Article" source="//@children.24" target="//@children.18" targetEnd="//@children.24/@sourceConnections.1/@children.2" label="//@children.24/@sourceConnections.1/@children.0" sourceEnd="//@children.24/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Instantiate, Call, Import»" size="100,10" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,60" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="110,171"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.22/@sourceConnections.0 //@children.15/@sourceConnections.1 //@children.21/@sourceConnections.1 //@children.11/@sourceConnections.0" name="ArticleDao" location="8,810" size="178,391" id="kr.pe.okjsp/ArticleDao" runTimeClassModel="qUERY_ADD_FILE,addFile(Ljava.sql.Connection;ILjava.util.ArrayList;),qUERY_DEL_FSEQ_FILE,write(Ljava.sql.Connection;Lkr.pe.okjsp.Article;),getSeq(Ljava.sql.Connection;),qUERY_ONE,qUERY_NEW_FILE_SEQ,qUERY_NEW_SEQ,getNewRef(Ljava.sql.Connection;Ljava.lang.String;),modify(Ljava.sql.Connection;Lkr.pe.okjsp.Article;),fetchNewRef(Ljava.sql.Connection;Ljava.lang.String;Ljava.lang.String;),dbCon,reply(Ljava.sql.Connection;Lkr.pe.okjsp.Article;),qUERY_NEW_SEQ_DELETED,qUERY_NEW_REF_DELETED,qUERY_NEW_REF,deleteFiles(Ljava.sql.Connection;[Ljava.lang.String;),fetchNew(Ljava.sql.Connection;Ljava.lang.String;),getArticle(ILjava.sql.Connection;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="155,162">
+      <children xsi:type="editmodel:AttributeEditModel" name="dbCon" id="kr.pe.okjsp/ArticleDao#dbCon"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_ADD_FILE" id="kr.pe.okjsp/ArticleDao#qUERY_ADD_FILE"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_DEL_FSEQ_FILE" id="kr.pe.okjsp/ArticleDao#qUERY_DEL_FSEQ_FILE"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_NEW_FILE_SEQ" id="kr.pe.okjsp/ArticleDao#qUERY_NEW_FILE_SEQ"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_NEW_REF" id="kr.pe.okjsp/ArticleDao#qUERY_NEW_REF"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_NEW_REF_DELETED" id="kr.pe.okjsp/ArticleDao#qUERY_NEW_REF_DELETED"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_NEW_SEQ" id="kr.pe.okjsp/ArticleDao#qUERY_NEW_SEQ"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_NEW_SEQ_DELETED" id="kr.pe.okjsp/ArticleDao#qUERY_NEW_SEQ_DELETED"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_ONE" id="kr.pe.okjsp/ArticleDao#qUERY_ONE"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="77,180">
+      <children xsi:type="editmodel:MethodEditModel" name="addFile" id="kr.pe.okjsp/ArticleDao#addFile(Ljava.sql.Connection;ILjava.util.ArrayList;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="deleteFiles" id="kr.pe.okjsp/ArticleDao#deleteFiles(Ljava.sql.Connection;[Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="fetchNew" id="kr.pe.okjsp/ArticleDao#fetchNew(Ljava.sql.Connection;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="fetchNewRef" id="kr.pe.okjsp/ArticleDao#fetchNewRef(Ljava.sql.Connection;Ljava.lang.String;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getArticle" id="kr.pe.okjsp/ArticleDao#getArticle(ILjava.sql.Connection;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getNewRef" id="kr.pe.okjsp/ArticleDao#getNewRef(Ljava.sql.Connection;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSeq" id="kr.pe.okjsp/ArticleDao#getSeq(Ljava.sql.Connection;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="modify" id="kr.pe.okjsp/ArticleDao#modify(Ljava.sql.Connection;Lkr.pe.okjsp.Article;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="reply" id="kr.pe.okjsp/ArticleDao#reply(Ljava.sql.Connection;Lkr.pe.okjsp.Article;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="write" id="kr.pe.okjsp/ArticleDao#write(Ljava.sql.Connection;Lkr.pe.okjsp.Article;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kr.pe.okjsp/ArticleDao-Standard::Call->kr.pe.okjsp/Article*kr.pe.okjsp/ArticleDao-Standard::Instantiate->kr.pe.okjsp/Article*kr.pe.okjsp/ArticleDao-Soyatec::Import->kr.pe.okjsp/Article" source="//@children.25" target="//@children.18" targetEnd="//@children.25/@sourceConnections.0/@children.2" label="//@children.25/@sourceConnections.0/@children.0" sourceEnd="//@children.25/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Instantiate, Call, Import»" size="100,10" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="178,135" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,381"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kr.pe.okjsp/ArticleDao-Standard::Call->kr.pe.okjsp/DownFile*kr.pe.okjsp/ArticleDao-Soyatec::Import->kr.pe.okjsp/DownFile" source="//@children.25" target="//@children.13" targetEnd="//@children.25/@sourceConnections.1/@children.2" label="//@children.25/@sourceConnections.1/@children.0" sourceEnd="//@children.25/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Call, Import»" size="57,10" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="144,391" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="32,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="DeleteServlet" location="686,465" size="155,193" id="kr.pe.okjsp/DeleteServlet" runTimeClassModel="init(Ljavax.servlet.ServletConfig;),qUERY_DEL_SEQ_FILE,doPost(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;),qUERY_DELETE,doGet(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;),qUERY_MOVE,dbCon,qUERY_PASSWORD">
+    <children xsi:type="editmodel:CompartmentEditModel" size="132,90">
+      <children xsi:type="editmodel:AttributeEditModel" name="dbCon" id="kr.pe.okjsp/DeleteServlet#dbCon"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_DELETE" id="kr.pe.okjsp/DeleteServlet#qUERY_DELETE"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_DEL_SEQ_FILE" id="kr.pe.okjsp/DeleteServlet#qUERY_DEL_SEQ_FILE"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_MOVE" id="kr.pe.okjsp/DeleteServlet#qUERY_MOVE"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_PASSWORD" id="kr.pe.okjsp/DeleteServlet#qUERY_PASSWORD"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="56,54">
+      <children xsi:type="editmodel:MethodEditModel" name="doGet" id="kr.pe.okjsp/DeleteServlet#doGet(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="doPost" id="kr.pe.okjsp/DeleteServlet#doPost(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="init" id="kr.pe.okjsp/DeleteServlet#init(Ljavax.servlet.ServletConfig;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kr.pe.okjsp/DeleteServlet-Standard::Call->kr.pe.okjsp/Article*kr.pe.okjsp/DeleteServlet-Standard::Instantiate->kr.pe.okjsp/Article*kr.pe.okjsp/DeleteServlet-Soyatec::Import->kr.pe.okjsp/Article" source="//@children.26" target="//@children.18" targetEnd="//@children.26/@sourceConnections.0/@children.2" label="//@children.26/@sourceConnections.0/@children.0" sourceEnd="//@children.26/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Instantiate, Call, Import»" size="100,10" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,146" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="110,47"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.7/@sourceConnections.0" name="BookmarkExtension" location="345,1645" size="140,75" id="kr.pe.okjsp/BookmarkExtension" runTimeClassModel="writer,count">
+    <children xsi:type="editmodel:CompartmentEditModel" size="67,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="count" id="kr.pe.okjsp/BookmarkExtension#count"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="writer" id="kr.pe.okjsp/BookmarkExtension#writer"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="kr.pe.okjsp/BookmarkExtension-Standard::Derive->kr.pe.okjsp/Bookmark" source="//@children.27" target="//@children.28" targetEnd="//@children.27/@sourceConnections.0/@children.2" label="//@children.27/@sourceConnections.0/@children.0" sourceEnd="//@children.27/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Derive»" size="37,10" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="73,75" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="46,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="kr.pe.okjsp/Bookmark&lt;-kr.pe.okjsp/BookmarkExtension" source="//@children.27" target="//@children.28" targetEnd="//@children.27/@sourceConnections.1/@children.1" sourceEnd="//@children.27/@sourceConnections.1/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="53,75" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="26,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.27/@sourceConnections.0 //@children.27/@sourceConnections.1 //@children.6/@sourceConnections.0" name="Bookmark" location="372,1793" size="94,93" id="kr.pe.okjsp/Bookmark" runTimeClassModel="credate,seq,subject">
+    <children xsi:type="editmodel:CompartmentEditModel" size="71,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="credate" id="kr.pe.okjsp/Bookmark#credate"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="seq" id="kr.pe.okjsp/Bookmark#seq"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="subject" id="kr.pe.okjsp/Bookmark#subject"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" level="-1" showScope="InPackage" properties="wireOptions=7;Product=eUML2"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" showDependencyStereotype="true" showInterfaceStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

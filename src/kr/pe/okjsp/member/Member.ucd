@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="Member1" size="1356,639" id="kr.pe.okjsp.member" metadata="uml2-1.0" initialized="true" tag="1000" key="32303037303533312D31303030206F6B6A7370323030372F6B656E75">
+  <children xsi:type="editmodel:ClassEditModel" name="Member" location="45,45" size="111,265" id="kr.pe.okjsp.member/Member" runTimeClassModel="password,sid,joindate,mailing,homepage,role,email,name,profile,point,Member(),id">
+    <children xsi:type="editmodel:CompartmentEditModel" size="88,198">
+      <children xsi:type="editmodel:AttributeEditModel" name="email" id="kr.pe.okjsp.member/Member#email"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="homepage" id="kr.pe.okjsp.member/Member#homepage"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="id" id="kr.pe.okjsp.member/Member#id"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="joindate" id="kr.pe.okjsp.member/Member#joindate"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mailing" id="kr.pe.okjsp.member/Member#mailing"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="name" id="kr.pe.okjsp.member/Member#name"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="password" id="kr.pe.okjsp.member/Member#password"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="point" id="kr.pe.okjsp.member/Member#point"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="profile" id="kr.pe.okjsp.member/Member#profile"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="role" id="kr.pe.okjsp.member/Member#role"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="sid" id="kr.pe.okjsp.member/Member#sid"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="59,18">
+      <children xsi:type="editmodel:MethodEditModel" name="Member" id="kr.pe.okjsp.member/Member#Member()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" interactive="false" properties="open=kr.pe.okjsp.member/Member;wireOptions=7;Product=eUML2"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" showDependencyStereotype="true" showInterfaceStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

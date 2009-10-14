@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SQLPage nameConnection="test">
+<Statement><![CDATA[update `test`.`oktable` set `title`='제목' where `seq`=1;]]></Statement>
+</SQLPage>
