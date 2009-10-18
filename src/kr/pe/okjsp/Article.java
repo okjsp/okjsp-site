@@ -106,19 +106,62 @@ public class Article {
 	    ccl_id = "0";
 	}
 
+	/**
+	 * <pre>
+	 * # 20091018 서영아빠 CUBRID로 마이그레이션 하면서 시퀀스 자동생성 방법으로 바뀜
+	 *   seq, ref param의 값은 사용되지 않는다.
+	 * </pre>
+	 * @param bbs
+	 * @param seq
+	 * @param ref
+	 * @param step
+	 * @param lev
+	 * @param id
+	 * @param sid
+	 * @param writer
+	 * @param subject
+	 * @param content
+	 * @param password
+	 * @param email
+	 * @param homepage
+	 * @param read
+	 * @param when
+	 * @param html
+	 * @param ip
+	 * @param ccl_id
+	 */
 	public Article(String bbs, int seq, int ref, int step, int lev, String id, long sid, String writer,
 	                String subject, String content, String password, String email, 
 	                String homepage, int read, Timestamp when, String html, String ip, String ccl_id) {
-		setContents(bbs, seq, ref, step, lev, id, sid, writer, subject, content, password, 
+		setContents(bbs, step, lev, id, sid, writer, subject, content, password, 
 				email, homepage, 0, when, html, ip, ccl_id);
 	}
 
-	public void setContents(String bbs, int seq, int ref, int step, int lev, String id, long sid, 
+	/**
+	 * <pre>
+	 * # 20091018 서영아빠 CUBRID로 마이그레이션 하면서 시퀀스 자동생성 방법으로 바뀜
+	 * </pre>
+	 * @param bbs
+	 * @param step
+	 * @param lev
+	 * @param id
+	 * @param sid
+	 * @param writer
+	 * @param subject
+	 * @param content
+	 * @param password
+	 * @param email
+	 * @param homepage
+	 * @param read
+	 * @param when
+	 * @param html
+	 * @param ip
+	 * @param ccl_id
+	 */
+	public void setContents(String bbs, int step, int lev, String id, long sid, 
 					String writer, String subject, String content, String password, String email, 
 	                String homepage, int read, Timestamp when, String html, String ip, String ccl_id) {
 		this.bbs=     bbs;
-		this.seq=     seq;
-		this.ref=     ref;
 		this.step=    step;
 		this.lev=     lev;
 		this.id    =  id;

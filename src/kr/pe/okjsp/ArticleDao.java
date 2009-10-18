@@ -12,18 +12,34 @@ import kr.pe.okjsp.util.DbCon;
 
 public class ArticleDao {
 	DbCon dbCon = new DbCon();
+	/**
+	 * @deprecated 20091017 서영아빠 CUBRID로 마이그레이션 하면서 시퀀스 자동생성 방법으로 바뀜
+	 */
 	public static final String QUERY_NEW_SEQ =
 		"select seq+1 from okboard order by seq desc limit 0,1";
+	/**
+	 * @deprecated 20091017 서영아빠 CUBRID로 마이그레이션 하면서 시퀀스 자동생성 방법으로 바뀜
+	 */
 	public static final String QUERY_NEW_SEQ_DELETED =
 		"select seq+1 from okboard_deleted order by seq desc limit 0,1";
+	/**
+	 * @deprecated 20091017 서영아빠 CUBRID로 마이그레이션 하면서 시퀀스 자동생성 방법으로 바뀜
+	 */
 	public static final String QUERY_NEW_FILE_SEQ =
 		"select fseq+1 from okboard_file order by fseq desc limit 0,1";
+	/**
+	 * @deprecated 20091017 서영아빠 CUBRID로 마이그레이션 하면서 시퀀스 자동생성 방법으로 바뀜
+	 */
 	public static final String QUERY_NEW_REF =
 		"select ref+1 from okboard where bbsid = ? order by ref desc limit 0,1";
+	/**
+	 * @deprecated 20091017 서영아빠 CUBRID로 마이그레이션 하면서 시퀀스 자동생성 방법으로 바뀜
+	 */
 	public static final String QUERY_NEW_REF_DELETED =
 		"select ref+1 from okboard where bbsid = ? order by ref desc limit 0,1";
 	public static final String QUERY_ADD_FILE =
-		"insert into okboard_file (fseq, seq, filename, maskname, filesize, download) values (?,?,?,?,?,0)";
+		"insert into okboard_file (seq, filename, maskname, filesize, download) values (?,?,?,?,?,0)";
+//	"insert into okboard_file (fseq, seq, filename, maskname, filesize, download) values (?,?,?,?,?,0)";
 	public static final String QUERY_DEL_FSEQ_FILE =
 		"update okboard_file set sts=0 where fseq=?";
 	public static final String QUERY_ONE =
@@ -84,36 +100,42 @@ public class ArticleDao {
 	 */
 	public int write(Connection conn, Article article) {
 		String query =
-			"insert into okboard (bbsid, seq, ref, step, lev, id, writer, "
+			"insert into okboard (bbsid, step, lev, id, writer, "
 				+ " subject, content, password, email, homepage, hit, memo, sts, "
-				+ " wtime, ip, html, ccl_id) values (?,?,?,0,0, ?,?,?,?,old_password(?), " 
+				+ " wtime, ip, html, ccl_id) values (?,0,0, ?,?,?,?,old_password(?), " 
 				+ " ?,?,0,0,1,now(), ?,?,?)";
 		PreparedStatement pstmt = null;
 		int result = 0;
+		String seq = "";
+		ResultSet rs = null;
 		try {
 			pstmt = conn.prepareStatement(query);
 			pstmt.setString(1, article.getBbs());
-			pstmt.setInt(2, article.getSeq());
-			pstmt.setInt(3, getNewRef(conn, article.getBbs()));
-			pstmt.setString(4, article.getId());
-			pstmt.setString(5, article.getWriter());
-			pstmt.setString(6, article.getSubject());
-			pstmt.setString(7, article.getContent());
-			pstmt.setString(8, article.getPassword());
-			pstmt.setString(9, article.getEmail());
-			pstmt.setString(10, article.getHomepage());
-			pstmt.setString(11, article.getIp());
-			pstmt.setString(12, article.getHtml());
-			pstmt.setString(13, article.getCcl_id());
+			pstmt.setString(2, article.getId());
+			pstmt.setString(3, article.getWriter());
+			pstmt.setString(4, article.getSubject());
+			pstmt.setString(5, article.getContent());
+			pstmt.setString(6, article.getPassword());
+			pstmt.setString(7, article.getEmail());
+			pstmt.setString(8, article.getHomepage());
+			pstmt.setString(9, article.getIp());
+			pstmt.setString(10, article.getHtml());
+			pstmt.setString(11, article.getCcl_id());
 			result = pstmt.executeUpdate();
 			
+			rs = pstmt.getGeneratedKeys();
+			while (rs.next()) {
+				seq = rs.getString(1);
+			}
+			
 			if (article.getSid() > 0) {
-				new PointDao().log(article.getSid(), 2, 10, String.valueOf(article.getSeq()));
+				new PointDao().log(article.getSid(), 2, 10, seq);
+				article.setSeq(Integer.parseInt(seq));
 			}
 		} catch (SQLException e) {
 			System.out.println(e.toString());
 		} finally {
-			dbCon.close(null, pstmt);
+			dbCon.close(null, pstmt, rs);
 		}
 		return result * article.getSeq();
 	}
@@ -255,6 +277,7 @@ public class ArticleDao {
 	}
 
 	/**
+	 * @deprecated 20091017 서영아빠 CUBRID로 마이그레이션 하면서 시퀀스 자동생성 방법으로 바뀜
 	 * @param conn
 	 * @return
 	 * @throws SQLException
@@ -266,6 +289,13 @@ public class ArticleDao {
 		);
 	}
 
+	/**
+	 * @deprecated 20091017 서영아빠 CUBRID로 마이그레이션 하면서 시퀀스 자동생성 방법으로 바뀜
+	 * @param conn
+	 * @param bbs
+	 * @return
+	 * @throws SQLException
+	 */
 	public int getNewRef(Connection conn, String bbs) throws SQLException {
 		return Math.max(
 			fetchNewRef(conn, QUERY_NEW_REF, bbs),
@@ -273,10 +303,18 @@ public class ArticleDao {
 		);
 	}
 
+	/**
+	 * <pre>
+	 * 파일 추가
+	 * # 20091017 서영아빠 CUBRID로 마이그레이션 하면서 시퀀스 자동생성 방법으로 바뀜
+	 * </pre>
+	 * @param conn
+	 * @param seq
+	 * @param arrdf
+	 * @throws SQLException
+	 */
 	public void addFile(Connection conn, int seq, ArrayList<DownFile> arrdf)
 			throws SQLException {
-		// file 일련번호
-		int fseq = fetchNew(conn, QUERY_NEW_FILE_SEQ);
 
 		// file 입력
 		PreparedStatement pstmt = null;
@@ -288,14 +326,12 @@ public class ArticleDao {
 				if (df.getFileSize() > 0) {
 					pstmt.clearParameters();
 
-					pstmt.setInt(1, fseq);
-					pstmt.setInt(2, seq);
-					pstmt.setString(3, df.getFileName());
-					pstmt.setString(4, df.getMaskName());
-					pstmt.setLong(5, df.getFileSize());
+					pstmt.setInt(1, seq);
+					pstmt.setString(2, df.getFileName());
+					pstmt.setString(3, df.getMaskName());
+					pstmt.setLong(4, df.getFileSize());
 
 					pstmt.executeUpdate();
-					fseq++;
 				}
 			}
 
@@ -334,8 +370,6 @@ public class ArticleDao {
 		Connection conn = null;
 		try {
 			conn = dbCon.getConnection();
-			int seq = getSeq(conn);
-			article.setSeq(seq );
 			return write(conn, article);
 		} catch (Exception e) {
 			System.out.println("write err: "+e);

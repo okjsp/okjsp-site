@@ -166,10 +166,8 @@ public class WriteServlet extends HttpServlet {
 			if ("MODIFY".equals(act)) {
 				seq = Integer.parseInt(multi.getParameter("seq"));
 				delFiles = multi.getParameterValues("delFile");
-			} else {
-				seq = articleDao.getSeq(conn); 
+				article.setSeq(seq);
 			}
-			article.setSeq(seq);
 
 			if ("REPLY".equals(act)) {
 				article.setRef(Integer.parseInt(multi.getParameter("ref")));
@@ -185,7 +183,7 @@ public class WriteServlet extends HttpServlet {
 				articleDao.write(conn, article);
 			}
 
-			articleDao.addFile(conn, seq, arrdf);
+			articleDao.addFile(conn, article.getSeq(), arrdf);
 			
 		} catch (Exception e) {
 			System.out.println("WriteServlet err:" + CommonUtil.a2k(e.toString()));

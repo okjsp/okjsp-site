@@ -53,6 +53,7 @@ public class PopBbsInfoMapServlet extends HttpServlet {
 			pstmt.close();
 		} catch(Exception e) {
 			System.out.println("can't populate bbsInfoMap due to : "+e.toString());
+			e.printStackTrace();
 		} finally {
 			dbCon.close(conn, pstmt, rs);
 		} // end try catch
