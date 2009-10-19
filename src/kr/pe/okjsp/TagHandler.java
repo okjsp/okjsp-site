@@ -13,10 +13,13 @@ public class TagHandler {
 	DbCon dbCon = new DbCon();
 	final static String QUERY_TAG_SELECT = "select tagseq from okboard_tag where tag = ?";
 	final static String QUERY_TAG_INFO = "select tagseq, tag, cnt from okboard_tag where tagseq = ?";
-	final static String QUERY_TAG_RECENT = "select tagseq, tag, cnt from okboard_tag order by tagseq desc limit ?";
+	final static String QUERY_TAG_RECENT = "select tagseq, tag, cnt from okboard_tag order by tagseq desc for orderby_num() = ?";
+	/**
+	 * @deprecated 20091019 서영아빠 CUBRID로 마이그레이션 하면서 시퀀스 자동생성 방법으로 바뀜
+	 */
 	final static String QUERY_TAG_TAGSEQ = "select tagseq from okboard_tag order by tagseq desc limit 1";
-	final static String QUERY_TAG_INSERT = "insert into okboard_tag (tagseq, tag, cnt, credate) values (?, ?, 0, now())";
-	final static String QUERY_TAG_USER_INSERT = "insert into okboard_tag_user (tagseq, userid, seq, credate) values (?, ?, ?, now())";
+	final static String QUERY_TAG_INSERT = "insert into okboard_tag (tag, cnt, credate) values (?, 0, SYSTIMESTAMP)";
+	final static String QUERY_TAG_USER_INSERT = "insert into okboard_tag_user (tagseq, userid, seq, credate) values (?, ?, ?, SYSTIMESTAMP)";
 	final static String QUERY_TAG_CNT_UP = "update okboard_tag set cnt = cnt + 1 where tagseq = ?";
 	final static String QUERY_TAG_BY_SEQ = "select a.tagseq, max(a.tag) tag, max(a.cnt) cnt from okboard_tag a, okboard_tag_user b where a.tagseq = b.tagseq and b.seq = ? group by a.tagseq order by cnt desc";
 	final static String QUERY_TAG_BY_USERID = "select a.tag, a.cnt, b.seq from okboard_tag a, okboard_tag_user b where a.tagseq = b.tagseq and b.userid = ? order by b.credate";
@@ -32,22 +35,16 @@ public class TagHandler {
 			tagseq = findTagseqByTag(tag, con);
 
 			if (tagseq == 0) {
-				pstmt = con.prepareStatement(QUERY_TAG_TAGSEQ);
-				rs = pstmt.executeQuery();
-				if (rs.next()) {
-					tagseq = rs.getInt(1);
-				}
-				tagseq += 1;
-				rs.close();
-				pstmt.close();
-
 				pstmt = con.prepareStatement(QUERY_TAG_INSERT);
-				pstmt.setInt(1, tagseq);
-				pstmt.setString(2, tag);
+				pstmt.setString(1, tag);
 				pstmt.executeUpdate();
 				pstmt.close();
-			}
 
+				rs = pstmt.getGeneratedKeys();
+				while (rs.next()) {
+					tagseq = rs.getInt(1);
+				}
+			}
 			pstmt = con.prepareStatement(QUERY_TAG_USER_INSERT);
 			pstmt.setInt(1, tagseq);
 			pstmt.setString(2, id);

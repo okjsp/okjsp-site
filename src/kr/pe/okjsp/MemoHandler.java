@@ -21,10 +21,10 @@ public class MemoHandler {
             "select count(mseq) from okboard_memo where bcomment like ?";
 
     public final static String MEMO_RECENT_BCOMMENT =
-        "select mseq, a.id, a.writer, bcomment, a.wtime, a.seq, a.ip from okboard_memo a, okboard b where b.bbsid not in ('jco', 'jcocfrc', 'perf', '0612', 'eclipsejava') and a.seq = b.seq and bcomment like ? order by mseq desc limit ?, ?";
+    	"select mseq, a.id, a.writer, bcomment, a.wtime, a.seq, a.ip from okboard_memo a, okboard b where b.bbsid not in ('jco', 'jcocfrc', 'perf', '0612', 'eclipsejava') and a.seq = b.seq and bcomment like ? order by mseq desc for orderby_num() between ? and ?";
 
     public final static String MEMO_RECENT_WRITER =
-        "select mseq, a.id, a.writer, bcomment, a.wtime, a.seq, a.ip from okboard_memo a, okboard b where b.bbsid not in ('jco', 'jcocfrc', 'perf', '0612', 'eclipsejava') and a.seq = b.seq and a.writer like ? order by mseq desc limit ?, ?";
+    	"select mseq, a.id, a.writer, bcomment, a.wtime, a.seq, a.ip from okboard_memo a, okboard b where b.bbsid not in ('jco', 'jcocfrc', 'perf', '0612', 'eclipsejava') and a.seq = b.seq and a.writer like ? order by mseq desc for orderby_num() between ? and ?";
 
 	public  int pageSize;       // 페이지 리스트 사이즈
     /**

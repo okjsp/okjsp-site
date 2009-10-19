@@ -25,9 +25,9 @@ public class ViewServlet extends HttpServlet {
 	public static final String QUERY_COUNT_UP =
 		"update okboard set hit = hit + 1 where seq = ?";
 	public static final String QUERY_PREV =
-		"select seq, subject from okboard where bbsid=? and ref < ? and ref > ?-100 order by ref desc limit 1";
+		"select seq, subject from okboard where bbsid=? and \"ref\" < ? and \"ref\" > ?-100 order by \"ref\" desc for orderby_num() = 1";
 	public static final String QUERY_NEXT =
-		"select seq, subject from okboard where bbsid=? and ref > ? limit 1";
+		"select seq, subject from okboard where bbsid=? and \"ref\" > ? and rownum = 1";
 
 	public void init(ServletConfig config) throws ServletException {
 		super.init(config);

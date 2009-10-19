@@ -38,14 +38,11 @@ public class ArticleDao {
 	public static final String QUERY_NEW_REF_DELETED =
 		"select ref+1 from okboard where bbsid = ? order by ref desc limit 0,1";
 	public static final String QUERY_ADD_FILE =
-		"insert into okboard_file (seq, filename, maskname, filesize, download) values (?,?,?,?,?,0)";
-//	"insert into okboard_file (fseq, seq, filename, maskname, filesize, download) values (?,?,?,?,?,0)";
+		"insert into okboard_file (seq, filename, maskname, filesize, download) values (?,?,?,?,0)";
 	public static final String QUERY_DEL_FSEQ_FILE =
 		"update okboard_file set sts=0 where fseq=?";
 	public static final String QUERY_ONE =
-		"select  bbsid, seq, ref, step, lev, id, writer, subject, password, email, " +
-		" hit, html, homepage, wtime, ip, memo, content, ccl_id " +
-		" from okboard where seq = ?";
+		"select  bbsid, seq, \"ref\", step, lev, id, writer, subject, \"password\", email, hit, html, homepage, wtime, ip, memo, content, ccl_id from okboard where seq = ?";
 	/**
 	 * 해당번호의 게시물을 불러옵니다.
 	 * 
@@ -100,10 +97,7 @@ public class ArticleDao {
 	 */
 	public int write(Connection conn, Article article) {
 		String query =
-			"insert into okboard (bbsid, step, lev, id, writer, "
-				+ " subject, content, password, email, homepage, hit, memo, sts, "
-				+ " wtime, ip, html, ccl_id) values (?,0,0, ?,?,?,?,old_password(?), " 
-				+ " ?,?,0,0,1,now(), ?,?,?)";
+			"insert into okboard (bbsid, step, lev, id, writer,subject, content, \"password\", email, homepage, hit, memo, sts,wtime, ip, html, ccl_id) values (?,0,0, ?,?,?,?,old_password(?),?,?,0,0,1, SYSTIMESTAMP, ?,?,?)";
 		PreparedStatement pstmt = null;
 		int result = 0;
 		String seq = "";
@@ -149,7 +143,7 @@ public class ArticleDao {
 	public int reply(Connection conn, Article article) {
 
 		String query =
-			"update okboard set step = step + 1 where bbsid = ? and ref = ? and step > ?";
+			"update okboard set step = step + 1 where bbsid = ? and \"ref\" = ? and step > ?";
 		int result = 0;
 		PreparedStatement pstmt = null;
 		try {
@@ -200,8 +194,7 @@ public class ArticleDao {
 	 */
 	public int modify(Connection conn, Article article) {
 		String query =
-			"update okboard set writer=?, subject=?, content=?, password=old_password(?), "
-			+ " email=?, homepage=?, wtime=now(), ip=?, html=?, ccl_id=? where seq=?";
+			"update okboard set writer=?, subject=?, content=?, \"password\"=old_password(?), email=?, homepage=?, wtime=SYSTIMESTAMP, ip=?, html=?, ccl_id=? where seq=?";
 		PreparedStatement pstmt = null;
 		int result = 0;
 		try {

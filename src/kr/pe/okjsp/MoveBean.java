@@ -94,7 +94,7 @@ public class MoveBean {
 	public void perform() throws SQLException {
 		DbCon dbCon = new DbCon();
 		String QUERY_NEWREF = "select ref from okboard where bbsid=? order by ref desc limit 1";
-		String QUERY_MOVE_REF = "update okboard set bbsid=?, ref=? where bbsid=? and ref=?";
+		String QUERY_MOVE_REF = "update okboard set bbsid=?, \"ref\"=? where bbsid=? and \"ref\"=?";
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;

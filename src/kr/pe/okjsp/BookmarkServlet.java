@@ -20,12 +20,11 @@ public class BookmarkServlet extends HttpServlet {
 	DbCon dbCon = new DbCon();
 	private static final long serialVersionUID = 3978708410894135602L;
 	final static String QUERY_BOOKMARK_ADD =
-		"insert into okboard_bookmark (id, seq, credate) values (?,?,now())";
+		"insert into okboard_bookmark (id, seq, credate) values (?,?,SYSTIMESTAMP)";
 	final static String QUERY_BOOKMARK_DELETE =
 		"delete from okboard_bookmark where id = ? and seq = ?";
 	final static String QUERY_BOOKMARK_LIST =
-		" select a.seq, a.subject, b.credate from okboard a, okboard_bookmark b " +
-		" where a.seq = b.seq and b.id = ? order by b.credate desc ";
+		"select a.seq, a.subject, b.credate from okboard a, okboard_bookmark b where a.seq = b.seq and b.id = ? order by b.credate desc";
 
   public void init(ServletConfig config) throws ServletException {
     super.init(config);

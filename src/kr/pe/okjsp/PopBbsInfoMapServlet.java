@@ -27,7 +27,7 @@ public class PopBbsInfoMapServlet extends HttpServlet {
 	public void init() {
 
 		HashMap bbsInfoMap = new HashMap();
-		String query = "select cseq, bbsid, name, header from okboard_info";
+		String query = "select cseq, bbsid, \"name\", header from okboard_info";
 	
 		Connection conn = null;
 		PreparedStatement pstmt = null;

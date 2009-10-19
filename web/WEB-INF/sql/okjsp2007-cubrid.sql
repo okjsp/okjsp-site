@@ -108,7 +108,7 @@ CREATE TABLE "okboard_memo"(
 );
 
 CREATE TABLE "okboard_tag"(
-"tagseq" integer DEFAULT 0 PRIMARY KEY,
+"tagseq" integer AUTO_INCREMENT(?,1) PRIMARY KEY,
 "tag" character varying(202) DEFAULT  NOT NULL UNIQUE,
 "cnt" integer,
 "credate" timestamp

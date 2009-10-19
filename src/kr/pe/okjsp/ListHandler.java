@@ -22,19 +22,19 @@ public class ListHandler {
 	DbCon dbCon = new DbCon();
 
 	public static final String ARTICLE_LIST =
-		"SELECT bbsid, seq, ref, lev, subject, id, writer, hit, wtime, memo, content FROM okboard WHERE bbsid=? AND content LIKE ? ORDER BY ref DESC, step LIMIT ?, ?";
+		"SELECT bbsid, seq, \"ref\", lev, subject, id, writer, hit, wtime, memo, content FROM okboard WHERE bbsid=? AND content LIKE ? ORDER BY \"ref\" DESC, step for orderby_num() between ? and ?";
 
 	public static final String ARTICLE_LIST_COUNT =
-		"SELECT COUNT(*), MAX(ref) FROM okboard WHERE bbsid=? AND content LIKE ?";
+		"SELECT COUNT(*), MAX(\"ref\") FROM okboard WHERE bbsid=? AND content LIKE ?";
 
 	public static final String ARTICLE_LIST_RECENT =
-		"SELECT bbsid, seq, ref, lev, subject, id, writer, hit, wtime, memo, content FROM okboard WHERE bbsid=? ORDER BY seq DESC LIMIT 0,?";
+		"SELECT bbsid, seq, \"ref\", lev, subject, id, writer, hit, wtime, memo, content FROM okboard WHERE bbsid=? ORDER BY seq DESC for orderby_num between 1 and ?";
 
 	public static final String ARTICLE_LIST_ALL_RECENT =
-		"SELECT okboard.bbsid, seq, ref, lev, subject, id, writer, hit, wtime, memo, content FROM okboard ORDER BY seq DESC LIMIT 0,?";
+		"SELECT okboard.bbsid, seq, \"ref\", lev, subject, id, writer, hit, wtime, memo, content FROM okboard ORDER BY seq DESC for orderby_num() between 1 and ?";
 	
 	public static final String ARTICLE_LIST_REF =
-		"SELECT bbsid, seq, ref, lev, subject, id, writer, hit, wtime, memo, content FROM okboard WHERE bbsid=? AND ref=? ORDER BY ref DESC, step";
+		"SELECT bbsid, seq, \"ref\", lev, subject, id, writer, hit, wtime, memo, content FROM okboard WHERE bbsid=? AND \"ref\"=? ORDER BY \"ref\" DESC, step";
 
 	private String bbs;
 	private String keyfield = "content";

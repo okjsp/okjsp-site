@@ -12,9 +12,8 @@ public class BookmarkHandler {
 	DbCon dbCon = new DbCon();
 
 	public ArrayList getFavoriteList(int size) {
-		String query = "select a.seq, count(*) cnt, b.subject, b.writer " +
-				" from okboard_bookmark a inner join okboard b " +
-				" where a.seq = b.seq group by a.seq order by 2 desc limit 0,?";
+		String query =
+			"select a.seq, count(*) cnt, b.subject, b.writer from okboard_bookmark a, okboard b where a.seq = b.seq group by a.seq, b.subject, b.writer order by 2 desc for orderby_num() between 1 and ?";
 		Connection conn = null;
 		PreparedStatement pstmt=null;
 		ResultSet rs = null;
@@ -44,9 +43,8 @@ public class BookmarkHandler {
 	}
 
 	public ArrayList getRecentList(int size) {
-		String query = "select a.seq, b.subject, b.writer, a.credate " +
-				" from okboard_bookmark a inner join okboard b " +
-				" where a.seq = b.seq order by credate desc limit 0,?";
+		String query =
+			"select a.seq, b.subject, b.writer, a.credate from okboard_bookmark a, okboard b where a.seq = b.seq order by credate desc for orderby_num() between 1 and ?";
 		Connection conn = null;
 		PreparedStatement pstmt=null;
 		ResultSet rs = null;

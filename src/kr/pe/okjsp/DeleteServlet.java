@@ -19,7 +19,7 @@ public class DeleteServlet extends HttpServlet {
 	DbCon dbCon = new DbCon();
 	private static final long serialVersionUID = 1L;
 	public static final String QUERY_PASSWORD =
-		"select password, bbsid from okboard where seq = ? and password = old_password(?)";
+		"select \"password\", bbsid from okboard where seq = ? and \"password\" = old_password(?)";
 	public static final String QUERY_MOVE =
 		"insert into okboard_deleted select * from okboard where seq=?";
 	public static final String QUERY_DELETE =
