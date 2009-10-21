@@ -209,4 +209,16 @@ EXECUTE
 call destroy_data(obj);
 
 /* ÀÎµ¦½º */
---ÀÎµ¦½º´Â ¾îµð°¬Áö? =¤µ=;;
+CREATE INDEX "okboard_bbsid_idx" on "okboard" ("bbsid");
+CREATE INDEX "okboard_ref_idx" on "okboard" ("ref");
+CREATE INDEX "okboard_bookmark_id_idx" on "okboard_bookmark" ("id");
+CREATE UNIQUE INDEX "seq" on "okboard_category" ("seq");
+CREATE UNIQUE INDEX "fseq" on "okboard_file" ("fseq");
+CREATE UNIQUE INDEX "mseq" on "okboard_memo" ("mseq");
+CREATE INDEX "memo_seq_idx" on "okboard_memo" ("seq");
+CREATE UNIQUE INDEX "tag" on "okboard_tag" ("tag");
+CREATE UNIQUE INDEX "id" on "okmember" ("id");
+CREATE UNIQUE INDEX "seq" on "poll_group" ("seq");
+CREATE UNIQUE INDEX "seq" on "poll_query" ("seq");
+CREATE INDEX "idx_pollitem" on "pollitem" ("seq");
+CREATE INDEX "idx_polllist" on "polllist" ("seq");
