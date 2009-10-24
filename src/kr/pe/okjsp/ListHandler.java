@@ -28,7 +28,7 @@ public class ListHandler {
 		"SELECT COUNT(*), MAX(\"ref\") FROM okboard WHERE bbsid=? AND content LIKE ?";
 
 	public static final String ARTICLE_LIST_RECENT =
-		"SELECT bbsid, seq, \"ref\", lev, subject, id, writer, hit, wtime, memo, content FROM okboard WHERE bbsid=? ORDER BY seq DESC for orderby_num between 1 and ?";
+		"SELECT bbsid, seq, \"ref\", lev, subject, id, writer, hit, wtime, memo, content FROM okboard WHERE bbsid=? ORDER BY seq DESC for orderby_num() between 1 and ?";
 
 	public static final String ARTICLE_LIST_ALL_RECENT =
 		"SELECT okboard.bbsid, seq, \"ref\", lev, subject, id, writer, hit, wtime, memo, content FROM okboard ORDER BY seq DESC for orderby_num() between 1 and ?";
