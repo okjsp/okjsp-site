@@ -28,11 +28,11 @@ public class MemberHandler {
 	static final String QUERY_ADD
 		= "insert into okmember (id, password, name, email, homepage, joindate, mailing, sid) values (?, old_password(?), ?, ?, ?, SYSTIMESTAMP, ?, ?)";
 	static final String QUERY_ROLE_ADD
-		= "insert into okrole (id, role) values (?,?)";
+		= "insert into okrole (id, \"role\") values (?,?)";
 	static final String QUERY_LOGIN
 		= "select * from okmember where id = ? and password = old_password(?)";
 	static final String QUERY_ROLE
-		= "select role from okrole where id = ?";
+		= "select \"role\" from okrole where id = ?";
 	static final String QUERY_COUNT
 		= "select count(id) from okmember";
 	static final String QUERY_UPDATE
@@ -273,6 +273,7 @@ public class MemberHandler {
 			pconn.commit();
 		}catch(Exception e){
 			pconn.rollback();
+			e.printStackTrace();
 			throw new SQLException("Register err:"+e.toString());
 		} finally {
 			pconn.setAutoCommit(true);

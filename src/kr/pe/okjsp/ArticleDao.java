@@ -158,7 +158,7 @@ public class ArticleDao {
 				"insert into okboard (bbsid, seq, ref, step, lev, writer, "
 					+ " subject, content, password, email, homepage, hit, memo, "
 					+ " wtime, ip, html, ccl_id) values (?,?,?,?,?, ?,?,?,old_password(?),?, "
-					+ " ?,0,0,now(),?, ?,?)";
+					+ " ?,0,0,SYSTIMESTAMP,?, ?,?)";
 			pstmt = conn.prepareStatement(query);
 			pstmt.setString(1, article.getBbs());
 			pstmt.setInt(2, article.getSeq());
