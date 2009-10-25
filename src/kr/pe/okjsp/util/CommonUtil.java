@@ -18,14 +18,33 @@ public class CommonUtil {
 
 	/**
 	 * Method a2k. 8859_1 에서 MS949 로 문자세트변환
+	 * # 20091025 디비가 큐브리드로 바뀌면서 문자셋이 바뀌어서 변환이 필요없어졌음
+	 *   기존메소드의 역할은 a2kProp으로 사용하면 된다.
 	 * @param str 바꾸려는 문자열
 	 * @return String
 	 */
 	public static String a2k(String str) {
 		try {
-			return new String(str.getBytes("8859_1"),"MS949");
+//			return new String(str.getBytes("8859_1"),"MS949");
+			return str;
 		} catch (Exception e) {
 		    return "";
+		}
+	}
+
+	/**
+	 * <pre>
+	 * 기존의 a2k와 동일한 역할을 하는 함수
+	 * Navigation.getPath()에서만 사용
+	 * </pre>
+	 * @param str
+	 * @return
+	 */
+	public static String a2kProp(String str) {
+		try {
+			return new String(str.getBytes("8859_1"),"MS949");
+		} catch (Exception e) {
+			return "";
 		}
 	}
 
