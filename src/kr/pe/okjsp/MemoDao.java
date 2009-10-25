@@ -20,7 +20,7 @@ public class MemoDao {
 		"select mseq+1 from okboard_memo order by mseq desc limit 1";
 
 	final static String QUERY_MEMO_ADD =
-		"insert into okboard_memo (mseq, seq, id, sid, writer, bcomment, wtime, memopass, ip) values (?,?,?,?,?,?,SYSTIMESTAMP,old_password(?),?)";
+		"insert into okboard_memo (seq, id, sid, writer, bcomment, wtime, memopass, ip) values (?,?,?,?,?,SYSTIMESTAMP,old_password(?),?)";
 
 	final static String QUERY_MEMO_COUNT =
         "update okboard set memo = memo + ? where seq = ?";
