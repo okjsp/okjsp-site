@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 import kr.pe.okjsp.util.CommonUtil;
@@ -18,6 +19,9 @@ public class TagHandler {
 	 * @deprecated 20091019 서영아빠 CUBRID로 마이그레이션 하면서 시퀀스 자동생성 방법으로 바뀜
 	 */
 	final static String QUERY_TAG_TAGSEQ = "select tagseq from okboard_tag order by tagseq desc limit 1";
+	/**
+	 * @deprecated 20091026 서영아빠 CUBRID로 마이그레이션 하면서 시퀀스 자동생성 방법으로 바뀜
+	 */
 	final static String QUERY_TAG_INSERT = "insert into okboard_tag (tag, cnt, credate) values (?, 0, SYSTIMESTAMP)";
 	final static String QUERY_TAG_USER_INSERT = "insert into okboard_tag_user (tagseq, userid, seq, credate) values (?, ?, ?, SYSTIMESTAMP)";
 	final static String QUERY_TAG_CNT_UP = "update okboard_tag set cnt = cnt + 1 where tagseq = ?";
@@ -25,22 +29,40 @@ public class TagHandler {
 	final static String QUERY_TAG_BY_USERID = "select a.tag, a.cnt, b.seq from okboard_tag a, okboard_tag_user b where a.tagseq = b.tagseq and b.userid = ? order by b.credate";
 	final static String QUERY_TAG_BY_TAGSEQ = "select b.seq, bbsid, writer, subject, wtime from okboard_tag_user a, okboard b where a.seq = b.seq and a.tagseq = ? group by a.seq order by a.credate desc";
 
+	/**
+	 * <pre>
+	 * # 20091026 AUTO_INCREMENT 적용으로 인해 getGeneratedKeys()를 사용
+	 *   정확한 원인은 모르지만 stmt.execute() 외에는 getGeneratedKeys() 값이 안받아진다.
+	 *</pre>
+	 * @param tag
+	 * @param id
+	 * @param seq
+	 * @throws Exception
+	 */
 	public void add(String tag, String id, int seq) throws Exception {
 		Connection con = null;
-		PreparedStatement pstmt = null;
 		ResultSet rs = null;
+		PreparedStatement pstmt = null;
+		Statement stmt = null;
 		try {
-			int tagseq = 0;
 			con = dbCon.getConnection();
+			int tagseq = 0;
 			tagseq = findTagseqByTag(tag, con);
 
 			if (tagseq == 0) {
-				pstmt = con.prepareStatement(QUERY_TAG_INSERT);
-				pstmt.setString(1, tag);
-				pstmt.executeUpdate();
-				pstmt.close();
-
-				rs = pstmt.getGeneratedKeys();
+				StringBuilder query = new StringBuilder();
+				query.append("INSERT ");
+				query.append("INTO okboard_tag ");
+				query.append("(tag, cnt, credate) ");
+				query.append("VALUES ");
+				query.append("('").append(tag).append("' ");
+				query.append(", 0 ");
+				query.append(", SYSTIMESTAMP ");
+				query.append(")");
+				stmt = con.createStatement();
+				stmt.execute("", Statement.RETURN_GENERATED_KEYS);
+				
+				rs = stmt.getGeneratedKeys();
 				while (rs.next()) {
 					tagseq = rs.getInt(1);
 				}

@@ -11,7 +11,7 @@ public class PointDao {
 
 	DbCon dbCon = new DbCon();
 	static final String POINT_LOG 
-		= "insert into point_history (pseq, sid, code, point, tstamp, info) values (null, ?, ?, ?, SYSTIMESTAMP, ?)";
+		= "insert into point_history (sid, code, point, tstamp, info) values (?, ?, ?, SYSTIMESTAMP, ?)";
 	static final String QUERY_ADD_POINT 
 		= "update okmember set point = point + ? where sid = ?";
 	static final String QUERY_GET_POINT

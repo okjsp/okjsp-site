@@ -9,6 +9,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ResourceBundle;
 
 /**
@@ -36,7 +37,7 @@ public class DbCon {
 		return DriverManager.getConnection(dbUrl, dbUser, dbPass);
 	}
 
-	public void close(Connection pconn, PreparedStatement pstmt,
+	public void close(Connection pconn, Statement pstmt,
 			ResultSet rs) {
 		try {
 			if (rs != null)
@@ -58,7 +59,7 @@ public class DbCon {
 		}
 	}
 
-	public void close(Connection pconn, PreparedStatement pstmt) {
+	public void close(Connection pconn, Statement pstmt) {
 		close(pconn, pstmt, null);
 	}
 }

@@ -1,9 +1,11 @@
 package kr.pe.okjsp;
 
+import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 import kr.pe.okjsp.member.PointDao;
@@ -90,38 +92,49 @@ public class ArticleDao {
 		return article;
 	} 
 	/**
+	 * <pre>
 	 * okboard 입력
+	 * # 20091026 AUTO_INCREMENT 적용으로 인해 getGeneratedKeys()를 사용
+	 *   정확한 원인은 모르지만 stmt.execute() 외에는 getGeneratedKeys() 값이 안받아진다.
+	 * </pre>
 	 * @param conn
 	 * @param article
 	 * @return result record count
 	 */
 	public int write(Connection conn, Article article) {
-		String query =
-			"insert into okboard (bbsid, step, lev, id, writer,subject, content, \"password\", email, homepage, hit, memo, sts,wtime, ip, html, ccl_id) values (?,0,0, ?,?,?,?,old_password(?),?,?,0,0,1, SYSTIMESTAMP, ?,?,?)";
-		PreparedStatement pstmt = null;
-		int result = 0;
-		String seq = "";
+		Statement stmt = null;
+		String seq = null;
 		ResultSet rs = null;
 		try {
-			pstmt = conn.prepareStatement(query);
-			pstmt.setString(1, article.getBbs());
-			pstmt.setString(2, article.getId());
-			pstmt.setString(3, article.getWriter());
-			pstmt.setString(4, article.getSubject());
-			pstmt.setString(5, article.getContent());
-			pstmt.setString(6, article.getPassword());
-			pstmt.setString(7, article.getEmail());
-			pstmt.setString(8, article.getHomepage());
-			pstmt.setString(9, article.getIp());
-			pstmt.setString(10, article.getHtml());
-			pstmt.setString(11, article.getCcl_id());
-			result = pstmt.executeUpdate();
-			
-			rs = pstmt.getGeneratedKeys();
+			StringBuilder query = new StringBuilder();
+			query.append("INSERT ");
+			query.append("INTO okboard ");
+			query.append("(bbsid, step, lev, id, writer, subject, content, \"password\", email, homepage, hit, memo, sts, wtime, ip, html, ccl_id) ");
+			query.append("VALUES ");
+			query.append("('").append(article.getBbs()).append("' ");
+			query.append(", 0 ");
+			query.append(", 0 ");
+			query.append(", '").append(article.getId()).append("' ");
+			query.append(", '").append(article.getWriter()).append("' ");
+			query.append(", '").append(article.getSubject()).append("' ");
+			query.append(", '").append(article.getContent()).append("' ");
+			query.append(", old_password('").append(article.getPassword()).append("') ");
+			query.append(", '").append(article.getEmail()).append("' ");
+			query.append(", '").append(article.getHomepage()).append("' ");
+			query.append(", 0 ");
+			query.append(", 0 ");
+			query.append(", 1 ");
+			query.append(", SYSTIMESTAMP ");
+			query.append(", '").append(article.getIp()).append("' ");
+			query.append(", '").append(article.getHtml()).append("' ");
+			query.append(", '").append(article.getCcl_id()).append("' ");
+			query.append(")");
+			stmt = conn.createStatement();
+			stmt.execute(query.toString(), Statement.RETURN_GENERATED_KEYS);
+			rs = stmt.getGeneratedKeys();
 			while (rs.next()) {
 				seq = rs.getString(1);
 			}
-			
 			if (article.getSid() > 0) {
 				new PointDao().log(article.getSid(), 2, 10, seq);
 				article.setSeq(Integer.parseInt(seq));
@@ -129,9 +142,9 @@ public class ArticleDao {
 		} catch (SQLException e) {
 			System.out.println(e.toString());
 		} finally {
-			dbCon.close(null, pstmt, rs);
+			dbCon.close(null, stmt, rs);
 		}
-		return result * article.getSeq();
+		return article.getSeq();
 	}
 
 	/**
