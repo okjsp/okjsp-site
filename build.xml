@@ -72,7 +72,7 @@
 		<mkdir dir="dst_test"/>
 		<javac srcdir="test"
                 debug="on"
-             destdir="dst_test">
+             destdir="dst_test" encoding="EUC-KR">
 			<include name="**/*.java" />
 			<classpath refid="test.classpath"/>
 		</javac>
