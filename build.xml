@@ -63,7 +63,7 @@
 		</copy>
 		<javac srcdir="src"
                 debug="on"
-             destdir="${publish.home}/WEB-INF/classes">
+             destdir="${publish.home}/WEB-INF/classes" encoding="EUC-KR">
 			<!-- 위에서 설정한 classpath를 참조한다 -->
 			<include name="**/*.java" />
 			<classpath refid="compile.classpath"/>
