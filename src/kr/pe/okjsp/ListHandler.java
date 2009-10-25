@@ -58,7 +58,7 @@ public class ListHandler {
 			params.add("%"+keyword+"%");
 		}
 		params.add(Integer.valueOf(pg*pageSize));
-		params.add(Integer.valueOf(pageSize));
+		params.add(Integer.valueOf((pg+1)*pageSize));
 
 		return getList(ARTICLE_LIST, params);
 	}
