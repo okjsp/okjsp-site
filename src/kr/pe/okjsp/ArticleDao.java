@@ -42,7 +42,7 @@ public class ArticleDao {
 	public static final String QUERY_DEL_FSEQ_FILE =
 		"update okboard_file set sts=0 where fseq=?";
 	public static final String QUERY_ONE =
-		"select  bbsid, seq, \"ref\", step, lev, id, writer, subject, \"password\", email, hit, html, homepage, wtime, ip, memo, content, ccl_id from okboard where seq = ?";
+		"select  bbsid, seq, \"ref\", step, lev, id, writer, subject, \"password\", email, incr(hit), html, homepage, wtime, ip, memo, content, ccl_id from okboard where seq = ?";
 	/**
 	 * 해당번호의 게시물을 불러옵니다.
 	 * 

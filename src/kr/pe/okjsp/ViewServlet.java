@@ -22,6 +22,10 @@ public class ViewServlet extends HttpServlet {
 	private static final long serialVersionUID = 6039563891534443020L;
 	public static final String QUERY_FILE =
 		"select  fseq, filename, maskname, filesize, download  from okboard_file where seq = ? and sts = 1";
+	/**
+	 *  CUBRID incr() 함수 사용.
+	 */
+	@Deprecated
 	public static final String QUERY_COUNT_UP =
 		"update okboard set hit = hit + 1 where seq = ?";
 	public static final String QUERY_PREV =
@@ -93,11 +97,11 @@ public class ViewServlet extends HttpServlet {
 			req.setAttribute("arrdf", arrdf);
 
 			// 조회수 증가하기
-			pstmt = conn.prepareStatement(QUERY_COUNT_UP);
+			/*pstmt = conn.prepareStatement(QUERY_COUNT_UP);
 			pstmt.setInt(1, seq);
 
 			pstmt.executeUpdate();
-			pstmt.close();
+			pstmt.close();*/
 
 			// 이전글 번호 가져오기
 			pstmt = conn.prepareStatement(QUERY_PREV);
