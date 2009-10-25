@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 import kr.pe.okjsp.member.PointDao;
 import kr.pe.okjsp.util.DbCon;
@@ -51,7 +52,7 @@ public class MemoDao {
     	String mseq = "";
     	try {
 			// memo ют╥б
-			pstmt = conn.prepareStatement(QUERY_MEMO_ADD);
+			pstmt = conn.prepareStatement(QUERY_MEMO_ADD, Statement.RETURN_GENERATED_KEYS);
 			pstmt.setInt   (1, seq);
 			pstmt.setString(2, id);
 			pstmt.setLong  (3, sid);
