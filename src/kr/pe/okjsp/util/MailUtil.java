@@ -22,8 +22,8 @@ public class MailUtil {
 	}
 
 	public static final String smtpHost = "smtp.gmail.com";
-	public static final String smtpUsername = "account@gmail.com";
-	public static final String smtpPassword = "password";
+	public static final String smtpUsername = "okjsp.pe.kr@gmail.com";
+	public static final String smtpPassword = "test.okjsp.pe.kr";
 	public static final String smtpPort = "465";
 
 	public void send(String mailto, String subject, String textMessage)

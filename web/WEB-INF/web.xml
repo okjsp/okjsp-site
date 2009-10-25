@@ -7,11 +7,14 @@
         <servlet-name>download</servlet-name>
         <servlet-class>kr.pe.okjsp.DownloadServlet</servlet-class>
     </servlet>
+<!-- cubrid 사용으로 더이상 사용하지 않습니다.
+	20091025 서영아빠
     <servlet>
         <servlet-name>popdb</servlet-name>
         <servlet-class>kr.pe.okjsp.PopDb</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
+-->
     <servlet>
         <display-name>PopBbsInfo</display-name>
         <servlet-name>PopBbsInfo</servlet-name>

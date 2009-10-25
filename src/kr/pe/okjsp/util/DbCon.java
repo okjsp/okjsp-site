@@ -9,14 +9,31 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ResourceBundle;
 
 /**
  * @author kenu
  * 
  */
 public class DbCon {
+	private static String dbUrl = null;
+	private static String dbUser = null;
+	private static String dbPass = null;
+	static {
+		ResourceBundle rb = ResourceBundle.getBundle("kr.pe.okjsp.DB");
+		dbUrl = rb.getString("DBURL");
+		dbUser = rb.getString("DBUSER");
+		dbPass = rb.getString("DBPASS");
+		try {
+			Class.forName(rb.getString("DRIVER"));
+		} catch (Exception e) {
+			System.err.println("Unable to load driver.");
+			e.printStackTrace();
+		}
+	}
+	
 	public Connection getConnection() throws SQLException {
-		return DriverManager.getConnection("jdbc:jdc:jdcpool");
+		return DriverManager.getConnection(dbUrl, dbUser, dbPass);
 	}
 
 	public void close(Connection pconn, PreparedStatement pstmt,

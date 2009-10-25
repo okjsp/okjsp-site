@@ -210,7 +210,7 @@ call destroy_data(obj);
 
 /* ¿Œµ¶Ω∫ */
 CREATE INDEX "okboard_bbsid_idx" on "okboard" ("bbsid");
-CREATE INDEX "okboard_ref_idx" on "okboard" ("ref");
+CREATE INDEX "okboard_ref_idx" on "okboard" ("ref" desc);
 CREATE INDEX "okboard_bookmark_id_idx" on "okboard_bookmark" ("id");
 CREATE UNIQUE INDEX "seq" on "okboard_category" ("seq");
 CREATE UNIQUE INDEX "fseq" on "okboard_file" ("fseq");
