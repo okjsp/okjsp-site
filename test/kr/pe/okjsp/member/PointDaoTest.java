@@ -103,9 +103,9 @@ public class PointDaoTest extends TestCase {
 		
 		// 메모글 삭제 -1점, code 5
 		// 투표 1점 code 6
-		// 회원탈퇴시 포인트기록 삭제테이블로 이동
+		// 회원 탈퇴시 포인트 기록 삭제 테이블로 이동
 		
-		// 글삭제 -10점, code 3
+		// 글삭제 -10점. code 3
 		// DeleteServlet.doPost();
 		
 	}
