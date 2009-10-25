@@ -2,7 +2,7 @@
 <project name="okjsp-site" default="publish">
 	<property file="build.properties"/>
 	<property name="src.home" value="src"/>
-	<property name="catalina.home" value="/java/apache-tomcat-6.0.18"/>
+	<property name="catalina.home" value="/web/local/java/jakarta-tomcat-5.0.27"/>
 	<property name="publish.home" value="${catalina.home}/webapps/ROOT"/>
 	<path id="compile.classpath">
 		<!-- Include all elements that Tomcat exposes to applications -->
@@ -127,7 +127,7 @@
 		<sql driver="${DRIVER}"
          url="${DBURL}"
          userid="root" password="okpass"
-         classpath="${basedir}/web/WEB-INF/lib/mysql-connector-java-3.1.14-bin.jar">
+         classpath="${basedir}/web/WEB-INF/lib/cubrid_jdbc.jar">
 			<fileset dir="${basedir}/web/WEB-INF/sql" includes="okjsp2007.sql"/>
 		</sql>
 	</target>
