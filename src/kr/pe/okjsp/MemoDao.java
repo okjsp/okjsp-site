@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 import kr.pe.okjsp.member.PointDao;
 import kr.pe.okjsp.util.DbCon;
@@ -30,8 +29,6 @@ public class MemoDao {
      * <pre>
      * 메모 기록
      * # 20091018 서영아빠 CUBRID로 마이그레이션 하면서 시퀀스 자동생성 방법으로 바뀜
-	 * # 20091026 AUTO_INCREMENT 적용으로 인해 getGeneratedKeys()를 사용
-	 *   정확한 원인은 모르지만 stmt.execute() 외에는 getGeneratedKeys() 값이 안받아진다.
      * </pre>
      * @param conn
      * @param id
@@ -48,31 +45,24 @@ public class MemoDao {
     	if ("null".equals(bcomment) || bcomment == null) {
     		throw new SQLException("no content by "+ip);
     	}
-    	Statement stmt = null;
+    	PreparedStatement pstmt = null;
     	ResultSet rs = null;
     	int memocnt = 0;
     	String mseq = "";
     	try {
 			// memo 입력
-    		StringBuilder query = new StringBuilder();
-			query.append("INSERT ");
-			query.append("INTO okboard_memo ");
-			query.append("(seq, id, sid, writer, bcomment, wtime, memopass, ip) ");
-			query.append("VALUES ");
-			query.append("(").append(seq).append(" ");
-			query.append(", '").append(id).append("' ");
-			query.append(", ").append(sid).append(" ");
-			query.append(", '").append(writer).append("' ");
-			query.append(", '").append(bcomment).append("' ");
-			query.append(", SYSTIMESTAMP ");
-			query.append(", old_password('").append(memopass).append("') ");
-			query.append(", '").append(ip).append("' ");
-			query.append(")");
-			stmt = conn.createStatement();
-			stmt.execute(query.toString(), Statement.RETURN_GENERATED_KEYS);
+			pstmt = conn.prepareStatement(QUERY_MEMO_ADD, PreparedStatement.RETURN_GENERATED_KEYS);
+			pstmt.setInt   (1, seq);
+			pstmt.setString(2, id);
+			pstmt.setLong  (3, sid);
+			pstmt.setString(4, writer);
+			pstmt.setString(5, bcomment);
+			pstmt.setString(6, memopass);
+			pstmt.setString(7, ip);
+			memocnt = pstmt.executeUpdate();
 			
 			// 등록된 mseq를 가져옵니다.
-			rs = stmt.getGeneratedKeys();
+			rs = pstmt.getGeneratedKeys();
 			while (rs.next()) {
 				mseq = rs.getString(1);
 			}
@@ -83,7 +73,7 @@ public class MemoDao {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			dbCon.close(null, stmt, rs);
+			dbCon.close(null, pstmt, rs);
 		}
     	return memocnt;
     }

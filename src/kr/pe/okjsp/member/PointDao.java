@@ -37,7 +37,7 @@ public class PointDao {
 			// 포인트 이력 입력
 			pstmt = conn.prepareStatement(POINT_LOG);
 			pstmt.setLong  (1, sid);
-			pstmt.setInt   (2, code);
+			pstmt.setString(2, Integer.toString(code));
 			pstmt.setInt   (3, point);
 			pstmt.setString(4, info);
 			result = pstmt.executeUpdate();

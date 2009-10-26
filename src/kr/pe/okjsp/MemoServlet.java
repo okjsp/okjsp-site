@@ -66,6 +66,7 @@ public class MemoServlet extends HttpServlet {
 			}
 
 			conn = dbCon.getConnection();
+			conn.setAutoCommit(false);
 
 			int memocnt = 0;
 			MemoDao memoDao = new MemoDao();
@@ -97,6 +98,7 @@ public class MemoServlet extends HttpServlet {
 			}
 
 			memoDao.setCount(conn, seq, memocnt);
+			conn.commit();
 
 			CommonUtil.setCookie(res, "okwriter", writer);
 		} catch (Exception e) {

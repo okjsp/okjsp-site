@@ -157,7 +157,8 @@ public class WriteServlet extends HttpServlet {
 		ArticleDao articleDao = new ArticleDao();
 		try {
 
-			conn = dbCon.getConnection();;
+			conn = dbCon.getConnection();
+			conn.setAutoCommit(false);
 
 			String act = multi.getParameter("act");
 			String[] delFiles = null;
@@ -184,7 +185,7 @@ public class WriteServlet extends HttpServlet {
 			}
 
 			articleDao.addFile(conn, article.getSeq(), arrdf);
-			
+			conn.commit();
 		} catch (Exception e) {
 			System.out.println("WriteServlet err:" + CommonUtil.a2k(e.toString()));
 		} finally {
