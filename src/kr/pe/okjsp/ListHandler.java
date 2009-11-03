@@ -298,10 +298,11 @@ public class ListHandler {
 
 	/**
 	 * Sets the keyword.
+	 * useBean 에서 setter 호출시 charset encoding이 8859_1로 되는것 같음
 	 * @param keyword The keyword to set
 	 */
 	public void setKeyword(String keyword) {
-		this.keyword = CommonUtil.nchk(keyword);
+		this.keyword = CommonUtil.a2kProp(CommonUtil.nchk(keyword));
 		EMPTY_KEYWORD = "".equals(keyword);
 	}
 
