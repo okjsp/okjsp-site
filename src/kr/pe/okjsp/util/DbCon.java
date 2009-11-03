@@ -21,22 +21,32 @@ import org.apache.commons.dbcp.BasicDataSource;
 public class DbCon {
 	private static BasicDataSource ds = null;
 	static {
+		ResourceBundle rb = ResourceBundle.getBundle("kr.pe.okjsp.DB");
+		String driver = rb.getString("DRIVER");
+		String dbUrl = rb.getString("DBURL");
+		String dbUser = rb.getString("DBUSER");
+		String dbPass = rb.getString("DBPASS");
 		try {
-			ResourceBundle rb = ResourceBundle.getBundle("kr.pe.okjsp.DB");
 			ds = new BasicDataSource();
-			ds.setDriverClassName(rb.getString("DRIVER"));
-			ds.setUrl(rb.getString("DBURL"));
-			ds.setUsername(rb.getString("DBUSER"));
-			ds.setPassword(rb.getString("DBPASS"));
+			ds.setDriverClassName(driver);
+			ds.setUrl(dbUrl);
+			ds.setUsername(dbUser);
+			ds.setPassword(dbPass);
 		} catch (Exception e) {
 			System.out.println("anable load DataSource~!");
 			e.printStackTrace();
+		} finally {
+			System.out.println("\n =============================================");
+			System.out.println(" ¡Ø DataBase Info ¡Ø");
+			System.out.println(" DRIVER : " + driver);
+			System.out.println(" DBURL : " + dbUrl);
+			System.out.println(" DBUSER : " + dbUser);
+			System.out.println(" =============================================\n");
 		}
 	}
 	
 	public Connection getConnection() throws SQLException {
-		Connection con = ds.getConnection();
-		return con;
+		return ds.getConnection();
 	}
 
 	public void close(Connection pconn, Statement pstmt,
