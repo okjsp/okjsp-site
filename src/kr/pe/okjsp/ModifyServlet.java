@@ -105,7 +105,7 @@ public class ModifyServlet extends HttpServlet {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		try {
-			String sql = "select old_password(?) ";
+			String sql = "select old_password(?) from db_root";
 			pstmt = conn.prepareStatement(sql );
 			pstmt.setString(1, confirmPassword);
 			rs = pstmt.executeQuery();
