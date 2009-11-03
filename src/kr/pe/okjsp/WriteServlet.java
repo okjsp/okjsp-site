@@ -2,6 +2,7 @@ package kr.pe.okjsp;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.Enumeration;
@@ -111,7 +112,7 @@ public class WriteServlet extends HttpServlet {
 		        res.sendRedirect(Navigation.getPath("LOGFORM"));
 		        return null;
 		    }
-
+// Multipart 가 들어가면 무조건 8859_1로 변함 ㅡ.ㅡ
 			article =
 				new Article(
 					bbs,
@@ -121,12 +122,12 @@ public class WriteServlet extends HttpServlet {
 					lev,
 					id,
 					sid,
-					writer,
-					subject,
-					content,
+					CommonUtil.a2kProp(writer),
+					CommonUtil.a2kProp(subject),
+					CommonUtil.a2kProp(content),
 					password,
 					email,
-					homepage,
+					CommonUtil.a2kProp(homepage),
 					0,
 					null,
 					html,
