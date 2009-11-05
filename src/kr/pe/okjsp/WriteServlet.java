@@ -46,7 +46,6 @@ public class WriteServlet extends HttpServlet {
 		Article article = new Article();
 		article.setId(id);
 		article.setSid(sid);
-
 		String writer = req.getParameter("writer");
 		String bbs = req.getParameter("bbs");
 		String content = req.getParameter("content");
@@ -81,19 +80,21 @@ public class WriteServlet extends HttpServlet {
             }
         }
         
+        // MultipartRequest는 인코딩을 지정해 줘야 하기 때문에 request의 인코딩을 뽑아서 넣어줘야합니다.
+        String encoding = CommonUtil.nchk(req.getCharacterEncoding(), "euc-kr");
+        
 		MultipartRequest multi =
 			new MultipartRequest(
 				req,
 				uploadDir,
-				200 * 1024 * 1024);
+				200 * 1024 * 1024,
+				encoding);
 		// 200MB
-
 		ArrayList<DownFile> arrdf = new ArrayList<DownFile>();
 		Article article = null;
 		String id = CommonUtil.getCookie(req, "okid");
 		long sid = CommonUtil.getCookieLong(req, "sid");
 		try {
-			
 			int seq = 0, ref = 0, lev = 0, step = 0;
 			String writer = multi.getParameter("writer");
 			String bbs = multi.getParameter("bbs");
@@ -104,7 +105,6 @@ public class WriteServlet extends HttpServlet {
 			String password = multi.getParameter("password");
 			String html = multi.getParameter("html");
 			String ccl_id = multi.getParameter("ccl_id");
-			
 			
 			//id 
 		    boolean isLogin = sid > 0;
@@ -122,12 +122,12 @@ public class WriteServlet extends HttpServlet {
 					lev,
 					id,
 					sid,
-					CommonUtil.a2kProp(writer),
-					CommonUtil.a2kProp(subject),
-					CommonUtil.a2kProp(content),
+					writer,
+					subject,
+					content,
 					password,
 					email,
-					CommonUtil.a2kProp(homepage),
+					homepage,
 					0,
 					null,
 					html,
