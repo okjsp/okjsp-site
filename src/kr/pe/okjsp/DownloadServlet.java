@@ -95,14 +95,19 @@ public class DownloadServlet extends HttpServlet {
 		byte b[] = new byte[4096];
 		response.setContentType("application/octet-stream");
         //파일크기를 브라우저에 알려준다.
-		response.setContentLength((int)file.length());  
-		String filename1 = new String(request.getParameter("fileName").getBytes("ISO-8859-1"),"euc-kr");
-		String filename2 = java.net.URLEncoder.encode(filename1, "UTF8");
-		filename2 = CommonUtil.rplc(filename2, "+", " ");
-		
+		response.setContentLength((int)file.length());
+		String oriFilename = request.getParameter("fileName");
+		String eucFilename = new String(oriFilename.getBytes("ISO-8859-1"),"euc-kr");
+		String filename = "";
+		if (agent.contains("MSIE")) { // IE
+			filename = java.net.URLEncoder.encode(eucFilename, "UTF8");
+		} else { // FireFox, Safari, Opera, chrome
+			filename = oriFilename;
+		}
+		filename = CommonUtil.rplc(filename, "+", " ");
 		response.setHeader(
 			"Content-Disposition",
-			"attachment;filename=\"" + filename2 + "\";");
+			"attachment;filename=\"" + filename + "\";");
 		if (file.isFile()) {
 			BufferedInputStream fin =
 				new BufferedInputStream(new FileInputStream(file));
