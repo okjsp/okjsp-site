@@ -31,14 +31,13 @@
     </td>
     <td valign='top'>
 <div id="banner_top" style="margin:4px;text-align:center">
-<a href="http://www.acornpub.co.kr/" target="_blank">
-<img src="/images/banner/acornpub_468x60.gif" 
-	alt="okjsp 세미나에 협찬을 많이 해주시는 에이콘 출판사입니다.">
+<a href="/f.jsp?http://www.devlec.com/" target="_blank">
+<img src="/images/banner/devlec_473x98.gif" 
+	alt="개발자 전문 온라인 동영상 강의 교육 사이트 No.1 데브렉">
 </a>
 </div>
 
-<jsp:include page="/techtrend/techtrend.jsp"></jsp:include>
-<table width="762" border="0" cellspacing="0">
+<table width="600" border="0" cellspacing="0">
   <tr>
     <td align="center" valign="top">
 <div id="bookList">
@@ -178,33 +177,6 @@ for (var i = 0; i < kangcomList.length && i < 6 ; i++) {
 <%
 	}
 %></table>
-    </td>
-    <td width="177" valign="top">
-        <div id="banner2">
-        <script>
-        // 배너표시
-        bannerShuffle(banner, 1, 1)
-        bannerShuffle(banner2, 10, 1);
-        displayBanner(bannerDb, 1);
-var direction = 1;
-var scrollBanner = function() {
-	if (direction == 1) {
-		var scroll = { scroll:{ to: [0, 300] }};
-		direction = -1;
-	} else {
-		scroll = { scroll:{ to: [300, 0] }};
-		direction = 1;
-	}
-    var myAnim = new YAHOO.util.Scroll("banner_top", scroll, 4, YAHOO.util.Easing.easeOut); 
-
-    myAnim.animate();
-	setTimeout("scrollBanner()", 6000);
-}
-scrollBanner();
- 
-        </script>
-        </div>
-        <font size="1" face="Arial, Helvetica, sans-serif" color="#FFFFFF">since 2000/12/05</font><br>
     </td>
   </tr>
 </table>

@@ -273,7 +273,6 @@ public class MemberHandler {
 			pconn.commit();
 		}catch(Exception e){
 			pconn.rollback();
-			e.printStackTrace();
 			throw new SQLException("Register err:"+e.toString());
 		} finally {
 			pconn.setAutoCommit(true);

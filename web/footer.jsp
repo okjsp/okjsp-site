@@ -3,9 +3,9 @@
 java/jsp/eclipse
 <a href="/" style="font-size:11px">http://www.okjsp.pe.kr</a>
 <%
-	String bannerPath = "/images/banner/oss182x80.gif";
-	String bannerTitle = "오픈소스소프트웨어 경진대회 공식 홈페이지";
-	String bannerLink = "/f.jsp?http://oss.or.kr/ossproject/";
+	String bannerPath = "/images/banner/maso_seminar.gif";
+	String bannerTitle = "국내 마지막 남은 개발자를 위한 잡지";
+	String bannerLink = "/f.jsp?http://www.imaso.co.kr/";
 %>
 <div style="text-align:center">
  <a href="<%= bannerLink %>"
