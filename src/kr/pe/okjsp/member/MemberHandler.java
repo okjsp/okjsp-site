@@ -26,21 +26,21 @@ public class MemberHandler {
 	static final String QUERY_MAX_SID
 		= "select max(sid) from okmember";
 	static final String QUERY_ADD
-		= "insert into okmember (id, password, name, email, homepage, joindate, mailing, sid) values (?, old_password(?), ?, ?, ?, SYSTIMESTAMP, ?, ?)";
+		= "insert into okmember (id, \"password\", name, email, homepage, joindate, mailing, sid) values (?, old_password(?), ?, ?, ?, SYSTIMESTAMP, ?, ?)";
 	static final String QUERY_ROLE_ADD
 		= "insert into okrole (id, \"role\") values (?,?)";
 	static final String QUERY_LOGIN
-		= "select * from okmember where id = ? and password = old_password(?)";
+		= "select * from okmember where id = ? and \"password\" = old_password(?)";
 	static final String QUERY_ROLE
 		= "select \"role\" from okrole where id = ?";
 	static final String QUERY_COUNT
 		= "select count(id) from okmember";
 	static final String QUERY_UPDATE
-		= "update okmember set password = old_password(?), name=?, email=?, homepage=?, mailing=? where id = ?";
+		= "update okmember set \"password\" = old_password(?), name=?, email=?, homepage=?, mailing=? where id = ?";
 	static final String QUERY_PROFILELOG
 		= "update okmember set profile = 'Y' where id = ?";
 	static final String QUERY_DELETE
-		= "delete from okmember where id = ? and password = old_password(?)";
+		= "delete from okmember where id = ? and \"password\" = old_password(?)";
 	static final String QUERY_MAILING_STATUS
 		= "select mailing from okmember where lower(email) = lower(?)";
 	static final String QUERY_MAILING
