@@ -2,7 +2,6 @@ package kr.pe.okjsp;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.Enumeration;
@@ -182,6 +181,8 @@ public class WriteServlet extends HttpServlet {
 				articleDao.modify(conn, article);
 				articleDao.deleteFiles(conn, delFiles);
 			} else {
+				int newRef = articleDao.getNewRef(conn, article.getBbs());
+				article.setRef(newRef);
 				articleDao.write(conn, article);
 			}
 

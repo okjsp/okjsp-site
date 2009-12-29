@@ -27,16 +27,18 @@ public class ArticleDao {
 	 */
 	public static final String QUERY_NEW_FILE_SEQ =
 		"select fseq+1 from okboard_file order by fseq desc limit 0,1";
-	/**
-	 * @deprecated 20091017 서영아빠 CUBRID로 마이그레이션 하면서 시퀀스 자동생성 방법으로 바뀜
-	 */
+	
+	public static final String QUERY_ADD = 
+		"insert into okboard (bbsid, ref, step, lev, id, writer,subject, content, \"password\", email, homepage, hit, memo, sts,wtime, ip, html, ccl_id) " +
+		" values (?,?,0,0, ?,?,?,?,old_password(?),?,?,0,0,1, SYSTIMESTAMP, ?,?,?)";
+
+
 	public static final String QUERY_NEW_REF =
-		"select ref+1 from okboard where bbsid = ? order by ref desc limit 0,1";
-	/**
-	 * @deprecated 20091017 서영아빠 CUBRID로 마이그레이션 하면서 시퀀스 자동생성 방법으로 바뀜
-	 */
+		"select * from okboard where bbsid = ? and rownum = 1 order by \"ref\" desc";
+
 	public static final String QUERY_NEW_REF_DELETED =
-		"select ref+1 from okboard where bbsid = ? order by ref desc limit 0,1";
+		"select * from okboard_deleted where bbsid = ? and rownum = 1 order by \"ref\" desc";
+	
 	public static final String QUERY_ADD_FILE =
 		"insert into okboard_file (seq, filename, maskname, filesize, download) values (?,?,?,?,0)";
 	public static final String QUERY_DEL_FSEQ_FILE =
@@ -99,33 +101,31 @@ public class ArticleDao {
 	 * @return result record count
 	 */
 	public int write(Connection conn, Article article) {
-		String query =
-			"insert into okboard (bbsid, step, lev, id, writer,subject, content, \"password\", email, homepage, hit, memo, sts,wtime, ip, html, ccl_id) values (?,0,0, ?,?,?,?,old_password(?),?,?,0,0,1, SYSTIMESTAMP, ?,?,?)";
 		PreparedStatement pstmt = null;
 		int result = 0;
-		String seq = null;
 		ResultSet rs = null;
 		try {
-			pstmt = conn.prepareStatement(query, PreparedStatement.RETURN_GENERATED_KEYS);
+			pstmt = conn.prepareStatement(QUERY_ADD, PreparedStatement.RETURN_GENERATED_KEYS);
 			pstmt.setString(1, article.getBbs());
-			pstmt.setString(2, article.getId());
-			pstmt.setString(3, article.getWriter());
-			pstmt.setString(4, article.getSubject());
-			pstmt.setString(5, article.getContent());
-			pstmt.setString(6, article.getPassword());
-			pstmt.setString(7, article.getEmail());
-			pstmt.setString(8, article.getHomepage());
-			pstmt.setString(9, article.getIp());
-			pstmt.setString(10, article.getHtml());
-			pstmt.setString(11, article.getCcl_id());
+			pstmt.setString(2, String.valueOf(article.getRef()));
+			pstmt.setString(3, article.getId());
+			pstmt.setString(4, article.getWriter());
+			pstmt.setString(5, article.getSubject());
+			pstmt.setString(6, article.getContent());
+			pstmt.setString(7, article.getPassword());
+			pstmt.setString(8, article.getEmail());
+			pstmt.setString(9, article.getHomepage());
+			pstmt.setString(10, article.getIp());
+			pstmt.setString(11, article.getHtml());
+			pstmt.setString(12, article.getCcl_id());
 			result = pstmt.executeUpdate();
 			rs = pstmt.getGeneratedKeys();
 			while (rs.next()) {
-				seq = rs.getString(1);
+				String int1 = rs.getString(1);
+				article.setSeq(Integer.parseInt(int1));
 			}
 			if (article.getSid() > 0) {
-				new PointDao().log(article.getSid(), 2, 10, seq);
-				article.setSeq(Integer.parseInt(seq));
+				new PointDao().log(article.getSid(), 2, 10, String.valueOf(article.getSeq()));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -249,7 +249,7 @@ public class ArticleDao {
 	 */
 	public int fetchNewRef(Connection conn, String query, String bbs) throws SQLException {
 
-		int newRef = 1;
+		int newRef = 0;
 
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -258,7 +258,7 @@ public class ArticleDao {
 			pstmt.setString(1, bbs);
 			rs = pstmt.executeQuery();
 			if (rs.next()) {
-				newRef = rs.getInt(1);
+				newRef = rs.getInt("ref");
 			}
 		} catch (SQLException e) {
 			System.out.println(e.toString());
@@ -266,7 +266,7 @@ public class ArticleDao {
 			dbCon.close(null, pstmt, rs);
 		}
 
-		return newRef;
+		return newRef + 1;
 	}
 
 	/**
@@ -283,7 +283,6 @@ public class ArticleDao {
 	}
 
 	/**
-	 * @deprecated 20091017 서영아빠 CUBRID로 마이그레이션 하면서 시퀀스 자동생성 방법으로 바뀜
 	 * @param conn
 	 * @param bbs
 	 * @return
