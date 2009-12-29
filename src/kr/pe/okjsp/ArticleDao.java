@@ -361,6 +361,10 @@ public class ArticleDao {
 		try {
 			conn = dbCon.getConnection();
 			conn.setAutoCommit(false);
+
+			article.setSeq(getSeq(conn));
+			article.setRef(getNewRef(conn, article.getBbs()));
+
 			result = write(conn, article);
 			conn.commit();
 		} catch (Exception e) {
@@ -371,12 +375,12 @@ public class ArticleDao {
 			}
 			System.out.println("write err: "+e);
 		} finally {
-			dbCon.close(conn, null);
 			try {
 				conn.setAutoCommit(true);
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
+			dbCon.close(conn, null);
 		}
 
 		return result;
