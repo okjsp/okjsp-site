@@ -7,7 +7,6 @@ import java.util.Iterator;
 import junit.framework.TestCase;
 
 public class ListHandlerTest extends TestCase {
-	PopDb pd = new PopDb();
 
 	public void testGetRecent() throws SQLException {
 		ListHandler list = new ListHandler();

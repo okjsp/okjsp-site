@@ -5,8 +5,8 @@
 package kr.pe.okjsp.util;
 
 import java.util.Collection;
+
 import junit.framework.TestCase;
-import kr.pe.okjsp.PopDb;
 import kr.pe.okjsp.SiteSearch;
 
 /**
@@ -41,7 +41,6 @@ public class SiteSearchTest extends TestCase {
 	 * @see junit.framework.TestCase#setUp()
 	 */
 	protected void setUp() throws Exception {
-		PopDb pd = new PopDb();
 		super.setUp();
 	}
 

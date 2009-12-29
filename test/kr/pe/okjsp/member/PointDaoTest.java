@@ -8,12 +8,10 @@ import kr.pe.okjsp.Article;
 import kr.pe.okjsp.ArticleDao;
 import kr.pe.okjsp.MemoBean;
 import kr.pe.okjsp.MemoDao;
-import kr.pe.okjsp.PopDb;
 import kr.pe.okjsp.util.DbCon;
 
 public class PointDaoTest extends TestCase {
 
-	PopDb db = new PopDb();
 	PointDao pointDao = new PointDao();
 	
 	public void testPointLog() throws Exception {
@@ -59,7 +57,7 @@ public class PointDaoTest extends TestCase {
 		ArticleDao articleDao = new ArticleDao();
 		Article article = new Article();
 		Connection conn = new DbCon().getConnection();
-		int seq = articleDao.fetchNew(conn, ArticleDao.QUERY_NEW_SEQ);
+		int seq = articleDao.getSeq(conn);
 		article.setSeq(seq);
 		article.setBbs("perf");
 		article.setSubject("subject");
@@ -90,6 +88,7 @@ public class PointDaoTest extends TestCase {
 		MemoDao memoDao = new MemoDao();
 		DbCon dbCon = new DbCon();
 		Connection conn = dbCon.getConnection();
+		conn.setAutoCommit(false);
 		String bcomment = memoBean.getBcomment();
 		String writer = member.getId();
 		long sid = member.getSid();
@@ -100,7 +99,7 @@ public class PointDaoTest extends TestCase {
 		memoDao.write(conn, id, sid, writer, bcomment, memopass, ip, seq);
 		long pointAfter = pointDao.getPoint(member.getSid());
 		assertEquals(1, pointAfter - pointBefore);
-		
+		conn.setAutoCommit(true);
 		// 메모글 삭제 -1점, code 5
 		// 투표 1점 code 6
 		// 회원 탈퇴시 포인트 기록 삭제 테이블로 이동

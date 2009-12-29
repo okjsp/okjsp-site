@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 import kr.pe.okjsp.member.PointDao;
@@ -12,32 +13,25 @@ import kr.pe.okjsp.util.DbCon;
 
 public class ArticleDao {
 	DbCon dbCon = new DbCon();
-	/**
-	 * @deprecated 20091017 서영아빠 CUBRID로 마이그레이션 하면서 시퀀스 자동생성 방법으로 바뀜
-	 */
-	public static final String QUERY_NEW_SEQ =
-		"select seq+1 from okboard order by seq desc limit 0,1";
-	/**
-	 * @deprecated 20091017 서영아빠 CUBRID로 마이그레이션 하면서 시퀀스 자동생성 방법으로 바뀜
-	 */
-	public static final String QUERY_NEW_SEQ_DELETED =
-		"select seq+1 from okboard_deleted order by seq desc limit 0,1";
-	/**
-	 * @deprecated 20091017 서영아빠 CUBRID로 마이그레이션 하면서 시퀀스 자동생성 방법으로 바뀜
-	 */
-	public static final String QUERY_NEW_FILE_SEQ =
-		"select fseq+1 from okboard_file order by fseq desc limit 0,1";
-	
-	public static final String QUERY_ADD = 
-		"insert into okboard (bbsid, \"ref\", step, lev, id, writer,subject, content, \"password\", email, homepage, hit, memo, sts,wtime, ip, html, ccl_id) " +
-		" values (?,?,0,0, ?,?,?,?,old_password(?),?,?,0,0,1, SYSTIMESTAMP, ?,?,?)";
 
+	public static final String QUERY_NEW_SEQ =
+		"select max(seq) seq from okboard where rownum = 1 order by seq desc";
+
+	public static final String QUERY_NEW_SEQ_DELETED =
+		"select max(seq) seq from okboard_deleted where rownum = 1 order by seq desc";
+
+	public static final String QUERY_NEW_FILE_SEQ =
+		"select max(fseq) seq from okboard_file where rownum = 1 order by fseq desc";
+
+	public static final String QUERY_ADD = 
+		"insert into okboard (bbsid, seq, \"ref\", step, lev, id, writer,subject, content, \"password\", email, homepage, hit, memo, sts,wtime, ip, html, ccl_id) " +
+		" values (?,?,?,0,0, ?,?,?,?,old_password(?),?,?,0,0,1, SYSTIMESTAMP, ?,?,?)";
 
 	public static final String QUERY_NEW_REF =
-		"select * from okboard where bbsid = ? and rownum = 1 order by \"ref\" desc";
+		"select max(\"ref\") \"ref\" from okboard where bbsid = ? and rownum = 1 order by \"ref\" desc";
 
 	public static final String QUERY_NEW_REF_DELETED =
-		"select * from okboard_deleted where bbsid = ? and rownum = 1 order by \"ref\" desc";
+		"select max(\"ref\") \"ref\" from okboard_deleted where bbsid = ? and rownum = 1 order by \"ref\" desc";
 	
 	public static final String QUERY_ADD_FILE =
 		"insert into okboard_file (seq, filename, maskname, filesize, download) values (?,?,?,?,0)";
@@ -94,7 +88,6 @@ public class ArticleDao {
 	/**
 	 * <pre>
 	 * okboard 입력
-	 * # 20091018 서영아빠 CUBRID로 마이그레이션 하면서 시퀀스 자동생성 방법으로 바뀜
 	 * </pre>
 	 * @param conn
 	 * @param article
@@ -105,25 +98,23 @@ public class ArticleDao {
 		int result = 0;
 		ResultSet rs = null;
 		try {
-			pstmt = conn.prepareStatement(QUERY_ADD, PreparedStatement.RETURN_GENERATED_KEYS);
-			pstmt.setString(1, article.getBbs());
-			pstmt.setString(2, String.valueOf(article.getRef()));
-			pstmt.setString(3, article.getId());
-			pstmt.setString(4, article.getWriter());
-			pstmt.setString(5, article.getSubject());
-			pstmt.setString(6, article.getContent());
-			pstmt.setString(7, article.getPassword());
-			pstmt.setString(8, article.getEmail());
-			pstmt.setString(9, article.getHomepage());
-			pstmt.setString(10, article.getIp());
-			pstmt.setString(11, article.getHtml());
-			pstmt.setString(12, article.getCcl_id());
+			pstmt = conn.prepareStatement(QUERY_ADD, Statement.RETURN_GENERATED_KEYS);
+			int idx = 0;
+			pstmt.setString(++idx, article.getBbs());
+			pstmt.setInt   (++idx, article.getSeq());
+			pstmt.setInt   (++idx, article.getRef());
+			pstmt.setString(++idx, article.getId());
+			pstmt.setString(++idx, article.getWriter());
+			pstmt.setString(++idx, article.getSubject());
+			pstmt.setString(++idx, article.getContent());
+			pstmt.setString(++idx, article.getPassword());
+			pstmt.setString(++idx, article.getEmail());
+			pstmt.setString(++idx, article.getHomepage());
+			pstmt.setString(++idx, article.getIp());
+			pstmt.setString(++idx, article.getHtml());
+			pstmt.setString(++idx, article.getCcl_id());
 			result = pstmt.executeUpdate();
-			rs = pstmt.getGeneratedKeys();
-			while (rs.next()) {
-				String int1 = rs.getString(1);
-				article.setSeq(Integer.parseInt(int1));
-			}
+
 			if (article.getSid() > 0) {
 				new PointDao().log(article.getSid(), 2, 10, String.valueOf(article.getSeq()));
 			}
@@ -156,24 +147,25 @@ public class ArticleDao {
 			pstmt.close();
 
 			query =
-				"insert into okboard (bbsid, \"ref\", step, lev, writer, "
+				"insert into okboard (bbsid, seq, \"ref\", step, lev, writer, "
 					+ " subject, content, password, email, homepage, hit, memo, "
-					+ " wtime, ip, html, ccl_id) values (?,?,?,?, ?,?,?,old_password(?),?, "
+					+ " wtime, ip, html, ccl_id) values (?,?,?,?,?, ?,?,?,old_password(?),?, "
 					+ " ?,0,0,SYSTIMESTAMP,?, ?,?)";
 			pstmt = conn.prepareStatement(query);
 			pstmt.setString(1, article.getBbs());
-			pstmt.setInt(2, article.getRef());
-			pstmt.setInt(3, article.getStep() + 1);
-			pstmt.setInt(4, article.getLev() + 1);
-			pstmt.setString(5, article.getWriter());
-			pstmt.setString(6, article.getSubject());
-			pstmt.setString(7, article.getContent());
-			pstmt.setString(8, article.getPassword());
-			pstmt.setString(9, article.getEmail());
-			pstmt.setString(10, article.getHomepage());
-			pstmt.setString(11, article.getIp());
-			pstmt.setString(12, article.getHtml());
-			pstmt.setString(13, article.getCcl_id());
+			pstmt.setInt(2, article.getSeq());
+			pstmt.setInt(3, article.getRef());
+			pstmt.setInt(4, article.getStep() + 1);
+			pstmt.setInt(5, article.getLev() + 1);
+			pstmt.setString(6, article.getWriter());
+			pstmt.setString(7, article.getSubject());
+			pstmt.setString(8, article.getContent());
+			pstmt.setString(9, article.getPassword());
+			pstmt.setString(10, article.getEmail());
+			pstmt.setString(11, article.getHomepage());
+			pstmt.setString(12, article.getIp());
+			pstmt.setString(13, article.getHtml());
+			pstmt.setString(14, article.getCcl_id());
 			result = pstmt.executeUpdate();
 			if (article.getSid() > 0) {
 				new PointDao().log(article.getSid(), 2, 10, String.valueOf(article.getSeq()));
@@ -232,11 +224,11 @@ public class ArticleDao {
 		PreparedStatement pstmt = conn.prepareStatement(query);
 		ResultSet rs = pstmt.executeQuery();
 		if (rs.next()) {
-			newSeq = rs.getInt(1);
+			newSeq = rs.getInt("seq");
 		}
 		dbCon.close(null, pstmt, rs);
 
-		return newSeq;
+		return newSeq + 1;
 	}
 
 	/**
@@ -270,7 +262,6 @@ public class ArticleDao {
 	}
 
 	/**
-	 * @deprecated 20091017 서영아빠 CUBRID로 마이그레이션 하면서 시퀀스 자동생성 방법으로 바뀜
 	 * @param conn
 	 * @return
 	 * @throws SQLException
@@ -307,6 +298,8 @@ public class ArticleDao {
 	 */
 	public void addFile(Connection conn, int seq, ArrayList<DownFile> arrdf)
 			throws SQLException {
+		// file 일련번호
+		int fseq = fetchNew(conn, QUERY_NEW_FILE_SEQ);
 
 		// file 입력
 		PreparedStatement pstmt = null;
@@ -318,12 +311,14 @@ public class ArticleDao {
 				if (df.getFileSize() > 0) {
 					pstmt.clearParameters();
 
-					pstmt.setInt(1, seq);
-					pstmt.setString(2, df.getFileName());
-					pstmt.setString(3, df.getMaskName());
-					pstmt.setLong(4, df.getFileSize());
+					pstmt.setInt(1, fseq);
+					pstmt.setInt(2, seq);
+					pstmt.setString(3, df.getFileName());
+					pstmt.setString(4, df.getMaskName());
+					pstmt.setLong(5, df.getFileSize());
 
 					pstmt.executeUpdate();
+					fseq++;
 				}
 			}
 
@@ -367,9 +362,19 @@ public class ArticleDao {
 			result = write(conn, article);
 			conn.commit();
 		} catch (Exception e) {
+			try {
+				conn.rollback();
+			} catch (SQLException e1) {
+				e1.printStackTrace();
+			}
 			System.out.println("write err: "+e);
 		} finally {
 			dbCon.close(conn, null);
+			try {
+				conn.setAutoCommit(true);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 
 		return result;

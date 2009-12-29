@@ -181,8 +181,8 @@ public class WriteServlet extends HttpServlet {
 				articleDao.modify(conn, article);
 				articleDao.deleteFiles(conn, delFiles);
 			} else {
-				int newRef = articleDao.getNewRef(conn, article.getBbs());
-				article.setRef(newRef);
+				article.setSeq(articleDao.getSeq(conn));
+				article.setRef(articleDao.getNewRef(conn, article.getBbs()));
 				articleDao.write(conn, article);
 			}
 

@@ -11,16 +11,11 @@ import kr.pe.okjsp.util.DbCon;
 public class MemoDao {
 	DbCon dbCon = new DbCon();
 
-	/**
-	 * <pre>
-	 * @deprecated 20091018 서영아빠 CUBRID로 마이그레이션 하면서 시퀀스 자동생성 방법으로 바뀜
-	 * </pre>
-	 */
 	final static String QUERY_MEMO_SEQ =
-		"select mseq+1 from okboard_memo order by mseq desc limit 1";
+		"select max(mseq) seq from okboard_memo";
 
 	final static String QUERY_MEMO_ADD =
-		"insert into okboard_memo (seq, id, sid, writer, bcomment, wtime, memopass, ip) values (?,?,?,?,?,SYSTIMESTAMP,old_password(?),?)";
+		"insert into okboard_memo (mseq, seq, id, sid, writer, bcomment, wtime, memopass, ip) values (?,?,?,?,?,?,SYSTIMESTAMP,old_password(?),?)";
 
 	final static String QUERY_MEMO_COUNT =
         "update okboard set memo = memo + ? where seq = ?";
@@ -45,30 +40,34 @@ public class MemoDao {
     	if ("null".equals(bcomment) || bcomment == null) {
     		throw new SQLException("no content by "+ip);
     	}
+    	int mseq = 0;
     	PreparedStatement pstmt = null;
     	ResultSet rs = null;
     	int memocnt = 0;
-    	String mseq = "";
     	try {
+			// mseq 일련번호 가져오기
+			pstmt = conn.prepareStatement(QUERY_MEMO_SEQ);
+			rs = pstmt.executeQuery();
+			if(rs.next())
+			    mseq = rs.getInt(1);
+			mseq++;
+			rs.close();
+			pstmt.close();
+
 			// memo 입력
 			pstmt = conn.prepareStatement(QUERY_MEMO_ADD, PreparedStatement.RETURN_GENERATED_KEYS);
-			pstmt.setInt   (1, seq);
-			pstmt.setString(2, id);
-			pstmt.setLong  (3, sid);
-			pstmt.setString(4, writer);
-			pstmt.setString(5, bcomment);
-			pstmt.setString(6, memopass);
-			pstmt.setString(7, ip);
+			pstmt.setInt   (1, mseq);
+			pstmt.setInt   (2, seq);
+			pstmt.setString(3, id);
+			pstmt.setLong  (4, sid);
+			pstmt.setString(5, writer);
+			pstmt.setString(6, bcomment);
+			pstmt.setString(7, memopass);
+			pstmt.setString(8, ip);
 			memocnt = pstmt.executeUpdate();
 			
-			// 등록된 mseq를 가져옵니다.
-			rs = pstmt.getGeneratedKeys();
-			while (rs.next()) {
-				mseq = rs.getString(1);
-			}
-			
 			if (sid > 0) {
-				new PointDao().log(sid, 2, 1, mseq);
+				new PointDao().log(sid, 2, 1, String.valueOf(mseq));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
