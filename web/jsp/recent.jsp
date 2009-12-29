@@ -11,7 +11,7 @@
 %>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
-    <title>OKJSP</title>
+    <title>NEW OKJSP with CUBRID</title>
     <script type="text/javascript" src="/js/okjsp.js"></script>
     <script type="text/javascript" src="/js/bannerData.js"></script>
     <!-- Dependencies --> 
