@@ -15,28 +15,30 @@ public class ArticleDao {
 	DbCon dbCon = new DbCon();
 
 	public static final String QUERY_NEW_SEQ =
-		"select max(seq) seq from okboard where rownum = 1 order by seq desc";
+		"select max(seq) from okboard";
 
 	public static final String QUERY_NEW_SEQ_DELETED =
-		"select max(seq) seq from okboard_deleted where rownum = 1 order by seq desc";
+		"select max(seq) from okboard_deleted";
 
 	public static final String QUERY_NEW_FILE_SEQ =
-		"select max(fseq) seq from okboard_file where rownum = 1 order by fseq desc";
+		"select max(fseq) from okboard_file";
 
 	public static final String QUERY_ADD = 
 		"insert into okboard (bbsid, seq, \"ref\", step, lev, id, writer,subject, content, \"password\", email, homepage, hit, memo, sts,wtime, ip, html, ccl_id) " +
 		" values (?,?,?,0,0, ?,?,?,?,old_password(?),?,?,0,0,1, SYSTIMESTAMP, ?,?,?)";
 
 	public static final String QUERY_NEW_REF =
-		"select max(\"ref\") \"ref\" from okboard where bbsid = ? and rownum = 1 order by \"ref\" desc";
+		"select max(\"ref\") from okboard where bbsid = ?";
 
 	public static final String QUERY_NEW_REF_DELETED =
-		"select max(\"ref\") \"ref\" from okboard_deleted where bbsid = ? and rownum = 1 order by \"ref\" desc";
+		"select max(\"ref\") from okboard_deleted where bbsid = ?";
 	
 	public static final String QUERY_ADD_FILE =
 		"insert into okboard_file (seq, filename, maskname, filesize, download) values (?,?,?,?,0)";
+	
 	public static final String QUERY_DEL_FSEQ_FILE =
 		"update okboard_file set sts=0 where fseq=?";
+	
 	public static final String QUERY_ONE =
 		"select  bbsid, seq, \"ref\", step, lev, id, writer, subject, \"password\", email, incr(hit), html, homepage, wtime, ip, memo, content, ccl_id from okboard where seq = ?";
 	/**
@@ -224,7 +226,7 @@ public class ArticleDao {
 		PreparedStatement pstmt = conn.prepareStatement(query);
 		ResultSet rs = pstmt.executeQuery();
 		if (rs.next()) {
-			newSeq = rs.getInt("seq");
+			newSeq = rs.getInt(1);
 		}
 		dbCon.close(null, pstmt, rs);
 
@@ -250,7 +252,7 @@ public class ArticleDao {
 			pstmt.setString(1, bbs);
 			rs = pstmt.executeQuery();
 			if (rs.next()) {
-				newRef = rs.getInt("ref");
+				newRef = rs.getInt(1);
 			}
 		} catch (SQLException e) {
 			System.out.println(e.toString());
