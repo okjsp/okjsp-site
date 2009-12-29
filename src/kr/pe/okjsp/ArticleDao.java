@@ -29,7 +29,7 @@ public class ArticleDao {
 		"select fseq+1 from okboard_file order by fseq desc limit 0,1";
 	
 	public static final String QUERY_ADD = 
-		"insert into okboard (bbsid, ref, step, lev, id, writer,subject, content, \"password\", email, homepage, hit, memo, sts,wtime, ip, html, ccl_id) " +
+		"insert into okboard (bbsid, \"ref\", step, lev, id, writer,subject, content, \"password\", email, homepage, hit, memo, sts,wtime, ip, html, ccl_id) " +
 		" values (?,?,0,0, ?,?,?,?,old_password(?),?,?,0,0,1, SYSTIMESTAMP, ?,?,?)";
 
 
