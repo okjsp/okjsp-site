@@ -28,6 +28,9 @@
   <A href="/bbs?act=LIST&bbs=notice">공지사항</A>
   <div class="noticemenu">
   <a href="/jsp/member/agreement.jsp" target="privacy"><strong>개인정보취급방침</strong></a>
+  <br />
+  <a style="cursor:pointer" onclick="window.open('http://mail.mobigen.com:10080/m/x/payment.jsp', 'donation', 'width=380, height=280') "
+  ><strong style="color: #22d">OKJSP 기부제도</strong></a>
   </div>
 	<hr>ad:
   <div class="noticemenu">
