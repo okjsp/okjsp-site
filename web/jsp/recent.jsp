@@ -31,9 +31,9 @@
     </td>
     <td valign='top'>
 <div id="banner_top" style="margin:4px;text-align:center">
-<a href="/f.jsp?http://www.devlec.com/" target="_blank">
-<img src="/images/banner/devlec_473x98.gif" 
-	alt="개발자 전문 온라인 동영상 강의 교육 사이트 No.1 데브렉">
+<a href="/f.jsp?http://www.devmento.co.kr/dtfe/seminar/edumento_list.jsp?main_id=SDTF3W001" target="_blank">
+<img src="/images/banner/devmento_android_473x98.gif" 
+	alt="Devmento 세미나: androidpub 박성서, okjsp 허광남">
 </a>
 </div>
 
