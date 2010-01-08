@@ -72,11 +72,15 @@
 	setMenuDefault('menu1');
 </script>
 
-	<div>
-		<div class="tiny">powered by:</div>
-		<a href="http://www.80port.com/community" target="_blank"
-		 title="www.80port.com
-		 okjsp standalone 호스팅 지원, 서비스 좋습니다.">
-		<img src="/images/bnr_80port.gif" width="88" height="31" border="0"></a>
-	</div>
+<div id="sponsorBanner">
+	<div>sponsored by:</div>
+	<a href="http://www.80port.com/community" target="_blank"
+	 title="www.80port.com
+	 okjsp standalone 호스팅 지원, 서비스 좋습니다.">
+	<img src="/images/bnr_80port.gif" width="88" height="31" border="0"></a>
+	<br />
+	<a href="/f.jsp?http://www.cubrid.com/" target="_blank"
+	 title="okjsp Database">
+	<img src="/images/banner/cubrid_88x31.gif" width="88" height="31" border="0"></a>
+</div>
 </div>
