@@ -250,7 +250,6 @@
 			<auxClasspath path="${catalina.home}/lib/servlet-api.jar" />
 			<auxClasspath path="${catalina.home}/lib/jsp-api.jar" />
 			<auxClasspath path="${basedir}/web/WEB-INF/lib/cos.jar" />
-			<auxClasspath path="${basedir}/web/WEB-INF/lib/jdc-pool.jar" />
 			<auxClasspath path="${basedir}/web/WEB-INF/lib/AcmeGif.jar" />
 			<auxClasspath path="${basedir}/web/WEB-INF/lib/mail.jar" />
 			<sourcePath path="${basedir}/src" />
