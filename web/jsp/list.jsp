@@ -65,6 +65,22 @@
 <!--<%= System.currentTimeMillis()-stime %>-->
 <table class="tablestyle" border="0" cellpadding="3" cellspacing="1">
 <%
+	boolean isAdBBS = "recruit".equals(list.getBbs()) && list.getPg() < 1;
+	if (isAdBBS) {
+		int seq = 146139;
+%>
+    <tr class="body" align="center">
+        <td class="ref tiny" style="width: 40px; font-weight: bold;">스폰서</td>
+        <td class="subject" style="text-align: left">
+            <a href="/seq/<%= seq %>" style="font-weight:bold">자바개발자 취업연수생모집!&nbsp;</a>
+        </td>
+        <td class="writer">솔데스크</td>
+        <td class="writer"><img src="/profile/base/default.jpg" style="width: 14px; height: 14px;" alt="솔데스크"/></td>
+        <td class="read tiny">148</td>
+        <td class="when tiny">~02/28</td>
+    </tr>
+<%
+	} // end if 
 String keyword = CommonUtil.nchk(request.getParameter("keyword"));
 String link = "&bbs="+request.getParameter("bbs")+
               "&keyfield="+CommonUtil.nchk(request.getParameter("keyfield"), "content")+
@@ -125,9 +141,9 @@ request.setAttribute("pageSize", ""+list.getPageSize());
 <form name="nav">
 
 <select name="keyfield">
-    <option value="subject">제목
-    <option value="content">내용
-    <option value="writer">작성자
+    <option value="subject">제목</option>
+    <option value="content">내용</option>
+    <option value="writer">작성자</option>
 </select>
 
 <input type="text" name="keyword" value="<%= CommonUtil.a2k(keyword) %>">
