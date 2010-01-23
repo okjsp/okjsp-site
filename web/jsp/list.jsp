@@ -85,7 +85,7 @@
             <a href="/seq/<%= seq[1] %>" style="font-weight:bold">정규직 개발자 구인합니다. [1]&nbsp;</a>
         </td>
         <td class="writer">너부리</td>
-        <td class="writer"><img src="/profile/base/neoburi.jpg" style="width: 14px; height: 14px;" alt="너부리"/></td>
+        <td class="writer"><img src="/profile/neoburi.jpg" style="width: 14px; height: 14px;" alt="너부리"/></td>
         <td class="read tiny">365</td>
         <td class="when tiny">~02/25</td>
     </tr>
