@@ -67,26 +67,26 @@
 <%
 	boolean isAdBBS = "recruit".equals(list.getBbs()) && list.getPg() < 1;
 	if (isAdBBS) {
-		int [] seq = {146139, 146789};
+		int [] seq = {146988, 146789};
 %>
     <tr class="body" align="center">
         <td class="ref tiny" style="width: 40px; font-weight: bold;">스폰서</td>
         <td class="subject" style="text-align: left">
-            <a href="/seq/<%= seq[0] %>" style="font-weight:bold">자바개발자 취업연수생모집!&nbsp;</a>
+            <a href="/seq/<%= seq[0] %>" style="font-weight:bold">국내최초! 안드로이드 개발자과정 교육실시 [2]</a>
         </td>
         <td class="writer">솔데스크</td>
         <td class="writer"><img src="/profile/base/default.jpg" style="width: 14px; height: 14px;" alt="솔데스크"/></td>
-        <td class="read tiny">355</td>
+        <td class="read tiny">289</td>
         <td class="when tiny">~02/28</td>
     </tr>
     <tr class="body" align="center">
         <td class="ref tiny" style="width: 40px; font-weight: bold;">스폰서</td>
         <td class="subject" style="text-align: left">
-            <a href="/seq/<%= seq[1] %>" style="font-weight:bold">정규직 개발자 구인합니다. [1]&nbsp;</a>
+            <a href="/seq/<%= seq[1] %>" style="font-weight:bold">정규직 개발자 구인합니다. [3]</a>
         </td>
         <td class="writer">너부리</td>
         <td class="writer"><img src="/profile/neoburi.jpg" style="width: 14px; height: 14px;" alt="너부리"/></td>
-        <td class="read tiny">408</td>
+        <td class="read tiny">970</td>
         <td class="when tiny">~02/25</td>
     </tr>
 <%
