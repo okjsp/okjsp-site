@@ -54,7 +54,7 @@ title="'+kangcomCode.comment+'">\
 </a></div>');
 }
 var kangcomList = [
- {code:'200908060002',ext:'jpg',comment:'The Last One Book that I recommend.'}
+ {code:'200908060002',ext:'jpg',comment:'The Last One Book that I recommend.'},
 ];
 
 for (var i = 0; i < kangcomList.length && i < 6 ; i++) {
@@ -188,6 +188,12 @@ for (var i = 0; i < kangcomList.length && i < 6 ; i++) {
 <div id="sub_panel">
 	<div id="ad_banners">
 		<ul>
+		<li>
+		<a href="/f.jsp?http://www.adoberia.co.kr/flash_platform/main.html" target="_blank"
+		><img src="/images/banner/adobe_ria_134x60.gif"
+			alt="START, Enterprise RIA"
+		></a>
+		</li>
 		<li>
 		<a href="/f.jsp?http://www.apptalk.tv" target="_blank"
 		><img src="/images/banner/apptalk_134x60.jpg"
