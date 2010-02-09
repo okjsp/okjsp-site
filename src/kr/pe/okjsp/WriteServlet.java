@@ -171,6 +171,7 @@ public class WriteServlet extends HttpServlet {
 			}
 
 			if ("REPLY".equals(act)) {
+				article.setSeq(articleDao.getSeq(conn));
 				article.setRef(Integer.parseInt(multi.getParameter("ref")));
 				article.setLev(Integer.parseInt(multi.getParameter("lev")));
 				article.setStep(
