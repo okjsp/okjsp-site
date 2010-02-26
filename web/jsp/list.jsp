@@ -79,16 +79,6 @@
         <td class="read tiny">289</td>
         <td class="when tiny">~02/28</td>
     </tr>
-    <tr class="body" align="center">
-        <td class="ref tiny" style="width: 40px; font-weight: bold;">스폰서</td>
-        <td class="subject" style="text-align: left">
-            <a href="/seq/<%= seq[1] %>" style="font-weight:bold">정규직 개발자 구인합니다. [3]</a>
-        </td>
-        <td class="writer">너부리</td>
-        <td class="writer"><img src="/profile/neoburi.jpg" style="width: 14px; height: 14px;" alt="너부리"/></td>
-        <td class="read tiny">970</td>
-        <td class="when tiny">~02/25</td>
-    </tr>
 <%
 	} // end if 
 String keyword = CommonUtil.nchk(request.getParameter("keyword"));
