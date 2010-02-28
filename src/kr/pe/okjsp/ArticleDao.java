@@ -40,19 +40,30 @@ public class ArticleDao {
 		"update okboard_file set sts=0 where fseq=?";
 	
 	public static final String QUERY_ONE =
+		"select  bbsid, seq, \"ref\", step, lev, id, writer, subject, \"password\", email, hit, html, homepage, wtime, ip, memo, content, ccl_id from okboard where seq = ?";
+	public static final String QUERY_ONE_COUNTUP =
 		"select  bbsid, seq, \"ref\", step, lev, id, writer, subject, \"password\", email, incr(hit), html, homepage, wtime, ip, memo, content, ccl_id from okboard where seq = ?";
+
+	/**
+	 * 해당번호의 게시물을 불러옵니다.
+	 * 
+	 * @param seq 게시물 번호
+	 * @return Article 게시물
+	 * @throws SQLException
+	 */
 	public Article getArticle(int seq) throws SQLException {
 		DbCon dbCon = new DbCon();
 		Connection pconn = null;
 		try {
 			pconn = dbCon.getConnection();
-			return getArticle(seq, pconn);
+			return getArticle(seq, QUERY_ONE, pconn);
 		} finally {
 			dbCon.close(pconn, null);
 		}
 	}
+	
 	/**
-	 * 해당번호의 게시물을 불러옵니다.
+	 * 해당번호의 조회수 1증가시키고 게시물을 불러옵니다.
 	 * 
 	 * @param seq 게시물 번호
 	 * @param conn 커넥션
@@ -60,6 +71,18 @@ public class ArticleDao {
 	 * @throws SQLException
 	 */
 	public Article getArticle(int seq, Connection conn) throws SQLException {
+		return getArticle(seq, QUERY_ONE_COUNTUP, conn);
+	}
+	
+	/**
+	 * 지정한 게시물을 불러옵니다.
+	 * @param seq
+	 * @param sql
+	 * @param conn
+	 * @return {@link Article}
+	 * @throws SQLException
+	 */
+	public Article getArticle(int seq, String sql, Connection conn) throws SQLException {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		Article article = new Article();

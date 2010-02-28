@@ -17,7 +17,8 @@
 	Iterator iter = list.getList().iterator();
 	Article one = null;
 %>
-<html>
+
+<%@page import="kr.pe.okjsp.ArticleDao"%><html>
 <head>
 <META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=ksc5601">
 <title>okjsp</title>
@@ -67,19 +68,24 @@
 <%
 	boolean isAdBBS = "recruit".equals(list.getBbs()) && list.getPg() < 1;
 	if (isAdBBS) {
-		int [] seq = {146988, 146789};
+		int [] seqs = {146988, 148318};
+		ArticleDao articleDao = new ArticleDao();
+		for(int seq : seqs) {
+			Article article = articleDao.getArticle(seq);
 %>
     <tr class="body" align="center">
-        <td class="ref tiny" style="width: 40px; font-weight: bold;">스폰서</td>
+        <td class="ref tiny" style="width: 40px; font-weight: bold;">AD</td>
         <td class="subject" style="text-align: left">
-            <a href="/seq/<%= seq[0] %>" style="font-weight:bold">국내최초! 안드로이드 개발자과정 교육실시 [2]</a>
+            <a href="/seq/<%= article.getSeq() %>" style="font-weight:bold"><%= article.getSubject() %></a>
         </td>
-        <td class="writer">솔데스크</td>
-        <td class="writer"><img src="/profile/base/default.jpg" style="width: 14px; height: 14px;" alt="솔데스크"/></td>
-        <td class="read tiny">289</td>
-        <td class="when tiny">~02/28</td>
+        <td class="writer"><div><b><%= article.getWriter() %></b></div></td>
+        <td class="writer"><img src="/profile/base/default.jpg" style="width: 14px; height: 14px;" alt="<%= article.getWriter() %>"/></td>
+        <td class="read tiny"><b><%= article.getRead() %></b></td>
+        <td class="when tiny" title="<%= article.getWhen("yy-MM-dd HH:mm") %>">
+        <b><%= DateLabel.getTimeDiffLabel(article.getWhen()) %></b></td>
     </tr>
 <%
+		} // end for
 	} // end if 
 String keyword = CommonUtil.nchk(request.getParameter("keyword"));
 String link = "&bbs="+request.getParameter("bbs")+
