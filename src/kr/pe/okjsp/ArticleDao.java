@@ -24,8 +24,8 @@ public class ArticleDao {
 		"select max(fseq) from okboard_file";
 
 	public static final String QUERY_ADD = 
-		"insert into okboard (bbsid, seq, \"ref\", step, lev, id, writer,subject, content, \"password\", email, homepage, hit, memo, sts,wtime, ip, html, ccl_id) " +
-		" values (?,?,?,0,0, ?,?,?,?,old_password(?),?,?,0,0,1, SYSTIMESTAMP, ?,?,?)";
+		"insert into okboard (bbsid, \"ref\", step, lev, id, writer,subject, content, \"password\", email, homepage, hit, memo, sts,wtime, ip, html, ccl_id) " +
+		" values (?,?,0,0, ?,?,?,?,old_password(?),?,?,0,0,1, SYSTIMESTAMP, ?,?,?)";
 
 	public static final String QUERY_NEW_REF =
 		"select max(\"ref\") from okboard where bbsid = ?";
@@ -41,6 +41,16 @@ public class ArticleDao {
 	
 	public static final String QUERY_ONE =
 		"select  bbsid, seq, \"ref\", step, lev, id, writer, subject, \"password\", email, incr(hit), html, homepage, wtime, ip, memo, content, ccl_id from okboard where seq = ?";
+	public Article getArticle(int seq) throws SQLException {
+		DbCon dbCon = new DbCon();
+		Connection pconn = null;
+		try {
+			pconn = dbCon.getConnection();
+			return getArticle(seq, pconn);
+		} finally {
+			dbCon.close(pconn, null);
+		}
+	}
 	/**
 	 * 해당번호의 게시물을 불러옵니다.
 	 * 
@@ -97,13 +107,12 @@ public class ArticleDao {
 	 */
 	public int write(Connection conn, Article article) {
 		PreparedStatement pstmt = null;
-		int result = 0;
+		boolean result = false;
 		ResultSet rs = null;
 		try {
 			pstmt = conn.prepareStatement(QUERY_ADD, Statement.RETURN_GENERATED_KEYS);
 			int idx = 0;
 			pstmt.setString(++idx, article.getBbs());
-			pstmt.setInt   (++idx, article.getSeq());
 			pstmt.setInt   (++idx, article.getRef());
 			pstmt.setString(++idx, article.getId());
 			pstmt.setString(++idx, article.getWriter());
@@ -115,8 +124,11 @@ public class ArticleDao {
 			pstmt.setString(++idx, article.getIp());
 			pstmt.setString(++idx, article.getHtml());
 			pstmt.setString(++idx, article.getCcl_id());
-			result = pstmt.executeUpdate();
-
+			result = pstmt.execute();
+			rs = pstmt.getGeneratedKeys();
+			while (rs.next()) {
+				article.setSeq(Integer.parseInt(rs.getString(1)));
+			}
 			if (article.getSid() > 0) {
 				new PointDao().log(article.getSid(), 2, 10, String.valueOf(article.getSeq()));
 			}
@@ -125,7 +137,7 @@ public class ArticleDao {
 		} finally {
 			dbCon.close(null, pstmt, rs);
 		}
-		return result * article.getSeq();
+		return result ? article.getSeq() : 0;
 	}
 
 	/**
@@ -362,7 +374,7 @@ public class ArticleDao {
 			conn = dbCon.getConnection();
 			conn.setAutoCommit(false);
 
-			article.setSeq(getSeq(conn));
+//			article.setSeq(getSeq(conn));
 			article.setRef(getNewRef(conn, article.getBbs()));
 
 			result = write(conn, article);
