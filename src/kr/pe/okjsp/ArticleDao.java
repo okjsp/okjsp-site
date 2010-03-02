@@ -86,7 +86,7 @@ public class ArticleDao {
 		ResultSet rs = null;
 		Article article = new Article();
 		try {
-			pstmt = conn.prepareStatement(QUERY_ONE);
+			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1,seq);
 
 			rs = pstmt.executeQuery();
