@@ -44,13 +44,13 @@ while (iterList.hasNext()) {
     if (info == null) info = new BbsInfoBean();
 %>		<item>
 			<title><![CDATA[<%= one.getSubject() %>]]></title>
-			<link><![CDATA[http://www.okjsp.pe.kr/bbs?seq=<%= one.getSeq() %>]]></link>
+			<link><![CDATA[http://www.okjsp.pe.kr/seq/<%= one.getSeq() %>]]></link>
 			<description><![CDATA[<%= one.getContent() %>
 			]]></description>
 			<author><![CDATA[<%= one.getWriter() %>]]></author>
 			<category><![CDATA[<%= info.getName() %>]]></category>
 			<pubDate><%= sdf.format(one.getWhen()) %></pubDate>
-			<guid><![CDATA[http://www.okjsp.pe.kr/bbs?seq=<%= one.getSeq() %>]]></guid>
+			<guid><![CDATA[http://www.okjsp.pe.kr/seq/<%= one.getSeq() %>]]></guid>
 		</item>
 <%
 } // end while
