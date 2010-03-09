@@ -70,8 +70,13 @@ public class ControllerServlet extends HttpServlet {
     		throw new IOException("NO RIGHT TO WRITE!!!");
     	}
     }
+	
 	if ("ADD".equals(act) || "REPLY".equals(act)) {
 		if (member == null || ("").equals(member.getId()) || member.getId() == null) {
+			res.sendRedirect(loginPath);
+		}
+		boolean isSpammer = checkSpammer(member.getId());
+		if(isSpammer) {
 			res.sendRedirect(loginPath);
 		}
 	}
@@ -100,8 +105,24 @@ public class ControllerServlet extends HttpServlet {
 
 
   } // end doGet()
+  
+  
+	/*
+	 * "computer85", "spirits_lee", "it7power", "ahnks2"
+	 */
+  // buk12 ~04/09
+	String[] spammers = { "buk12" };
 
-  /**
+	private boolean checkSpammer(String id) {
+		for (String spammer : spammers) {
+			if (spammer.equals(id)) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+/**
  * @param req
  */
 private void decoratePage(HttpServletRequest req) {
