@@ -42,9 +42,10 @@
     <td align="center" valign="top">
 <div id="bookList">
 <div style="float:none; margin: 6px 0 0;"><b># OKJSP 추천 도서</b></div>
-<script>
+<script type="text/javascript">
 function showKangcomBook(kangcomCode) {
 	// http://image3.kangcom.com/2009/03/l_pic/200903110001.jpg
+	if (kangcomCode != null){
 	var imageUrl = "http://image3.kangcom.com/" + kangcomCode.code.substring(0,4) + "/" + kangcomCode.code.substring(4,6)
 	    + "/l_pic/" + kangcomCode.code + '.' + kangcomCode.ext; 
   document.write('<div class="book">\
@@ -52,6 +53,7 @@ function showKangcomBook(kangcomCode) {
 title="'+kangcomCode.comment+'">\
 <img src="'+imageUrl+'">\
 </a></div>');
+	}
 }
 var kangcomList = [
  {code:'200908060002',ext:'jpg',comment:'The Last One Book that I recommend.'},
