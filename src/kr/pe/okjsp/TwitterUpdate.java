@@ -1,5 +1,14 @@
 package kr.pe.okjsp;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import com.rosaloves.net.shorturl.bitly.Bitly;
+import com.rosaloves.net.shorturl.bitly.BitlyException;
+import com.rosaloves.net.shorturl.bitly.BitlyFactory;
+import com.rosaloves.net.shorturl.bitly.url.BitlyUrl;
+
 import twitter4j.Status;
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
@@ -14,21 +23,46 @@ public class TwitterUpdate {
 		String subject = article.getSubject();
 		String content = article.getContent();
 		int seq = article.getSeq();
+		int tmpContLen = 0;
+
+		BitlyUrl bUrl = null;
+        String sOrgUrl = "http://okjsp.pe.kr/seq/"+seq;
+        URL resultUrl = null;
+		try {
+			resultUrl = new URL(sOrgUrl);
+		} catch (MalformedURLException e1) {
+		}
+
 		
 		Twitter twitter = new TwitterFactory().getInstance("okjsp", "okpass12");
+		Bitly bitly = BitlyFactory.newJmpInstance("okjsp", "R_2338c002b1dfeb9d0b111d1f0bfa8ce0");
+
+        try {
+			bUrl = bitly.shorten(sOrgUrl);
+		} catch (Exception e) {
+			bUrl = null;
+		}
+		
+        if (bUrl != null){
+        	resultUrl = bUrl.getShortUrl();        	
+        }else{
+        	// 원래URL 사용시에는 content 를 줄여야함
+        	tmpContLen = 11;
+        }
+
 		
 		//트윗 글 올리기 임시포맷
 		if ( subject.length() > 30 ) {
 			subject = subject.substring(0, 30) + "..";
 		}
 						
-		if (content.length() > 84 ) {
-			content = content.substring(0, 84) + "..";
+		if (content.length() > 84-tmpContLen ) {
+			content = content.substring(0, 84-tmpContLen) + "..";
 		} 
-		
+   
 		tweetStsText = subject + ": ";
 		tweetStsText += content + " ";		
-		tweetStsText += "http://test/" + seq; 		 
+		tweetStsText += resultUrl; 		 
 
 		String result_msg = "";
 		try {
