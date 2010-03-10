@@ -64,6 +64,12 @@ public class WriteServlet extends HttpServlet {
 		article.setCcl_id(ccl_id);
 		
 		new ArticleDao().write(article);
+		
+		// 트위터 글쓰기 추가
+		if ("twitter".equals(article.getBbs())) {
+			new TwitterUpdate().doUpdate(article);
+		}
+		
 		return article.getBbs();
 	}
 
