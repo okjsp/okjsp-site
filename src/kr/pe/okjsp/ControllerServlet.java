@@ -111,8 +111,8 @@ public class ControllerServlet extends HttpServlet {
 	 * "computer85", "spirits_lee", "it7power", "ahnks2"
 	 */
   // buk12 ~04/09
-  // it7power ~04/10
-	String[] spammers = { "buk12", "it7power" };
+  // it7power, spirits_lee ~04/10
+	String[] spammers = { "buk12", "it7power", "spirits_lee" };
 
 	private boolean checkSpammer(String id) {
 		for (String spammer : spammers) {
