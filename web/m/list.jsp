@@ -23,41 +23,8 @@
 <meta name="apple-touch-fullscreen" content="YES" />
 <style type="text/css" media="screen">@import "../../m/iui/iui.css";</style>
 <script type="application/x-javascript" src="../../m/iui/iui.js"></script>
-<style type="text/css">
-body > ul > li {
-    font-size: 14px;
-}
-body > ul > li > a {
-    padding-left: 54px;
-    padding-right: 40px;
-    min-height: 34px;
-}
-li .digg-count {
-    display: block;
-    position: absolute;
-    margin: 0;
-    left: 6px;
-    top: 7px;
-    text-align: center;
-    font-size: 110%;
-    letter-spacing: -0.07em;
-    color: #93883F;
-    font-weight: bold;
-    text-decoration: none;
-    width: 36px;
-    height: 30px;
-    padding: 7px 0 0 0;
-    background: url(shade-compact.gif) no-repeat;
-}
-h2 {
-    margin: 10px;
-    color: slateblue;
-}
-p {
-    margin: 10px;
-}
-</style>
 <!-- ############ IUI Header End ########### -->
+
 
 </head>
 <body>
