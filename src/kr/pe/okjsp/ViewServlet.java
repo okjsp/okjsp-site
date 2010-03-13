@@ -43,7 +43,9 @@ public class ViewServlet extends HttpServlet {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-
+		
+		boolean isMobileView = CommonUtil.nchk(req.getParameter("mobileView"),"N").equals("Y");
+		
 		ArrayList<DownFile> arrdf;
 
 		/*
@@ -136,7 +138,7 @@ public class ViewServlet extends HttpServlet {
 			dbCon.close(conn, pstmt, rs);
 		}
 
-		String resultPage = "/jsp/view.jsp";
+		String resultPage = (isMobileView) ? "/m/view.jsp" : "/jsp/view.jsp";	// Web 상세보기와 Mobile 상세보기 구분
 
 		req.getRequestDispatcher(resultPage).forward(req, res);
 

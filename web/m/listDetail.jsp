@@ -20,7 +20,7 @@ while (iter.hasNext()) {
 %>
         <li><!-- ############ IUI List ########### -->
             <a class="digg-count"><%= one.getRef() %></a>
-            <a href="/seq/<%= one.getSeq() %>"><%= one.getSubject() %></a>
+            <a href="/bbs?seq=<%= one.getSeq() %>&mobileView=Y"><%= one.getSubject() %></a>
         </li>
 <%
 } // end ifwhile 
