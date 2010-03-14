@@ -45,4 +45,5 @@
 <option value="dbstudy">DB스터디</option>
 <option value="springstudy">스프링 스터디</option>
 <option value="xf">SLF</option>
+<option value="twitter">트위터</option>
 <option value="trash">짬통</option>
