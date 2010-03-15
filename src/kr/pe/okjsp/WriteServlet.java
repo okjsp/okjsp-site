@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.Enumeration;
+import java.util.HashMap;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -66,7 +67,7 @@ public class WriteServlet extends HttpServlet {
 		new ArticleDao().write(article);
 		
 		// 트위터 글쓰기 추가
-		if ("twitter".equals(article.getBbs())) {
+		if ( isTwitterUpdate(article, req) ) {
 			new TwitterUpdate().doUpdate(article);
 		}
 		
@@ -201,6 +202,11 @@ public class WriteServlet extends HttpServlet {
 			dbCon.close(conn, null);
 		}
 
+		// 트위터 글쓰기 추가
+		if ( isTwitterUpdate(article, req) ) {
+			new TwitterUpdate().doUpdate(article);
+		}
+		
 		return article.getBbs();
 	}
 
@@ -213,5 +219,25 @@ public class WriteServlet extends HttpServlet {
 				|| "".equals(article.getBbs().trim())
 				;
 		return hasNothing;
+	}
+	
+	/**
+	 * 게시판이 트위터 전송이 허용이 되었는지 확인 후 허용여부를 반환한다.
+	 * 
+	 * @param m_article 게시글
+	 * @param m_req HttpServletRequest
+	 * @return 트위터 전송 허용 여부
+	 */
+	private boolean isTwitterUpdate(Article m_article, HttpServletRequest m_req){
+		HashMap bbsInfoMap = (HashMap)m_req.getSession().getServletContext().getAttribute("bbsInfoMap");
+		
+	    BbsInfoBean bbsInfo = ((BbsInfoBean)(bbsInfoMap.get(m_article.getBbs())));
+	    if (bbsInfo == null) {
+	    	return false;
+	    }
+	    if ("2".equals(bbsInfo.getCseq())) {
+	    	return false;
+	    }
+		return true;
 	}
 }
