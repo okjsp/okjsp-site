@@ -19,6 +19,10 @@ import twitter4j.TwitterFactory;
 public class TwitterUpdate {
 	
 	private String tweetStsText = "" ;
+	private String twitterId = "okjsp";
+	private String twitterPwd = "okpass12";
+	private String bitlyId = "okjsp";
+	private String bitlyKey = "R_2338c002b1dfeb9d0b111d1f0bfa8ce0";
 	
 	public void doUpdate(Article article) {
 
@@ -27,6 +31,9 @@ public class TwitterUpdate {
 		int seq = article.getSeq();
 		int tmpContLen = 0;
 
+		Twitter twitter = new TwitterFactory().getInstance(twitterId, twitterPwd);
+		Bitly bitly = BitlyFactory.newJmpInstance(bitlyId, bitlyKey);
+		
 		BitlyUrl bUrl = null;
         String sOrgUrl = "http://okjsp.pe.kr/seq/"+seq;
         URL resultUrl = null;
@@ -34,11 +41,7 @@ public class TwitterUpdate {
 			resultUrl = new URL(sOrgUrl);
 		} catch (MalformedURLException e1) {
 		}
-
 		
-		Twitter twitter = new TwitterFactory().getInstance("okjsp", "okpass12");
-		Bitly bitly = BitlyFactory.newJmpInstance("okjsp", "R_2338c002b1dfeb9d0b111d1f0bfa8ce0");
-
         try {
 			bUrl = bitly.shorten(sOrgUrl);
 		} catch (Exception e) {
@@ -51,7 +54,6 @@ public class TwitterUpdate {
         	// 원래URL 사용시에는 content 를 줄여야함
         	tmpContLen = 11;
         }
-
 		
 		//트윗 글 올리기 임시포맷
 		if ( subject.length() > 30 ) {
@@ -59,7 +61,7 @@ public class TwitterUpdate {
 		}
 	
 		// html tag 삭제
-		content = CommonUtil.removeTag(content);
+		content = CommonUtil.removeTag(content, "<");
 		
 		if (content.length() > 84-tmpContLen ) {
 			content = content.substring(0, 84-tmpContLen) + "..";
@@ -67,7 +69,7 @@ public class TwitterUpdate {
    
 		tweetStsText = subject + ": ";
 		tweetStsText += content + " ";		
-		tweetStsText += resultUrl; 		 
+		tweetStsText += resultUrl;
 
 		String result_msg = "";
 		try {
