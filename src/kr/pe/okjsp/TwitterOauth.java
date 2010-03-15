@@ -11,25 +11,25 @@ import twitter4j.http.RequestToken;
 
 public class TwitterOauth {
 
-	/* auth : ê¹€ì˜ìˆ˜(topolo)
+	/* auth : ±è¿µ¼ö(topolo)
 	 * oatuh Consumers load 
-	 * site_id :  í•´ë‹¹ ì‚¬ì´íŠ¸ ì•„ì´ë”” 
+	 * site_id :  ÇØ´ç »çÀÌÆ® ¾ÆÀÌµğ 
 	 */
 	private String[] loadConsumers(String site_id) throws Exception {
-		//to-do íšŒì›ë³„ ì •ë³´ ê°€ì§€ê³  ì˜¤ê¸°		
+		//to-do È¸¿øº° Á¤º¸ °¡Áö°í ¿À±â		
 		String[] consumers = new String[2];
 		
 		if (site_id != null && site_id.trim().equals("okjsp")) {
-			//okjspì˜ í•´ë‹¹ ì •ë³´ë¥¼ ë„˜ê¸´ë‹¤. 
+			//okjspÀÇ ÇØ´ç Á¤º¸¸¦ ³Ñ±ä´Ù. 
 			consumers[0] = "zAoP6REuI5dj4UBlMaxYg";
 			consumers[1] = "fHG60FiTx9bg0LbIiyo6jR8I9My1APV1QbKD2MTF8e8";
 		}
 		return consumers;
 	}
 	
-	/* auth : ê¹€ì˜ìˆ˜(topolo)
-	 * oatuh í† í° ì´ˆê¸°í™” 
-	 * site_id :  í•´ë‹¹ ì‚¬ì´íŠ¸ ì•„ì´ë”” 
+	/* auth : ±è¿µ¼ö(topolo)
+	 * oatuh ÅäÅ« ÃÊ±âÈ­ 
+	 * site_id :  ÇØ´ç »çÀÌÆ® ¾ÆÀÌµğ 
 	 */
 	public void initToken(String site_id) throws Exception{
 		
@@ -65,46 +65,46 @@ public class TwitterOauth {
 		storeAccessToken(site_id,twitter.verifyCredentials().getId() , accessToken);
 	}
 
-	/* author : ê¹€ì˜ìˆ˜(topolo)
-	 * oatuh í† í° ì €ì¥ 
-	 * site_id :  í•´ë‹¹ ì‚¬ì´íŠ¸ ì•„ì´ë”” 
-	 * useId : twitter ì‹ë³„ì
-	 * AccessToken : twitter acess í† í°
+	/* author : ±è¿µ¼ö(topolo)
+	 * oatuh ÅäÅ« ÀúÀå 
+	 * site_id :  ÇØ´ç »çÀÌÆ® ¾ÆÀÌµğ 
+	 * useId : twitter ½Äº°ÀÚ
+	 * AccessToken : twitter acess ÅäÅ«
 	 */
 	private void storeAccessToken(String site_id,int useId, AccessToken at){
-		//to-do ì €ì¥ë°©ì‹ ì„ ì • 
+		//to-do ÀúÀå¹æ½Ä ¼±Á¤ 
 		//store at.getToken()
 		//store at.getTokenSecret()
 	}
 	
-	/* author : ê¹€ì˜ìˆ˜(topolo)
-	 * twitterì— oauth ì •ë³´ ì¶”ê°€
+	/* author : ±è¿µ¼ö(topolo)
+	 * twitter¿¡ oauth Á¤º¸ Ãß°¡
 	 */
 	public Twitter setOauth(String site_id,Twitter twitter) throws Exception{
 		// The factory instance is re-useable and thread safe.
-		//twitter.setOAuthConsumer("[consumer key]", "[consumer secret]"); // consumer ì •ë³´ê°€ ë” í•„ìš”í•œì§€ í™•ì¸ í•„ìš”
+		//twitter.setOAuthConsumer("[consumer key]", "[consumer secret]"); // consumer Á¤º¸°¡ ´õ ÇÊ¿äÇÑÁö È®ÀÎ ÇÊ¿ä
 		AccessToken accessToken = loadAccessToken(site_id);
 		twitter.setOAuthAccessToken(accessToken);
 		return twitter;
 	}
 
-	/*author : ê¹€ì˜ìˆ˜(topolo)
-	 * userIdë¡œ í† í° ì–»ê¸° 
-	 * useId : twitter ì‹ë³„ì
+	/*author : ±è¿µ¼ö(topolo)
+	 * userId·Î ÅäÅ« ¾ò±â 
+	 * useId : twitter ½Äº°ÀÚ
 	 */
 	private AccessToken loadAccessToken(int useId){
-		//to-do ì €ì¥ë°©ì‹ ì„ ì • 
+		//to-do ÀúÀå¹æ½Ä ¼±Á¤ 
 		String token 		= "";// load from a persistent store
 		String tokenSecret 	= ""; // load from a persistent store
 		return new AccessToken(token, tokenSecret);
 	}
 	
-	/*author : ê¹€ì˜ìˆ˜(topolo)
-	 * site_idë¡œ  í† í° ì–»ê¸° 
-	 * useId : twitter ì‹ë³„ì
+	/*author : ±è¿µ¼ö(topolo)
+	 * site_id·Î  ÅäÅ« ¾ò±â 
+	 * useId : twitter ½Äº°ÀÚ
 	 */	
 	private AccessToken loadAccessToken(String site_id){
-		//to-do ì €ì¥ë°©ì‹ ì„ ì • 
+		//to-do ÀúÀå¹æ½Ä ¼±Á¤ 
 		String token 		= ""; // load from a persistent store
 		String tokenSecret 	= ""; // load from a persistent store
 		return new AccessToken(token, tokenSecret);
