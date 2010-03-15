@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import kr.pe.okjsp.util.CommonUtil;
+
 import com.rosaloves.net.shorturl.bitly.Bitly;
 import com.rosaloves.net.shorturl.bitly.BitlyException;
 import com.rosaloves.net.shorturl.bitly.BitlyFactory;
@@ -55,7 +57,10 @@ public class TwitterUpdate {
 		if ( subject.length() > 30 ) {
 			subject = subject.substring(0, 30) + "..";
 		}
-						
+	
+		// html tag »èÁ¦
+		content = CommonUtil.removeTag(content);
+		
 		if (content.length() > 84-tmpContLen ) {
 			content = content.substring(0, 84-tmpContLen) + "..";
 		} 
