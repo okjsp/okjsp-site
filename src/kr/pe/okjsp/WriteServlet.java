@@ -34,8 +34,12 @@ public class WriteServlet extends HttpServlet {
 	    } else {
 	    	bbs = writeWithFiles(req, res);
 	    }
-
-		String togo = "/bbs?act=LIST&bbs=" + bbs + "&pg=0";
+	    
+	    //글 작성뒤에 모바일과 웹 구분_piki
+	    boolean isMobileView = CommonUtil.nchk(req.getParameter("mobileView"),"N").equals("Y");
+	    String togo = (isMobileView) ? "/bbs?act=MLIST&bbs="+bbs : "/bbs?act=LIST&bbs=" + bbs + "&pg=0";
+	    
+		//String togo = "/bbs?act=LIST&bbs=" + bbs + "&pg=0";
 		res.sendRedirect(togo);
 
 	} // end doPost()
