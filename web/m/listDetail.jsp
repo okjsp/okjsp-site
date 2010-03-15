@@ -54,7 +54,9 @@ while (iter.hasNext()) {
     one = (Article) iter.next();
 %>
         <li><!-- ############ IUI List ########### -->
+        	<!-- 여기 번호 누르면 에러가 나서요..수정하는게 좋을거 같습니다... -->
             <a class="digg-count"><%= one.getRef() %></a>
+             
             <a href="/bbs?seq=<%= one.getSeq() %>&mobileView=Y"><%= one.getSubject() %></a>
         </li>
 <%

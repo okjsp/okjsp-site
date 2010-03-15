@@ -29,6 +29,7 @@
 </head>
 <body>
     <ul title="<c:out value="${bbsInfoMap[list.bbs].header}" escapeXml="false" />" selected="true"><!-- ############ Header Title ########### -->
+    <a href="editor_jquery.jsp?bbs=<%= request.getParameter("bbs") %>">±Û¾²±â</a>  
 	<jsp:include page="/m/listDetail.jsp"></jsp:include><!-- ############ List & Next Page ########### -->
     </ul>
 </body>
