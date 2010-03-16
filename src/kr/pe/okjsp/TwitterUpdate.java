@@ -3,6 +3,9 @@ package kr.pe.okjsp;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
+
+import javax.servlet.http.HttpServletRequest;
 
 import kr.pe.okjsp.util.CommonUtil;
 
@@ -24,8 +27,12 @@ public class TwitterUpdate {
 	private String bitlyId = "okjsp";
 	private String bitlyKey = "R_2338c002b1dfeb9d0b111d1f0bfa8ce0";
 	
-	public void doUpdate(Article article) {
 
+	public void doUpdate(Article article, HttpServletRequest req) {
+		if ( !isTwitterUpdate(article, req) ){
+			return;
+		}
+		
 		String subject = article.getSubject();
 		String content = article.getContent();
 		int seq = article.getSeq();
@@ -82,5 +89,32 @@ public class TwitterUpdate {
 		// twitter Successfully updated 
 		System.out.println("result_msg length:   "+ result_msg.length() + " & " + result_msg);
 		// twitter source end
+	}
+	
+	/**
+	 * 게시판이 트위터 전송이 허용이 되었는지 확인 후 허용여부를 반환한다.
+	 * 
+	 * @param m_article 게시글
+	 * @param m_req HttpServletRequest
+	 * @return 트위터 전송 허용 여부
+	 */
+	private boolean isTwitterUpdate(Article m_article, HttpServletRequest m_req){
+		
+		try{
+			HashMap bbsInfoMap = (HashMap)m_req.getSession().getServletContext().getAttribute("bbsInfoMap");
+			
+		    BbsInfoBean bbsInfo = ((BbsInfoBean)(bbsInfoMap.get(m_article.getBbs())));
+		    if (bbsInfo == null) {
+		    	System.out.println("isTwitterUpdate bbsInfo == null / m_article.getBbs() : " + m_article.getBbs());
+		    	return false;
+		    }
+		    System.out.println("isTwitterUpdate bbsInfo.getCseq() : " + bbsInfo.getCseq());
+		    if ("2".equals(bbsInfo.getCseq())) {
+		    	return false;
+		    }
+		}catch(Exception e){
+			System.out.println("isTwitterUpdate : " + e);
+		}
+		return true;
 	}
 }
