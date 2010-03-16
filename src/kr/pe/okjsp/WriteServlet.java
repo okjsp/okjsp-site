@@ -234,15 +234,22 @@ public class WriteServlet extends HttpServlet {
 	 * @return 트위터 전송 허용 여부
 	 */
 	private boolean isTwitterUpdate(Article m_article, HttpServletRequest m_req){
-		HashMap bbsInfoMap = (HashMap)m_req.getSession().getServletContext().getAttribute("bbsInfoMap");
 		
-	    BbsInfoBean bbsInfo = ((BbsInfoBean)(bbsInfoMap.get(m_article.getBbs())));
-	    if (bbsInfo == null) {
-	    	return false;
-	    }
-	    if ("2".equals(bbsInfo.getCseq())) {
-	    	return false;
-	    }
+		try{
+			HashMap bbsInfoMap = (HashMap)m_req.getSession().getServletContext().getAttribute("bbsInfoMap");
+			
+		    BbsInfoBean bbsInfo = ((BbsInfoBean)(bbsInfoMap.get(m_article.getBbs())));
+		    if (bbsInfo == null) {
+		    	System.out.println("isTwitterUpdate bbsInfo == null / m_article.getBbs() : " + m_article.getBbs());
+		    	return false;
+		    }
+		    System.out.println("isTwitterUpdate bbsInfo.getCseq() : " + bbsInfo.getCseq());
+		    if ("2".equals(bbsInfo.getCseq())) {
+		    	return false;
+		    }
+		}catch(Exception e){
+			System.out.println("isTwitterUpdate : " + e);
+		}
 		return true;
 	}
 }
