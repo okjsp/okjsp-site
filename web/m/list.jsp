@@ -5,7 +5,6 @@
 <%@page import="java.util.Arrays"%>
 <% long stime = System.currentTimeMillis(); %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core"%>
-<%@ taglib uri="/WEB-INF/tld/ok-taglib.tld" prefix="okbbs" %>
 <jsp:useBean id="list" class="kr.pe.okjsp.ListHandler"/>
 <jsp:setProperty name="list" property="*" />
 <%
@@ -16,7 +15,6 @@
 %>
 <head>
 <META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=ksc5601">
-
 <!-- ############ IUI Header Start ########### -->
 <meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
 <link rel="apple-touch-icon" href="../../m/iui/iui-logo-touch-icon.png" />
@@ -25,12 +23,14 @@
 <script type="application/x-javascript" src="../../m/iui/iui.js"></script>
 <!-- ############ IUI Header End ########### -->
 
-
 </head>
 <body>
-    <ul title="<c:out value="${bbsInfoMap[list.bbs].header}" escapeXml="false" />" selected="true"><!-- ############ Header Title ########### -->
-    <a href="editor_jquery.jsp?bbs=<%= request.getParameter("bbs") %>">글쓰기</a>  
-	<jsp:include page="/m/listDetail.jsp"></jsp:include><!-- ############ List & Next Page ########### -->
+	<!-- ############ Header Title ########### -->
+    <ul title="<c:out value="${bbsInfoMap[list.bbs].header}" escapeXml="false" />" selected="true">
+    	<!-- ############ 글쓰기 ########### -->
+    	<a href="editor_jquery.jsp?bbs=<%= request.getParameter("bbs") %>">글쓰기</a>
+    	<!-- ############ List & Next Page ########### -->
+		<jsp:include page="/m/listDetail.jsp"></jsp:include>
     </ul>
 </body>
 </html>

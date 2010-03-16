@@ -72,19 +72,19 @@ p {
     </div>
     <ul title="OKJSP BBS" selected="true">
         <li>
-            <a class="digg-count">1</a>
+            <div class="digg-count">1</div>
             <a href="/bbs?act=MLIST&bbs=twitter">Twitter</a>
         </li>
         <li>
-            <a class="digg-count">2</a>
+            <div class="digg-count">2</div>
             <a href="/bbs?act=MLIST&bbs=bbs6">사는 얘기</a>
         </li>
         <li>
-            <a class="digg-count">3</a>
+            <div class="digg-count">3</div>
             <a href="/bbs?act=MLIST&bbs=bbs5">머리식히는 곳</a>
         </li>
         <li>
-            <a class="digg-count">4</a>
+            <div class="digg-count">4</div>
             <a href="/bbs?act=MLIST&bbs=javastudy">Java Study</a>
         </li>
     </ul>
