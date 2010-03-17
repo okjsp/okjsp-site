@@ -34,12 +34,7 @@ public class WriteServlet extends HttpServlet {
 	    	bbs = writeWithFiles(req, res);
 	    }
 	    
-	    //글 작성뒤에 모바일과 웹 구분_piki
-	    //글 작성 완료뒤 화면을 어디로 이동해야 할지 고민....
-	    boolean isMobileView = CommonUtil.nchk(req.getParameter("mobileView"),"N").equals("Y");
-	    //String togo = (isMobileView) ? "/bbs?act=MLIST&bbs="+bbs : "/bbs?act=LIST&bbs=" + bbs + "&pg=0";
-	    String togo = (isMobileView) ? "/m" : "/bbs?act=LIST&bbs=" + bbs + "&pg=0";
-		//String togo = "/bbs?act=LIST&bbs=" + bbs + "&pg=0";
+		String togo = "/bbs?act=LIST&bbs=" + bbs + "&pg=0";
 		res.sendRedirect(togo);
 
 	} // end doPost()
@@ -50,6 +45,7 @@ public class WriteServlet extends HttpServlet {
 		Article article = new Article();
 		article.setId(id);
 		article.setSid(sid);
+
 		String writer = req.getParameter("writer");
 		String bbs = req.getParameter("bbs");
 		String content = req.getParameter("content");
