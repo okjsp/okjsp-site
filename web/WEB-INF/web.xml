@@ -84,6 +84,12 @@
 		<servlet-name>ProfileHandler</servlet-name>
 		<servlet-class>kr.pe.okjsp.member.ProfileHandler</servlet-class>
 	</servlet>
+	<!--===========================mobile_START=========================  -->
+	<servlet>
+		<servlet-name>okboardaddmobile</servlet-name>
+		<servlet-class>kr.pe.okjsp.MobileWriteServlet</servlet-class>
+	</servlet>
+	<!--===========================mobile_END=========================  -->
 	<servlet-mapping>
 		<servlet-name>download</servlet-name>
 		<url-pattern>/download</url-pattern>
@@ -140,6 +146,12 @@
 		<servlet-name>ProfileHandler</servlet-name>
 		<url-pattern>/profile/write</url-pattern>
 	</servlet-mapping>
+	<!--===========================mobile_START=========================  -->
+	<servlet-mapping>
+		<servlet-name>okboardaddmobile</servlet-name>
+		<url-pattern>/writemobile</url-pattern>
+	</servlet-mapping>
+	<!--===========================mobile_END=========================  -->
 	<jsp-config>
 		<taglib>
 			<taglib-uri>http://java.sun.com/jstl/core</taglib-uri>

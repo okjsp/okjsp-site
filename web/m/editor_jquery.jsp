@@ -36,7 +36,7 @@
 <!-- ############ 글쓰기_start ########### -->
 <body>
     <div title="글쓰기">
-	    <form action="/write" method="post" class="panel"  selected="true">
+	    <form action="/writemobile" method="post" class="panel"  selected="true">
 	    <input name="html" id="html" value="2" type="hidden" readonly="readonly" class="write">
 	    <input name="mobileView" id="mobileView" value="Y" type="hidden" readonly="readonly" class="write">
 	    <fieldset>
