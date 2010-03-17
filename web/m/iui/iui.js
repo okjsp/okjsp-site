@@ -469,7 +469,12 @@ function encodeForm(form)
 		for (var i = 0; i < inputs.length; ++i)
 		{
 			if (inputs[i].name)
-				args.push(inputs[i].name + "=" + escape(inputs[i].value));
+			{	
+				//한글문제로 인해 escape를 제거함_piki
+				//whiteServlet.java에서도 req.setCharacterEncoding("utf-8"); 넣었음
+				//args.push(inputs[i].name + "=" + escape(inputs[i].value));
+				args.push(inputs[i].name + "=" + inputs[i].value);
+			}	
 		}
 	}
 
