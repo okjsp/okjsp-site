@@ -127,7 +127,7 @@ p {
 		%>
 		<li>
 			<div class="digg-count">49</div>
- 			<a href="/bbs?act=MLIST&bbs=<%=bbsInfo.getBbs()%>"><%=bbsInfo.getName()%></a>
+ 			<a href="#">최근글 게시판</a>
 		</li>
 			
     </ul>
