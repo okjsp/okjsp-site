@@ -16,6 +16,7 @@
 	<meta name="apple-touch-fullscreen" content="YES" />
 	<style type="text/css" media="screen">@import "../../m/iui/iui.css";</style>
 	<script type="application/x-javascript" src="../../m/iui/iui.js"></script>
+	<script src="/js/okboard_view.js"></script>
 	<style type="text/css">
 	body > ul > li {
 	    font-size: 14px;
@@ -54,22 +55,31 @@
     <title>OKJSP: <%= one.getSubject() %></title>
 </head>
 <body>
-
-
-
-
-<!-- ################  뎃글 ##################### -->
 <ul id="detailView" >
-
 <li>
+<!-- ###########제목################################# -->
 <h2><%= CommonUtil.showHtml(one.getSubject()) %></h2>
+<!-- ###########이미지및사용자id_시작################################# -->
+<%
+    if (!"".equals(one.getId())) {
+        %><img src="http://www.okjsp.pe.kr/profile/<%= one.getId() %>.jpg"
+        	alt="<%= one.getId() %>"
+        	style="width:77px"
+        	onerror="this.src='/images/spacer.gif'"><%
+    }
+%>
+<c:out value="${one.writer}"/> / <c:out value="${one.when}" />
+<!-- ###########이미지및사용자id_끝################################# -->
+<!-- ###########삭제버튼################################# -->
+<a class="button" href="#deleteForm">delete</a>
+</li>
 <br/>
+<li>
+<!-- ###########내용################################# -->
 <%=  one.getContentView()  %>
 </li>
-<hr size="5" color=blue align="center" width="200" noshade ><br>
-
-
-
+<br/>
+<!-- ################  뎃글 ##################### -->
 <%
   ArrayList<MemoBean> memoList = new MemoHandler().getList(one.getSeq());
   Iterator memo = null;
@@ -91,5 +101,18 @@
   }
 %>
 </ul>
+<!-- ################ 삭제 폼_시작 ##################### -->
+<form id="deleteForm" class="dialog" action="/deletemobile" method="post" target="_self">
+	<input type="hidden" name="seq" value="<%= one.getSeq() %>">
+	<input type="hidden" name="bbs" value="<%= one.getBbs() %>">
+    <fieldset>
+        <h1>Music Search</h1>
+        <a class="button leftButton" type="cancel">Cancel</a>
+        <a class="button blueButton" type="submit">Delete</a>
+        <label>암호:</label>
+        <input id="password" type="password" name="password" maxlength="15"/>
+    </fieldset>
+</form>
+<!-- ################ 삭제 폼_끝 ##################### -->
 </body>
 </html>
