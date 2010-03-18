@@ -85,7 +85,7 @@
 	            <textarea name="content" id="content" style="font-size:20px;font-family:Arial;width:320px"></textarea>
 	        </div>
 	    </fieldset>
-	    <a class="whiteButton" id="doInsert" type="submit" href="#">저장</a>
+	    <a class="whiteButton" type="submit" href="#">저장</a>
 	    </form>
     </div>
 </body>

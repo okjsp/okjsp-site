@@ -48,20 +48,23 @@ public class MobileWriteServlet extends HttpServlet {
 	} // end doPost()
 
 	private String write(HttpServletRequest req, HttpServletResponse res) {
-		String id = CommonUtil.getCookie(req, "okid");
-		long sid = CommonUtil.getCookieLong(req, "sid");
-		Article article = new Article();
-		article.setId(id);
-		article.setSid(sid);
-		
 		//한글문제로 인해서 넣었음_piki
 		//iui.js에서 encode함수도 수정
+		//20100318_화면에서 저장시 타겟 지정하면서 필요 없게 됨
+		/*
 		try {
 			req.setCharacterEncoding("utf-8");
 		} catch (UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		*/
+		
+		String id = CommonUtil.getCookie(req, "okid");
+		long sid = CommonUtil.getCookieLong(req, "sid");
+		Article article = new Article();
+		article.setId(id);
+		article.setSid(sid);
 		String writer = req.getParameter("writer");
 		String bbs = req.getParameter("bbs");
 		String content = req.getParameter("content");
@@ -81,7 +84,7 @@ public class MobileWriteServlet extends HttpServlet {
 		new ArticleDao().write(article);
 		
 		// 트위터 글쓰기 추가
-		new TwitterUpdate().doUpdate(article, req);
+		//new TwitterUpdate().doUpdate(article, req);
 		
 		return article.getBbs();
 	}

@@ -472,8 +472,11 @@ function encodeForm(form)
 			{	
 				//한글문제로 인해 escape를 제거함_piki
 				//whiteServlet.java에서도 req.setCharacterEncoding("utf-8"); 넣었음
-				//args.push(inputs[i].name + "=" + escape(inputs[i].value));
-				args.push(inputs[i].name + "=" + inputs[i].value);
+				//20100318_타겟 지정으로 다시 escape 살림
+				//나중에 다시 사용하게 되면 한글 문제 생기니깐
+				//서블릿에 req.setCharacterEncoding("utf-8"); 해줘야함
+				args.push(inputs[i].name + "=" + escape(inputs[i].value));
+				//args.push(inputs[i].name + "=" + inputs[i].value);
 			}	
 		}
 	}
