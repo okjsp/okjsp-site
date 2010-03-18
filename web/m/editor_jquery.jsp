@@ -32,13 +32,14 @@
 <style type="text/css" media="screen">@import "../../m/iui/iui.css";</style>
 <script type="application/x-javascript" src="../../m/iui/iui.js"></script>
 <!-- ############ IUI Header End ########### -->
+
 </head>
 <!-- ############ 글쓰기_start ########### -->
 <body>
     <div title="글쓰기">
-	    <form action="/writemobile" method="post" class="panel"  selected="true">
-	    <input name="html" id="html" value="2" type="hidden" readonly="readonly" class="write">
-	    <input name="mobileView" id="mobileView" value="Y" type="hidden" readonly="readonly" class="write">
+    	<!-- target="_self"지정해서 화면 깨지는 현상 해결 -->
+    	<!-- iui.js에서 참조 -->
+	    <form action="/writemobile" method="post" class="panel"  selected="true" target="_self">
 	    <fieldset>
 	        <div class="row">
 	            <label>bbs</label>
@@ -84,7 +85,7 @@
 	            <textarea name="content" id="content" style="font-size:20px;font-family:Arial;width:320px"></textarea>
 	        </div>
 	    </fieldset>
-	    <a class="whiteButton" type="submit" href="#">저장</a>
+	    <a class="whiteButton" id="doInsert" type="submit" href="#">저장</a>
 	    </form>
     </div>
 </body>

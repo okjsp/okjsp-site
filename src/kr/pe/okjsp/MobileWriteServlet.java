@@ -68,7 +68,6 @@ public class MobileWriteServlet extends HttpServlet {
 		String subject = req.getParameter("subject");
 		String homepage = req.getParameter("homepage");
 		String password = req.getParameter("password");
-		String html = req.getParameter("html");
 		String ccl_id = req.getParameter("ccl_id");
 
 		article.setWriter(writer);
@@ -77,7 +76,6 @@ public class MobileWriteServlet extends HttpServlet {
 		article.setSubject(subject);
 		article.setHomepage(homepage);
 		article.setPassword(password);
-		article.setHtml(html);
 		article.setCcl_id(ccl_id);
 		
 		new ArticleDao().write(article);
