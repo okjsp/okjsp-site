@@ -36,8 +36,11 @@ public class TwitterUpdate {
 		String subject = article.getSubject();
 		String content = article.getContent();
 		int seq = article.getSeq();
-		int tmpContLen = 0;
 
+		int subjectLen = 0;
+		int maxContentLen = 0;
+		int urlLen = 0;
+		
 		Twitter twitter = new TwitterFactory().getInstance(twitterId, twitterPwd);
 		Bitly bitly = BitlyFactory.newJmpInstance(bitlyId, bitlyKey);
 		
@@ -45,7 +48,8 @@ public class TwitterUpdate {
         String sOrgUrl = "http://okjsp.pe.kr/seq/"+seq;
         URL resultUrl = null;
 		try {
-			resultUrl = new URL(sOrgUrl);
+			resultUrl = new URL(sOrgUrl);	//원본링크
+			urlLen = sOrgUrl.length();	
 		} catch (MalformedURLException e1) {
 		}
 		
@@ -56,22 +60,61 @@ public class TwitterUpdate {
 		}
 		
         if (bUrl != null){
-        	resultUrl = bUrl.getShortUrl();        	
-        }else{
-        	// 원래URL 사용시에는 content 를 줄여야함
-        	tmpContLen = 11;
+        	resultUrl = bUrl.getShortUrl();	//짧은링크
+        	urlLen = resultUrl.toString().length();
         }
 		
-		//트윗 글 올리기 임시포맷
+		//트윗 글 올리기 임시포맷 
+        //글제목: 최대30자 
 		if ( subject.length() > 30 ) {
 			subject = subject.substring(0, 30) + "..";
 		}
-	
+		subjectLen = subject.length();
+
 		// html tag 삭제
 		content = CommonUtil.removeTag(content, "<");
 		
-		if (content.length() > 84-tmpContLen ) {
-			content = content.substring(0, 84-tmpContLen) + "..";
+
+		
+		//게시글내용에 링크가 있으면 bit.ly처리후 트윗
+		int linkStartAt = content.indexOf("http://"); 
+		int linkEndAt   = content.indexOf(" ", linkStartAt);
+		String strContainLink = "";
+		boolean isContainLink = linkStartAt > -1 ? true : false;
+
+		/** 게시글 링크처리 **/
+		try {
+			// 트윗최대140자에서 제목길이+주소길이+기타길이(3)를 뺀다 (트윗가능한 게시판내용의 길이)
+			maxContentLen = 140-(subjectLen+urlLen+3);
+			
+			if ( isContainLink ) {
+				
+				if (linkEndAt <= 0) {
+					linkEndAt = content.length()-1;
+				}
+	
+				if (linkStartAt+18 < maxContentLen ) {
+					//게시글내용의 링크를 bit.ly 처리가능
+					strContainLink = content.substring(linkStartAt, linkEndAt+1);
+					strContainLink = strContainLink.replaceAll("&amp;", "&");
+					  try {
+							bUrl = bitly.shorten(strContainLink);
+							content = content.substring(0, linkStartAt) + bUrl.getShortUrl();
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+				} else {
+					//주소가 길어서 bit.ly 처리해도 이미 overLenth 인 경우 link 제거
+					content = content.substring(0, linkStartAt);
+				}
+			}
+		}catch (Exception e){
+			//게시글링크처리중 에러
+			e.printStackTrace();
+		}
+
+		if (content.length() > maxContentLen ) {			
+			content = content.substring(0, maxContentLen-2) + "..";
 		} 
    
 		tweetStsText = subject + ": ";
