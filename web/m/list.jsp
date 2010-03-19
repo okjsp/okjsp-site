@@ -6,6 +6,7 @@
 <% long stime = System.currentTimeMillis(); %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core"%>
 <jsp:useBean id="list" class="kr.pe.okjsp.ListHandler"/>
+<jsp:useBean id="member" class="kr.pe.okjsp.member.Member" scope="session"/>
 <jsp:setProperty name="list" property="*" />
 <%
     response.setContentType("text/html");
@@ -27,8 +28,10 @@
 <body>
 	<!-- ############ Header Title ########### -->
     <ul title="<c:out value="${bbsInfoMap[list.bbs].header}" escapeXml="false" />" selected="true">
-    	<!-- ############ 글쓰기 ########### -->
-    	<a href="editor_jquery.jsp?bbs=<%= request.getParameter("bbs") %>">글쓰기</a>
+    	<!-- ############ 글쓰기_로그인 상태일때만 나타남 ########### -->
+    	<% if (member.getSid() != 0) { %>
+			<a href="editor_jquery.jsp?bbs=<%= request.getParameter("bbs") %>">글쓰기</a>
+		<% } %>
     	<!-- ############ List & Next Page ########### -->
 		<jsp:include page="/m/listDetail.jsp"></jsp:include>
     </ul>

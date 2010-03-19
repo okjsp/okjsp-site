@@ -3,8 +3,7 @@
 <%@ taglib uri="/WEB-INF/tld/ok-taglib.tld" prefix="okbbs" %>
 <%@ page import="java.util.*,kr.pe.okjsp.util.CommonUtil,kr.pe.okjsp.*"
 	pageEncoding="euc-kr" %>
-<%@page import="kr.pe.okjsp.member.Member"%>
-<%@page import="kr.pe.okjsp.member.MemberHandler"%>
+<jsp:useBean id="member" class="kr.pe.okjsp.member.Member" scope="session"/>
 <jsp:useBean id="one"  class="kr.pe.okjsp.Article" scope="request"/>
 <jsp:useBean id="list" class="kr.pe.okjsp.ListHandler" />
 <html>
@@ -55,65 +54,71 @@
     <title>OKJSP: <%= one.getSubject() %></title>
 </head>
 <body>
-<ul id="detailView" >
-<li>
-<!-- ###########제목################################# -->
-<h2><%= CommonUtil.showHtml(one.getSubject()) %></h2>
-<!-- ###########이미지및사용자id_시작################################# -->
-<%
-    if (!"".equals(one.getId())) {
-        %><img src="http://www.okjsp.pe.kr/profile/<%= one.getId() %>.jpg"
-        	alt="<%= one.getId() %>"
-        	style="width:77px"
-        	onerror="this.src='/images/spacer.gif'"><%
-    }
-%>
-<c:out value="${one.writer}"/> / <c:out value="${one.when}" />
-<!-- ###########이미지및사용자id_끝################################# -->
-<!-- ###########삭제버튼################################# -->
-<a class="button" href="#deleteForm">delete</a>
-</li>
-<br/>
-<li>
-<!-- ###########내용################################# -->
-<%=  one.getContentView()  %>
-</li>
-<br/>
-<!-- ################  뎃글 ##################### -->
-<%
-  ArrayList<MemoBean> memoList = new MemoHandler().getList(one.getSeq());
-  Iterator memo = null;
-  if (memoList != null) {
-    memo = memoList.iterator();
-    while (memo.hasNext()) {
-      MemoBean mb = (MemoBean)memo.next();
-%><li class="group">
-	<%= mb.getWriter() %> | <%= mb.getWhen("yyyy-MM-dd HH:mm:ss")%>
-</li>
-<li>
-<okbbs:link>
-<okbbs:html br="true"><%= mb.getBcomment() %></okbbs:html>
-</okbbs:link>
-
-</li>
-<%
-    } // end while
-  }
-%>
-</ul>
-<!-- ################ 삭제 폼_시작 ##################### -->
-<form id="deleteForm" class="dialog" action="/deletemobile" method="post" target="_self">
-	<input type="hidden" name="seq" value="<%= one.getSeq() %>">
-	<input type="hidden" name="bbs" value="<%= one.getBbs() %>">
-    <fieldset>
-        <h1>삭제암호입력</h1>
-        <!-- 버튼에  href="#"를 넣어주지 않으면 동작하지 않는다 -->
-        <a class="button leftButton" type="cancel" href="#">Cancel</a>
-        <a class="button blueButton" type="submit" href="#">Delete</a>
-        <label>암호:</label>
-        <input id="password" type="password" name="password" maxlength="15"/>
-    </fieldset>
-</form>
-<!-- ################ 삭제 폼_끝 ##################### -->
+	<ul id="detailView" >
+		<li>
+			<!-- ###########제목################################# -->
+			<h2><%= CommonUtil.showHtml(one.getSubject()) %></h2>
+			<!-- ###########이미지및사용자id_시작################################# -->
+			<%
+			    if (!"".equals(one.getId())) {
+			%><img src="http://www.okjsp.pe.kr/profile/<%= one.getId() %>.jpg"
+			        	alt="<%= one.getId() %>"
+			        	style="width:77px"
+			        	onerror="this.src='/images/spacer.gif'"><%
+			    }
+			%>
+			<c:out value="${one.writer}"/> / <c:out value="${one.when}" />
+			<!-- ###########이미지및사용자id_끝################################# -->
+			<!-- ###########삭제버튼_작성자와로그인아이디가동일할때만 생성################################# -->
+			<%
+			if(one.getId().equals(member.getId())){
+			%>	
+				<a class="button" href="#deleteForm">delete</a>
+			<%	
+			}
+			%>
+		</li>
+		<br/>
+		<li>
+			<!-- ###########내용################################# -->
+			<%=  one.getContentView()  %>
+		</li>
+		<br/>
+		<!-- ################  뎃글 ##################### -->
+		<%
+		  ArrayList<MemoBean> memoList = new MemoHandler().getList(one.getSeq());
+		  Iterator memo = null;
+		  if (memoList != null) {
+		    memo = memoList.iterator();
+		    while (memo.hasNext()) {
+		      MemoBean mb = (MemoBean)memo.next();
+		%><li class="group">
+			<%= mb.getWriter() %> | <%= mb.getWhen("yyyy-MM-dd HH:mm:ss")%>
+		</li>
+		<li>
+		<okbbs:link>
+		<okbbs:html br="true"><%= mb.getBcomment() %></okbbs:html>
+		</okbbs:link>
+		
+		</li>
+		<%
+		    } // end while
+		  }
+		%>
+	</ul>
+	<!-- ################ 삭제 폼_시작 ##################### -->
+	<form id="deleteForm" class="dialog" action="/deletemobile" method="post" target="_self">
+		<input type="hidden" name="seq" value="<%= one.getSeq() %>">
+		<input type="hidden" name="bbs" value="<%= one.getBbs() %>">
+	    <fieldset>
+	        <h1>삭제암호입력</h1>
+	        <!-- 버튼에  href="#"를 넣어주지 않으면 동작하지 않는다 -->
+	        <a class="button leftButton" type="cancel" href="#">Cancel</a>
+	        <a class="button blueButton" type="submit" href="#">Delete</a>
+	        <label>암호:</label>
+	        <input id="password" type="password" name="password" maxlength="15"/>
+	    </fieldset>
+	</form>
+	<!-- ################ 삭제 폼_끝 ##################### -->
 </body>
 </html>

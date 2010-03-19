@@ -1,26 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@page import="kr.pe.okjsp.util.CommonUtil"%>
+<jsp:useBean id="member" class="kr.pe.okjsp.member.Member" scope="session"/>
+
 <%
-	//세션 문제로 인해 일단 아이디를 넣어줌...
-	//long sid = CommonUtil.getCookieLong(request, "sid");
-	//String id = CommonUtil.getCookie(request, "okid");
-	String id = "pikisvill";
-	long sid = 9380;
 	String bbs = CommonUtil.nchk(request.getParameter("bbs"), "perf");
-	
-	//요거 좀 고민...모바일 로그폼을 만들거나
-	//다른 방법으로 화면을 옮겨야 할듯...
-	//일단 editor.jsp는 해놓은 상태임...
-	if(sid == 0) {
-		response.sendRedirect(Navigation.getPath("LOGFORM")+"?returnPath=/m/editor.jsp?bbs="+bbs);
+
+	if(member.getSid() == 0) {
+		response.sendRedirect("https://www.okjsp.pe.kr/jsp/member/loginMobile.jsp?returnPath=/m/editor.jsp?bbs=" + bbs);
 		return; 
 	}
 %>
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<%@page import="kr.pe.okjsp.util.CommonUtil"%>
-<%@page import="kr.pe.okjsp.Navigation"%>
-
 <html>
 <head>
 <META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=ksc5601">
@@ -39,8 +30,9 @@
     <div title="글쓰기">
     	<!-- target="_self"지정해서 화면 깨지는 현상 해결 -->
     	<!-- iui.js에서 참조 -->
+    	<fieldset>
 	    <form action="/writemobile" method="post" class="panel"  selected="true" target="_self">
-	    <fieldset>
+	    
 	        <div class="row">
 	            <label>bbs</label>
 	            <select name="bbs" id="bbs" style="font-size:20px;font-family:Arial;width:200px">
@@ -84,9 +76,11 @@
 	            <input type="hidden" name="msgbackup" id="msgbackup">
 	            <textarea name="content" id="content" style="font-size:20px;font-family:Arial;width:320px"></textarea>
 	        </div>
-	    </fieldset>
-	    <a class="whiteButton" type="submit" href="#">저장</a>
+	    	<div class="row"><br/>
+	    		<a class="whiteButton" type="submit" href="#" target="_self">저장</a><br/>
+	    	</div>
 	    </form>
+	    </fieldset>
     </div>
 </body>
 <!-- ############ 글쓰기_end ########### -->
