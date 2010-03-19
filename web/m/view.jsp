@@ -106,9 +106,10 @@
 	<input type="hidden" name="seq" value="<%= one.getSeq() %>">
 	<input type="hidden" name="bbs" value="<%= one.getBbs() %>">
     <fieldset>
-        <h1>Music Search</h1>
-        <a class="button leftButton" type="cancel">Cancel</a>
-        <a class="button blueButton" type="submit">Delete</a>
+        <h1>삭제암호입력</h1>
+        <!-- 버튼에  href="#"를 넣어주지 않으면 동작하지 않는다 -->
+        <a class="button leftButton" type="cancel" href="#">Cancel</a>
+        <a class="button blueButton" type="submit" href="#">Delete</a>
         <label>암호:</label>
         <input id="password" type="password" name="password" maxlength="15"/>
     </fieldset>
