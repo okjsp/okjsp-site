@@ -1,25 +1,63 @@
+<%---------------------------------------------------------------------------------------------------------    
+  FileName    : index.jsp
+  Author      : BLUEPOET
+  Regdate     : 2010-03-19
+  Lastdate 	  : 
+  Description : OKJSP 모바일 초기접속 페이지  
+  ver         : 1.0
+-----------------------------------------------------------------------------------------------------------%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<%@ page pageEncoding="euc-kr"
-    import="kr.pe.okjsp.util.CommonUtil, java.util.Iterator,
-            kr.pe.okjsp.Article,kr.pe.okjsp.util.DateLabel" %>
-<%@page import="java.util.Map"%>
-<%@page import="kr.pe.okjsp.BbsInfoBean"%>
-<%@page import="java.util.Arrays"%>
-<% long stime = System.currentTimeMillis(); %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core"%>
-<%@ taglib uri="/WEB-INF/tld/ok-taglib.tld" prefix="okbbs" %>
-<%@ taglib uri="/WEB-INF/tld/taglibs-string.tld" prefix="str" %>
-<jsp:useBean id="list" class="kr.pe.okjsp.ListHandler"/>
+<%@ page import="java.util.*, java.sql.*, kr.pe.okjsp.util.*, kr.pe.okjsp.BbsInfoBean " contentType='text/html;charset=euc-kr' %>
 <jsp:useBean id="member" class="kr.pe.okjsp.member.Member" scope="session"/>
-<jsp:setProperty name="list" property="*" />
-<%
-    response.setContentType("text/html");
-
-	Iterator iter = list.getList().iterator();
-	Article one = null;
+<%!
+public HashMap getRecentList()
+{
+    int i =0;
+    HashMap recentList = new HashMap();
+    
+    StringBuffer query = new StringBuffer();
+	Connection conn = null;
+	PreparedStatement pstmt = null;
+	ResultSet rs = null;	
+	DbCon dbCon = new DbCon();
+	
+	try 
+	{
+		conn = dbCon.getConnection();
+		 
+	    query.append(" select bbsid, count(*) as cnt from okboard ");
+	    query.append(" where ");
+	    query.append(" cast(wtime as date)=cast(systimestamp as date) ");
+	    query.append(" group by bbsid ");
+	    query.append(" order by cnt desc ");
+	    query.append(" for ORDERBY_NUM() BETWEEN 1 and 3 ");
+		pstmt = conn.prepareStatement(query.toString());
+		rs = pstmt.executeQuery();
+	
+		while(rs.next()) 
+		{
+			recentList.put("bbsid["+i+"]",rs.getString("bbsid"));
+			recentList.put("cnt["+i+"]", rs.getInt("cnt"));
+			recentList.put("nCount", i);
+			
+			i++;
+		}
+		
+		rs.close();
+		pstmt.close();
+	} 
+	catch(Exception e) 
+	{
+		e.printStackTrace();
+	} finally 
+	{
+		dbCon.close(conn, pstmt, rs);
+	}
+	
+	return recentList;
+}
 %>
-
-<%@page import="kr.pe.okjsp.ArticleDao"%><html>
+<html>
 <head>
 <META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=ksc5601">
 
@@ -70,42 +108,44 @@ p {
     <div class="toolbar">
         <h1 id="pageTitle"></h1>
         <a id="backButton" class="button" href="#"></a>
-<% if (member.getSid() != 0) { %>
-			<!-- Do Nothing -->
-<% } else { %>
         <a class="button" href="#loginForm">Login</a>
-<% } %>
     </div>
-    <ul title="OKJSP BBS" selected="true">
+    <ul title="OKJSP" selected="true">
+		<%			
+			HashMap map = (HashMap)application.getAttribute("bbsInfoMap");
+			int listSize = (Integer)getRecentList().get("nCount");
+			
+			for(int i=0; i<=listSize; i++)
+			{
+			    BbsInfoBean bbsInfo = (BbsInfoBean)map.get(getRecentList().get("bbsid["+i+"]"));			    
+		%>
         <li>
-            <div class="digg-count">1</div>
-            <a href="/bbs?act=MLIST&bbs=twitter">Twitter</a>
+            <div class="digg-count"><%=(i+1)%></div>
+            <a href="/bbs?act=MLIST&bbs=<%=bbsInfo.getBbs()%>"><%=bbsInfo.getName()%>[<%=getRecentList().get("cnt["+i+"]")%>]</a>
         </li>
-        <li>
-            <div class="digg-count">2</div>
-            <a href="/bbs?act=MLIST&bbs=bbs6">사는 얘기</a>
-        </li>
-        <li>
-            <div class="digg-count">3</div>
-            <a href="/bbs?act=MLIST&bbs=bbs5">머리식히는 곳</a>
-        </li>
-        <li>
-            <div class="digg-count">4</div>
-            <a href="/bbs?act=MLIST&bbs=javastudy">Java Study</a>
-        </li>
+		<%
+			}
+		%>
+		<li>
+			<div class="digg-count">4</div>
+ 			<a href="recentDetail.jsp">최근글 게시판</a>
+		</li>
+		<li>			
+			<div class="digg-count">5</div>
+			<a href="main.jsp">전체게시판 보기</a>
+		</li>		
     </ul>
     
     <form id="loginForm" class="dialog" method="POST" target="_self" action="/jsp/member/loginMobile.jsp" >
         <fieldset>
-            <h1>Login</h1>            
-            <!-- 버튼에  href="#"를 넣어주지 않으면 동작하지 않는다 -->
-            <a class="button leftButton" type="cancel" href="#">Cancel</a>
-<% if (member.getSid() != 0) { %>
-			<!-- Do Nothing -->
-<% } else { %>
-            <a class="button blueButton" type="submit" href="#">Login</a>
-<% } %>
-            
+            <h1>Login</h1>
+            <a class="button leftButton" type="cancel">Cancel</a>
+           <% if (member.getSid() != 0) { %>
+				<!-- Do Nothing -->
+			<% } else { %>
+			    <a class="button blueButton" type="submit">Login</a>
+			<% } %>
+			            
             <label>ID :</label>
             <input id="artist" type="text" name="id" />
             <label>PW:</label>
