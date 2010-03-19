@@ -97,12 +97,13 @@ p {
     
     <form id="loginForm" class="dialog" method="POST" target="_self" action="/jsp/member/loginMobile.jsp" >
         <fieldset>
-            <h1>Login</h1>
-            <a class="button leftButton" type="cancel">Cancel</a>
+            <h1>Login</h1>            
+            <!-- 버튼에  href="#"를 넣어주지 않으면 동작하지 않는다 -->
+            <a class="button leftButton" type="cancel" href="#">Cancel</a>
 <% if (member.getSid() != 0) { %>
 			<!-- Do Nothing -->
 <% } else { %>
-            <a class="button blueButton" type="submit">Login</a>
+            <a class="button blueButton" type="submit" href="#">Login</a>
 <% } %>
             
             <label>ID :</label>
