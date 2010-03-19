@@ -10,6 +10,7 @@
 <%@ taglib uri="/WEB-INF/tld/ok-taglib.tld" prefix="okbbs" %>
 <%@ taglib uri="/WEB-INF/tld/taglibs-string.tld" prefix="str" %>
 <jsp:useBean id="list" class="kr.pe.okjsp.ListHandler"/>
+<jsp:useBean id="member" class="kr.pe.okjsp.member.Member" scope="session"/>
 <jsp:setProperty name="list" property="*" />
 <%
     response.setContentType("text/html");
@@ -69,7 +70,11 @@ p {
     <div class="toolbar">
         <h1 id="pageTitle"></h1>
         <a id="backButton" class="button" href="#"></a>
+<% if (member.getSid() != 0) { %>
+			<!-- Do Nothing -->
+<% } else { %>
         <a class="button" href="#loginForm">Login</a>
+<% } %>
     </div>
     <ul title="OKJSP BBS" selected="true">
         <li>
@@ -90,11 +95,15 @@ p {
         </li>
     </ul>
     
-    <form id="loginForm" class="dialog" action="/jsp/member/login2.jsp" target="_self">
+    <form id="loginForm" class="dialog" method="POST" target="_self" action="/jsp/member/loginMobile.jsp" >
         <fieldset>
-            <h1>Music Search</h1>
+            <h1>Login</h1>
             <a class="button leftButton" type="cancel">Cancel</a>
+<% if (member.getSid() != 0) { %>
+			<!-- Do Nothing -->
+<% } else { %>
             <a class="button blueButton" type="submit">Login</a>
+<% } %>
             
             <label>ID :</label>
             <input id="artist" type="text" name="id" />
