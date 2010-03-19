@@ -1,3 +1,11 @@
+<%---------------------------------------------------------------------------------------------------------    
+  FileName    : main.jsp
+  Author      : BLUEPOET
+  Regdate     : 2010-03-19
+  Lastdate 	  : 
+  Description : 전체게시판 보기 페이지  
+  ver         : 1.0
+-----------------------------------------------------------------------------------------------------------%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ page pageEncoding="euc-kr" import="java.util.*,kr.pe.okjsp.BbsInfoBean" %>
 <%!
