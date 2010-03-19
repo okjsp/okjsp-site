@@ -69,6 +69,7 @@ p {
     <div class="toolbar">
         <h1 id="pageTitle"></h1>
         <a id="backButton" class="button" href="#"></a>
+        <a class="button" href="#loginForm">Login</a>
     </div>
     <ul title="OKJSP BBS" selected="true">
         <li>
@@ -88,5 +89,19 @@ p {
             <a href="/bbs?act=MLIST&bbs=javastudy">Java Study</a>
         </li>
     </ul>
+    
+    <form id="loginForm" class="dialog" action="/jsp/member/login2.jsp" target="_self">
+        <fieldset>
+            <h1>Music Search</h1>
+            <a class="button leftButton" type="cancel">Cancel</a>
+            <a class="button blueButton" type="submit">Login</a>
+            
+            <label>ID :</label>
+            <input id="artist" type="text" name="id" />
+            <label>PW:</label>
+            <input type="password" name="password"/>
+        </fieldset>
+    </form>
+    
 </body>
 </html>
