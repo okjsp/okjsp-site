@@ -11,10 +11,10 @@
     <META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=ksc5601">
 	<!-- ################## IUI Header Start ##################  -->
 	<meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
-	<link rel="apple-touch-icon" href="../../m/iui/iui-logo-touch-icon.png" />
+	<link rel="apple-touch-icon" href="/m/iui/iui-logo-touch-icon.png" />
 	<meta name="apple-touch-fullscreen" content="YES" />
-	<style type="text/css" media="screen">@import "../../m/iui/iui.css";</style>
-	<script type="application/x-javascript" src="../../m/iui/iui.js"></script>
+	<style type="text/css" media="screen">@import "/m/iui/iui.css";</style>
+	<script type="application/x-javascript" src="/m/iui/iui.js"></script>
 	<script src="/js/okboard_view.js"></script>
 	<style type="text/css">
 	body > ul > li {
@@ -40,7 +40,7 @@
 	    width: 36px;
 	    height: 30px;
 	    padding: 7px 0 0 0;
-	    background: url(../../m/iui/shade-compact.gif) no-repeat;
+	    background: url(/m/iui/shade-compact.gif) no-repeat;
 	}
 	h2 {
 	    margin: 10px;
@@ -105,7 +105,21 @@
 		    } // end while
 		  }
 		%>
+		<li>
+		    <form id="commendForm" title="Settings" class="panel" selected="true">
+		        <h2>뎃글</h2>
+		        <fieldset style="text-align: center;">
+		            <div class="row">
+		                <label>ㅁㅁ</label>
+		            </div>
+		        </fieldset>
+		        <a class="whiteButton" href="/m/index.jsp" target="_self" style="width:120px;">댓글 올리기</a>
+		    </form>
+		</li>
 	</ul>
+	
+	
+	
 	<!-- ################ 삭제 폼_시작 ##################### -->
 	<form id="deleteForm" class="dialog" action="/deletemobile" method="post" target="_self">
 		<input type="hidden" name="seq" value="<%= one.getSeq() %>">

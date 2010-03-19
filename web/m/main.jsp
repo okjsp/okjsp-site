@@ -70,10 +70,10 @@ public HashMap<Integer,String> getListMap()
 
 <!-- IUI Header Start -->
 <meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
-<link rel="apple-touch-icon" href="../../m/iui/iui-logo-touch-icon.png" />
+<link rel="apple-touch-icon" href="/m/iui/iui-logo-touch-icon.png" />
 <meta name="apple-touch-fullscreen" content="YES" />
-<style type="text/css" media="screen">@import "../../m/iui/iui.css";</style>
-<script type="application/x-javascript" src="../../m/iui/iui.js"></script>
+<style type="text/css" media="screen">@import "/m/iui/iui.css";</style>
+<script type="application/x-javascript" src="/m/iui/iui.js"></script>
 <style type="text/css">
 body > ul > li {
     font-size: 14px;
@@ -98,7 +98,7 @@ li .digg-count {
     width: 36px;
     height: 30px;
     padding: 7px 0 0 0;
-    background: url(../../m/iui/shade-compact.gif) no-repeat;
+    background: url(/m/iui/shade-compact.gif) no-repeat;
 }
 h2 {
     margin: 10px;

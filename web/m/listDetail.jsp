@@ -38,7 +38,7 @@ li .digg-count {
     width: 36px;
     height: 30px;
     padding: 7px 0 0 0;
-    background: url(../../m/iui/shade-compact.gif) no-repeat;
+    background: url(/m/iui/shade-compact.gif) no-repeat;
 }
 h2 {
     margin: 10px;
