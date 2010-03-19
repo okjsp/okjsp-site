@@ -59,7 +59,6 @@ public HashMap<Integer,String> getListMap()
 %>
 <html>
 <head>
-<META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=ksc5601">
 
 <!-- IUI Header Start -->
 <meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
@@ -105,11 +104,7 @@ p {
 
 </head>
 <body>
-    <div class="toolbar">
-        <h1 id="pageTitle"></h1>
-        <a id="backButton" class="button" href="#"></a>
-    </div>
-    <ul title="OKJSP" selected="true">
+   <ul title="전체게시판" selected="true">
 		<%
 			HashMap map = (HashMap)application.getAttribute("bbsInfoMap");
 			int listSize = getListMap().size();
