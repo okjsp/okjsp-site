@@ -27,10 +27,12 @@ public HashMap getRecentList()
 		 
 	    query.append(" select bbsid, count(*) as cnt from okboard ");
 	    query.append(" where ");
-	    query.append(" cast(wtime as date)=cast(systimestamp as date) ");
+	    //query.append(" cast(wtime as date)=cast(systimestamp as date)-1 ");
+	    query.append(" cast(wtime as date)=sysdate ");
+	    //query.append(" bbsid in ('bbs3','bbs4','bbs5') ");
 	    query.append(" group by bbsid ");
 	    query.append(" order by cnt desc ");
-	    query.append(" for ORDERBY_NUM() BETWEEN 1 and 3 ");
+	    query.append(" for ORDERBY_NUM() <= 3 ");
 		pstmt = conn.prepareStatement(query.toString());
 		rs = pstmt.executeQuery();
 	
@@ -117,19 +119,29 @@ p {
     <ul title="OKJSP" selected="true">
 		<%			
 			HashMap map = (HashMap)application.getAttribute("bbsInfoMap");
-			int listSize = (Integer)getRecentList().get("nCount");
-			
-			for(int i=0; i<=listSize; i++)
+		
+			if(getRecentList().size() == 0)
+			{									
+				%><li>
+					오늘 올라온 글이 없습니다.
+				</li>
+			<%}
+			else
 			{
-			    BbsInfoBean bbsInfo = (BbsInfoBean)map.get(getRecentList().get("bbsid["+i+"]"));			    
-		%>
-        <li>
-            <div class="digg-count"><%=(i+1)%></div>
-            <a href="/bbs?act=MLIST&bbs=<%=bbsInfo.getBbs()%>"><%=bbsInfo.getName()%>[<%=getRecentList().get("cnt["+i+"]")%>]</a>
-        </li>
-		<%
+				int listSize = (Integer)getRecentList().get("nCount");
+				
+				for(int i=0; i<=listSize; i++)
+				{
+				    BbsInfoBean bbsInfo = (BbsInfoBean)map.get(getRecentList().get("bbsid["+i+"]"));			    
+			%>
+	        <li>
+	            <div class="digg-count"><%=(i+1)%></div>
+	            <a href="/bbs?act=MLIST&bbs=<%=bbsInfo.getBbs()%>"><%=bbsInfo.getName()%>[<%=getRecentList().get("cnt["+i+"]")%>]</a>
+	        </li>
+			<%
+				}
 			}
-		%>
+			%>
 		<li>
 			<div class="digg-count">4</div>
  			<a href="recentDetail.jsp">최근글 게시판</a>
