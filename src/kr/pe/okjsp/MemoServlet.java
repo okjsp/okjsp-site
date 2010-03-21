@@ -92,6 +92,12 @@ public class MemoServlet extends HttpServlet {
 				if (sid > 0) {
 					id = CommonUtil.getCookie(req, "okid");
 				}
+				
+				if( sid == 0 ) {
+					sid = Long.parseLong( req.getParameter("sid") );
+					id = req.getParameter("okid");
+				}
+				
 				memocnt = memoDao.write(conn, id, sid, writer, bcomment,
 						memopass, ip, seq);
 				CommonUtil.setCookie(res, "memo", "true", 525600);

@@ -105,20 +105,31 @@
 		    } // end while
 		  }
 		%>
-		<li>
-		    <form id="commendForm" title="Settings" class="panel" selected="true">
-		        <h2>µ«±Û</h2>
-		        <fieldset style="text-align: center;">
-		            <div class="row">
-		                <label>¤±¤±</label>
-		            </div>
-		        </fieldset>
-		        <a class="whiteButton" href="/m/index.jsp" target="_self" style="width:120px;">´ñ±Û ¿Ã¸®±â</a>
+		<li class="panel" align="center">
+<% if (member.getSid() != 0) { %>
+			<form name="f0" method="POST" onSubmit="return chk_memo(this)" action="/jsp/memo">
+			    <input type="hidden" name="pact" value="MEMO">
+			    <input type="hidden" name="seq" value="<%= one.getSeq() %>">
+			    <input type="hidden" name="pg" value="<%= list.getPg() %>">
+			    <input type="hidden" name="keyfield" value="<%=  CommonUtil.nchk(request.getParameter("keyfield"),"content")  %>">
+			    <input type="hidden" name="keyword" value="<%=  CommonUtil.nchk(request.getParameter("keyword"))  %>">
+			    <input type="hidden" name="bbs" value="<%= one.getBbs() %>">
+			    <input type="hidden" name="viewstamp" value="<%= System.currentTimeMillis() %>">
+			    <input type="hidden" name="doublecheck" class="memodc" value="okjsp">
+			    <input type="hidden" name="sid" value="<%= member.getSid() %>">
+			    <input type="hidden" name="okid" value="<%= member.getId() %>">
+			    <input type="hidden" name="writer" value="<%= member.getId() %>">
+		    	<textarea name="bcomment" id="bcomment" style="font-size:20px;font-family:Arial;width:97%"></textarea>
+		    	- ID : <input type="text" 		class="memoid" name="memoid" value="<%= member.getId() %>" style="width:100px">
+		    	&nbsp;&nbsp;
+		    	- PW : <input type="password" 	class="memopass" name="memopass" maxlength="50" value="" style="width:100px">
+		        <a class="whiteButton" type="submit" href="#" target="_self">µ«±ÛÀü¼Û</a><br/>
 		    </form>
+<% } else { %>
+			<font color="blue">¡Ø µ«±ÛÀ» ³²±â½Ã·Á¸é Login ÇÏ¼¼¿ä</font>
+<% } %>
 		</li>
 	</ul>
-	
-	
 	
 	<!-- ################ »èÁ¦ Æû_½ÃÀÛ ##################### -->
 	<form id="deleteForm" class="dialog" action="/deletemobile" method="post" target="_self">
