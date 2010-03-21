@@ -27,7 +27,8 @@
 <meta name="apple-touch-fullscreen" content="YES" />
 <style type="text/css" media="screen">@import "/m/css/iui_okjsp.css";</style>
 <script type="application/x-javascript" src="/m/js/iui.js"></script>
-<style type="text/css">
+<style type="text/css"><!--
+
 	body {
 	    margin: 0;
 	    font-family: Helvetica;
@@ -75,30 +76,100 @@
 	    font-size: 14px;
 	}
 	
-	body > ul > .divBar {
-		font-size: 10px;
-	    font-weight: bold;
-		background-color: #DDDDDD;
-		border-bottom: 1px solid #FFFFFF;	
-	}	
-	
-	body > ul.BBSList > li.recentList {
-		border-bottom: 1px solid #FFFFFF;
-	    background: url(/m/images/recentlistbg.png) repeat-x;	
-	}	
-
-	body > ul.BBSList > li.bbsList {
-	    background: url(/m/images/bbslistbg.png) repeat-x;	
-	}	
-
 	body > ul > li > a {
 	    display: block;
 	    margin: -8px 0 -8px -10px;
 	    padding: 8px 32px 8px 10px;
 	    text-decoration: none;
 	    color: inherit;
+	}	
+
+	body > ul > li.divBar {
+		height: 8px; 
+		background-color: #DDDDDD;
+		border-bottom: 1px solid #FFFFFF;
+		font-size: 12px;
+	    font-weight: bold;	
+	}	
+
+    body > ul.bookList > li {
+    	float: left;
+    	margin-left: -21px; /* 도대체 왜 마진이 마이너스부터 적용되는 겅미? 알수 없습니다 from 안광운 */
+    }
+
+	body > ul.BBSList > li.recentList {
+		border-bottom: 1px solid #FFFFFF;
+	    background: url(/m/images/recentlistbg.png) repeat-x;	
+	}	
+	
+	body > ul.BBSList > li.recentList > a {
+		margin-left: 5px;
+	    background: url(/m/images/newIcon.png) no-repeat left center;
+	}		
+	
+	body > ul.BBSList > li > a > .listTitle {
+		padding: 0 0 0 25px;
+	}		
+	
+	body > ul.BBSList > li.bbsList {
+	    background: url(/m/images/bbslistbg.png) repeat-x;	
+	}	
+
+	body > ul.BBSList > li.bbsList > a {
+		margin-left: 5px;	
+	    background: url(/m/images/listIcon.png) no-repeat left center;
+	}	
+
+	body > .getNextButton, .banner {
+		text-align: center;
+		margin-bottom: 17px;
 	}
-</style>
+	
+	body > .getNextButton > a {
+		text-decoration: none;
+ 		font-size: 20px;
+		color: #5360b4;
+	}
+	
+	body > .info {
+	    box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    -webkit-box-sizing: border-box;
+	    border-top: 1px solid #6d84a2;
+	    padding: 10px;
+	    height: 44px;
+	    background: url(/m/iui/toolbar.png) repeat-x;	
+	}		
+
+	.button {
+	    overflow: hidden;
+	    margin: 0;
+	    border-width: 0 5px;
+	    padding: 8px 10px;
+	    width: auto;
+	    height: 30px;
+	    line-height: 25px;
+	    font-family: inherit;
+	    font-size: 12px;
+	    font-weight: bold;
+	    color: #FFFFFF;
+	    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
+	    text-overflow: ellipsis;
+	    text-decoration: none;
+	    white-space: nowrap;
+	    background: none;
+	    -webkit-border-image: url(/m/iui/toolButton.png) 0 5 0 5;
+	}	
+
+	.leftButton {
+	    left: 6px;
+	    right: auto;
+	}	
+
+	.clearBoth {
+	clear: both;
+	}
+--></style>
 <!-- SAFARI Header End -->
 
 </head>
@@ -106,29 +177,58 @@
 	<div class="homebar">
 		<h1 class="homeTitle">OKJSP.pe.kr</h1>
 	</div>
-	
+
 	<ul class="bookList">
 		<li>
-			<a class="#" href=""></a>			
+			<a href="#"><img src="/m/images/book/book1.png"/></a>			
+		</li>
+		<li>
+			<a href="#"><img src="/m/images/book/book2.png"></a>			
+		</li>
+		<li>
+			<a href="#"><img src="/m/images/book/book3.png"></a>			
 		</li>
 	</ul>
+	
+	<div class="clearBoth"></div>
 		
     <ul class="BBSList">
         <li class="recentList">
-            <a href="#">Twitter</a>
+            <a href="#"><span class="listTitle">RECENT Posting List</span></a>
         </li>
         <li class="divBar">
-        	BBS List
+			BBS List
         </li>
         <li class="bbsList">
-            <a href="#">사는 얘기</a>
+            <a href="#"><span class="listTitle">사는 얘기</span></a>
         </li>
         <li class="bbsList">
-            <a href="#">머리식히는 곳</a>
+            <a href="#"><span class="listTitle">머리식히는 곳</span></a>
         </li>
         <li class="bbsList">
-            <a href="#">Java Study</a>
+            <a href="#"><span class="listTitle">Java Study</span></a>
         </li>
+        <li class="bbsList">
+            <a href="#"><span class="listTitle">사는 얘기</span></a>
+        </li>
+        <li class="bbsList">
+            <a href="#"><span class="listTitle">머리식히는 곳</span></a>
+        </li>
+        <li class="bbsList">
+            <a href="#"><span class="listTitle">Java Study</span></a>
+        </li>        
     </ul>	
+    
+	<div class="getNextButton">
+		<a href="#">Get Next Page Stories...</a>
+	</div>    
+	
+	<div class="banner">
+		<a href="#"><img src="/m/images/banner/acorn.png"/></a>
+	</div>
+	
+	<div class="info">
+    	<a class="button leftButton" href="#">Info</a>
+	</div>
 </body>
 </html>
