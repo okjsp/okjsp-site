@@ -107,7 +107,8 @@
 		%>
 		<li class="panel" align="center">
 <% if (member.getSid() != 0) { %>
-			<form name="f0" method="POST" onSubmit="return chk_memo(this)" action="/jsp/memo">
+			<!-- target="_self" ÁöÁ¤ÇØ¼­ ÇÑ±Û±úÁü ¼öÁ¤_piki -->
+			<form name="f0" method="POST" onSubmit="return chk_memo(this)" action="/jsp/memo" target="_self">
 			    <input type="hidden" name="pact" value="MEMO">
 			    <input type="hidden" name="seq" value="<%= one.getSeq() %>">
 			    <input type="hidden" name="pg" value="<%= list.getPg() %>">
@@ -123,10 +124,10 @@
 		    	- ID : <input type="text" 		class="memoid" name="memoid" value="<%= member.getId() %>" style="width:100px">
 		    	&nbsp;&nbsp;
 		    	- PW : <input type="password" 	class="memopass" name="memopass" maxlength="50" value="" style="width:100px">
-		        <a class="whiteButton" type="submit" href="#" target="_self">µ«±ÛÀü¼Û</a><br/>
+		        <a class="whiteButton" type="submit" href="#" target="_self">´ñ±ÛÀü¼Û</a><br/>
 		    </form>
 <% } else { %>
-			<font color="blue">¡Ø µ«±ÛÀ» ³²±â½Ã·Á¸é Login ÇÏ¼¼¿ä</font>
+			<font color="blue">¡Ø ´ñ±ÛÀ» ³²±â½Ã·Á¸é Login ÇÏ¼¼¿ä</font>
 <% } %>
 		</li>
 	</ul>
