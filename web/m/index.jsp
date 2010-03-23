@@ -116,7 +116,7 @@ p {
         <a class="button" href="#loginForm">Login</a>
 <% } %>
     </div>
-    <ul title="OKJSP" selected="true">
+    <ul id="home" title="OKJSP" selected="true">
 		<%			
 			HashMap map = (HashMap)application.getAttribute("bbsInfoMap");
 		

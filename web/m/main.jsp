@@ -112,7 +112,8 @@ p {
 
 </head>
 <body>
-   <ul title="전체게시판" selected="true">
+	<!-- 화면 겹침 방지 위해 id="stats" 추가  -->
+	<ul id="stats" title="전체게시판">
 		<%
 			HashMap map = (HashMap)application.getAttribute("bbsInfoMap");
 			int listSize = getListMap().size();

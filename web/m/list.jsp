@@ -27,7 +27,8 @@
 </head>
 <body>
 	<!-- ############ Header Title ########### -->
-    <ul title="<c:out value="${bbsInfoMap[list.bbs].header}" escapeXml="false" />" selected="true">
+	<!-- 화면 겹침 방지 위해 id="stats" 추가  -->
+    <ul id="stats"  title="<c:out value="${bbsInfoMap[list.bbs].header}" escapeXml="false" />">
     	<!-- ############ 글쓰기_로그인 상태일때만 나타남 ########### -->
     	<% if (member.getSid() != 0) { %>
 			<a href="editor_jquery.jsp?bbs=<%= request.getParameter("bbs") %>">글쓰기</a>
@@ -35,5 +36,7 @@
     	<!-- ############ List & Next Page ########### -->
 		<jsp:include page="/m/listDetail.jsp"></jsp:include>
     </ul>
+    
+    
 </body>
 </html>

@@ -15,7 +15,6 @@
 	<meta name="apple-touch-fullscreen" content="YES" />
 	<style type="text/css" media="screen">@import "/m/iui/iui.css";</style>
 	<script type="application/x-javascript" src="/m/iui/iui.js"></script>
-	<script src="/js/okboard_view.js"></script>
 	<style type="text/css">
 	body > ul > li {
 	    font-size: 14px;
@@ -51,6 +50,7 @@
 	}
 	</style>
 	<!-- ################## IUI Header End ################## -->
+	<script src="/js/okboard_view.js"></script>
     <title>OKJSP: <%= one.getSubject() %></title>
 </head>
 <body>
