@@ -27,7 +27,7 @@
 </head>
 <body>
 	<!-- ############ Header Title ########### -->
-	<!-- 화면 겹침 방지 위해 id="stats" 추가  -->
+	<!-- 화면 겹침 방지 위해 id="stats2" 추가  -->
     <ul id="stats2"  title="<c:out value="${bbsInfoMap[list.bbs].header}" escapeXml="false" />">
     	<!-- ############ 글쓰기_로그인 상태일때만 나타남 ########### -->
     	<% if (member.getSid() != 0) { %>

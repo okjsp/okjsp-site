@@ -57,8 +57,8 @@ p {
 
 </head>
 <body>
-<!-- 화면 겹침 방지 위해 id="stats" 추가  -->
-<ul id="stats"  title="최신글 보기" >
+<!-- 화면 겹침 방지 위해 id="stats3" 추가  -->
+<ul id="stats3"  title="최신글 보기" >
 	<li>
 		<div class="digg-count">1</div>
 		<a href="/bbs?seq=28685&mobileView=Y"><펌> 훌륭한프로그래머의딜레마</a>
