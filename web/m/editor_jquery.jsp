@@ -28,12 +28,7 @@
 <!-- ############ 글쓰기_start ########### -->
 <body>
 
-    <div title="글쓰기" id="insert">
-        <h1 id="pageTitle"></h1>
-        <a id="backButton" class="button" href="#"></a>
-    </div>
-    
-    <form id="settings" title="Settings" class="panel" selected="true">
+    <form id="settings" class="panel" selected="true" action="/writemobile"  method="post">
         <h2>글 정보</h2>
         <fieldset style="text-align: center;">
 	        <div class="row">
