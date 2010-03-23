@@ -36,11 +36,10 @@
 	        <div class="row">
 	            <label>bbs</label>
 	            <select name="bbs" id="bbs" style="font-size:20px;font-family:Arial;width:200px">
-					<jsp:include page="/jsp/option.jsp"></jsp:include>
+					<jsp:include page="/jsp/option.jsp">
+						<jsp:param name="bbs" value="<%= bbs %>"/>
+					</jsp:include>
 				</select>
-				<script type="text/javascript">
-					document.getElementById('bbs').value = '<%= bbs %>';
-				</script>
 	        </div>
 	        <div class="row">
 	            <label>Writer</label>
