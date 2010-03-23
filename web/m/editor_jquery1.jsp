@@ -24,10 +24,9 @@
 <script language="javascript">
 
 //1. AJAX 호출(광고 중복아이디 체크)
-function writeProc()
+function writeProc(form)
 {
 	alert('1111');
-	var form = document.form;
 	var url = "writeProc.jsp";
 	var pars = "writer="+form.writer.value+"&bbs="+form.bbs.value+"&content="+form.content.value+"&subject="+form.subject.value+"&homepage="+form.homepage.value+"&password="+form.password.value+"&ccl_id="+form.ccl_id.value;
 	var ajaxObj = new Ajax.Request(
@@ -50,17 +49,19 @@ function goList(responseHttpObj)
 	if(result != 0)
 	{
 		alert('결과가 입력되었습니다.');		
-	}	
+	}
+
+	document.form.submit();	
 }
 </script>
 </head>
 <!-- ############ 글쓰기_start ########### -->
 <body>
-    <div title="글쓰기">
+
     	<!-- target="_self"지정해서 화면 깨지는 현상 해결 -->
     	<!-- iui.js에서 참조 -->
     	<fieldset>
-	    <form name="form" action="javascript:history.back();" onsubmit="return writeProc()" method="post" class="panel"  selected="true" target="_self">
+	    <form name="form" action="javascript:history.back();" onSubmit="return writeProc(this)" method="post" class="panel"  selected="true" target="_self">
 	    
 	        <div class="row">
 	            <label>bbs</label>
@@ -105,12 +106,14 @@ function goList(responseHttpObj)
 	            <input type="hidden" name="msgbackup" id="msgbackup">
 	            <textarea name="content" id="content" style="font-size:20px;font-family:Arial;width:320px"></textarea>
 	        </div>
-	    	<div class="row"><br/>
-	    		<input type="submit" value="저장"><br/-->							
-	    	</div>
+	    	
+  			
+	    		<a class="whiteButton" type="submit" href="#" target="_self">저장</a><br/>
+							
+	    	
 	    </form>
 	    </fieldset>
-    </div>
+
 </body>
 <!-- ############ 글쓰기_end ########### -->
 </html>
