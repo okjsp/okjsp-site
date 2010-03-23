@@ -27,14 +27,17 @@
 </head>
 <!-- ############ 글쓰기_start ########### -->
 <body>
+
     <div title="글쓰기" id="insert">
-    	<!-- target="_self"지정해서 화면 깨지는 현상 해결 -->
-    	<!-- iui.js에서 참조 -->
-    	<fieldset>
-	    <form action="/writemobile"  method="post">
-	    
+        <h1 id="pageTitle"></h1>
+        <a id="backButton" class="button" href="#"></a>
+    </div>
+    
+    <form id="settings" title="Settings" class="panel" selected="true">
+        <h2>글 정보</h2>
+        <fieldset style="text-align: center;">
 	        <div class="row">
-	            <label>bbs</label>
+	            <label>BBS</label>
 	            <select name="bbs" id="bbs" style="font-size:20px;font-family:Arial;width:200px">
 					<jsp:include page="/jsp/option.jsp">
 						<jsp:param name="bbs" value="<%= bbs %>"/>
@@ -46,11 +49,11 @@
 	            <input type="text" name="writer" id="writer" style="font-size:20px;font-family:Arial"/>
 	        </div>
 	        <div class="row">
-	            <label>homepage</label>
+	            <label>Homepage</label>
 	            <input type="text" name="homepage" id="homepage" style="font-size:20px;font-family:Arial"/>
 	        </div>
 	        <div class="row">
-	            <label>password</label>
+	            <label>Password</label>
 	            <input type="password" name="password"  id="password" style="font-size:20px;font-family:Arial"/>
 	        </div>
 	        <div class="row">
@@ -65,6 +68,9 @@
 					<option value="6">CCL-저작자표시-비영리-변경금지</option>
 				</select>
 	        </div>
+	    </fieldset>
+        <h2>글 쓰기</h2>
+        <fieldset style="text-align: center;">
 	        <div class="row">
 	            <label>Subject</label>
 	            <input type="text" name="subject" id="subject" style="font-size:20px;font-family:Arial"/>
@@ -75,12 +81,12 @@
 	            <input type="hidden" name="msgbackup" id="msgbackup">
 	            <textarea name="content" id="content" style="font-size:20px;font-family:Arial;width:320px"></textarea>
 	        </div>
-	    	<div class="row"><br/>
-	    		<a class="whiteButton" type="submit" href="#" target="_self">저장</a><br/>
-	    	</div>
-	    </form>
-	    </fieldset>
-    </div>
+        </fieldset>
+        
+        <a class="whiteButton" type="submit" href="#" target="_self">저장</a>
+    </form>
+
+
 </body>
 <!-- ############ 글쓰기_end ########### -->
 </html>
