@@ -27,11 +27,11 @@
 </head>
 <!-- ############ 글쓰기_start ########### -->
 <body>
-    <div title="글쓰기">
+    <div title="글쓰기" id="insert">
     	<!-- target="_self"지정해서 화면 깨지는 현상 해결 -->
     	<!-- iui.js에서 참조 -->
     	<fieldset>
-	    <form action="/writemobile" method="post" class="panel"  selected="true" target="_self">
+	    <form action="/writemobile"  method="post">
 	    
 	        <div class="row">
 	            <label>bbs</label>
