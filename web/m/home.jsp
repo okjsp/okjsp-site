@@ -94,7 +94,7 @@
 
     body > ul.bookList > li {
     	float: left;
-    	margin-left: -21px; /* 도대체 왜 마진이 마이너스부터 적용되는 겅미? 알수 없습니다 from 안광운 */
+    	margin-left: -15px; /* 도대체 왜 마진이 마이너스부터 적용되는 겅미? 알수 없습니다 from 안광운 */
     }
 
 	body > ul.BBSList > li.recentList {
