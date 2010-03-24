@@ -3,6 +3,7 @@
             kr.pe.okjsp.Article,kr.pe.okjsp.util.DateLabel" %>
 <%@page import="java.util.Arrays"%>
 <% long stime = System.currentTimeMillis(); %>
+<%@ taglib uri="/WEB-INF/tld/taglibs-string.tld" prefix="str" %>
 <jsp:useBean id="list" class="kr.pe.okjsp.MobileListHandler"/>
 <jsp:setProperty name="list" property="*" />
 <%
@@ -18,7 +19,9 @@ while (iter.hasNext()) {
         <li><!-- ############ IUI List ########### -->
         	<!-- 번호 클릭하면 에러나는거 수정:a를 div로 변경 -->
             <div class="digg-count"><%= one.getRef() %></div>
-            <a href="/bbs?seq=<%= one.getSeq() %>&mobileView=Y"><%= one.getSubject() %></a>
+            <!-- 댓글 카운트 추가 및 showHtml 메소드 추가  -->
+            <a href="/bbs?seq=<%= one.getSeq() %>&mobileView=Y"><%= CommonUtil.showHtml(one.getSubject()) %>
+            	&nbsp;<str:replace replace="[0]" with="">[<%= one.getMemo() %>]</str:replace></a>
         </li>
 <%
 } // end ifwhile 
