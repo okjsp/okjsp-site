@@ -74,7 +74,7 @@
 	            <label>Content</label>
 	            <!-- msgbackup:¾ê´Â ¹»±î Èì... -->
 	            <input type="hidden" name="msgbackup" id="msgbackup">
-	            <textarea name="content" id="content" style="font-size:20px;font-family:Arial;width:320px"></textarea>
+	            <textarea name="content" id="content" style="font-size:20px;font-family:Arial;width:290px"></textarea>
 	        </div>
         </fieldset>
         
