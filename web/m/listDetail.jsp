@@ -4,7 +4,7 @@
             kr.pe.okjsp.Article,kr.pe.okjsp.util.DateLabel" %>
 <%@page import="java.util.Arrays"%>
 <% long stime = System.currentTimeMillis(); %>
-<jsp:useBean id="list" class="kr.pe.okjsp.ListHandler"/>
+<jsp:useBean id="list" class="kr.pe.okjsp.MobileListHandler"/>
 <jsp:setProperty name="list" property="*" />
 <%
 	Iterator iter = list.getList().iterator();
