@@ -470,13 +470,13 @@ function encodeForm(form)
 		{
 			if (inputs[i].name)
 			{	
-				//ÇÑ±Û¹®Á¦·Î ÀÎÇØ escape¸¦ Á¦°ÅÇÔ_piki
-				//whiteServlet.java¿¡¼­µµ req.setCharacterEncoding("utf-8"); ³Ö¾úÀ½
-				//20100318_Å¸°Ù ÁöÁ¤À¸·Î ´Ù½Ã escape »ì¸²
-				//³ªÁß¿¡ ´Ù½Ã »ç¿ëÇÏ°Ô µÇ¸é ÇÑ±Û ¹®Á¦ »ý±â´Ï±ñ
-				//¼­ºí¸´¿¡ req.setCharacterEncoding("utf-8"); ÇØÁà¾ßÇÔ
-				args.push(inputs[i].name + "=" + escape(inputs[i].value));
-				//args.push(inputs[i].name + "=" + inputs[i].value);
+				//ï¿½Ñ±Û¹ï¿½fï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ escapeï¿½ï¿½ fï¿½ï¿½ï¿½ï¿½_piki
+				//whiteServlet.javaï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ req.setCharacterEncoding("utf-8"); ï¿½Ö¾ï¿½=
+				//20100318_Å¸ï¿½ï¿½ ï¿½ï¿½d8ï¿½ï¿½ ï¿½Ù½ï¿½ escape ï¿½ì¸²
+				//ï¿½ï¿½ï¿½ß¿ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Ç¸ï¿½ ï¿½Ñ±ï¿½ ï¿½ï¿½f ï¿½ï¿½ï¿½Ï±ï¿½
+				//ï¿½ï¿½ï¿½?ï¿½ï¿½ req.setCharacterEncoding("utf-8"); ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+				//args.push(inputs[i].name + "=" + escape(inputs[i].value));
+				args.push(inputs[i].name + "=" + inputs[i].value);
 			}	
 		}
 	}
