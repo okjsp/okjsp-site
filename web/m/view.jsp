@@ -108,7 +108,7 @@
 		<li class="panel" align="center">
 <% if (member.getSid() != 0) { %>
 			<!-- target="_self" ÁöÁ¤ÇØ¼­ ÇÑ±Û±úÁü ¼öÁ¤_piki -->
-			<form name="f0" method="POST" onSubmit="return chk_memo(this)" action="/jsp/memo" target="_self">
+			<form name="f0" method="POST" onSubmit="return chk_memo(this)" action="/jsp/memo">
 			    <input type="hidden" name="pact" value="MEMO">
 			    <input type="hidden" name="seq" value="<%= one.getSeq() %>">
 			    <input type="hidden" name="pg" value="<%= list.getPg() %>">
