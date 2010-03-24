@@ -36,7 +36,7 @@
 			<%=  one.getContentView()  %>
 		</li>
 		<br/>
-		<!-- ################  뎃글 ##################### -->
+		<!-- ################  댓글 ##################### -->
 		<%
 		  ArrayList<MemoBean> memoList = new MemoHandler().getList(one.getSeq());
 		  Iterator memo = null;
@@ -57,10 +57,28 @@
 		    } // end while
 		  }
 		%>
-		<li class="panel" align="center">
+		<li align="center">
 <% if (member.getSid() != 0) { %>
-			<!-- target="_self" 지정해서 한글깨짐 수정_piki -->
-			<form name="f0" method="POST" onSubmit="return chk_memo(this)" action="/jsp/memo">
+			<!-- css 적용 법을 몰라서, 하드코딩 하였습니다.. Sorry.. by jongkwang -->
+			<form 
+				name="f0" 
+				method="POST" 
+				onSubmit="return chk_memo(this)" 
+				action="/jsp/memo"
+				style=" box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;padding: 10px;background: #c8c8c8 url(/m/iui/pinstripes.png);">
+		        <fieldset style="position: relative;margin: 0 0 20px 0;padding: 0;background: #FFFFFF;-webkit-border-radius: 10px;-moz-border-radius: 10px;border: 1px solid #999999;text-align: right;font-size: 16px;">
+		            <div style="position: relative;min-height: 42px;border-bottom: 1px solid #999999;-webkit-border-radius: 0;text-align: center">
+                		<textarea name="bcomment" id="bcomment" style="border: none;font-size:20px;font-family:Arial;width:95%"></textarea>
+            		</div>
+		            <div style="position: relative;min-height: 42px;border-bottom: 1px solid #999999;-webkit-border-radius: 0;text-align: center;vertical-align: middle;">
+                		<label>ID : </label>
+                		<input type="text" 		class="memoid" name="memoid" value="<%= member.getId() %>" style="width:100px">
+                		<label>PW : </label>
+                		<input type="password" 	class="memopass" name="memopass" maxlength="50" value="" style="width:100px">
+            		</div>
+        		</fieldset>
+		        <a class="whiteButton" type="submit" href="#" target="_self">댓글전송</a><br/>
+		        
 			    <input type="hidden" name="pact" value="MEMO">
 			    <input type="hidden" name="seq" value="<%= one.getSeq() %>">
 			    <input type="hidden" name="pg" value="<%= list.getPg() %>">
@@ -72,11 +90,6 @@
 			    <input type="hidden" name="sid" value="<%= member.getSid() %>">
 			    <input type="hidden" name="okid" value="<%= member.getId() %>">
 			    <input type="hidden" name="writer" value="<%= member.getId() %>">
-		    	<textarea name="bcomment" id="bcomment" style="font-size:20px;font-family:Arial;width:97%"></textarea>
-		    	- ID : <input type="text" 		class="memoid" name="memoid" value="<%= member.getId() %>" style="width:100px">
-		    	&nbsp;&nbsp;
-		    	- PW : <input type="password" 	class="memopass" name="memopass" maxlength="50" value="" style="width:100px">
-		        <a class="whiteButton" type="submit" href="#" target="_self">댓글전송</a><br/>
 		    </form>
 <% } else { %>
 			<font color="blue">※ 댓글을 남기시려면 Login 하세요</font>
