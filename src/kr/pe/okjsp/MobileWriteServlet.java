@@ -26,12 +26,16 @@ public class MobileWriteServlet extends HttpServlet {
 	public void doPost(HttpServletRequest req, HttpServletResponse res)
 		throws IOException, ServletException {
 		String bbs;
+		
+		req.setCharacterEncoding("utf-8");
 		bbs = write(req, res);
 	    
 	    //글 작성 완료뒤 화면을 어디로 이동해야 할지 고민....
 	    //String togo = "/bbs?act=MLIST&bbs="+bbs;
 	    String togo = "/m";
-		res.sendRedirect(togo);
+		//res.sendRedirect(togo);
+	    
+	    res.sendRedirect("/bbs?act=MLIST&bbs="+bbs);
 
 	} // end doPost()
 
