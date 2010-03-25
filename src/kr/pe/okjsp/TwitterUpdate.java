@@ -64,9 +64,14 @@ public class TwitterUpdate {
 			subject = subject.substring(0, 30) + "…";
 		}
 
-		// html tag 삭제
-		content = CommonUtil.removeTag(content, "<");
-
+		/*
+		*	html tag 삭제
+		*	수정 : 윤정부[Coma] 2010.03.25
+		*	CommonUtil.removeTagTest 추가하여 적용함.
+		*/
+//		content = CommonUtil.removeTag(content, "<");
+		
+		content = CommonUtil.removeTagTest(content);
 		
 		if ( content.length() > 80 ) {
 			content = content.substring(0, 80) + "…";			
