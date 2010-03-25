@@ -192,7 +192,8 @@ public class CommonUtil {
     		CommonUtil.nchk(value), "utf-8"));
     	cookie.setMaxAge(60 * iMinute);
     	cookie.setPath("/");
-    	cookie.setDomain("okjsp.pe.kr");
+    	cookie.setDomain("127.0.0.1");
+//    	cookie.setDomain("okjsp.pe.kr");
     	response.addCookie(cookie);
     }
 
@@ -271,7 +272,22 @@ public class CommonUtil {
 		}
 		return str;
 	}
+	
+	/**
+	 * 태그 제거 기능(2010.03.25 윤정부[Coma] 추가);
+	 * @param str
+	 * 출처 : http://ecogeo.tistory.com/tag/html%ED%83%9C%EA%B7%B8%EC%A0%9C%EA%B1%B0
+	 * @return
+	 */
+	public static String removeTagTest(String str){
+		String strNoHTMLString = "<(/)?([a-zA-Z]*)(\\s[a-zA-Z]*=[^>]*)?(\\s)*(/)?>";
+		String strReturn = "";
+		
+		strReturn = str.replaceAll(strNoHTMLString, "");
+		return strReturn;
+	}
 
+	
 	/**
 	 * seq number 불러오기
 	 * @param pathInfo
