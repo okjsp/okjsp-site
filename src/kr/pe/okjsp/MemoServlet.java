@@ -32,8 +32,6 @@ public class MemoServlet extends HttpServlet {
 	public void doPost(HttpServletRequest req, HttpServletResponse res)
                         throws IOException {
 	    
-	    req.setCharacterEncoding("utf-8");
-	    
 	    String writer  = null;
 	    String bcomment= null;
 	    String memopass= null;
