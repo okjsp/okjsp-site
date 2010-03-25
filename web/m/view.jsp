@@ -44,8 +44,11 @@
 		    memo = memoList.iterator();
 		    while (memo.hasNext()) {
 		      MemoBean mb = (MemoBean)memo.next();
-		%><li class="group">
-			<%= mb.getWriter() %> | <%= mb.getWhen("yyyy-MM-dd HH:mm:ss")%>
+		%>
+		<li class="group" style="text-overflow:ellipsis;overflow:hidden;width=250px"><!-- 글자가 길어 2줄로 표시되는 것 방지. 마지막 글자를 '...'처리한다. -->
+			<nobr>
+				<%= mb.getWriter() %> | <%= mb.getWhen("yyyy-MM-dd HH:mm:ss")%>
+			</nobr>
 		</li>
 		<li>
 		<okbbs:link>
