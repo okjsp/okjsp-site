@@ -115,13 +115,13 @@ public class MemoServlet extends HttpServlet {
 			dbCon.close(conn, pstmt);
 		}
 
-	    //String togo = req.getHeader("referer");
-	    //PrintWriter out = res.getWriter();
-	    //res.setContentType("text/html");
-	    //out.write("<META http-equiv=refresh content=\"0;url="+togo+"\">");
-	    //out.close();
+	    String togo = req.getHeader("referer");
+	    PrintWriter out = res.getWriter();
+	    res.setContentType("text/html");
+	    out.write("<META http-equiv=refresh content=\"0;url="+togo+"\">");
+	    out.close();
 	    
-	    res.sendRedirect("/bbs?act=MLIST&bbs="+req.getParameter("bbs"));
+	    //res.sendRedirect("/bbs?act=MLIST&bbs="+req.getParameter("bbs"));
 	} // end doPost()
 
 	private String getDoubleCheck(HttpServletRequest req) {
