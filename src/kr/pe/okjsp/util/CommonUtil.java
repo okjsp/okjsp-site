@@ -192,8 +192,8 @@ public class CommonUtil {
     		CommonUtil.nchk(value), "utf-8"));
     	cookie.setMaxAge(60 * iMinute);
     	cookie.setPath("/");
-    	cookie.setDomain("127.0.0.1");
-//    	cookie.setDomain("okjsp.pe.kr");
+//    	cookie.setDomain("127.0.0.1");
+    	cookie.setDomain("okjsp.pe.kr");
     	response.addCookie(cookie);
     }
 
