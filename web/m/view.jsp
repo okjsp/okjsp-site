@@ -64,7 +64,7 @@
 				name="f0" 
 				method="POST" 
 				onSubmit="return chk_memo(this)" 
-				action="/jsp/memo"
+				action="/memowritemobile"
 				style=" box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;padding: 10px;background: #c8c8c8 url(/m/iui/pinstripes.png);">
 		        <fieldset style="position: relative;margin: 0 0 20px 0;padding: 0;background: #FFFFFF;-webkit-border-radius: 10px;-moz-border-radius: 10px;border: 1px solid #999999;text-align: right;font-size: 16px;">
 		            <div style="position: relative;min-height: 42px;border-bottom: 1px solid #999999;-webkit-border-radius: 0;text-align: center">

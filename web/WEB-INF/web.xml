@@ -93,6 +93,10 @@
 		<servlet-name>okboarddeletemobile</servlet-name>
 		<servlet-class>kr.pe.okjsp.MobileDeleteServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>okboardmemoaddmobile</servlet-name>
+		<servlet-class>kr.pe.okjsp.MobileMemoServlet</servlet-class>
+	</servlet>
 	<!--===========================mobile_END=========================  -->
 	<servlet-mapping>
 		<servlet-name>download</servlet-name>
@@ -154,6 +158,10 @@
 	<servlet-mapping>
 		<servlet-name>okboardaddmobile</servlet-name>
 		<url-pattern>/writemobile</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>okboardmemoaddmobile</servlet-name>
+		<url-pattern>/memowritemobile</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>okboarddeletemobile</servlet-name>
