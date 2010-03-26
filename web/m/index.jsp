@@ -1,8 +1,8 @@
 <%---------------------------------------------------------------------------------------------------------    
   FileName    : index.jsp
-  Author      : BLUEPOET
+  Author      : BLUEPOET, ZKUAHN
   Regdate     : 2010-03-19
-  Lastdate 	  : 
+  Lastdate 	  : 2010-03-26
   Description : OKJSP 모바일 초기접속 페이지  
   ver         : 1.0
 -----------------------------------------------------------------------------------------------------------%>
@@ -62,7 +62,6 @@ public HashMap getRecentList()
 <html>
 <head>
 <META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=ksc5601">
-
 <!-- IUI Header Start -->
 <meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
 <link rel="apple-touch-icon" href="/m/iui/iui-logo-touch-icon.png" />
@@ -70,15 +69,7 @@ public HashMap getRecentList()
 <style type="text/css" media="screen">@import "/m/iui/iui.css";</style>
 <script type="application/x-javascript" src="/m/iui/iui.js"></script>
 <style type="text/css">
-body > ul > li {
-    font-size: 14px;
-}
-body > ul > li > a {
-    padding-left: 54px;
-    padding-right: 40px;
-    min-height: 34px;
-}
-li .digg-count {
+	li .digg-count {
     display: block;
     position: absolute;
     margin: 0;
@@ -95,13 +86,6 @@ li .digg-count {
     padding: 7px 0 0 0;
     background: url(/m/iui/shade-compact.gif) no-repeat;
 }
-h2 {
-    margin: 10px;
-    color: slateblue;
-}
-p {
-    margin: 10px;
-}
 </style>
 <!-- IUI Header End -->
 
@@ -116,7 +100,13 @@ p {
         <a class="button" href="#loginForm">Login</a>
 <% } %>
     </div>
-    <ul id="home" title="OKJSP" selected="true">
+   
+    <ul id="home" title="OKJSP.pe.kr" selected="true">
+    	<li class="group">Book List</li>
+		<li class="bookList" style="text-align: center;">
+			<a href="#book" style="background-image: none;"><img src="/m/images/book/book1.png"/></a>			
+		</li>
+		<li class="group">Recent Posting List</li>
 		<%			
 			HashMap map = (HashMap)application.getAttribute("bbsInfoMap");
 		
@@ -134,24 +124,25 @@ p {
 				{
 				    BbsInfoBean bbsInfo = (BbsInfoBean)map.get(getRecentList().get("bbsid["+i+"]"));			    
 			%>
-	        <li>
-	            <div class="digg-count"><%=(i+1)%></div>
-	            <a href="/bbs?act=MLIST&bbs=<%=bbsInfo.getBbs()%>"><%=bbsInfo.getName()%>[<%=getRecentList().get("cnt["+i+"]")%>]</a>
-	        </li>
+        <li class="recentList">
+            <a href="/bbs?act=MLIST&bbs=<%=bbsInfo.getBbs()%>"><%=bbsInfo.getName()%>[<%=getRecentList().get("cnt["+i+"]")%>]</a>
+        </li>
 			<%
 				}
 			}
 			%>
-		<li>
-			<div class="digg-count">4</div>
+		<li class="recentList">
  			<a href="recentDetail.jsp">최근글 게시판</a>
 		</li>
-		<li>			
-			<div class="digg-count">5</div>
-			<a href="main.jsp">전체게시판 보기</a>
-		</li>		
+		<li class="group">All Board Lists</li>
+		<li>
+ 			<a href="main.jsp" >전체 게시판</a>			
+		</li>
+		<li style="text-align: center;">			
+			<a href="#" style="background-image: none;"><img src="/m/images/banner/acorn.png"/></a>
+		</li>						
     </ul>
-    
+	
     <form id="loginForm" class="dialog" method="POST" target="_self" action="/jsp/member/loginMobile.jsp" >
         <fieldset>
             <h1>Login</h1>
