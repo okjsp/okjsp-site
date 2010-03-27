@@ -37,7 +37,9 @@
 	%>
 	        <li><!-- ############ IUI List ########### -->
 	        	<!-- 번호 클릭하면 에러나는거 수정:a를 div로 변경 -->
+	        	<%--
 	            <div class="digg-count"><%=(i+1)%></div>
+	             --%>
 	            <a href="/bbs?seq=<%= one.getSeq() %>&mobileView=Y"><%= one.getSubject() %></a>
 	        </li>
 	<%
