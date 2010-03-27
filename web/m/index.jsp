@@ -68,25 +68,7 @@ public HashMap getRecentList()
 <meta name="apple-touch-fullscreen" content="YES" />
 <style type="text/css" media="screen">@import "/m/iui/iui.css";</style>
 <script type="application/x-javascript" src="/m/iui/iui.js"></script>
-<style type="text/css">
-	li .digg-count {
-    display: block;
-    position: absolute;
-    margin: 0;
-    left: 6px;
-    top: 7px;
-    text-align: center;
-    font-size: 110%;
-    letter-spacing: -0.07em;
-    color: #93883F;
-    font-weight: bold;
-    text-decoration: none;
-    width: 36px;
-    height: 30px;
-    padding: 7px 0 0 0;
-    background: url(/m/iui/shade-compact.gif) no-repeat;
-}
-</style>
+
 <!-- IUI Header End -->
 
 </head>
@@ -102,11 +84,36 @@ public HashMap getRecentList()
     </div>
    
     <ul id="home" title="OKJSP.pe.kr" selected="true">
-    	<li class="group">Book List</li>
+    	<li class="group">Book</li>
 		<li class="bookList" style="text-align: center;">
-			<a href="#book" style="background-image: none;"><img src="/m/images/book/book1.png"/></a>			
+		<script type="text/javascript">
+			/*
+				이것도 연동이 필요함 매번 여기까지 수정하셔야 함;; From ZKUAHN
+			*/
+			function showKangcomBook(kangcomCode) {
+				// http://image3.kangcom.com/2009/03/l_pic/200903110001.jpg
+				if (kangcomCode != null){
+				var imageUrl = "http://image3.kangcom.com/" + kangcomCode.code.substring(0,4) + "/" + kangcomCode.code.substring(4,6)
+				    + "/l_pic/" + kangcomCode.code + '.' + kangcomCode.ext; 
+			  	document.write('<a href="http://kangcom.com/common/bookinfo/bookinfo.asp?sku='+kangcomCode.code+'"\
+				title="'+kangcomCode.comment+'" style="background-image: none;" target="_blink">\
+				<img src="'+imageUrl+'">\
+				</a>');
+				}
+			}
+			
+			var kangcomList = [
+			 {code:'200908060002',ext:'jpg',comment:'The Last One Book that I recommend.'},
+			];
+		
+			for (var i = 0; i < kangcomList.length && i < 6 ; i++) {
+				showKangcomBook(kangcomList[i]);
+			}
+			
+		</script>		
+			<%-- <a href="#book" style="background-image: none;"><img src="/m/images/book/book1.png"/></a> --%>			
 		</li>
-		<li class="group">Recent Posting List</li>
+		<li class="group">Recent Posting Lists</li>
 		<%			
 			HashMap map = (HashMap)application.getAttribute("bbsInfoMap");
 		
@@ -125,21 +132,34 @@ public HashMap getRecentList()
 				    BbsInfoBean bbsInfo = (BbsInfoBean)map.get(getRecentList().get("bbsid["+i+"]"));			    
 			%>
         <li class="recentList">
-            <a href="/bbs?act=MLIST&bbs=<%=bbsInfo.getBbs()%>"><%=bbsInfo.getName()%>[<%=getRecentList().get("cnt["+i+"]")%>]</a>
+            <img src="/m/iui/icon_new.png" /><a href="/bbs?act=MLIST&bbs=<%=bbsInfo.getBbs()%>"><%=bbsInfo.getName()%>[<%=getRecentList().get("cnt["+i+"]")%>]</a>
         </li>
 			<%
 				}
 			}
 			%>
 		<li class="recentList">
- 			<a href="recentDetail.jsp">최근글 게시판</a>
+ 			<img src="/m/iui/icon_new.png" /><a href="recentDetail.jsp">최근글 게시판</a>
 		</li>
 		<li class="group">All Board Lists</li>
 		<li>
- 			<a href="main.jsp" >전체 게시판</a>			
+ 			<img src="/m/iui/icon_all.png" /><a href="main.jsp" >전체 게시판</a>			
 		</li>
-		<li style="text-align: center;">			
-			<a href="#" style="background-image: none;"><img src="/m/images/banner/acorn.png"/></a>
+		<li style="text-align: center;">
+		<%
+			/*
+				메인페이지와 연동이 필요함....;; From ZKUAHN
+			*/
+			String bannerPath = "/images/banner/maso_seminar.gif";
+			String bannerTitle = "국내 마지막 남은 개발자를 위한 잡지";
+			String bannerLink = "/f.jsp?http://www.imaso.co.kr/";
+		%>
+		<div style="text-align:center">
+		 <a href="<%= bannerLink %>"
+		 title="<%= bannerTitle %>" target="_blank" style="background-image: none;">
+		 <img src="<%= bannerPath %>" border="0" width="320"></a>
+		</div>
+			<%-- <a href="#" style="background-image: none;"><img src="/m/images/banner/acorn.png"/></a> --%>
 		</li>						
     </ul>
 	
@@ -147,7 +167,7 @@ public HashMap getRecentList()
         <fieldset>
             <h1>Login</h1>
             <!-- 버튼에  href="#"를 넣어주지 않으면 동작하지 않는다 -->
-            <a class="button leftButton" type="cancel" href="#">Cancel</a>
+            <a class="button cancelButton" type="cancel" href="#">Cancel</a>
            <% if (member.getSid() != 0) { %>
 				<!-- Do Nothing -->
 			<% } else { %>
