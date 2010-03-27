@@ -157,7 +157,7 @@ public HashMap getRecentList()
 		<div style="text-align:center">
 		 <a href="<%= bannerLink %>"
 		 title="<%= bannerTitle %>" target="_blank" style="background-image: none;">
-		 <img src="<%= bannerPath %>" border="0" width="320"></a>
+		 <img src="<%= bannerPath %>" border="0" width="300"></a>
 		</div>
 			<%-- <a href="#" style="background-image: none;"><img src="/m/images/banner/acorn.png"/></a> --%>
 		</li>						
