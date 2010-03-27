@@ -119,6 +119,44 @@ body[orient="landscape"] > .toolbar > h1 {
     left: 6px;
     right: auto;
 }
+/*
+	okjsp added from ZKUAHN
+*/
+.newButton {
+    position: absolute;
+    overflow: hidden;
+    top: 8px;
+    right: 6px;
+    margin: 0;
+    border-width: 0 5px;
+    padding: 0 3px;
+    width: 34px;
+    height: 29px;
+    line-height: 30px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    white-space: nowrap;
+    background: none;
+    background: url(newButton.png) no-repeat right center;
+}
+
+/* ********************************************
+  OKJSP 용으로 임의 추가  (글쓰기 버튼)
+ ******************************************** */
+a[id="okjspButton1"] {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-size: 18px;
+    color: cornflowerblue;
+    background-color: #FFFFFF;
+    background-image: none;
+}
+/* ********************************************************************************************** */
 
 #backButton {
     display: none;
@@ -210,17 +248,6 @@ a[target="_replace"] {
     background-image: none;
 }
 
-/*********************************************
-  OKJSP 용으로 임의 추가  (글쓰기 버튼)
- *********************************************/
-a[id="okjspButton1"] {
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    font-size: 18px;
-    color: cornflowerblue;
-    background-color: #FFFFFF;
-    background-image: none;
-}
 /************************************************************************************************/
     
 body > .dialog {
