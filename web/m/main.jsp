@@ -75,10 +75,13 @@ public HashMap<Integer,String> getListMap()
 	{
 	    BbsInfoBean bbsInfo = (BbsInfoBean)map.get(getListMap().get(i));			    
 %>
-      <li>
+		<li>
+      	  <%-- 
           <div class="digg-count"><%=(i+1)%></div>
-          <a href="/bbs?act=MLIST&bbs=<%=bbsInfo.getBbs()%>"><%=bbsInfo.getName()%></a>
-      </li>
+          --%>
+			<img src="/m/iui/icon_bbs.png" style="	float: left; height: 35px; width: 46px;	margin: -8px 0 -7px -10px" />          
+          	<a href="/bbs?act=MLIST&bbs=<%=bbsInfo.getBbs()%>"><%=bbsInfo.getName()%></a>
+		</li>
 <%
 	}
 %>			
