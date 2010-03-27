@@ -64,7 +64,7 @@ public HashMap getRecentList()
 <META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=ksc5601">
 <!-- IUI Header Start -->
 <meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
-<link rel="apple-touch-icon" href="/m/iui/iui-logo-touch-icon.png" />
+<link rel="apple-touch-icon" href="/m/images/okJSP.png" />
 <meta name="apple-touch-fullscreen" content="YES" />
 <style type="text/css" media="screen">@import "/m/iui/iui.css";</style>
 <script type="application/x-javascript" src="/m/iui/iui.js"></script>
