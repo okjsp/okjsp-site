@@ -18,8 +18,12 @@ while (iter.hasNext()) {
 %>
         <li><!-- ############ IUI List ########### -->
         	<!-- 번호 클릭하면 에러나는거 수정:a를 div로 변경 -->
+        	<%-- 
             <div class="digg-count"><%= one.getRef() %></div>
+            --%>
             <!-- 댓글 카운트 추가 및 showHtml 메소드 추가  -->
+            <!-- style inline으로 밖에 처리를 못하겠음 From ZKUAHN -->
+            <img src="/m/iui/icon_list.png" style="	float: left; height: 35px; width: 46px;	margin: -8px 0 -7px -10px" />
             <a href="/bbs?seq=<%= one.getSeq() %>&mobileView=Y"><%= CommonUtil.showHtml(one.getSubject()) %>
             	&nbsp;<str:replace replace="[0]" with="">[<%= one.getMemo() %>]</str:replace></a>
         </li>
