@@ -16,13 +16,16 @@
 
 <!-- ############ Header Title ########### -->
 <!-- 화면 겹침 방지 위해 id="stats2" 추가  -->
+
 <ul id="stats2"  title="<c:out value="${bbsInfoMap[list.bbs].name}" escapeXml="false" />">
 	<!-- ############ 글쓰기_로그인 상태일때만 나타남 ########### -->
+	<%--
 	<% if (member.getSid() != 0) { %>
 	<li>
 		<a id="okjspButton1" href="editor_jquery.jsp?bbs=<%= request.getParameter("bbs") %>">글쓰기</a>
 	</li>
 	<% } %>
+	--%>
 	<!-- ############ List & Next Page ########### -->
 	<jsp:include page="listDetail.jsp"></jsp:include>
 </ul>
