@@ -83,7 +83,7 @@ public HashMap getRecentList()
 <% } %>
     </div>
    
-    <ul id="home" title="OKJSP.pe.kr" selected="true">
+    <ul id="home" title="OKJSP" selected="true">
     	<li class="group">Book</li>
 		<li class="bookList" style="text-align: center;">
 		<script type="text/javascript">
