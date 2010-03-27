@@ -78,6 +78,7 @@ public HashMap getRecentList()
         <a id="backButton" class="button" href="#"></a>
 <% if (member.getSid() != 0) { %>
 		<!-- Do Nothing : 로그인 버튼 감춘다. 로그아웃 버튼은 불필요 -->
+		<a class="newButton" href="editor_jquery.jsp?bbs=<%= request.getParameter("bbs") %>"></a>
 <% } else { %>
         <a class="button" href="#loginForm">Login</a>
 <% } %>
