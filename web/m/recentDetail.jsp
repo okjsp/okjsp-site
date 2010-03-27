@@ -40,6 +40,7 @@
 	        	<%--
 	            <div class="digg-count"><%=(i+1)%></div>
 	             --%>
+				<img src="/m/iui/icon_list.png" style="	float: left; height: 35px; width: 46px;	margin: -8px 0 -7px -10px" />	             
 	            <a href="/bbs?seq=<%= one.getSeq() %>&mobileView=Y"><%= one.getSubject() %></a>
 	        </li>
 	<%
