@@ -53,7 +53,7 @@ body > .toolbar {
     border-top: 1px solid #6d84a2;
     padding: 10px;
     height: 45px;
-    background: url(toolbar.png) #6d84a2 repeat-x;
+    background: url(homebar.png) #6d84a2 repeat-x;
 }
 
 .toolbar > h1 {
@@ -101,11 +101,21 @@ body[orient="landscape"] > .toolbar > h1 {
 }
 
 .blueButton {
-    -webkit-border-image: url(blueButton.png) 0 5 0 5;
+	/* 
+		색상을 맞추기 위해 임의로 toolButton.png로 처리 From ZKUAHN
+		-webkit-border-image: url(blueButton.png) 0 5 0 5; 
+	*/
+    -webkit-border-image: url(toolButton.png) 0 5 0 5;
     border-width: 0 5px;
 }
 
 .leftButton {
+    left: 6px;
+    right: auto;
+}
+
+.cancelButton {
+    -webkit-border-image: url(cancelButton.png) 0 5 0 5;	
     left: 6px;
     right: auto;
 }
@@ -156,7 +166,7 @@ body > ul > li {
     margin: 0;
     border-bottom: 1px solid #E0E0E0;
     padding: 8px 0 8px 10px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     list-style: none;
 }
@@ -220,7 +230,7 @@ body > .dialog {
     border: none;
     border-top: 1px solid #6d84a2;
     padding: 10px 6px;
-    background: url(toolbar.png) #7388a5 repeat-x;
+    background: url(homebar.png) #5470c7 repeat-x;
 }
 
 .dialog > fieldset > h1 {
@@ -406,4 +416,12 @@ fieldset > .row:last-child {
     display: none;
     background-image: url(loading.gif), url(selection.png),
         url(blueButton.png), url(listArrowSel.png), url(listGroup.png);
+}
+
+/* OKJSP Added From ZKUAHN */
+body > ul#home > li > img {
+	float: left;
+	height: 35px;
+	width: 46px;
+	margin: -8px 0 -7px -10px
 }
