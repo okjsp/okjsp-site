@@ -100,6 +100,9 @@ body[orient="landscape"] > .toolbar > h1 {
     -webkit-border-image: url(toolButton.png) 0 5 0 5;
 }
 
+/*
+	okjsp added from ZKUAHN
+*/
 .blueButton {
 	/* 
 		색상을 맞추기 위해 임의로 toolButton.png로 처리 From ZKUAHN
@@ -463,3 +466,10 @@ body > ul#home > li > img {
 	width: 46px;
 	margin: -8px 0 -7px -10px
 }
+
+/* OKJSP Added From ZKUAHN */
+span.b {
+	font-size:12px;
+	color:#525252;
+}
+
