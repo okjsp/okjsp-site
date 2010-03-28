@@ -25,7 +25,7 @@ while (iter.hasNext()) {
             <!-- style inline으로 밖에 처리를 못하겠음 From ZKUAHN -->
             <img src="/m/iui/icon_list.png" style="	float: left; height: 35px; width: 46px;	margin: -8px 0 -7px -10px" />
             <a href="/bbs?seq=<%= one.getSeq() %>&mobileView=Y"><%= CommonUtil.showHtml(one.getSubject()) %>
-            	&nbsp;<str:replace replace="[0]" with="">[<%= one.getMemo() %>]</str:replace></a>
+            	&nbsp;<str:replace replace="[0]" with=""><span style="color:#BBB">(<%= one.getMemo() %>)</span></str:replace></a>
         </li>
 <%
 } // end ifwhile 
