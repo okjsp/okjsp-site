@@ -69,11 +69,11 @@
 			            <div style="position: relative;min-height: 42px;border-bottom: 1px solid #999999;-webkit-border-radius: 0;text-align: center">
 	                		<textarea name="bcomment" id="bcomment" style="font-size:16px;width:90%;height:200px;border: none;"></textarea>
 	            		</div>
-			            <div style="position: relative;min-height: 42px;-webkit-border-radius: 0;text-align: center;vertical-align: middle;">
+			            <div style="position: relative;min-height: 42px;-webkit-border-radius: 0;text-align: center;vertical-align: middle;padding:0 5px 0 5px;">
 	                		<label>ID : </label>
-	                		<input type="text" 		class="memoid" name="memoid" value="<%= member.getId() %>" style="width:100px;text-align:left;border:none;">
+	                		<input type="text" 		class="memoid" name="memoid" value="<%= member.getId() %>" style="padding: 0;width:100px;text-align:left;border:none;">
 	                		<label>PW : </label>
-	                		<input type="password" 	class="memopass" name="memopass" maxlength="50" value="" style="width:100px;text-align:left;border:none;">
+	                		<input type="password" 	class="memopass" name="memopass" maxlength="50" value="" style="padding: 0;width:100px;text-align:left;border:none;">
 	            		</div>
 	        		</fieldset>
 			        <a class="whiteButton" type="submit" href="#" target="_self">´ñ±Û Àü¼Û</a><br/>
