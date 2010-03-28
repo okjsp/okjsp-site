@@ -1,11 +1,11 @@
-<%---------------------------------------------------------------------------------------------------------    
+<%-- -------------------------------------------------------------------------------------------------------    
   FileName    : index.jsp
   Author      : BLUEPOET, ZKUAHN
   Regdate     : 2010-03-19
-  Lastdate 	  : 2010-03-26
+  Lastdate 	  : 2010-03-27
   Description : OKJSP 모바일 초기접속 페이지  
   ver         : 1.0
------------------------------------------------------------------------------------------------------------%>
+--------------------------------------------------------------------------------------------------------- --%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ page import="java.util.*, java.sql.*, kr.pe.okjsp.util.*, kr.pe.okjsp.BbsInfoBean " contentType='text/html;charset=euc-kr' %>
 <jsp:useBean id="member" class="kr.pe.okjsp.member.Member" scope="session"/>
@@ -77,7 +77,7 @@ public HashMap getRecentList()
         <h1 id="pageTitle"></h1>
         <a id="backButton" class="button" href="#"></a>
 <% if (member.getSid() != 0) { %>
-		<!-- Do Nothing : 로그인 버튼 감춘다. 로그아웃 버튼은 불필요 -->
+		<!-- 로그인이 되어 있으면 새글 쓰기가 보입니다. From ZKUAHN -->
 		<a class="newButton" href="editor_jquery.jsp?bbs=<%= request.getParameter("bbs") %>"></a>
 <% } else { %>
         <a class="button" href="#loginForm">Login</a>
