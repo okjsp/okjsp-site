@@ -1,4 +1,4 @@
-package kr.pe.okjsp;
+package kr.pe.okjsp.mobile;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -11,6 +11,7 @@ import net.sf.ehcache.Cache;
 import net.sf.ehcache.CacheManager;
 import net.sf.ehcache.Element;
 
+import kr.pe.okjsp.Article;
 import kr.pe.okjsp.util.CommonUtil;
 import kr.pe.okjsp.util.DbCon;
 

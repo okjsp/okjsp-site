@@ -1,4 +1,4 @@
-package kr.pe.okjsp;
+package kr.pe.okjsp.mobile;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import kr.pe.okjsp.MemoDao;
 import kr.pe.okjsp.util.CommonUtil;
 import kr.pe.okjsp.util.DbCon;
 

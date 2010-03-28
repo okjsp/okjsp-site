@@ -87,15 +87,15 @@
 	<!--===========================mobile_START=========================  -->
 	<servlet>
 		<servlet-name>okboardaddmobile</servlet-name>
-		<servlet-class>kr.pe.okjsp.MobileWriteServlet</servlet-class>
+		<servlet-class>kr.pe.okjsp.mobile.MobileWriteServlet</servlet-class>
 	</servlet>
 	<servlet>
 		<servlet-name>okboarddeletemobile</servlet-name>
-		<servlet-class>kr.pe.okjsp.MobileDeleteServlet</servlet-class>
+		<servlet-class>kr.pe.okjsp.mobile.MobileDeleteServlet</servlet-class>
 	</servlet>
 	<servlet>
 		<servlet-name>okboardmemoaddmobile</servlet-name>
-		<servlet-class>kr.pe.okjsp.MobileMemoServlet</servlet-class>
+		<servlet-class>kr.pe.okjsp.mobile.MobileMemoServlet</servlet-class>
 	</servlet>
 	<!--===========================mobile_END=========================  -->
 	<servlet-mapping>

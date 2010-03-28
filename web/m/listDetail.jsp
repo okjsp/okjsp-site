@@ -4,7 +4,7 @@
 <%@page import="java.util.Arrays"%>
 <% long stime = System.currentTimeMillis(); %>
 <%@ taglib uri="/WEB-INF/tld/taglibs-string.tld" prefix="str" %>
-<jsp:useBean id="list" class="kr.pe.okjsp.MobileListHandler"/>
+<jsp:useBean id="list" class="kr.pe.okjsp.mobile.MobileListHandler"/>
 <jsp:setProperty name="list" property="*" />
 <%
 	Iterator iter = list.getList().iterator();
