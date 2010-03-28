@@ -245,14 +245,6 @@ public class CommonUtil {
 	}
 
 	/**
-	 * 태그 제거 기능
-	 * @param str
-	 * @return String
-	 */
-	public static String removeTag(String str){
-		return removeTag(str, "&lt;");
-	}
-	/**
 	 * 태그 제거 기능;
 	 * author: hsboy@aboutjsp.com
 	 * @param str
@@ -279,7 +271,7 @@ public class CommonUtil {
 	 * 출처 : http://ecogeo.tistory.com/tag/html%ED%83%9C%EA%B7%B8%EC%A0%9C%EA%B1%B0
 	 * @return
 	 */
-	public static String removeTagTest(String str){
+	public static String removeTag(String str){
 		String strNoHTMLString = "<(/)?([a-zA-Z]*)(\\s[a-zA-Z]*=[^>]*)?(\\s)*(/)?>";
 		String strReturn = "";
 		
