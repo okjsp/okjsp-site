@@ -70,13 +70,10 @@
 	            <label>Subject</label>
 	            <input type="text" name="subject" id="subject" style="font-size:20px;font-family:Arial"/>
 	        </div>
-	        <div class="row">
-	            <label>Content</label>
+	        <div class="row" style="text-align:center;">
 	            <!-- msgbackup:¾ê´Â ¹»±î Èì... -->
 	            <input type="hidden" name="msgbackup" id="msgbackup">
-	            <p>
 	            <textarea name="content" id="content" style="font-size:20px;font-family:Arial;width:95%;"></textarea>
-	            </p>
 	        </div>
         </fieldset>
         
