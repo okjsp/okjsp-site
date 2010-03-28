@@ -65,15 +65,15 @@
 	        </div>
 	    </fieldset>
         <h2>±Û ¾²±â</h2>
-        <fieldset style="text-align: center;">
+        <fieldset>
 	        <div class="row">
 	            <label>Subject</label>
 	            <input type="text" name="subject" id="subject" style="font-size:20px;font-family:Arial"/>
 	        </div>
-	        <div class="row" >
+	        <div class="row" style="text-align:center;">
 	            <!-- msgbackup:¾ê´Â ¹»±î Èì... -->
 	            <input type="hidden" name="msgbackup" id="msgbackup">
-	            <textarea name="content" id="content" style="font-size:20px;font-family:Arial;width:95%;"></textarea>
+	            <textarea name="content" id="content" style="font-size:20px;font-family:Arial;width:95%;padding:0;"></textarea>
 	        </div>
         </fieldset>
         
