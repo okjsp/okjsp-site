@@ -69,10 +69,6 @@ public class CommonUtilTest extends TestCase {
 	public void testGetCookie() {
 	}
 
-	public void testRemoveTag() {
-		String test = "&lt;html>okjsp&lt;/html>";
-		assertEquals("okjsp", CommonUtil.removeTag(test));
-	}
 	
 	public void testGetNumberedSeq() {
 		assertEquals(1234, getNumberedSeq("/1234"));
