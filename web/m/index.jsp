@@ -133,7 +133,7 @@ public HashMap getRecentList()
 				    BbsInfoBean bbsInfo = (BbsInfoBean)map.get(getRecentList().get("bbsid["+i+"]"));			    
 			%>
         <li class="recentList">
-            <img src="/m/iui/icon_new.png" /><a href="/bbs?act=MLIST&bbs=<%=bbsInfo.getBbs()%>"><%=bbsInfo.getName()%>[<%=getRecentList().get("cnt["+i+"]")%>]</a>
+            <img src="/m/iui/icon_new.png" /><a href="/bbs?act=MLIST&bbs=<%=bbsInfo.getBbs()%>"><%=bbsInfo.getName()%> <span style="color:#BBB">(<%=getRecentList().get("cnt["+i+"]")%>)</span></a>
         </li>
 			<%
 				}
