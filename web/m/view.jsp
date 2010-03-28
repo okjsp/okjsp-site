@@ -71,9 +71,9 @@
 	            		</div>
 			            <div style="position: relative;min-height: 42px;-webkit-border-radius: 0;text-align: center;vertical-align: middle;padding:0 5px 0 5px;">
 	                		<label>ID : </label>
-	                		<input type="text" 		class="memoid" name="memoid" value="<%= member.getId() %>" style="padding: 0;width:100px;text-align:left;border:none;">
+	                		<input type="text" 		class="memoid" name="memoid" value="<%= member.getId() %>" style="padding: 0;width:80px;text-align:left;border:none;">
 	                		<label>PW : </label>
-	                		<input type="password" 	class="memopass" name="memopass" maxlength="50" value="" style="padding: 0;width:100px;text-align:left;border:none;">
+	                		<input type="password" 	class="memopass" name="memopass" maxlength="50" value="" style="padding: 0;width:80px;text-align:left;border:none;">
 	            		</div>
 	        		</fieldset>
 			        <a class="whiteButton" type="submit" href="#" target="_self">´ñ±Û Àü¼Û</a><br/>
