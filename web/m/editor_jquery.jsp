@@ -70,7 +70,7 @@
 	            <label>Subject</label>
 	            <input type="text" name="subject" id="subject" style="font-size:20px;font-family:Arial"/>
 	        </div>
-	        <div class="row" style="text-align:center;">
+	        <div class="row" >
 	            <!-- msgbackup:¾ê´Â ¹»±î Èì... -->
 	            <input type="hidden" name="msgbackup" id="msgbackup">
 	            <textarea name="content" id="content" style="font-size:20px;font-family:Arial;width:95%;"></textarea>
