@@ -33,7 +33,7 @@
         <fieldset style="text-align: center;">
 	        <div class="row">
 	            <label>BBS</label>
-	            <select name="bbs" id="bbs" style="font-size:20px;font-family:Arial;width:200px">
+	            <select name="bbs" id="bbs" style="font-size:20px;font-family:Arial;width:90%">
 					<jsp:include page="/jsp/option.jsp">
 						<jsp:param name="bbs" value="<%= bbs %>"/>
 					</jsp:include>
@@ -53,7 +53,7 @@
 	        </div>
 	        <div class="row">
 	            <label>CCL</label>
-	            <select name="ccl_id" id="ccl_id" style="font-size:20px;font-family:Arial;width:200px">
+	            <select name="ccl_id" id="ccl_id" style="font-size:20px;font-family:Arial;width:90%;">
 					<option value="0">Copyright-저작자에게 저작권</option>
 					<option value="1">CCL-저작자표시</option>
 					<option value="2">CCL-저작자표시-동일조건변경허락</option>
@@ -74,7 +74,7 @@
 	            <label>Content</label>
 	            <!-- msgbackup:얘는 뭘까 흠... -->
 	            <input type="hidden" name="msgbackup" id="msgbackup">
-	            <textarea name="content" id="content" style="font-size:20px;font-family:Arial;width:290px"></textarea>
+	            <textarea name="content" id="content" style="font-size:20px;font-family:Arial;width:90%;"></textarea>
 	        </div>
         </fieldset>
         

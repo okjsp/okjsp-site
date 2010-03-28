@@ -67,7 +67,7 @@
 					style=" box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;padding: 10px;">
 			        <fieldset style="position: relative;margin: 0 0 20px 0;padding: 0;background: #FFFFFF;-webkit-border-radius: 10px;-moz-border-radius: 10px;border: 1px solid #999999;text-align: right;font-size: 16px;">
 			            <div style="position: relative;min-height: 42px;border-bottom: 1px solid #999999;-webkit-border-radius: 0;text-align: center">
-	                		<textarea name="bcomment" id="bcomment" style="font-size:16px;width:280px;height:200px;border: none;"></textarea>
+	                		<textarea name="bcomment" id="bcomment" style="font-size:16px;width:90%;height:200px;border: none;"></textarea>
 	            		</div>
 			            <div style="position: relative;min-height: 42px;-webkit-border-radius: 0;text-align: center;vertical-align: middle;">
 	                		<label>ID : </label>
