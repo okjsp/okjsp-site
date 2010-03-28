@@ -1,6 +1,5 @@
 package kr.pe.okjsp;
 
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
@@ -8,16 +7,14 @@ import java.util.HashMap;
 import javax.servlet.http.HttpServletRequest;
 
 import kr.pe.okjsp.util.CommonUtil;
-
-import com.rosaloves.net.shorturl.bitly.Bitly;
-import com.rosaloves.net.shorturl.bitly.BitlyException;
-import com.rosaloves.net.shorturl.bitly.BitlyFactory;
-import com.rosaloves.net.shorturl.bitly.url.BitlyUrl;
-
 import twitter4j.Status;
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
+
+import com.rosaloves.net.shorturl.bitly.Bitly;
+import com.rosaloves.net.shorturl.bitly.BitlyFactory;
+import com.rosaloves.net.shorturl.bitly.url.BitlyUrl;
 
 public class TwitterUpdate {
 	
@@ -37,11 +34,9 @@ public class TwitterUpdate {
 		String content = article.getContent();
 		int seq = article.getSeq();
 		
-		Twitter twitter = new TwitterFactory().getInstance(twitterId, twitterPwd);
-		Bitly bitly = BitlyFactory.newJmpInstance(bitlyId, bitlyKey);
 		
 		BitlyUrl bUrl = null;
-        String sOrgUrl = "http://okjsp.pe.kr/seq/"+seq;
+        String sOrgUrl = "http://www.okjsp.pe.kr/seq/"+seq;
         URL resultUrl = null;
 		try {
 			resultUrl = new URL(sOrgUrl);	//원본링크
@@ -49,6 +44,7 @@ public class TwitterUpdate {
 		}
 		
         try {
+        	Bitly bitly = BitlyFactory.newJmpInstance(bitlyId, bitlyKey);
 			bUrl = bitly.shorten(sOrgUrl);
 		} catch (Exception e) {
 			bUrl = null;
@@ -69,9 +65,7 @@ public class TwitterUpdate {
 		*	수정 : 윤정부[Coma] 2010.03.25
 		*	CommonUtil.removeTagTest 추가하여 적용함.
 		*/
-//		content = CommonUtil.removeTag(content, "<");
-		
-		content = CommonUtil.removeTagTest(content);
+		content = CommonUtil.removeTag(content);
 		
 		if ( content.length() > 80 ) {
 			content = content.substring(0, 80) + "…";			
@@ -83,6 +77,7 @@ public class TwitterUpdate {
 
 		String result_msg = "";
 		try {
+			Twitter twitter = new TwitterFactory().getInstance(twitterId, twitterPwd);
 	        Status status = twitter.updateStatus(tweetStsText);
 	        result_msg = status.getText();
 		}catch (TwitterException te) {
