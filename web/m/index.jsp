@@ -117,8 +117,8 @@ public HashMap getRecentList()
 		<li class="group">Recent Posting Lists</li>
 		<%			
 			HashMap map = (HashMap)application.getAttribute("bbsInfoMap");
-		
-			if(getRecentList().size() == 0)
+			HashMap newList = getRecentList();
+			if(newList.size() == 0)
 			{									
 				%><li>
 					오늘 올라온 글이 없습니다.
@@ -126,14 +126,15 @@ public HashMap getRecentList()
 			<%}
 			else
 			{
-				int listSize = (Integer)getRecentList().get("nCount");
+				int listSize = (Integer)newList.get("nCount");
 				
 				for(int i=0; i<=listSize; i++)
 				{
-				    BbsInfoBean bbsInfo = (BbsInfoBean)map.get(getRecentList().get("bbsid["+i+"]"));			    
+				    BbsInfoBean bbsInfo = (BbsInfoBean)map.get(newList.get("bbsid["+i+"]"));			    
 			%>
         <li class="recentList">
-            <img src="/m/iui/icon_new.png" /><a href="/bbs?act=MLIST&bbs=<%=bbsInfo.getBbs()%>"><%=bbsInfo.getName()%> <span style="color:#BBB">(<%=getRecentList().get("cnt["+i+"]")%>)</span></a>
+            <img src="/m/iui/icon_new.png" /><a href="/bbs?act=MLIST&bbs=<%=bbsInfo.getBbs()%>"><%=bbsInfo.getName()%> 
+            <span style="color:#BBB">(<%=newList.get("cnt["+i+"]")%>)</span></a>
         </li>
 			<%
 				}
