@@ -9,57 +9,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ page import="java.util.*, java.sql.*, kr.pe.okjsp.util.*, kr.pe.okjsp.BbsInfoBean " contentType='text/html;charset=euc-kr' %>
 <jsp:useBean id="member" class="kr.pe.okjsp.member.Member" scope="session"/>
-<%!
-public HashMap getRecentList()
-{
-    int i =0;
-    HashMap recentList = new HashMap();
-    
-    StringBuffer query = new StringBuffer();
-	Connection conn = null;
-	PreparedStatement pstmt = null;
-	ResultSet rs = null;	
-	DbCon dbCon = new DbCon();
-	
-	try 
-	{
-		conn = dbCon.getConnection();
-		 
-	    query.append(" select bbsid, count(*) as cnt from okboard ");
-	    query.append(" where ");
-	    //query.append(" cast(wtime as date)=cast(systimestamp as date)-1 ");
-	    query.append(" cast(wtime as date)=sysdate ");
-	    //query.append(" bbsid in ('bbs3','bbs4','bbs5') ");
-	    query.append(" group by bbsid ");
-	    query.append(" order by cnt desc ");
-	    query.append(" for ORDERBY_NUM() <= 3 ");
-		pstmt = conn.prepareStatement(query.toString());
-		rs = pstmt.executeQuery();
-	
-		while(rs.next()) 
-		{
-			recentList.put("bbsid["+i+"]",rs.getString("bbsid"));
-			recentList.put("cnt["+i+"]", rs.getInt("cnt"));
-			recentList.put("nCount", i);
-			
-			i++;
-		}
-		
-		rs.close();
-		pstmt.close();
-	} 
-	catch(Exception e) 
-	{
-		e.printStackTrace();
-	} finally 
-	{
-		dbCon.close(conn, pstmt, rs);
-	}
-	
-	return recentList;
-}
-%>
-<html>
+
+<%@page import="kr.pe.okjsp.ListHandler"%><html>
 <head>
 <title>OKJSP</title>
 <META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=ksc5601">
@@ -117,7 +68,7 @@ public HashMap getRecentList()
 		<li class="group">Recent Posting Lists</li>
 		<%			
 			HashMap map = (HashMap)application.getAttribute("bbsInfoMap");
-			HashMap newList = getRecentList();
+			HashMap newList = new ListHandler().getRecentBbsListWithCount(3);
 			if(newList.size() == 0)
 			{									
 				%><li>
