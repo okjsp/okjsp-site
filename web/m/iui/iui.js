@@ -366,7 +366,8 @@ function updatePage(page, fromPage)
 function slidePages(fromPage, toPage, backwards)
 {		 
 	var axis = (backwards ? fromPage : toPage).getAttribute("axis");
-
+	// viewpage top command
+	scrollTo(0,1);
 	clearInterval(checkTimer);
 	
 	if (canDoSlideAnim() && axis != 'y')
@@ -470,12 +471,6 @@ function encodeForm(form)
 		{
 			if (inputs[i].name)
 			{	
-				//�ѱ۹�f�� ���� escape�� f����_piki
-				//whiteServlet.java������ req.setCharacterEncoding("utf-8"); �־�=
-				//20100318_Ÿ�� ��d8�� �ٽ� escape �츲
-				//���߿� �ٽ� ����ϰ� �Ǹ� �ѱ� ��f ���ϱ�
-				//���?�� req.setCharacterEncoding("utf-8"); �������
-				//args.push(inputs[i].name + "=" + escape(inputs[i].value));
 				args.push(inputs[i].name + "=" + inputs[i].value);
 			}	
 		}
