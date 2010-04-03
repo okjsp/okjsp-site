@@ -24,7 +24,12 @@
 			<div class="row" style="text-align:left; padding:0 5px 0 5px;">
 				<p>
 				<%=one.getContentView()%>
-				</p>				
+				</p>
+				<p>
+				<%	if(one.getId().equals(member.getId())) { %>	
+				    <a class="redButton" href="#deleteForm" onclick="document.getElementById('password').focus()">글 삭제</a>			
+				<%	} %>	
+				</p>							
 			</div>
 		</fieldset>
 	<%
@@ -53,9 +58,8 @@
 	<%
 			} // end while
 		}
-	%>							
-
-	<%	if (member.getSid() != 0) { %>
+			
+	if (member.getSid() != 0) { %>
 		<fieldset>
 			<div class="row" style="text-align:left; padding:0 5px 0 5px;">	
 				<!-- css 적용 법을 몰라서, 하드코딩 하였습니다.. Sorry.. by jongkwang -->
