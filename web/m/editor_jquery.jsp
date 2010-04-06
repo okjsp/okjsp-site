@@ -6,8 +6,10 @@
 
 <%
 	String bbs = CommonUtil.nchk(request.getParameter("bbs"), "perf");
+	long sid = CommonUtil.getCookieLong(request, "sid");
+	String id = CommonUtil.getCookie(request, "okid");
 
-	if(member.getSid() == 0) {
+	if(sid == 0) {
 		response.sendRedirect("https://www.okjsp.pe.kr/jsp/member/loginMobile.jsp?returnPath=/m/editor.jsp?bbs=" + bbs);
 		return; 
 	}
@@ -41,7 +43,7 @@
 	        </div>
 	        <div class="row">
 	            <label>Writer</label>
-	            <input type="text" name="writer" id="writer" style="font-size:20px;font-family:Arial"/>
+	            <input type="text" name="writer" id="writer" style="font-size:20px;font-family:Arial" value="<%=id%>" />
 	        </div>
 	        <div class="row">
 	            <label>Homepage</label>
