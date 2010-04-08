@@ -18,16 +18,16 @@
 <head>
 <META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=ksc5601">
 
-<!-- ############ IUI Header Start ########### -->
+<%-- ############ IUI Header Start ########### --%>
 <meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
 <link rel="apple-touch-icon" href="/m/iui/iui-logo-touch-icon.png" />
 <meta name="apple-touch-fullscreen" content="YES" />
 <style type="text/css" media="screen">@import "/m/iui/iui.css";</style>
 <script type="application/x-javascript" src="/m/iui/iui.js"></script>
-<!-- ############ IUI Header End ########### -->
+<%-- ############ IUI Header End ########### --%>
 
 </head>
-<!-- ############ 글쓰기_start ########### -->
+<%-- ############ 글쓰기_start ########### --%>
 <body>
 
     <form id="settings" class="panel" selected="true" action="/writemobile"  method="post">
@@ -73,8 +73,6 @@
 	            <input type="text" name="subject" id="subject" style="font-size:20px;font-family:Arial"/>
 	        </div>
 	        <div class="row" style="text-align:center;">
-	            <!-- msgbackup:얘는 뭘까 흠... -->
-	            <input type="hidden" name="msgbackup" id="msgbackup">
 	            <textarea name="content" id="content" style="font-size:20px;font-family:Arial;width:95%;padding:0;"></textarea>
 	        </div>
         </fieldset>
@@ -84,5 +82,5 @@
 
 
 </body>
-<!-- ############ 글쓰기_end ########### -->
+<%-- ############ 글쓰기_end ###########  --%>
 </html>
