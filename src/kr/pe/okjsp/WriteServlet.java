@@ -54,6 +54,7 @@ public class WriteServlet extends HttpServlet {
 		String password = req.getParameter("password");
 		String html = req.getParameter("html");
 		String ccl_id = req.getParameter("ccl_id");
+		String ip = req.getRemoteAddr();
 
 		article.setWriter(writer);
 		article.setBbs(bbs);
@@ -63,6 +64,7 @@ public class WriteServlet extends HttpServlet {
 		article.setPassword(password);
 		article.setHtml(html);
 		article.setCcl_id(ccl_id);
+		article.setIp(ip);
 		
 		new ArticleDao().write(article);
 		
@@ -109,9 +111,10 @@ public class WriteServlet extends HttpServlet {
 			String password = multi.getParameter("password");
 			String html = multi.getParameter("html");
 			String ccl_id = multi.getParameter("ccl_id");
+			String ip = req.getRemoteAddr();
 			
 			//id 
-		    boolean isLogin = sid > 0;
+		    boolean isLogin = sid > 0 && "".equals(writer);
 		    if (!isLogin) {
 		        res.sendRedirect(Navigation.getPath("LOGFORM"));
 		        return null;
@@ -135,7 +138,7 @@ public class WriteServlet extends HttpServlet {
 					0,
 					null,
 					html,
-					req.getRemoteAddr(), ccl_id);
+					ip, ccl_id);
 
 			int cnt = 0;
 			Enumeration<String> files = multi.getFileNames();
