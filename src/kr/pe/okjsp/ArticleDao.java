@@ -33,7 +33,7 @@ public class ArticleDao {
 		"select max(\"ref\") from okboard_deleted where bbsid = ?";
 	
 	public static final String QUERY_ADD_FILE =
-		"insert into okboard_file (seq, filename, maskname, filesize, download) values (?,?,?,?,0)";
+		"insert into okboard_file (fseq, seq, filename, maskname, filesize, download) values (?,?,?,?,?,0)";
 	
 	public static final String QUERY_DEL_FSEQ_FILE =
 		"update okboard_file set sts=0 where fseq=?";
@@ -354,7 +354,8 @@ public class ArticleDao {
 					fseq++;
 				}
 			}
-
+		} catch (Exception e) {
+			e.printStackTrace();
 		} finally {
 			dbCon.close(null, pstmt);
 		}

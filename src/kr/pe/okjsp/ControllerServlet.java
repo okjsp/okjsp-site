@@ -74,10 +74,12 @@ public class ControllerServlet extends HttpServlet {
 	if ("ADD".equals(act) || "REPLY".equals(act)) {
 		if (member == null || ("").equals(member.getId()) || member.getId() == null) {
 			res.sendRedirect(loginPath);
+			return;
 		}
 		boolean isSpammer = checkSpammer(member.getId());
 		if(isSpammer) {
 			res.sendRedirect(loginPath);
+			return;
 		}
 	}
 

@@ -114,7 +114,7 @@ public class WriteServlet extends HttpServlet {
 			String ip = req.getRemoteAddr();
 			
 			//id 
-		    boolean isLogin = sid > 0 && "".equals(writer);
+		    boolean isLogin = sid > 0 && !"".equals(writer);
 		    if (!isLogin) {
 		        res.sendRedirect(Navigation.getPath("LOGFORM"));
 		        return null;
