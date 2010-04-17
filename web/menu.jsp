@@ -28,16 +28,13 @@
   <A href="/bbs?act=LIST&bbs=notice">공지사항</A>
   <div class="noticemenu">
   <a href="/jsp/member/agreement.jsp" target="privacy"><strong>개인정보취급방침</strong></a>
-  <br />
-  <a style="cursor:pointer" onclick="window.open('http://mail.mobigen.com:10080/m/x/payment.jsp', 'donation', 'width=380, height=280') "
-  ><strong style="color: #22d">OKJSP 기부제도</strong></a>
   </div>
 	<hr>ad:
   <div class="noticemenu">
 	<A href="/f.jsp?http://www.innorix.com/DS/"
    title="대용량 파일/폴더 업로드 컴포넌트" target="innorix">업로드는 InnoDS</A>
-	<br><A href="http://www.imaso.co.kr/"
-   title="프로그래머를 위한 잡지" target="imaso">마소 Magazine</A>
+	<br><A href="/f.jsp?http://www.imaso.co.kr/" title="프로그래머를 위한 잡지" target="imaso">마소 Magazine</A>
+	<br><A href="/f.jsp?http://bit.ly/au0bGN" title="아이폰앱 산수의신" target="godofmath">아이폰앱 산수의신</A>
   </div>
 
 <h2 id="bbslistmenu">BBS LIST</h2>
@@ -51,14 +48,6 @@
 	}
 </script>
   <hr>
-  <A HREF="#" onClick="return toggleMenu('menu1')"><strong>Links</strong>
-  <font style="color:red" class="tiny">▽</font></A>
-  <SPAN ID="menu1" style="display:none; margin-left:10px">
-	<br><a href="/seq/26794">API/Spec</a>
-	<br><a href="/seq/26934">Maillist/FAQ</a>
-	<br><a href="http://www.eclipse.org/downloads/">Eclipse Download</a>
-	<br><a href="/seq/47126">okjsp site소스</a>
-  </SPAN>
    <br><A href="http://cafe.naver.com/appleswing"
    title="애플스윙댄스카페 운동부족개발자에게 적극 추천합니다. ^^; 저는 14기 졸업했습니다." target="swing">애플스윙댄스카페</A>
    <br><A href="http://it.nodong.net/zbxe/?mid=JOBQNA01"
