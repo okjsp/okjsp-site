@@ -17,7 +17,7 @@
 <jsp:include page="/menu.jsp" />
 </div>
 
-<div style="width:644px;float:left;margin-left:8px;">
+<div id="joinform">
 <h1>okjsp.pe.kr 회원가입</h1>
 <form name="f1" method="post" action="register.jsp"
 	class="register" onsubmit="return check_value(this)">
@@ -26,7 +26,7 @@
       <th>Email 
       <span class="required">*</span></th>
       <td>
-        <input type="text" name="email" maxlength="40"
+        <input type="text" id="email" name="email" maxlength="40"
         onChange="return id_from_email()" >
       </td>
     </tr>

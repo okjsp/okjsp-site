@@ -1,15 +1,29 @@
+#joinform {
+	width: 634px;
+	float: left;
+	margin-left: 8px;
+}
+
+#email {
+	color: #0000CC;
+	font-size: x-large;
+	font-weight: normal;
+}
+
 h1 {
-	font-size:x-large;
-	height:1em;
-	margin-top:20px;
-	text-align:center;
-	width:610px;
+	font-size: x-large;
+	height: 1em;
+	margin-top: 20px;
+	text-align: center;
+	width: 610px;
 }
+
 .register {
-	margin:30px auto;
-	padding:8px;
-	width:500px;
+	margin: 30px auto;
+	padding: 8px;
+	width: 500px;
 }
+
 .register table {
 	height: 100px;
 	width: 500px;
@@ -18,12 +32,13 @@ h1 {
 	border-right: 2px solid #88A;
 	border-bottom: 2px solid #88A;
 }
-.register td,
-.register input {
+
+.register td,.register input {
 	font-family: Verdana;
 	font-size: medium;
 	border: 0;
 }
+
 .register input {
 	border-bottom: 1px dotted #00A;
 }
@@ -37,4 +52,3 @@ h1 {
 .required {
 	color: #D00;
 }
-
