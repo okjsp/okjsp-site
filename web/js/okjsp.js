@@ -60,14 +60,14 @@ function toggleMenu(currMenu) {
 */
 function setMenuDefault(currMenu) {
     if (document.all) {
-        thisMenu = eval("document.all." + currMenu + ".style")
+        thisMenu = eval("document.all." + currMenu)
     } else {
-        thisMenu = document.getElementById(currMenu).style
+        thisMenu = document.getElementById(currMenu)
     }
     var state = getCookie(currMenu);
-    if (state != null) {
-        thisMenu.display = state;
-        setCookie(currMenu, thisMenu.display, 30);
+    if (thisMenu && state != null) {
+        thisMenu.style.display = state;
+        setCookie(currMenu, thisMenu.style.display, 30);
     }
     return false
 }
