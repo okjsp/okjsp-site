@@ -3,6 +3,7 @@ package kr.pe.okjsp;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
+import java.util.ResourceBundle;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -18,11 +19,12 @@ import com.rosaloves.net.shorturl.bitly.url.BitlyUrl;
 
 public class TwitterUpdate {
 	
+	ResourceBundle rb = ResourceBundle.getBundle("kr.pe.okjsp.DB");
 	private String tweetStsText = "" ;
-	private String twitterId = "okjsp";
-	private String twitterPwd = "okpass12";
-	private String bitlyId = "okjsp";
-	private String bitlyKey = "R_2338c002b1dfeb9d0b111d1f0bfa8ce0";
+	private String twitterId = rb.getString("TWUSER");
+	private String twitterPwd = rb.getString("TWPASS");
+	private String bitlyId = rb.getString("BITLYID");
+	private String bitlyKey = rb.getString("BITLYKEY");
 	
 
 	public void doUpdate(Article article, HttpServletRequest req) {
