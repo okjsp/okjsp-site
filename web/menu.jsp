@@ -27,7 +27,9 @@
   <hr>
   <A href="/bbs?act=LIST&bbs=notice">공지사항</A>
   <div class="noticemenu">
-  <a href="/jsp/member/agreement.jsp" target="privacy"><strong>개인정보취급방침</strong></a>
+  <a href="/jsp/member/agreement.jsp" target="privacy">개인정보취급방침</a>
+  <br /><a href="/seq/150512" title="SI Project 전문가로 가는 길 개정증보판 출간 기념" 
+  target="_self"><strong>댓글이벤트마지막</strong></a>
   </div>
 	<hr>ad:
   <div class="noticemenu">
@@ -35,6 +37,7 @@
    title="대용량 파일/폴더 업로드 컴포넌트" target="innorix">업로드는 InnoDS</A>
 	<br><A href="/f.jsp?http://www.imaso.co.kr/" title="프로그래머를 위한 잡지" target="imaso">마소 Magazine</A>
 	<br><A href="/f.jsp?http://bit.ly/au0bGN" title="아이폰앱 산수의신" target="godofmath">아이폰앱 산수의신</A>
+	<br><A href="/f.jsp?http://bit.ly/cIQ7fA" title="안드로이드 개발환경 구축" target="android">[유료]안드로이드 개발매뉴얼1</A>
   </div>
 
 <h2 id="bbslistmenu">BBS LIST</h2>
