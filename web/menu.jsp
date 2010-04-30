@@ -28,8 +28,6 @@
   <A href="/bbs?act=LIST&bbs=notice">공지사항</A>
   <div class="noticemenu">
   <a href="/jsp/member/agreement.jsp" target="privacy">개인정보취급방침</a>
-  <br /><a href="/seq/150512" title="SI Project 전문가로 가는 길 개정증보판 출간 기념" 
-  target="_self"><strong>댓글이벤트마지막</strong></a>
   </div>
 	<hr>ad:
   <div class="noticemenu">
