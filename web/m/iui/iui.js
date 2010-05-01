@@ -230,11 +230,18 @@ addEventListener("click", function(event)
 		{
 			location.href = link.href;
 		}
+		else if (link.target == "_iui")
+		{
+			link.setAttribute("selected", "progress");
+			iui.showPageByHref(link.href, null, null, null, unselect);
+		}
+		/*
 		else if (!link.target)
 		{
 			link.setAttribute("selected", "progress");
 			iui.showPageByHref(link.href, null, null, null, unselect);
 		}
+		*/
 		else
 			return;
 		
