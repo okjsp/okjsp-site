@@ -14,7 +14,7 @@ while (iter.hasNext()) {
 %>
         <li>
             <img src="/m/iui/icon_list.png" style="	float: left; height: 35px; width: 46px;	margin: -8px 0 -7px -10px" />
-            <a href="/bbs?seq=<%= one.getSeq() %>&mobileView=Y"><%= CommonUtil.showHtml(one.getSubject()) %>
+            <a href="/bbs?seq=<%= one.getSeq() %>&mobileView=Y" target="_iui"><%= CommonUtil.showHtml(one.getSubject()) %>
             	&nbsp;<str:replace replace="[0]" with=""><span style="color:#BBB">(<%= one.getMemo() %>)</span></str:replace></a>
         </li>
 <%

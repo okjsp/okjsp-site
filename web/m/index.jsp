@@ -84,7 +84,7 @@
 				    BbsInfoBean bbsInfo = (BbsInfoBean)map.get(newList.get("bbsid["+i+"]"));			    
 			%>
         <li class="recentList">
-            <img src="/m/iui/icon_new.png" /><a href="/bbs?act=MLIST&bbs=<%=bbsInfo.getBbs()%>"><%=bbsInfo.getName()%> 
+            <img src="/m/iui/icon_new.png" /><a href="/bbs?act=MLIST&bbs=<%=bbsInfo.getBbs()%>"  target="_iui"><%=bbsInfo.getName()%> 
             <span style="color:#BBB">(<%=newList.get("cnt["+i+"]")%>)</span></a>
         </li>
 			<%
@@ -92,11 +92,11 @@
 			}
 			%>
 		<li class="recentList">
- 			<img src="/m/iui/icon_new.png" /><a href="recentDetail.jsp">최근글 게시판</a>
+ 			<img src="/m/iui/icon_new.png" /><a href="recentDetail.jsp" target="_iui">최근글 게시판</a>
 		</li>
 		<li class="group">All Board Lists</li>
 		<li>
- 			<img src="/m/iui/icon_all.png" /><a href="main.jsp" >전체 게시판</a>			
+ 			<img src="/m/iui/icon_all.png" /><a href="main.jsp" target="_iui">전체 게시판</a>			
 		</li>
 		<li style="text-align: center;">
 		<%
