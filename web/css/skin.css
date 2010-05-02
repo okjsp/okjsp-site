@@ -8,15 +8,22 @@ td.subject div {
 	overflow: hidden;
 	height: 15px;
 	width: 410px;
-	text-align:left;
+	text-align: left;
 }
+
 td.writer div {
 	overflow: hidden;
 	height: 15px;
 	width: 60px;
 }
+
 td.when {
-	width : 90px;
+	width: 90px;
+}
+
+.book {
+	display: inline;
+	width: 140px;
 }
 
 .bookimg {
@@ -24,35 +31,62 @@ td.when {
 	height: 184px;
 }
 
-p           {margin-top:4px;margin-bottom:8px;word-break:break-all}
-.wrap       {word-break:break-all}
+p {
+	margin-top: 4px;
+	margin-bottom: 8px;
+	word-break: break-all
+}
+
+.wrap {
+	word-break: break-all
+}
+
 img {
 	border: 0;
 }
+
 li a:link,a:visited {
 	text-decoration: none;
 }
+
 form {
 	margin: 0;
 }
 
-#taglist .bbs {display:inline; font-weight:bold;margin-right:10px}
+#taglist .bbs {
+	display: inline;
+	font-weight: bold;
+	margin-right: 10px
+}
 
-#m {font-size:9pt;}
-#m li {display:inline;}
-#m li.w {font-weight:bold;}
+#m {
+	font-size: 9pt;
+}
+
+#m li {
+	display: inline;
+}
+
+#m li.w {
+	font-weight: bold;
+}
+
 #m li.c {
-	display:block;
-	margin-right:10px
-	}
+	display: block;
+	margin-right: 10px
+}
+
 input.memoid {
-	}
+	
+}
+
 input.memopw {
 	width: 80px;
-	}
+}
+
 input.memodc {
 	width: 80px;
-	}
+}
 
 li {
 	margin: 2px;
@@ -63,6 +97,7 @@ li {
 	height: 12em;
 	overflow: auto;
 }
+
 #formSection #keyword {
 	width: 140px;
 }
