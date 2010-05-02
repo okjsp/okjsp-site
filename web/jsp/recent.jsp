@@ -31,9 +31,8 @@
     </td>
     <td valign='top'>
 <div id="banner_top" style="margin:4px;text-align:center">
-<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">
-<img src="/images/banner/devlec_473x98.gif" 
-	alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트">
+<a href="http://www.acornpub.co.kr/" target="_blank">
+<img src="/images/banner/acornpub_468x60.gif">
 </a>
 </div>
 
@@ -51,12 +50,14 @@ function showKangcomBook(kangcomCode) {
   document.write('<div class="book">\
 <a href="http://kangcom.com/common/bookinfo/bookinfo.asp?sku='+kangcomCode.code+'"\
 title="'+kangcomCode.comment+'">\
-<img src="'+imageUrl+'">\
+<img src="'+imageUrl+'" class="bookimg">\
 </a></div>');
 	}
 }
 var kangcomList = [
- {code:'200908060002',ext:'jpg',comment:'The Last One Book that I recommend.'},
+ {code:'201004050002',ext:'jpg',comment:'기초부터 2D와 3D 그래픽, 애니메이션, 게임 프로그래밍까지 플래시/플렉스 액션스크립트의 모든 것'},
+ {code:'201004020012',ext:'jpg',comment:'CPU 100%가 좋은 적은 거의 없었습니다. 정말 효과적으로 일을 하기 위한 피플웨어 톰디마르코의 충고'},
+ {code:'200908210008',ext:'jpg',comment:'맥산다고 아이폰 개발할 수 있는 게 아닙니다. 개발언어의 기초 강추입니다.'},
 ];
 
 for (var i = 0; i < kangcomList.length && i < 6 ; i++) {
