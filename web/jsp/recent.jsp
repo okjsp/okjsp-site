@@ -47,7 +47,7 @@ function showKangcomBook(kangcomCode) {
 	// http://image3.kangcom.com/2009/03/l_pic/200903110001.jpg
 	if (kangcomCode != null){
 	var imageUrl = "http://image3.kangcom.com/" + kangcomCode.code.substring(0,4) + "/" + kangcomCode.code.substring(4,6)
-	    + "/l_pic/" + kangcomCode.code + '.' + kangcomCode.ext; 
+	    + "/b_pic/" + kangcomCode.code + '.' + kangcomCode.ext; 
   document.write('<div class="book">\
 <a href="http://kangcom.com/common/bookinfo/bookinfo.asp?sku='+kangcomCode.code+'"\
 title="'+kangcomCode.comment+'">\
