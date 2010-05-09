@@ -290,7 +290,7 @@ public class Article {
 	 * @uml.property  name="html"
 	 */
 	public void setHtml(String html) {
-		this.html = (html!=null)?html.trim():"0";
+		this.html = html;
 	}
 
 	/**
@@ -440,7 +440,8 @@ public class Article {
 	 * @uml.property  name="html"
 	 */
 	public String getHtml() {
-		return this.html;
+		return (this.html == null || "".equals(this.html.trim())) ?
+			"0" : this.html.trim();
 	}
 
 	/**

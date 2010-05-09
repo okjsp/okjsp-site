@@ -43,6 +43,8 @@ public class CommonUtilTest extends TestCase {
 	 * Test for String nchk(String, String)
 	 */
 	public void testNchkStringString() {
+		assertEquals("0", CommonUtil.nchk(null,"0"));
+		assertEquals("", CommonUtil.nchk("","0"));
 	}
 
 	public void testRplc() {

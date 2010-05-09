@@ -106,7 +106,7 @@ if (adBanner != null) {
 <% if (isMSIE) { %>
       <input type="checkbox" name="html" value="2" checked onClick="changeToSource()"> À¥º¸±â
 <% } else { %>
-      <input type="hidden" name="html" value="0">
+      <input type="hidden" name="html" value="<%= article.getHtml() %>">
 <% } %>
     </td>
   </tr>
