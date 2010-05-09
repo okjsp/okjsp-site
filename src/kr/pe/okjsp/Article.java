@@ -290,7 +290,7 @@ public class Article {
 	 * @uml.property  name="html"
 	 */
 	public void setHtml(String html) {
-		this.html = html;
+		this.html = (html!=null)?html.trim():"0";
 	}
 
 	/**
@@ -389,9 +389,8 @@ public class Article {
 	public String getContentView() {
 		if( "1".equals(this.html) ) {
 			return CommonUtil.rplc(this.content, "<", "&lt;");
-		} else if( "0".equals(this.html.trim()) ) {
-			String showHtml = CommonUtil.showHtml(this.content);
-			return showHtml;
+		} else if( "0".equals(this.html) ) {
+			return CommonUtil.showHtml(this.content);
 		}
 		return this.content;
 	}
