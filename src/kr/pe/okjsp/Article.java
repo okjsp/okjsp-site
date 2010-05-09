@@ -389,8 +389,9 @@ public class Article {
 	public String getContentView() {
 		if( "1".equals(this.html) ) {
 			return CommonUtil.rplc(this.content, "<", "&lt;");
-		} else if( "0".equals(this.html) ) {
-			return CommonUtil.showHtml(this.content);
+		} else if( "0".equals(this.html.trim()) ) {
+			String showHtml = CommonUtil.showHtml(this.content);
+			return showHtml;
 		}
 		return this.content;
 	}
