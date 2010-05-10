@@ -199,7 +199,7 @@ for (var i = 0; i < kangcomList.length && i < 6 ; i++) {
 	<div id="ad_banners">
 		<ul>
 		<li>
-		<a href="/f.jsp?http://www.adoberia.co.kr/flash_platform/main.html?src=image&kw=000034" target="_blank"
+		<a href="/f.jsp?http://www.adoberia.co.kr/flash_builder/event.html?src=image&kw=000038" target="_blank"
 		><img src="/images/banner/adobe_ria_134x60.gif"
 			alt="START, Enterprise RIA"
 		></a>
