@@ -1,8 +1,8 @@
 <%@page pageEncoding="MS949" %>
 <%
-	
 	String bbs = request.getParameter("bbs");	// mobile에서는 Script로 Selected 해주기 어렵다. bbs 변수로  Selected 처리한다.
 %>
+<option value="html5"		<%=   "html5".equals(bbs)?"SELECTED":"" %>	>HTML5</option>
 <option value="techtrend"		<%=   "techtrend".equals(bbs)?"SELECTED":"" %>	>TECH TREND</option>
 <option value="lecture"			<%=     "lecture".equals(bbs)?"SELECTED":"" %>	>강좌</option>
 <option value="TOOL"			<%=        "TOOL".equals(bbs)?"SELECTED":"" %>	>개발툴</option>
