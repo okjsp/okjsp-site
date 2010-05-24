@@ -29,7 +29,7 @@
         <a id="backButton" class="button" href="#"></a>
 <% if (member.getSid() != 0) { %>
 		<!-- 로그인이 되어 있으면 새글 쓰기가 보입니다. From ZKUAHN -->
-		<a class="newButton" href="editor_jquery.jsp?bbs=<%= request.getParameter("bbs") %>"></a>
+		<a class="newButton" href="editor_jquery.jsp?bbs=<%= request.getParameter("bbs") %>" target="_iui"></a>
 <% } else { %>
         <a class="button" href="#loginForm" onclick="document.getElementById('artist').focus()">Login</a>
 <% } %>
