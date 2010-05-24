@@ -14,23 +14,7 @@
 		return; 
 	}
 %>
-<html>
-<head>
-<META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=ksc5601">
-
-<%-- ############ IUI Header Start ########### --%>
-<meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
-<link rel="apple-touch-icon" href="/m/iui/iui-logo-touch-icon.png" />
-<meta name="apple-touch-fullscreen" content="YES" />
-<style type="text/css" media="screen">@import "/m/iui/iui.css";</style>
-<script type="application/x-javascript" src="/m/iui/iui.js"></script>
-<%-- ############ IUI Header End ########### --%>
-
-</head>
-<%-- ############ 글쓰기_start ########### --%>
-<body>
-
-    <form id="settings" class="panel" selected="true" action="/writemobile"  method="post">
+	<form id="settings" class="panel" selected="true" action="/writemobile"  method="post">
         <h2>글 정보</h2>
         <fieldset style="text-align: center;">
 	        <div class="row">
@@ -79,8 +63,3 @@
         
         <a class="whiteButton" type="submit" href="#" target="_self">저장</a>
     </form>
-
-
-</body>
-<%-- ############ 글쓰기_end ###########  --%>
-</html>
