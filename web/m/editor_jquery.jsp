@@ -1,9 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-<%@page import="kr.pe.okjsp.util.CommonUtil"%>
+	import="kr.pe.okjsp.util.CommonUtil"
+    pageEncoding="EUC-KR" %>
 <jsp:useBean id="member" class="kr.pe.okjsp.member.Member" scope="session"/>
-
 <%
 	String bbs = CommonUtil.nchk(request.getParameter("bbs"), "perf");
 	long sid = CommonUtil.getCookieLong(request, "sid");
