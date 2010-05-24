@@ -2,11 +2,11 @@
   FileName    : index.jsp
   Author      : BLUEPOET, ZKUAHN
   Regdate     : 2010-03-19
-  Lastdate 	  : 2010-03-27
+  Lastdate 	  : 2010-05-24
   Description : OKJSP 모바일 초기접속 페이지  
   ver         : 1.0
 --------------------------------------------------------------------------------------------------------- --%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.1//EN" "http://www.wapforum.org/DTD/xhtml-mobile11.dtd">
 <%@ page import="java.util.*, java.sql.*, kr.pe.okjsp.util.*, kr.pe.okjsp.BbsInfoBean " contentType='text/html;charset=euc-kr' %>
 <jsp:useBean id="member" class="kr.pe.okjsp.member.Member" scope="session"/>
 
