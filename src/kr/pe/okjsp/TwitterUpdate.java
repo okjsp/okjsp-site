@@ -12,6 +12,7 @@ import twitter4j.Status;
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
+import twitter4j.http.AccessToken;
 
 import com.rosaloves.net.shorturl.bitly.Bitly;
 import com.rosaloves.net.shorturl.bitly.BitlyFactory;
@@ -26,7 +27,13 @@ public class TwitterUpdate {
 	private String bitlyId = rb.getString("BITLYID");
 	private String bitlyKey = rb.getString("BITLYKEY");
 	
-
+	//add oauth variable by topolo 2010.05.27
+	private String consumer_key = rb.getString("CONSUMER_KEY");
+	private String consumer_secret  = rb.getString("CONSUMER_SECRET");
+	
+	private String acessToken  = rb.getString("ACESSTOKEN");
+	private String acessToken_secret   = rb.getString("ACESSTOKEN_SECRET");
+	
 	public void doUpdate(Article article, HttpServletRequest req) {
 		if ( !isTwitterUpdate(article, req) ){
 			return;
@@ -79,7 +86,15 @@ public class TwitterUpdate {
 
 		String result_msg = "";
 		try {
-			Twitter twitter = new TwitterFactory().getInstance(twitterId, twitterPwd);
+			//Twitter twitter = new TwitterFactory().getInstance(twitterId, twitterPwd); //id,pw 방식 제외 topolo 2010.5.27
+			
+			//oauth방식으로 변경 topolo 2010.5.27 
+			Twitter twitter = new TwitterFactory().getInstance(); 
+			twitter.setOAuthConsumer(consumer_key,consumer_secret);
+			AccessToken accessToken = null;
+			accessToken = new AccessToken(acessToken, acessToken_secret); 
+			twitter.setOAuthAccessToken(accessToken);     
+			
 	        Status status = twitter.updateStatus(tweetStsText);
 	        result_msg = status.getText();
 		}catch (TwitterException te) {
