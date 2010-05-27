@@ -32,7 +32,7 @@ public class TwitterUpdate {
 	private String consumer_secret  = rb.getString("CONSUMER_SECRET");
 	
 	private String acessToken  = rb.getString("ACESSTOKEN");
-	private String acessToken_secret   = rb.getString("ACESSTOKEN_SECRET");
+	private String acessToken_secret   = rb.getString("ACESSTOKENSECRET");
 	
 	public void doUpdate(Article article, HttpServletRequest req) {
 		if ( !isTwitterUpdate(article, req) ){
