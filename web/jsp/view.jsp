@@ -61,9 +61,10 @@ http://www.okjsp.pe.kr/seq/<%= one.getSeq() %></a></div>
         <td class="td" class="wrap" height="80" valign="top">
 <%-- 이미지 보이기 --%>
         <div id="centent" class="wrap">
-        <okbbs:mark word='<%=  request.getParameter("keyword")  %>'>
+        
+        <%=  one.getHtml()  %>
         <%=  one.getContentView()  %>
-        </okbbs:mark></div>
+        </div>
 
 <div style="height:30px"></div>
         </td>
@@ -353,16 +354,6 @@ while (iter.hasNext()) {
     <input type="hidden" name="pact" value="">
     <input type="hidden" name="password" value="">
 </form>
-<%-- 올블릿 --%>
-<div id="allblet" class="tablestyle">
-<script type="text/javascript">
-var allbletID='4897';
-var allbletLink='';
-var allbletTags='<%= CommonUtil.rplc(one.getSubject()," ",",") %>';
-</script>
-<script type="text/javascript" src="http://allblet2.allblog.net/allblet2.js"></script>
-</div>
-<%-- 올블릿 끝 --%>
 
 <jsp:include page="/footer.jsp" >
 	<jsp:param name="bbs" value="<%= one.getBbs() %>"/>
