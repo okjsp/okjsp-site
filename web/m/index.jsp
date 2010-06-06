@@ -64,7 +64,7 @@
  			<img src="/m/iui/icon_all.png" /><a href="recentDetail.jsp" target="_iui">최근글 게시판</a>
 		</li>		
 		<li>
- 			<img src="/m/iui/icon_all.png" /><a href="" target="_iui">전체 게시판</a>			
+ 			<img src="/m/iui/icon_all.png" /><a href="main.jsp" target="_iui">전체 게시판</a>			
 		</li>
     	<li class="group">Book</li>
 		<script type="text/javascript">
