@@ -80,7 +80,7 @@
 				if (kangcomCode != null) {
 				var imageUrl = "http://image3.kangcom.com/" + kangcomCode.path + "/b_pic/" + kangcomCode.code + '.' + kangcomCode.ext;
 
-				document.write("<li><a href=\"http://kangcom.com/common/bookinfo/bookinfo.asp?sku="+kangcomCode.code+"\" title=\""+kangcomCode.comment+"\" target=\"_new\" class=\"book\"><img src=\""+imageUrl+"\"/>"+kangcomCode.comment+"</div></a></li>");
+				document.write("<li><a href=\"http://kangcom.com/common/bookinfo/bookinfo.asp?sku="+kangcomCode.code+"\" title=\""+kangcomCode.comment+"\" target=\"_new\" class=\"book\"><img src=\""+imageUrl+"\"/>"+kangcomCode.comment+"</a></li>");
 				
 				// document.write('<div class="row" style="text-align:left; padding:0 10px 0 10px;">\
 				// 	<a href="http://kangcom.com/common/bookinfo/bookinfo.asp?sku='+kangcomCode.code+'"\
