@@ -61,10 +61,9 @@ http://www.okjsp.pe.kr/seq/<%= one.getSeq() %></a></div>
         <td class="td" class="wrap" height="80" valign="top">
 <%-- 이미지 보이기 --%>
         <div id="centent" class="wrap">
-        
-        <%=  one.getHtml()  %>
+        <okbbs:mark word='<%=  request.getParameter("keyword")  %>'>
         <%=  one.getContentView()  %>
-        </div>
+        </okbbs:mark></div>
 
 <div style="height:30px"></div>
         </td>
