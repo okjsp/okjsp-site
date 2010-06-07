@@ -3,7 +3,7 @@
 java/jsp/eclipse
 <a href="/" style="font-size:11px">http://www.okjsp.pe.kr</a>
 <%
-	String bannerPath = "/images/banner/VS10_W1StdTextSP_G_468x60_V.gif";
+	String bannerPath = "/images/banner/VS10_W2StdTextWebDev_G_468x60_V1R1.gif";
 	String bannerTitle = "VSTS2010";
 	String bannerLink = "/f.jsp?http://ad99.feeldmc.com/adv.dmc?m=adver&c=1554&s=3775&a=20131&ac=1";
 %>
