@@ -31,8 +31,8 @@
     </td>
     <td valign='top'>
 <div id="banner_top" style="margin:4px;text-align:center">
-<a href="http://www.acornpub.co.kr/" target="_blank">
-<img src="/images/banner/acornpub_468x60.gif">
+<a href="http://www.hanb.co.kr/events/headfirst" target="_blank">
+<img src="/images/banner/hf_banner_468_okjsp.jpg" alt="headfirst event" />
 </a>
 </div>
 
