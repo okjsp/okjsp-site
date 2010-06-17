@@ -32,7 +32,7 @@
     <td valign='top'>
 <ul id="banner_top">
 <li>
-<a href="http://www.hanb.co.kr/events/headfirst" target="_blank">
+<a href="http://www.hanb.co.kr/events/eventview.html?event_id=7&src=image&kw=00002D" target="_blank">
 <img src="/images/banner/hf_banner_468_okjsp.jpg" alt="headfirst event" />
 </a>
 </li>
