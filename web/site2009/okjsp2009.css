@@ -176,9 +176,9 @@ img {
 }
 
 #adinfo {
-	margin-right: 10px;
+	background: skyBlue;
 	margin-bottom: 4px;
-	text-align: right;
+	text-align: center;
 }
 
 #adinfo a:link,#adinfo a:visited,#adinfo a:hover,#adinfo a:active {
