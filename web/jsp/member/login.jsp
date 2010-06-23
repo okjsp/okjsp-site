@@ -52,7 +52,7 @@
 <table>
 <tbody><tr>
 <td>id</td>
-<td><input type="text" maxlength="12" name="id"/></td>
+<td><input type="text" maxlength="15" name="id"/></td>
 </tr>
 <tr>
 <td>password</td>
