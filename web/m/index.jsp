@@ -106,7 +106,7 @@
 %>
 			<div style="margin:0 0 0 -10px;text-align:center;">
 			 <a href="<%= bannerLink %>" title="<%= bannerTitle %>" target="_new" style="background-image: none;">
-			 	<img src="<%= bannerPath %>" border="0" class="bottomBanner">
+			 	<img src="<%= bannerPath %>" border="0" class="bottomBanner" width="300">
 			 </a>
 			</div>
 		</li>						
