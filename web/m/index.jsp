@@ -66,6 +66,14 @@
 		<li>
  			<img src="/m/iui/icon_all.png" /><a href="main.jsp" target="_iui">전체 게시판</a>			
 		</li>
+    	<li class="group">SW Maestro</li>
+    	<li>
+			<object width="300" height="172">
+			<param name="movie" value="http://www.youtube.com/v/sYZxGPO_dg8?vndapp=youtube_mobile&amp;vndclient=mv-google&amp;vndel=watch">
+			<param name="wmode" value="transparent">
+			<embed src="http://www.youtube.com/v/sYZxGPO_dg8?vndapp=youtube_mobile&amp;vndclient=mv-google&amp;vndel=watch" type="application/x-shockwave-flash" wmode="transparent" width="300" height="172">
+			</object>
+		</li>
     	<li class="group">Book</li>
 		<script type="text/javascript">
 		
@@ -81,12 +89,6 @@
 				var imageUrl = "http://image3.kangcom.com/" + kangcomCode.path + "/b_pic/" + kangcomCode.code + '.' + kangcomCode.ext;
 
 				document.write("<li><a href=\"http://kangcom.com/common/bookinfo/bookinfo.asp?sku="+kangcomCode.code+"\" title=\""+kangcomCode.comment+"\" target=\"_new\" class=\"book\"><img src=\""+imageUrl+"\"/>"+kangcomCode.comment+"</a></li>");
-				
-				// document.write('<div class="row" style="text-align:left; padding:0 10px 0 10px;">\
-				// 	<a href="http://kangcom.com/common/bookinfo/bookinfo.asp?sku='+kangcomCode.code+'"\
-				// 	title="'+kangcomCode.comment+'">\
-				// 	<img src="'+imageUrl+'">\
-				// 	</a></div>');
 		
 				}
 			}
@@ -96,15 +98,15 @@
 			}
 			
 		</script>		
-		<li style="text-align: center;">
+		<li>
 <%
 			String bannerPath = "/images/banner/VS10_W1StdTextSP_G_468x60_V.gif";
 			String bannerTitle = "VSTS2010";
 			String bannerLink = "/f.jsp?http://ad99.feeldmc.com/adv.dmc?m=adver&c=1554&s=3775&a=20131&ac=1";
 %>
 			<div style="margin:0 0 0 -10px;text-align:center;">
-			 <a href="<%= bannerLink %>" title="<%= bannerTitle %>" target="_blank" style="background-image: none;">
-			 	<img src="<%= bannerPath %>" border="0" width="300">
+			 <a href="<%= bannerLink %>" title="<%= bannerTitle %>" target="_new" style="background-image: none;">
+			 	<img src="<%= bannerPath %>" border="0" class="bottomBanner">
 			 </a>
 			</div>
 		</li>						
