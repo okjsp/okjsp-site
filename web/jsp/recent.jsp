@@ -42,14 +42,6 @@
 	alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트">
 </a>
 </li>
-<li><object width="480" height="385">
-	<param name="movie"
-		value="http://www.youtube.com/v/sYZxGPO_dg8&hl=ko_KR&fs=1&"></param>
-	<param name="allowFullScreen" value="true"></param>
-	<param name="allowscriptaccess" value="always"></param>
-	<embed src="http://www.youtube.com/v/sYZxGPO_dg8&hl=ko_KR&fs=1&"
-		type="application/x-shockwave-flash" allowscriptaccess="always"
-		allowfullscreen="true" width="480" height="385"></embed></object></li>
 </ul>
 
 <table width="600" border="0" cellspacing="0">
