@@ -5,6 +5,7 @@
 package kr.pe.okjsp.util;
 
 import junit.framework.TestCase;
+import kr.pe.okjsp.Article;
 import kr.pe.okjsp.util.CommonUtil;
 
 /**
@@ -31,6 +32,21 @@ public class CommonUtilTest extends TestCase {
 	}
 
 	public void testShowHtml() {
+		String str = "hello\r\nhello2";
+		Article article = new Article();
+		article.setContent(str);
+		article.setHtml("0");
+		assertEquals("hello\r<br>hello2", article.getContentView());
+		article.setHtml("1");
+		assertEquals("hello\r\nhello2", article.getContentView());
+		article.setHtml("2");
+		assertEquals(str, article.getContentView());
+		article.setHtml("0   ");
+		assertEquals("hello\r<br>hello2", article.getContentView());
+		article.setHtml("1   ");
+		assertEquals("hello\r\nhello2", article.getContentView());
+		article.setHtml("2   ");
+		assertEquals(str, article.getContentView());
 	}
 
 	/*
