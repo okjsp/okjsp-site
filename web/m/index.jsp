@@ -66,14 +66,6 @@
 		<li>
  			<img src="/m/iui/icon_all.png" /><a href="main.jsp" target="_iui">전체 게시판</a>			
 		</li>
-    	<li class="group">SW Maestro</li>
-    	<li style="text-align:center;margin:0 0 0 -10px;">
-			<object width="300" height="172">
-			<param name="movie" value="http://www.youtube.com/v/sYZxGPO_dg8?vndapp=youtube_mobile&amp;vndclient=mv-google&amp;vndel=watch">
-			<param name="wmode" value="transparent">
-			<embed src="http://www.youtube.com/v/sYZxGPO_dg8?vndapp=youtube_mobile&amp;vndclient=mv-google&amp;vndel=watch" type="application/x-shockwave-flash" wmode="transparent" width="300" height="172">
-			</object>
-		</li>
     	<li class="group">Book</li>
 		<script type="text/javascript">
 		
