@@ -36,6 +36,12 @@
 <img src="/images/banner/hf_banner_468_okjsp.jpg" alt="headfirst event" />
 </a>
 </li>
+<li>
+<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">
+<img src="/images/banner/devlec_473x98.gif" 
+	alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트">
+</a>
+</li>
 </ul>
 
 <table width="600" border="0" cellspacing="0">
