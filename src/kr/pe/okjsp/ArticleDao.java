@@ -180,7 +180,7 @@ public class ArticleDao {
 			pstmt.close();
 
 			query =
-				"insert into okboard (bbsid, seq, \"ref\", step, lev, writer, "
+				"insert into okboard (bbsid, seq, \"ref\", step, lev, id, writer, "
 					+ " subject, content, password, email, homepage, hit, memo, "
 					+ " wtime, ip, html, ccl_id) values (?,?,?,?,?, ?,?,?,old_password(?),?, "
 					+ " ?,0,0,SYSTIMESTAMP,?, ?,?)";
@@ -190,15 +190,16 @@ public class ArticleDao {
 			pstmt.setInt(3, article.getRef());
 			pstmt.setInt(4, article.getStep() + 1);
 			pstmt.setInt(5, article.getLev() + 1);
-			pstmt.setString(6, article.getWriter());
-			pstmt.setString(7, article.getSubject());
-			pstmt.setString(8, article.getContent());
-			pstmt.setString(9, article.getPassword());
-			pstmt.setString(10, article.getEmail());
-			pstmt.setString(11, article.getHomepage());
-			pstmt.setString(12, article.getIp());
-			pstmt.setString(13, article.getHtml());
-			pstmt.setString(14, article.getCcl_id());
+			pstmt.setString(6, article.getId());
+			pstmt.setString(7, article.getWriter());
+			pstmt.setString(8, article.getSubject());
+			pstmt.setString(9, article.getContent());
+			pstmt.setString(10, article.getPassword());
+			pstmt.setString(11, article.getEmail());
+			pstmt.setString(12, article.getHomepage());
+			pstmt.setString(13, article.getIp());
+			pstmt.setString(14, article.getHtml());
+			pstmt.setString(15, article.getCcl_id());
 			result = pstmt.executeUpdate();
 			if (article.getSid() > 0) {
 				new PointDao().log(article.getSid(), 2, 10, String.valueOf(article.getSeq()));
