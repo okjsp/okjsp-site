@@ -33,19 +33,7 @@
       <jsp:include page="/menu.jsp" />
     </td>
     <td valign='top'>
-<%
-String adBanner= (String)request.getAttribute("AdBanner");
-if (adBanner != null) {
-%>
-<table width="650" border="0" cellpadding="3" cellspacing="0">
-    <tr>
-        <td class="td" align="center"><script>bannerShuffle(<%= adBanner %>, 1, 1);</script></td>
-    </tr>
-</table>
-<%
-} // end if (bannerName != null)
-%>
-
+<form name="f1" method="post" ENCTYPE="multipart/form-data" onSubmit="return check()">
 <table border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td colspan="3">
@@ -58,8 +46,6 @@ if (adBanner != null) {
     </td>
   </tr>
 </table>
-<form name="f1" method="post" ENCTYPE="multipart/form-data" onSubmit="return check()">
-<table border="0" cellspacing="0" cellpadding="0">
 <input type="hidden" name="bbs" value="<c:out value="${param.bbs}"/>">
 <input type="hidden" name="pg" value="<c:out value="${param.pg}"/>">
 <input type="hidden" name="act" value="<c:out value="${requestScope.pact}"/>">
@@ -67,6 +53,7 @@ if (adBanner != null) {
 <input type="hidden" name="ref" value="<c:out value="${article.ref}"/>">
 <input type="hidden" name="lev" value="<c:out value="${article.lev}"/>">
 <input type="hidden" name="step" value="<c:out value="${article.step}"/>">
+<table border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td>닉네임</td>
     <td>
@@ -317,8 +304,8 @@ style='border:1 solid; border-color:#D4D4D4; width:480px; height:310px;display: 
     <input type="button" value="취소" onClick="history.back()" style="width:50">
   </td></tr>
 </table>
-
 </form>
+
 <jsp:include page="/footer.jsp" />
 
     </td>
