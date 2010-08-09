@@ -202,6 +202,12 @@ for (var i = 0; i < kangcomList.length && i < 6 ; i++) {
 	<div id="ad_banners">
 		<ul>
 		<li>
+		<a href="/f.jsp?http://open.egovframe.go.kr/seminar/20100723.html" target="_blank"
+		><img src="/images/banner/egovframe.gif"
+			alt="전자정부 표준프레임워크 egovframe"
+		></a>
+		</li>
+		<li>
 		<a href="/f.jsp?http://www.adoberia.co.kr/iwt/blog/blog.php?tn=flex&id=468&src=image&kw=00003B" target="_blank"
 		><img src="/images/banner/welove_134x60.gif"
 			alt="WE Love the Web, Flash, HTML5, Choice"
