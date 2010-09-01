@@ -32,9 +32,8 @@
     <td valign='top'>
 <ul id="banner_top">
 <li>
-<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">
-<img src="http://www.devlec.com/images/devlec_okjsp.gif" 
-	alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트">
+<a href="http://www.acornpub.co.kr/" target="_blank">
+<img src="/images/banner/acornpub_468x60.gif">
 </a>
 </li>
 </ul>
@@ -58,9 +57,9 @@ title="'+kangcomCode.comment+'">\
 	}
 }
 var kangcomList = [
+ {code:'2010F1446912',path:'2010/08',ext:'jpg',comment:'남들 다 안드로이드 갈 때가 기회입니다. 스프링의 진정한 경험담이 담겨있습니다. 강추!!!'},
  {code:'201006080010',path:'2010/06',ext:'jpg',comment:'TDD 적용에 관한 한국적인 이야기들입니다.'},
  {code:'201004050002',path:'2010/04',ext:'jpg',comment:'기초부터 2D와 3D 그래픽, 애니메이션, 게임 프로그래밍까지 플래시/플렉스 액션스크립트의 모든 것'},
- {code:'201004020012',path:'2010/04',ext:'jpg',comment:'CPU 100%가 좋은 적은 거의 없었습니다. 정말 효과적으로 일을 하기 위한 피플웨어 톰디마르코의 충고'},
  {code:'200908210008',path:'2009/09',ext:'jpg',comment:'맥산다고 아이폰 개발할 수 있는 게 아닙니다. 개발언어의 기초 강추입니다.'},
 ];
 
@@ -202,18 +201,6 @@ for (var i = 0; i < kangcomList.length && i < 6 ; i++) {
 <div id="sub_panel">
 	<div id="ad_banners">
 		<ul>
-		<li>
-		<a href="/f.jsp?http://open.egovframe.go.kr/seminar/20100723.html" target="_blank"
-		><img src="/images/banner/egovframe.gif"
-			alt="전자정부 표준프레임워크 egovframe"
-		></a>
-		</li>
-		<li>
-		<a href="/f.jsp?http://www.adoberia.co.kr/iwt/blog/blog.php?tn=flex&id=468&src=image&kw=00003B" target="_blank"
-		><img src="/images/banner/welove_134x60.gif"
-			alt="WE Love the Web, Flash, HTML5, Choice"
-		></a>
-		</li>
 		<li>
 		<a href="/f.jsp?http://www.apptalk.tv" target="_blank"
 		><img src="/images/banner/apptalk_134x60.jpg"
