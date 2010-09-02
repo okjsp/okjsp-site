@@ -82,8 +82,10 @@ img {
 }
 
 .book img {
-	border: 0;
-	cursor: pointer;
+border: 1px solid #AAA;
+border-left-color: #DDD;
+border-top-color: #DDD;
+cursor: pointer;
 }
 
 #banner_top {
