@@ -24,15 +24,16 @@
 <div class="ln"></div>
 
 <script type="text/javascript">
-deleteCookie( 'urlChange' );
-	if(getCookie( 'urlChange' ) == 'true'){
+	//소스 에러로 인해 임시로 만들어놓음...
+	//deleteCookie( 'urlChange' );
+	if(getCookie( 'urlChangeOKSJSP' ) == 'true'){
 		top.location.href = 'http://www.okjsp.pe.kr/html5';
 	}
 	function doChange(){
 		if(document.getElementById('change').checked == true){
 			if(confirm('OKJSP_HTML5 사이트는 http://www.okjsp.pe.kr/html5로도 방문이 가능합니다.\n'+
 					 '앞으로 OKJSP_HTML5  사이트로 보기 원하시면 "확인"을 눌러주세요.') == true){
-				setCookie('urlChange','true',(3600*24*30));
+				setCookie('urlChangeOKSJSP','true',(3600*24*30));
 				//로컬과 서버 설정 주의!!!
 				top.location.href = 'http://www.okjsp.pe.kr/html5';
 			}
