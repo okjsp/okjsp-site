@@ -24,6 +24,7 @@
 <div class="ln"></div>
 
 <script type="text/javascript">
+deleteCookie( 'urlChange' );
 	if(getCookie( 'urlChange' ) == 'true'){
 		top.location.href = 'http://www.okjsp.pe.kr/html5';
 	}
