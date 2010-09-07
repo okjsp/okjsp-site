@@ -25,7 +25,7 @@
 
 <script type="text/javascript">
 	if(getCookie( 'urlChange' ) == 'true'){
-		top.location.href = 'http://localhost:8887/html5/';
+		top.location.href = 'http://www.okjsp.pe.kr/html5';
 	}
 	function doChange(){
 		if(document.getElementById('change').checked == true){
