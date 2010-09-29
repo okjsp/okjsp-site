@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/writemenu"
+        android:title="글쓰기"
+        android:alphabeticShortcut="w"
+        />
+    <item android:id="@+id/loginmenu"
+        android:title="로그인"
+        android:alphabeticShortcut="l"
+        />
+</menu>

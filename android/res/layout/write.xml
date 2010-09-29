@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="#FFFFFF">
+
+	<Spinner
+		android:id="@+id/bbs"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:layout_marginTop="5dp"
+		android:layout_marginBottom="0dp"
+		/>
+		
+	<Spinner
+		android:id="@+id/ccl_id"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:layout_marginTop="0dp"
+		android:layout_marginBottom="5dp"
+		 />
+	
+	<EditText
+		android:id="@+id/writer"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:hint="작성자"
+		android:layout_marginTop="0dp"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:layout_marginBottom="5dp"
+		android:textColor="@drawable/round_box_colors1"
+		android:background="@drawable/bg_round_box1" />
+	
+	<EditText
+		android:id="@+id/homepage"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:hint="홈페이지"
+		android:layout_marginTop="0dp"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:layout_marginBottom="5dp"
+		android:textColor="@drawable/round_box_colors1"
+		android:background="@drawable/bg_round_box1" />
+	
+	<EditText android:id="@+id/password" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:hint="비밀번호"
+		android:layout_marginTop="0dp"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:layout_marginBottom="5dp"
+		android:textColor="@drawable/round_box_colors1"
+		android:background="@drawable/bg_round_box1"
+		android:inputType="textPassword" 		
+		/>
+	
+	<EditText
+		android:id="@+id/subject" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:hint="제목"
+		android:layout_marginTop="0dp"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:layout_marginBottom="5dp"
+		android:textColor="@drawable/round_box_colors1"
+		android:background="@drawable/bg_round_box1" />
+	<EditText
+		android:id="@+id/content"
+		android:layout_width="fill_parent"
+		android:hint="내용"
+		android:layout_height="150px"
+		android:gravity="top"
+		android:layout_marginTop="0dp"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:layout_marginBottom="5dp"
+		android:textColor="@drawable/round_box_colors1"
+		android:background="@drawable/bg_round_box1" />
+
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center|center_vertical"
+		>
+		
+		<Button
+			android:id="@+id/btnSend"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="등록" />
+
+		<Button
+			android:id="@+id/btnCancle"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="취소" />
+
+	</LinearLayout>
+	<TextView 
+		android:id="@+id/alert"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		/>
+		
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal"
+	android:layout_width="fill_parent"
+	android:layout_height="105px"
+	android:layout_margin="0px"
+	android:gravity="bottom"
+	android:layout_gravity="bottom">
+	
+		<ImageView android:id="@+id/home" android:src="@drawable/btn_home" android:layout_width="96px" android:layout_height="110px"/>
+		<ImageView android:id="@+id/boardlist" android:src="@drawable/btn_boardlist" android:layout_width="96px" android:layout_height="110px"/>
+		<ImageView android:id="@+id/mypage" android:src="@drawable/btn_mypage" android:layout_width="96px" android:layout_height="110px"/>
+		<ImageView android:id="@+id/nearby" android:src="@drawable/btn_nearby" android:layout_width="96px" android:layout_height="110px"/>
+		<ImageView android:id="@+id/setting" android:src="@drawable/btn_setting" android:layout_width="96px" android:layout_height="110px"/>
+	
+</LinearLayout>

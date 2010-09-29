@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="header_style">
+		<item name="android:textColor">#FFFFFF</item>
+		<item name="android:textSize">18px</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:shadowColor">#696969</item>
+		<item name="android:shadowRadius">3</item>
+	</style>
+	<style name="header_style_black">
+		<item name="android:textColor">#000000</item>
+		<item name="android:textSize">18px</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	<style name="header_style_bit">
+		<item name="android:textColor">#696969</item>
+		<item name="android:textSize">18px</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	<style name="lb_subheader_title">
+		<item name="android:textColor">#FFFFFF</item>
+		<item name="android:textSize">16px</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	<style name="lb_subheader_title_2">
+		<item name="android:textColor">#FFFFFF</item>
+		<item name="android:textSize">15px</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	<style name="lb_subheader_title_3">
+		<item name="android:textColor">#e6e6e6</item>
+		<item name="android:textSize">15px</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+		
+	<style name="lb_subheader_subtitle">
+		<item name="android:textColor">#b9b9b9</item>
+		<item name="android:textSize">14px</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+
+	<style name="lb_group_administrator_num">
+		<item name="android:textColor">#addc29</item>
+		<item name="android:textSize">18px</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	<style name="lb_group_administrator_list_header">
+		<item name="android:textColor">#FFFFFF</item>
+		<item name="android:textSize">14px</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	<style name="lb_group_administrator_list_header2">
+		<item name="android:textColor">#FFFFFF</item>
+		<item name="android:textSize">13px</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	<style name="lb_group_administrator_list_subheader">
+		<item name="android:textColor">#b9b9b9</item>
+		<item name="android:textSize">13px</item>
+	</style>
+	<style name="lb_group_administrator_list_subheader2">
+		<item name="android:textColor">#FFFFFF</item>
+		<item name="android:textSize">13px</item>
+	</style>
+	<style name="lb_subheader_search_result">
+		<item name="android:textColor">#FFFFFF</item>
+		<item name="android:textSize">12px</item>
+	</style>
+	<style name="lb_group_administrator_list_subheader3">
+		<item name="android:textColor">#b9b9b9</item>
+		<item name="android:textSize">11px</item>
+	</style>
+	<style name="green_big">
+		<item name="android:textColor">#addc29</item>
+		<item name="android:textSize">18px</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	<style name="green_littlebig">
+		<item name="android:textColor">#addc29</item>
+		<item name="android:textSize">15px</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	<style name="green_middle">
+		<item name="android:textColor">#addc29</item>
+		<item name="android:textSize">15px</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	<style name="green_small">
+		<item name="android:textColor">#addc29</item>
+		<item name="android:textSize">13px</item>
+	</style>
+	<style name="grey_middle">
+		<item name="android:textColor">#dedede</item>
+		<item name="android:textSize">15px</item>
+	</style>
+	<style name="grey_small">
+		<item name="android:textColor">#dedede</item>
+		<item name="android:textSize">13px</item>
+	</style>
+	<style name="grey_verysmall">
+		<item name="android:textColor">#dedede</item>
+		<item name="android:textSize">10px</item>
+	</style>
+</resources>

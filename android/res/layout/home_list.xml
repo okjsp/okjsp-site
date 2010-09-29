@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="90px"
+    android:weightSum="20"
+    android:background="#ffffff"
+>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:orientation="vertical"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/customview_home_linear"
+	    android:layout_weight="19"
+	    
+	>
+		<TextView
+		    android:id="@+id/subject"
+		    android:layout_width="fill_parent" 
+		    android:layout_height="35px" 
+		    android:text="제목 (덧글수)"
+		    android:textSize="15dp"
+		    android:textColor="#525252"
+		    android:paddingLeft="5px"
+		    android:paddingRight="5px"
+		    android:paddingTop="2px"
+		    android:paddingBottom="2px"
+		/>
+		
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		    android:orientation="horizontal"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:paddingLeft="5px"
+		    android:paddingRight="5px"
+		>
+		<TextView
+	    	android:id="@+id/writer"
+	    	android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="글쓴이 "
+            android:textSize="12dp"
+            android:textColor="#858585"
+            android:layout_marginRight="2px"
+        />
+        <TextView
+	    	android:id="@+id/date"
+	    	android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="시간"
+            android:textSize="12dp"
+            android:textColor="#858585"
+            android:layout_marginRight="2px"
+        />
+        <TextView
+	    	android:id="@+id/hit"
+	    	android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="조회수"
+            android:textSize="12dp"
+            android:textColor="#858585"
+            android:layout_marginRight="2px"
+        />
+		</LinearLayout>
+	    
+		<TextView  
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" 
+            android:text="카테고리"
+            android:textSize="12dp"
+            android:textColor="#858585"
+            android:paddingLeft="5px"
+		    android:paddingRight="5px"
+        />
+    </LinearLayout>
+    
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_gravity="center|center_vertical"
+        
+    >
+	    <ImageView android:id="@+id/btn_customview_home" 
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content" 
+	           android:src="@drawable/icon_arrow"
+	    />
+	</LinearLayout>
+</LinearLayout>
