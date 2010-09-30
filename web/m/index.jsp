@@ -1,5 +1,7 @@
-<%@ page import="java.util.*, java.sql.*, kr.pe.okjsp.util.*, kr.pe.okjsp.BbsInfoBean, kr.pe.okjsp.ListHandler" contentType='text/html;charset=euc-kr' %>
+<%@ page import="java.util.*, java.sql.*, kr.pe.okjsp.util.*, kr.pe.okjsp.BbsInfoBean, kr.pe.okjsp.Article" contentType='text/html;charset=euc-kr' %>
 <jsp:useBean id="member" class="kr.pe.okjsp.member.Member" scope="session"/>
+<jsp:useBean id="list" class="kr.pe.okjsp.ListHandler"/>
+<jsp:setProperty name="list" property="*" />
 <!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.1//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile11.dtd">
 <html>
 <head>
@@ -34,35 +36,43 @@
 <!-- ---------- #list ---------- -->
     <ul id="home" title="OKJSP" selected="true">
 		<li class="group">Recent Posting Lists</li>
-<%		
-	HashMap map = (HashMap)application.getAttribute("bbsInfoMap");
-	HashMap newList = new ListHandler().getRecentBbsListWithCount(3);
-		
-	if(newList.size() == 0) {									
-%>
-		<li>
-			오늘 올라온 글이 없습니다.
-		</li>
 <%
-	} else {
-			
-		int listSize = (Integer)newList.get("nCount");
-				
-		for(int i=0; i<=listSize; i++) {
-			BbsInfoBean bbsInfo = (BbsInfoBean)map.get(newList.get("bbsid["+i+"]"));			    
-%>
-        <li class="recentList">
-            <img src="/m/iui/icon_new.png" /><a href="/bbs?act=MLIST&bbs=<%=bbsInfo.getBbs()%>"  target="_iui"><%=bbsInfo.getName()%> 
-            <span style="color:#BBB">(<%=newList.get("cnt["+i+"]")%>)</span></a>
-        </li>
-<%
-		}
-	}
-%>
+	Iterator iter = list.getAllRecentList(48).iterator();
+	HashMap bbsInfoMap = (HashMap)application.getAttribute("bbsInfoMap");
+	Article one = null;
+	int i = 0;
+	
+	while (iter.hasNext() && i < 7)
+	{
+	    one = (Article) iter.next();
+	    BbsInfoBean bbsInfo = ((BbsInfoBean)(bbsInfoMap.get(one.getBbs())));
+	    if (bbsInfo == null) {
+	    	bbsInfo = new BbsInfoBean();
+	    }
+	    
+	    if (bbsInfo.getCseq() == null || "".equals(bbsInfo.getCseq()) || "twitter".equals(bbsInfo.getBbs())) {
+    		continue;
+    	}
+    	
+	    if ("2".equals(bbsInfo.getCseq())) {
+	    	continue;
+	    }
+	    
+	%>
+	        <li>
+				<img src="/m/iui/icon_new.png" style="	float: left; height: 35px; width: 46px;	margin: -8px 0 -7px -10px" />	             
+	            <a href="/bbs?seq=<%= one.getSeq() %>&mobileView=Y" target="_iui"><%= one.getSubject() %></a>
+	        </li>
+	<%
+		i++;
+	} // end ifwhile 
+	%>		
 		<li class="group">All Board Lists</li>
+		<!--
 		<li class="recentList">
  			<img src="/m/iui/icon_all.png" /><a href="recentDetail.jsp" target="_iui">최근글 게시판</a>
-		</li>		
+		</li>
+		-->		
 		<li>
  			<img src="/m/iui/icon_all.png" /><a href="main.jsp" target="_iui">전체 게시판</a>			
 		</li>
@@ -70,10 +80,10 @@
 		<script type="text/javascript">
 		
 		var kangcomList = [
-		                   {code:'201006080010',path:'2010/06',ext:'jpg',comment:'TDD 적용에 관한 한국적인 이야기들입니다.'},
-		                   {code:'201004050002',path:'2010/04',ext:'jpg',comment:'기초부터 2D와 3D 그래픽, 애니메이션, 게임 프로그래밍까지 플래시/플렉스 액션스크립트의 모든 것'},
-		                   {code:'201004020012',path:'2010/04',ext:'jpg',comment:'CPU 100%가 좋은 적은 거의 없었습니다. 정말 효과적으로 일을 하기 위한 피플웨어 톰디마르코의 충고'},
-		                   {code:'200908210008',path:'2009/09',ext:'jpg',comment:'맥산다고 아이폰 개발할 수 있는 게 아닙니다. 개발언어의 기초 강추입니다.'},
+							{code:'2010F1446912',path:'2010/08',ext:'jpg',comment:'남들 다 안드로이드 갈 때가 기회입니다. 스프링의 진정한 경험담이 담겨있습니다. 강추!!!'},
+							{code:'201006080010',path:'2010/06',ext:'jpg',comment:'TDD 적용에 관한 한국적인 이야기들입니다.'},
+							{code:'201004050002',path:'2010/04',ext:'jpg',comment:'기초부터 2D와 3D 그래픽, 애니메이션, 게임 프로그래밍까지 플래시/플렉스 액션스크립트의 모든 것'},
+							{code:'200908210008',path:'2009/09',ext:'jpg',comment:'맥산다고 아이폰 개발할 수 있는 게 아닙니다. 개발언어의 기초 강추입니다.'},
 		                  ];
 		
 			function showKangcomBook(kangcomCode) {
@@ -93,13 +103,13 @@
 		</script>		
 		<li>
 <%
-			String bannerPath = "/images/banner/VS10_W1StdTextSP_G_468x60_V.gif";
-			String bannerTitle = "VSTS2010";
-			String bannerLink = "/f.jsp?http://ad99.feeldmc.com/adv.dmc?m=adver&c=1554&s=3775&a=20131&ac=1";
+			String bannerPath = "/images/banner/maso_seminar.gif";
+			String bannerTitle = "국내 마지막 남은 개발자를 위한 잡지";
+			String bannerLink = "/f.jsp?http://www.imaso.co.kr/";
 %>
 			<div style="margin:0 0 0 -10px;text-align:center;">
-			 <a href="<%= bannerLink %>" title="<%= bannerTitle %>" target="_new" style="background-image: none;">
-			 	<img src="<%= bannerPath %>" border="0" class="bottomBanner" width="300">
+			 <a href="<%=bannerLink %>" title="<%= bannerTitle %>" target="_new" style="background-image: none;">
+			 	<img src="<%=bannerPath %>" border="0" class="bottomBanner" width="300">
 			 </a>
 			</div>
 		</li>						
