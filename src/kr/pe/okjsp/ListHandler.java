@@ -109,68 +109,6 @@ public class ListHandler {
 	
 	
 	/**
-	 * 최근 글이 있는 게시판 목록과 최신글수 가져오기
-	 * @param size
-	 * @return
-	 */
-	public HashMap getRecentBbsListWithCount(int size) {
-		if (!manager.cacheExists("hourCache")) {
-			manager.addCache("hourCache");
-		}
-		Cache test = manager.getCache("hourCache");
-		Element element = test.get("getRecentBbsListWithCount");
-
-		HashMap recentList = null;
-		if (element == null) {
-		    StringBuilder query = new StringBuilder();
-			Connection conn = null;
-			PreparedStatement pstmt = null;
-			ResultSet rs = null;	
-			
-			try 
-			{
-				conn = dbCon.getConnection();
-				 
-			    query.append(" select bbsid, count(*) as cnt from okboard ");
-			    query.append(" where ");
-			    query.append(" cast(wtime as date)=sysdate ");
-			    query.append(" group by bbsid ");
-			    query.append(" order by cnt desc ");
-			    query.append(" for ORDERBY_NUM() <= ? ");
-				pstmt = conn.prepareStatement(query.toString());
-				pstmt.setInt(1, size);
-				rs = pstmt.executeQuery();
-			
-				recentList = new HashMap();
-				int i =0;
-				while(rs.next()) {
-					recentList.put("bbsid["+i+"]",rs.getString("bbsid"));
-					recentList.put("cnt["+i+"]", rs.getInt("cnt"));
-					recentList.put("nCount", i);
-					
-					i++;
-				}
-				
-				rs.close();
-				pstmt.close();
-			} 
-			catch(Exception e) 
-			{
-				e.printStackTrace();
-			} finally 
-			{
-				dbCon.close(conn, pstmt, rs);
-			}
-
-			test.put(new Element("getRecentBbsListWithCount", recentList));
-		} else {
-			recentList = (HashMap) element.getObjectValue();
-		}
-
-		return recentList;
-	}
-	
-	/**
 	 * Method getRefList.
 	 * @param bbs
 	 * @param ref
