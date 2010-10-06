@@ -204,7 +204,7 @@ for (var i = 0; i < kangcomList.length && i < 6 ; i++) {
 		<ul>
 		<li>
 		<a href="/f.jsp?http://olccenter.or.kr/" target="_blank"
-		><img src="/images/banner/olc_134x60.jpg"
+		><img src="/images/banner/olc_134x60.gif"
 			alt="개방형 소프트웨어 교육센터, 동영상 교육"
 		></a>
 		</li>
