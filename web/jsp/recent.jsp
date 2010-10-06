@@ -203,6 +203,12 @@ for (var i = 0; i < kangcomList.length && i < 6 ; i++) {
 	<div id="ad_banners">
 		<ul>
 		<li>
+		<a href="/f.jsp?http://olccenter.or.kr/" target="_blank"
+		><img src="/images/banner/olc_134x60.jpg"
+			alt="개방형 소프트웨어 교육센터, 동영상 교육"
+		></a>
+		</li>
+		<li>
 		<a href="/f.jsp?http://www.apptalk.tv" target="_blank"
 		><img src="/images/banner/apptalk_134x60.jpg"
 			alt="세상의 모든 앱을 영상으로. 앱의 모든 것, 앱톡"
