@@ -202,6 +202,12 @@ for (var i = 0; i < kangcomList.length && i < 6 ; i++) {
 	<div id="ad_banners">
 		<ul>
 		<li>
+		<a href="/f.jsp?http://www.adoberia.co.kr/?src=image&kw=000044 " target="_blank"
+		><img src="/images/banner/JAVACOMM_134x60_02.gif"
+			alt="Adobe CS5 학생용 교사용 출시"
+		></a>
+		</li>
+		<li>
 		<a href="/f.jsp?http://olccenter.or.kr/" target="_blank"
 		><img src="/images/banner/olc_134x60.gif"
 			alt="개방형 소프트웨어 교육센터, 동영상 교육"
