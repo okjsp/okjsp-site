@@ -129,6 +129,11 @@
         </fieldset>
     </form>
 <!-- ----------/#loginForm ---------- -->
-    
+<script type="text/javascript" src="http://log.inside.daum.net/dwi_log/js/dwi.js"></script>
+<script type="text/javascript" >
+	_dwiPID="d-9jj-269";
+	if(typeof(_dwiCatch) == "function") { _dwiCatch();}
+</script>
+<jsp:include page="/googleAnalytics.jsp" />
 </body>
 </html>
