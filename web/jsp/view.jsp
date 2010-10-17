@@ -1,4 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@page import="kr.pe.okjsp.util.HttpLinker"%>
 <%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %>
 <%@ page import="java.util.*,kr.pe.okjsp.util.CommonUtil,kr.pe.okjsp.*"
 	pageEncoding="euc-kr" %>
@@ -211,14 +212,13 @@ tag´Â <a href="<%= Navigation.getPath("SECURE_DOMAIN") %>/jsp/member/login.jsp">
 <%
   ArrayList<MemoBean> memoList = new MemoHandler().getList(one.getSeq());
   Iterator memo = null;
+  HttpLinker linker = new HttpLinker();
   if (memoList != null) {
     memo = memoList.iterator();
     while (memo.hasNext()) {
       MemoBean mb = (MemoBean)memo.next();
 %><ul><li class="c">
-<okbbs:link>
-<okbbs:html br="true"><%= mb.getBcomment() %></okbbs:html>
-</okbbs:link>
+<%= linker.getLinkedSource( CommonUtil.showHtml( mb.getBcomment() ) ) %>
 </li>
 <li class="w"><%
     if (mb.getId() != null) {
@@ -296,9 +296,7 @@ while (iter.hasNext()) {
         </td>
         <td align="left">
             <a href="/seq/<%= one.getSeq() %>">
-            <okbbs:mark word='<%=  request.getParameter("keyword")  %>'>
             <%= CommonUtil.showHtml(one.getSubject()) %>&nbsp;
-            </okbbs:mark>
             </a>
         <span class="tiny">[<%= one.getMemo() %>]</span>
         </td>
