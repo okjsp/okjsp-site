@@ -1,6 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %>
-<%@ taglib uri="/WEB-INF/tld/ok-taglib.tld" prefix="okbbs" %>
 <%@ page import="java.util.*,kr.pe.okjsp.util.CommonUtil,kr.pe.okjsp.*"
 	pageEncoding="euc-kr" %>
 <%@page import="kr.pe.okjsp.member.Member"%>
@@ -55,15 +54,19 @@ http://www.okjsp.pe.kr/seq/<%= one.getSeq() %></a></div>
     <tr>
         <td class="td" class="wrap">
         <b><%= CommonUtil.showHtml(one.getSubject()) %></b>
+<%-- Twitter 공식 트윗 버튼 --%>
+<a href="//twitter.com/share" class="twitter-share-button"
+	data-count="horizontal" data-via="okjsp"
+	data-text="<%=CommonUtil.showHtml(one.getSubject())%>"> [Tweet]</a><script
+	type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
         </td>
     </tr>
     <tr>
         <td class="td" class="wrap" height="80" valign="top">
 <%-- 이미지 보이기 --%>
         <div id="centent" class="wrap">
-        <okbbs:mark word='<%=  request.getParameter("keyword")  %>'>
         <%=  one.getContentView()  %>
-        </okbbs:mark></div>
+        </div>
 
 <div style="height:30px"></div>
         </td>
