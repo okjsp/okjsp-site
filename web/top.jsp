@@ -27,7 +27,9 @@
 	//소스 에러로 인해 임시로 만들어놓음...
 	//deleteCookie( 'urlChange' );
 	if(getCookie( 'urlChangeOKSJSP' ) == 'true'){
-		top.location.href = 'http://www.okjsp.pe.kr/html5';
+		var current = document.location.href;
+		current = current.replace(/pe\.kr/i,"pe.kr/html5");
+		top.location.href = current;
 	}
 	function doChange(){
 		if(document.getElementById('change').checked == true){
