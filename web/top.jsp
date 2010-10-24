@@ -5,7 +5,7 @@
 <script type="text/javascript" src="/js/cookie.js"></script>
 <div class="ln"></div>
 <ul id="top">
-	<li id="logo"><a href="/bbs?act=RECENT"><img src="/images/okjsp.gif" onfocus="this.blur()"/></a></li>
+	<li id="logo"><a href="/bbs?act=RECENT"><img src="/images/okjsp_top.png" /></a></li>
 	<li id="find">
 	<form name="searchf1" method="get" target="okjspsearch"
 		action="http://www.google.com/search"
