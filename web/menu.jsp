@@ -49,8 +49,8 @@
 	}
 </script>
   <hr>
-   <br><A href="http://cafe.naver.com/appleswing"
-   title="애플스윙댄스카페 운동부족개발자에게 적극 추천합니다. ^^; 저는 14기 졸업했습니다." target="swing">애플스윙댄스카페</A>
+   <br><A href="http://webdevmobile.com/"
+   title="html5, 웹트렌드, 웹디자인, 모바일" target="_blank">WebDevMobile</A>
    <br><A href="http://it.nodong.net/zbxe/?mid=JOBQNA01"
    title="회사,일터,경력 관련 이야기 it.nodong.net" target="jobqna">일터Q&amp;A</A>
 	<hr>
