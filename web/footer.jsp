@@ -12,16 +12,6 @@ java/jsp/eclipse
  title="<%= bannerTitle %>" target="_blank">
  <img src="<%= bannerPath %>" border="0"></a>
 </div>
-<%
-	String bannerPath2 = "/images/banner/imaso_all_3_473x93.gif";
-	String bannerTitle2 = "산요 작티, 새로텍 외장하드";
-	String bannerLink2 = "/f.jsp?http://www.imaso.co.kr/event/event_okjsp.htm";
-%>
-<div style="text-align:center">
- <a href="<%= bannerLink2 %>"
- title="<%= bannerTitle2 %>" target="_blank">
- <img src="<%= bannerPath2 %>" border="0"></a>
-</div>
 <div>
 <ul>
 <li><a href="/jsp/member/agreement.jsp" target="privacy">개인정보취급방침</a>
