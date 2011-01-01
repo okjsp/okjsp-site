@@ -197,12 +197,6 @@ for (var i = 0; i < kangcomList.length && i < 6 ; i++) {
 	<div id="ad_banners">
 		<ul>
 		<li>
-		<a href="/f.jsp?http://www.itwillsc.co.kr/02curriculum/08java_spring01.php?http_dc" target="_blank"
-		><img src="http://www.okjsp.pe.kr/images/banner/itwill_134x60.gif"
-			alt="박성백 강사의 Spring 프레임워크 & iBATIS 실무 완전정복"
-		></a>
-		</li>
-		<li>
 		<a href="/f.jsp?http://www.adoberia.co.kr/?src=image&kw=000044 " target="_blank"
 		><img src="/images/banner/JAVACOMM_134x60_02.gif"
 			alt="Adobe CS5 학생용 교사용 출시"
