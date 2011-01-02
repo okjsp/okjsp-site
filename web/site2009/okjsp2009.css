@@ -2,7 +2,6 @@
 
 body {
 	margin: 0;
-	font-size: small;
 	background: url(/images/okjspbg.gif);
 }
 
@@ -26,17 +25,6 @@ img {
 	height: 50px;
 }
 
-#logo a:link,#logo a:visited,#logo a:hover,#logo a:active {
-	background-color: transparent;
-	background-image: url(/images/okjsp_160x50.png);
-	background-position: -12px 0;
-	background-repeat: no-repeat;
-	display: block;
-	height: 50px;
-	width: 135px;
-	text-indent: -200px;
-	border: 0;
-}
 
 #find {
 	float: right;
@@ -65,7 +53,6 @@ img {
 
 /* bbs */
 .tablestyle {
-	font: 9pt "gulimche";
 	margin-left: 2px;
 	width: 642px;
 }
@@ -103,13 +90,11 @@ cursor: pointer;
 }
 
 #bbslist {
-	font-size: small;
 	font-weight: normal;
 	width: 120px;
 }
 
 #bbslistmenu {
-	font-size: small;
 	font-style: italic;
 	margin-bottom: 0;
 	padding-left: 4px;
@@ -136,6 +121,7 @@ cursor: pointer;
 
 #centent {
 	padding: 8px;
+	-webkit-text-size-adjust: 160%;
 }
 
 #centent a:link,#centent a:visited {
@@ -184,7 +170,6 @@ cursor: pointer;
 }
 
 #adinfo a:link,#adinfo a:visited,#adinfo a:hover,#adinfo a:active {
-	font-size: 10px;
 	color: #888;
 }
 
@@ -192,7 +177,6 @@ cursor: pointer;
 	display: block;
 	margin: 17px 0 0;
 	padding: 0;
-	font-size: large;
 }
 
 #imaso_div {

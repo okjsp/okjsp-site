@@ -1,14 +1,15 @@
 @import "skin.css";
 .body	{
 	background-color:#FFFFFF;
+	font-size: 9pt;
 	color:#000033;
 	}
 .tablestyle {
 	background-color:#F0F0FF
 }
-A:link      {font : 9pt "gulimche" ; color: #000000; text-decoration: none}
-A:visited   {font : 9pt "gulimche" ; color: #333333; text-decoration: none}
-A:active    {font : 9pt "gulimche" ; text-decoration: underline}
+A:link      {color: #000000; text-decoration: none}
+A:visited   {color: #333333; text-decoration: none}
+A:active    {coration: underline}
 A:hover     {border: 0; text-decoration: underline}
 li a:hover,a:active {
 	border-bottom: 1px dashed #F08080;

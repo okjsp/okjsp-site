@@ -2,13 +2,14 @@
 .body	{
 	background-color:#000000;
 	color:#00CC00;
+	font-size: 9pt;
 	}
 .tablestyle {
 	background-color:#101010
 }
-A:link      {font : 9pt "gulimche" ; color: #00CC33; text-decoration: none}
-A:visited   {font : 9pt "gulimche" ; color: #22CC22; text-decoration: none}
-A:active    {font : 9pt "gulimche" ; color: #00EE00; text-decoration: underline}
+A:link      {color: #00CC33; text-decoration: none}
+A:visited   {color: #22CC22; text-decoration: none}
+A:active    {color: #00EE00; text-decoration: underline}
 A:hover     {border: 0; text-decoration: underline}
 li a:hover,a:active {
 	border-bottom: 1px dashed #F08080;
