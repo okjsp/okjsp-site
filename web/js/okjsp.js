@@ -234,3 +234,40 @@ function setSkin(skinType) {
 	setCookie('skin', skinType, 100);
 	document.location.reload();
 }
+
+
+//action event
+function check(){
+    if(document.f1.html.checked) {
+	    document.f1.content.value = TextEditor.document.body.innerHTML;
+    } else if(document.getElementById("TextView")){
+        document.f1.content.value = f1.TextView.value;
+	}
+	if (document.f1.content.value.length==0 || document.f1.content.value=="<P>&nbsp;</P>") {
+	    alert("no content");
+	    return false;
+	}
+	// filtering
+	banWord = filterWord(document.f1.content.value);
+	if (banWord.length > 0) {
+	    alert(banWord +' word can\'t be used.');
+	    return false;
+	}
+	if (document.f1.subject.value=="" ) {
+	    alert("no subject");
+	    document.f1.subject.focus();
+	    return false;
+    }
+	if (document.f1.writer.value=="" ) {
+	    alert("no writer");
+	    document.f1.writer.focus();
+	    return false;
+    }
+	if (document.f1.password.value=="" ) {
+	    alert("no password");
+	    document.f1.password.focus();
+	    return false;
+    }
+    document.f1.send.disabled=true;
+	return true;
+}
