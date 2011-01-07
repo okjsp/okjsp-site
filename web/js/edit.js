@@ -2,9 +2,9 @@
 
 //√ ±‚»≠
 function init() {
-	if (TextEditor) {
-		TextEditor.document.onmousedown = new Function("TextEditorEvent()");
-		iText = TextEditor;
+	if (document.getElementById("TextEditor")) {
+		document.getElementById("TextEditor").document.onmousedown = new Function("TextEditorEvent()");
+		iText = document.getElementById("TextEditor");
 		iText.document.designMode = "On";
 		TextEditView.style.display="inline";
 		bLoad = true;
@@ -13,8 +13,8 @@ function init() {
 }
 
 function changeToSource(){
-    if(f1.html.checked) {
-        f1.TextView.style.display = 'none';
+    if(document.f1.html.checked) {
+        document.f1.TextView.style.display = 'none';
         TextMode.style.display = 'inline';
         TextMenuView.style.display = 'inline';
     	TextEditView.style.display = 'inline';
@@ -23,8 +23,8 @@ function changeToSource(){
     	TextEditView.style.display = 'none';
         TextMode.style.display = 'none';
         TextMenuView.style.display = 'none';
-        f1.TextView.style.display = 'inline';
-        f1.TextView.value = TextEditor.document.body.innerHTML;
+        document.f1.TextView.style.display = 'inline';
+        document.f1.TextView.value = TextEditor.document.body.innerHTML;
     }
 }
 
@@ -117,9 +117,9 @@ function BgColor(cmd){
 
 //action event
 function check(){
-    if(f1.html.checked) {
+    if(document.f1.html.checked) {
 	    document.f1.content.value = TextEditor.document.body.innerHTML;
-    } else {
+    } else if(document.getElementById("TextView")){
         document.f1.content.value = f1.TextView.value;
 	}
 	if (document.f1.content.value.length==0 || document.f1.content.value=="<P>&nbsp;</P>") {
