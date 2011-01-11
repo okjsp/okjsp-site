@@ -16,7 +16,7 @@
 	String ccl_id = request.getParameter("ccl_id");
 	
 	if(sid == 0) {
-		response.sendRedirect(Navigation.getPath("LOGFORM")+"?returnPath=/site2009/editor.jsp?bbs="+bbs);
+		response.sendRedirect(Navigation.getPath("LOGFORM")+"?returnPath=/site2009/editorProcess.jsp?bbs="+bbs);
 		return; 
 	}
 

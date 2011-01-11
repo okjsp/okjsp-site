@@ -46,7 +46,7 @@ var sync = function() {
 </div>
 
 <div id="form_div">
-<form action="/write" method="post" class="form_write">
+<form name="f1" id="f1" action="/write" method="post" class="form_write">
 <input name="html" id="html" value="2" type="hidden" readonly="readonly" class="write">
 
 
