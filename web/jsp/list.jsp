@@ -68,7 +68,7 @@
 <%
 	boolean isAdBBS = "recruit".equals(list.getBbs()) && list.getPg() < 1;
 	if (isAdBBS) {
-		int [] seqs = {160295, 148318};
+		int [] seqs = {162811, 148318};
 		ArticleDao articleDao = new ArticleDao();
 		for(int seq : seqs) {
 			Article article = articleDao.getArticle(seq);
@@ -79,7 +79,7 @@
             <a href="/seq/<%= article.getSeq() %>" style="font-weight:bold"><%= article.getSubject() %></a>
         </td>
         <td class="writer"><div><b><%= article.getWriter() %></b></div></td>
-        <td class="writer"><img src="/profile/base/default.jpg" style="width: 14px; height: 14px;" alt="<%= article.getWriter() %>"/></td>
+        <td class="writer"><img src="/profile/<%= article.getId() %>.jpg" style="width: 14px; height: 14px;" alt="<%= article.getWriter() %>"/></td>
         <td class="read tiny"><b><%= article.getRead() %></b></td>
         <td class="when tiny" title="<%= article.getWhen("yy-MM-dd HH:mm") %>">
         <b><%= DateLabel.getTimeDiffLabel(article.getWhen()) %></b></td>
