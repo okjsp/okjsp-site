@@ -5,7 +5,7 @@
 <script type="text/javascript" src="/js/cookie.js"></script>
 <div class="ln"></div>
 <ul id="top">
-	<li id="logo"><a href="/bbs?act=RECENT"><img src="/images/okjsp_top_folded.gif" /></a></li>
+	<li id="logo"><a href="http://www.okjsp.pe.kr/bbs?act=RECENT"><img src="/images/okjsp_160x50.gif" style="margin-left: -10px; "></a></li>
 	<li id="find">
 	<form name="searchf1" method="get" target="okjspsearch"
 		action="http://www.google.com/search"
