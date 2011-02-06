@@ -41,23 +41,10 @@ public class MobileWriteServlet extends HttpServlet {
 
 	} // end doPost()
 
-	private String write(HttpServletRequest req, HttpServletResponse res) {
-		//한글문제로 인해서 넣었음_piki
-		//iui.js에서 encode함수도 수정
-		//20100318_화면에서 저장시 타겟 지정하면서 필요 없게 됨
-		/*
-		try {
-			req.setCharacterEncoding("utf-8");
-		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		*/
+	private String write(HttpServletRequest req, HttpServletResponse res) throws IOException {
 		Member member = (Member)req.getSession().getAttribute("member");
 		String id  = member.getId();
 		long sid = member.getSid();
-		//String id = CommonUtil.getCookie(req, "okid");
-		//long sid = CommonUtil.getCookieLong(req, "sid");
 		
 		Article article = new Article();
 		article.setId(id);
@@ -79,9 +66,6 @@ public class MobileWriteServlet extends HttpServlet {
 		article.setCcl_id(ccl_id);
 		
 		new ArticleDao().write(article);
-		
-		// 트위터 글쓰기 추가
-		//new TwitterUpdate().doUpdate(article, req);
 		
 		return article.getBbs();
 	}

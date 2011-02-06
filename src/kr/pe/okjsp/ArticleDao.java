@@ -1,5 +1,6 @@
 package kr.pe.okjsp;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -387,12 +388,17 @@ public class ArticleDao {
 		// file 삭제 생략
 
 	}
-	public int write(Article article) {
+	public int write(Article article) throws IOException {
 		DbCon dbCon = new DbCon();
 		Connection conn = null;
 		int result = 0;
 		try {
 			conn = dbCon.getConnection();
+			
+			if ("recruit".equals(article.getBbs())) {
+				checkSpam(conn, "recruit", article.getId());
+			}
+			
 			conn.setAutoCommit(false);
 
 			article.setSeq(getSeq(conn));
@@ -400,13 +406,20 @@ public class ArticleDao {
 
 			result = write(conn, article);
 			conn.commit();
-		} catch (Exception e) {
+		} catch (SQLException e) {
 			try {
 				conn.rollback();
 			} catch (SQLException e1) {
 				e1.printStackTrace();
 			}
 			System.out.println("write err: "+e);
+		} catch (IOException e) {
+			try {
+				conn.rollback();
+			} catch (SQLException e1) {
+				e1.printStackTrace();
+			}
+			throw e;
 		} finally {
 			try {
 				conn.setAutoCommit(true);
@@ -417,6 +430,30 @@ public class ArticleDao {
 		}
 
 		return result;
+	}
+
+	public void checkSpam(Connection conn, String bbs, String id) throws IOException {
+		String sql = "select count(*) FROM okboard WHERE bbsid = ? and id = ? and wtime > (sysdate - 2)";
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		boolean isSpam = false;
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, bbs);
+			pstmt.setString(2, id);
+
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				isSpam = rs.getInt(1) >= 2;
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			dbCon.close(null, pstmt, rs);
+		}
+		if (isSpam) throw new IOException("Too Many Post");
+
 	}
 
 

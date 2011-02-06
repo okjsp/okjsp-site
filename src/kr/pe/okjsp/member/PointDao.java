@@ -23,7 +23,11 @@ public class PointDao {
 		= "update okmember set point = 0 where sid = ?";
 	static final String TEST_RECORD_LOG_DELETE 
 		= "delete from okboard where bbsid = 'perf' and writer = 'kenu1'";
-
+	static final String TEST_RECORD_SPAM_DELETE 
+		= "delete from okboard where bbsid = 'recruit' and writer = 'kenu1'";
+	static final String TEST_RECORD_MEMO_DELETE 
+		= "delete from okboard_memo where sid = 3582";
+	
 	public int log(long sid, int code, int point, String info) {
 	   	if (sid == 0) {
 	   		return 0;
@@ -119,6 +123,17 @@ public class PointDao {
     		conn = dbCon.getConnection();
 			// 테스트 레코드 기록 삭제
 			pstmt = conn.prepareStatement(TEST_RECORD_LOG_DELETE);
+			result = pstmt.executeUpdate();
+			
+			pstmt.close();
+			// 테스트 스팸 기록 삭제
+			pstmt = conn.prepareStatement(TEST_RECORD_SPAM_DELETE);
+			result = pstmt.executeUpdate();
+			
+			pstmt.close();
+
+			// 테스트 메모 레코드 기록 삭제
+			pstmt = conn.prepareStatement(TEST_RECORD_MEMO_DELETE);
 			result = pstmt.executeUpdate();
 			
 			pstmt.close();

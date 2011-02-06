@@ -39,7 +39,7 @@ public class WriteServlet extends HttpServlet {
 
 	} // end doPost()
 
-	private String write(HttpServletRequest req, HttpServletResponse res) {
+	private String write(HttpServletRequest req, HttpServletResponse res) throws IOException {
 		String id = CommonUtil.getCookie(req, "okid");
 		long sid = CommonUtil.getCookieLong(req, "sid");
 		Article article = new Article();

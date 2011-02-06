@@ -1,5 +1,6 @@
 package kr.pe.okjsp.member;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 
@@ -107,6 +108,36 @@ public class PointDaoTest extends TestCase {
 		// 글삭제 -10점. code 3
 		// DeleteServlet.doPost();
 		
+	}
+	
+	public void testCheckSpam() throws IOException {
+		Member member = new Member();
+		member.setId("kenu1");
+		member.setSid(3582);
+
+		ArticleDao articleDao = new ArticleDao();
+		int result = articleDao.write(getArticle(member));
+		assertTrue(1 < result);
+		result = articleDao.write(getArticle(member));
+		assertTrue(1 < result);
+		try {
+			result = articleDao.write(getArticle(member));
+			fail();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+	private Article getArticle(Member member) {
+		Article article = new Article();
+		article.setBbs("recruit");
+		article.setSubject("subject");
+		article.setId(member.getId());
+		article.setSid(member.getSid());
+		article.setContent("content");
+		article.setWriter(member.getId());
+		return article;
 	}
 	
 	public void testDeleteTestData() {
