@@ -32,10 +32,15 @@
     <td valign='top'>
 <ul id="banner_top">
 <li>
-<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">
-<img src="http://www.devlec.com/images/devlec_okjsp.gif" 
-	alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트">
-</a>
+<script type="text/javascript">
+var topBanner = {
+		url:'http://www.acornpub.co.kr/',
+		src:'/images/banner/acornpub_468x60.gif',
+		alt:'acornpub'};
+		
+document.write('<a href="/f.jsp?' + topBanner.url + '" target="_blank">' +
+		'<img src="' + topBanner.src +'" alt="'+topBanner.alt+'"></a>');
+</script>
 </li>
 </ul>
 
