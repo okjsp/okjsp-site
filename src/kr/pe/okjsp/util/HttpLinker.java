@@ -8,7 +8,7 @@ public class HttpLinker {
 	 * @param source
 	 * @return
 	 */
-	public String getLinkedSource(String source) {
+	public static String getLinkedSource(String source) {
 		int lastIdxStart = 0;
 		String pre = source;
 		String output = "";

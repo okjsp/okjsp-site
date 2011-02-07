@@ -26,7 +26,7 @@ public class MemberHandler {
 	static final String QUERY_MAX_SID
 		= "select max(sid) from okmember";
 	static final String QUERY_ADD
-		= "insert into okmember (id, \"password\", name, email, homepage, joindate, mailing, sid) values (?, old_password(?), ?, ?, ?, SYSTIMESTAMP, ?, ?)";
+		= "insert into okmember (id, \"password\", name, email, homepage, joindate, mailing, sid, profile) values (?, old_password(?), ?, ?, ?, SYSTIMESTAMP, ?, ?, ?)";
 	static final String QUERY_ROLE_ADD
 		= "insert into okrole (id, \"role\") values (?,?)";
 	static final String QUERY_LOGIN

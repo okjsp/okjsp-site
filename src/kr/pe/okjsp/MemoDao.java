@@ -19,6 +19,8 @@ public class MemoDao {
 
 	final static String QUERY_MEMO_COUNT =
         "update okboard set memo = memo + ? where seq = ?";
+	
+	final static String QUERY_GET_MEMO_COUNT = "select count(1) cnt from okboard_memo where seq = ?";
 
     /**
      * <pre>
@@ -100,6 +102,49 @@ public class MemoDao {
 				e2.printStackTrace();
 			}
 		}
+    }
+    
+    /**
+     * <pre>
+     * 메모 기록
+     * # 20091018 서영아빠 CUBRID로 마이그레이션 하면서 시퀀스 자동생성 방법으로 바뀜
+     * </pre>
+     * @param conn
+     * @param id
+     * @param sid
+     * @param writer
+     * @param bcomment
+     * @param memopass
+     * @param ip
+     * @param seq
+     * @return result
+     * @throws SQLException
+     */
+    public int getMemoCount(int seq) {
+	
+	int memocnt = 0;
+	
+	DbCon dbCon = new DbCon();
+	Connection conn = null;
+    	PreparedStatement pstmt = null;
+    	ResultSet rs = null;
+    	
+    	try {
+    	    		conn = dbCon.getConnection();
+    	    		
+			// mseq 일련번호 가져오기
+			pstmt = conn.prepareStatement(QUERY_GET_MEMO_COUNT);
+			pstmt.setInt   (1, seq);
+			rs = pstmt.executeQuery();
+			if(rs.next())
+			    memocnt = rs.getInt(1);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			dbCon.close(conn, pstmt, rs);
+		}
+    	return memocnt;
     }
 
 
