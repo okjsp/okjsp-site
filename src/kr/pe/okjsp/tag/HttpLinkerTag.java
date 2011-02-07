@@ -18,7 +18,7 @@ public class HttpLinkerTag extends BodyTagSupport {
 
 		try {
 			pageContext.getOut().print(
-					new HttpLinker().getLinkedSource(bodyContent.getString()));
+				HttpLinker.getLinkedSource(bodyContent.getString()));
 		} catch (IOException e) {
 			throw new JspException(e.toString());
 		}
