@@ -220,7 +220,7 @@ for (var i = 0; i < kangcomList.length && i < 6 ; i++) {
 		></a>
 		</li>
 		</ul>
-		<p id="adinfo"><a href="/seq/137659">±¤°í¹®ÀÇ</a>
+		<p id="adinfo"><a href="/seq/163503">±¤°í¹®ÀÇ</a>
 		</p>
 	</div>
 	<div id="imaso_div">

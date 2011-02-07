@@ -167,10 +167,11 @@ cursor: pointer;
 	background: skyBlue;
 	margin-bottom: 4px;
 	text-align: center;
+	padding: 1.5em;
 }
 
 #adinfo a:link,#adinfo a:visited,#adinfo a:hover,#adinfo a:active {
-	color: #888;
+	color: #000;
 }
 
 .sidebar-title {
