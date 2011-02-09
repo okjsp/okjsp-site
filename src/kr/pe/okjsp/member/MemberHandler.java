@@ -246,6 +246,7 @@ public class MemberHandler {
 			pstmt.setString(5,member.getHomepage());
 			pstmt.setString(6,member.getMailing());
 			pstmt.setLong  (7,member.getSid());
+			pstmt.setString(8,member.getProfile());
 
 			insert_cnt = pstmt.executeUpdate();
 
