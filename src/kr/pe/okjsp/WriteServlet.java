@@ -195,7 +195,7 @@ public class WriteServlet extends HttpServlet {
 			} else {
 				article.setSeq(articleDao.getSeq(conn));
 				article.setRef(articleDao.getNewRef(conn, article.getBbs()));
-				articleDao.write(conn, article);
+				articleDao.write(article);
 			}
 
 			articleDao.addFile(conn, article.getSeq(), arrdf);
