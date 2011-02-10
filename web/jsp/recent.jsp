@@ -13,6 +13,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
     <title>NEW OKJSP with CUBRID</title>
     <script type="text/javascript" src="/js/okjsp.js"></script>
+    <script type="text/javascript" src="/js/banner.js"></script>
     <script type="text/javascript" src="/js/bannerData.js"></script>
     <!-- Dependencies --> 
 	<script src="http://yui.yahooapis.com/2.7.0/build/yahoo-dom-event/yahoo-dom-event.js" type="text/javascript"></script> 
@@ -33,13 +34,7 @@
 <ul id="banner_top">
 <li>
 <script type="text/javascript">
-var topBanner = {
-		url:'http://www.acornpub.co.kr/',
-		src:'/images/banner/acornpub_468x60.gif',
-		alt:'acornpub'};
-		
-document.write('<a href="/f.jsp?' + topBanner.url + '" target="_blank">' +
-		'<img src="' + topBanner.src +'" alt="'+topBanner.alt+'"></a>');
+Banner.show();
 </script>
 </li>
 </ul>
