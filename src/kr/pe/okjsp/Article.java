@@ -388,9 +388,9 @@ public class Article {
 
 	public String getContentView() {
 		if( "1".equals(this.html) ) {
-			return CommonUtil.rplc(this.content, "<", "&lt;");
+			return HttpLinker.getLinkedSource(CommonUtil.rplc(this.content, "<", "&lt;"));
 		} else if( "0".equals(this.html) ) {
-			return CommonUtil.showHtml(this.content);
+			return HttpLinker.getLinkedSource(CommonUtil.showHtml(this.content));
 		}
 		return this.content;
 	}
