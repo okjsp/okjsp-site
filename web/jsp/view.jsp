@@ -66,7 +66,7 @@ http://www.okjsp.pe.kr/seq/<%= one.getSeq() %></a></div>
         <td class="td" class="wrap" height="80" valign="top">
 <%-- 이미지 보이기 --%>
         <div id="centent" class="wrap">
-        <%=  one.getContentView()  %>
+        <%=  HttpLinker.getLinkedSource(one.getContentView())  %>
         </div>
 
 <div style="height:30px"></div>
@@ -212,13 +212,12 @@ tag는 <a href="<%= Navigation.getPath("SECURE_DOMAIN") %>/jsp/member/login.jsp">
 <%
   ArrayList<MemoBean> memoList = new MemoHandler().getList(one.getSeq());
   Iterator memo = null;
-  HttpLinker linker = new HttpLinker();
   if (memoList != null) {
     memo = memoList.iterator();
     while (memo.hasNext()) {
       MemoBean mb = (MemoBean)memo.next();
 %><ul><li class="c">
-<%= linker.getLinkedSource( CommonUtil.showHtml( mb.getBcomment() ) ) %>
+<%= HttpLinker.getLinkedSource( CommonUtil.showHtml( mb.getBcomment() ) ) %>
 </li>
 <li class="w"><%
     if (mb.getId() != null) {
