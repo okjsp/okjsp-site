@@ -1,6 +1,7 @@
 package kr.pe.okjsp.util;
 
 
+
 public class HttpLinker {
 
 	/**
@@ -27,12 +28,23 @@ public class HttpLinker {
 			if (lastIdxEnd == -1) {
 				lastIdxEnd = source.length();
 			}
-			String url = source.substring(lastIdxStart, lastIdxEnd).trim();
-			pre = source.substring(0, lastIdxStart);
-			String post = source.substring(lastIdxEnd);
-			output = "<a href=\"" + url + "\" target=\"_blank\">" + url
-					+ "</a>" + post + output;
-			source = pre;
+			boolean hasLink = source.indexOf("</a>", lastIdxStart) != -1;
+			if (hasLink ) {
+				pre = source.substring(0, source.lastIndexOf("<a "));
+				String post = source.substring(source.lastIndexOf("<a "));
+				
+				output = post + output;
+				source = pre;
+				
+			} else {
+				String url = source.substring(lastIdxStart, lastIdxEnd).trim();
+				pre = source.substring(0, lastIdxStart);
+				String post = source.substring(lastIdxEnd);
+				
+				output = "<a href=\"" + url + "\" target=\"_blank\">" + url
+				+ "</a>" + post + output;
+				source = pre;
+			}
 		}
 		return pre + output;
 	}

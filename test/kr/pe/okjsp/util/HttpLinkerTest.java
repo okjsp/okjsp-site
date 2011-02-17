@@ -1,7 +1,7 @@
 package kr.pe.okjsp.util;
 
+
 import junit.framework.TestCase;
-import kr.pe.okjsp.util.HttpLinker;
 
 public class HttpLinkerTest extends TestCase {
 	public void testGetLinkedSource() {
@@ -65,6 +65,11 @@ public class HttpLinkerTest extends TestCase {
 	
 	public void testBr() {
 		String source = "이렇게 하면 되네요..\n<br>\n<br>http://matz.egloos.com/1102066\n<br>여기서찾았습니다.\n<br>\n<br>kenu님답변감사합니다.";
+		String output = "이렇게 하면 되네요..\n<br>\n<br><a href=\"http://matz.egloos.com/1102066\" target=\"_blank\">http://matz.egloos.com/1102066</a>\n<br>여기서찾았습니다.\n<br>\n<br>kenu님답변감사합니다.";
+		assertEquals(output, HttpLinker.getLinkedSource(source));
+	}
+	public void testSkipLegacyLinkTag() {
+		String source = "이렇게 하면 되네요..\n<br>\n<br><a href=\"http://matz.egloos.com/1102066\" target=\"_blank\">http://matz.egloos.com/1102066</a>\n<br>여기서찾았습니다.\n<br>\n<br>kenu님답변감사합니다.";
 		String output = "이렇게 하면 되네요..\n<br>\n<br><a href=\"http://matz.egloos.com/1102066\" target=\"_blank\">http://matz.egloos.com/1102066</a>\n<br>여기서찾았습니다.\n<br>\n<br>kenu님답변감사합니다.";
 		assertEquals(output, HttpLinker.getLinkedSource(source));
 	}
