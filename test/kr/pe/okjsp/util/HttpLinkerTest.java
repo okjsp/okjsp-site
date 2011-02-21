@@ -73,5 +73,11 @@ public class HttpLinkerTest extends TestCase {
 		String output = "이렇게 하면 되네요..\n<br>\n<br><a href=\"http://matz.egloos.com/1102066\" target=\"_blank\">http://matz.egloos.com/1102066</a>\n<br>여기서찾았습니다.\n<br>\n<br>kenu님답변감사합니다.";
 		assertEquals(output, HttpLinker.getLinkedSource(source));
 	}
+	
+	public void testGetLinkedSourceIframe() {
+		String source = "<iframe title=\"YouTube video player\" width=\"480\" height=\"390\" src=\"http://www.youtube.com/embed/uPT4bHy0P3Y\" frameborder=\"0\" allowfullscreen></iframe>";
+		String output = "<iframe title=\"YouTube video player\" width=\"480\" height=\"390\" src=\"http://www.youtube.com/embed/uPT4bHy0P3Y\" frameborder=\"0\" allowfullscreen></iframe>";
+		assertEquals(output, HttpLinker.getLinkedSource(source));
+	}
 
 }

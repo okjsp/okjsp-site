@@ -1,11 +1,10 @@
 package kr.pe.okjsp.util;
 
-
-
 public class HttpLinker {
 
 	/**
 	 * url 링크가 된 소스를 반환한다.
+	 * 
 	 * @param source
 	 * @return
 	 */
@@ -29,20 +28,28 @@ public class HttpLinker {
 				lastIdxEnd = source.length();
 			}
 			boolean hasLink = source.indexOf("</a>", lastIdxStart) != -1;
-			if (hasLink ) {
-				pre = source.substring(0, source.lastIndexOf("<a "));
-				String post = source.substring(source.lastIndexOf("<a "));
-				
-				output = post + output;
+			boolean hasIframe = source.indexOf("</iframe>", lastIdxStart) != -1;
+			if (hasLink) {
+				String tag = "a";
+				int lastIndexOf = source.lastIndexOf("<" + tag + " ");
+				pre = source.substring(0, lastIndexOf);
+				output = source.substring(lastIndexOf) + output;
 				source = pre;
-				
+
+			} else if (hasIframe) {
+				String tag = "iframe";
+				int lastIndexOf = source.lastIndexOf("<" + tag + " ");
+				pre = source.substring(0, lastIndexOf);
+				output = source.substring(lastIndexOf) + output;
+				source = pre;
+
 			} else {
 				String url = source.substring(lastIdxStart, lastIdxEnd).trim();
 				pre = source.substring(0, lastIdxStart);
 				String post = source.substring(lastIdxEnd);
-				
+
 				output = "<a href=\"" + url + "\" target=\"_blank\">" + url
-				+ "</a>" + post + output;
+						+ "</a>" + post + output;
 				source = pre;
 			}
 		}
