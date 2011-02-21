@@ -79,5 +79,12 @@ public class HttpLinkerTest extends TestCase {
 		String output = "<iframe title=\"YouTube video player\" width=\"480\" height=\"390\" src=\"http://www.youtube.com/embed/uPT4bHy0P3Y\" frameborder=\"0\" allowfullscreen></iframe>";
 		assertEquals(output, HttpLinker.getLinkedSource(source));
 	}
+	
+	public void testGetLinkedSourceEmbed() {
+		String source = "<embed src=\"http://www.jjanglive.com/flash/webClient.swf?widgetseq=90120&movieseq=754497&defaultMute=0\" quality=\"high\" width=\"480\" height=\"360\" name=\"widgetFlash\" align=\"middle\" play=\"false\" loop=\"false\" allowFullScreen=\"true\" allowScriptAccess=\"always\" scale=\"noscale\" type=\"application/x-shockwave-flash\" pluginspage=\"http://www.macromedia.com/go/getflashplayer\"></embed><p>";
+		String output = "<embed src=\"http://www.jjanglive.com/flash/webClient.swf?widgetseq=90120&movieseq=754497&defaultMute=0\" quality=\"high\" width=\"480\" height=\"360\" name=\"widgetFlash\" align=\"middle\" play=\"false\" loop=\"false\" allowFullScreen=\"true\" allowScriptAccess=\"always\" scale=\"noscale\" type=\"application/x-shockwave-flash\" pluginspage=\"http://www.macromedia.com/go/getflashplayer\"></embed><p>";
+		assertEquals(output, HttpLinker.getLinkedSource(source));
+	}
+	
 
 }
