@@ -28,31 +28,35 @@ public class HttpLinker {
 				lastIdxEnd = source.length();
 			}
 			boolean hasLink = source.indexOf("</a>", lastIdxStart) != -1;
-			boolean hasIframe = source.indexOf("</iframe>", lastIdxStart) != -1;
-			boolean hasEmbed = source.indexOf("</embed>", lastIdxStart) != -1;
+			boolean hasIframe = source.toLowerCase().indexOf("</iframe>", lastIdxStart) != -1;
+			boolean hasEmbed = source.toLowerCase().indexOf("</embed>", lastIdxStart) != -1;
 			if (hasLink) {
 				String tag = "a";
-				int lastIndexOf = source.lastIndexOf("<" + tag + " ");
+				int lastIndexOf = source.toLowerCase().lastIndexOf("<" + tag + " ");
 				pre = source.substring(0, lastIndexOf);
 				output = source.substring(lastIndexOf) + output;
 				source = pre;
 
 			} else if (hasIframe) {
 				String tag = "iframe";
-				int lastIndexOf = source.lastIndexOf("<" + tag + " ");
+				int lastIndexOf = source.toLowerCase().lastIndexOf("<" + tag + " ");
 				pre = source.substring(0, lastIndexOf);
 				output = source.substring(lastIndexOf) + output;
 				source = pre;
 
 			} else if (hasEmbed) {
 				String tag = "embed";
-				int lastIndexOf = source.lastIndexOf("<" + tag + " ");
+				int lastIndexOf = source.toLowerCase().lastIndexOf("<" + tag + " ");
 				pre = source.substring(0, lastIndexOf);
 				output = source.substring(lastIndexOf) + output;
 				source = pre;
 				
 			} else {
-				String url = source.substring(lastIdxStart, lastIdxEnd).trim();
+				String url = source.substring(lastIdxStart, lastIdxEnd);
+				if(url.length() != url.trim().length()) {
+					url = url.trim();
+					lastIdxEnd = lastIdxEnd - 1;
+				}
 				pre = source.substring(0, lastIdxStart);
 				String post = source.substring(lastIdxEnd);
 
