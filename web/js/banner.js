@@ -14,8 +14,7 @@ tag: '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank
 }
 ],
 show : function() {
-	document.write(this.main[1].tag);
-	document.write('</li><li>');
-	document.write(this.main[0].tag);
+	var idx = Math.floor(Math.random() * Banner.main.length);
+	document.write(this.main[idx].tag);
 }
 };
