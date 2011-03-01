@@ -97,5 +97,12 @@ public class HttpLinkerTest extends TestCase {
 		String output = "<P><EMBED height=360 name=widgetFlash type=application/x-shockwave-flash align=middle pluginspage=http://www.macromedia.com/go/getflashplayer width=480 src=http://www.jjanglive.com/flash/webClient.swf?widgetseq=14250&amp;movieseq=757760&amp;defaultMute=0 AllowScriptAccess=\"never\" autostart=\"false\" wmode=\"transparent\" scale=\"noscale\" allowScriptAccess=\"always\" allowFullScreen=\"true\" loop=\"false\" play=\"false\" quality=\"high\"></EMBED><BR><BR>부러우면 지는겁니다ㅠㅠ<BR></P>";
 		assertEquals(output, HttpLinker.getLinkedSource(source));
 	}
+	
+	public void testGetLinkedSourceDup() {
+		String source = "<P>출처 :&nbsp;<A href=\"http://sdnkorea.com/blog/584\">http://sdnkorea.com/blog/584</A></P>\n<P>&nbsp;</P>";
+		String output = "<P>출처 :&nbsp;<A href=\"http://sdnkorea.com/blog/584\">http://sdnkorea.com/blog/584</A></P>\n<P>&nbsp;</P>";
+		assertEquals(output, HttpLinker.getLinkedSource(source));
+	}
+	
 
 }

@@ -27,7 +27,7 @@ public class HttpLinker {
 			if (lastIdxEnd == -1) {
 				lastIdxEnd = source.length();
 			}
-			boolean hasLink = source.indexOf("</a>", lastIdxStart) != -1;
+			boolean hasLink = source.toLowerCase().indexOf("</a>", lastIdxStart) != -1;
 			boolean hasIframe = source.toLowerCase().indexOf("</iframe>", lastIdxStart) != -1;
 			boolean hasEmbed = source.toLowerCase().indexOf("</embed>", lastIdxStart) != -1;
 			if (hasLink) {
