@@ -12,7 +12,7 @@ public class HttpLinker {
 		int lastIdxStart = 0;
 		String pre = source;
 		String output = "";
-		while ((lastIdxStart = source.toLowerCase().lastIndexOf("http://")) > -1) {
+		while ((lastIdxStart = getLastIndexOfLink(source)) > -1) {
 			if (lastIdxStart == -1) {
 				return source;
 			}
@@ -66,5 +66,13 @@ public class HttpLinker {
 			}
 		}
 		return pre + output;
+	}
+
+	private static int getLastIndexOfLink(String source) {
+		int lastIndexOf = source.toLowerCase().lastIndexOf("http://");
+		if (lastIndexOf == -1) {
+			lastIndexOf = source.toLowerCase().lastIndexOf("https://");
+		}
+		return lastIndexOf;
 	}
 }

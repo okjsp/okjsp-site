@@ -9,6 +9,11 @@ public class HttpLinkerTest extends TestCase {
 		String output = "<a href=\"http://www.okjsp.pe.kr/bbs?act=VIEW&bbs=TOOL&seq=55492\" target=\"_blank\">http://www.okjsp.pe.kr/bbs?act=VIEW&bbs=TOOL&seq=55492</a>";
 		assertEquals(output, HttpLinker.getLinkedSource(source));
 	}
+	public void testGetLinkedHttps() {
+		String source = "https://www.okjsp.pe.kr/bbs?act=VIEW&bbs=TOOL&seq=55492";
+		String output = "<a href=\"https://www.okjsp.pe.kr/bbs?act=VIEW&bbs=TOOL&seq=55492\" target=\"_blank\">https://www.okjsp.pe.kr/bbs?act=VIEW&bbs=TOOL&seq=55492</a>";
+		assertEquals(output, HttpLinker.getLinkedSource(source));
+	}
 
 	public void testGetLinkedSourceMixed() {
 		String source = "http://www.homezigi.net 여기다 물어보시는게 빠를것같습니다 -.- ";
