@@ -72,6 +72,7 @@
 		ArticleDao articleDao = new ArticleDao();
 		for(int seq : seqs) {
 			Article article = articleDao.getArticle(seq);
+			if (article.getWhen() == null) continue;
 %>
     <tr class="body" align="center">
         <td class="ref tiny" style="width: 40px; font-weight: bold;">AD</td>
