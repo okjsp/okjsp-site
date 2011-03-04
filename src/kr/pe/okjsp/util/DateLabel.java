@@ -57,6 +57,9 @@ public class DateLabel {
 	 * @return
 	 */
 	public static String getTimeDiffLabel(Date d1, Date d2) {
+		if(d1 == null || d2 == null) {
+			return "N/A";
+		}
 		long diff = d2.getTime() - d1.getTime();
 		int sec = (int)(diff / 1000);
 		if (sec < 5) return getString("DateLabel.lessthan5seconds");
