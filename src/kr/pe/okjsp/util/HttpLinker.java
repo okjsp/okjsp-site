@@ -57,6 +57,11 @@ public class HttpLinker {
 					url = url.trim();
 					lastIdxEnd = lastIdxEnd - 1;
 				}
+				int tagIdx = url.indexOf("<");
+				if (tagIdx != -1) {
+					lastIdxEnd -= url.length() - tagIdx;
+					url = url.substring(0, tagIdx);
+				}
 				pre = source.substring(0, lastIdxStart);
 				String post = source.substring(lastIdxEnd);
 
