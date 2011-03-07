@@ -30,6 +30,7 @@ public class HttpLinker {
 			boolean hasLink = source.toLowerCase().indexOf("</a>", lastIdxStart) != -1;
 			boolean hasIframe = source.toLowerCase().indexOf("</iframe>", lastIdxStart) != -1;
 			boolean hasEmbed = source.toLowerCase().indexOf("</embed>", lastIdxStart) != -1;
+			boolean hasImg = source.toLowerCase().lastIndexOf("<img", lastIdxStart) != -1;
 			if (hasLink) {
 				String tag = "a";
 				int lastIndexOf = source.toLowerCase().lastIndexOf("<" + tag + " ");
@@ -46,6 +47,13 @@ public class HttpLinker {
 
 			} else if (hasEmbed) {
 				String tag = "embed";
+				int lastIndexOf = source.toLowerCase().lastIndexOf("<" + tag + " ");
+				pre = source.substring(0, lastIndexOf);
+				output = source.substring(lastIndexOf) + output;
+				source = pre;
+				
+			} else if (hasImg) {
+				String tag = "img";
 				int lastIndexOf = source.toLowerCase().lastIndexOf("<" + tag + " ");
 				pre = source.substring(0, lastIndexOf);
 				output = source.substring(lastIndexOf) + output;

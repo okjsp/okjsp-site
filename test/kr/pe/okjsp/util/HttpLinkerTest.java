@@ -108,6 +108,12 @@ public class HttpLinkerTest extends TestCase {
 		assertEquals(output, HttpLinker.getLinkedSource(source));
 	}
 	
+	public void testGetLinkedSourceImg() {
+		String source = "<TD><IMG src=\"http://javacafe.or.kr/popup/img/study_title.jpg\"><BR><BR></TD></TR>";
+		String output = "<TD><IMG src=\"http://javacafe.or.kr/popup/img/study_title.jpg\"><BR><BR></TD></TR>";
+		assertEquals(output, HttpLinker.getLinkedSource(source));
+	}
+	
 	public void testGetLinkedSourceDup() {
 		String source = "<P>출처 :&nbsp;<A href=\"http://sdnkorea.com/blog/584\">http://sdnkorea.com/blog/584</A></P>\n<P>&nbsp;</P>";
 		String output = "<P>출처 :&nbsp;<A href=\"http://sdnkorea.com/blog/584\">http://sdnkorea.com/blog/584</A></P>\n<P>&nbsp;</P>";
