@@ -30,12 +30,31 @@
   <a href="/jsp/member/agreement.jsp" target="privacy">개인정보취급방침</a>
   </div>
 	<hr>ad:
-  <div class="noticemenu">
-    <a href="/f.jsp?http://www.junapps.com/agentLog.php?agent=okjsp" title="아이폰개발강좌" target="junapps">아이폰강좌 준앱스</a>
-	<br><A href="/f.jsp?http://www.innorix.com/DS/" title="대용량 파일/폴더 업로드 컴포넌트" target="innorix">업로드는 InnoDS</A>
-	<br><A href="/f.jsp?http://www.imaso.co.kr/" title="프로그래머를 위한 잡지" target="imaso">마소 Magazine</A>
-	<br><A href="/f.jsp?http://bit.ly/cIQ7fA" title="안드로이드 개발환경 구축" target="android">[유료]안드로이드 개발매뉴얼1</A>
-  </div>
+  <ul class="menuad">
+  <script type="text/javascript">
+var text = {
+left : [
+{
+	tag: '<li><a href="/f.jsp?'+'http://www.junapps.com/agentLog.php?agent=okjsp'+'" title="'+'아이폰개발강좌'+'" target="_blank">'+'아이폰강좌 준앱스'+'</a></li>'
+},
+{
+	tag: '<li><A href="/f.jsp?http://www.innorix.com/DS/" title="대용량 파일/폴더 업로드 컴포넌트" target="innorix">업로드는 InnoDS</A></li>'
+},
+{
+	tag: '<li><A href="/f.jsp?http://okmindmap.com/" title="웹기반 협업 마인드맵, OKJSP 유저 박기원님이 참여한 서비스" target="imaso">okmindmap</A></li>'
+},
+{
+	tag: '<li><A href="/f.jsp?http://bit.ly/cIQ7fA" title="안드로이드 개발환경 구축" target="android">[유료]안드로이드 개발매뉴얼1</A></li>'
+}
+
+	 ]
+};
+
+for(var i = 0; i < text.left.length; i++) {
+	document.writeln(text.left[i].tag);
+}
+  </script>
+  </ul>
 
 <h2 id="bbslistmenu">BBS LIST</h2>
 <select id="bbslist" onchange="jumpto(this)" size="18">
