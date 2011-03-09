@@ -78,9 +78,15 @@ cursor: pointer;
 #banner_top {
 	margin: 4px;
 	text-align: center;
-	list-style-type: 0;
+	list-style: none;
 	padding: 0;
 	overflow: hidden;
+}
+
+#menuad {
+	list-style : none;
+	padding: 0;
+	margin-top: 2px;
 }
 
 /* menu */
