@@ -30,7 +30,7 @@
   <a href="/jsp/member/agreement.jsp" target="privacy">개인정보취급방침</a>
   </div>
 	<hr>ad:
-  <ul class="menuad">
+  <ul id="menuad">
   <script type="text/javascript">
 var text = {
 left : [
