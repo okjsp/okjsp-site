@@ -76,11 +76,7 @@ public class ControllerServlet extends HttpServlet {
 			res.sendRedirect(loginPath);
 			return;
 		}
-		boolean isSpammer = checkSpammer(member.getId());
-		if(isSpammer) {
-			res.sendRedirect(loginPath);
-			return;
-		}
+
 	}
 
     if ("REPLY".equals(act)){
@@ -109,22 +105,6 @@ public class ControllerServlet extends HttpServlet {
   } // end doGet()
   
   
-	/*
-	 * "computer85", "spirits_lee", "it7power", "ahnks2"
-	 */
-  // buk12 ~04/09
-  // it7power, spirits_lee ~04/10
-	String[] spammers = { "ncis2" };
-
-	private boolean checkSpammer(String id) {
-		for (String spammer : spammers) {
-			if (spammer.equals(id)) {
-				return true;
-			}
-		}
-		return false;
-	}
-
 /**
  * @param req
  */
