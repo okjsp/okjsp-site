@@ -1,9 +1,9 @@
 var Banner = {
 main : [
 {
-tag: '<a href="/f.jsp?http://www.devmento.co.kr/devmain/shop/shop_list.jsp" target="_blank">' +
-'<img src="/images/banner/devmento_duoback_478x93.gif" ' +
-'alt="어린이 공학 가방 듀오백 세트">' +
+tag: '<a href="/f.jsp?http://www.devmento.co.kr/devmain/seminar/edumento_detail.jsp?main_id=MSEM00000&dataSeq=93" target="_blank">' +
+'<img src="/images/banner/devmento_googleappengine_473x98.gif" ' +
+'alt="구글 앱 엔진과 모바일 개발">' +
 '</a>'
 },
 {
