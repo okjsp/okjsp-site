@@ -9,6 +9,9 @@
     MemberHandler mh = new MemberHandler();
     if (mh.doLogin(member) == 1) {
     	String returnPath = DomainUtil.getFixedURL(request.getParameter("returnPath"));
+    	if ("/".equals(returnPath)) {
+    		returnPath = "http://www.okjsp.pe.kr/";
+    	}
 %>
 <c:out value="${member.id}"/> ´Ô ¹Ý°©½À´Ï´Ù.<br>
 <a href="<%= returnPath %>" target="_top"><%= returnPath %></a>
