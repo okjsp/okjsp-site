@@ -144,7 +144,7 @@ for (var i = 0; i < kangcomList.length && i < 6 ; i++) {
 	<td title="2003" class="when tiny">2003</td>
     </tr><%
 	HashMap bbsInfoMap = (HashMap)application.getAttribute("bbsInfoMap");
-	iterList = list.getAllRecentList(48).iterator();
+	iterList = list.getAllRecentList(108).iterator();
 	int i = 0;
 	while (iterList.hasNext() && i < 40) {
 
