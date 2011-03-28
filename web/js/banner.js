@@ -1,9 +1,9 @@
 var Banner = {
 main : [
 {
-tag: '<a href="/f.jsp?http://www.devmento.co.kr/devmain/seminar/edumento_detail.jsp?main_id=MSEM00000&dataSeq=93" target="_blank">' +
-'<img src="/images/banner/devmento_googleappengine_473x98.gif" ' +
-'alt="구글 앱 엔진과 모바일 개발">' +
+tag: '<a href="/f.jsp?http://www.devmento.co.kr/devmain/seminar/edumento_detail.jsp?dataSeq=92" target="_blank">' +
+'<img src="/images/banner/devmento_mobile_biz_473x98.gif" ' +
+'alt="모바일 비즈니스 수익모델을 찾아라">' +
 '</a>'
 },
 {
