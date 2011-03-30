@@ -136,7 +136,8 @@ http://www.okjsp.pe.kr/seq/<%= one.getSeq() %></a></div>
 	}
 // 관리자 일 경우 게시물 이동권한을 갖는다. 
 	boolean isAdmin = member != null && ("kenu".equals(member.getId()) 
-			|| "kenny".equals(member.getId()));
+			|| "kenny".equals(member.getId()) 
+			|| "topolo".equals(member.getId()));
 	if (isAdmin) {
 %>
 <tr>
