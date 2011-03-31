@@ -10,8 +10,8 @@ public class ProfileUtilTest extends TestCase {
 	public void testCopy() throws Exception {
 		String basePath = "web/profile/base/";
 		String path = "web/profile/";
-		String sourceImage = basePath +"default.jpg";
-		String destImage = path+"default2.jpg";
+		String sourceImage = basePath +"0.jpg";
+		String destImage = path+"0.jpg";
 		assertTrue(new File(sourceImage).exists());
 		File file = new File(destImage);
 		if(file.exists()) {
