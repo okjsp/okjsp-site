@@ -269,7 +269,7 @@ public class MemberHandler {
 			new MailUtil().send(mailto, subject, textMessage);
 			
 			ProfileUtil profileUtil = new ProfileUtil();
-			profileUtil.copyDefaultProfile(contextRoot, member.getId());
+			profileUtil.copyDefaultProfile(contextRoot, member.getSid());
 
 			pconn.commit();
 		}catch(Exception e){
