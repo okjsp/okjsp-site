@@ -16,5 +16,25 @@ tag: '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank
 show : function() {
 	var idx = Math.floor(Math.random() * Banner.main.length);
 	document.write(this.main[idx].tag);
+},
+
+showAside : function() {
+	document.write("<ul><li>"+
+			"<a href=\"/f.jsp?http://www.uengine.org\" target=\"_blank\">"+
+			"<img src=\"http://www.uengine.org/html/images/banner/uengine_banner.gif\" "+
+			"	alt=\"À¯¿£Áø\" ></a>"+
+			"</li>"+
+			"<li>"+
+			"<a href=\"/f.jsp?http://www.apptalk.tv\" target=\"_blank\" >"+
+			"<img src=\"/images/banner/apptalk_134x60.jpg\" "+
+			"	alt=\"¼¼»óÀÇ ¸ğµç ¾ÛÀ» ¿µ»óÀ¸·Î. ¾ÛÀÇ ¸ğµç °Í, ¾ÛÅå\">"+
+			"</a>"+
+			"</li>"+
+			"<li>"+
+			"<a href=\"/f.jsp?http://cs.ucloud.com\" target=\"_blank\" >"+
+			"<img src=\"/images/banner/ucloud_134x40.gif\" "+
+			"	alt=\"KT Ucloud\" ></a>"+
+			"</li></ul>");
 }
+
 };

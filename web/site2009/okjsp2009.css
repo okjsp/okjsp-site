@@ -141,12 +141,6 @@ cursor: pointer;
 	padding: 6px;
 }
 
-/* allblet */
-#allblet {
-	padding-left: 40px;
-	width: 602px;
-}
-
 /* memo */
 #m img {
 	margin-right: 3px;
@@ -165,6 +159,12 @@ cursor: pointer;
 	border: 1px solid #0099B9;
 }
 
+#ad_banners img {
+	border: 1px solid #0099B9;
+	border-top: 1px solid #33BBDD;
+	border-left: 1px solid #33BBDD;
+}
+
 #ad_banners ul {
 	margin: 4px 0 0;
 	padding: 0;
@@ -177,6 +177,7 @@ cursor: pointer;
 	text-align: center;
 	padding: 1.5em;
 }
+
 
 #adinfo a:link,#adinfo a:visited,#adinfo a:hover,#adinfo a:active {
 	color: #000;
