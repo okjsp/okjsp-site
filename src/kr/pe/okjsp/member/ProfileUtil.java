@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class ProfileUtil {
 
-	public static String defaultName = "0.jpg";
+	public final static String defaultName = "0.jpg";
 
 	public int copyDefaultProfile(String contextRoot, long sid) {
 		String sourcePath = contextRoot + "/profile/base/" + defaultName;
