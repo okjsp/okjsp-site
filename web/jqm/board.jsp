@@ -62,7 +62,7 @@ public HashMap<Integer,String> getListMap() {
 
 	<div data-role="header" data-theme="b">
 		<h1>Board Lists</h1>
-		<a href="/jqm/index.jsp" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-right" title="Home" data-theme="b">Home</a>
+		<a href="/jqm/index.jsp" target="JQM" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-right" title="Home" data-theme="b">Home</a>
 	</div>
 
 	<div data-role="content" role="main">
