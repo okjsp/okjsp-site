@@ -23,10 +23,9 @@
 <head>
   <title>Login</title>
   <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
-  <link rel="apple-touch-icon" href="/m/iui/iui-logo-touch-icon.png" />
   <meta name="apple-touch-fullscreen" content="YES" />
-  <style type="text/css" media="screen">@import "/m/iui/iui.css";</style>
-  <script type="application/x-javascript" src="/m/iui/iui.js"></script>
+  <style type="text/css" media="screen">@import "/iui/iui/iui.css";</style>
+  <script type="application/x-javascript" src="/iui/iui/iui.js"></script>
 </head>
 <!-- IUI Header End -->
 
@@ -53,7 +52,7 @@
             </div>
         </fieldset>
 <% } %>
-        <a class="whiteButton" href="/m/index.jsp" target="_self" style="width:160px;">Go to Top Page</a>
+        <a class="whiteButton" href="/iui/index.jsp" target="_self" style="width:160px;">Go to Top Page</a>
     </form>
 </body>
 </html>
