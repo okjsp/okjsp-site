@@ -44,7 +44,8 @@ public class ViewServlet extends HttpServlet {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		
-		boolean isMobileView = CommonUtil.nchk(req.getParameter("mobileView"),"N").equals("Y");
+		String viewMode = CommonUtil.nchk(req.getParameter("viewMode"),"W");
+		String resultPage = null;
 		
 		ArrayList<DownFile> arrdf;
 
@@ -138,8 +139,15 @@ public class ViewServlet extends HttpServlet {
 			dbCon.close(conn, pstmt, rs);
 		}
 
-		String resultPage = (isMobileView) ? "/m/view.jsp" : "/jsp/view.jsp";	// Web 상세보기와 Mobile 상세보기 구분
-
+		// Web 상세보기와 Mobile 상세보기 구분
+		if ( "IUI".equals(viewMode) ) {
+			resultPage = "/iui/view.jsp";	
+		} else if ( "JQM".equals(viewMode) ) {
+			resultPage = "/jqm/view.jsp";
+		} else {
+			resultPage = "/jsp/view.jsp";	
+		}
+		
 		req.getRequestDispatcher(resultPage).forward(req, res);
 
 	} // end doGet()
