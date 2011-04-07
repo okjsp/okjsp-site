@@ -9,7 +9,7 @@
 	String id = CommonUtil.getCookie(request, "okid");
 
 	if(sid == 0) {
-		response.sendRedirect("/jsp/member/loginMobile.jsp?returnPath=/m/editor.jsp?bbs=" + bbs);
+		response.sendRedirect("/jsp/member/loginMobile.jsp?returnPath=/iui/editor.jsp?bbs=" + bbs);
 		return; 
 	}
 %>

@@ -8,10 +8,10 @@
 <title>OKJSP</title>
 <META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=ksc5601">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
-<link rel="apple-touch-icon" href="/m/images/okJSP.png" />
+<link rel="apple-touch-icon" href="/iui/images/okJSP.png" />
 <meta name="apple-touch-fullscreen" content="YES" />
-<style type="text/css" media="screen">@import "/m/iui/iui.css";</style>
-<script type="application/x-javascript" src="/m/iui/iui.js"></script>
+<style type="text/css" media="screen">@import "/iui/iui/iui.css";</style>
+<script type="application/x-javascript" src="/iui/iui/iui.js"></script>
 </head>
 <body>
 
@@ -60,7 +60,7 @@
 	    
 	%>
 	        <li>
-				<img src="/m/iui/icon_new.png" style="	float: left; height: 35px; width: 46px;	margin: -8px 0 -7px -10px" />	             
+				<img src="/iui/iui/icon_new.png" style="	float: left; height: 35px; width: 46px;	margin: -8px 0 -7px -10px" />	             
 	            <a href="/bbs?seq=<%= one.getSeq() %>&mobileView=Y" target="_iui"><%= one.getSubject() %></a>
 	        </li>
 	<%
@@ -70,11 +70,11 @@
 		<li class="group">All Board Lists</li>
 		<!--
 		<li class="recentList">
- 			<img src="/m/iui/icon_all.png" /><a href="recentDetail.jsp" target="_iui">최근글 게시판</a>
+ 			<img src="/iui/iui/icon_all.png" /><a href="recentDetail.jsp" target="_iui">최근글 게시판</a>
 		</li>
 		-->		
 		<li>
- 			<img src="/m/iui/icon_all.png" /><a href="main.jsp" target="_iui">전체 게시판</a>			
+ 			<img src="/iui/iui/icon_all.png" /><a href="main.jsp" target="_iui">전체 게시판</a>			
 		</li>
     	<li class="group">Book</li>
 		<script type="text/javascript">
