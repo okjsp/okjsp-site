@@ -11,17 +11,13 @@
 <script type="text/javascript" >
 	
 	if ( getCookie( 'okjspwithjqm' ) == 'true' ){
-		var current = document.location.href;
-		current = current.replace(/pe\.kr/i,"pe.kr/jqm");
-		top.location.href = current;
+		top.location.href = 'http://www.okjsp.pe.kr/jqm/index.jsp';
 	} else if ( getCookie( 'okjspwithiui' ) == 'true' ) {
-		var current = document.location.href;
-		current = current.replace(/pe\.kr/i,"pe.kr/iui");
-		top.location.href = current;		
+		top.location.href = 'http://www.okjsp.pe.kr/iui/index.jsp';		
 	}
 	
 	function doChange(what){
-		setCookie('okjspwith'+what,'true',(3600*24*30));
+		setCookie('okjspwith'+what,'true',(3600*24*2));
 		top.location.href = 'http://www.okjsp.pe.kr/'+what;
 	}
 	
