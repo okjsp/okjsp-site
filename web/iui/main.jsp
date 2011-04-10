@@ -82,7 +82,7 @@ public HashMap<Integer,String> getListMap()
           <div class="digg-count"><%=(i+1)%></div>
           --%>
 			<img src="/iui/iui/icon_bbs.png" style="	float: left; height: 35px; width: 46px;	margin: -8px 0 -7px -10px" />          
-          	<a href="/bbs?act=MLIST&bbs=<%=bbsInfo.getBbs()%>" target="_iui"><%=bbsInfo.getName()%></a>
+          	<a href="/bbs?act=IUILIST&bbs=<%=bbsInfo.getBbs()%>" target="_iui"><%=bbsInfo.getName()%></a>
 		</li>
 <%
 	}

@@ -61,7 +61,7 @@
 	%>
 	        <li>
 				<img src="/iui/iui/icon_new.png" style="	float: left; height: 35px; width: 46px;	margin: -8px 0 -7px -10px" />	             
-	            <a href="/bbs?seq=<%= one.getSeq() %>&mobileView=Y" target="_iui"><%= one.getSubject() %></a>
+	            <a href="/bbs?seq=<%= one.getSeq() %>&viewMode=IUI" target="_iui"><%= one.getSubject() %></a>
 	        </li>
 	<%
 		i++;

@@ -9,8 +9,7 @@
 <link rel="apple-touch-icon" href="/m/images/okJSP.png" />
 <script type="text/javascript" src="/js/cookie.js"></script>
 <script type="text/javascript" >
-	top.location.href = 'http://www.okjsp.pe.kr/iui'
-	/*
+	
 	if ( getCookie( 'okjspwithjqm' ) == 'true' ){
 		var current = document.location.href;
 		current = current.replace(/pe\.kr/i,"pe.kr/jqm");
@@ -25,16 +24,14 @@
 		setCookie('okjspwith'+what,'true',(3600*24*30));
 		top.location.href = 'http://www.okjsp.pe.kr/'+what;
 	}
-	*/
+	
 </script>
 </head>
 <body>
-	<!-- 
 	<div style="text-align:center;">
 		<img src="/m/images/okjspscreen.png" style="width:100px;"/><br/>
 		<a href="/jqm/index.jsp" onclick="doChange('jqm'); return false;"><img src="/m/images/jqm.png"/></a><br/>
 		<a href="/iui/index.jsp" onclick="doChange('iui'); return false;"><img src="/m/images/iui.png"/></a>
 	</div>
-	 -->
 </body>
 </html>

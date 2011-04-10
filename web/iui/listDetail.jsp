@@ -14,7 +14,7 @@ while (iter.hasNext()) {
 %>
         <li>
             <img src="/iui/iui/icon_list.png" style="	float: left; height: 35px; width: 46px;	margin: -8px 0 -7px -10px" />
-            <a href="/bbs?seq=<%= one.getSeq() %>&mobileView=Y" target="_iui"><%= CommonUtil.showHtml(one.getSubject()) %>
+            <a href="/bbs?seq=<%= one.getSeq() %>&viewMode=IUI" target="_iui"><%= CommonUtil.showHtml(one.getSubject()) %>
             	&nbsp;<str:replace replace="[0]" with=""><span style="color:#BBB">(<%= one.getMemo() %>)</span></str:replace></a>
         </li>
 <%
@@ -26,7 +26,7 @@ boolean hasMorePage = list.getPg() < pageTotal;
 
 if (hasMorePage) {	// Next Page 가 없으면 Page 버튼 숨긴다.
 %>
-<li><a href="/bbs?act=MLISTDETAIL&bbs=<%=request.getParameter("bbs")%>&pg=<%= list.getPg() + 1 %>" target="_replace">Get Next Page Stories...</a></li>
+<li><a href="/bbs?act=IUILISTDETAIL&bbs=<%=request.getParameter("bbs")%>&pg=<%= list.getPg() + 1 %>" target="_replace">Get Next Page Stories...</a></li>
 <% 
 } // end if
 %>
