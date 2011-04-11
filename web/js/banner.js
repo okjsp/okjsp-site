@@ -20,7 +20,7 @@ show : function() {
 
 showAside : function() {
 	document.write("<ul><li>"+
-			"<a href=\"/f.jsp?http://www.uengine.org\" target=\"_blank\">"+
+			"<a href=\"/f.jsp?http://uengine.org/web/guest/home\" target=\"_blank\">"+
 			"<img src=\"http://www.uengine.org/html/images/banner/uengine_banner.gif\" "+
 			"	alt=\"À¯¿£Áø\" ></a>"+
 			"</li>"+
