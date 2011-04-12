@@ -87,17 +87,6 @@ public class TwitterOauth {
 		twitter.setOAuthAccessToken(accessToken);
 		return twitter;
 	}
-
-	/*author : 김영수(topolo)
-	 * userId로 토큰 얻기 
-	 * useId : twitter 식별자
-	 */
-	private AccessToken loadAccessToken(int useId){
-		//to-do 저장방식 선정 
-		String token 		= "";// load from a persistent store
-		String tokenSecret 	= ""; // load from a persistent store
-		return new AccessToken(token, tokenSecret);
-	}
 	
 	/*author : 김영수(topolo)
 	 * site_id로  토큰 얻기 
