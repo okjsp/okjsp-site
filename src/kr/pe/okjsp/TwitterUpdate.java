@@ -22,8 +22,6 @@ public class TwitterUpdate {
 	
 	ResourceBundle rb = ResourceBundle.getBundle("kr.pe.okjsp.DB");
 	private String tweetStsText = "" ;
-	private String twitterId = rb.getString("TWUSER");
-	private String twitterPwd = rb.getString("TWPASS");
 	private String bitlyId = rb.getString("BITLYID");
 	private String bitlyKey = rb.getString("BITLYKEY");
 	
