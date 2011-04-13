@@ -35,6 +35,12 @@ showAside : function() {
 			"<img src=\"/images/banner/ucloud_134x40.gif\" "+
 			"	alt=\"KT Ucloud\" ></a>"+
 			"</li></ul>");
+},
+
+showContentSection : function() {
+	document.writeln("<a href=\"/f.jsp?http://raction.tistory.com/\">" +
+"<img src=\"/images/banner/raction_468x60.png\" alt=\"공짜 가라사대 랙션하라\"></a>")
 }
+
 
 };

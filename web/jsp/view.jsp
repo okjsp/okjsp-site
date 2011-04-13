@@ -14,6 +14,7 @@
     <title>OKJSP: <%= one.getSubject() %></title>
     <script src='/js/ban.js'></script>
     <script src="/js/okjsp.js"></script>
+    <script src="/js/banner.js"></script>
     <script src="/js/bannerData.js"></script>
 	<script src="/js/ajax.js"></script>
     <script src="/js/okboard_view.js"></script>
@@ -69,7 +70,11 @@ http://www.okjsp.pe.kr/seq/<%= one.getSeq() %></a></div>
         <%= one.getContentView() %>
         </div>
 
-<div style="height:30px"></div>
+<div style="margin:40px 0 20px; width:100%;text-align:center;">
+<script type="text/javascript">
+Banner.showContentSection();
+</script>
+</div>
         </td>
     </tr>
 <%-- 다운로드 파일 목록 --%>
