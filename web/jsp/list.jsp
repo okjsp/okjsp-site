@@ -68,7 +68,7 @@
 <%
 	boolean isAdBBS = "recruit".equals(list.getBbs()) && list.getPg() < 1;
 	if (isAdBBS) {
-		int [] seqs = {166426, 166364, 166308, 166258,
+		int [] seqs = {167022, 166426, 166364, 166258,
 				163503};
 		ArticleDao articleDao = new ArticleDao();
 		for(int seq : seqs) {
