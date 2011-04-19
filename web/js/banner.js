@@ -1,9 +1,9 @@
 var Banner = {
 main : [
 {
-tag: '<a href="/f.jsp?http://www.devmento.co.kr/devmain/seminar/edumento_detail.jsp?dataSeq=95" target="_blank">' +
-'<img src="/images/banner/devmento_smart_marketing_473x98.gif" ' +
-'alt="모바일 비즈니스 수익모델을 찾아라">' +
+tag: '<a href="/f.jsp?http://www.devmento.co.kr/devmain/seminar/edumento_detail.jsp?dataSeq=97" target="_blank">' +
+'<img src="/images/banner/devmento_nscreen_473x98.gif" ' +
+'alt="N스크린과 윈도우폰7 개발자 컨퍼런스">' +
 '</a>'
 },
 {
