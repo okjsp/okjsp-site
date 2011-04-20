@@ -111,7 +111,7 @@ for (var i = 0; i < kangcomList.length && i < 6 ; i++) {
         <td class="writer"><div><%= CommonUtil.rplc(one.getWriter(), "<", "&lt;") %></div></td>
         <td class="id"><div><%
 	    if (one.getId() != null) {
-	        %><img src="/profile/<%= one.getId() %>.jpg"
+	        %><img src="/profile/<%= one.getSid() %>.jpg"
 	        	alt="<%= one.getId() %>"
 	        	style="width:14px;height:14px"
 	        	onerror="this.src='/images/spacer.gif'"><%
@@ -132,16 +132,16 @@ for (var i = 0; i < kangcomList.length && i < 6 ; i++) {
 </tr>
 <tr align="center">
 	<td><div style="overflow: hidden; width: 73px; height: 12px;">
-		<a href="/seq/28685">머리식히는곳</a></div>
+		<a href="/seq/145985">개발자살던얘기</a></div>
 	</td>
     <td class="subject">
     	<div>
-	    	<a href="/seq/28685"><펌> 훌륭한프로그래머의딜레마</a>
+	    	<a href="/seq/145985">[공지] 농협에 근무해봤던 분들께 부탁드립니다.</a>
         </div>
 	</td>
-	<td class="writer"><div>현성</div></td>
+	<td class="writer"><div>환자</div></td>
 	<td class="id"></td>
-	<td title="2003" class="when tiny">2003</td>
+	<td title="2009-12-25 09:12:28" class="when tiny">맨날</td>
     </tr><%
 	HashMap bbsInfoMap = (HashMap)application.getAttribute("bbsInfoMap");
 	iterList = list.getAllRecentList(108).iterator();
@@ -179,7 +179,7 @@ for (var i = 0; i < kangcomList.length && i < 6 ; i++) {
         <td class="writer"><div><%= CommonUtil.rplc(one.getWriter(), "<", "&lt;") %></div></td>
         <td class="id"><div><%
     if (one.getId() != null) {
-        %><img src="/profile/<%= one.getId() %>.jpg"
+        %><img src="/profile/<%= one.getSid() %>.jpg"
         	alt="<%= one.getId() %>"
         	style="width:14px;height:14px"
         	onerror="this.src='/images/spacer.gif'"><%
