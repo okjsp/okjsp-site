@@ -1,9 +1,9 @@
 var Banner = {
 main : [
 {
-tag: '<a href="/f.jsp?http://www.devmento.co.kr/devmain/seminar/edumento_detail.jsp?dataSeq=97" target="_blank">' +
-'<img src="/images/banner/devmento_nscreen_473x98.gif" ' +
-'alt="N스크린과 윈도우폰7 개발자 컨퍼런스">' +
+tag: '<a href="/f.jsp?http://www.devmento.co.kr/devmain/main.jsp" target="_blank">' +
+'<img src="/images/banner/devmento_473x98.gif" ' +
+'alt="IT Portal DevMento 개발, IT 기술 이슈 동영상을 무료로 마음껏 볼 수 있는 곳">' +
 '</a>'
 },
 {
