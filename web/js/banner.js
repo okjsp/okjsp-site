@@ -13,6 +13,16 @@ tag: '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank
 '</a>'
 }
 ],
+content : [
+{
+tag: '<a href="/f.jsp?http://raction.tistory.com/">' +
+'<img src="/images/banner/raction_468x60.png" alt="공짜 가라사대 랙션하라"></a>'
+},
+{
+tag: '<a href="/f.jsp?http://www.dbguide.net/offline.db">' +
+'<img src="/images/banner/kdb_468x60.jpg" alt="한국데이터베이스진흥원"></a>'
+}
+],
 show : function() {
 	var idx = Math.floor(Math.random() * Banner.main.length);
 	document.write(this.main[idx].tag);
@@ -38,8 +48,8 @@ showAside : function() {
 },
 
 showContentSection : function() {
-	document.writeln("<a href=\"/f.jsp?http://raction.tistory.com/\">" +
-"<img src=\"/images/banner/raction_468x60.png\" alt=\"공짜 가라사대 랙션하라\"></a>")
+	var idx = Math.floor(Math.random() * Banner.content.length);
+	document.write(this.content[idx].tag);
 }
 
 
