@@ -1,6 +1,11 @@
 var Banner = {
 main : [
 {
+tag: '<a href="/f.jsp?http://www.choongang.co.kr/html/m0_s1_4_s1.asp?id=25205&r=okjsp" target="_blank">' +
+'<img src="/images/banner/choongang_473x98.gif" ' +
+'alt="[전액국비무료]2011년 IT취업연수생 모집(자바,닷넷과정)">' +
+'</a>'
+},
 tag: '<a href="/f.jsp?http://www.devmento.co.kr/devmain/main.jsp" target="_blank">' +
 '<img src="/images/banner/devmento_473x98.gif" ' +
 'alt="IT Portal DevMento 개발, IT 기술 이슈 동영상을 무료로 마음껏 볼 수 있는 곳">' +
