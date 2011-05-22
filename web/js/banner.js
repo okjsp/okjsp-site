@@ -35,7 +35,13 @@ show : function() {
 },
 
 showAside : function() {
-	document.write("<ul><li>"+
+	document.write("<ul>" +
+			"<li>"+
+			"<a href=\"/f.jsp?http://onoffmix.com/event/3010\" target=\"_blank\">"+
+			"<img src=\"/images/banner/html5_134x60.jpg\" "+
+			"	alt=\"실무 적용이 가능한 예제로 배우는 HTML5 교육\" ></a>"+
+			"</li>"+
+			"<li>"+
 			"<a href=\"/f.jsp?http://uengine.org/web/guest/home\" target=\"_blank\">"+
 			"<img src=\"http://www.uengine.org/html/images/banner/uengine_banner.gif\" "+
 			"	alt=\"유엔진\" ></a>"+
