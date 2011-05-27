@@ -29,6 +29,14 @@ tag: '<a href="/f.jsp?http://www.dbguide.net/offline.db">' +
 '<img src="/images/banner/kdb_468x60.jpg" alt="한국데이터베이스진흥원"></a>'
 }
 ],
+left : [
+{
+	tag: '<li><A href="/f.jsp?http://okmindmap.com/" title="웹기반 협업 마인드맵, OKJSP 유저 박기원님이 참여한 서비스" target="imaso">okmindmap</A></li>'
+},
+{
+	tag: '<li><A href="/f.jsp?http://bit.ly/cIQ7fA" title="안드로이드 개발환경 구축" target="android">[유료]안드로이드 개발매뉴얼1</A></li>'
+}
+],
 show : function() {
 	var idx = Math.floor(Math.random() * Banner.main.length);
 	document.write(this.main[idx].tag);
@@ -57,6 +65,17 @@ showAside : function() {
 			"<img src=\"/images/banner/ucloud_134x40.gif\" "+
 			"	alt=\"KT Ucloud\" ></a>"+
 			"</li></ul>");
+},
+showLeftSide : function() {
+	for(var i = 0; i < Banner.left.length; i++) {
+		document.writeln(Banner.left[i].tag);
+	}
+},
+
+showContentRight : function() {
+	var tag = '<a href="/f.jsp?http://www.kjdc.org/?okjsp"><img src="/images/banner/JCO_250x250.gif" id="contentBanner" '+
+		'style="float: right; margin-left: 10px; margin-bottom: 10px;"></a>';
+	document.write(tag);
 },
 
 showContentSection : function() {
