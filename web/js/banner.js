@@ -7,9 +7,9 @@ tag: '<a href="/f.jsp?http://www.choongang.co.kr/html/m0_s1_4_s1.asp?id=25205&r=
 '</a>'
 },
 {
-tag: '<a href="/f.jsp?http://www.devmento.co.kr/devmain/main.jsp" target="_blank">' +
-'<img src="/images/banner/devmento_473x98.gif" ' +
-'alt="IT Portal DevMento 개발, IT 기술 이슈 동영상을 무료로 마음껏 볼 수 있는 곳">' +
+tag: '<a href="/f.jsp?http://www.devmento.co.kr/devmain/seminar/edumento_detail.jsp?dataSeq=101" target="_blank">' +
+'<img src="/images/banner/devmento_MS2_473x98.gif" ' +
+'alt="실전 윈도우폰 망고 앱 디자인 & 개발">' +
 '</a>'
 },
 {
