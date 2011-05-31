@@ -31,6 +31,9 @@ tag: '<a href="/f.jsp?http://www.dbguide.net/offline.db">' +
 ],
 left : [
 {
+	tag: '<li><A href="/f.jsp?http://www.innorix.com/DS/" title="대용량 파일/폴더 업로드 컴포넌트" target="innorix">업로드는 InnoDS</A></li>'
+},
+{
 	tag: '<li><A href="/f.jsp?http://okmindmap.com/" title="웹기반 협업 마인드맵, OKJSP 유저 박기원님이 참여한 서비스" target="imaso">okmindmap</A></li>'
 },
 {
@@ -44,16 +47,6 @@ show : function() {
 
 showAside : function() {
 	document.write("<ul>" +
-			"<li>"+
-			"<a href=\"/f.jsp?http://onoffmix.com/event/3010\" target=\"_blank\">"+
-			"<img src=\"/images/banner/html5_134x60.jpg\" "+
-			"	alt=\"실무 적용이 가능한 예제로 배우는 HTML5 교육\" ></a>"+
-			"</li>"+
-			"<li>"+
-			"<a href=\"/f.jsp?http://uengine.org/web/guest/home\" target=\"_blank\">"+
-			"<img src=\"http://www.uengine.org/html/images/banner/uengine_banner.gif\" "+
-			"	alt=\"유엔진\" ></a>"+
-			"</li>"+
 			"<li>"+
 			"<a href=\"/f.jsp?http://www.apptalk.tv\" target=\"_blank\" >"+
 			"<img src=\"/images/banner/apptalk_134x60.jpg\" "+
