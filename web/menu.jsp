@@ -32,7 +32,7 @@
 	<hr>ad:
   <ul id="menuad">
   <script type="text/javascript">
-  Banner.showLeftSide();
+  if (typeof Banner=="object") { Banner.showLeftSide(); }
   </script>
   </ul>
 

@@ -74,6 +74,11 @@ showContentRight : function() {
 showContentSection : function() {
 	var idx = Math.floor(Math.random() * Banner.content.length);
 	document.write(this.content[idx].tag);
+},
+
+showFooter : function() {
+	document.write('<a href="/f.jsp?http://www.iBookScan.co.kr/" title="서적 PDF 스캔 서비스" target="_blank">'
+			+'<img src="/images/banner/ibookscan_468x60.gif" border="0"></a>')
 }
 
 

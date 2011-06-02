@@ -2,15 +2,10 @@
 <div id="footer" class="tablestyle">
 java/jsp/eclipse
 <a href="/" style="font-size:11px">http://www.okjsp.pe.kr</a>
-<%
-	String bannerPath = "/images/banner/ibookscan_468x60.gif";
-	String bannerTitle = "서적 PDF 스캔 서비스";
-	String bannerLink = "/f.jsp?http://www.iBookScan.co.kr/";
-%>
 <div style="text-align:center">
- <a href="<%= bannerLink %>"
- title="<%= bannerTitle %>" target="_blank">
- <img src="<%= bannerPath %>" border="0"></a>
+<script type="text/javascript">
+if (typeof Banner == "object") { Banner.showFooter(); }
+</script>
 </div>
 <div>
 <ul>
