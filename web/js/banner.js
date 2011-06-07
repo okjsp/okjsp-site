@@ -48,7 +48,7 @@ show : function() {
 showAside : function() {
 	document.write("<ul>" +
 			"<li>"+
-			"<a href=\"/f.jsp?http://w3labs.kr/?p=671" target=\"_blank\" >"+
+			"<a href=\"/f.jsp?http://w3labs.kr/?p=671\" target=\"_blank\" >"+
 			"<img src=\"/images/banner/Sencha_PhoneGap_Banner_134x60.png\" "+
 			"	alt=\"센차터치, 폰갭\">"+
 			"</a>"+
