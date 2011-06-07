@@ -48,12 +48,6 @@ show : function() {
 showAside : function() {
 	document.write("<ul>" +
 			"<li>"+
-			"<a href=\"/f.jsp?http://w3labs.kr/?p=671\" target=\"_blank\" >"+
-			"<img src=\"/images/banner/Sencha_PhoneGap_Banner_134x60.png\" "+
-			"	alt=\"¼¾Â÷ÅÍÄ¡, Æù°¸\">"+
-			"</a>"+
-			"</li>"+
-			"<li>"+
 			"<a href=\"/f.jsp?http://www.apptalk.tv\" target=\"_blank\" >"+
 			"<img src=\"/images/banner/apptalk_134x60.jpg\" "+
 			"	alt=\"¼¼»óÀÇ ¸ðµç ¾ÛÀ» ¿µ»óÀ¸·Î. ¾ÛÀÇ ¸ðµç °Í, ¾ÛÅå\">"+
