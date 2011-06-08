@@ -24,7 +24,7 @@ public class ArticleDao {
 		"select max(fseq) from okboard_file";
 
 	public static final String QUERY_ADD = 
-		"insert into okboard (bbsid, seq, \"ref\", step, lev, id, writer,subject, content, \"password\", email, homepage, hit, memo, sts,wtime, ip, html, ccl_id) " +
+		"insert into okboard (bbsid, seq, \"ref\", step, lev, id, writer, subject, content, \"password\", email, homepage, hit, memo, sts, wtime, ip, html, ccl_id) " +
 		" values (?,?,?,0,0, ?,?,?,?,old_password(?),?,?,0,0,1, SYSTIMESTAMP, ?,?,?)";
 
 	public static final String QUERY_NEW_REF =
@@ -137,7 +137,7 @@ public class ArticleDao {
 			pstmt.setString(++idx, article.getBbs());
 			pstmt.setInt   (++idx, article.getSeq());
 			pstmt.setInt   (++idx, article.getRef());
-			pstmt.setString(++idx, article.getId());
+			pstmt.setString(++idx, String.valueOf(article.getSid()));
 			pstmt.setString(++idx, article.getWriter());
 			pstmt.setString(++idx, article.getSubject());
 			pstmt.setString(++idx, article.getContent());
