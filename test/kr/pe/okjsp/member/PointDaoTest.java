@@ -133,7 +133,7 @@ public class PointDaoTest extends TestCase {
 		Article article = new Article();
 		article.setBbs("recruit");
 		article.setSubject("subject");
-		article.setId(member.getId());
+		article.setId(String.valueOf(member.getSid()));
 		article.setSid(member.getSid());
 		article.setContent("content");
 		article.setWriter(member.getId());

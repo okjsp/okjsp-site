@@ -396,7 +396,7 @@ public class ArticleDao {
 			conn = dbCon.getConnection();
 			
 			if ("recruit".equals(article.getBbs())) {
-				checkSpam(conn, "recruit", article.getId());
+				checkSpam(conn, "recruit", String.valueOf(article.getSid()));
 			}
 			
 			conn.setAutoCommit(false);
@@ -432,7 +432,7 @@ public class ArticleDao {
 		return result;
 	}
 
-	public void checkSpam(Connection conn, String bbs, String id) throws IOException {
+	public void checkSpam(Connection conn, String bbs, String sid) throws IOException {
 		String sql = "select count(*) FROM okboard WHERE bbsid = ? and id = ? and wtime > (sysdate - 2)";
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -440,7 +440,7 @@ public class ArticleDao {
 		try {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, bbs);
-			pstmt.setString(2, id);
+			pstmt.setString(2, sid);
 
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
