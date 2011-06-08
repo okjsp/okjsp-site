@@ -7,6 +7,8 @@
 <%@page import="java.util.Arrays"%>
 <% long stime = System.currentTimeMillis(); %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core"%>
+<%@ taglib uri="/WEB-INF/tld/ok-taglib.tld" prefix="okbbs" %>
+<%@ taglib uri="/WEB-INF/tld/taglibs-string.tld" prefix="str" %>
 <jsp:useBean id="list" class="kr.pe.okjsp.ListHandler"/>
 <jsp:setProperty name="list" property="*" />
 <%
@@ -104,7 +106,9 @@ while (iter.hasNext()) {
         <td class="subject">
             <div>
             <a href="/seq/<%= one.getSeq() %>" >
+            <okbbs:mark word='<%= keyword %>'>
 <%= CommonUtil.showHtml(one.getSubject()) %>&nbsp;
+            </okbbs:mark>
         <span class="tiny"><str:replace replace="[0]" with="">[<%= one.getMemo() %>]</str:replace></span>
             </a>
             </div>
@@ -130,42 +134,15 @@ while (iter.hasNext()) {
     <td colspan="7" class="td" align="center">
 <%
 link = "/bbs?act=LIST"+link;
-StringBuffer sbuf = new StringBuffer();
-
-int cpage = Integer.parseInt(CommonUtil.nchk(request.getParameter("pg"),"0"));
-int pageTotal = (list.getCnt()-1)/list.getPageSize();
-
-int pageGroupSize = 10;
-int pageGroupStart = (cpage/pageGroupSize) * pageGroupSize;
-int pageGroupEnd   = pageGroupStart + pageGroupSize;
-if (pageGroupEnd>pageTotal)
-    pageGroupEnd = pageTotal + 1;
-boolean hasPreviousPage = cpage-pageGroupSize>=0;
-boolean hasNextPage     = pageGroupStart+pageGroupSize < pageTotal+1;
-
-sbuf.append(makeLink(0, "처음 "));
-
-if (hasPreviousPage) {
-    sbuf.append(makeLink(pageGroupStart-1, "◀이전 "));
-} // end if
-
-for(int i=pageGroupStart; i<pageGroupEnd ;i++){
-	if (i==cpage) {
-        sbuf.append("[<b>")
-            .append(i+1)
-            .append("</b>]");
-	} else {
-        sbuf.append(makeLink(i, "["+(i+1)+"]"));
-	} // end if
-} // end for
-
-if (hasNextPage) {
-    sbuf.append(makeLink(pageGroupEnd, " 다음▶"));
-} // end if
-
-sbuf.append(makeLink(pageTotal, " 끝"));
-out.println(sbuf.toString());
+request.setAttribute("total", ""+list.getCnt());
+request.setAttribute("pageSize", ""+list.getPageSize());
 %>
+<okbbs:page link='<%= link %>'
+            beginlabel="처음 "
+            endlabel=" 끝"
+            prevlabel="◀이전 "
+            nextlabel=" 다음▶"
+            pagegroupsize="10" />
     </td>
     </tr>
     <tr>
@@ -232,14 +209,3 @@ function view(n) {
 <jsp:include page="/googleAnalytics.jsp" />
 </body>
 </html>
-<%!
-    public String makeLink(int page, String label) {
-        StringBuffer tmp = new StringBuffer();
-
-        tmp.append("<a href='"+page+"'>")
-            .append(label)
-            .append("</a>");
-
-        return tmp.toString();
-    }
-%>
