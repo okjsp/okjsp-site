@@ -57,6 +57,7 @@ public class ControllerServlet extends HttpServlet {
 	String loginPath = Navigation.getPath("LOGFORM");
 	if (!isValid) {
     	res.sendRedirect(loginPath);
+    	return;
     }
 
     boolean isRestricted = "notice".equals(bbs) 
@@ -65,6 +66,7 @@ public class ControllerServlet extends HttpServlet {
 	if (isRestricted && ("ADD".equals(act) || "REPLY".equals(act)) ) {
     	if (member == null ) {
 			res.sendRedirect(loginPath);
+			return;
     	} else if ( !( "Kenny".equals(member.getId()) ||
     			"topolo".equals(member.getId()) ||
     			"kenu".equals(member.getId()) )){
