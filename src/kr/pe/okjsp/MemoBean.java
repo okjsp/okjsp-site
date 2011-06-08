@@ -8,39 +8,18 @@ import kr.pe.okjsp.util.*;
  * @author  kenu  Memo 정보를 담아두는 Bean
  */
 public class MemoBean {
-    /**
-	 * @uml.property  name="seq"
-	 */
     private int seq;
-    /**
-	 * @uml.property  name="mseq"
-	 */
     private int mseq;
-    /**
-	 * @uml.property  name="id"
-	 */
     private String id;
-    /**
-	 * @uml.property  name="writer"
-	 */
     private String writer;
-    /**
-	 * @uml.property  name="bcomment"
-	 */
     private String bcomment;
-    /**
-	 * @uml.property  name="wtime"
-	 */
     private Timestamp wtime;
-    /**
-	 * @uml.property  name="ip"
-	 */
     private String ip;
+    private long sid;
 
 	/**
 	 * Returns the bcomment.
 	 * @return  String
-	 * @uml.property  name="bcomment"
 	 */
 	public String getBcomment() {
 		return bcomment;
@@ -49,7 +28,6 @@ public class MemoBean {
 	/**
 	 * Returns the mseq.
 	 * @return  int
-	 * @uml.property  name="mseq"
 	 */
 	public int getMseq() {
 		return mseq;
@@ -58,7 +36,6 @@ public class MemoBean {
 	/**
 	 * Returns the seq.
 	 * @return  int
-	 * @uml.property  name="seq"
 	 */
 	public int getSeq() {
 		return seq;
@@ -67,7 +44,6 @@ public class MemoBean {
 	/**
 	 * Returns the writer.
 	 * @return  String
-	 * @uml.property  name="writer"
 	 */
 	public String getWriter() {
 		return writer;
@@ -85,7 +61,6 @@ public class MemoBean {
 	/**
 	 * Returns the wtime.
 	 * @return  Timestamp
-	 * @uml.property  name="wtime"
 	 */
 	public Timestamp getWtime() {
 		return wtime;
@@ -103,7 +78,6 @@ public class MemoBean {
 	/**
 	 * Sets the bcomment.
 	 * @param bcomment  The bcomment to set
-	 * @uml.property  name="bcomment"
 	 */
 	public void setBcomment(String bcomment) {
 		this.bcomment = bcomment;
@@ -112,7 +86,6 @@ public class MemoBean {
 	/**
 	 * Sets the mseq.
 	 * @param mseq  The mseq to set
-	 * @uml.property  name="mseq"
 	 */
 	public void setMseq(int mseq) {
 		this.mseq = mseq;
@@ -121,7 +94,6 @@ public class MemoBean {
 	/**
 	 * Sets the seq.
 	 * @param seq  The seq to set
-	 * @uml.property  name="seq"
 	 */
 	public void setSeq(int seq) {
 		this.seq = seq;
@@ -130,7 +102,6 @@ public class MemoBean {
 	/**
 	 * Sets the writer.
 	 * @param writer  The writer to set
-	 * @uml.property  name="writer"
 	 */
 	public void setWriter(String writer) {
 		this.writer = writer;
@@ -139,7 +110,6 @@ public class MemoBean {
 	/**
 	 * Sets the wtime.
 	 * @param wtime  The wtime to set
-	 * @uml.property  name="wtime"
 	 */
 	public void setWtime(Timestamp wtime) {
 		this.wtime = wtime;
@@ -148,7 +118,6 @@ public class MemoBean {
 	/**
 	 * 메모글 ip를 반환합니다.
 	 * @return  ip
-	 * @uml.property  name="ip"
 	 */
 	public String getIp() {
 		return ip;
@@ -157,7 +126,6 @@ public class MemoBean {
 	/**
 	 * 메모글 ip를 설정합니다.
 	 * @param  string
-	 * @uml.property  name="ip"
 	 */
 	public void setIp(String string) {
 		ip = string;
@@ -166,7 +134,6 @@ public class MemoBean {
 	/**
 	 * id 반환
 	 * @return  id
-	 * @uml.property  name="id"
 	 */
 	public String getId() {
 		return id;
@@ -174,10 +141,23 @@ public class MemoBean {
 
 	/**
 	 * @param  id
-	 * @uml.property  name="id"
 	 */
 	public void setId(String id) {
 		this.id = id;
+	}
+
+	/**
+	 * @param sid
+	 */
+	public void setSid(long sid) {
+		this.sid = sid;
+	}
+
+	/**
+	 * @return
+	 */
+	public long getSid() {
+		return sid;
 	}
 
 }

@@ -15,19 +15,19 @@ import kr.pe.okjsp.util.DbCon;
 public class MemoHandler {
 	DbCon dbCon = new DbCon();
     public final static String MEMO_QUERY =
-            "select mseq, id, writer, bcomment, wtime, ip from okboard_memo where seq = ? order by mseq";
+            "select mseq, id, writer, bcomment, wtime, ip, sid from okboard_memo where seq = ? order by mseq";
 
     public final static String MEMO_COUNT =
             "select count(mseq) from okboard_memo where bcomment like ?";
 
     public final static String MEMO_RECENT_BCOMMENT =
-    	"select mseq, a.id, a.writer, bcomment, a.wtime, a.seq, a.ip from okboard_memo a, okboard b where " +
+    	"select mseq, a.id, a.writer, bcomment, a.wtime, a.seq, a.ip, a.sid from okboard_memo a, okboard b where " +
     	" b.bbsid not in ('jco', 'jcocfrc', 'perf', '0612', 'eclipsejava') " +
     	" and a.seq = b.seq  and mseq>=0 and bcomment like ? " +
     	" order by mseq desc for orderby_num() between ? and ?";
 
     public final static String MEMO_RECENT_WRITER =
-    	"select mseq, a.id, a.writer, bcomment, a.wtime, a.seq, a.ip from okboard_memo a, okboard b where " +
+    	"select mseq, a.id, a.writer, bcomment, a.wtime, a.seq, a.ip, a.sid from okboard_memo a, okboard b where " +
     	" b.bbsid not in ('jco', 'jcocfrc', 'perf', '0612', 'eclipsejava') " +
     	" and a.seq = b.seq  and mseq>=0 and a.writer like ? order by mseq desc for orderby_num() between ? and ?";
 
@@ -74,6 +74,7 @@ public class MemoHandler {
 				mb.setBcomment(CommonUtil.a2k(rs.getString(4)));
 				mb.setWtime(rs.getTimestamp(5));
 				mb.setIp(rs.getString(6));
+				mb.setSid(rs.getLong(7));
 
 				arrayList.add(mb);
 			}
@@ -124,6 +125,7 @@ public class MemoHandler {
 				mb.setBcomment(CommonUtil.a2k(rs.getString   ("bcomment")));
 				mb.setWtime   (rs.getTimestamp("wtime")   );
 				mb.setIp      (rs.getString   ("ip")      );
+				mb.setSid     (rs.getLong     ("sid")     );
 
 				arrayList.add(mb);
 			}
