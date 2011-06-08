@@ -108,7 +108,7 @@ for (var i = 0; i < kangcomList.length && i < 6 ; i++) {
         <td class="writer"><div><%= CommonUtil.rplc(one.getWriter(), "<", "&lt;") %></div></td>
         <td class="id"><div><%
 	    if (one.getId() != null) {
-	        %><img src="/profile/<%= one.getSid() %>.jpg"
+	        %><img src="/profile/<%= one.getId() %>.jpg"
 	        	alt="<%= one.getId() %>"
 	        	style="width:14px;height:14px"
 	        	onerror="this.src='/images/spacer.gif'"><%
@@ -176,7 +176,7 @@ for (var i = 0; i < kangcomList.length && i < 6 ; i++) {
         <td class="writer"><div><%= CommonUtil.rplc(one.getWriter(), "<", "&lt;") %></div></td>
         <td class="id"><div><%
     if (one.getId() != null) {
-        %><img src="/profile/<%= one.getSid() %>.jpg"
+        %><img src="/profile/<%= one.getId() %>.jpg"
         	alt="<%= one.getId() %>"
         	style="width:14px;height:14px"
         	onerror="this.src='/images/spacer.gif'"><%
