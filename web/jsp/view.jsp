@@ -230,8 +230,8 @@ tag´Â <a href="<%= Navigation.getPath("SECURE_DOMAIN") %>/jsp/member/login.jsp">
 </li>
 <li class="w"><%
     if (mb.getId() != null) {
-        %><img src="http://www.okjsp.pe.kr/profile/<%= mb.getId() %>.jpg"
-        	alt="<%= mb.getId() %>"
+        %><img src="http://www.okjsp.pe.kr/profile/<%= mb.getSid() %>.jpg"
+        	alt="<%= mb.getSid() %>"
         	style="width:33px;height:33px"
         	onerror="this.src='/images/spacer.gif'"><%
     }
