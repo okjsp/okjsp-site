@@ -6,15 +6,16 @@ pageEncoding="euc-kr"
 <meta http-equiv="Content-Type" content="text/html;charset=EUC-KR">
     <title>OKJSP Site Search</title>
     <script src="/js/okjsp.js"></script>
+    <script src="/js/banner.js"></script>
     <script src="/js/bannerData.js"></script>
     <script src="/js/okboard.js"></script>
 <link rel="stylesheet" href="/css/okjsp2007.css.jsp" type="text/css">
 </head>
-<body class="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<body class="body" style="margin:0">
 <jsp:include page="/top.jsp" />
-<table width="882" border="0" cellspacing="0" cellpadding="0">
+<table class="tablestyle, body" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td width='120' valign='top'>
+    <td valign='top'>
       <jsp:include page="/menu.jsp" />
     </td>
     <td valign='top'>
