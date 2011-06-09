@@ -19,6 +19,7 @@ tag: '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank
 '</a>'
 }
 ],
+
 content : [
 {
 tag: '<a href="/f.jsp?http://raction.tistory.com/">' +
@@ -29,6 +30,7 @@ tag: '<a href="/f.jsp?http://www.dbguide.net/offline.db">' +
 '<img src="/images/banner/kdb_468x60.jpg" alt="한국데이터베이스진흥원"></a>'
 }
 ],
+
 left : [
 {
 	tag: '<li><A href="/f.jsp?http://www.innorix.com/DS/" title="대용량 파일/폴더 업로드 컴포넌트" target="innorix">업로드는 InnoDS</A></li>'
@@ -40,8 +42,14 @@ left : [
 	tag: '<li><A href="/f.jsp?http://bit.ly/cIQ7fA" title="안드로이드 개발환경 구축" target="android">[유료]안드로이드 개발매뉴얼1</A></li>'
 }
 ],
+footer : [
+{
+	tag: '<a href="/f.jsp?http://raction.tistory.com/">' +
+	'<img src="/images/banner/raction_468x60.png" alt="공짜 가라사대 랙션하라"></a>'
+}
+],
 show : function() {
-	var idx = Math.floor(Math.random() * Banner.main.length);
+	var idx = Math.floor(Math.random() * this.main.length);
 	document.write(this.main[idx].tag);
 },
 
@@ -59,9 +67,10 @@ showAside : function() {
 			"	alt=\"KT Ucloud\" ></a>"+
 			"</li></ul>");
 },
+
 showLeftSide : function() {
-	for(var i = 0; i < Banner.left.length; i++) {
-		document.writeln(Banner.left[i].tag);
+	for(var i = 0; i < this.left.length; i++) {
+		document.writeln(this.left[i].tag);
 	}
 },
 
@@ -72,13 +81,13 @@ showContentRight : function() {
 },
 
 showContentSection : function() {
-	var idx = Math.floor(Math.random() * Banner.content.length);
+	var idx = Math.floor(Math.random() * this.content.length);
 	document.write(this.content[idx].tag);
 },
 
 showFooter : function() {
-	document.write('<a href="/f.jsp?http://www.iBookScan.co.kr/" title="서적 PDF 스캔 서비스" target="_blank">'
-			+'<img src="/images/banner/ibookscan_468x60.gif" border="0"></a>')
+	var idx = Math.floor(Math.random() * this.footer.length);
+	document.write(this.footer[idx].tag)
 }
 
 
