@@ -31,9 +31,9 @@ while (iter.hasNext()) {
 	String subject = kr.pe.okjsp.util.CommonUtil.a2k(b.getSubject());
 %>
 <li>
-<a href="/bbs?seq=<%= seq %>"><%= subject %>
+<a href="/seq/<%= seq %>"><%= subject %>
 [<%= sdf.format(b.getCredate()) %> checked]</a>
-<a href="javascript:deleteBookmark(<%= seq %>)" title="delete">x</a>
+<a style="cursor:pointer" onclick="deleteBookmark(<%= seq %>)" title="delete">x</a>
 </li>
 <%
 }  // end while
