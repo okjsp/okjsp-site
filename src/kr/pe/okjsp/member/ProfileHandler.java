@@ -32,12 +32,12 @@ import com.oreilly.servlet.MultipartRequest;
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
-		String id = null;
+		long sid = 0L;
 		try {
-			id = ((Member)request.getSession().getAttribute("member")).getId();
+			sid = ((Member)request.getSession().getAttribute("member")).getSid();
 		} catch (Exception e) {
 		}
-		if (id == null || id.length() == 0) {
+		if (sid == 0) {
 			throw new ServletException("need login");
 		}
 		// 임시디렉토리에 파일 저장
@@ -45,7 +45,7 @@ import com.oreilly.servlet.MultipartRequest;
 		// 파일 리사이징
         Thumbnailer tt = new Thumbnailer(file.getPath(),
         		getServletContext().getRealPath(request.getContextPath())
-				+ "/profile/"+ id + ".jpg", 
+				+ "/profile/"+ sid + ".jpg", 
                 77, 77);
         tt.createThumbnail();
         try {
@@ -56,7 +56,7 @@ import com.oreilly.servlet.MultipartRequest;
         System.out.println("del:"+delete);
 		// DB 기록
 		try {
-			storeProfileInfo(id);
+			storeProfileInfo(sid);
 		} catch (SQLException e) {
 			throw new ServletException("can't log profile");
 		}
@@ -96,7 +96,7 @@ import com.oreilly.servlet.MultipartRequest;
 		return file;
 	}   	  	    
 
-	private void storeProfileInfo(String id) throws SQLException {
+	private void storeProfileInfo(long id) throws SQLException {
 		new MemberHandler().profileLog(id);
 	}
 	

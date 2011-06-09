@@ -38,7 +38,7 @@ public class MemberHandler {
 	static final String QUERY_UPDATE
 		= "update okmember set \"password\" = old_password(?), name=?, email=?, homepage=?, mailing=? where id = ?";
 	static final String QUERY_PROFILELOG
-		= "update okmember set profile = 'Y' where id = ?";
+		= "update okmember set profile = 'Y' where sid = ?";
 	static final String QUERY_DELETE
 		= "delete from okmember where id = ? and \"password\" = old_password(?)";
 	static final String QUERY_MAILING_STATUS
@@ -382,16 +382,16 @@ public class MemberHandler {
 
 	/**
 	 * 프로필 업데이트
-	 * @param id
+	 * @param sid
 	 * @throws SQLException
 	 */
-	public void profileLog(String id) throws SQLException {
+	public void profileLog(long sid) throws SQLException {
 		Connection pconn = dbCon.getConnection();
 		PreparedStatement pstmt = null;
 
 		try{
 			pstmt = pconn.prepareStatement(QUERY_PROFILELOG);
-			pstmt.setString(1, id);
+			pstmt.setLong(1, sid);
 			pstmt.executeUpdate();
 
 			pstmt.close();

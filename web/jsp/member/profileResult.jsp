@@ -9,8 +9,8 @@
 </head>
 <body>
 <%
-	String id = CommonUtil.getCookie(request, "okid");
+	String sid = CommonUtil.getCookie(request, "sid");
 %>
-<img src="/profile/<%= id %>.jpg">
+<img src="/profile/<%= sid %>.jpg">
 </body>
 </html>

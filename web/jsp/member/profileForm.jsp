@@ -19,7 +19,7 @@
 <body>
 <% 
 	if ("Y".equals(member.getProfile())) {
-%><img src="/profile/<%= member.getId() %>.jpg" alt="<%= member.getId() %>"><%
+%><img src="/profile/<%= member.getSid() %>.jpg" alt="<%= member.getSid() %>"><%
 	}
 %>
 <form enctype="multipart/form-data" method="post" action="/profile/write">
