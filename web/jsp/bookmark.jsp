@@ -4,7 +4,7 @@ pageEncoding="euc-kr"
 %><html>
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=EUC-KR">
-    <title>OKJSP Site Search</title>
+    <title>OKJSP Bookmark</title>
     <script src="/js/okjsp.js"></script>
     <script src="/js/banner.js"></script>
     <script src="/js/bannerData.js"></script>
