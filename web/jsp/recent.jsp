@@ -15,12 +15,11 @@
     <script type="text/javascript" src="/js/okjsp.js"></script>
     <script type="text/javascript" src="/js/banner.js"></script>
     <script type="text/javascript" src="/js/bannerData.js"></script>
-    <!-- Dependencies --> 
-	<script src="http://yui.yahooapis.com/2.7.0/build/yahoo-dom-event/yahoo-dom-event.js" type="text/javascript"></script> 
- 
-	<!-- Source file --> 
-	<script src="http://yui.yahooapis.com/2.7.0/build/animation/animation-min.js" type="text/javascript"></script> 
     <LINK rel="STYLESHEET" type="TEXT/CSS" HREF="/css/okjsp2007.css.jsp">
+    <style type="text/css">
+.recent_first {
+overflow: hidden; width: 73px; height: 14px;
+}</style>
 </head>
 
 <body class="body" style="margin:0">
@@ -128,8 +127,8 @@ for (var i = 0; i < kangcomList.length && i < 6 ; i++) {
     </td>
 </tr>
 <tr align="center">
-	<td><div style="overflow: hidden; width: 73px; height: 12px;">
-		<a href="/seq/145985">개발자살던얘기</a></div>
+	<td><div class="recent_first">
+		<a href="/seq/145985">사는 얘기</a></div>
 	</td>
     <td class="subject">
     	<div>
@@ -138,7 +137,7 @@ for (var i = 0; i < kangcomList.length && i < 6 ; i++) {
 	</td>
 	<td class="writer"><div>환자</div></td>
 	<td class="id"></td>
-	<td title="2009-12-25 09:12:28" class="when tiny">맨날</td>
+	<td title="2009-12-25 09:12:28" class="when tiny">2년전</td>
     </tr><%
 	HashMap bbsInfoMap = (HashMap)application.getAttribute("bbsInfoMap");
 	iterList = list.getAllRecentList(108).iterator();
@@ -163,7 +162,7 @@ for (var i = 0; i < kangcomList.length && i < 6 ; i++) {
 	    i++;
 %>
     <tr align="center">
-        <td><div style="width:73px;height:12px;overflow:hidden">
+        <td><div class="recent_first">
         <a href="/bbs?act=LIST&bbs=<%= one.getBbs() %>">
         <%= bbsInfo.getName() %></a></div></td>
         <td class="subject"><div>
