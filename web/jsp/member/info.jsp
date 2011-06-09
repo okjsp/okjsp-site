@@ -109,7 +109,7 @@ $(function(){
 	<tr>
 		<td>
 			<a href="/jsp/member/profileForm.jsp">프로필 이미지 수정
-			<img alt="<%= member.getId() %>" src="/profile/<%= member.getId() %>.jpg">
+			<img alt="<%= member.getSid() %>" src="/profile/<%= member.getSid() %>.jpg">
 			</a>
 		</td>
 	</tr>
