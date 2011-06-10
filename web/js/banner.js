@@ -21,14 +21,6 @@ tag: '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank
 ],
 
 content : [
-{
-tag: '<a href="/f.jsp?http://raction.tistory.com/">' +
-'<img src="/images/banner/raction_468x60.png" alt="공짜 가라사대 랙션하라"></a>'
-},
-{
-tag: '<a href="/f.jsp?http://www.dbguide.net/offline.db">' +
-'<img src="/images/banner/kdb_468x60.jpg" alt="한국데이터베이스진흥원"></a>'
-}
 ],
 
 left : [
@@ -81,8 +73,10 @@ showContentRight : function() {
 },
 
 showContentSection : function() {
-	var idx = Math.floor(Math.random() * this.content.length);
-	document.write(this.content[idx].tag);
+	if (this.content.length > 0) {
+		var idx = Math.floor(Math.random() * this.content.length);
+		document.write(this.content[idx].tag);
+	}
 },
 
 showFooter : function() {
