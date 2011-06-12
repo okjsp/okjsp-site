@@ -1,12 +1,6 @@
 var Banner = {
 main : [
 {
-tag: '<a href="/f.jsp?http://www.choongang.co.kr/html/m0_s1_4_s1.asp?id=25205&r=okjsp" target="_blank">' +
-'<img src="/images/banner/choongang_473x98.gif" ' +
-'alt="[전액국비무료]2011년 IT취업연수생 모집(자바,닷넷과정)">' +
-'</a>'
-},
-{
 tag: '<a href="/f.jsp?http://www.devmento.co.kr/devmain/seminar/edumento_detail.jsp?dataSeq=101" target="_blank">' +
 '<img src="/images/banner/devmento_MS2_473x98.gif" ' +
 'alt="실전 윈도우폰 망고 앱 디자인 & 개발">' +
