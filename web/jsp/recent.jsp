@@ -57,8 +57,9 @@ title="'+kangcomCode.comment+'">\
 	}
 }
 var kangcomList = [
- {code:'201106030004',path:'2011/02',ext:'jpg',comment:'[제대로 된 안드로이드 앱 개발을 위한] 안드로이드 프로그래밍'},
- {code:'201105270002',path:'2011/06',ext:'jpg',comment:'Blog2Book 자바 개발자와 시스템 운영자를 위한 트러블 슈팅 이야기'},
+ {code:'201106030004',path:'2011/06',ext:'jpg',comment:'Blog2Book 자바 개발자와 시스템 운영자를 위한 트러블 슈팅 이야기'},
+ {code:'201105180001',path:'2011/06',ext:'jpg',comment:'okgosu의 플렉스 4.5 & 플래시 빌더 정석'},
+ {code:'201105270002',path:'2011/02',ext:'jpg',comment:'[제대로 된 안드로이드 앱 개발을 위한] 안드로이드 프로그래밍'},
 ];
 
 for (var i = 0; i < kangcomList.length && i < 6 ; i++) {
