@@ -57,7 +57,8 @@ title="'+kangcomCode.comment+'">\
 	}
 }
 var kangcomList = [
- {code:'201012070002',path:'2010/12',ext:'jpg',comment:'변화에 적응해야 프로그래머입니다. 강추!!! 완전 싸다. 클라우드!!!'},
+ {code:'201106030004',path:'2011/02',ext:'jpg',comment:'[제대로 된 안드로이드 앱 개발을 위한] 안드로이드 프로그래밍'},
+ {code:'201105270002',path:'2011/06',ext:'jpg',comment:'Blog2Book 자바 개발자와 시스템 운영자를 위한 트러블 슈팅 이야기'},
 ];
 
 for (var i = 0; i < kangcomList.length && i < 6 ; i++) {
