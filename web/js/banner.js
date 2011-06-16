@@ -33,7 +33,7 @@ aside : [
  {
 tag : "<li>"+
 "<a href=\"/f.jsp?http://www.devmento.co.kr\" target=\"_blank\" >"+
-"<img src=\"/images/banner/devmento_134x40.gif\" "+
+"<img src=\"/images/banner/devmento_134x60.gif\" "+
 "	alt=\"개발자들의 지식공유 쉼터 데브멘토\">"+
 "</a>"+
 "</li>"
