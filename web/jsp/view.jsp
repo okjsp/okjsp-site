@@ -80,7 +80,7 @@ Banner.showContentSection();
 </div>
 
 <%-- facebook like button --%>
-<iframe src="http://www.facebook.com/plugins/like.php?href=<%= request.getRequestURL() %>"
+<iframe src="http://www.facebook.com/plugins/like.php?href=http://www.okjsp.pe.kr/seq/<%= one.getSeq() %>"
         scrolling="no" frameborder="0"
         style="border:none; width:100%; height:60px"></iframe>
 
