@@ -1,12 +1,6 @@
 var Banner = {
 main : [
 {
-tag: '<a href="/f.jsp?http://www.devmento.co.kr/devmain/seminar/edumento_detail.jsp?dataSeq=101" target="_blank">' +
-'<img src="/images/banner/devmento_MS2_473x98.gif" ' +
-'alt="실전 윈도우폰 망고 앱 디자인 & 개발">' +
-'</a>'
-},
-{
 tag: '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
 '<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
 'alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트">' +
@@ -38,12 +32,19 @@ footer : [
 aside : [
  {
 tag : "<li>"+
-"<a href=\"/f.jsp?http://project.oss.kr/?okjsp\" target=\"_blank\" >"+
-"<img src=\"/images/banner/opensw_134x40.gif\" "+
-"	alt=\"2011 공개SW개발자대회\">"+
+"<a href=\"/f.jsp?http://www.devmento.co.kr\" target=\"_blank\" >"+
+"<img src=\"/images/banner/devmento_134x40.gif\" "+
+"	alt=\"개발자들의 지식공유 쉼터 데브멘토\">"+
 "</a>"+
 "</li>"
  },
+ tag : "<li>"+
+ "<a href=\"/f.jsp?http://project.oss.kr/?okjsp\" target=\"_blank\" >"+
+ "<img src=\"/images/banner/opensw_134x40.gif\" "+
+ "	alt=\"2011 공개SW개발자대회\">"+
+ "</a>"+
+ "</li>"
+},
  {
 tag : "<li>"+
  "<a href=\"/f.jsp?http://cs.ucloud.com\" target=\"_blank\" >"+
