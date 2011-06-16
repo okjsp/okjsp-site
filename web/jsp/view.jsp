@@ -72,12 +72,18 @@ Banner.showContentRight();
 </script>
         <%= one.getContentView() %>
         </div>
-
-<div style="margin:40px 0 20px; width:100%;text-align:center;">
+<%-- 하단 배너 --%>
+<div style="margin:20px 0 20px; width:100%;text-align:center;">
 <script type="text/javascript">
 Banner.showContentSection();
 </script>
 </div>
+
+<%-- facebook like button --%>
+<iframe src="http://www.facebook.com/plugins/like.php?href=<%= request.getRequestURL() %>"
+        scrolling="no" frameborder="0"
+        style="border:none; width:100%; height:60px"></iframe>
+
         </td>
     </tr>
 <%-- 다운로드 파일 목록 --%>
@@ -101,13 +107,6 @@ Banner.showContentSection();
 %>
 </ul>
         </td>
-    </tr>
-</table>
-<%-- ad --%>
-<table class="tablestyle" border="0" cellpadding="3" cellspacing="0">
-    <tr>
-        <td class="td" align="center" style="color:#303030;font:8pt gungsuh">
-</td>
     </tr>
 </table>
 
