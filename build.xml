@@ -104,9 +104,9 @@
 
 	<target name="javadoc" depends="publish"
    description="Create Javadoc API documentation">
-		<mkdir          dir="${publish.home}/docs/api/okjsp2007"/>
+		<mkdir          dir="${publish.home}/docs/api/okjsp-site"/>
 		<javadoc sourcepath="${src.home}"
-                destdir="${publish.home}/docs/api/okjsp2007"
+                destdir="${publish.home}/docs/api/okjsp-site"
     	     splitindex="true"
            packagenames="kr.pe.okjsp.*,test*"
     		   encoding="euc-kr">
