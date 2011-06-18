@@ -3,11 +3,11 @@ package kr.pe.okjsp;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
-import java.util.ResourceBundle;
 
 import javax.servlet.http.HttpServletRequest;
 
 import kr.pe.okjsp.util.CommonUtil;
+import kr.pe.okjsp.util.PropertyManager;
 import twitter4j.Status;
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
@@ -20,17 +20,16 @@ import com.rosaloves.net.shorturl.bitly.url.BitlyUrl;
 
 public class TwitterUpdate {
 	
-	ResourceBundle rb = ResourceBundle.getBundle("kr.pe.okjsp.DB");
 	private String tweetStsText = "" ;
-	private String bitlyId = rb.getString("BITLYID");
-	private String bitlyKey = rb.getString("BITLYKEY");
+	private String bitlyId = PropertyManager.getString("BITLYID");
+	private String bitlyKey = PropertyManager.getString("BITLYKEY");
 	
 	//add oauth variable by topolo 2010.05.27
-	private String consumer_key = rb.getString("CONSUMER_KEY");
-	private String consumer_secret  = rb.getString("CONSUMER_SECRET");
+	private String consumer_key = PropertyManager.getString("CONSUMER_KEY");
+	private String consumer_secret  = PropertyManager.getString("CONSUMER_SECRET");
 	
-	private String acessToken  = rb.getString("ACESSTOKEN");
-	private String acessToken_secret   = rb.getString("ACESSTOKENSECRET");
+	private String acessToken  = PropertyManager.getString("ACESSTOKEN");
+	private String acessToken_secret   = PropertyManager.getString("ACESSTOKENSECRET");
 	
 	public void doUpdate(Article article, HttpServletRequest req) {
 		if ( !isTwitterUpdate(article, req) ){

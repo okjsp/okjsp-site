@@ -5,7 +5,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ResourceBundle;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -14,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import kr.pe.okjsp.util.DbCon;
+import kr.pe.okjsp.util.PropertyManager;
 
 public class DeleteServlet extends HttpServlet {
 	DbCon dbCon = new DbCon();
@@ -27,7 +27,7 @@ public class DeleteServlet extends HttpServlet {
 	public static final String QUERY_DEL_SEQ_FILE =
 		"update okboard_file set sts=0 where seq=?";
 	private static String MASTER_PASSWORD = 
-		ResourceBundle.getBundle("kr.pe.okjsp.DB").getString("MASTER_PASSWORD");;
+		PropertyManager.getString("MASTER_PASSWORD");;
 
 	public void init(ServletConfig config) throws ServletException {
 		super.init(config);

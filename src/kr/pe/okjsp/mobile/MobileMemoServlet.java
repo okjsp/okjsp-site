@@ -1,10 +1,8 @@
 package kr.pe.okjsp.mobile;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.util.ResourceBundle;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -15,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import kr.pe.okjsp.MemoDao;
 import kr.pe.okjsp.util.CommonUtil;
 import kr.pe.okjsp.util.DbCon;
+import kr.pe.okjsp.util.PropertyManager;
 
 public class MobileMemoServlet extends HttpServlet {
 	DbCon dbCon = new DbCon();
@@ -26,7 +25,7 @@ public class MobileMemoServlet extends HttpServlet {
 		"delete from okboard_memo where mseq = ?";
 
 	public void init(ServletConfig config) throws ServletException {
-		MASTER_MEMO = ResourceBundle.getBundle("kr.pe.okjsp.DB").getString("MASTER_MEMO");
+		MASTER_MEMO = PropertyManager.getString("MASTER_MEMO");
 		super.init(config);
 	}
 

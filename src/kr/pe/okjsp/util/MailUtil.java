@@ -15,16 +15,17 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 public class MailUtil {
+
 	private static class SMTPAuthenticator extends javax.mail.Authenticator {
 		public PasswordAuthentication getPasswordAuthentication() {
 			return new PasswordAuthentication(smtpUsername, smtpPassword);
 		}
 	}
 
-	public static final String smtpHost = "smtp.gmail.com";
-	public static final String smtpUsername = "kenu.heo@gmail.com";
-	public static final String smtpPassword = "kenny624";
-	public static final String smtpPort = "465";
+	public static final String smtpHost = PropertyManager.getString("MAIL_HOST");
+	public static final String smtpUsername = PropertyManager.getString("MAIL_SENDER");
+	public static final String smtpPassword = PropertyManager.getString("MAIL_PASS");
+	public static final String smtpPort = PropertyManager.getString("MAIL_PORT");
 
 	public void send(String mailto, String subject, String textMessage)
 			throws FileNotFoundException, MessagingException {

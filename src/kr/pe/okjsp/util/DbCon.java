@@ -8,7 +8,6 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ResourceBundle;
 
 import javax.sql.DataSource;
 
@@ -21,11 +20,10 @@ import org.apache.commons.dbcp.BasicDataSource;
 public class DbCon {
 	private static BasicDataSource ds = null;
 	static {
-		ResourceBundle rb = ResourceBundle.getBundle("kr.pe.okjsp.DB");
-		String driver = rb.getString("DRIVER");
-		String dbUrl = rb.getString("DBURL");
-		String dbUser = rb.getString("DBUSER");
-		String dbPass = rb.getString("DBPASS");
+		String driver = PropertyManager.getString("DRIVER");
+		String dbUrl = PropertyManager.getString("DBURL");
+		String dbUser = PropertyManager.getString("DBUSER");
+		String dbPass = PropertyManager.getString("DBPASS");
 		try {
 			ds = new BasicDataSource();
 			ds.setDriverClassName(driver);

@@ -5,7 +5,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ResourceBundle;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -15,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import kr.pe.okjsp.Article;
 import kr.pe.okjsp.util.DbCon;
+import kr.pe.okjsp.util.PropertyManager;
 
 /**
  * 아이폰 게시물 삭제
@@ -33,7 +33,7 @@ public class MobileDeleteServlet extends HttpServlet {
 	public static final String QUERY_DEL_SEQ_FILE =
 		"update okboard_file set sts=0 where seq=?";
 	private static String MASTER_PASSWORD = 
-		ResourceBundle.getBundle("kr.pe.okjsp.DB").getString("MASTER_PASSWORD");;
+		PropertyManager.getString("MASTER_PASSWORD");;
 
 	public void init(ServletConfig config) throws ServletException {
 		super.init(config);
@@ -53,8 +53,6 @@ public class MobileDeleteServlet extends HttpServlet {
 		int seq = 0;
 		
 		//삭제 페이지 어떻게 해야 할지 고민......방법적인부분
-		//String resourceName = "/jsp/delete.jsp";
-		String resourceName = "";
 		String confirmPassword = req.getParameter("password");
 		try {
 			seq = Integer.parseInt(req.getParameter("seq"));
@@ -98,13 +96,11 @@ public class MobileDeleteServlet extends HttpServlet {
 				// file 삭제 생략
 				
 			} else {
-				resourceName = "/jsp/error.jsp";
 				throw new Exception("WRONG PASSWORD");
 			}
 
 		} catch (Exception e) {
 			req.setAttribute("javax.servlet.jsp.jspException", e);
-			resourceName = "/jsp/error.jsp";
 		} finally {
 			dbCon.close(conn, pstmt, rs);
 		}
