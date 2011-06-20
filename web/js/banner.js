@@ -3,7 +3,7 @@ main : [
 {
 tag: '<a href="/f.jsp?http://android.apptalk.co.kr/apptalk_business" target="_blank">' +
 '<img src="/images/banner/apptalk_473x98.gif" ' +
-'alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트">' +
+'alt="AppTalk">' +
 '</a>'
 },
 {
@@ -12,6 +12,9 @@ tag: '<a href="/f.jsp?http://android.apptalk.co.kr/apptalk_business" target="_bl
 	'alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트">' +
 	'</a>'
 }
+],
+
+contentRight : [
 ],
 
 content : [
@@ -80,9 +83,10 @@ showLeftSide : function() {
 },
 
 showContentRight : function() {
-	var tag = '<a href="/f.jsp?http://www.kjdc.org/?okjsp"><img src="/images/banner/JCO_250x250.gif" id="contentBanner" '+
-		'style="float: right; margin-left: 10px; margin-bottom: 10px;"></a>';
-	document.write(tag);
+	if (this.contentRight.length > 0) {
+		var idx = Math.floor(Math.random() * this.contentRight.length);
+		document.write(this.contentRight[idx].tag);
+	}
 },
 
 showContentSection : function() {
