@@ -43,30 +43,18 @@ Banner.show();
     <td align="center" valign="top">
 <div id="bookList">
 <div style="float:none; margin: 6px 0 0;"><b># OKJSP 추천 도서</b></div>
-<script type="text/javascript">
-function showKangcomBook(kangcomCode) {
-	// http://image3.kangcom.com/2009/03/l_pic/200903110001.jpg
-	if (kangcomCode != null){
-	var imageUrl = "http://image3.kangcom.com/" + kangcomCode.path
-	    + "/b_pic/" + kangcomCode.code + '.' + kangcomCode.ext; 
-  document.write('<div class="book">\
-<a href="http://kangcom.com/common/bookinfo/bookinfo.asp?sku='+kangcomCode.code+'"\
-title="'+kangcomCode.comment+'">\
-<img src="'+imageUrl+'" class="bookimg">\
-</a></div>');
-	}
-}
-var kangcomList = [
- {code:'201106030004',path:'2011/06',ext:'jpg',comment:'Blog2Book 자바 개발자와 시스템 운영자를 위한 트러블 슈팅 이야기'},
- {code:'201105180001',path:'2011/06',ext:'jpg',comment:'okgosu의 플렉스 4.5 & 플래시 빌더 정석'},
- {code:'201105270002',path:'2011/02',ext:'jpg',comment:'[제대로 된 안드로이드 앱 개발을 위한] 안드로이드 프로그래밍'},
-];
 
-for (var i = 0; i < kangcomList.length && i < 6 ; i++) {
-	showKangcomBook(kangcomList[i]);
-}
-	</script>
+<script type="text/javascript">
+/* okjsp-site */
+aladdin_ttb_key = 'ttbkenu1710002';
+aladdin_ttb_channel = '32572';
+aladdin_ttb_width = '505';
+aladdin_ttb_height = '183';
+</script>
+<script type="text/javascript" language="javascript" src="http://ttb2.aladin.co.kr/ad_ttb.aspx"></script>
+
 </div>
+
 <!-- 최신 글 리스트 -->
 <%
 	long sTime=System.currentTimeMillis();
