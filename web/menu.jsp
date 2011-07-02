@@ -53,6 +53,8 @@
    title="회사,일터,경력 관련 이야기 it.nodong.net" target="jobqna">일터Q&amp;A</A>
 	<hr>
   <br>
+  <a href="http://twitter.com/okjsp" class="twitter-follow-button" data-lang="ko">Follow @okjsp</a>
+<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
   <br><a href="/rss" title="rss feed links"><img src="/images/rss-xml.png" style="border:0" alt="rss"/></a><br>
   <br>
 
