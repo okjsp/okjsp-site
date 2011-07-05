@@ -128,7 +128,8 @@ cursor: pointer;
 }
 
 #centent {
-	padding: 8px;
+	padding: 6px;
+	margin-bottom: 20px;
 	-webkit-text-size-adjust: 160%;
 }
 

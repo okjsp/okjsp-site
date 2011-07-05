@@ -3,14 +3,12 @@ main : [
 {
 tag: '<a href="/f.jsp?http://android.apptalk.co.kr/apptalk_business" target="_blank">' +
 '<img src="/images/banner/apptalk_473x98.gif" ' +
-'alt="AppTalk">' +
-'</a>'
+'alt="AppTalk"></a>'
 },
 {
 	tag: '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
 	'<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
-	'alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트">' +
-	'</a>'
+	'alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트"></a>'
 }
 ],
 
@@ -18,6 +16,12 @@ contentRight : [
 ],
 
 content : [
+{
+	tag: '<a href="/f.jsp?http://www.gsion.com/?okjsp" target="_blank">' +
+	'<img src="http://www.GSION.com/Files/NIF/201107/jsp배너.JPG" ' +
+	'alt="정보처리기술사의 모든 것 지아이에스에서 확인하세요!"></a>'
+}
+           
 ],
 
 left : [

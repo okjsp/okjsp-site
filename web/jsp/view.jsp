@@ -72,17 +72,17 @@ Banner.showContentRight();
 </script>
         <%= one.getContentView() %>
         </div>
-<%-- 하단 배너 --%>
-<div style="margin:20px 0 20px; width:100%;text-align:center;">
-<script type="text/javascript">
-Banner.showContentSection();
-</script>
-</div>
-
 <%-- facebook like button --%>
 <iframe src="http://www.facebook.com/plugins/like.php?href=http://www.okjsp.pe.kr/seq/<%= one.getSeq() %>"
         scrolling="no" frameborder="0"
         style="border:none; width:100%; height:60px"></iframe>
+
+<%-- 하단 배너 --%>
+<div style="margin:0 0 20px; width:100%;text-align:center;">
+<script type="text/javascript">
+Banner.showContentSection();
+</script>
+</div>
 
         </td>
     </tr>
