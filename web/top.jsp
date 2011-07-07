@@ -38,6 +38,8 @@
 				setCookie('urlChangeOKSJSP','true',(3600*24*30));
 				//로컬과 서버 설정 주의!!!
 				top.location.href = 'http://www.okjsp.pe.kr/html5';
+			} else {
+				document.getElementById('change').checked = false;
 			}
 		}
 	}
