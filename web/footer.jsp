@@ -11,6 +11,8 @@ if (typeof Banner == "object") { Banner.showFooter(); }
 <ul>
 <li><a href="/jsp/member/agreement.jsp" target="privacy">개인정보취급방침</a>
 </li>
+<li><a href="https://github.com/okjsp/okjsp-site/issues" target="bugs">버그리포트</a>
+</li>
 <li>hosted by <a href="http://www.80port.com/">80port.com</a><br />
  <a href="http://www.80port.com/community"
  title="www.80port.com
@@ -20,8 +22,3 @@ if (typeof Banner == "object") { Banner.showFooter(); }
 </ul>
 </div>
 </div>
-<script type="text/javascript" src="http://log.inside.daum.net/dwi_log/js/dwi.js"></script>
-<script type="text/javascript" >
-	_dwiPID="d-9jj-269";
-	if(typeof(_dwiCatch) == "function") { _dwiCatch();}
-</script>
