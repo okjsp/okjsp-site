@@ -15,17 +15,8 @@
     <script src="/js/banner.js"></script>
     <script src="/js/bannerData.js"></script>
     <script src='/js/okboard.js'></script>
-<link rel="stylesheet" href="/css/okjsp2007.css.jsp" type="text/css">
-<style type="text/css">
-#memorecent ul {
-	padding: 0;
-	width: 600px;
-	list-style-type: none;
-}
-#memorecent ul {
-	margin-bottom: 1.0em;
-}
-</style>
+	<link rel="stylesheet" href="/css/okjsp2007.css.jsp" type="text/css">
+	<link rel="stylesheet" href="/site2009/okjsp2009.css" type="text/css">
 </head>
 <body class="body" style="margin:0">
 <jsp:include page="/top.jsp" />
