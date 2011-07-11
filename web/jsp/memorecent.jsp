@@ -32,10 +32,10 @@
 	for (MemoBean memo: recent) {
 %><li>
 <a href="/seq/<%= memo.getSeq()+"#"+memo.getMseq() %>">
-<ul><li><img src="/profile/<%= memo.getSid() %>.jpg"></li>
-<li><%= memo.getId() %></li>
-<li><%= memo.getBcomment() %></li>
+<ul><li><img src="http://www.okjsp.pe.kr/profile/<%= memo.getSid() %>.jpg"></li>
+<li><%= memo.getWriter() %></li>
 <li><%= memo.getWhen("yyyy-MM-dd HH:mm:ss") %></li>
+<li class="memo"><%= memo.getBcomment() %></li>
 </ul></a>
 </li>
 <%
