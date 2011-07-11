@@ -26,6 +26,7 @@
 	</div>
   <hr>
   <A href="/bbs?act=LIST&bbs=notice">공지사항</A>
+  <br />
   <A href="/bbs?act=MEMORECENT">새 메모</A>
 
   <hr>ad:
