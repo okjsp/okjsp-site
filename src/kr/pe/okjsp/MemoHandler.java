@@ -110,8 +110,9 @@ public class MemoHandler {
 				pstmt = pconn.prepareStatement(MEMO_RECENT_BCOMMENT);
 			}
 			pstmt.setString(1,"%"+keyword+"%");
-			pstmt.setInt(2,page*pageSize);
-			pstmt.setInt(3,pageSize);
+			int startMseq = page * pageSize;
+			pstmt.setInt(2,startMseq + 1);
+			pstmt.setInt(3,startMseq + pageSize);
 			rs = pstmt.executeQuery();
 
 			MemoBean mb = null;
