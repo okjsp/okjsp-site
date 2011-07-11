@@ -10,7 +10,7 @@ public class MemoHandlerTest extends TestCase {
 		try {
 			ArrayList<MemoBean> recent = handler.getRecent(1);
 			assertNotNull(recent);
-			assertEquals(0,recent.size());
+			assertEquals(20,recent.size());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
