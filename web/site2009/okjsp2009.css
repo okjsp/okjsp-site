@@ -58,6 +58,22 @@ img {
 }
 
 /* recent */
+#memorecent, #memorecent ul {
+	padding: 0;
+	list-style-type: none;
+}
+
+#memorecent ul {
+	clear: left;
+	width: 600px;
+}
+
+#memorecent img {
+	float: left;
+	margin: 0 8px 8px 0;
+	border: 1px solid #ddd;
+}
+
 #bookList {
 	margin: 20px 8px;
 	border: 1px solid #D0E0F3;

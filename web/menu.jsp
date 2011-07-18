@@ -26,10 +26,10 @@
 	</div>
   <hr>
   <A href="/bbs?act=LIST&bbs=notice">공지사항</A>
-  <div class="noticemenu">
-  <a href="/jsp/member/agreement.jsp" target="privacy">개인정보취급방침</a>
-  </div>
-	<hr>ad:
+  <br />
+  <A href="/bbs?act=MEMORECENT">새 메모</A>
+
+  <hr>ad:
   <ul id="menuad">
   <script type="text/javascript">
   if (typeof Banner=="object") { Banner.showLeftSide(); }

@@ -224,7 +224,10 @@ tag´Â <a href="<%= Navigation.getPath("SECURE_DOMAIN") %>/jsp/member/login.jsp">
     memo = memoList.iterator();
     while (memo.hasNext()) {
       MemoBean mb = (MemoBean)memo.next();
-%><ul><li class="c">
+
+%>
+<a name="<%= mb.getMseq() %>"><!--()--></a>
+<ul><li class="c">
 <%= HttpLinker.getLinkedSource( CommonUtil.showHtml( mb.getBcomment() ) ) %>
 </li>
 <li class="w"><%
@@ -236,7 +239,13 @@ tag´Â <a href="<%= Navigation.getPath("SECURE_DOMAIN") %>/jsp/member/login.jsp">
     }
 %><%= mb.getWriter() %></li>
 <li class="d"><%= mb.getWhen("yyyy-MM-dd HH:mm:ss")
-%></li><li class="e"><a href="javascript:show_memodel('<%= mb.getMseq() %>')">x</a></li></ul><%
+%></li><li class="e"><a href="javascript:show_memodel('<%= mb.getMseq() %>')">x</a>
+<%-- facebook like button --%>
+<iframe src="http://www.facebook.com/plugins/like.php?href=http://www.okjsp.pe.kr/seq/<%= mb.getSeq()+"%23"+mb.getMseq() %>"
+        scrolling="no" frameborder="0"
+        style="border:none; width:100%; height:27px"></iframe>
+</li></ul>
+<%
     } // end while
   }
 %>
