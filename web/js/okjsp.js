@@ -235,6 +235,12 @@ function setSkin(skinType) {
 	document.location.reload();
 }
 
+/**
+ * 트림 추가
+ */
+String.prototype.trim = function() {
+	return this.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+}
 
 //action event
 function check(){
@@ -243,7 +249,8 @@ function check(){
     } else if(document.getElementById("TextView")){
         document.f1.content.value = f1.TextView.value;
 	}
-	if (document.f1.content.value.length==0 || document.f1.content.value=="<P>&nbsp;</P>") {
+	if (document.f1.content.value.length==0 || document.f1.content.value=="<P>&nbsp;</P>"
+		|| document.f1.content.value.trim().length == 0) {
 	    alert("no content");
 	    return false;
 	}
@@ -253,12 +260,12 @@ function check(){
 	    alert(banWord +' word can\'t be used.');
 	    return false;
 	}
-	if (document.f1.subject.value=="" ) {
+	if (document.f1.subject.value.trim()=="" ) {
 	    alert("no subject");
 	    document.f1.subject.focus();
 	    return false;
     }
-	if (document.f1.writer.value=="" ) {
+	if (document.f1.writer.value.trim()=="" ) {
 	    alert("no writer");
 	    document.f1.writer.focus();
 	    return false;
