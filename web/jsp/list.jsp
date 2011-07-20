@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<%@ page pageEncoding="euc-kr"
+<%@ page pageEncoding="utf-8"
     import="kr.pe.okjsp.util.CommonUtil, java.util.Iterator,
             kr.pe.okjsp.Article,kr.pe.okjsp.util.DateLabel" %>
 <%@page import="java.util.Map"%>
@@ -20,7 +20,7 @@
 
 <%@page import="kr.pe.okjsp.ArticleDao"%><html>
 <head>
-<META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=ksc5601">
+<META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=utf-8">
 <title>okjsp</title>
     <script src="/js/okjsp.js"></script>
     <script src="/js/banner.js"></script>
@@ -94,7 +94,7 @@ String keyword = CommonUtil.nchk(request.getParameter("keyword"));
 String link = "&bbs="+request.getParameter("bbs")+
               "&keyfield="+CommonUtil.nchk(request.getParameter("keyfield"), "content")+
               "&keyword="+java.net.URLEncoder.encode(keyword, "8859_1");
-int oldRef = -1;  // �׷���ȣ�� ������ ���� ���� �׷���ȣ ���� ����
+int oldRef = -1;  // 그룹번호가 이전과 같을 경우 그룹번호 출력 안함
 
 while (iter.hasNext()) {
     one = (Article) iter.next();
@@ -127,7 +127,7 @@ while (iter.hasNext()) {
         <%= DateLabel.getTimeDiffLabel(one.getWhen()) %></td>
     </tr>
 <%
-    oldRef = one.getRef();  // �׷���ȣ�� ������ ���´�.
+    oldRef = one.getRef();  // 그룹번호를 기억해 놓는다.
 }
 %>
     <tr>
@@ -138,10 +138,10 @@ request.setAttribute("total", ""+list.getCnt());
 request.setAttribute("pageSize", ""+list.getPageSize());
 %>
 <okbbs:page link='<%= link %>'
-            beginlabel="ó�� "
-            endlabel=" ��"
-            prevlabel="������ "
-            nextlabel=" ������"
+            beginlabel="처음 "
+            endlabel=" 끝"
+            prevlabel="◀이전 "
+            nextlabel=" 다음▶"
             pagegroupsize="10" />
     </td>
     </tr>
@@ -150,26 +150,26 @@ request.setAttribute("pageSize", ""+list.getPageSize());
 <form name="nav">
 
 <select name="keyfield">
-    <option value="subject">����</option>
-    <option value="content">����</option>
-    <option value="writer">�ۼ���</option>
+    <option value="subject">제목</option>
+    <option value="content">내용</option>
+    <option value="writer">작성자</option>
 </select>
 
 <input type="text" name="keyword" value="<%= CommonUtil.a2k(keyword) %>">
-<input type="submit" value="�˻�">
+<input type="submit" value="검색">
 <input type="hidden" name="act"      value="LIST">
 <input type="hidden" name="bbs"      value="<%= request.getParameter("bbs") %>">
 <input type="hidden" name="seq">
 </form>
-<a href="javascript:write()">�۾���</a>
-<a href="/site2009/editor_jquery.jsp?bbs=<%= request.getParameter("bbs") %>">���ο� �۾���</a>
-(�α��� �ʿ�)
+<a href="javascript:write()">글쓰기</a>
+<a href="/site2009/editor_jquery.jsp?bbs=<%= request.getParameter("bbs") %>">새로운 글쓰기</a>
+(로그인 필요)
     </td>
     </tr>
 </table>
 
 <%
-	// ���� �˻� mashup
+	// 다음 검색 mashup
 	if ( keyword.length() > 0) {
 %>
 <div class="tablestyle searchDaum">
