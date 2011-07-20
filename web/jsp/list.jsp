@@ -69,7 +69,7 @@
 <%
 	boolean isAdBBS = "recruit".equals(list.getBbs()) && list.getPg() < 1;
 	if (isAdBBS) {
-		int [] seqs = {170825 /* ~7/12 */, 
+		int [] seqs = {171786 /* ~8/22 */, 
 				163503};
 		ArticleDao articleDao = new ArticleDao();
 		for(int seq : seqs) {
@@ -94,7 +94,7 @@ String keyword = CommonUtil.nchk(request.getParameter("keyword"));
 String link = "&bbs="+request.getParameter("bbs")+
               "&keyfield="+CommonUtil.nchk(request.getParameter("keyfield"), "content")+
               "&keyword="+java.net.URLEncoder.encode(keyword, "8859_1");
-int oldRef = -1;  // ±×·ì¹øÈ£°¡ ÀÌÀü°ú °°À» °æ¿ì ±×·ì¹øÈ£ Ãâ·Â ¾ÈÇÔ
+int oldRef = -1;  // ï¿½×·ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½×·ï¿½ï¿½ï¿½È£ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
 while (iter.hasNext()) {
     one = (Article) iter.next();
@@ -127,7 +127,7 @@ while (iter.hasNext()) {
         <%= DateLabel.getTimeDiffLabel(one.getWhen()) %></td>
     </tr>
 <%
-    oldRef = one.getRef();  // ±×·ì¹øÈ£¸¦ ±â¾ïÇØ ³õ´Â´Ù.
+    oldRef = one.getRef();  // ï¿½×·ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â´ï¿½.
 }
 %>
     <tr>
@@ -138,10 +138,10 @@ request.setAttribute("total", ""+list.getCnt());
 request.setAttribute("pageSize", ""+list.getPageSize());
 %>
 <okbbs:page link='<%= link %>'
-            beginlabel="Ã³À½ "
-            endlabel=" ³¡"
-            prevlabel="¢¸ÀÌÀü "
-            nextlabel=" ´ÙÀ½¢º"
+            beginlabel="Ã³ï¿½ï¿½ "
+            endlabel=" ï¿½ï¿½"
+            prevlabel="ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ "
+            nextlabel=" ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"
             pagegroupsize="10" />
     </td>
     </tr>
@@ -150,26 +150,26 @@ request.setAttribute("pageSize", ""+list.getPageSize());
 <form name="nav">
 
 <select name="keyfield">
-    <option value="subject">Á¦¸ñ</option>
-    <option value="content">³»¿ë</option>
-    <option value="writer">ÀÛ¼ºÀÚ</option>
+    <option value="subject">ï¿½ï¿½ï¿½ï¿½</option>
+    <option value="content">ï¿½ï¿½ï¿½ï¿½</option>
+    <option value="writer">ï¿½Û¼ï¿½ï¿½ï¿½</option>
 </select>
 
 <input type="text" name="keyword" value="<%= CommonUtil.a2k(keyword) %>">
-<input type="submit" value="°Ë»ö">
+<input type="submit" value="ï¿½Ë»ï¿½">
 <input type="hidden" name="act"      value="LIST">
 <input type="hidden" name="bbs"      value="<%= request.getParameter("bbs") %>">
 <input type="hidden" name="seq">
 </form>
-<a href="javascript:write()">±Û¾²±â</a>
-<a href="/site2009/editor_jquery.jsp?bbs=<%= request.getParameter("bbs") %>">»õ·Î¿î ±Û¾²±â</a>
-(·Î±×ÀÎ ÇÊ¿ä)
+<a href="javascript:write()">ï¿½Û¾ï¿½ï¿½ï¿½</a>
+<a href="/site2009/editor_jquery.jsp?bbs=<%= request.getParameter("bbs") %>">ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Û¾ï¿½ï¿½ï¿½</a>
+(ï¿½Î±ï¿½ï¿½ï¿½ ï¿½Ê¿ï¿½)
     </td>
     </tr>
 </table>
 
 <%
-	// ´ÙÀ½ °Ë»ö mashup
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½ mashup
 	if ( keyword.length() > 0) {
 %>
 <div class="tablestyle searchDaum">
