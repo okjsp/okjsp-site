@@ -1,9 +1,9 @@
 var Banner = {
 main : [
 {
-tag: '<a href="/f.jsp?http://android.apptalk.co.kr/apptalk_business" target="_blank">' +
-'<img src="/images/banner/apptalk_473x98.gif" ' +
-'alt="AppTalk"></a>'
+tag: '<a href="/f.jsp?http://www.choongang.co.kr/html/m0_s1_4_s1.asp?id=26200" target="_blank">' +
+'<img src="/images/banner/choongang_473x98.gif" ' +
+'alt="국비지원 IT 취업연수생 모집"></a>'
 },
 {
 	tag: '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
