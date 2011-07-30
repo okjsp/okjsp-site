@@ -3,12 +3,12 @@ main : [
 {
 tag: '<a href="/f.jsp?http://www.choongang.co.kr/html/m0_s1_4_s1.asp?id=26200" target="_blank">' +
 '<img src="/images/banner/choongang_473x98.gif" ' +
-'alt="±¹ºñÁö¿ø IT Ãë¾÷¿¬¼ö»ı ¸ğÁı"></a>'
+'alt="êµ­ë¹„ì§€ì› IT ì·¨ì—…ì—°ìˆ˜ìƒ ëª¨ì§‘"></a>'
 },
 {
 	tag: '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
 	'<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
-	'alt="¢Æ¢Æ¢Æ µ¥ºê·º ¢Æ¢Æ¢Æ °³¹ßÀÚ¸¦ À§ÇÑ ±¹³» ÃÖ°í ÇÁ·Î±×·¡¹Ö Àü¹® µ¿¿µ»ó°­ÁÂ »çÀÌÆ®"></a>'
+	'alt="â–’â–’â–’ ë°ë¸Œë ‰ â–’â–’â–’ ê°œë°œìë¥¼ ìœ„í•œ êµ­ë‚´ ìµœê³  í”„ë¡œê·¸ë˜ë° ì „ë¬¸ ë™ì˜ìƒê°•ì¢Œ ì‚¬ì´íŠ¸"></a>'
 }
 ],
 
@@ -18,27 +18,27 @@ contentRight : [
 content : [
 {
 	tag: '<a href="/f.jsp?http://www.gsion.com/?okjsp" target="_blank">' +
-	'<img src="http://www.GSION.com/Files/NIF/201107/jsp¹è³Ê.JPG" ' +
-	'alt="Á¤º¸Ã³¸®±â¼ú»çÀÇ ¸ğµç °Í Áö¾ÆÀÌ¿¡½º¿¡¼­ È®ÀÎÇÏ¼¼¿ä!"></a>'
+	'<img src="http://www.GSION.com/Files/NIF/201107/jspë°°ë„ˆ.JPG" ' +
+	'alt="ì •ë³´ì²˜ë¦¬ê¸°ìˆ ì‚¬ì˜ ëª¨ë“  ê²ƒ ì§€ì•„ì´ì—ìŠ¤ì—ì„œ í™•ì¸í•˜ì„¸ìš”!"></a>'
 }
            
 ],
 
 left : [
 {
-	tag: '<li><A href="/f.jsp?http://www.innorix.com/DS/" title="´ë¿ë·® ÆÄÀÏ/Æú´õ ¾÷·Îµå ÄÄÆ÷³ÍÆ®" target="innorix">¾÷·Îµå´Â InnoDS</A></li>'
+	tag: '<li><A href="/f.jsp?http://www.innorix.com/DS/" title="ëŒ€ìš©ëŸ‰ íŒŒì¼/í´ë” ì—…ë¡œë“œ ì»´í¬ë„ŒíŠ¸" target="innorix">ì—…ë¡œë“œëŠ” InnoDS</A></li>'
 },
 {
-	tag: '<li><A href="/f.jsp?http://okmindmap.com/" title="À¥±â¹İ Çù¾÷ ¸¶ÀÎµå¸Ê, OKJSP À¯Àú ¹Ú±â¿ø´ÔÀÌ Âü¿©ÇÑ ¼­ºñ½º" target="imaso">okmindmap</A></li>'
+	tag: '<li><A href="/f.jsp?http://okmindmap.com/" title="ì›¹ê¸°ë°˜ í˜‘ì—… ë§ˆì¸ë“œë§µ, OKJSP ìœ ì € ë°•ê¸°ì›ë‹˜ì´ ì°¸ì—¬í•œ ì„œë¹„ìŠ¤" target="imaso">okmindmap</A></li>'
 },
 {
-	tag: '<li><A href="/f.jsp?http://bit.ly/cIQ7fA" title="¾Èµå·ÎÀÌµå °³¹ßÈ¯°æ ±¸Ãà" target="android">[À¯·á]¾Èµå·ÎÀÌµå °³¹ß¸Å´º¾ó1</A></li>'
+	tag: '<li><A href="/f.jsp?http://bit.ly/cIQ7fA" title="ì•ˆë“œë¡œì´ë“œ ê°œë°œí™˜ê²½ êµ¬ì¶•" target="android">[ìœ ë£Œ]ì•ˆë“œë¡œì´ë“œ ê°œë°œë§¤ë‰´ì–¼1</A></li>'
 }
 ],
 footer : [
 {
 	tag: '<a href="/f.jsp?http://raction.tistory.com/">' +
-	'<img src="/images/banner/raction_468x60.png" alt="°øÂ¥ °¡¶ó»ç´ë ·¢¼ÇÇÏ¶ó"></a>'
+	'<img src="/images/banner/raction_468x60.png" alt="ê³µì§œ ê°€ë¼ì‚¬ëŒ€ ë™ì…˜í•˜ë¼"></a>'
 }
 ],
 
@@ -47,7 +47,7 @@ aside : [
 tag : "<li>"+
 "<a href=\"/f.jsp?http://www.devmento.co.kr\" target=\"_blank\" >"+
 "<img src=\"/images/banner/devmento_134x60.gif\" "+
-"	alt=\"°³¹ßÀÚµéÀÇ Áö½Ä°øÀ¯ ½°ÅÍ µ¥ºê¸àÅä\">"+
+"	alt=\"ê°œë°œìë“¤ì˜ ì§€ì‹ê³µìœ  ì‰¼í„° ë°ë¸Œë©˜í† \">"+
 "</a>"+
 "</li>"
  },
@@ -55,7 +55,7 @@ tag : "<li>"+
  tag : "<li>"+
  "<a href=\"/f.jsp?http://project.oss.kr/?okjsp\" target=\"_blank\" >"+
  "<img src=\"/images/banner/opensw_134x40.gif\" "+
- "	alt=\"2011 °ø°³SW°³¹ßÀÚ´ëÈ¸\">"+
+ "	alt=\"2011 ê³µê°œSWê°œë°œìëŒ€íšŒ\">"+
  "</a>"+
  "</li>"
 },
