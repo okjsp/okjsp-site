@@ -3,12 +3,12 @@ main : [
 {
 tag: '<a href="/f.jsp?http://www.choongang.co.kr/html/m0_s1_4_s1.asp?id=26200" target="_blank">' +
 '<img src="/images/banner/choongang_473x98.gif" ' +
-'alt="êµ­ë¹„ì§€ì› IT ì·¨ì—…ì—°ìˆ˜ìƒ ëª¨ì§‘"></a>'
+'alt="±¹ºñÁö¿ø IT Ãë¾÷¿¬¼ö»ı ¸ğÁı"></a>'
 },
 {
-	tag: '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
-	'<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
-	'alt="â–’â–’â–’ ë°ë¸Œë ‰ â–’â–’â–’ ê°œë°œìë¥¼ ìœ„í•œ êµ­ë‚´ ìµœê³  í”„ë¡œê·¸ë˜ë° ì „ë¬¸ ë™ì˜ìƒê°•ì¢Œ ì‚¬ì´íŠ¸"></a>'
+    tag: '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
+    '<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
+    'alt="¢Æ¢Æ¢Æ µ¥ºê·º ¢Æ¢Æ¢Æ °³¹ßÀÚ¸¦ À§ÇÑ ±¹³» ÃÖ°í ÇÁ·Î±×·¡¹Ö Àü¹® µ¿¿µ»ó°­ÁÂ »çÀÌÆ®"></a>'
 }
 ],
 
@@ -17,28 +17,28 @@ contentRight : [
 
 content : [
 {
-	tag: '<a href="/f.jsp?http://www.gsion.com/?okjsp" target="_blank">' +
-	'<img src="http://www.GSION.com/Files/NIF/201107/jspë°°ë„ˆ.JPG" ' +
-	'alt="ì •ë³´ì²˜ë¦¬ê¸°ìˆ ì‚¬ì˜ ëª¨ë“  ê²ƒ ì§€ì•„ì´ì—ìŠ¤ì—ì„œ í™•ì¸í•˜ì„¸ìš”!"></a>'
+    tag: '<a href="/f.jsp?http://www.gsion.com/?okjsp" target="_blank">' +
+    '<img src="http://www.GSION.com/Files/NIF/201107/jsp¹è³Ê.JPG" ' +
+    'alt="Á¤º¸Ã³¸®±â¼ú»çÀÇ ¸ğµç °Í Áö¾ÆÀÌ¿¡½º¿¡¼­ È®ÀÎÇÏ¼¼¿ä!"></a>'
 }
            
 ],
 
 left : [
 {
-	tag: '<li><A href="/f.jsp?http://www.innorix.com/DS/" title="ëŒ€ìš©ëŸ‰ íŒŒì¼/í´ë” ì—…ë¡œë“œ ì»´í¬ë„ŒíŠ¸" target="innorix">ì—…ë¡œë“œëŠ” InnoDS</A></li>'
+    tag: '<li><A href="/f.jsp?http://www.innorix.com/DS/" title="´ë¿ë·® ÆÄÀÏ/Æú´õ ¾÷·Îµå ÄÄÆ÷³ÍÆ®" target="innorix">¾÷·Îµå´Â InnoDS</A></li>'
 },
 {
-	tag: '<li><A href="/f.jsp?http://okmindmap.com/" title="ì›¹ê¸°ë°˜ í˜‘ì—… ë§ˆì¸ë“œë§µ, OKJSP ìœ ì € ë°•ê¸°ì›ë‹˜ì´ ì°¸ì—¬í•œ ì„œë¹„ìŠ¤" target="imaso">okmindmap</A></li>'
+    tag: '<li><A href="/f.jsp?http://okmindmap.com/" title="À¥±â¹İ Çù¾÷ ¸¶ÀÎµå¸Ê, OKJSP À¯Àú ¹Ú±â¿ø´ÔÀÌ Âü¿©ÇÑ ¼­ºñ½º" target="imaso">okmindmap</A></li>'
 },
 {
-	tag: '<li><A href="/f.jsp?http://bit.ly/cIQ7fA" title="ì•ˆë“œë¡œì´ë“œ ê°œë°œí™˜ê²½ êµ¬ì¶•" target="android">[ìœ ë£Œ]ì•ˆë“œë¡œì´ë“œ ê°œë°œë§¤ë‰´ì–¼1</A></li>'
+    tag: '<li><A href="/f.jsp?http://bit.ly/cIQ7fA" title="¾Èµå·ÎÀÌµå °³¹ßÈ¯°æ ±¸Ãà" target="android">[À¯·á]¾Èµå·ÎÀÌµå °³¹ß¸Å´º¾ó1</A></li>'
 }
 ],
 footer : [
 {
-	tag: '<a href="/f.jsp?http://raction.tistory.com/">' +
-	'<img src="/images/banner/raction_468x60.png" alt="ê³µì§œ ê°€ë¼ì‚¬ëŒ€ ë™ì…˜í•˜ë¼"></a>'
+    tag: '<a href="/f.jsp?http://raction.tistory.com/">' +
+    '<img src="/images/banner/raction_468x60.png" alt="°øÂ¥ °¡¶ó»ç´ë ·¢¼ÇÇÏ¶ó"></a>'
 }
 ],
 
@@ -47,7 +47,7 @@ aside : [
 tag : "<li>"+
 "<a href=\"/f.jsp?http://www.devmento.co.kr\" target=\"_blank\" >"+
 "<img src=\"/images/banner/devmento_134x60.gif\" "+
-"	alt=\"ê°œë°œìë“¤ì˜ ì§€ì‹ê³µìœ  ì‰¼í„° ë°ë¸Œë©˜í† \">"+
+"   alt=\"°³¹ßÀÚµéÀÇ Áö½Ä°øÀ¯ ½°ÅÍ µ¥ºê¸àÅä\">"+
 "</a>"+
 "</li>"
  },
@@ -55,7 +55,7 @@ tag : "<li>"+
  tag : "<li>"+
  "<a href=\"/f.jsp?http://project.oss.kr/?okjsp\" target=\"_blank\" >"+
  "<img src=\"/images/banner/opensw_134x40.gif\" "+
- "	alt=\"2011 ê³µê°œSWê°œë°œìëŒ€íšŒ\">"+
+ "  alt=\"2011 °ø°³SW°³¹ßÀÚ´ëÈ¸\">"+
  "</a>"+
  "</li>"
 },
@@ -63,46 +63,46 @@ tag : "<li>"+
 tag : "<li>"+
  "<a href=\"/f.jsp?http://cs.ucloud.com\" target=\"_blank\" >"+
  "<img src=\"/images/banner/ucloud_134x40.gif\" "+
- "	alt=\"KT Ucloud\" ></a>"+
+ "  alt=\"KT Ucloud\" ></a>"+
  "</li>"
  }
 ],
 show : function() {
-	var idx = Math.floor(Math.random() * this.main.length);
-	document.write(this.main[idx].tag);
+    var idx = Math.floor(Math.random() * this.main.length);
+    document.write(this.main[idx].tag);
 },
 
 showAside : function() {
-	document.writeln("<ul>");
-	for(var i = 0; i < this.aside.length; i++) {
-		document.writeln(this.aside[i].tag);
-	}
-	document.writeln("</ul>");
+    document.writeln("<ul>");
+    for(var i = 0; i < this.aside.length; i++) {
+        document.writeln(this.aside[i].tag);
+    }
+    document.writeln("</ul>");
 },
 
 showLeftSide : function() {
-	for(var i = 0; i < this.left.length; i++) {
-		document.writeln(this.left[i].tag);
-	}
+    for(var i = 0; i < this.left.length; i++) {
+        document.writeln(this.left[i].tag);
+    }
 },
 
 showContentRight : function() {
-	if (this.contentRight.length > 0) {
-		var idx = Math.floor(Math.random() * this.contentRight.length);
-		document.write(this.contentRight[idx].tag);
-	}
+    if (this.contentRight.length > 0) {
+        var idx = Math.floor(Math.random() * this.contentRight.length);
+        document.write(this.contentRight[idx].tag);
+    }
 },
 
 showContentSection : function() {
-	if (this.content.length > 0) {
-		var idx = Math.floor(Math.random() * this.content.length);
-		document.write(this.content[idx].tag);
-	}
+    if (this.content.length > 0) {
+        var idx = Math.floor(Math.random() * this.content.length);
+        document.write(this.content[idx].tag);
+    }
 },
 
 showFooter : function() {
-	var idx = Math.floor(Math.random() * this.footer.length);
-	document.write(this.footer[idx].tag)
+    var idx = Math.floor(Math.random() * this.footer.length);
+    document.write(this.footer[idx].tag)
 }
 
 
