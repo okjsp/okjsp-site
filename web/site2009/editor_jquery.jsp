@@ -26,10 +26,12 @@
 <script type="text/javascript" src="/js/jquery/jquery-1.3.2.min.js"></script>
 <script type="text/javascript" src="/js/jquery/jwysiwyg-0.5/jquery.wysiwyg.js"></script>
 <script type="text/javascript" src="/js/okjsp.js"></script>
+<script type="text/javascript" src='/js/ban.js'></script>
 <script type="text/javascript">
 $(function() {
 	$('#content').wysiwyg();
 	$('#content').change(sync);
+	$('#f1').submit(check);
 });
 
 var sync = function() {
