@@ -31,11 +31,19 @@ footer : [
 aside : [
  {
  tag : "<li>"+
- "<a href=\"/f.jsp?http://project.oss.kr/?okjsp\" target=\"_blank\" >"+
- "<img src=\"/images/banner/opensw_134x40.gif\" "+
- "  alt=\"2011 공개SW개발자대회\">"+
+ "<a href=\"/f.jsp?http://academy.w3labs.kr?okjsp\" target=\"_blank\" >"+
+ "<img src=\"/images/banner/w3labs_134x60.jpg\" "+
+ "  alt=\"미래웹기술연구소 아카데미\">"+
  "</a>"+
  "</li>"
+},
+{
+	tag : "<li>"+
+	"<a href=\"/f.jsp?http://project.oss.kr/?okjsp\" target=\"_blank\" >"+
+	"<img src=\"/images/banner/opensw_134x40.gif\" "+
+	"  alt=\"2011 공개SW개발자대회\">"+
+	"</a>"+
+	"</li>"
 },
  {
 tag : "<li>"+
