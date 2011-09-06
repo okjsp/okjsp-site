@@ -1,10 +1,13 @@
 <%@page pageEncoding="euc-kr" %>
 <%@page import="kr.pe.okjsp.util.CommonUtil"%>
+<jsp:useBean id="list" class="kr.pe.okjsp.ListHandler"/>
+<jsp:setProperty name="list" property="*" />
+
 <link rel="stylesheet" href="/css/mashup.css" type="text/css">
 <h2>Daum 검색 결과 찾기</h2>
 
-<input id="q" value="<%= CommonUtil.a2k(request.getParameter("keyword")) %>"/>
-<button id="b" />검색</button>
+<input id="q" value="<%= list.getKeyword() %>"/>
+<button id="b">검색</button>
 
 <h3>블로그 검색 결과를 표시 합니다</h3>
 <ul id="r" /></ul>

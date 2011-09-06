@@ -69,8 +69,7 @@
 <%
 	boolean isAdBBS = "recruit".equals(list.getBbs()) && list.getPg() < 1;
 	if (isAdBBS) {
-		int [] seqs = {171786 /* ~8/22 */, 
-				163503};
+		int [] seqs = {163503};
 		ArticleDao articleDao = new ArticleDao();
 		for(int seq : seqs) {
 			Article article = articleDao.getArticle(seq);
@@ -90,10 +89,10 @@
 <%
 		} // end for
 	} // end if 
-String keyword = CommonUtil.nchk(request.getParameter("keyword"));
+String keyword = list.getKeyword();
 String link = "&bbs="+request.getParameter("bbs")+
               "&keyfield="+CommonUtil.nchk(request.getParameter("keyfield"), "content")+
-              "&keyword="+java.net.URLEncoder.encode(keyword, "8859_1");
+              "&keyword="+list.getKeyword();
 int oldRef = -1;  // 그룹번호가 이전과 같을 경우 그룹번호 출력 안함
 
 while (iter.hasNext()) {
@@ -155,7 +154,7 @@ request.setAttribute("pageSize", ""+list.getPageSize());
     <option value="writer">작성자</option>
 </select>
 
-<input type="text" name="keyword" value="<%= CommonUtil.a2k(keyword) %>">
+<input type="text" name="keyword" value="<%= list.getKeyword() %>">
 <input type="submit" value="검색">
 <input type="hidden" name="act"      value="LIST">
 <input type="hidden" name="bbs"      value="<%= request.getParameter("bbs") %>">
