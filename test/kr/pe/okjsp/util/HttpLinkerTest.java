@@ -120,5 +120,11 @@ public class HttpLinkerTest extends TestCase {
 		assertEquals(output, HttpLinker.getLinkedSource(source));
 	}
 	
+	public void testGetLinkedSourceClose() {
+		String source = "(http://www.prever.co.kr)";
+		String output = "(<a href=\"http://www.prever.co.kr\" target=\"_blank\">http://www.prever.co.kr</a>)";
+		assertEquals(output, HttpLinker.getLinkedSource(source));
+	}
+	
 
 }
