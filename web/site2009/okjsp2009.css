@@ -66,12 +66,23 @@ img {
 #memorecent ul {
 	clear: left;
 	width: 600px;
+	min-height: 83px;
+	margin-bottom: 2px;
 }
 
 #memorecent img {
 	float: left;
 	margin: 0 8px 8px 0;
-	border: 1px solid #ddd;
+}
+
+.box {
+	border: 1px solid #bbb;
+	border-top: 1px solid #eee;
+	border-left: 1px solid #eee;
+}
+
+#memorecent .writer {
+	font-weight: bold;
 }
 
 #bookList {

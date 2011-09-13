@@ -12,7 +12,7 @@
 <html>
 <title>okjsp</title>
     <script src="/js/okjsp.js"></script>
-    <script src="/js/banner.js"></script>
+    <script charset="euc-kr" src="/js/banner.js"></script>
     <script src="/js/bannerData.js"></script>
     <script src='/js/okboard.js'></script>
 	<link rel="stylesheet" href="/css/okjsp2007.css.jsp" type="text/css">
@@ -32,8 +32,8 @@
 	for (MemoBean memo: recent) {
 %><li>
 <a href="/seq/<%= memo.getSeq()+"#"+memo.getMseq() %>">
-<ul><li><img src="http://www.okjsp.pe.kr/profile/<%= memo.getSid() %>.jpg"></li>
-<li><%= memo.getWriter() %></li>
+<ul class="box"><li><img class="box" src="http://www.okjsp.pe.kr/profile/<%= memo.getSid() %>.jpg"></li>
+<li class="writer"><%= memo.getWriter() %></li>
 <li><%= memo.getWhen("yyyy-MM-dd HH:mm:ss") %></li>
 <li class="memo"><%= memo.getBcomment() %></li>
 </ul></a>
