@@ -1,9 +1,14 @@
 var Banner = {
 main : [
 {
-    tag: '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
-    '<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
-    'alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트"></a>'
+    tag: '<a href="/f.jsp?http://www.barunsoncard.co.kr/mypage/photocard/product_detail.asp?order_seq=20838" target="_blank">' +
+    '<img src="/images/banner/kenny_473x98.png" ' +
+    'alt="OKJSP 초기부터 운영을 도와준 kenu의 정신적 지주 까칠강의 Kenny군 결혼식 축하합니다."></a>'
+},
+{
+	tag: '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
+	'<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
+	'alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트"></a>'
 }
 ],
 
