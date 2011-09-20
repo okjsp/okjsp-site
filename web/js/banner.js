@@ -36,9 +36,9 @@ footer : [
 aside : [
  {
  tag : "<li>"+
- "<a href=\"/f.jsp?http://academy.w3labs.kr?okjsp\" target=\"_blank\" >"+
+ "<a href=\"/f.jsp?http://academy.w3labs.kr/?page_id=518\" target=\"_blank\" >"+
  "<img src=\"/images/banner/w3labs_134x60.jpg\" "+
- "  alt=\"미래웹기술연구소 아카데미\">"+
+ "  alt=\"HTML5 모바일앱 Developer 과정; 미래웹기술연구소 아카데미\">"+
  "</a>"+
  "</li>"
 },
