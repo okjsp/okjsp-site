@@ -28,6 +28,10 @@
   <A href="/bbs?act=LIST&bbs=notice">공지사항</A>
   <br />
   <A href="/bbs?act=MEMORECENT">새 메모</A>
+  <br />
+  <A href="http://www.okjsp.pe.kr:7001">node.js chat</A>
+  <br />
+  <A href="http://www.okjsp.pe.kr:8080" title="Jenkins CI tool">OKJSP Health</A>
 
   <hr>ad:
   <ul id="menuad">
