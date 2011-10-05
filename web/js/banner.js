@@ -28,8 +28,8 @@ left : [
 ],
 footer : [
 {
-    tag: '<a href="/f.jsp?링크_ https://www.adobe.com/cfusion/tdrc/index.cfm?product=flash_builder&loc=ko&promoid=JEKVX">' +
-    '<img src="/images/banner/adobe_flex45_468x60.jpg" alt="안드로이드부터 아이패드까지 모든 앱 개발 지원 Flash Builder 4.5 체험판을 경험해 보세요!"></a>'
+    tag: '<a href="/f.jsp?http://www.adobe-design4impact.com/kr">' +
+    '<img src="/images/banner/adobe_dfi_468x60.jpg" alt="Design For Impact 10/12 13:00"></a>'
 },
 {
 	tag: '<a href="/f.jsp?http://raction.tistory.com/">' +
