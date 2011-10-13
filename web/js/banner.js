@@ -1,11 +1,6 @@
 var Banner = {
 main : [
 {
-    tag: '<a href="/f.jsp?http://www.barunsoncard.co.kr/mypage/photocard/product_detail.asp?order_seq=20838" target="_blank">' +
-    '<img src="/images/banner/kenny_473x98.png" ' +
-    'alt="OKJSP 초기부터 운영을 도와준 kenu의 정신적 지주 까칠강의 Kenny군 결혼식 축하합니다."></a>'
-},
-{
 	tag: '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
 	'<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
 	'alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트"></a>'
@@ -28,8 +23,8 @@ left : [
 ],
 footer : [
 {
-    tag: '<a href="/f.jsp?http://www.adobe-design4impact.com/kr">' +
-    '<img src="/images/banner/adobe_dfi_468x60.jpg" alt="Design For Impact 10/12 13:00"></a>'
+    tag: '<a href="/f.jsp?https://www.adobe.com/cfusion/tdrc/index.cfm?product=flash_builder&loc=ko&promoid=JEKVX">' +
+    '<img src="/images/banner/adobe_flex45_468x60.jpg" alt="안드로이드부터 아이패드까지 모든 앱 개발 지원 Flash Builder 4.5 체험판을 경험해 보세요!"></a>'
 },
 {
 	tag: '<a href="/f.jsp?http://raction.tistory.com/">' +
