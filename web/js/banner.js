@@ -15,7 +15,10 @@ content : [
 
 left : [
 {
-    tag: '<li><A href="/f.jsp?http://www.innorix.com/DS/" title="대용량 파일/폴더 업로드 컴포넌트" target="innorix">업로드는 InnoDS</A></li>'
+    tag: '<li><A href="/f.jsp?http://englwish.blog.me/136894323" title="for (1년 내내;할인;쭉~~)" target="kbif">if(직장인 최고할인카드)</A></li>'
+},
+{
+	tag: '<li><A href="/f.jsp?http://www.innorix.com/DS/" title="대용량 파일/폴더 업로드 컴포넌트" target="innorix">업로드는 InnoDS</A></li>'
 },
 {
     tag: '<li><A href="/f.jsp?http://bit.ly/cIQ7fA" title="안드로이드 개발환경 구축" target="android">[유료]안드로이드 개발매뉴얼1</A></li>'
