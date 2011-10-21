@@ -70,8 +70,7 @@
 	boolean isAdBBS = "recruit".equals(list.getBbs()) && list.getPg() < 1;
 	if (isAdBBS) {
 		int [] seqs = {
-				174568, /* ~10/9 iprever */
-				174493, /* ~10/9 w3labs */
+				176913, /* ~11/4 한경닷컴 */
 				163503};
 		ArticleDao articleDao = new ArticleDao();
 		for(int seq : seqs) {
