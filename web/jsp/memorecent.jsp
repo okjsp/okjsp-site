@@ -10,7 +10,7 @@
 	ArrayList<MemoBean> recent = handler.getRecent(mp);	
 %>
 <html>
-<title>okjsp</title>
+<title>OKJSP 새 메모</title>
     <script src="/js/okjsp.js"></script>
     <script charset="euc-kr" src="/js/banner.js"></script>
     <script src="/js/bannerData.js"></script>
@@ -35,7 +35,7 @@
 <ul class="box"><li><img class="box" src="http://www.okjsp.pe.kr/profile/<%= memo.getSid() %>.jpg"></li>
 <li class="writer"><%= memo.getWriter() %></li>
 <li><%= memo.getWhen("yyyy-MM-dd HH:mm:ss") %></li>
-<li class="memo"><%= memo.getBcomment() %></li>
+<li class="memo"><%= CommonUtil.showHtml(memo.getBcomment()) %></li>
 </ul></a>
 </li>
 <%
