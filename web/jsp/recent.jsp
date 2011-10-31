@@ -24,12 +24,10 @@ overflow: hidden; width: 73px; height: 14px;
 
 <body class="body" style="margin:0">
 <jsp:include page="/top.jsp" />
+<jsp:include page="/menu.jsp" />
 <table class="mainTable">
   <tr>
-    <td width='120' valign='top'>
-      <jsp:include page="/menu.jsp" />
-    </td>
-    <td valign='top'>
+    <td>
 <ul id="banner_top">
 <li>
 <script type="text/javascript">
@@ -38,7 +36,7 @@ Banner.show();
 </li>
 </ul>
 
-<table width="600" border="0" cellspacing="0">
+<table>
   <tr>
     <td align="center" valign="top">
 <div id="bookList">

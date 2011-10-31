@@ -20,11 +20,9 @@
 </head>
 <body class="body" style="margin:0">
 <jsp:include page="/top.jsp" />
+<jsp:include page="/menu.jsp" />
 <table class="bbsTable">
   <tr>
-    <td width='120px' valign='top'>
-      <jsp:include page="/menu.jsp" />
-    </td>
     <td valign='top'>
 
 <ul id="memorecent">

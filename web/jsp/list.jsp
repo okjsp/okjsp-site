@@ -32,11 +32,9 @@
 </head>
 <body class="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 <jsp:include page="/top.jsp" />
+<jsp:include page="/menu.jsp" />
 <table class="bbsTable">
   <tr>
-    <td width='120' valign='top'>
-      <jsp:include page="/menu.jsp" />
-    </td>
     <td valign='top'>
     <div style="font-size:10pt;font-weight:bold;margin:3px;padding:3px;">
       <c:out value="${requestScope.header}" escapeXml="false" /><br/>

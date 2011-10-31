@@ -27,11 +27,9 @@
 </head>
 <body class="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 <jsp:include page="/top.jsp" />
+<jsp:include page="/menu.jsp" />
 <table class="bbsTable">
   <tr>
-    <td width='120' valign='top'>
-      <jsp:include page="/menu.jsp" />
-    </td>
     <td valign='top'>
 <form name="f1" method="post" ENCTYPE="multipart/form-data" onSubmit="return check()">
 <table border="0" cellspacing="0" cellpadding="0">

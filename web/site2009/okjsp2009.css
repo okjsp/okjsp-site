@@ -53,7 +53,7 @@ img {
 
 /* bbs */
 .tablestyle {
-	margin-left: 2px;
+	margin-left: 6px;
 	width: 642px;
 }
 
@@ -122,6 +122,7 @@ cursor: pointer;
 #menuSect {
 	width: 120px;
 	margin: 0 5px 0 3px;
+	float: left;
 }
 
 #bbslist {
