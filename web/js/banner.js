@@ -1,11 +1,6 @@
 var Banner = {
 main : [
 {
-	tag: '<a href="/f.jsp?http://itcampus.hankyung.com/apps/curriculum.view?curriculum_no=3&class_no=31" target="_blank">' +
-	'<img src="/images/banner/hankyung_473x98.gif" ' +
-	'alt="[한경닷컴] 자바개발 정규신입사원 위탁연수생모집(~11/4)"></a>'
-},
-{
 	tag: '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
 	'<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
 	'alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트"></a>'
@@ -19,9 +14,6 @@ content : [
 ],
 
 left : [
-{
-    tag: '<li><A href="/f.jsp?http://englwish.blog.me/136894323" title="for (1년 내내;할인;쭉~~)" target="kbif">if(직장인 최고할인카드)</A></li>'
-},
 {
 	tag: '<li><A href="/f.jsp?http://www.innorix.com/DS/" title="대용량 파일/폴더 업로드 컴포넌트" target="innorix">업로드는 InnoDS</A></li>'
 },
