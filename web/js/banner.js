@@ -11,6 +11,10 @@ contentRight : [
 ],
 
 content : [
+{
+	tag: '<a href="/f.jsp?http://80port.com/">' +
+	'<img src="/images/banner/80port_banner_468x60.jpg" alt="OKJSP를 후원하는 호스팅 회사 80port닷컴"></a>'
+}
 ],
 
 left : [
@@ -27,8 +31,8 @@ footer : [
     '<img src="/images/banner/adobe_flex45_468x60.jpg" alt="안드로이드부터 아이패드까지 모든 앱 개발 지원 Flash Builder 4.5 체험판을 경험해 보세요!"></a>'
 },
 {
-	tag: '<a href="/f.jsp?http://raction.tistory.com/">' +
-	'<img src="/images/banner/raction_468x60.png" alt="공짜 가라사대 랙션하라"></a>'
+	tag: '<a href="/f.jsp?http://80port.com/">' +
+	'<img src="/images/banner/80port_banner_468x60.jpg" alt="OKJSP를 후원하는 호스팅 회사 80port닷컴"></a>'
 }
 ],
 
