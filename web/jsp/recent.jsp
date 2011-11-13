@@ -191,13 +191,6 @@ Banner.showAside();
 <p id="adinfo"><a href="/seq/163503">±¤°í¹®ÀÇ</a>
 </p>
 	</div>
-	<div id="imaso_div">
-	<script type="text/javascript"><!--
-imaso_ad_client = "pub-31415924";
-//-->
-</script> 
-<script type="text/javascript" src="http://widget.imaso.co.kr/pagead/show_ads.js"></script>
-	</div>
 </div>
 <jsp:include page="/googleAnalytics.jsp" />
 </body>
