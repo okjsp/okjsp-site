@@ -82,7 +82,7 @@
         <td class="writer"><div><b><%= article.getWriter() %></b></div></td>
         <td class="writer"><img src="/profile/<%= article.getId() %>.jpg" style="width: 14px; height: 14px;" alt="<%= article.getWriter() %>"/></td>
         <td class="read tiny"><b><%= article.getRead() %></b></td>
-        <td class="when tiny" title="<%= article.getWhen("yy-MM-dd HH:mm") %>">
+        <td class="when tiny" title="<%= article.getWhen("yyyy-MM-dd HH:mm:ss") %>">
         <b><%= DateLabel.getTimeDiffLabel(article.getWhen()) %></b></td>
     </tr>
 <%

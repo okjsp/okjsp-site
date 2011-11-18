@@ -42,7 +42,7 @@ http://www.okjsp.pe.kr/seq/<%= one.getSeq() %></a></div>
 %>
 <strong><c:out value="${one.writer}"/></strong>
 <div>
-<c:out value="${one.when}" />
+<%= one.getWhen("yyyy-MM-dd HH:mm:ss") %>
 </div>
         </td>
     </tr>
@@ -316,7 +316,7 @@ while (iter.hasNext()) {
         </td>
         <td><%= one.getWriter(9) %></td>
         <td class="tiny"><%= one.getRead() %></td>
-        <td class="tiny"><%= one.getWhen("MM-dd HH:mm") %></td>
+        <td class="tiny"><%= one.getWhen("yyyy-MM-dd HH:mm:ss") %></td>
     </tr>
 <%
     oldRef = one.getRef();  // 그룹번호를 기억해 놓는다.
