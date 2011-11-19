@@ -89,6 +89,7 @@ input.memodc {
 
 li {
 	margin: 2px;
+	list-style-type: none;
 }
 
 #selectBbs {
