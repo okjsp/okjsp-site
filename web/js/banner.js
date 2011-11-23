@@ -3,7 +3,7 @@ main : [
 {
 	tag: '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
 	'<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
-	'alt="¢Æ¢Æ¢Æ µ¥ºê·º ¢Æ¢Æ¢Æ °³¹ßÀÚ¸¦ À§ÇÑ ±¹³» ÃÖ°í ÇÁ·Î±×·¡¹Ö Àü¹® µ¿¿µ»ó°­ÁÂ »çÀÌÆ®"></a>'
+	'alt="â–’â–’â–’ ë°ë¸Œë ‰ â–’â–’â–’ ê°œë°œìë¥¼ ìœ„í•œ êµ­ë‚´ ìµœê³  í”„ë¡œê·¸ë˜ë° ì „ë¬¸ ë™ì˜ìƒê°•ì¢Œ ì‚¬ì´íŠ¸"></a>'
 }
 ],
 
@@ -13,26 +13,29 @@ contentRight : [
 content : [
 {
 	tag: '<a href="/f.jsp?http://80port.com/">' +
-	'<img src="/images/banner/80port_banner_468x60.jpg" alt="OKJSP¸¦ ÈÄ¿øÇÏ´Â È£½ºÆÃ È¸»ç 80port´åÄÄ"></a>'
+	'<img src="/images/banner/80port_banner_468x60.jpg" alt="OKJSPë¥¼ í›„ì›í•˜ëŠ” í˜¸ìŠ¤íŒ… íšŒì‚¬ 80portë‹·ì»´"></a>'
 }
 ],
 
 left : [
 {
-	tag: '<li><A href="/f.jsp?http://www.innorix.com/DS/" title="´ë¿ë·® ÆÄÀÏ/Æú´õ ¾÷·Îµå ÄÄÆ÷³ÍÆ®" target="innorix">¾÷·Îµå´Â InnoDS</A></li>'
+	tag: '<li><A href="/f.jsp?http://www.innorix.com/DS/" title="ëŒ€ìš©ëŸ‰ íŒŒì¼/í´ë” ì—…ë¡œë“œ ì»´í¬ë„ŒíŠ¸" target="innorix">ì—…ë¡œë“œëŠ” InnoDS</A></li>'
 },
 {
-    tag: '<li><A href="/f.jsp?http://bit.ly/cIQ7fA" title="¾Èµå·ÎÀÌµå °³¹ßÈ¯°æ ±¸Ãà" target="android">[À¯·á]¾Èµå·ÎÀÌµå °³¹ß¸Å´º¾ó1</A></li>'
+    tag: '<li><A href="/f.jsp?http://okmindmap.com/" title="ì›¹ê¸°ë°˜ í˜‘ì—… ë§ˆì¸ë“œë§µ, OKJSP íšŒì› ë°•ê¸°ì›ë‹˜ì´ ì°¸ì—¬í•œ ì„œë¹„ìŠ¤" target="imaso">okmindmap</A></li>'
+},
+{
+    tag: '<li><A href="/f.jsp?http://bit.ly/cIQ7fA" title="ì•ˆë“œë¡œì´ë“œ ê°œë°œí™˜ê²½ êµ¬ì¶•" target="android">[ìœ ë£Œ]ì•ˆë“œë¡œì´ë“œ ê°œë°œë§¤ë‰´ì–¼1</A></li>'
 }
 ],
 footer : [
 {
     tag: '<a href="/f.jsp?https://www.adobe.com/cfusion/tdrc/index.cfm?product=flash_builder&loc=ko&promoid=JEKVX">' +
-    '<img src="/images/banner/adobe_flex45_468x60.jpg" alt="¾Èµå·ÎÀÌµåºÎÅÍ ¾ÆÀÌÆĞµå±îÁö ¸ğµç ¾Û °³¹ß Áö¿ø Flash Builder 4.5 Ã¼ÇèÆÇÀ» °æÇèÇØ º¸¼¼¿ä!"></a>'
+    '<img src="/images/banner/adobe_flex45_468x60.jpg" alt="ì•ˆë“œë¡œì´ë“œë¶€í„° ì•„ì´íŒ¨ë“œê¹Œì§€ ëª¨ë“  ì•± ê°œë°œ ì§€ì› Flash Builder 4.5 ì²´í—˜íŒì„ ê²½í—˜í•´ ë³´ì„¸ìš”!"></a>'
 },
 {
 	tag: '<a href="/f.jsp?http://80port.com/">' +
-	'<img src="/images/banner/80port_banner_468x60.jpg" alt="OKJSP¸¦ ÈÄ¿øÇÏ´Â È£½ºÆÃ È¸»ç 80port´åÄÄ"></a>'
+	'<img src="/images/banner/80port_banner_468x60.jpg" alt="OKJSPë¥¼ í›„ì›í•˜ëŠ” í˜¸ìŠ¤íŒ… íšŒì‚¬ 80portë‹·ì»´"></a>'
 }
 ],
 
@@ -41,7 +44,7 @@ aside : [
  tag : "<li>"+
  "<a href=\"/f.jsp?http://academy.w3labs.kr/?page_id=518\" target=\"_blank\" >"+
  "<img src=\"/images/banner/w3labs_134x60.jpg\" "+
- "  alt=\"HTML5 ¸ğ¹ÙÀÏ¾Û Developer °úÁ¤; ¹Ì·¡À¥±â¼ú¿¬±¸¼Ò ¾ÆÄ«µ¥¹Ì\">"+
+ "  alt=\"HTML5 ëª¨ë°”ì¼ì•± Developer ê³¼ì •; ë¯¸ë˜ì›¹ê¸°ìˆ ì—°êµ¬ì†Œ ì•„ì¹´ë°ë¯¸\">"+
  "</a>"+
  "</li>"
 },
@@ -49,7 +52,7 @@ aside : [
 	tag : "<li>"+
 	"<a href=\"/f.jsp?http://project.oss.kr/?okjsp\" target=\"_blank\" >"+
 	"<img src=\"/images/banner/opensw_134x40.gif\" "+
-	"  alt=\"2011 °ø°³SW°³¹ßÀÚ´ëÈ¸\">"+
+	"  alt=\"2011 ê³µê°œSWê°œë°œìëŒ€íšŒ\">"+
 	"</a>"+
 	"</li>"
 },
