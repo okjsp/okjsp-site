@@ -13,7 +13,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
     <title>NEW OKJSP with CUBRID</title>
     <script type="text/javascript" src="/js/okjsp.js"></script>
-    <script type="text/javascript" src="/js/banner.js"></script>
+    <script charset="utf-8" type="text/javascript" src="/js/banner.js"></script>
     <script type="text/javascript" src="/js/bannerData.js"></script>
     <LINK rel="STYLESHEET" type="TEXT/CSS" HREF="/css/okjsp2007.css.jsp">
     <style type="text/css">
@@ -190,6 +190,8 @@ Banner.showAside();
 </script>
 <p id="adinfo"><a href="/seq/163503">광고문의</a>
 </p>
+<a href="http://itunes.apple.com/app/id439910698?mt=8" target="_blank"><img src="http://a5.mzstatic.com/us/r1000/097/Purple/e0/96/dd/mzl.rlflfibg.175x175-75.jpg" alt="Hi Clien by iiixzu"></a>
+
 	</div>
 </div>
 <jsp:include page="/googleAnalytics.jsp" />
