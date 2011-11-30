@@ -188,10 +188,6 @@ aladdin_ttb_height = '183';
 <script type="text/javascript">
 Banner.showAside();
 </script>
-<p id="adinfo"><a href="/seq/163503">±¤°í¹®ÀÇ</a>
-</p>
-<a href="http://itunes.apple.com/app/id439910698?mt=8" target="_blank"><img src="http://a5.mzstatic.com/us/r1000/097/Purple/e0/96/dd/mzl.rlflfibg.175x175-75.jpg" alt="Hi Clien by iiixzu"></a>
-
 	</div>
 </div>
 <jsp:include page="/googleAnalytics.jsp" />

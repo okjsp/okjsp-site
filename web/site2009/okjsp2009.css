@@ -215,6 +215,12 @@ cursor: pointer;
 	color: #000;
 }
 
+.adapp {
+	width: 150px;
+	height: 150px;
+	margin-bottom: 6px;
+}
+
 .sidebar-title {
 	display: block;
 	margin: 17px 0 0;
