@@ -11,14 +11,14 @@
 	<jsp:useBean id="member" class="kr.pe.okjsp.member.Member" scope="session"/>
 	<jsp:setProperty name="member" property="id" value='<%= CommonUtil.getCookie(request, "okid") %>' />
 	<c:if test="${empty member.id}">
-		<a href="/jsp/member/agreement.jsp"><b>join</b></a>
-		/
-		<a href="<%= Navigation.getPath("LOGFORM") %>">login</a>
+		<a href="<%= Navigation.getPath("LOGFORM") %>">로그인</a>
+		<br />
+		<a href="/jsp/member/agreement.jsp"><b>회원가입</b></a>
 	</c:if>
 		<SPAN ID="member" style="display:block; margin-left:0px">
 		<c:if test="${!empty member.id}">
 			<a href="<%= Navigation.getPath("SECURE_DOMAIN") %>/jsp/member/info.jsp" ><b><%= member.getId() %></b> info</a> /
-			<a href="/jsp/member/logout.jsp" >logout</a>
+			<a href="/jsp/member/logout.jsp" >로그아웃</a>
 			<br>
 			<a href="/bbs?act=BOOKMARK" >책갈피</a>
 		</c:if>

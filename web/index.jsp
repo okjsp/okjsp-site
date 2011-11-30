@@ -1,3 +1,3 @@
 <%
-	response.sendRedirect("/bbs?act=RECENT");
+	response.sendRedirect("/bbs?act=FIRST_MAIN");
 %>
