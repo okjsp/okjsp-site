@@ -12,8 +12,8 @@ contentRight : [
 
 content : [
 {
-	tag: '<a href="/f.jsp?http://80port.com/">' +
-	'<img src="/images/banner/80port_banner_468x60.jpg" alt="OKJSP를 후원하는 호스팅 회사 80port닷컴"></a>'
+	tag: '<a href="/f.jsp?http://olc.oss.kr/">' +
+	'<img src="/images/banner/olc_468x60.gif" alt="오픈소스 SW프로그래머를 위한 넉넉한 그늘"></a>'
 }
 ],
 
@@ -40,6 +40,10 @@ footer : [
 ],
 
 aside : [
+{
+	tag: '<a href="/f.jsp?http://olc.oss.kr/">' +
+	'<img src="/images/banner/olc_134x60.gif" alt="오픈소스 SW프로그래머를 위한 넉넉한 그늘"></a>'
+},
  {
  tag : "<li>"+
  "<a href=\"/f.jsp?http://academy.w3labs.kr/?page_id=518\" target=\"_blank\" >"+
