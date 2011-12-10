@@ -23,7 +23,7 @@
 <META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=utf-8">
 <title>okjsp</title>
     <script src="/js/okjsp.js"></script>
-    <script src="/js/banner.js"></script>
+    <script src="/js/banner.js" charset="utf-8"></script>
     <script src="/js/bannerData.js"></script>
     <script src='/js/okboard.js'></script>
 <link rel="stylesheet" href="/css/okjsp2007.css.jsp" type="text/css">
