@@ -81,7 +81,7 @@ showAside : function() {
     document.writeln("</ul>");
     document.writeln('<p id="adinfo"><a href="/seq/163503">광고문의</a></p>'+
     		'<a href="http://itunes.apple.com/app/id439910698?mt=8" target="_blank">'+
-    		'<img class="adapp" src="http://a5.mzstatic.com/us/r1000/097/Purple/e0/96/dd/mzl.rlflfibg.175x175-75.jpg" alt="Hi Clien by iiixzu"></a>');
+    		'<img class="adapp" src="/images/app/clien_150x150.png" alt="Hi Clien by iiixzu"></a>');
 },
 
 showLeftSide : function() {
