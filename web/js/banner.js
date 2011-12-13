@@ -4,6 +4,11 @@ main : [
 	tag: '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
 	'<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
 	'alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트"></a>'
+},
+{
+	tag: '<a href="/f.jsp?http://imaso.co.kr/data/tempfile/okjsp_edm_700.html" target="_blank">' +
+	'<img src="/images/banner/maso_473x98.jpg" ' +
+	'alt="OKJSP 회원만을 위한 마소정기구독 이벤트"></a>'
 }
 ],
 
