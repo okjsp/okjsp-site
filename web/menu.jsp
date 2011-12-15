@@ -11,23 +11,24 @@
 	<jsp:useBean id="member" class="kr.pe.okjsp.member.Member" scope="session"/>
 	<jsp:setProperty name="member" property="id" value='<%= CommonUtil.getCookie(request, "okid") %>' />
 	<c:if test="${empty member.id}">
-		<a href="<%= Navigation.getPath("LOGFORM") %>">·Î±×ÀÎ</a>
+		<a href="<%= Navigation.getPath("LOGFORM") %>">ï¿½Î±ï¿½ï¿½ï¿½</a>
 		<br />
-		<a href="/jsp/member/agreement.jsp"><b>È¸¿ø°¡ÀÔ</b></a>
+		<a href="/jsp/member/agreement.jsp"><b>È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</b></a>
 	</c:if>
 		<SPAN ID="member" style="display:block; margin-left:0px">
 		<c:if test="${!empty member.id}">
-			<a href="<%= Navigation.getPath("SECURE_DOMAIN") %>/jsp/member/info.jsp" ><b><%= member.getId() %></b> info</a> /
-			<a href="/jsp/member/logout.jsp" >·Î±×¾Æ¿ô</a>
+			<a href="<%= Navigation.getPath("SECURE_DOMAIN") %>/jsp/member/info.jsp" ><b><%= member.getId() %></b> info</a> 
+<br>
+			<a href="/jsp/member/logout.jsp" >ï¿½Î±×¾Æ¿ï¿½</a>
 			<br>
-			<a href="/bbs?act=BOOKMARK" >Ã¥°¥ÇÇ</a>
+			<a href="/bbs?act=BOOKMARK" >Ã¥ï¿½ï¿½ï¿½ï¿½</a>
 		</c:if>
 		</SPAN>
 	</div>
   <hr>
-  <A href="/bbs?act=LIST&bbs=notice">°øÁö»çÇ×</A>
+  <A href="/bbs?act=LIST&bbs=notice">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</A>
   <br />
-  <A href="/bbs?act=MEMORECENT">»õ ¸Þ¸ð</A>
+  <A href="/bbs?act=MEMORECENT">ï¿½ï¿½ ï¿½Þ¸ï¿½</A>
   <br />
   <A href="http://www.okjsp.pe.kr:7001">node.js chat</A>
   <br />
@@ -52,9 +53,9 @@
 </script>
   <hr>
    <br><A href="http://webdevmobile.com/"
-   title="html5, À¥Æ®·»µå, À¥µðÀÚÀÎ, ¸ð¹ÙÀÏ" target="_blank">WebDevMobile</A>
+   title="html5, ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" target="_blank">WebDevMobile</A>
    <br><A href="http://it.nodong.net/zbxe/?mid=JOBQNA01"
-   title="È¸»ç,ÀÏÅÍ,°æ·Â °ü·Ã ÀÌ¾ß±â it.nodong.net" target="jobqna">ÀÏÅÍQ&amp;A</A>
+   title="È¸ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¾ß±ï¿½ it.nodong.net" target="jobqna">ï¿½ï¿½ï¿½ï¿½Q&amp;A</A>
 	<hr>
   <br>
   <a href="http://twitter.com/okjsp" class="twitter-follow-button" data-show-count="false" data-lang="ko">Follow @okjsp</a>
@@ -71,7 +72,7 @@
 	<div>sponsored by:</div>
 	<a href="http://www.80port.com/community" target="_blank"
 	 title="www.80port.com
-	 okjsp standalone È£½ºÆÃ Áö¿ø, ¼­ºñ½º ÁÁ½À´Ï´Ù.">
+	 okjsp standalone È£ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.">
 	<img src="/images/bnr_80port.gif" width="88" height="31" border="0"></a>
 	<br />
 	<a href="/f.jsp?http://www.cubrid.com/" target="_blank"
