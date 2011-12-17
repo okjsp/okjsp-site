@@ -1,4 +1,4 @@
-<%@page pageEncoding="euc-kr"%>
+<%@page pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core"%>
 <%@page import="kr.pe.okjsp.util.CommonUtil"%>
 <%@page import="kr.pe.okjsp.Navigation"%><div id="menuSect">
@@ -11,24 +11,24 @@
 	<jsp:useBean id="member" class="kr.pe.okjsp.member.Member" scope="session"/>
 	<jsp:setProperty name="member" property="id" value='<%= CommonUtil.getCookie(request, "okid") %>' />
 	<c:if test="${empty member.id}">
-		<a href="<%= Navigation.getPath("LOGFORM") %>">�α���</a>
+		<a href="<%= Navigation.getPath("LOGFORM") %>">로그인</a>
 		<br />
-		<a href="/jsp/member/agreement.jsp"><b>ȸ������</b></a>
+		<a href="/jsp/member/agreement.jsp"><b>회원가입</b></a>
 	</c:if>
 		<SPAN ID="member" style="display:block; margin-left:0px">
 		<c:if test="${!empty member.id}">
-			<a href="<%= Navigation.getPath("SECURE_DOMAIN") %>/jsp/member/info.jsp" ><b><%= member.getId() %></b> info</a> 
+			<a href="<%= Navigation.getPath("SECURE_DOMAIN") %>/jsp/member/info.jsp" ><b><%= member.getId() %></b> 회원정보</a> 
 <br>
-			<a href="/jsp/member/logout.jsp" >�α׾ƿ�</a>
+			<a href="/jsp/member/logout.jsp" >로그아웃</a>
 			<br>
-			<a href="/bbs?act=BOOKMARK" >å����</a>
+			<a href="/bbs?act=BOOKMARK" >책갈피</a>
 		</c:if>
 		</SPAN>
 	</div>
   <hr>
-  <A href="/bbs?act=LIST&bbs=notice">��������</A>
+  <A href="/bbs?act=LIST&bbs=notice">공지사항</A>
   <br />
-  <A href="/bbs?act=MEMORECENT">�� �޸�</A>
+  <A href="/bbs?act=MEMORECENT">새 메모</A>
   <br />
   <A href="http://www.okjsp.pe.kr:7001">node.js chat</A>
   <br />
@@ -53,9 +53,9 @@
 </script>
   <hr>
    <br><A href="http://webdevmobile.com/"
-   title="html5, ��Ʈ����, ��������, ������" target="_blank">WebDevMobile</A>
+   title="html5, " target="_blank">WebDevMobile</A>
    <br><A href="http://it.nodong.net/zbxe/?mid=JOBQNA01"
-   title="ȸ��,����,���� ���� �̾߱� it.nodong.net" target="jobqna">����Q&amp;A</A>
+   title="it.nodong.net" target="jobqna">일터Q&amp;A</A>
 	<hr>
   <br>
   <a href="http://twitter.com/okjsp" class="twitter-follow-button" data-show-count="false" data-lang="ko">Follow @okjsp</a>
@@ -72,7 +72,7 @@
 	<div>sponsored by:</div>
 	<a href="http://www.80port.com/community" target="_blank"
 	 title="www.80port.com
-	 okjsp standalone ȣ���� ����, ������ �����ϴ�.">
+	 okjsp standalone 호스팅을 지원해주시는 고마운 회사 팔공포트">
 	<img src="/images/bnr_80port.gif" width="88" height="31" border="0"></a>
 	<br />
 	<a href="/f.jsp?http://www.cubrid.com/" target="_blank"
