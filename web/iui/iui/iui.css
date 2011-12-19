@@ -84,7 +84,7 @@ body[orient="landscape"] > .toolbar > h1 {
     right: 6px;
     margin: 0;
     border-width: 0 5px;
-    padding: 0 3px;
+    padding: 0 6px;
     width: auto;
     height: 30px;
     line-height: 30px;
@@ -456,7 +456,7 @@ span.b {
     right: 6px;
     margin: 0;
     border-width: 0 5px;
-    padding: 0 3px;
+    padding: 0 6px;
     width: 34px;
     height: 29px;
     line-height: 30px;
@@ -474,7 +474,7 @@ span.b {
 
 .blueButton {
 	/* 
-		»ö»óÀ» ¸ÂÃß±â À§ÇØ ÀÓÀÇ·Î toolButton.png·Î Ã³¸® From ZKUAHN
+		ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ß±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ç·ï¿½ toolButton.pngï¿½ï¿½ Ã³ï¿½ï¿½ From ZKUAHN
 		-webkit-border-image: url(blueButton.png) 0 5 0 5; 
 	*/
     -webkit-border-image: url(toolButton.png) 0 5 0 5;

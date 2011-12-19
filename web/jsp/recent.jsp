@@ -18,7 +18,7 @@
     <LINK rel="STYLESHEET" type="TEXT/CSS" HREF="/css/okjsp2007.css.jsp">
     <style type="text/css">
 .recent_first {
-overflow: hidden; width: 73px; height: 14px;
+overflow: hidden; width: 76px; height: 14px;
 }</style>
 </head>
 

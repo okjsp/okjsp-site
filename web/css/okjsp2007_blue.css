@@ -31,13 +31,13 @@ li a:hover,a:active {
             {font : 10px "Arial Narrow" ;}
 .search     {color:#CB0000}
 
-#taglist .row {display:block; margin:3px;border-bottom: 1 solid #888888;}
+#taglist .row {display:block; margin:6px;border-bottom: 1 solid #888888;}
 #m ul {
 	border-bottom:1px dashed #202020;
 	list-style-image:none;
 	list-style-position:outside;
 	list-style-type:none;
-	margin:3px;
+	margin:6px;
 	padding:5px;
 	}
 #m li.d {margin-left:10px; font: smaller; color:#666}

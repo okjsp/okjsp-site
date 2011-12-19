@@ -79,7 +79,7 @@
     if (mb.getId() != null) {
         %><img src="http://www.okjsp.pe.kr/profile/<%= mb.getId() %>.jpg"
         	alt="<%= mb.getId() %>"
-        	style="width:33px;height:33px"
+        	style="width:36px;height:36px"
         	onerror="this.src='/images/spacer.gif'"><%
     }
 %><%= mb.getWriter() %></li>
