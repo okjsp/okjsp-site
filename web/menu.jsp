@@ -3,10 +3,19 @@
 <%@page import="kr.pe.okjsp.util.CommonUtil"%>
 <%@page import="kr.pe.okjsp.Navigation"%><div id="menuSect">
 	<div>
+  <A href="/lecture/">케누 강좌</A>
+  <br />
 	<img src="/images/skin/white.gif" class="skinButton" onclick="setSkin('white')" alt="white skin"
-	><img src="/images/skin/black.gif" class="skinButton" onclick="setSkin('black')" alt="black skin"
-	><img src="/images/skin/blue.gif" class="skinButton" onclick="setSkin('blue')" alt="blue skin"
-	></div>
+	>웹 style
+  <br />
+	
+	<img src="/images/skin/black.gif" class="skinButton" onclick="setSkin('black')" alt="black skin"
+	>CRT style
+  <br />
+	<img src="/images/skin/blue.gif" class="skinButton" onclick="setSkin('blue')" alt="blue skin"
+	>나우누리 style
+  <br />
+	</div>
 	<div>
 	<jsp:useBean id="member" class="kr.pe.okjsp.member.Member" scope="session"/>
 	<jsp:setProperty name="member" property="id" value='<%= CommonUtil.getCookie(request, "okid") %>' />
