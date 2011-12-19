@@ -36,11 +36,11 @@
 <table class="bbsTable">
   <tr>
     <td valign='top'>
-    <div style="font-size:10pt;font-weight:bold;margin:3px;padding:3px;">
+    <div style="font-size:10pt;font-weight:bold;margin:6px;padding:6px;">
       <c:out value="${requestScope.header}" escapeXml="false" /><br/>
       <c:out value="${bbsInfoMap[list.bbs].header}" escapeXml="false" />
     </div>
-    <div class="tablestyle" style="font-size:10pt;font-weight:bold;padding:3px 0px">
+    <div class="tablestyle" style="font-size:10pt;font-weight:bold;padding:6px 0px">
 <%
 	Map map = (Map)application.getAttribute("bbsInfoMap");
 	if (map != null) {

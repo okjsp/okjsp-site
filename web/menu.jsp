@@ -2,20 +2,16 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core"%>
 <%@page import="kr.pe.okjsp.util.CommonUtil"%>
 <%@page import="kr.pe.okjsp.Navigation"%><div id="menuSect">
-	<div>
-  <A href="/lecture/">케누 강좌</A>
+<div style="margin-top:8px" id="menu_top">
+  <A href="/lecture/" target="_blank">OKJSP 강좌</A>
   <br />
-	<img src="/images/skin/white.gif" class="skinButton" onclick="setSkin('white')" alt="white skin"
-	>웹 style
+	<a href="#" onclick="setSkin('white')"><img src="/images/skin/white.gif" class="skinButton" alt="white skin">웹 style</a>
   <br />
-	
-	<img src="/images/skin/black.gif" class="skinButton" onclick="setSkin('black')" alt="black skin"
-	>CRT style
+	<a href="#" onclick="setSkin('black')"><img src="/images/skin/black.gif" class="skinButton" alt="black skin">CRT style</a>
   <br />
-	<img src="/images/skin/blue.gif" class="skinButton" onclick="setSkin('blue')" alt="blue skin"
-	>나우누리 style
+	<a href="#" onclick="setSkin('blue')"><img src="/images/skin/blue.gif" class="skinButton" alt="blue skin">나우누리 style</a>
   <br />
-	</div>
+</div>
 	<div>
 	<jsp:useBean id="member" class="kr.pe.okjsp.member.Member" scope="session"/>
 	<jsp:setProperty name="member" property="id" value='<%= CommonUtil.getCookie(request, "okid") %>' />
