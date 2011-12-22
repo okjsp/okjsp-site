@@ -18,6 +18,9 @@
 	border-bottom: 1px solid #cccccc;
 	padding: 0 0 10px 0;
 }
+.bBorder1px img,.tBorder1px img {
+	float:left; width:35px; margin-right:10px;
+}
 
 .tBorder1px {
 	border-top: 1px solid #cccccc;
