@@ -1,3 +1,6 @@
+.recent_first {
+overflow: hidden; width: 76px; height: 14px;
+}
 .skinButton {
 	width: 10px;
 	height: 10px;

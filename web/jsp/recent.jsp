@@ -16,10 +16,6 @@
     <script type="text/javascript" src="/js/banner.js" charset="utf-8"></script>
     <script type="text/javascript" src="/js/bannerData.js"></script>
     <LINK rel="STYLESHEET" type="TEXT/CSS" HREF="/css/okjsp2007.css.jsp">
-    <style type="text/css">
-.recent_first {
-overflow: hidden; width: 76px; height: 14px;
-}</style>
 </head>
 
 <body class="body" style="margin:0">
