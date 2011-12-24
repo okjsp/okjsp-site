@@ -47,7 +47,7 @@ aside : [
  {
 tag : "<li>"+
  "<a href=\"/f.jsp?http://ucloudbiz.olleh.com\" target=\"_blank\" >"+
- "<img src=\"/images/banner/ucloud_134x40.gif\" "+
+ "<img src=\"/images/banner/ucloud_134x40.gif\" style=\"width:134px\""+
  "  alt=\"KT Ucloud\" ></a>"+
  "</li>"
  }
