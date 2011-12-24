@@ -20,6 +20,7 @@
     <script src='/js/okboard.js'></script>
     <script src='/js/ban.js'></script>
     <script src='/js/edit.js'></script>
+    <script src="/js/banner.js" charset="utf-8"></script>
     <script src="/js/bannerData.js"></script>
     <link rel="stylesheet" href="/css/style.css" type="text/css">
     <link rel="stylesheet" href="/css/okjsp2007.css.jsp" type="text/css">

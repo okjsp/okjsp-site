@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/event/200908/nas.css" type="text/css">
 	<script type="text/javascript" src="/js/okjsp.js"></script>
     <script type="text/javascript" src="/js/okboard_view.js"></script>
+    <script type="text/javascript" src="/js/banner.js" charset="utf-8"></script>
 
 </head>
 <body>

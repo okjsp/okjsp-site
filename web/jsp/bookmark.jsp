@@ -9,6 +9,7 @@ pageEncoding="euc-kr"
     <script src="/js/banner.js"></script>
     <script src="/js/bannerData.js"></script>
     <script src="/js/okboard.js"></script>
+    <script type="text/javascript" src="/js/banner.js" charset="utf-8"></script>
 <link rel="stylesheet" href="/css/okjsp2007.css.jsp" type="text/css">
 </head>
 <body class="body" style="margin:0">

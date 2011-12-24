@@ -13,7 +13,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
     <title>NEW OKJSP with CUBRID</title>
     <script type="text/javascript" src="/js/okjsp.js"></script>
-    <script charset="utf-8" type="text/javascript" src="/js/banner.js"></script>
+    <script type="text/javascript" src="/js/banner.js" charset="utf-8"></script>
     <script type="text/javascript" src="/js/bannerData.js"></script>
     <LINK rel="STYLESHEET" type="TEXT/CSS" HREF="/css/okjsp2007.css.jsp">
     <style type="text/css">

@@ -12,7 +12,7 @@
 <html>
 <title>OKJSP 새 메모</title>
     <script src="/js/okjsp.js"></script>
-    <script charset="euc-kr" src="/js/banner.js"></script>
+    <script type="text/javascript" src="/js/banner.js" charset="utf-8"></script>
     <script src="/js/bannerData.js"></script>
     <script src='/js/okboard.js'></script>
 	<link rel="stylesheet" href="/css/okjsp2007.css.jsp" type="text/css">
