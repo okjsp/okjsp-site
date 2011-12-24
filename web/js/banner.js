@@ -4,11 +4,6 @@ main : [
 	tag: '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
 	'<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
 	'alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트"></a>'
-},
-{
-	tag: '<a href="/f.jsp?http://imaso.co.kr/data/tempfile/okjsp_edm_700.html" target="_blank">' +
-	'<img src="/images/banner/maso_473x98.jpg" ' +
-	'alt="OKJSP 회원만을 위한 마소정기구독 이벤트"></a>'
 }
 ],
 
@@ -30,7 +25,7 @@ left : [
     tag: '<li><A href="/f.jsp?http://okmindmap.com/" title="웹기반 협업 마인드맵, OKJSP 회원 박기원님이 참여한 서비스" target="imaso">okmindmap</A></li>'
 },
 {
-    tag: '<li><A href="/f.jsp?http://bit.ly/cIQ7fA" title="안드로이드 개발환경 구축" target="android">[유료]안드로이드 개발매뉴얼1</A></li>'
+    tag: '<li><A href="/f.jsp?http://bit.ly/cIQ7fA" title="안드로이드 개발환경 구축" target="android">[유료]개발매뉴얼 안드로이드 개발환경 구축</A></li>'
 }
 ],
 footer : [
@@ -50,24 +45,8 @@ aside : [
 	'<img src="/images/banner/olc_134x60.gif" alt="오픈소스 SW프로그래머를 위한 넉넉한 그늘"></a>'
 },
  {
- tag : "<li>"+
- "<a href=\"/f.jsp?http://academy.w3labs.kr/?page_id=518\" target=\"_blank\" >"+
- "<img src=\"/images/banner/w3labs_134x60.jpg\" "+
- "  alt=\"HTML5 모바일앱 Developer 과정; 미래웹기술연구소 아카데미\">"+
- "</a>"+
- "</li>"
-},
-{
-	tag : "<li>"+
-	"<a href=\"/f.jsp?http://project.oss.kr/?okjsp\" target=\"_blank\" >"+
-	"<img src=\"/images/banner/opensw_134x40.gif\" "+
-	"  alt=\"2011 공개SW개발자대회\">"+
-	"</a>"+
-	"</li>"
-},
- {
 tag : "<li>"+
- "<a href=\"/f.jsp?http://cs.ucloud.com\" target=\"_blank\" >"+
+ "<a href=\"/f.jsp?http://ucloudbiz.olleh.com\" target=\"_blank\" >"+
  "<img src=\"/images/banner/ucloud_134x40.gif\" "+
  "  alt=\"KT Ucloud\" ></a>"+
  "</li>"
