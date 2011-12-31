@@ -7,6 +7,9 @@
 .tablestyle {
 	background-color:#0000CC
 }
+.tablestyle tr:nth-child(even) {
+	background: #0808CC;
+}
 A:link      {color: #DDDDFF; text-decoration: none}
 A:visited   {color: #CCCCCC; text-decoration: none}
 A:active    {coration: underline}
