@@ -56,6 +56,10 @@ img {
 	width: 642px;
 }
 
+.bbsTable {
+	margin-left: 3px;
+}
+
 /* recent */
 #memorecent {
     margin-left: 24px;
@@ -256,5 +260,6 @@ cursor: pointer;
 #footer {
 	text-align: right;
 	padding-top: 8px;
+	margin-left: 3px;
 	border-top: 1px dotted #96c0ff;
 }
