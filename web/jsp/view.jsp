@@ -15,7 +15,6 @@
     <script src='/js/ban.js'></script>
     <script src="/js/okjsp.js"></script>
     <script type="text/javascript" src="/js/banner.js" charset="utf-8"></script>
-    <script src="/js/bannerData.js"></script>
 	<script src="/js/ajax.js"></script>
     <script src="/js/okboard_view.js"></script>
 </head>

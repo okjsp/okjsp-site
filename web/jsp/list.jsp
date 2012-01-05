@@ -24,7 +24,6 @@
 <title>okjsp</title>
     <script src="/js/okjsp.js"></script>
     <script type="text/javascript" src="/js/banner.js" charset="utf-8"></script>
-    <script src="/js/bannerData.js"></script>
     <script src='/js/okboard.js'></script>
 <link rel="stylesheet" href="/css/okjsp2007.css.jsp" type="text/css">
 <link rel="alternate" type="application/rss+xml" title="<c:out value="${bbsInfoMap[list.bbs].name}" />"

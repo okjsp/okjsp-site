@@ -99,18 +99,6 @@ function errImage(n) {
 *  @date 2003-01-07 4:58오전
 *  @contact http://okjsp.pe.kr
 */
-/*
- 형태에 따라서 배너를 보여준다.
- 0: 일반 이미지, 1: 플래시배너
- 예제
-    <script>
-    for(var i=0;i<banner.length;i++) {
-        showBanner(banner[i]);
-        if(i%2==1) document.write("<br/>");
-    }
-    </script>
- 데이터는 bannerData.js 에 배열로 저장
-*/
 var item;
 var bannerContent='';
 function showBanner(n) {

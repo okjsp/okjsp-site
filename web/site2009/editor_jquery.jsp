@@ -21,8 +21,8 @@
 
 <link rel="stylesheet" href="/js/jquery/jwysiwyg-0.5/jquery.wysiwyg.css" type="text/css">
 <link rel="stylesheet" href="/css/okjsp2007.css.jsp" type="text/css">
-<link rel="stylesheet" href="/event/200908/nas.css" type="text/css">
 
+<script type="text/javascript" src="/js/banner.js" charset="utf-8"></script>
 <script type="text/javascript" src="/js/jquery/jquery-1.3.2.min.js"></script>
 <script type="text/javascript" src="/js/jquery/jwysiwyg-0.5/jquery.wysiwyg.js"></script>
 <script type="text/javascript" src="/js/okjsp.js"></script>

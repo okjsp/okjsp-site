@@ -5,7 +5,6 @@
 <link rel="stylesheet" href="/css/okjsp2007.css.jsp" type="text/css">
 <META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=ksc5601">
 <script src="/js/okjsp.js"></script>
-<script src="/js/bannerData.js"></script>
 </head>
 <body class="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 <div id="bodySect" style="position:absolute;top:120px;left:120px">

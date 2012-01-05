@@ -1,3 +1,7 @@
-#Sat Jul 30 09:09:47 KST 2011
+#Fri Jan 06 08:17:19 KST 2012
 eclipse.preferences.version=1
+encoding//docs/p.sh=UTF-8
+encoding//test/kr/pe/okjsp/util/HttpLinkerTest.java=ms949
+encoding//web/js/banner.js=UTF-8
+encoding//web/js/okjsp_utf-8.js=UTF-8
 encoding//web/jsp/list.jsp=UTF-8
