@@ -29,7 +29,9 @@
 	if(getCookie( 'urlChangeOKSJSP' ) == 'true'){
 		var current = document.location.href;
 		current = current.replace(/pe\.kr/i,"pe.kr/html5");
-		top.location.href = current;
+		if(document.location.href != current) {
+			top.location.href = current;
+		}
 	}
 	function doChange(){
 		if(document.getElementById('change').checked == true){
