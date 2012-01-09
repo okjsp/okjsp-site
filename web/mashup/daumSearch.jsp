@@ -28,7 +28,7 @@ var obj = {
       obj.s = document.createElement('script');
       obj.s.type ='text/javascript';
       obj.s.charset ='utf-8';
-      var apikey = 'bad7de02e0c21c030116ac3c0c10d68fb639b5c5';
+      var apikey = '3803541fce89370275fcefe628ed9f9acafe223e';
       obj.s.src = 'http://apis.daum.net/search/blog?apikey='+apikey
 				+'&output=json&callback=obj.pongSearch&q=' + encodeURI(obj.q.value);
       document.getElementsByTagName('head')[0].appendChild(obj.s);
