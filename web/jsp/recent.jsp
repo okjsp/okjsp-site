@@ -163,14 +163,10 @@ aladdin_ttb_height = '183';
         </div>
         </td>
         <td class="writer"><div><%= CommonUtil.rplc(one.getWriter(), "<", "&lt;") %></div></td>
-        <td class="id"><div><%
-    if (one.getId() != null) {
-        %><img src="/profile/<%= one.getId() %>.jpg"
+        <td class="id"><div><img src="/profile/<%= one.getId() %>.jpg"
         	alt="<%= one.getId() %>"
-        	style="width:14px;height:14px"
-        	onerror="this.src='/images/spacer.gif'"><%
-    }
-        	%></div></td>
+        	style="width:14px;height:14px"></div></td>
+        <td class="read tiny"><%= one.getRead() %></td>
         <td class="when tiny" title="<%= one.getWhen() %>">
         <%= DateLabel.getTimeDiffLabel(one.getWhen()) %></td>
     </tr>
