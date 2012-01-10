@@ -109,19 +109,26 @@ aladdin_ttb_height = '183';
 <b>전체 게시판</b>
     </td>
 </tr>
-<tr align="center">
-	<td><div class="recent_first">
-		<a href="/seq/145985">사는 얘기</a></div>
-	</td>
-    <td class="subject">
-    	<div>
-	    	<a href="/seq/145985">[공지] 농협에 근무해봤던 분들께 부탁드립니다.</a>
-        </div>
-	</td>
-	<td class="writer"><div>환자</div></td>
-	<td class="id"></td>
-	<td title="2009-12-25 09:12:28" class="when tiny">2년전</td>
-    </tr><%
+<%
+		int [] seqs = {
+		181659};
+		ArticleDao articleDao = new ArticleDao();
+		for(int seq : seqs) {
+			Article article = articleDao.getArticle(seq);
+%>
+    <tr class="body" align="center">
+        <td class="ref tiny" style="width: 40px; font-weight: bold;">AD</td>
+        <td class="subject" style="text-align: left">
+            <a href="/seq/<%= article.getSeq() %>" style="font-weight:bold"><%= article.getSubject() %></a>
+        </td>
+        <td class="writer"><div><b><%= article.getWriter() %></b></div></td>
+        <td class="writer"><img src="/profile/<%= article.getId() %>.jpg" style="width: 14px; height: 14px;" alt="<%= article.getWriter() %>"/></td>
+        <td class="read tiny"><b><%= article.getRead() %></b></td>
+        <td class="when tiny" title="<%= article.getWhen("yyyy-MM-dd HH:mm:ss") %>">
+        <b><%= DateLabel.getTimeDiffLabel(article.getWhen()) %></b></td>
+    </tr>
+<%
+		} // end for
 	HashMap bbsInfoMap = (HashMap)application.getAttribute("bbsInfoMap");
 	iterList = list.getAllRecentList(108).iterator();
 	int i = 0;
