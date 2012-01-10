@@ -66,7 +66,7 @@ aladdin_ttb_height = '183';
 	    rec = ((String)iter.next()).split("\\|");
 %>
 <tr>
-    <td colspan="5" class="th">
+    <td colspan="6" class="th">
 <a href="/bbs?act=LIST&bbs=<%= rec[0] %>">
 <b><%= rec[1] %></b>
 </a>
@@ -88,14 +88,10 @@ aladdin_ttb_height = '183';
         </div>
         </td>
         <td class="writer"><div><%= CommonUtil.rplc(one.getWriter(), "<", "&lt;") %></div></td>
-        <td class="id"><div><%
-	    if (one.getId() != null) {
-	        %><img src="/profile/<%= one.getId() %>.jpg"
+        <td class="id"><div><img src="/profile/<%= one.getId() %>.jpg"
 	        	alt="<%= one.getId() %>"
-	        	style="width:14px;height:14px"
-	        	onerror="this.src='/images/spacer.gif'"><%
-	    }
-        	%></div></td>
+	        	style="width:14px;height:14px"></div></td>
+	    <td class="read tiny"><%= one.getRead() %></td>
         <td class="when tiny" title="<%= one.getWhen() %>">
         <%= DateLabel.getTimeDiffLabel(one.getWhen()) %></td>
     </tr>
@@ -105,7 +101,7 @@ aladdin_ttb_height = '183';
 } // end of while iter();
 %>
 <tr>
-    <td colspan="5" class="th">
+    <td colspan="6" class="th">
 <b>전체 게시판</b>
     </td>
 </tr>
