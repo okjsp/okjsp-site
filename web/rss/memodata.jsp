@@ -11,9 +11,9 @@
 	for (MemoBean memo: recent) {
 %>{mseq:"http://www.okjsp.pe.kr/seq/<%= memo.getSeq()+"#"+memo.getMseq() %>",
 profile_img:"http://www.okjsp.pe.kr/profile/<%= memo.getSid() %>.jpg",
-writer:"<%= memo.getWriter() %>",
+writer:"<%= CommonUtil.rplc( CommonUtil.rplc( CommonUtil.rplc( memo.getWriter(), "\r\n", " " ), "\\", "\\\\") , "\"", "\\\"") %>"
 timestamp:"<%= memo.getWhen("yyyy-MM-dd HH:mm:ss") %>",
-memo:"<%= CommonUtil.rplc( CommonUtil.rplc( memo.getBcomment(), "\r\n", " " ), "\"", "\\\"") %>"
+memo:"<%= CommonUtil.rplc( CommonUtil.rplc( CommonUtil.rplc( memo.getBcomment(), "\r\n", " " ), "\\", "\\\\") , "\"", "\\\"") %>"
 },<%
 	} // end of for
 %>];
