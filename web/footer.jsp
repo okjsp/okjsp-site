@@ -8,7 +8,7 @@ if (typeof Banner == "object") { Banner.showFooter(); }
 </script>
 </div>
 <div>
-<ul>
+<ul style="margin-bottom: 160px">
 <li><a href="/jsp/member/agreement.jsp" target="privacy">개인정보취급방침</a>
 </li>
 <li><a href="https://github.com/okjsp/okjsp-site/issues" target="bugs">버그리포트</a>
@@ -19,6 +19,7 @@ if (typeof Banner == "object") { Banner.showFooter(); }
  okjsp 서버 호스팅 지원, 서비스 좋습니다.">
  <img src="/images/bnr_80port.gif" border="0"></a>
 </li>
+<li>사업자등록번호: 11*-**-85833</li>
 </ul>
 </div>
 </div>
