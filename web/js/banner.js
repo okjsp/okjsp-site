@@ -52,6 +52,17 @@ tag : "<li>"+
  "</li>"
  }
 ],
+
+asideApp : [
+{
+	tag : '<a href="http://itunes.apple.com/app/id439910698?mt=8" target="_blank"><img class="adapp" '+
+	'src="/images/app/clien_150x150.png" alt="Hi Clien by iiixzu"></a>'
+},
+{
+	tag : '<a href="http://itunes.apple.com/app/id490990415?mt=8" target="_blank"><img class="adapp" '+
+	'src="http://a3.mzstatic.com/us/r1000/118/Purple/c0/cc/cc/mzl.hufpsqhf.175x175-75.jpg" alt="Lead2M will lead you to miracles!"></a>'
+}
+],
 show : function() {
     var idx = Math.floor(Math.random() * this.main.length);
     document.write(this.main[idx].tag);
@@ -63,9 +74,13 @@ showAside : function() {
         document.writeln(this.aside[i].tag);
     }
     document.writeln("</ul>");
-    document.writeln('<p id="adinfo"><a href="/seq/181976">광고문의</a></p>'+
-    		'<a href="http://itunes.apple.com/app/id439910698?mt=8" target="_blank">'+
-    		'<img class="adapp" src="/images/app/clien_150x150.png" alt="Hi Clien by iiixzu"></a>');
+
+    var html = '<p id="adinfo"><a href="/seq/181976">광고문의</a></p>';
+    if (this.asideApp.length > 0) {
+        var idx = Math.floor(Math.random() * this.asideApp.length);
+        html +=	this.asideApp[idx].tag;
+    }
+    document.writeln(html);
 },
 
 showLeftSide : function() {
