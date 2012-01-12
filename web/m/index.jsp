@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
 <title>OKJSP Mobile</title>
 <link rel="apple-touch-icon" href="/m/images/okJSP.png" />
-<script type="text/javascript" src="/js/cookie.js"></script>
+<script type="text/javascript" src="/js/okjsp.js"></script>
 <script type="text/javascript" >
 	
 	if ( getCookie( 'okjspwithjqm' ) == 'true' ){

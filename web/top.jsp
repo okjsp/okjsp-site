@@ -2,7 +2,6 @@
 <style type="text/css">
 @import url("/site2009/okjsp2009.css");
 </style>
-<script type="text/javascript" src="/js/cookie.js"></script>
 <div class="ln"></div>
 <ul id="top">
 	<li id="logo"><a href="http://www.okjsp.pe.kr/bbs?act=FIRST_MAIN"><img src="/images/okjsp_160x50.gif" style="margin-left: -10px; "></a></li>
