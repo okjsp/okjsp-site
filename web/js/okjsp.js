@@ -95,6 +95,35 @@ function errImage(n) {
     n.src = "/images/bnr_okjsp.gif";
 }
 
+function jumpto(e) {
+	saveBbslist(e.value);
+	document.location.href='/bbs?act=LIST&bbs='+e.value;
+}
+
+function saveBbslist(v) {
+	var saved = getCookie("bbslist");
+
+	if(saved) {
+		// remove duplicate
+		var reg = eval("/"+v+",/g");
+		saved = v + "," + (saved+",").replace(reg, "");
+		saved = saved.replace(/,*$/,"");
+	} else {
+		saved = v;
+	}
+	
+	setCookie("bbslist", saved, 365);
+}
+
+function customizedList() {
+	var saved = getCookie("bbslist");
+	var list = saved.split(",").reverse();
+	for (idx in list) {
+		$("#bbslist option[value="+ list[idx] +"]").prependTo("#bbslist");
+	}
+}
+
+
 /* @author kenu@okjsp.pe.kr
 *  @date 2003-01-07 4:58¿ÀÀü
 *  @contact http://okjsp.pe.kr
@@ -347,3 +376,7 @@ function check(){
     document.f1.send.disabled=true;
 	return true;
 }
+
+$(function(){
+	customizedList();
+})

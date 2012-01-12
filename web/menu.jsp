@@ -52,9 +52,6 @@
 </select>
 <script type="text/javascript">
 	document.getElementById('bbslist').value = '<%= request.getParameter("bbs") %>';
-	function jumpto(e) {
-		document.location.href='/bbs?act=LIST&bbs='+e.value;
-	}
 </script>
   <hr>
    <br><A href="http://webdevmobile.com/"

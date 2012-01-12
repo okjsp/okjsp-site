@@ -8,6 +8,7 @@
 <head>
 <link rel="stylesheet" href="/css/okjsp2007.css.jsp" type="text/css">
 <META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=ksc5601">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 </head>
 <body class="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 <center>

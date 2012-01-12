@@ -16,6 +16,7 @@
 %>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=KSC5601">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="/js/okjsp.js"></script>
     <script src='/js/okboard.js'></script>
     <script src='/js/ban.js'></script>
