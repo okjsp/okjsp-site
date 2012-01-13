@@ -262,3 +262,45 @@ cursor: pointer;
 	padding-top: 8px;
 	border-top: 1px dotted #96c0ff;
 }
+
+/*
+* =editor_jquery.jsp
+*/
+div.wysiwyg {
+	padding: 5px 0;
+}
+
+#form_div {
+	width: 644px;
+	float: left;
+	margin-left: 8px;
+}
+
+#form_div dt {
+	width: 80px;
+	border: 0;
+	border-bottom: 1px solid #888;
+	display: inline-block;
+	padding-right: 4px;
+	text-align: right;
+}
+
+#form_div dd {
+	display: inline-block;
+	width: 500px;
+}
+
+#form_div .write {
+	width: 500px;
+	border: 1px solid #ddd;
+	padding: 0;
+}
+
+#form_div #content {
+	width: 600px;
+}
+
+.form_write {
+	margin: 0 auto;
+	width: 600px;
+}
