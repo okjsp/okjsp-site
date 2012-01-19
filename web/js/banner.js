@@ -43,14 +43,7 @@ aside : [
 {
 	tag: '<a href="/f.jsp?http://olc.oss.kr/">' +
 	'<img src="/images/banner/olc_134x60.gif" alt="오픈소스 SW프로그래머를 위한 넉넉한 그늘"></a>'
-},
- {
-tag : "<li>"+
- "<a href=\"/f.jsp?http://ucloudbiz.olleh.com\" target=\"_blank\" >"+
- "<img src=\"/images/banner/ucloud_134x40.gif\" style=\"width:134px\""+
- "  alt=\"KT Ucloud\" ></a>"+
- "</li>"
- }
+}
 ],
 
 asideApp : [
