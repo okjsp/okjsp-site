@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import kr.pe.okjsp.member.PointDao;
 import kr.pe.okjsp.util.DbCon;
 import kr.pe.okjsp.util.PropertyManager;
 
@@ -58,7 +59,6 @@ public class DeleteServlet extends HttpServlet {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		Article article = new Article();
 		try {
 			conn = dbCon.getConnection();
 
@@ -71,11 +71,12 @@ public class DeleteServlet extends HttpServlet {
 			int passwordCount = 0;
 			if (rs.next()) {
 				passwordCount++;
-				article.setBbs(rs.getString("bbsid"));
 			}
 
 			rs.close();
 			pstmt.close();
+			
+			Article article = new ArticleDao().getArticle(seq);
 
 			// password 확인
 			if (confirmPassword.equals(MASTER_PASSWORD)
@@ -87,7 +88,7 @@ public class DeleteServlet extends HttpServlet {
 				// file db에서 삭제 - sts 값 0 로 변경
 				doQuery(conn, QUERY_DEL_SEQ_FILE, seq);
 				// file 삭제 생략
-				
+				new PointDao().log(article.getSid(), 3, -50, String.valueOf(article.getSeq()));
 			} else {
 				resourceName = "/jsp/error.jsp";
 				throw new Exception("WRONG PASSWORD");
