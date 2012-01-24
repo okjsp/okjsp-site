@@ -35,7 +35,7 @@
   <br />
   <A href="/bbs?act=MEMORECENT">새 메모</A>
   <br />
-  <A href="http://www.okjsp.pe.kr:7001">node.js chat</A>
+  <A href="http://okjspgwt.appspot.com/gallery.html">이미지 검색<br />(Daum OpenAPI)</A>
   <br />
   <A href="http://www.okjsp.pe.kr:8080" title="Jenkins CI tool">OKJSP Health</A>
 
