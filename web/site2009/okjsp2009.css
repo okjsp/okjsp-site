@@ -92,7 +92,8 @@ img {
 }
 
 #bookList {
-	margin: 20px 8px;
+	text-align: center;
+	margin: 20px 22px;
 	border: 1px solid #D0E0F3;
 	width: 600px;
 }
@@ -261,6 +262,7 @@ cursor: pointer;
 	text-align: right;
 	padding-top: 8px;
 	border-top: 1px dotted #96c0ff;
+	margin-left: 2px;
 }
 
 /*

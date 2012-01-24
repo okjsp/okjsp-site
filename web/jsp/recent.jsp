@@ -32,9 +32,6 @@ Banner.show();
 </li>
 </ul>
 
-<table>
-  <tr>
-    <td align="center" valign="top">
 <div id="bookList">
 <div style="float:none; margin: 6px 0 0;"><b># OKJSP 추천 도서</b></div>
 
@@ -48,6 +45,9 @@ aladdin_ttb_height = '183';
 <script type="text/javascript" language="javascript" src="http://ttb2.aladin.co.kr/ad_ttb.aspx"></script>
 
 </div>
+<table>
+  <tr>
+    <td align="center" valign="top">
 
 <!-- 최신 글 리스트 -->
 <%

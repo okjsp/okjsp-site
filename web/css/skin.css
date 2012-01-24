@@ -1,5 +1,7 @@
 .recent_first {
-overflow: hidden; width: 76px; height: 14px;
+overflow: hidden;
+width: 80px;
+height: 17px;
 }
 .skinButton {
 	width: 10px;
@@ -9,29 +11,18 @@ overflow: hidden; width: 76px; height: 14px;
 
 td.subject div {
 	overflow: hidden;
-	height: 15px;
-	width: 410px;
 	text-align: left;
+	height: 17px;
 }
 
 td.writer div {
 	overflow: hidden;
-	height: 15px;
-	width: 60px;
+	width: 80px;
+	height: 17px;
 }
 
 td.when {
-	width: 90px;
-}
-
-.book {
-	display: inline;
-	width: 140px;
-}
-
-.bookimg {
-	width: 138px;
-	height: 184px;
+	width: 40px;
 }
 
 p {
