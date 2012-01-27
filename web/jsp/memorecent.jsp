@@ -50,7 +50,11 @@
         </td>
     </tr>
 </table>
-
+<div id="sub_panel">
+	<div id="ad_banners">
+<script type="text/javascript">
+Banner.showAside();
+</script>
 <jsp:include page="/googleAnalytics.jsp" />
 </body>
 </html>

@@ -43,16 +43,20 @@ aside : [
 {
 	tag: '<a href="/f.jsp?http://olc.oss.kr/">' +
 	'<img src="/images/banner/olc_134x60.gif" alt="오픈소스 SW프로그래머를 위한 넉넉한 그늘"></a>'
+},
+{
+	tag: '<a href="/f.jsp?http://jco.zdnet.co.kr">' +
+	'<img src="/images/banner/jco_160x400.jpg" alt="제12회 한국자바개발자 컨퍼런스" style="width:134px"></a>'
 }
 ],
 
 asideApp : [
 {
-	tag : '<a href="http://itunes.apple.com/app/id439910698?mt=8" target="_blank"><img class="adapp" '+
+	tag : '<a href="/f.jsp?http://itunes.apple.com/app/id439910698?mt=8" target="_blank"><img class="adapp" '+
 	'src="/images/app/clien_150x150.png" alt="Hi Clien by iiixzu"></a>'
 },
 {
-	tag : '<a href="http://itunes.apple.com/app/id490990415?mt=8" target="_blank"><img class="adapp" '+
+	tag : '<a href="/f.jsp?http://itunes.apple.com/app/id490990415?mt=8" target="_blank"><img class="adapp" '+
 	'src="http://a3.mzstatic.com/us/r1000/118/Purple/c0/cc/cc/mzl.hufpsqhf.175x175-75.jpg" alt="Lead2M will lead you to miracles!"></a>'
 }
 ],
@@ -64,7 +68,7 @@ show : function() {
 showAside : function() {
     document.writeln("<ul>");
     for(var i = 0; i < this.aside.length; i++) {
-        document.writeln(this.aside[i].tag);
+        document.writeln("<li>"+this.aside[i].tag+"</li>");
     }
     document.writeln("</ul>");
 
