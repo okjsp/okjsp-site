@@ -32,7 +32,7 @@ public class TwitterUpdate {
 	private String acessToken_secret   = PropertyManager.getString("ACESSTOKENSECRET");
 	
 	public void doUpdate(Article article, HttpServletRequest req) {
-		if ( "1".equals("1") || !isTwitterUpdate(article, req) ){
+		if ( !isTwitterUpdate(article, req) ){
 			return;
 		}
 		
