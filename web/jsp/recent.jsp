@@ -108,7 +108,7 @@ aladdin_ttb_height = '183';
 </tr>
 <%
 		int [] seqs = {
-		182751};
+		183154,182751};
 		ArticleDao articleDao = new ArticleDao();
 		for(int seq : seqs) {
 			Article article = articleDao.getArticle(seq);
