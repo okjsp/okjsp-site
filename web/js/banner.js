@@ -1,6 +1,11 @@
 var Banner = {
 main : [
 {
+	tag: '<a href="/f.jsp?http://ad2.logger.co.kr/tracker_ad.tsp?u=33662&mode=C&adCode=35444" target="_blank">' +
+	'<img src="/images/banner/adobe_refresh_473x98.jpg" ' +
+	'alt="02/21 13:00 ADOBE REFRESH 2012"></a>'
+},
+{
 	tag: '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
 	'<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
 	'alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트"></a>'
