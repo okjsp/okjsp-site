@@ -25,12 +25,6 @@ content : [
 left : [
 {
 	tag: '<li><A href="/f.jsp?http://www.innorix.com/DS/" title="대용량 파일/폴더 업로드 컴포넌트" target="innorix">업로드는 InnoDS</A></li>'
-},
-{
-    tag: '<li><A href="/f.jsp?http://okmindmap.com/" title="웹기반 협업 마인드맵, OKJSP 회원 박기원님이 참여한 서비스" target="imaso">okmindmap</A></li>'
-},
-{
-    tag: '<li><A href="/f.jsp?http://bit.ly/cIQ7fA" title="안드로이드 개발환경 구축" target="android">[유료]개발매뉴얼 안드로이드 개발환경 구축</A></li>'
 }
 ],
 footer : [
