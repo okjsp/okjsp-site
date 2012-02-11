@@ -107,13 +107,13 @@ aladdin_ttb_height = '183';
     </td>
 </tr>
 <%
-		int [] seqs = {
-		183691,183534,183497};
+	int [] seqs = {
+		183691,183534,183497,184030,181976};
 		ArticleDao articleDao = new ArticleDao();
 		for(int seq : seqs) {
 			Article article = articleDao.getArticle(seq);
 %>
-    <tr class="body" align="center">
+    <tr class="body" align="center" style="height:32px">
         <td class="ref tiny" style="width: 40px; font-weight: bold;">AD</td>
         <td class="subject" style="text-align: left">
             <a href="/seq/<%= article.getSeq() %>" style="font-weight:bold"><%= article.getSubject() %></a>

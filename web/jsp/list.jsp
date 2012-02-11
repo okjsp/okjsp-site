@@ -68,13 +68,13 @@
 	boolean isAdBBS = "recruit".equals(list.getBbs()) && list.getPg() < 1;
 	if (isAdBBS) {
 		int [] seqs = {
-				183691,183534,183497,181976};
+				183691,183534,183497,184030,181976};
 		ArticleDao articleDao = new ArticleDao();
 		for(int seq : seqs) {
 			Article article = articleDao.getArticle(seq);
 			if (article.getWhen() == null) continue;
 %>
-    <tr class="body" align="center">
+    <tr class="body" align="center" style="height: 32px;">
         <td class="ref tiny" style="width: 40px; font-weight: bold;">AD</td>
         <td class="subject" style="text-align: left">
             <a href="/seq/<%= article.getSeq() %>" style="font-weight:bold"><%= article.getSubject() %></a>
