@@ -1,6 +1,11 @@
 var Banner = {
 main : [
 {
+	tag: '<a href="/f.jsp?http://wise.ad-ias.com/click.ems/site=aircross&pid=jco_or@473x98&evicd=22704&evtcd=1779&imgcd=23620" target="_blank">' +
+	'<img src="/images/banner/TCloudBiz_120210_473x98.gif" ' +
+	'alt="T클라우드서버프로모션"></a>'
+},
+{
 	tag: '<a href="/f.jsp?http://ad2.logger.co.kr/tracker_ad.tsp?u=33662&mode=C&adCode=35444" target="_blank">' +
 	'<img src="/images/banner/adobe_refresh_473x98.jpg" ' +
 	'alt="02/21 13:00 ADOBE REFRESH 2012"></a>'
@@ -28,10 +33,6 @@ left : [
 }
 ],
 footer : [
-{
-    tag: '<a href="/f.jsp?https://www.adobe.com/cfusion/tdrc/index.cfm?product=flash_builder&loc=ko&promoid=JEKVX">' +
-    '<img src="/images/banner/adobe_flex45_468x60.jpg" alt="안드로이드부터 아이패드까지 모든 앱 개발 지원 Flash Builder 4.5 체험판을 경험해 보세요!"></a>'
-},
 {
 	tag: '<a href="/f.jsp?http://80port.com/">' +
 	'<img src="/images/banner/80port_banner_468x60.jpg" alt="OKJSP를 후원하는 호스팅 회사 80port닷컴"></a>'
