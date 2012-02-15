@@ -42,11 +42,15 @@ footer : [
 aside : [
 {
 	tag: '<a href="/f.jsp?http://olc.oss.kr/">' +
-	'<img src="/images/banner/olc_134x60.gif" alt="오픈소스 SW프로그래머를 위한 넉넉한 그늘"></a>'
+	'<img src="/images/banner/olc_134x60.gif" alt="오픈소스 SW프로그래머를 위한 넉넉한 그늘" style="width:150px"></a>'
 },
 {
 	tag: '<a href="/f.jsp?http://jco.zdnet.co.kr">' +
-	'<img src="/images/banner/jco_160x400.jpg" alt="제12회 한국자바개발자 컨퍼런스" style="width:134px"></a>'
+	'<img src="/images/banner/jco_160x50.gif" alt="제12회 한국자바개발자 컨퍼런스" style="width:150px"></a>'
+},
+{
+	tag: '<a href="/f.jsp?http://wise.ad-ias.com/click.ems/site=aircross&pid=jco_or@text&evicd=22762&evtcd=1779&imgcd=23678">' +
+	'<img src="/images/banner/TCloudBiz_120210_160x400.gif" alt="T클라우드서버프로모션" style="width:150px"></a>'
 }
 ],
 
