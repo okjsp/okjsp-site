@@ -1,3 +1,4 @@
+<%@page import="kr.pe.okjsp.util.CommonUtil"%>
 <%@ page import="java.util.ArrayList, java.util.Iterator,
 kr.pe.okjsp.Bookmark"
 pageEncoding="euc-kr"
@@ -25,11 +26,12 @@ pageEncoding="euc-kr"
 <%
 ArrayList list = (ArrayList)request.getAttribute("bookmark");
 Iterator iter = list.iterator();
+
 java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("yy/MM/dd HH:mm");
 while (iter.hasNext()) {
 	Bookmark b = (Bookmark)iter.next();
 	int seq = b.getSeq();
-	String subject = kr.pe.okjsp.util.CommonUtil.a2k(b.getSubject());
+	String subject = CommonUtil.rplc(b.getSubject(), "<", "&lt;");
 %>
 <li>
 <a href="/seq/<%= seq %>"><%= subject %>
