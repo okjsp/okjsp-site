@@ -1,16 +1,6 @@
 var Banner = {
 main : [
 {
-	tag: '<a href="/f.jsp?http://wise.ad-ias.com/click.ems/site=aircross&pid=jco_or@473x98&evicd=22704&evtcd=1779&imgcd=23620" target="_blank">' +
-	'<img src="/images/banner/TCloudBiz_120210_473x98.gif" ' +
-	'alt="T클라우드서버프로모션"></a>'
-},
-{
-	tag: '<a href="/f.jsp?http://ad2.logger.co.kr/tracker_ad.tsp?u=33662&mode=C&adCode=35444" target="_blank">' +
-	'<img src="/images/banner/adobe_refresh_473x98.jpg" ' +
-	'alt="02/21 13:00 ADOBE REFRESH 2012"></a>'
-},
-{
 	tag: '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
 	'<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
 	'alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트"></a>'
@@ -43,10 +33,6 @@ aside : [
 {
 	tag: '<a href="/f.jsp?http://olc.oss.kr/">' +
 	'<img src="/images/banner/olc_134x60.gif" alt="오픈소스 SW프로그래머를 위한 넉넉한 그늘" style="width:150px"></a>'
-},
-{
-	tag: '<a href="/f.jsp?http://wise.ad-ias.com/click.ems/site=aircross&pid=jco_or@text&evicd=22762&evtcd=1779&imgcd=23678">' +
-	'<img src="/images/banner/TCloudBiz_120210_160x400.gif" alt="T클라우드서버프로모션" style="width:150px"></a>'
 }
 ],
 
