@@ -503,6 +503,11 @@ public class Article {
 	 * @uml.property  name="sid"
 	 */
 	public long getSid() {
+		try {
+			sid = Long.parseLong(this.id);
+		} catch (NumberFormatException e) {
+			e.printStackTrace();
+		}
 		return sid;
 	}
 
