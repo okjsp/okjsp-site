@@ -1,4 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@page import="kr.pe.okjsp.member.PointDao"%>
 <%@page import="kr.pe.okjsp.util.HttpLinker"%>
 <%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %>
 <%@ page import="java.util.*,kr.pe.okjsp.util.CommonUtil,kr.pe.okjsp.*"
@@ -41,6 +42,18 @@ http://www.okjsp.pe.kr/seq/<%= one.getSeq() %></a></div>
     }
 %>
 <strong><c:out value="${one.writer}"/></strong>
+<%
+	Member member = (Member)session.getAttribute("member");
+	if (member.getSid() == 0) {
+		member.setSid(CommonUtil.getCookieLong(request, "sid"));
+	}
+	PointDao pointDao = new PointDao();
+
+    if (member.getSid() > 0) {
+%><sub>(<%= pointDao.getPoint(one.getSid()) %>)</sub>
+<%
+    }
+%>
 <div>
 <%= one.getWhen("yyyy-MM-dd HH:mm:ss") %>
 </div>
@@ -134,10 +147,6 @@ Banner.showContentSection();
     </td>
 </tr>
 <%
-	Member member = (Member)session.getAttribute("member");
-	if (member.getSid() == 0) {
-		member.setSid(CommonUtil.getCookieLong(request, "sid"));
-	}
 // 관리자 일 경우 게시물 이동권한을 갖는다. 
 	boolean isAdmin = member != null && ("kenu".equals(member.getId()) 
 			|| "kenny".equals(member.getId()) 
@@ -234,7 +243,14 @@ tag는 <a href="<%= Navigation.getPath("SECURE_DOMAIN") %>/jsp/member/login.jsp">
         	style="width:36px;height:36px"
         	onerror="this.src='/images/spacer.gif'"><%
     }
-%><%= mb.getWriter() %></li>
+%><%= mb.getWriter() %>
+<%
+    if (member.getSid() > 0) {
+%><sub>(<%= pointDao.getPoint(mb.getSid()) %>)</sub>
+<%
+    }
+%>
+</li>
 <li class="d"><%= mb.getWhen("yyyy-MM-dd HH:mm:ss")
 %></li><li class="e"><a href="javascript:show_memodel('<%= mb.getMseq() %>')">x</a>
 <%-- facebook like button --%>
