@@ -175,6 +175,33 @@ public class CommonUtil {
     	return tmp;
     }
 
+	/**
+	 * 바이트로 문자열 substring
+	 * @param string
+	 * @param begin
+	 * @param end
+	 * @return
+	 */
+	public static String cropByte(String string, int begin, int end) {
+    	int beginPos = 0, endPos = 0, bytelen = 0;
+    	char c;
+    	try {
+        	if(string.getBytes("MS949").length>end) {
+        		while (bytelen < end) {
+        			c = string.charAt(endPos);
+        			if ( bytelen < begin ) beginPos++;
+        			bytelen++;
+        			endPos++;
+        			if ( c  > 127 ) bytelen++;  //2-byte character..
+        		}
+        		string=string.substring(beginPos,endPos);
+        	}
+        } catch(java.io.UnsupportedEncodingException e) {
+        	System.out.println("Unsupported Encoding:"+string);
+        }
+    	return string;
+	}
+
     /**
 	 * Method setCookie.
 	 * @param response

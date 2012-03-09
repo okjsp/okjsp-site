@@ -70,8 +70,12 @@ public class CommonUtilTest extends TestCase {
 	}
 
 	public void testCropByte() {
+		String string = "123가나다라마";
+		assertEquals("가나", CommonUtil.cropByte(string, 3, 6));
+		assertEquals("가나다", CommonUtil.cropByte(string, 3, 8));
+		assertEquals("라마", CommonUtil.cropByte(string, 9, 12));
 	}
-
+	
 	/*
 	 * Test for void setCookie(HttpServletResponse, String, String, int)
 	 */
