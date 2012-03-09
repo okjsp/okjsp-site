@@ -167,6 +167,10 @@ cursor: pointer;
 	-webkit-text-size-adjust: 160%;
 }
 
+#centent img {
+	max-width: 100%;
+}
+
 #centent a:link,#centent a:visited {
 	text-decoration: underline;
 }
