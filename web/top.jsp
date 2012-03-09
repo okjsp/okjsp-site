@@ -11,6 +11,7 @@
 		onsubmit="searchf1.q.value='site:okjsp.pe.kr '+searchf1.qt.value;">
 	<input name="q" value="site:okjsp.pe.kr " type="hidden"> 
 	<input name="qt" value="" type="text"> 
+	<input name="ie" value="euc-kr" type="hidden"> 
 	<input value="google" type="submit"></form>
 	</li>
 </ul>
