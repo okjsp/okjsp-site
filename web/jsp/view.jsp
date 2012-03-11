@@ -383,13 +383,12 @@ while (iter.hasNext()) {
     <input type="hidden" name="pact" value="">
     <input type="hidden" name="password" value="">
 </form>
-
-<jsp:include page="/footer.jsp" >
-	<jsp:param name="bbs" value="<%= one.getBbs() %>"/>
-</jsp:include>
     </td>
   </tr>
 </table>
+<jsp:include page="/footer.jsp" >
+	<jsp:param name="bbs" value="<%= one.getBbs() %>"/>
+</jsp:include>
 <div id="sub_panel">
 	<div id="ad_banners">
 <script type="text/javascript">

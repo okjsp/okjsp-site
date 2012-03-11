@@ -304,12 +304,10 @@ style='border:1 solid; border-color:#D4D4D4; width:480px; height:310px;display: 
   </td></tr>
 </table>
 </form>
-
-<jsp:include page="/footer.jsp" />
-
     </td>
   </tr>
 </table>
+<jsp:include page="/footer.jsp" />
 <script>
   init();
   document.f1.password.focus();

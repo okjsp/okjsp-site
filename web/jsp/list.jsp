@@ -177,12 +177,12 @@ request.setAttribute("pageSize", ""+list.getPageSize());
 	}
 	String bbs = request.getParameter("bbs");
 %>
-<jsp:include page="/footer.jsp" >
-	<jsp:param name="bbs" value="<%= bbs %>"/>
-</jsp:include>
         </td>
     </tr>
 </table>
+<jsp:include page="/footer.jsp" >
+	<jsp:param name="bbs" value="<%= bbs %>"/>
+</jsp:include>
 <script>
 opt(document.nav.keyfield, '<c:out value="${param.keyfield}"/>');
 

@@ -59,11 +59,11 @@
 <div class="tablestyle searchDaum" style="text-align:left">
 <jsp:include page="/mashup/daumSearch.jsp"></jsp:include>
 </div>
-<jsp:include page="/footer.jsp" />
 </td>
     </tr>
 </table>
 
+<jsp:include page="/footer.jsp" />
 <jsp:include page="/googleAnalytics.jsp" />
 </body>
 </html>

@@ -53,11 +53,10 @@ function deleteBookmark(n) {
     fobj.submit();
 }
 </script>
-
-<%@ include file="/footer.jsp" %>
         </td>
     </tr>
 </table>
+<%@ include file="/footer.jsp" %>
 <div id="sub_panel">
 	<div id="ad_banners">
 <script type="text/javascript">

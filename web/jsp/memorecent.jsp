@@ -45,11 +45,11 @@
 <a href="/bbs?act=MEMORECENT&amp;mp=<%= mp - 1 %>">Prev</a> |
 <%= mp %> |
 <a href="/bbs?act=MEMORECENT&amp;mp=<%= mp + 1 %>">Next</a>
-<jsp:include page="/footer.jsp" />
 </div>
         </td>
     </tr>
 </table>
+<jsp:include page="/footer.jsp" />
 <div id="sub_panel">
 	<div id="ad_banners">
 <script type="text/javascript">

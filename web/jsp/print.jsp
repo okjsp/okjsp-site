@@ -105,12 +105,10 @@
     </tr>
 </c:forEach>
 </table>
-
-<%@ include file="/footer.jsp" %>
-
     </td>
   </tr>
 </table>
+<%@ include file="/footer.jsp" %>
 <jsp:include page="/googleAnalytics.jsp" />
 </body>
 </html>
