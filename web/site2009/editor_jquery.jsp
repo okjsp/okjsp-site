@@ -20,6 +20,7 @@
 <title>okjsp editor</title>
 
 <link rel="stylesheet" href="/js/jquery/jwysiwyg-0.5/jquery.wysiwyg.css" type="text/css">
+<link rel="stylesheet" href="/css/style.css" type="text/css">
 <link rel="stylesheet" href="/css/okjsp2007.css.jsp" type="text/css">
 
 <script type="text/javascript" src="/js/banner.js" charset="utf-8"></script>
@@ -41,7 +42,7 @@ var sync = function() {
 </script>
 
 </head>
-<body class="yui-skin-sam">
+<body class="yui-skin-sam body">
 <jsp:include page="/top.jsp" />
 <div style="float:left">
 <jsp:include page="/menu.jsp" />

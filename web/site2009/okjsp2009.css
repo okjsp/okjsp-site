@@ -294,16 +294,19 @@ div.wysiwyg {
 #form_div dd {
 	display: inline-block;
 	width: 500px;
+	margin: 0;
 }
 
 #form_div .write {
 	width: 500px;
 	border: 1px solid #ddd;
 	padding: 0;
+	height: 20px;
+	margin: 6px 0;
 }
 
 #form_div #content {
-	width: 600px;
+	width: 589px;;
 }
 
 .form_write {
