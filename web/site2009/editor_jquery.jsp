@@ -90,13 +90,13 @@ var sync = function() {
 </dt>
 <dd>
 <select name="ccl_id" id="ccl_id">
-	<option value="0">Copyright-я┐╜я┐╜я┐╜я┐╜я┐╜┌┐я┐╜я┐╜я┐╜ я┐╜я┐╜я┐╜█▒я┐╜</option>
-	<option value="1">CCL-я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜╟ея┐╜я┐╜</option>
-	<option value="2">CCL-я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜╟ея┐╜я┐╜-я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜╟║я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜</option>
-	<option value="3">CCL-я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜╟ея┐╜я┐╜-я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜</option>
-	<option value="4">CCL-я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜╟ея┐╜я┐╜-я┐╜ё┐╡╕я┐╜</option>
-	<option value="5">CCL-я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜╟ея┐╜я┐╜-я┐╜ё┐╡╕я┐╜-я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜╟║я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜</option>
-	<option value="6">CCL-я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜╟ея┐╜я┐╜-я┐╜ё┐╡╕я┐╜-я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜</option>
+	<option value="0">Copyright-└·└█└┌┐б░╘ └·└█▒╟</option>
+	<option value="1">CCL-└·└█└┌╟е╜├</option>
+	<option value="2">CCL-└·└█└┌╟е╜├-╡┐└╧┴╢░╟║п░ц╟у╢Ї</option>
+	<option value="3">CCL-└·└█└┌╟е╜├-║п░ц▒▌┴Ў</option>
+	<option value="4">CCL-└·└█└┌╟е╜├-║ё┐╡╕о</option>
+	<option value="5">CCL-└·└█└┌╟е╜├-║ё┐╡╕о-╡┐└╧┴╢░╟║п░ц╟у╢Ї</option>
+	<option value="6">CCL-└·└█└┌╟е╜├-║ё┐╡╕о-║п░ц▒▌┴Ў</option>
 </select>
 </dd>
 <dt>
