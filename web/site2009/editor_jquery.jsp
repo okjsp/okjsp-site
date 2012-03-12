@@ -33,6 +33,9 @@ $(function() {
 	$('#content').wysiwyg();
 	$('#content').change(sync);
 	$('#f1').submit(check);
+	
+	$("#writer").val(getCookie("okwriter"));
+	$("#homepage").val(getCookie("okhp"));
 });
 
 var sync = function() {
