@@ -29,17 +29,17 @@ TD {
 }
 
 #top,#main,#heading,#footer {
-	font-size: 10pt
-}
-#top div,#main {
-    width: 580px;
-}
-
-#heading, #footer {
 	width: 560px;
+	font-size: 10pt;
+	padding: 10px;
+}
+#top {
+	width: 580px;
+	padding: 0;
+}
+#heading,#footer {
 	border: 1 thin #888;
 	background-color: #ddd;
-	padding: 10px;
 	border-bottom: 1px thin #000
 }
 
