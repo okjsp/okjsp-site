@@ -29,11 +29,14 @@ TD {
 }
 
 #top,#main,#heading,#footer {
-	width: 560px;
 	font-size: 10pt
 }
+#top div,#main {
+    width: 580px;
+}
 
-#heading,#footer {
+#heading, #footer {
+	width: 560px;
 	border: 1 thin #888;
 	background-color: #ddd;
 	padding: 10px;
