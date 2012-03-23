@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import kr.pe.okjsp.member.PointDao;
 import kr.pe.okjsp.util.CommonUtil;
@@ -457,7 +458,35 @@ public class ArticleDao {
 	}
 	
 	public int[] getAdList() {
-		return new int[] { 186082, 185887 };
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		String sql = "select * from okboard_ad where startdate < sysdatetime and enddate > sysdatetime order by priority desc";
+		DbCon dbCon = new DbCon();
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			conn = dbCon.getConnection();
+			pstmt = conn.prepareStatement(sql);
+
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				list.add(rs.getInt("seq"));
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			dbCon.close(conn, pstmt, rs);
+		}
+		
+		int[] ads = new int[list.size()];
+		int i = 0;
+		for(Integer seq : list) {
+			ads[i] = seq;
+			i++;
+		}
+
+		return ads;
 	}
 
 }

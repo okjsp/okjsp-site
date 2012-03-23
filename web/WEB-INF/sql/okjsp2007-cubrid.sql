@@ -201,6 +201,15 @@ CREATE TABLE "polllist"(
 "wtime" timestamp
 );
 
+CREATE TABLE "okboard_ad"(
+"aseq" integer AUTO_INCREMENT(0,1) PRIMARY KEY,
+"seq" integer,
+"startdate" timestamp,
+"enddate" timestamp,
+"priority" integer default 0
+);
+
+
 /* Æ®¸®°Å */
 CREATE TRIGGER "glo_delete_contents"
 PRIORITY 01.00
