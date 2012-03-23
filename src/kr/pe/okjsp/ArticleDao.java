@@ -455,6 +455,9 @@ public class ArticleDao {
 		if (isSpam) throw new IOException("Too Many Post");
 
 	}
-
+	
+	public int[] getAdList() {
+		return new int[] { 186082, 185887 };
+	}
 
 }

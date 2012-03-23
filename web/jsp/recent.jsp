@@ -107,11 +107,10 @@ aladdin_ttb_height = '183';
     </td>
 </tr>
 <%
-	int [] seqs = {
-		186082, 185887, 185948};
-		ArticleDao articleDao = new ArticleDao();
-		for(int seq : seqs) {
-			Article article = articleDao.getArticle(seq);
+	ArticleDao articleDao = new ArticleDao();
+	int [] seqs = articleDao.getAdList();
+	for(int seq : seqs) {
+		Article article = articleDao.getArticle(seq);
 %>
     <tr class="body" align="center" style="height:32px">
         <td class="ref tiny" style="width: 40px; font-weight: bold;">AD</td>
@@ -125,7 +124,7 @@ aladdin_ttb_height = '183';
         <b><%= DateLabel.getTimeDiffLabel(article.getWhen()) %></b></td>
     </tr>
 <%
-		} // end for
+	} // end for
 	HashMap bbsInfoMap = (HashMap)application.getAttribute("bbsInfoMap");
 	iterList = list.getAllRecentList(108).iterator();
 	int i = 0;
