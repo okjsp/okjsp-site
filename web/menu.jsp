@@ -5,12 +5,6 @@
 <div style="margin-top:8px" id="menu_top">
   <A href="/lecture/" target="_blank">OKJSP 강좌</A>
   <br />
-	<a href="#" onclick="setSkin('white')"><img src="/images/skin/white.gif" class="skinButton" alt="white skin">웹 style</a>
-  <br />
-	<a href="#" onclick="setSkin('black')"><img src="/images/skin/black.gif" class="skinButton" alt="black skin">CRT style</a>
-  <br />
-	<a href="#" onclick="setSkin('blue')"><img src="/images/skin/blue.gif" class="skinButton" alt="blue skin">나우누리 style</a>
-  <br />
 </div>
 	<div>
 	<jsp:useBean id="member" class="kr.pe.okjsp.member.Member" scope="session"/>
@@ -42,7 +36,10 @@
   <hr>ad:
   <ul id="menuad">
   <script type="text/javascript">
-  if (typeof Banner=="object") { Banner.showLeftSide(); }
+  if (typeof Banner=="object") { 
+    Banner.showLeftSide(); 
+    Banner.showLeftSideImg();
+  }
   </script>
   </ul>
 

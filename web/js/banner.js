@@ -22,6 +22,14 @@ left : [
 	tag: '<li><A href="/f.jsp?http://www.innorix.com/DS/" title="대용량 파일/폴더 업로드 컴포넌트" target="innorix">업로드는 InnoDS</A></li>'
 }
 ],
+
+leftimg : [
+{
+	tag: '<li><A href="/f.jsp?http://www.econovation.co.kr/School/web/SS0105.asp?tcode=4&mn_id=010602&okjsp=true" title="econovation" target="kt">'
+		+'<img src="/images/banner/kt_88x100.gif" alt="econovation"></A></li>'
+}
+],
+
 footer : [
 {
 	tag: '<a href="/f.jsp?http://80port.com/">' +
@@ -69,6 +77,12 @@ showAside : function() {
 showLeftSide : function() {
     for(var i = 0; i < this.left.length; i++) {
         document.writeln(this.left[i].tag);
+    }
+},
+
+showLeftSideImg : function() {
+    for(var i = 0; i < this.leftimg.length; i++) {
+        document.writeln(this.leftimg[i].tag);
     }
 },
 

@@ -117,13 +117,6 @@ cursor: pointer;
 	overflow: hidden;
 }
 
-#menuad {
-	list-style : none;
-	padding: 0;
-	margin-top: 2px;
-	border: 1px dotted #888;
-}
-
 /* menu */
 #menuSect {
 	width: 120px;
@@ -146,6 +139,21 @@ cursor: pointer;
 	padding: 1px;
 	border: 1px dotted #888;
 	background-color: #FFFFF3;
+}
+
+#menuad {
+	list-style : none;
+	padding: 0;
+	margin-top: 2px;
+	text-align: center;
+	border: 1px dotted #888;
+}
+
+#sponsorBanner img {
+	margin-left: 16px;
+	border: 1px solid #DDD;
+	border-bottom-color: #BBB;
+	border-right-color: #BBB;
 }
 
 /* view */
