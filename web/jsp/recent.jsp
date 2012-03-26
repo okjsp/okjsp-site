@@ -111,6 +111,9 @@ aladdin_ttb_height = '183';
 	int [] seqs = articleDao.getAdList();
 	for(int seq : seqs) {
 		Article article = articleDao.getArticle(seq);
+		if (article.getSeq() == 0) {
+			continue;
+		}
 %>
     <tr class="body" align="center" style="height:32px">
         <td class="ref tiny" style="width: 40px; font-weight: bold;">AD</td>
