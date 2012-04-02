@@ -51,10 +51,10 @@
 	document.getElementById('bbslist').value = '<%= request.getParameter("bbs") %>';
 </script>
   <hr>
-   <br><A href="http://webdevmobile.com/"
-   title="html5, " target="_blank">WebDevMobile</A>
    <br><A href="http://it.nodong.net/zbxe/?mid=JOBQNA01"
    title="it.nodong.net" target="jobqna">일터Q&amp;A</A>
+   <br><A href="http://www.akose.or.kr"
+   title="한국 소프트웨어 개발자 협회" target="akose">한국 소프트웨어 개발자 협회</A>
 	<hr>
   <br>
   <a href="http://twitter.com/okjsp" class="twitter-follow-button" data-show-count="false" data-lang="ko">Follow @okjsp</a>
