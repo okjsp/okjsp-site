@@ -39,6 +39,10 @@ footer : [
 
 aside : [
 {
+	tag: '<a href="/f.jsp?http://www.tabslab.com/kr/">' +
+	'<img src="/images/banner/tabscf_150x67.gif" alt="탭스 업로드 JAVA" style="width:150px"></a>'
+},
+{
 	tag: '<a href="/f.jsp?http://olc.oss.kr/">' +
 	'<img src="/images/banner/olc_134x60.gif" alt="오픈소스 SW프로그래머를 위한 넉넉한 그늘" style="width:150px"></a>'
 }
@@ -66,7 +70,7 @@ showAside : function() {
     }
     document.writeln("</ul>");
 
-    var html = '<p id="adinfo"><a href="/seq/181976">광고문의</a></p>';
+    var html = '<p id="adinfo"><a href="/seq/181976">광고안내</a></p>';
     if (this.asideApp.length > 0) {
         var idx = Math.floor(Math.random() * this.asideApp.length);
         html +=	this.asideApp[idx].tag;
