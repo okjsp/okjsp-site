@@ -208,6 +208,7 @@ function view(n) {
 <script type="text/javascript">
 Banner.showAside();
 </script>
+<script src="http://widgetprovider.daum.net/view?url=http://widgetcfs1.daum.net/xml/16/widget/2008/09/24/15/28/48d9de0cd3a6e.xml&up_Category=0&up_WidgetStyle=A&up_Username=kenu.heo%40gmail.com&up_HideStatus=false&up_HideBottom=false&up_HideDateLocation=false&&width=166&height=355&widgetId=122&scrap=1" type="text/javascript"></script>
 <jsp:include page="/googleAnalytics.jsp" />
 </body>
 </html>
