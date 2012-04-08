@@ -1,6 +1,11 @@
 var Banner = {
 main : [
 {
+	tag: '<a href="/f.jsp?http://www.devmento.co.kr/devmain/seminar/edumento_detail.jsp?dataSeq=127" target="_blank">' +
+	'<img src="/images/banner/devmento_windows8_473x98.gif" ' +
+	'alt="데브멘토 > HTML5와 JAVASCRIPT를 활용하여 윈도우8 앱 만들기"></a>'
+},
+{
 	tag: '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
 	'<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
 	'alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트"></a>'
@@ -54,8 +59,8 @@ asideApp : [
 	'src="/images/app/clien_150x150.png" alt="Hi Clien by iiixzu"></a>'
 },
 {
-	tag : '<a href="/f.jsp?http://itunes.apple.com/app/id490990415?mt=8" target="_blank"><img class="adapp" '+
-	'src="http://a3.mzstatic.com/us/r1000/118/Purple/c0/cc/cc/mzl.hufpsqhf.175x175-75.jpg" alt="Lead2M will lead you to miracles!"></a>'
+	tag : '<a href="/f.jsp?http://itunes.apple.com/kr/app/oghyi/id515739111?mt=8" target="_blank"><img class="adapp" '+
+	'src="http://a4.mzstatic.com/us/r1000/096/Purple/v4/5d/d2/48/5dd24835-243d-9ec9-f6b1-c78691abc75b/V9809ELtPnNVvmabDtq5aw-temp-upload.siryfcqr.175x175-75.jpg" alt="옥희, 아이폰/아이패드앱"></a>'
 }
 ],
 show : function() {
@@ -70,7 +75,8 @@ showAside : function() {
     }
     document.writeln("</ul>");
 
-    var html = '<p id="adinfo"><a href="/seq/181976">광고안내</a></p>';
+    var html = '<p id="adinfo"><a href="/seq/181976">광고문의</a></p>'+
+    '<p class="adapp_title">&middot; app ad</p>';
     if (this.asideApp.length > 0) {
         var idx = Math.floor(Math.random() * this.asideApp.length);
         html +=	this.asideApp[idx].tag;
