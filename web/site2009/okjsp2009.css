@@ -56,6 +56,11 @@ img {
 	width: 642px;
 }
 
+.th {
+padding: 5px 10px;
+font-size: 1.2em;
+}
+
 .bbsTable .tablestyle {
 	margin-left: 3px;
 }
