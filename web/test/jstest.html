@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript Unit Test</title>
+<script src="http://yui.yahooapis.com/3.4.1/build/yui/yui-min.js"></script>
+</head>
+<body>
+	input : 2011-11-15 ~ 2012-03-10
+	<br>output: 11월,12월,1월,2월,3월
+<script type="text/javascript">
+var getMonthList = function(stringDuration) {
+	var list = splitInput(stringDuration);
+	var dateList = [stringToDate(list[0]), stringToDate(list[1])];
+	dateList[1].setMonth(dateList[1].getMonth() + 1);
+	var monthList = [];
+	do {
+		monthList.push(dateList[0].getMonth() + 1);
+		dateList[0].setMonth(dateList[0].getMonth() + 1);
+	} while (dateList[0] < dateList[1]);
+
+	var resultList = [];
+	for (var idx in monthList) {
+		resultList[idx] = monthList[idx] + "월";
+	}
+	return resultList;
+}
+
+var splitInput = function(string) {
+	return string.replace(/ /g,"").split("~");
+}
+
+var stringToDate = function(string) {
+	var list = string.split("-");
+	return new Date(parseInt(list[0]), parseInt(list[1]) - 1, parseInt(list[2]));
+}
+
+//Create a new YUI instance and populate it with the required modules.
+YUI().use('test', function(Y) {
+	// Test is available and ready for use. Add implementation
+	var testCase = new Y.Test.Case({
+
+		name : "TestCase Name",
+
+		//traditional test names
+		testGetMonthListString : function() {
+			Y.Assert.areEqual("11월,12월,1월,2월,3월", getMonthList("2011-11-15 ~ 2012-03-10").join(), "5 months");
+			Y.Assert.areEqual("12월,1월,2월,3월", getMonthList("2011-12-15 ~ 2012-03-10").join(), "4 months");
+			Y.Assert.areEqual("12월", getMonthList("2011-12-15 ~ 2011-12-15").join(), "1 months");
+		},
+		testSplit : function() {
+			var input = "2011-11-15 ~ 2012-03-10";
+			var output = splitInput(input);
+			Y.Assert.areEqual("2011-11-15", output[0]);
+			Y.Assert.areEqual("2012-03-10", output[1]);
+		},
+		testStringToDate : function() {
+			Y.Assert.areEqual(new Date(2011, 10, 15).toString(), stringToDate("2011-11-15").toString());
+			Y.Assert.areEqual(new Date(2012, 2, 10).toString(), stringToDate("2012-03-10").toString());
+		}
+	
+	});
+	//add the test cases and suites
+	Y.Test.Runner.add(testCase);
+
+	//run all tests
+	Y.Test.Runner.run();
+});
+	
+
+</script>
+</body>
+</html>
