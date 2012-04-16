@@ -29,10 +29,6 @@ left : [
 ],
 
 leftimg : [
-{
-	tag: '<li><A href="/f.jsp?http://www.econovation.co.kr/School/web/SS0105.asp?tcode=4&mn_id=010602&okjsp=true" title="econovation" target="kt">'
-		+'<img src="/images/banner/kt_88x100.gif" alt="econovation"></A></li>'
-}
 ],
 
 footer : [
