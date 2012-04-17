@@ -3,8 +3,10 @@ insert into okboard_ad (seq, startdate, enddate, priority) values
 
 -- 185887)
 
-select * from okboard_ad;
+select * from okboard_ad order by aseq;
 
+update okboard_ad set enddate = now()
+where aseq = 11;
 
 select * from okboard_ad where startdate < sysdatetime and enddate > sysdatetime order by priority desc;
 

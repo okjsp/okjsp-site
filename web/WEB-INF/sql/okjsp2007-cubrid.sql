@@ -209,6 +209,15 @@ CREATE TABLE "okboard_ad"(
 "priority" integer default 0
 );
 
+CREATE TABLE "okad_log"(
+"lseq" integer AUTO_INCREMENT(0,1) PRIMARY KEY,
+"credate" timestamp,
+"url" character varying(131072),
+"referer" character varying(131072),
+"sid" integer default 0,
+"ip" character varying(50)
+);
+
 
 /* Æ®¸®°Å */
 CREATE TRIGGER "glo_delete_contents"
