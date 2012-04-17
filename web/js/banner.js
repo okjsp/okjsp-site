@@ -46,6 +46,10 @@ aside : [
 {
 	tag: '<a href="/f.jsp?http://olc.oss.kr/">' +
 	'<img src="/images/banner/olc_134x60.gif" alt="오픈소스 SW프로그래머를 위한 넉넉한 그늘" style="width:150px"></a>'
+},
+{
+	tag: '<a href="/f.jsp?http://www.zdnet.co.kr/biz/kt/#okjsp">' +
+	'<img src="/images/banner/ktcloudday_150x67.gif" alt="KT Cloud Day" style="width:150px"></a>'
 }
 ],
 
