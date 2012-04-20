@@ -1,11 +1,6 @@
 var Banner = {
 main : [
 {
-	tag: '<a href="/f.jsp?http://www.devmento.co.kr/devmain/seminar/edumento_detail.jsp?dataSeq=127" target="_blank">' +
-	'<img src="/images/banner/devmento_windows8_473x98.gif" ' +
-	'alt="데브멘토 > HTML5와 JAVASCRIPT를 활용하여 윈도우8 앱 만들기"></a>'
-},
-{
 	tag: '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
 	'<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
 	'alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트"></a>'
