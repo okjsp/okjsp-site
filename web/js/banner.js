@@ -2,7 +2,7 @@ var Banner = {
 main : [
 {
 	tag: '<a href="/f.jsp?http://www.devmento.co.kr/" target="_blank">' +
-	'<img src="/images/banner/devmento_windows8_473x98.gif" ' +
+	'<img src="/images/banner/devmento_okjsp_473x98.gif" ' +
 	'alt="개발 & 기술 동영상 콘텐츠가 가장 많은 곳"></a>'
 },
 {
