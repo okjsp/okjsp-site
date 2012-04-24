@@ -1,6 +1,11 @@
 var Banner = {
 main : [
 {
+	tag: '<a href="/f.jsp?http://www.devmento.co.kr/" target="_blank">' +
+	'<img src="/images/banner/devmento_windows8_473x98.gif" ' +
+	'alt="개발 & 기술 동영상 콘텐츠가 가장 많은 곳"></a>'
+},
+{
 	tag: '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
 	'<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
 	'alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트"></a>'
@@ -41,10 +46,6 @@ aside : [
 {
 	tag: '<a href="/f.jsp?http://olc.oss.kr/">' +
 	'<img src="/images/banner/olc_134x60.gif" alt="오픈소스 SW프로그래머를 위한 넉넉한 그늘" style="width:150px"></a>'
-},
-{
-	tag: '<a href="/f.jsp?http://www.zdnet.co.kr/biz/kt/#okjsp">' +
-	'<img src="/images/banner/ktcloudday_150x67.gif" alt="KT Cloud Day" style="width:150px"></a>'
 }
 ],
 
