@@ -45,7 +45,7 @@ aside : [
 },
 {
 	tag: '<a href="/f.jsp?http://project.oss.kr/">' +
-	'<img src="/images/banner/olc_project_150x67.gif" alt="OSS World Challenge 2012, 6th 공개소프트웨어 개발자 대회"></a>'
+	'<img src="/images/banner/oss_project_150x67.gif" alt="OSS World Challenge 2012, 6th 공개소프트웨어 개발자 대회"></a>'
 }
 ],
 
