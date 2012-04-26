@@ -41,11 +41,11 @@ footer : [
 aside : [
 {
 	tag: '<a href="/f.jsp?http://www.tabslab.com/kr/">' +
-	'<img src="/images/banner/tabscf_150x67.gif" alt="탭스 업로드 JAVA" style="width:150px"></a>'
+	'<img src="/images/banner/tabscf_150x67.gif" alt="탭스 업로드 JAVA"></a>'
 },
 {
-	tag: '<a href="/f.jsp?http://olc.oss.kr/">' +
-	'<img src="/images/banner/olc_134x60.gif" alt="오픈소스 SW프로그래머를 위한 넉넉한 그늘" style="width:150px"></a>'
+	tag: '<a href="/f.jsp?http://project.oss.kr/">' +
+	'<img src="/images/banner/olc_project_150x67.gif" alt="OSS World Challenge 2012, 6th 공개소프트웨어 개발자 대회"></a>'
 }
 ],
 
