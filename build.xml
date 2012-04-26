@@ -243,7 +243,7 @@
 	<!-- ==================== check java version Target ================================== -->
 	<taskdef name="findbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask"/>
 
-	<target name="findbugs">
+	<target name="findbugs" depends="test">
 		<findbugs home="${findbugs.home}"
                 output="xml:withMessages"
                 outputFile="findbugs.xml" >
