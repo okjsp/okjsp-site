@@ -250,13 +250,13 @@ function getCookie( cookieName )
   else
   {
    // 쿠키 내에 해당 쿠키가 존재하지 않을 경우
-   return false;
+   return "";
   }
  }
  else
  {
   // 쿠키 자체가 없을 경우
-  return false;
+  return "";
  }
 }
 
