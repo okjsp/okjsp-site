@@ -93,6 +93,9 @@ import com.oreilly.servlet.MultipartRequest;
 			String name = (String) files.nextElement();
 			file = multi.getFile(name);
 		}
+		if (file == null) {
+			throw new IOException("no file");
+		}
 		return file;
 	}   	  	    
 

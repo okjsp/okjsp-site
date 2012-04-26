@@ -15,6 +15,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>프로필 사진</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+var checkUploadfile = function() {
+	var is = ($("input[type=file]").val() != "");
+	if (!is) {
+		alert('파일을 선택해주세요.');
+	}
+	return is;
+}
+</script>
 </head>
 <body>
 <% 
@@ -22,7 +32,7 @@
 %><img src="/profile/<%= member.getSid() %>.jpg" alt="<%= member.getSid() %>"><%
 	}
 %>
-<form enctype="multipart/form-data" method="post" action="/profile/write">
+<form enctype="multipart/form-data" method="post" action="/profile/write" onsubmit="return checkUploadFile()">
 <input type="file" name="profile" />
 <input type="submit" value="올리기" />
 </form>
