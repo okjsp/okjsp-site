@@ -37,5 +37,15 @@ public class DateUtil {
 		}
 		return format;
 	}
+
+	public static Date parse(String date) {
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		try {
+			return sdf.parse(date);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
 	
 }
