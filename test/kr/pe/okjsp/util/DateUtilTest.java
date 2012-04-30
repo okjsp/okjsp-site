@@ -10,6 +10,7 @@ public class DateUtilTest extends TestCase {
 	
 	public void testAddDate() {
 		assertEquals("2012-05-02", DateUtil.addDate("2012-05-01", 1));
+		assertEquals("2012-05-01", DateUtil.addDate("2012-04-30", 1));
 	}
 
 }
