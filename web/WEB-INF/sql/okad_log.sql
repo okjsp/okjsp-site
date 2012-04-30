@@ -24,3 +24,4 @@ group by date_format(credate, '%Y-%m-%d'), url
 order by 1 desc, 3 desc
 ;
 
+select * from okad_log where credate between '2012-05-01' and '2012-05-02' order by url desc
