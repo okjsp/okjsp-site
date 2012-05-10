@@ -1,6 +1,11 @@
 var Banner = {
 main : [
 {
+	tag: '<a href="/f.jsp?http://sda.re.kr/bbs/board.php?bo_table=festival_contents&wr_id=1" target="_blank">' +
+	'<img src="/images/banner/sda_conf_940x280.jpg" ' +
+	'alt="글로벌 커뮤니티 서미트 2012"></a>'
+},
+{
 	tag: '<a href="/f.jsp?http://www.devmento.co.kr/" target="_blank">' +
 	'<img src="/images/banner/devmento_okjsp_473x98.gif" ' +
 	'alt="개발 & 기술 동영상 콘텐츠가 가장 많은 곳"></a>'
