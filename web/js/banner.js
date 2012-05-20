@@ -1,11 +1,6 @@
 var Banner = {
 main : [
 {
-	tag: '<a href="/f.jsp?http://sda.re.kr/bbs/board.php?bo_table=festival_contents&wr_id=1" target="_blank">' +
-	'<img src="/images/banner/sda_conf_940x280.jpg" style="width:473px;height:98px" ' +
-	'alt="글로벌 커뮤니티 서미트 2012"></a>'
-},
-{
 	tag: '<a href="/f.jsp?http://www.devmento.co.kr/" target="_blank">' +
 	'<img src="/images/banner/devmento_okjsp_473x98.gif" ' +
 	'alt="개발 & 기술 동영상 콘텐츠가 가장 많은 곳"></a>'
@@ -76,7 +71,7 @@ showAside : function() {
     }
     document.writeln("</ul>");
 
-    var html = '<p id="adinfo"><a href="/seq/181976">광고문의</a></p>'+
+    var html = '<p id="adinfo"><a href="/seq/181976">광고안내</a></p>'+
     '<p class="adapp_title">&middot; app ad</p>';
     if (this.asideApp.length > 0) {
         var idx = Math.floor(Math.random() * this.asideApp.length);
