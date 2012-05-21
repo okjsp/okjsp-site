@@ -209,6 +209,8 @@ cursor: pointer;
 #ad_banners {
 	text-align: center;
 	border: 1px solid #0099B9;
+	margin-top: 12px;
+	padding-top: 8px;
 }
 
 #ad_banners img {
