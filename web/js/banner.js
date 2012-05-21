@@ -50,6 +50,10 @@ aside : [
 {
 	tag: '<a href="/f.jsp?http://project.oss.kr/">' +
 	'<img src="/images/banner/oss_project_150x67.gif" alt="OSS World Challenge 2012, 6th 공개소프트웨어 개발자 대회"></a>'
+},
+{
+	tag: '<a href="/f.jsp?http://dev.ucloud.com/">' +
+	'<img src="/images/banner/ucloud_150x67.png" alt="ucloud 개발지원센터 오픈 이벤트"></a>'
 }
 ],
 
