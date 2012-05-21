@@ -17,6 +17,10 @@ contentRight : [
 
 content : [
 {
+	tag: '<a href="/f.jsp?http://hanbitedu.or.kr/curriculum/mobile.html">' +
+	'<img src="/images/banner/hbilab_468x60.gif" alt="아이폰,안드로이드,하이브리드 앱개발"></a>'
+},
+{
 	tag: '<a href="/f.jsp?http://olc.oss.kr/">' +
 	'<img src="/images/banner/olc_468x60.gif" alt="오픈소스 SW프로그래머를 위한 넉넉한 그늘"></a>'
 }
@@ -39,6 +43,10 @@ footer : [
 ],
 
 aside : [
+{
+	tag: '<a href="/f.jsp?http://hanbitedu.or.kr/curriculum/programming.html">' +
+	'<img src="/images/banner/hbilab_150x67.gif" alt="자바개발자 양성과정"></a>'
+},
 {
 	tag: '<a href="/f.jsp?http://project.oss.kr/">' +
 	'<img src="/images/banner/oss_project_150x67.gif" alt="OSS World Challenge 2012, 6th 공개소프트웨어 개발자 대회"></a>'
