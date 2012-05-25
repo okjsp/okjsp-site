@@ -21,8 +21,8 @@ content : [
 	'<img src="/images/banner/hbilab_468x60.gif" alt="아이폰,안드로이드,하이브리드 앱개발"></a>'
 },
 {
-	tag: '<a href="/f.jsp?http://olc.oss.kr/">' +
-	'<img src="/images/banner/olc_468x60.gif" alt="오픈소스 SW프로그래머를 위한 넉넉한 그늘"></a>'
+	tag: '<a href="/f.jsp?http://olc.oss.kr/offlec/list.jsp#okjsp">' +
+	'<img src="/images/banner/olc_model_468x60.gif" alt="Spring 3.1/Script Language 과정 OLC"></a>'
 }
 ],
 
@@ -43,6 +43,10 @@ footer : [
 ],
 
 aside : [
+{
+	tag: '<a href="/f.jsp?http://olc.oss.kr/offlec/list.jsp">' +
+	'<img src="/images/banner/olc_model_150x67.gif" alt="Spring 3.1/Script Language 과정 OLC"></a>'
+},
 {
 	tag: '<a href="/f.jsp?http://hanbitedu.or.kr/curriculum/programming.html">' +
 	'<img src="/images/banner/hbilab_150x67.gif" alt="자바개발자 양성과정"></a>'
