@@ -48,7 +48,7 @@ aside : [
 	'<img src="/images/banner/olc_model_150x67.gif" alt="Spring 3.1/Script Language 과정 OLC"></a>'
 },
 {
-	tag: '<a href="/f.jsp?http://javacafe.or.kr/board/view/BBS_ID/NTC_001/ATC_NO/91">' +
+	tag: '<a href="/f.jsp?http://onoffmix.com/event/7359">' +
 	'<img src="/images/banner/javacafe_seminar_150x67.jpg" alt="자바카페 공개 세미나 2012"></a>'
 },
 {
