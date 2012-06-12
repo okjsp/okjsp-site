@@ -183,28 +183,6 @@ Banner.showContentSection();
 	} // end if isAdmin
 %>
 </table>
-<div style="border-bottom: 1 solid #888;" class="tablestyle">
-<form name="tform" style="margin:0px" onsubmit="saveTag();return false;">
-Tag	<input type="text" name="tag" id="tag" style="width:80px" />
-	<input type="button" value="tag" onclick="saveTag()"/>
-	<span id="tagSaveMsg"></span>
-</form>
-<div style="color:#888">tag는 게시물의 성격을 나타내는 키워드를 입력하는 공간입니다. <br />
-tag는 <a href="<%= Navigation.getPath("SECURE_DOMAIN") %>/jsp/member/login.jsp">로그인</a> 후 사용하실 수 있습니다.</div>
-</div>
-<div id="taglist" style="border-bottom: 1 solid #888;" class="tablestyle">
-<%
-  TagHandler tagHandler = new TagHandler();
-  ArrayList tags = tagHandler.getTagsBySeq(one.getSeq());
-  if (tags.size() > 0) {
-	  for(int i = 0; i < tags.size(); i++) {
-		  Tag tag = (Tag)tags.get(i);
-%><div class="bbs"><a href="/jsp/taglist.jsp?tagseq=<%= tag.getTagseq() %>"><%=
-	CommonUtil.k2a(tag.getTag()).replaceAll("<","&lt;") %>(<%= tag.getCnt() %>)</a></div><%
-	  }
-  }
-%>
-</div>
 
 <form name="f0" method="POST" onSubmit="return chk_memo(this)">
     <input type="hidden" name="pact" value="MEMO">
