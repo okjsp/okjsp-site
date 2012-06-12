@@ -504,7 +504,7 @@ public class Article {
 	 */
 	public long getSid() {
 		try {
-			sid = Long.parseLong(this.id);
+			sid = (this.id == null)? 0 : Long.parseLong(this.id);
 		} catch (NumberFormatException e) {
 			e.printStackTrace();
 		}
