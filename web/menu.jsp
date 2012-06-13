@@ -77,5 +77,9 @@
 	<a href="/f.jsp?http://www.cubrid.com/" target="_blank"
 	 title="okjsp Database">
 	<img src="/images/banner/cubrid_88x31.gif" width="88" height="31" border="0"></a>
+	<br />
+	<a href="/f.jsp?http://www.skplanet.co.kr/" target="_blank"
+	 title="SK Planet">
+	<img src="/images/banner/skp_88x31.png" width="88" height="31" border="0"></a>
 </div>
 </div>
