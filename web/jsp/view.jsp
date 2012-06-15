@@ -81,7 +81,7 @@ http://www.okjsp.pe.kr/seq/<%= one.getSeq() %></a></div>
 <script type="text/javascript">
 Banner.showContentRight();
 </script>
-<p><%= one.getContentView() %></p></div>
+<p><%= CommonUtil.rplc(one.getContentView(), "movieseq=", "")  %></p></div>
 <%-- facebook like button --%>
 <iframe src="http://www.facebook.com/plugins/like.php?href=http://www.okjsp.pe.kr/seq/<%= one.getSeq() %>"
         scrolling="no" frameborder="0"
