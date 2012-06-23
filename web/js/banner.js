@@ -1,9 +1,9 @@
 var Banner = {
 main : [
-{
-	tag: '<a href="/f.jsp?http://www.devmento.co.kr/" target="_blank">' +
-	'<img src="/images/banner/devmento_okjsp_473x98.gif" ' +
-	'alt="개발 & 기술 동영상 콘텐츠가 가장 많은 곳"></a>'
+{   "expire": '2012-07-16',
+	"tag": '<a href="/f.jsp?http://www.econovation.co.kr/School/web/SS0104.asp?tcode=8&mn_id=010608" target="_blank">' +
+	'<img src="/images/banner/econovation_473x97.jpg" ' +
+	'alt="KT 에코노베이션 상용화를 위한 APP개발 전문가 과정 4기"></a>'
 },
 {
 	tag: '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
