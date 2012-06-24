@@ -17,10 +17,6 @@ contentRight : [
 
 content : [
 {
-	tag: '<a href="/f.jsp?http://hanbitedu.or.kr/curriculum/mobile.html">' +
-	'<img src="/images/banner/hbilab_468x60.gif" alt="아이폰,안드로이드,하이브리드 앱개발"></a>'
-},
-{
 	tag: '<a href="/f.jsp?http://olc.oss.kr/offlec/list.jsp#okjsp">' +
 	'<img src="/images/banner/olc_model_468x60.gif" alt="Spring 3.1/Script Language 과정 OLC"></a>'
 }
@@ -28,7 +24,8 @@ content : [
 
 left : [
 {
-	tag: '<li><A href="/f.jsp?http://www.innorix.com/DS/" title="대용량 파일/폴더 업로드 컴포넌트" target="innorix">업로드는 InnoDS</A></li>'
+	"expire" : "2013-06-01",
+	"tag": '<li><A href="/f.jsp?http://www.innorix.com/DS/" title="대용량 파일/폴더 업로드 컴포넌트" target="innorix">업로드는 InnoDS</A></li>'
 }
 ],
 
@@ -44,16 +41,9 @@ footer : [
 
 aside : [
 {
+	"expire": "2012-08-31",
 	tag: '<a href="/f.jsp?http://olc.oss.kr/offlec/list.jsp">' +
 	'<img src="/images/banner/olc_model_150x67.gif" alt="Spring 3.1/Script Language 과정 OLC"></a>'
-},
-{
-	tag: '<a href="/f.jsp?http://hanbitedu.or.kr/curriculum/programming.html">' +
-	'<img src="/images/banner/hbilab_150x67.gif" alt="자바개발자 양성과정"></a>'
-},
-{
-	tag: '<a href="/f.jsp?http://dev.ucloud.com/">' +
-	'<img src="/images/banner/ucloud_150x67.png" alt="ucloud 개발지원센터 오픈 이벤트"></a>'
 }
 ],
 
