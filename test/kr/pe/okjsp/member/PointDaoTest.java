@@ -116,12 +116,13 @@ public class PointDaoTest extends TestCase {
 		member.setSid(3582);
 
 		ArticleDao articleDao = new ArticleDao();
-		int result = articleDao.write(getArticle(member));
+		Article article = getArticle(member);
+		int result = articleDao.write(article);
 		assertTrue(1 < result);
-		result = articleDao.write(getArticle(member));
+		result = articleDao.write(article);
 		assertTrue(1 < result);
 		try {
-			result = articleDao.write(getArticle(member));
+			result = articleDao.write(article);
 			fail();
 		} catch (IOException e) {
 			e.printStackTrace();
