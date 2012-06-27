@@ -2,6 +2,7 @@ package kr.pe.okjsp;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.Enumeration;
@@ -40,10 +41,8 @@ public class WriteServlet extends HttpServlet {
 	} // end doPost()
 
 	private String write(HttpServletRequest req, HttpServletResponse res) throws IOException {
-		String id = CommonUtil.getCookie(req, "okid");
 		long sid = CommonUtil.getCookieLong(req, "sid");
 		Article article = new Article();
-		article.setId(id);
 		article.setSid(sid);
 
 		String writer = req.getParameter("writer");
@@ -71,6 +70,8 @@ public class WriteServlet extends HttpServlet {
 		// 트위터 글쓰기 추가
 		new TwitterUpdate().doUpdate(article, req);
 		
+		setWriterCookie(res, article);
+
 		return article.getBbs();
 	}
 
@@ -98,7 +99,6 @@ public class WriteServlet extends HttpServlet {
 		// 200MB
 		ArrayList<DownFile> arrdf = new ArrayList<DownFile>();
 		Article article = null;
-		String id = CommonUtil.getCookie(req, "okid");
 		long sid = CommonUtil.getCookieLong(req, "sid");
 		try {
 			int seq = 0, ref = 0, lev = 0, step = 0;
@@ -127,7 +127,7 @@ public class WriteServlet extends HttpServlet {
 					ref,
 					step,
 					lev,
-					id,
+					null,
 					sid,
 					writer,
 					subject,
@@ -217,7 +217,19 @@ public class WriteServlet extends HttpServlet {
 			new TwitterUpdate().doUpdate(article, req);
 		}
 		
+		setWriterCookie(res, article);
+		
 		return article.getBbs();
+	}
+
+	private void setWriterCookie(HttpServletResponse res, Article article) {
+		try {
+			CommonUtil.setCookie(res, "sid", ""+article.getSid());
+			CommonUtil.setCookie(res, "okhome", ""+article.getHomepage());
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+		
 	}
 
 	public boolean hasNothing(Article article) {

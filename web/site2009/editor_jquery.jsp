@@ -2,11 +2,10 @@
     pageEncoding="EUC-KR"%>
 <%
 	long sid = CommonUtil.getCookieLong(request, "sid");
-	String id = CommonUtil.getCookie(request, "okid");
 	String bbs = CommonUtil.nchk(request.getParameter("bbs"), "perf");
 	
 	if(sid == 0) {
-		response.sendRedirect(Navigation.getPath("LOGFORM")+"?returnPath=/site2009/editor.jsp?bbs="+bbs);
+		response.sendRedirect(Navigation.getPath("LOGFORM")+"?returnPath=/site2009/editor_jquery.jsp?bbs="+bbs);
 		return; 
 	}
 
@@ -35,6 +34,7 @@ $(function() {
 	$('#f1').submit(check);
 	
 	$("#writer").val(getCookie("okwriter"));
+	$("#homepage").val(getCookie("okhome"));
 });
 
 var sync = function() {
