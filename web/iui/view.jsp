@@ -10,7 +10,7 @@
 		<fieldset>
 			<div class="row" style="text-align:left; padding:0 10px 0 10px;">
 				<p>
-				<img src="http://www.okjsp.pe.kr/profile/<%= one.getSid() %>.jpg" alt="<%= one.getSid() %>" style="float:left; width:35px; margin-right:10px;" onerror="this.src='/images/spacer.gif'">
+				<img src="http://www.okjsp.pe.kr/profile/<%= one.getSid() %>.jpg" alt="<%= one.getSid() %>" style="float:left; width:35px; margin-right:10px;">
 				<strong><%= CommonUtil.showHtml(one.getSubject()) %></strong><br/>
 				<span class="b"><c:out value="${one.when}" /> by <c:out value="${one.writer}"/></span>				
 				</p>
@@ -37,7 +37,7 @@
 		<fieldset>
 			<div class="row" style="text-align:left; padding:0 5px 0 5px;">
 				<p>
-					<img src="http://www.okjsp.pe.kr/profile/<%= mb.getSid() %>.jpg" alt="<%= mb.getSid() %>" style="float:left; width:35px; margin-right:10px;" onerror="this.src='/images/spacer.gif'">
+					<img src="http://www.okjsp.pe.kr/profile/<%= mb.getSid() %>.jpg" alt="<%= mb.getSid() %>" style="float:left; width:35px; margin-right:10px;">
 					<span class="b"><%= mb.getWriter() %> | <%= mb.getWhen("yyyy-MM-dd HH:mm:ss")%>
 				</p>				
 			</div>

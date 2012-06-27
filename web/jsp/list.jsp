@@ -115,8 +115,7 @@ while (iter.hasNext()) {
     if (one.getId() != null) {
         %><img src="/profile/<%= one.getId() %>.jpg"
         	alt="<%= one.getId() %>"
-        	style="width:14px;height:14px"
-        	onerror="this.src='/images/spacer.gif'"><%
+        	style="width:14px;height:14px"><%
     }
         	%></td>
         <td class="read tiny"><%= one.getRead() %></td>

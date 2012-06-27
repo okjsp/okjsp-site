@@ -37,8 +37,7 @@ http://www.okjsp.pe.kr/seq/<%= one.getSeq() %></a></div>
     if (one.getId() != null) {
         %><img src="http://www.okjsp.pe.kr/profile/<%= one.getId() %>.jpg"
         	alt="<%= one.getId() %>"
-        	style="width:77px"
-        	onerror="this.src='/images/spacer.gif'"><%
+        	style="width:77px"><%
     }
 %>
 <strong><c:out value="${one.writer}"/></strong>
@@ -218,8 +217,7 @@ Banner.showContentSection();
     if (mb.getId() != null) {
         %><img src="http://www.okjsp.pe.kr/profile/<%= mb.getSid() %>.jpg"
         	alt="<%= mb.getSid() %>"
-        	style="width:36px;height:36px"
-        	onerror="this.src='/images/spacer.gif'"><%
+        	style="width:36px;height:36px"><%
     }
 %><%= mb.getWriter() %>
 <%

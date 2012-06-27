@@ -79,8 +79,7 @@
     if (mb.getId() != null) {
         %><img src="http://www.okjsp.pe.kr/profile/<%= mb.getId() %>.jpg"
         	alt="<%= mb.getId() %>"
-        	style="width:36px;height:36px"
-        	onerror="this.src='/images/spacer.gif'"><%
+        	style="width:36px;height:36px"><%
     }
 %><%= mb.getWriter() %></li>
 <li class="d"><%= mb.getWhen("yyyy-MM-dd HH:mm:ss")

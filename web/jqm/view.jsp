@@ -15,7 +15,7 @@
 	<div data-role="content" role="main">
 		<div class="ui-body ui-body-d">
 			<p class="bBorder1px">
-				<img src="/profile/<%=one.getSid()%>.jpg" alt="<%=one.getSid()%>" onerror="this.src='/images/spacer.gif'">
+				<img src="/profile/<%=one.getSid()%>.jpg" alt="<%=one.getSid()%>">
 				<strong><%=CommonUtil.showHtml(one.getSubject())%></strong><br/>
 				<span class="b"><c:out value="${one.when}" /> by <c:out value="${one.writer}"/></span>				
 			</p>
@@ -37,8 +37,7 @@
 		<div class="ui-body ui-body-d tmargin10">	
 			<p>
 				<img src="http://www.okjsp.pe.kr/profile/<%=mb.getSid()%>.jpg"
-					alt="<%=mb.getSid()%>"
-					onerror="this.src='/images/spacer.gif'" />
+					alt="<%=mb.getSid()%>"/>
 				<%=mb.getWriter()%><br/>
 				<span class="grayAnd8pt"><%=mb.getWhen("yyyy-MM-dd HH:mm:ss")%></span>
 			</p>				
