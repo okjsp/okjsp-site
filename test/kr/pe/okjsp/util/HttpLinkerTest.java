@@ -4,6 +4,11 @@ package kr.pe.okjsp.util;
 import junit.framework.TestCase;
 
 public class HttpLinkerTest extends TestCase {
+	public void testLinkFacebook() {
+		String source = "<div>사이트 만들기 참 쉽군요.</div><div><img src=\"/upload/1341426100854.jpg\">\n<br></div><div><br></div>from: http://www.facebook.com/photo.php?fbid=10150942108252659&set=p.10150942108252659&type=1&theater<div><br></div><div><br></div><div><br></div>";
+		String output = "<div>사이트 만들기 참 쉽군요.</div><div><img src=\"/upload/1341426100854.jpg\">\n<br></div><div><br></div>from: <a href=\"http://www.facebook.com/photo.php?fbid=10150942108252659&set=p.10150942108252659&type=1&theater\" target=\"_blank\">http://www.facebook.com/photo.php?fbid=10150942108252659&set=p.10150942108252659&type=1&theater</a><div><br></div><div><br></div><div><br></div>";
+		assertEquals(output, HttpLinker.getLinkedSource(source));
+	}
 	public void testGetLinkedSource() {
 		String source = "http://www.okjsp.pe.kr/bbs?act=VIEW&bbs=TOOL&seq=55492";
 		String output = "<a href=\"http://www.okjsp.pe.kr/bbs?act=VIEW&bbs=TOOL&seq=55492\" target=\"_blank\">http://www.okjsp.pe.kr/bbs?act=VIEW&bbs=TOOL&seq=55492</a>";

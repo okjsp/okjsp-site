@@ -30,34 +30,40 @@ public class HttpLinker {
 			if (lastIdxEnd == -1) {
 				lastIdxEnd = source.length();
 			}
-			boolean hasLink = source.toLowerCase().indexOf("</a>", lastIdxStart) != -1;
-			boolean hasIframe = source.toLowerCase().indexOf("</iframe>", lastIdxStart) != -1;
-			boolean hasEmbed = source.toLowerCase().indexOf("</embed>", lastIdxStart) != -1;
-			boolean hasImg = source.toLowerCase().lastIndexOf("<img", lastIdxStart) != -1;
+			String lowerCase = source.toLowerCase();
+			boolean hasLink = lowerCase.indexOf("</a>", lastIdxStart) != -1;
+			boolean hasIframe = lowerCase.indexOf("</iframe>", lastIdxStart) != -1;
+			boolean hasEmbed = lowerCase.indexOf("</embed>", lastIdxStart) != -1;
+			int imgLastIndexOf = lowerCase.lastIndexOf("<img", lastIdxStart);
+			boolean hasImgWithHttp = imgLastIndexOf != -1;
+			if (hasImgWithHttp) {
+				String imgTag = source.substring(imgLastIndexOf, source.indexOf('>', imgLastIndexOf));
+				hasImgWithHttp = imgTag.indexOf("http") > -1;
+			}
 			if (hasLink) {
 				String tag = "a";
-				int lastIndexOf = source.toLowerCase().lastIndexOf("<" + tag + " ");
+				int lastIndexOf = lowerCase.lastIndexOf("<" + tag + " ");
 				pre = source.substring(0, lastIndexOf);
 				output = source.substring(lastIndexOf) + output;
 				source = pre;
 
 			} else if (hasIframe) {
 				String tag = "iframe";
-				int lastIndexOf = source.toLowerCase().lastIndexOf("<" + tag + " ");
+				int lastIndexOf = lowerCase.lastIndexOf("<" + tag + " ");
 				pre = source.substring(0, lastIndexOf);
 				output = source.substring(lastIndexOf) + output;
 				source = pre;
 
 			} else if (hasEmbed) {
 				String tag = "embed";
-				int lastIndexOf = source.toLowerCase().lastIndexOf("<" + tag + " ");
+				int lastIndexOf = lowerCase.lastIndexOf("<" + tag + " ");
 				pre = source.substring(0, lastIndexOf);
 				output = source.substring(lastIndexOf) + output;
 				source = pre;
 				
-			} else if (hasImg) {
+			} else if (hasImgWithHttp) {
 				String tag = "img";
-				int lastIndexOf = source.toLowerCase().lastIndexOf("<" + tag + " ");
+				int lastIndexOf = lowerCase.lastIndexOf("<" + tag + " ");
 				pre = source.substring(0, lastIndexOf);
 				output = source.substring(lastIndexOf) + output;
 				source = pre;
