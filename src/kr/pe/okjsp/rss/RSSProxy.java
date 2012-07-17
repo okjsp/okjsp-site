@@ -7,6 +7,8 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
+import kr.pe.okjsp.util.StringHelper;
+
 /**
  * RSS Feed 를 local로 연결해주는 모듈
  * @author kenu
@@ -77,7 +79,7 @@ public class RSSProxy {
 	 * @throws IOException
 	 */
 	public static String getXML(String urlPath, String charset) throws IOException {
-		InputStream openStream = new URL(urlPath).openStream();
+		InputStream openStream = new URL(StringHelper.getURLString(urlPath)).openStream();
 		InputStreamReader isr = new InputStreamReader(openStream, charset);
 
 		StringBuffer sb = new StringBuffer();
