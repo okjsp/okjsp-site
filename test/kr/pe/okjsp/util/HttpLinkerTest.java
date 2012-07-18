@@ -130,6 +130,11 @@ public class HttpLinkerTest extends TestCase {
 		String output = "(<a href=\"http://www.prever.co.kr\" target=\"_blank\">http://www.prever.co.kr</a>)";
 		assertEquals(output, HttpLinker.getLinkedSource(source));
 	}
+	public void testGetLinkedUnmatched() {
+		String source = "<span> </a></div>";
+		String output = "<span> </a></div>";
+		assertEquals(output, HttpLinker.getLinkedSource(source));
+	}
 	
 
 }

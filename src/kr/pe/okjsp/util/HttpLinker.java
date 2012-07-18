@@ -43,6 +43,9 @@ public class HttpLinker {
 			if (hasLink) {
 				String tag = "a";
 				int lastIndexOf = lowerCase.lastIndexOf("<" + tag + " ");
+				if (lastIndexOf == -1) {
+					lastIndexOf = source.indexOf("</"+tag+">");
+				}
 				pre = source.substring(0, lastIndexOf);
 				output = source.substring(lastIndexOf) + output;
 				source = pre;
