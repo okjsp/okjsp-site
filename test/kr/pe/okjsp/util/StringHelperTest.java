@@ -15,13 +15,13 @@ public class StringHelperTest extends TestCase {
 	public void testReadUnicode() {
 		String string = "&#44608;&#44049;&#46028;";
 		String c2 = StringHelper.readUnicode(string);
-		assertEquals("ê¹€ê°‘ëŒ", c2);
+		assertEquals("±è°©µ¹", c2);
 	}
 
 	public void testReadUnicode2() {
 		String string = "&#44608;&#44049; &#46028;";
 		String c2 = StringHelper.readUnicode(string);
-		assertEquals("ê¹€ê°‘ ëŒ", c2);
+		assertEquals("±è°© µ¹", c2);
 	}
 
 	public void testReadUnicode3() {
@@ -45,15 +45,15 @@ public class StringHelperTest extends TestCase {
 
 	public void testCode() {
 		String unicode = "&#xAC00;&#xB098;&#xB2E4;&#xB77C;&#xB9C8;";
-		assertEquals("ê°€ë‚˜ë‹¤ë¼ë§ˆ", StringHelper.readUnicode(unicode));
+		assertEquals("°¡³ª´Ù¶ó¸¶", StringHelper.readUnicode(unicode));
 	}
 
 	public void testCodeMixed() {
-		String unicode = "&#xAC00;&#xB098;ê°€ë‚˜&#xB2E4;&#xB77C;&#xB9C8;";
-		assertEquals("ê°€ë‚˜ê°€ë‚˜ë‹¤ë¼ë§ˆ", StringHelper.readUnicode(unicode));
+		String unicode = "&#xAC00;&#xB098;°¡³ª&#xB2E4;&#xB77C;&#xB9C8;";
+		assertEquals("°¡³ª°¡³ª´Ù¶ó¸¶", StringHelper.readUnicode(unicode));
 	}
 
-	String string = "ìë°”ì™€ í•œê¸€";
+	String string = "ÀÚ¹Ù¿Í ÇÑ±Û";
 
 	String[] charsets = { "ms949", "8859_1", "utf-8" };
 
@@ -78,19 +78,19 @@ public class StringHelperTest extends TestCase {
 	}
 	
 	public void testGetURLString() {
-		String input = "ì„œìš¸ì‹œ ê°•ìš°ëŸ‰ ì •ë³´";
+		String input = "¼­¿ï½Ã °­¿ì·® Á¤º¸";
 		String output = "%EC%84%9C%EC%9A%B8%EC%8B%9C+%EA%B0%95%EC%9A%B0%EB%9F%89+%EC%A0%95%EB%B3%B4";
 		assertEquals(output, StringHelper.getURLString(input));
 	}
 	public void testGetURLStringExtend() {
-		String input = "http://openapi.seoul.go.kr:8088/xml/4150495f323038396b656e7568656f/ì„œìš¸ì‹œ ê°•ìš°ëŸ‰ ì •ë³´/1/50";
+		String input = "http://openapi.seoul.go.kr:8088/xml/4150495f323038396b656e7568656f/¼­¿ï½Ã °­¿ì·® Á¤º¸/1/50";
 		String output = "http://openapi.seoul.go.kr:8088/xml/4150495f323038396b656e7568656f/%EC%84%9C%EC%9A%B8%EC%8B%9C+%EA%B0%95%EC%9A%B0%EB%9F%89+%EC%A0%95%EB%B3%B4/1/50";
 		assertEquals(output, StringHelper.getURLString(input));
 	}
 	
 	public void testChangeString() {
 		String input = "&#49436;&#50872;&#49884; &#44053;&#50864;&#47049; &#51221;&#48372;";
-		String output = "ì„œìš¸ì‹œ ê°•ìš°ëŸ‰ ì •ë³´";
+		String output = "¼­¿ï½Ã °­¿ì·® Á¤º¸";
 		assertEquals(output, StringHelper.readUnicode(input));
 	}
 
