@@ -2,9 +2,10 @@
 <html>
 <head>
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="/js/jquery/jquery.tinysort.min.js"></script>
 <script type="text/javascript">
 $(function(){
-var jq = $.get("/rss/p.jsp?http://openapi.seoul.go.kr:8088/xml/sample/서울시 강우량 정보/1/50")
+var jq = $.get("/rss/p.jsp?http://openapi.seoul.go.kr:8088/xml/sample/서울시 강우량 정보/1/45")
   .success(list)
   .error(function(){$("#error").val(jq.responseText);})
   .complete(function(){$("#result").val(jq.responseText);})
@@ -40,7 +41,7 @@ error:
 <textarea id="error"></textarea>
 <br />
 <hr>
-data from: <a href="http://openapi.seoul.go.kr:8088/xml/sample/서울시 강우량 정보/1/50" target="_blank">http://openapi.seoul.go.kr:8088/xml/sample/서울시 강우량 정보/1/50</a>
+data from: <a href="http://openapi.seoul.go.kr:8088/xml/sample/서울시 강우량 정보/1/45" target="_blank">http://openapi.seoul.go.kr:8088/xml/sample/서울시 강우량 정보/1/50</a>
 <br />
 hosted: <a href="http://www.okjsp.pe.kr/">http://www.okjsp.pe.kr/</a>
 </body>
