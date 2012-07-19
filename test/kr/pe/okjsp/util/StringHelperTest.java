@@ -71,8 +71,8 @@ public class StringHelperTest extends TestCase {
 		String test_str = new String((string).getBytes("utf-8"), "8859_1");
 		String test_result = new String(test_str.getBytes("8859_1"), "utf-8");
 		byte[] bytes = test_result.getBytes();
-		assertEquals(-20, (int) bytes[0]);
-		assertEquals(-128, (int) bytes[15]);
+		assertEquals(-64, (int) bytes[0]);
+		assertEquals(-37, (int) bytes[10]);
 		assertEquals(string, new String(bytes));
 		assertEquals(string, test_result);
 	}

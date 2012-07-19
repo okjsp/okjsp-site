@@ -1,5 +1,6 @@
-<%@page import="java.util.Random"%>
-<%@page import="kr.pe.okjsp.util.StringHelper"%><%@page import="kr.pe.okjsp.rss.RSSProxy"
+<%@page import="java.util.Random"%><%@page 
+import="kr.pe.okjsp.util.StringHelper"%><%@page 
+import="kr.pe.okjsp.rss.RSSProxy"
 contentType="text/plain;charset=utf-8"
 %><%
 	String qs = request.getQueryString();
