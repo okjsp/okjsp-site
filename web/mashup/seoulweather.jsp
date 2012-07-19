@@ -12,6 +12,7 @@ var jq = $.get("/rss/p.jsp?http://openapi.seoul.go.kr:8088/xml/sample/서울시 
 ;
 
 $("time").html(new Date().toString());
+$("button#sort").on("click", function(){ $("ul#list li").tsort(); });
 });
 
 var list = function(data) {
@@ -32,6 +33,8 @@ var list = function(data) {
 <body>
 <h1>서울 강우량 정보</h1>
 <time></time>
+<br />
+<button id="sort">정렬</button>
 <ul id="list"></ul>
 <hr>
 result:
