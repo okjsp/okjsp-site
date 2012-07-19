@@ -5,7 +5,8 @@
 <script type="text/javascript" src="/js/jquery/jquery.tinysort.min.js"></script>
 <script type="text/javascript">
 $(function(){
-var jq = $.get("/rss/p.jsp?http://openapi.seoul.go.kr:8088/xml/sample/서울시 강우량 정보/1/45")
+var rand = "#" + (new Date().getTime() / 100000);
+var jq = $.get("/rss/p.jsp?http://openapi.seoul.go.kr:8088/xml/sample/서울시 강우량 정보/1/45"+rand)
   .success(list)
   .error(function(){$("#error").val(jq.responseText);})
   .complete(function(){$("#result").val(jq.responseText);})

@@ -16,7 +16,7 @@ import kr.pe.okjsp.util.StringHelper;
  */
 public class RSSProxy {
 	private static final long CACHE_TIME = 60 * 60 * 1000L;
-	static Map pool = new HashMap();
+	static Map<String, String> pool = new HashMap<String, String>();
 	/**
 	 * RSS feed를 가져옵니다. 기본charset은 utf-8 입니다. cached
 	 *
