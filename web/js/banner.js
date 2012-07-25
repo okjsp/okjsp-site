@@ -1,10 +1,5 @@
 var Banner = {
 main : [
-{   "expire": '2012-07-16',
-	"tag": '<a href="/f.jsp?http://www.econovation.co.kr/School/web/SS0104.asp?tcode=8&mn_id=010608" target="_blank">' +
-	'<img src="/images/banner/econovation_473x97.jpg" ' +
-	'alt="KT 에코노베이션 상용화를 위한 APP개발 전문가 과정 4기"></a>'
-},
 {
 	tag: '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
 	'<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
