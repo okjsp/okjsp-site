@@ -128,7 +128,8 @@ Banner.show();
     	
 	    // 모바일웹 프로젝트 진행중에는 테스트 데이타인
     	// twitter 와 null 은 보여지지 않습니다.
-    	if (bbsInfo.getCseq() == null || "".equals(bbsInfo.getCseq()) || "twitter".equals(bbsInfo.getBbs())) {
+    	if (bbsInfo.getCseq() == null || "".equals(bbsInfo.getCseq()) 
+    	|| "twitter".equals(bbsInfo.getBbs()) || "trash".equals(bbsInfo.getBbs())) {
     		continue;
     	}
     	
