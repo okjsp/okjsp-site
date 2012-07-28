@@ -4,6 +4,11 @@ main : [
 	tag: '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
 	'<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
 	'alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트"></a>'
+},
+{   "expire": '2012-08-27',
+	"tag": '<a href="/f.jsp?http://www.econovation.co.kr/fair" target="_blank">' +
+	'<img src="/images/banner/econovation_473x98.jpg" ' +
+	'alt="econovation fair"></a>'
 }
 ],
 
