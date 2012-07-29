@@ -36,7 +36,7 @@
   <br />
   <A href="https://github.com/okjsp/okjsp-site" title="OKJSP source">OKJSP 사이트소스</A>
   <br />
-  <A href="https://kenu.github.com/tomcat70/docs" title="Tocmat7kr">톰캣7 문서 한글화</A>
+  <A href="http://kenu.github.com/tomcat70/docs" title="Tocmat7kr">톰캣7 문서 한글화</A>
 
   <hr>ad:
   <ul id="menuad">
