@@ -131,8 +131,8 @@ public class HttpLinkerTest extends TestCase {
 		assertEquals(output, HttpLinker.getLinkedSource(source));
 	}
 	public void testGetLinkedOthers() {
-		String source = "<p>http://www.okjsp.pe.kr/mashup/seoulweather.jsp<br><div><br></div><div>비가 많이 오는군요.</div><div><br></div><div>소스는&nbsp;</div><div>https://github.com/okjsp/okjsp-site/commit/f1072c3cb36f7ede0a639ea3aaab1f460a500b13<br></div><div><br></div></p></div>";
-		String output = "<p><a href=\"http://www.okjsp.pe.kr/mashup/seoulweather.jsp\" target=\"_blank\">http://www.okjsp.pe.kr/mashup/seoulweather.jsp</a><br><div><br></div><div>비가 많이 오는군요.</div><div><br></div><div>소스는&nbsp;</div><div><a href=\"https://github.com/okjsp/okjsp-site/commit/f1072c3cb36f7ede0a639ea3aaab1f460a500b13\" target=\"_blank\">https://github.com/okjsp/okjsp-site/commit/f1072c3cb36f7ede0a639ea3aaab1f460a500b13</a><br></div><div><br></div></p></div>";
+		String source = "<p>http://www.okjsp.pe.kr/<br><div><br></div><div>비가 많이 오는군요.</div><div><br></div><div>소스는&nbsp;</div><div>https://github.com/<br></div><div><br></div></p></div>";
+		String output = "<p><a href=\"http://www.okjsp.pe.kr/\" target=\"_blank\">http://www.okjsp.pe.kr/</a><br><div><br></div><div>비가 많이 오는군요.</div><div><br></div><div>소스는&nbsp;</div><div><a href=\"https://github.com/\" target=\"_blank\">https://github.com/okjsp/okjsp-site/commit/f1072c3cb36f7ede0a639ea3aaab1f460a500b13</a><br></div><div><br></div></p></div>";
 		assertEquals(output, HttpLinker.getLinkedSource(source));
 	}
 	public void testGetLinkedUnmatched() {
