@@ -29,9 +29,14 @@
   <br />
   <A href="/bbs?act=MEMORECENT">새 메모</A>
   <br />
+  <hr />
   <A href="http://okjspgwt.appspot.com/gallery.html">이미지 검색<br />(Daum OpenAPI)</A>
   <br />
   <A href="http://www.okjsp.pe.kr:8080" title="Jenkins CI tool">OKJSP Health</A>
+  <br />
+  <A href="https://github.com/okjsp/okjsp-site" title="OKJSP source">OKJSP 사이트소스</A>
+  <br />
+  <A href="https://kenu.github.com/tomcat70/docs" title="Tocmat7kr">톰캣7 문서 한글화</A>
 
   <hr>ad:
   <ul id="menuad">
