@@ -266,11 +266,11 @@ function getCookie( cookieName )
  * @param cookieValue 쿠키값
  * @param expireDay 쿠키 유효날짜
  */
-function setCookie( cookieName, cookieValue, expireDate )
-{
+function setCookie( cookieName, cookieValue, expireDate ) {
  var today = new Date();
  today.setDate( today.getDate() + parseInt( expireDate ) );
- document.cookie = cookieName + "=" + escape( cookieValue ) + "; path=/; expires=" + today.toGMTString() + ";";
+ document.cookie = cookieName + "=" + escape( cookieValue ) + "; expires=" + today.toGMTString() 
+    + "; path=/; domain=okjsp.pe.kr;";
 }
 
 /**
@@ -283,7 +283,11 @@ function deleteCookie( cookieName )
  
  //어제 날짜를 쿠키 소멸 날짜로 설정한다.
  expireDate.setDate( expireDate.getDate() - 1 );
- document.cookie = cookieName + "= " + "; expires=" + expireDate.toGMTString() + "; path=/";
+ document.cookie = cookieName + "= " + "; expires=" + expireDate.toGMTString() 
+    + "; path=/; domain=okjsp.pe.kr";
+ // temporarily
+ document.cookie = cookieName + "= " + "; expires=" + expireDate.toGMTString() 
+ + "; path=/; domain=www.okjsp.pe.kr";
 }
 
 /**
