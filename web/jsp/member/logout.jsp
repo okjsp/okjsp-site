@@ -1,6 +1,7 @@
 <%@ page pageEncoding="euc-kr" %><%
     kr.pe.okjsp.util.CommonUtil.setCookie(response, "okid", "", 0);
     kr.pe.okjsp.util.CommonUtil.setCookie(response, "sid", "", 0);
+    kr.pe.okjsp.util.CommonUtil.setCookie(response, "okwriter", "", 0);
     session.invalidate();
 	response.setContentType("text/html;");
 %>
@@ -14,6 +15,7 @@
 	setTimeout("top.location.replace('/')", 1000);
 	deleteCookie("okid");
 	deleteCookie("sid");
+	deleteCookie("okwriter");
 	</script>
 </HEAD>
 <BODY class="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
