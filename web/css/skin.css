@@ -1,3 +1,6 @@
+* {
+	font-family: Verdana, Arial, Gulim;
+}
 .recent_first {
 overflow: hidden;
 width: 80px;
