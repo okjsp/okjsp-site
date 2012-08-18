@@ -6,7 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.Collection;
+import java.util.Date;
 
 import kr.pe.okjsp.member.PointDao;
 import kr.pe.okjsp.util.CommonUtil;
@@ -434,6 +435,8 @@ public class ArticleDao {
 	}
 
 	public void checkSpam(Connection conn, String bbs, String sid) throws IOException {
+		if (new Date().getTime() > 0) throw new IOException("Under Construction");
+
 		String sql = "select count(*) FROM okboard WHERE bbsid = ? and id = ? and wtime > (sysdate - 2)";
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -487,6 +490,29 @@ public class ArticleDao {
 		}
 
 		return ads;
+	}
+
+	public Collection<Article> getArticleListBySid(Connection conn, long sid) throws SQLException {
+		String sql = "select * from okboard where id = ? order by seq desc";
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1, String.valueOf(sid));
+		
+		ResultSet rs = pstmt.executeQuery();
+		
+		ArrayList<Article> list = new ArrayList<Article>();
+		
+		while(rs.next()) {
+			Article article = new Article();
+			article.setSeq(rs.getInt("seq"));
+			
+			list.add(article);
+		}
+		
+		rs.close();
+		
+		pstmt.close();
+		
+		return list;
 	}
 
 }

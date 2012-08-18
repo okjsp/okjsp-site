@@ -12,7 +12,6 @@
 <option value="lifeqna">의견좀...</option>
 <option value="news">뉴스따라잡기</option>
 <option value="lecture">강좌</option>
-<option value="recruit">구인/구직/홍보</option>
 <option value="solo">싱글의 미학</option>
 <option value="bbs5">머리식히는 곳</option>
 <option value="bbs2">DB Tips</option>
