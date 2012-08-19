@@ -2,5 +2,5 @@
 contentType="text/plain;charset=utf-8"
 %><%
 	String qs = request.getQueryString();
-	String feed = RSSProxy.getCachedXML(qs, null);
+	String feed = RSSProxy.getCachedXML(qs, "1");
 %><%= feed %>
