@@ -145,6 +145,11 @@ public class HttpLinkerTest extends TestCase {
 		String output = "<link rel=\"stylesheet\" type=\"text/css\" href=\"<a href=\"http://cdn.sencha.io/extjs/4.1.0.b1/resources/css/ext-all.css\" target=\"_blank\">http://cdn.sencha.io/extjs/4.1.0.b1/resources/css/ext-all.css</a>\">";
 		assertEquals(output, HttpLinker.getLinkedSource(source));
 	}
+	public void testGetLinkedScript() {
+		String source = "<script type=\"text/javascript\" src=\"http://cdn.sencha.io/extjs/4.1.0.b1/ext-all.js\"></script>\n          var win = Ext.create( 'Ext.window.Window' , {";
+		String output = "<script type=\"text/javascript\" src=\"<a href=\"http://cdn.sencha.io/extjs/4.1.0.b1/ext-all.js\" target=\"_blank\">http://cdn.sencha.io/extjs/4.1.0.b1/ext-all.js</a>\"></script>\n          var win = Ext.create( 'Ext.window.Window' , {";
+		assertEquals(output, HttpLinker.getLinkedSource(source));
+	}
 	
 
 }

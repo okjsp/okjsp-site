@@ -24,11 +24,13 @@ public class HttpLinker {
 			if (source.indexOf(")", lastIdxStart) > -1 ) {
 				lastIdxEnd = source.indexOf(")", lastIdxStart);
 			}
-			if (source.indexOf("\"", lastIdxStart) > -1 ) {
-				lastIdxEnd = source.indexOf("\"", lastIdxStart);
-			}
-			if (source.indexOf("'", lastIdxStart) > -1 ) {
-				lastIdxEnd = source.indexOf("'", lastIdxStart);
+			if (lastIdxStart > 0) {
+				char quot = source.charAt(lastIdxStart - 1);
+				if (quot == '\"' || quot == '\'') {
+					if (source.indexOf(quot, lastIdxStart) > -1 ) {
+						lastIdxEnd = source.indexOf(quot, lastIdxStart);
+					}
+				}
 			}
 			if (lastIdxEnd != -1 && lastIdxEndTag != -1) {
 				lastIdxEnd = Math.min(lastIdxEnd, lastIdxEndTag);
