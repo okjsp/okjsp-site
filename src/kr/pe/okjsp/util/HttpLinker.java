@@ -24,6 +24,12 @@ public class HttpLinker {
 			if (source.indexOf(")", lastIdxStart) > -1 ) {
 				lastIdxEnd = source.indexOf(")", lastIdxStart);
 			}
+			if (source.indexOf("\"", lastIdxStart) > -1 ) {
+				lastIdxEnd = source.indexOf("\"", lastIdxStart);
+			}
+			if (source.indexOf("'", lastIdxStart) > -1 ) {
+				lastIdxEnd = source.indexOf("'", lastIdxStart);
+			}
 			if (lastIdxEnd != -1 && lastIdxEndTag != -1) {
 				lastIdxEnd = Math.min(lastIdxEnd, lastIdxEndTag);
 			}

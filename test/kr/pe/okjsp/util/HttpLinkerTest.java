@@ -140,6 +140,11 @@ public class HttpLinkerTest extends TestCase {
 		String output = "<span> </a></div>";
 		assertEquals(output, HttpLinker.getLinkedSource(source));
 	}
+	public void testGetLinkedCss() {
+		String source = "<link rel=\"stylesheet\" type=\"text/css\" href=\"http://cdn.sencha.io/extjs/4.1.0.b1/resources/css/ext-all.css\">";
+		String output = "<link rel=\"stylesheet\" type=\"text/css\" href=\"<a href=\"http://cdn.sencha.io/extjs/4.1.0.b1/resources/css/ext-all.css\" target=\"_blank\">http://cdn.sencha.io/extjs/4.1.0.b1/resources/css/ext-all.css</a>\">";
+		assertEquals(output, HttpLinker.getLinkedSource(source));
+	}
 	
 
 }
