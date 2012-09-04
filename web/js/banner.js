@@ -1,16 +1,10 @@
 var Banner = {
 main : [
 {
-	"expire": '2012-08-31',
+	"expire": '2012-09-30',
 	"tag": '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
 	'<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
 	'alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트"></a>'
-},
-{
-	"expire": '2012-08-31',
-	"tag": '<a href="/f.jsp?http://goo.gl/nZA0C" target="_blank">' +
-	'<img src="/images/banner/kpc_smart_473x98.jpg" ' +
-	'alt="2012 스마트콘텐츠센터 전문교육 프로그램"></a>'
 },
 {
 	"expire": '2012-09-21',
@@ -49,9 +43,9 @@ footer : [
 
 aside : [
 {
-	"expire": "2012-08-31",
-	tag: '<a href="/f.jsp?http://olc.oss.kr/offlec/list.jsp">' +
-	'<img src="/images/banner/olc_model_150x67.gif" alt="Spring 3.1/Script Language 과정 OLC"></a>'
+	"expire": "2012-10-05",
+	tag: '<a href="/f.jsp?http://www.ichoongang.com/lecture/singlesubject.asp?code=BX">' +
+	'<img src="/images/banner/ichoongang_150x67.gif" alt="대한민국 경쟁력, e러닝 대표-i중앙"></a>'
 }
 ],
 
