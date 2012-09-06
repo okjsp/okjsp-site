@@ -74,6 +74,10 @@ public class ControllerServlet extends HttpServlet {
     	}
     }
 	
+	if (member != null && member.getSid() == 17004) {
+		throw new IOException("NO RIGHT TO USE!!!");
+	}
+	
 	if ("ADD".equals(act) || "REPLY".equals(act)) {
 		if (member == null || ("").equals(member.getId()) || member.getId() == null) {
 			res.sendRedirect(loginPath);
