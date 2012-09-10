@@ -16,6 +16,9 @@ public class HttpLinker {
 			if (lastIdxStart == -1) {
 				return source;
 			}
+			String near = source.substring(lastIdxStart + 4, lastIdxStart + 6);
+			boolean hasEquiv = near.contains("-");
+
 			int lastIdxEndTag = source.indexOf("<", lastIdxStart);
 			int lastIdxEnd = source.indexOf(" ", lastIdxStart);
 			if (lastIdxEnd == -1) {
@@ -77,6 +80,10 @@ public class HttpLinker {
 				int lastIndexOf = lowerCase.lastIndexOf("<" + tag + " ");
 				pre = source.substring(0, lastIndexOf);
 				output = source.substring(lastIndexOf) + output;
+				source = pre;
+			} else if (hasEquiv) {
+				pre = source.substring(0, lastIdxStart);
+				output = source.substring(lastIdxStart) + output;
 				source = pre;
 				
 			} else {
