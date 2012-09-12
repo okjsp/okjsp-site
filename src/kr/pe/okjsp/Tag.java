@@ -1,8 +1,5 @@
 package kr.pe.okjsp;
 
-/**
- * @author  kenu
- */
 public class Tag {
 	/**
 	 * @uml.property  name="tagseq"
