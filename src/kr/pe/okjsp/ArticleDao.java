@@ -435,7 +435,6 @@ public class ArticleDao {
 	}
 
 	public void checkSpam(Connection conn, String bbs, String sid) throws IOException {
-		if (new Date().getTime() > 0) throw new IOException("Under Construction");
 
 		String sql = "select count(*) FROM okboard WHERE bbsid = ? and id = ? and wtime > (sysdate - 2)";
 		PreparedStatement pstmt = null;
