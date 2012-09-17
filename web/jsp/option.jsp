@@ -1,4 +1,5 @@
 <%@page pageEncoding="MS949" %>
+<option value="recruit">구인/구직/홍보</option>
 <option value="html5">HTML5</option>
 <option value="iphone">iOS</option>
 <option value="android">안드로이드</option>
