@@ -260,8 +260,9 @@ public class MemberHandler {
 			pstmt.close();
 			
 			String mailto = member.getEmail();
-			String subject = "[OKJSP]Confirmation Mail";
-			String textMessage = "Thank you for your joining OKJSP\n"
+			String subject = "[OKJSP]Confirmation Mail #" + member.getSid();
+			String textMessage = "Thank you for joining OKJSP with id '" 
+			    + member.getId() + "'\n"
 				+ "\nYour temporary password : " + member.getPassword()
 				+ "\nAfter login you can change your password as you like."
 				+ "\n" + Navigation.getPath("LOGFORM") 
