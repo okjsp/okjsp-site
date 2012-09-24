@@ -74,7 +74,7 @@ public class ControllerServlet extends HttpServlet {
     	}
     }
 	
-	if (member != null && member.getSid() == 17004) {
+	if (member != null && member.getSid() == 17004 && member.getSid() == 19384) {
 		throw new IOException("NO RIGHT TO USE!!!");
 	}
 	
