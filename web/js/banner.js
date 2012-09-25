@@ -5,12 +5,6 @@ main : [
 	"tag": '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
 	'<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
 	'alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트"></a>'
-},
-{
-	"expire": '2012-09-21',
-	"tag": '<a href="/f.jsp?http://www.econovation.co.kr/School/web/SS0104.asp?tcode=8&mn_id=010608" target="_blank">' +
-	'<img src="/images/banner/kpc_smart_5th_473x98.jpg" ' +
-	'alt="상용화를 위한 App 개발 전문가과정 5기 Android/Hybrid App 교육생 모집안내 (야간 주말)"></a>'
 }
 ],
 
