@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import kr.pe.okjsp.member.Member;
 import kr.pe.okjsp.util.CommonUtil;
+import kr.pe.okjsp.util.Spam;
 
 
 public class ControllerServlet extends HttpServlet {
@@ -74,8 +75,8 @@ public class ControllerServlet extends HttpServlet {
     	}
     }
 	
-	if (member != null && member.getSid() == 17004 && member.getSid() == 19384) {
-		throw new IOException("NO RIGHT TO USE!!!");
+	if (member != null) {
+		Spam.checkSpammer(member.getSid());
 	}
 	
 	if ("ADD".equals(act) || "REPLY".equals(act)) {
@@ -110,8 +111,8 @@ public class ControllerServlet extends HttpServlet {
 
 
   } // end doGet()
-  
-  
+
+
 /**
  * @param req
  */

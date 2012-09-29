@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import kr.pe.okjsp.util.CommonUtil;
 import kr.pe.okjsp.util.DbCon;
+import kr.pe.okjsp.util.Spam;
 
 import com.oreilly.servlet.MultipartRequest;
 
@@ -29,7 +30,8 @@ public class WriteServlet extends HttpServlet {
 	public void doPost(HttpServletRequest req, HttpServletResponse res)
 		throws IOException, ServletException {
 		String bbs;
-	    if("application/x-www-form-urlencoded".equals(req.getContentType())) {
+	    boolean equals = "application/x-www-form-urlencoded".equals(req.getContentType());
+		if(equals) {
 	    	bbs = write(req, res);
 	    } else {
 	    	bbs = writeWithFiles(req, res);
@@ -42,6 +44,8 @@ public class WriteServlet extends HttpServlet {
 
 	private String write(HttpServletRequest req, HttpServletResponse res) throws IOException {
 		long sid = CommonUtil.getCookieLong(req, "sid");
+		Spam.checkSpammer(sid);
+		
 		Article article = new Article();
 		article.setSid(sid);
 
