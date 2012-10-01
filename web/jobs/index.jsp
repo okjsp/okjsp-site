@@ -5,6 +5,7 @@
 <head>
 <meta charset="utf-8">
 <title>OKJSP Jobs</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 <style type="text/css">
 /* 
 CSS from: http://css-tricks.com/responsive-data-tables/
