@@ -14,6 +14,11 @@ main : [
 ],
 
 contentRight : [
+{   "expire": '2012-11-04',
+	"tag": '<a href="/f.jsp?http://www.codesprint.kr" target="_blank" style="float:right; margin-left:8px">' +
+	'<img src="/images/banner/skp_codesprint_210x210.gif" ' +
+	'alt="개발자를 위한 코드 경진 대회 SK planet Code Sprint 2012"></a>'
+}
 ],
 
 content : [
@@ -63,8 +68,7 @@ asideApp : [
 }
 ],
 show : function() {
-    var idx = Math.floor(Math.random() * this.main.length);
-    document.write(this.main[idx].tag);
+	this.showOne(this.main);
 },
 
 showAside : function() {
@@ -97,22 +101,22 @@ showLeftSideImg : function() {
 },
 
 showContentRight : function() {
-    if (this.contentRight.length > 0) {
-        var idx = Math.floor(Math.random() * this.contentRight.length);
-        document.write(this.contentRight[idx].tag);
-    }
+	this.showOne(this.contentRight);
 },
 
 showContentSection : function() {
-    if (this.content.length > 0) {
-        var idx = Math.floor(Math.random() * this.content.length);
-        document.write(this.content[idx].tag);
-    }
+	this.showOne(this.content);
 },
 
 showFooter : function() {
-    var idx = Math.floor(Math.random() * this.footer.length);
-    document.write(this.footer[idx].tag)
+	this.showOne(this.footer);
+},
+
+showOne: function(list) {
+    if (list.length > 0) {
+        var idx = Math.floor(Math.random() * list.length);
+        document.write(list[idx].tag);
+    }
 }
 
 
