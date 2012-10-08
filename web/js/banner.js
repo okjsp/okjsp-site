@@ -15,7 +15,7 @@ main : [
 
 contentRight : [
 {   "expire": '2012-11-04',
-	"tag": '<a href="/f.jsp?http://www.codesprint.kr" target="_blank" style="float:right; margin-left:8px">' +
+	"tag": '<a href="/f.jsp?http://www.codesprint.kr" target="_blank" style="float:right; margin:8px; margin-right: 0">' +
 	'<img src="/images/banner/skp_codesprint_210x210.gif" ' +
 	'alt="개발자를 위한 코드 경진 대회 SK planet Code Sprint 2012"></a>'
 }
