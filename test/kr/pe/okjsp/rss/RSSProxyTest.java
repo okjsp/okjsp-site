@@ -13,7 +13,7 @@ public class RSSProxyTest extends TestCase {
 		assertNotNull(xmlDefault);
 	}
 	public void testGetXMLSeoul() throws IOException {
-		String url = "http://openapi.seoul.go.kr:8088/xml/sample/서울시 강우량 정보/1/50";
+		String url = "http://openapi.seoul.go.kr:8088/4150495f323038396b656e7568656f/xml/ListRainfallService/1/50/";
 		String xml = RSSProxy.getXML(url, "utf-8");
 		assertNotNull(xml);
 		String xmlDefault = RSSProxy.getCachedXML(url, "1");
