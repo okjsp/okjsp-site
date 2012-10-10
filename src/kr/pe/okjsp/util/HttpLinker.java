@@ -109,7 +109,12 @@ public class HttpLinker {
 	}
 
 	private static int getLastIndexOfLink(String source) {
-		int lastIndexOf = source.toLowerCase().lastIndexOf("http");
+		String lowerCase = source.toLowerCase();
+		int lastIndexOf = lowerCase.lastIndexOf("http://");
+		int lastIndexOfs = lowerCase.lastIndexOf("https://");
+		if (lastIndexOfs != -1) {
+			lastIndexOf = Math.max(lastIndexOf, lastIndexOfs);
+		}
 		return lastIndexOf;
 	}
 }

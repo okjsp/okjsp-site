@@ -20,6 +20,18 @@ public class HttpLinkerTest extends TestCase {
 		assertEquals(output, HttpLinker.getLinkedSource(source));
 	}
 
+	public void testGetLinkedHttpsAndHttp() {
+		String source = "https://www.okjsp.pe.kr/ http://www.okjsp.pe.kr/ ";
+		String output = "<a href=\"https://www.okjsp.pe.kr/\" target=\"_blank\">https://www.okjsp.pe.kr/</a> <a href=\"http://www.okjsp.pe.kr/\" target=\"_blank\">http://www.okjsp.pe.kr/</a> ";
+		assertEquals(output, HttpLinker.getLinkedSource(source));
+	}
+	
+	public void testGetLinkedHttpAndHttps() {
+		String source = "http://www.okjsp.pe.kr/ https://www.okjsp.pe.kr/ ";
+		String output = "<a href=\"http://www.okjsp.pe.kr/\" target=\"_blank\">http://www.okjsp.pe.kr/</a> <a href=\"https://www.okjsp.pe.kr/\" target=\"_blank\">https://www.okjsp.pe.kr/</a> ";
+		assertEquals(output, HttpLinker.getLinkedSource(source));
+	}
+	
 	public void testGetLinkedSourceMixed() {
 		String source = "http://www.homezigi.net 여기다 물어보시는게 빠를것같습니다 -.- ";
 		String output = "<a href=\"http://www.homezigi.net\" target=\"_blank\">http://www.homezigi.net</a> 여기다 물어보시는게 빠를것같습니다 -.- ";
