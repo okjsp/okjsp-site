@@ -16,6 +16,7 @@ td.subject div {
 	overflow: hidden;
 	text-align: left;
 	height: 17px;
+	width: 360px;
 }
 
 td.writer div {
