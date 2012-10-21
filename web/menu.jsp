@@ -62,6 +62,11 @@
    title="한국 소프트웨어 개발자 협회" target="akose">한국 소프트웨어 개발자 협회</A>
 	<hr>
   <br>
+<ul>
+<li>
+<a href="/jsp/alliance.jsp">동맹사이트</a>
+</li>
+</ul>
   <a href="http://twitter.com/okjsp" class="twitter-follow-button" data-show-count="false" data-lang="ko">Follow @okjsp</a>
 <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
   <br>
