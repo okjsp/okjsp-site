@@ -119,7 +119,9 @@ cursor: pointer;
 	margin: 0 5px 0 6px;
 	float: left;
 }
-
+.bbsTable, .mainTable {
+	float: left;
+}
 #bbslist {
 	font-weight: normal;
 	width: 120px;
