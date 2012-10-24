@@ -1,6 +1,6 @@
 // 금지단어
 var ban = new Array(
-'잡부','좀비'
+'카지노', 'qpr1000',
 );
 // 금지단어 판단
 function filterWord(content) {
