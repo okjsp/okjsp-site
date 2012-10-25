@@ -10,6 +10,11 @@ main : [
 	"tag": '<a href="/f.jsp?http://goo.gl/nZA0C" target="_blank">' +
 	'<img src="/images/banner/kpc_smart_473x98.jpg" ' +
 	'alt="2012 스마트콘텐츠센터 전문교육 프로그램"></a>'
+},
+{   "expire": '2012-11-24',
+	"tag": '<a href="/f.jsp?https://econovation.co.kr/@page/camp/ca_summary.asp" target="_blank">' +
+	'<img src="/images/banner/econovation_camp_473x98.jpg" ' +
+	'alt="2012 에코노베이션 개발자 캠프"></a>'
 }
 ],
 
