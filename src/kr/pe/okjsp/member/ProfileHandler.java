@@ -46,7 +46,7 @@ import com.oreilly.servlet.MultipartRequest;
         Thumbnailer tt = new Thumbnailer(file.getPath(),
         		getServletContext().getRealPath(request.getContextPath())
 				+ "/profile/"+ sid + ".jpg", 
-                77, 77);
+                385, 385);
         tt.createThumbnail();
         try {
 			Thread.sleep(1000);
