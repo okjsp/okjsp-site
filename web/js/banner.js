@@ -1,9 +1,10 @@
 var Banner = {
 main : [
-{   "expire": '2012-11-06',
-	"tag": '<a href="/f.jsp?http://goo.gl/nZA0C" target="_blank">' +
-	'<img src="/images/banner/kpc_smart_473x98.jpg" ' +
-	'alt="2012 스마트콘텐츠센터 전문교육 프로그램"></a>'
+{
+	"expire": '2012-12-31',
+	"tag": '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
+	'<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
+	'alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트"></a>'
 },
 {   "expire": '2012-11-24',
 	"tag": '<a href="/f.jsp?https://econovation.co.kr/@page/camp/ca_summary.asp" target="_blank">' +
