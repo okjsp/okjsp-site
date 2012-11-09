@@ -215,7 +215,7 @@
 </table>
 </fieldset></font>
 
-<textarea style='display:none' name=content><%=CommonUtil.rplc(article.getContent(), "&lt;", "&amp;lt;")%></textarea>
+<textarea style='display:none' name=content><%=CommonUtil.rplc(article.getContent(), "&", "&amp;")%></textarea>
 <input type=hidden name=bg_color value=white>
 <font id='TextEditView' style='width:480px; height:310px;display: inline;'>
 <iframe id='TextEditor' marginwidth='2' marginheight='1' style='width:480px; height:310px;'>
