@@ -83,6 +83,11 @@ ul {
 	border-left: 1px solid #eee;
 }
 
+.box img {
+	width: 77px;
+	height: 77px;
+}
+
 #memorecent .writer {
 	font-weight: bold;
 }
