@@ -224,7 +224,7 @@
 <textarea id='TextView'
 style='border:1 solid; border-color:#D4D4D4; width:480px; height:310px;display: none;'></textarea>
 <% } else { %>
-<textarea style="width:480px; height:310px" name=content><%= article.getContent() %></textarea>
+<textarea style="width:480px; height:310px" name=content><%= CommonUtil.rplc(article.getContent(), "&", "&amp;") %></textarea>
 <% } // end if %>
     </td>
   </tr>
