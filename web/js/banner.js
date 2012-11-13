@@ -18,9 +18,9 @@ contentRight : [
 
 content : [
 {
-	'expire': '2012-12-31',
+	'expire': '2013-01-14',
 	'tag': '<a href="/f.jsp?http://olc.oss.kr/offlec/list.jsp#okjsp">' +
-	'<img src="/images/banner/olc_model_468x60.gif" alt="Spring 3.1/Script Language 과정 OLC"></a>'
+	'<img src="/images/banner/olc_468x60.gif" alt="Java Pattern &amp; Android, HTML5 &amp; CSS"></a>'
 }
 ],
 
@@ -47,9 +47,9 @@ aside : [
 	'<img src="/images/banner/venster_150x67.gif" alt="벤처 전문 리크루팅 서비스 벤스터"></a>'
 },
 {
-	'expire': "2012-12-31",
-	'tag': '<a href="/f.jsp?http://olc.oss.kr/offlec/list.jsp">' +
-	'<img src="/images/banner/olc_model_150x67.gif" alt="Spring 3.1/Script Language 과정 OLC"></a>'
+	'expire': "2013-01-14",
+	'tag': '<a href="/f.jsp?http://olc.oss.kr/offlec/list.jsp#okjsp150">' +
+	'<img src="/images/banner/olc_150x67.gif" alt="Java Pattern &amp; Android, HTML5 &amp; CSS"></a>'
 }
 ],
 
