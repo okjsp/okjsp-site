@@ -7,9 +7,9 @@ main : [
 	'alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트"></a>'
 },
 {   "expire": '2012-11-24',
-	"tag": '<a href="/f.jsp?https://econovation.co.kr/@page/camp/ca_summary.asp" target="_blank">' +
-	'<img src="/images/banner/econovation_camp_473x98.jpg" ' +
-	'alt="2012 에코노베이션 개발자 캠프"></a>'
+	"tag": '<a href="/f.jsp?http://www.econovation.co.kr/@page/school/seminar_offline_view.asp?num=1&lecture_idx=898&pospage=0&curpage=1&orderType=1&SelVal=#.UKXkYuTZb0Y" target="_blank">' +
+	'<img src="/images/banner/econovation_conf_473x98.jpg" ' +
+	'alt="에코노베이션_2013 Mobile Platform Insight & Talk Concert"></a>'
 }
 ],
 
