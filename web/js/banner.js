@@ -17,7 +17,13 @@ main : [
 	'alt="에코노베이션_2013 Mobile Platform Insight & Talk Concert"></a>'
 }
 ],
-
+waited: [
+{   "expire": '2012-12-04',
+	"tag": '<a href="/f.jsp?http://devgear.co.kr/products/er-studio-universal-data-models/eaa/udm-landing.html" target="_blank">' +
+	'<img src="/images/banner/devgear_udm_473x98.jpg" ' +
+	'alt="렌 실버스톤 초청 세미나 안내"></a>'
+}
+],
 contentRight : [
 ],
 
@@ -48,8 +54,8 @@ footer : [
 
 aside : [
 {	'expire': '2012-11-20',
-	'tag': '<a href="/f.jsp?http://www.venster.co.kr/#ok">' +
-	'<img src="/images/banner/venster_150x67.gif" alt="벤처 전문 리크루팅 서비스 벤스터"></a>'
+	'tag': '<a href="/f.jsp?http://devgear.co.kr/products/er-studio-universal-data-models/eaa/udm-landing.html">' +
+	'<img src="/images/banner/devgear_udm_150x67.gif" alt="렌 실버스톤 초청 세미나 안내"></a>'
 },
 {
 	'expire': "2013-01-14",
