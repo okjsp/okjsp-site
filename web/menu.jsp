@@ -67,8 +67,6 @@
 <a href="/jsp/alliance.jsp">동맹사이트</a>
 </li>
 </ul>
-  <a href="http://twitter.com/okjsp" class="twitter-follow-button" data-show-count="false" data-lang="ko">Follow @okjsp</a>
-<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
   <br>
   <br><a href="/rss" title="rss feed links"><img src="/images/rss-xml.png" style="border:0" alt="rss"/></a><br>
   <br>
