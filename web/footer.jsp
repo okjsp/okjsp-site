@@ -16,7 +16,9 @@ aladdin_ttb_channel = '32572';
 aladdin_ttb_width = '505';
 aladdin_ttb_height = '183';
 </script>
+<!-- 임시주석
 <script type="text/javascript" language="javascript" src="http://ttb2.aladin.co.kr/ad_ttb.aspx"></script>
+-->
 </div>
 
 
