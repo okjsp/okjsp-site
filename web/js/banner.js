@@ -11,15 +11,8 @@ main : [
 	'<img src="/images/banner/pag_473x98.jpg" ' +
 	'alt="국내 최고의 전문가들이 풀어가는 플랫폼 세미나"></a>'
 },
-{   "expire": '2012-11-24',
-	"tag": '<a href="/f.jsp?http://www.econovation.co.kr/@page/school/seminar_offline_view.asp?num=1&lecture_idx=898&pospage=0&curpage=1&orderType=1&SelVal=#.UKXkYuTZb0Y" target="_blank">' +
-	'<img src="/images/banner/econovation_conf_473x98.jpg" ' +
-	'alt="에코노베이션_2013 Mobile Platform Insight & Talk Concert"></a>'
-}
-],
-waited: [
 {   "expire": '2012-12-04',
-	"tag": '<a href="/f.jsp?http://devgear.co.kr/products/er-studio-universal-data-models/eaa/udm-landing.html" target="_blank">' +
+	"tag": '<a href="/f.jsp?http://devgear.co.kr/products/er-studio-universal-data-models/eaa/udm-landing.html#okjsp" target="_blank">' +
 	'<img src="/images/banner/devgear_udm_473x98.jpg" ' +
 	'alt="렌 실버스톤 초청 세미나 안내"></a>'
 }
