@@ -12,10 +12,29 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
     <title>NEW OKJSP with CUBRID</title>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="/js/jquery/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="/js/jquery/jquery.timeago.js"></script>
     <script type="text/javascript" src="/js/okjsp.js"></script>
     <script type="text/javascript" src="/js/banner.js" charset="utf-8"></script>
     <LINK rel="STYLESHEET" type="TEXT/CSS" HREF="/css/okjsp2007.css.jsp">
+
+    <style type="text/css">
+#newsmateList li:nth-child(even) {
+	background: #F8F8FF;
+}
+
+#newsmateList li {
+    padding-left: 20px;
+}
+#newsmateList li:first-child {
+    padding-left: 10px;
+}
+#newsmateList {
+    width: 639px;
+    margin-left: 3px;
+}
+
+</style>
 </head>
 
 <body class="body" style="margin:0">
@@ -43,7 +62,48 @@ aladdin_ttb_width = '505';
 aladdin_ttb_height = '183';
 </script>
 <script type="text/javascript" language="javascript" src="http://ttb2.aladin.co.kr/ad_ttb.aspx"></script>
+</div>
 
+<div id="newsmate">
+<script type="text/javascript">
+var feedURL = "http://feeds.feedburner.com/newsmate/McKa";
+var ajaxURL = "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=5&q=" + feedURL;
+$.ajax({
+	url: ajaxURL,
+	dataType: 'jsonp',
+	jsonp: 'callback',
+	success: function(d) {
+		var feed = d.responseData.feed;
+		var list = feed.entries;
+		
+		var logo = $('<img>').attr('src', '/images/newsmate_logo.png');
+		var title = $('<a>').attr('href', feed.link).
+		attr('target', '_blank').append(logo);
+		var li = $('<li>').append(title).addClass('th');
+
+		$('#newsmateList').append(li);
+
+		for(var i in list) {
+			var record = $('<a>').html(list[i].title + ' (' + $.timeago(Date.parse(list[i].publishedDate)) +')')
+			.attr('href', list[i].link)
+			.attr('target', '_blank');
+			var li = $('<li>').append(record)
+			$('#newsmateList').append(li);
+		}
+		$('#newsmateList').addClass('tablestyle');
+		
+	},
+	failure: function(err) {
+		console.log(err);
+	},
+	complete: function(d) {
+		console.log('complete ' + d);
+	}
+});
+</script>
+
+<ul id='newsmateList'>
+</ul>
 </div>
 <table>
   <tr>
