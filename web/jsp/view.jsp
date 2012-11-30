@@ -19,6 +19,21 @@
     <script type="text/javascript" src="/js/banner.js" charset="utf-8"></script>
 	<script src="/js/ajax.js"></script>
     <script src="/js/okboard_view.js"></script>
+    <style type="text/css">
+.download img {
+    margin-top: 12px;
+    width: 64px;
+    height: 64px;
+}
+.download ul {
+    padding-left: 40px;
+    margin: 12px 0;
+}
+.download li {
+    list-style-type: decimal-leading-zero;
+}
+    
+    </style>
 </head>
 <body class="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 <jsp:include page="/top.jsp" />
@@ -93,16 +108,17 @@ Banner.showContentSection();
 </script>
 </div>
 
-        </td>
-    </tr>
-<%-- 다운로드 파일 목록 --%>
-    <tr>
-        <td class="td">
         <div>
 <jsp:include flush="true" page="/ccl/licenses_skin.jsp">
 	<jsp:param name="c" value="<%= one.getCcl_id() %>"/>
 </jsp:include>
         </div>
+        </td>
+    </tr>
+<%-- 다운로드 파일 목록 --%>
+    <tr>
+        <td class="td download">
+        <img src="/images/file.png" alt="file">
 <ul><%
   ArrayList fileList = (ArrayList) request.getAttribute("arrdf");
   if (fileList != null) {
@@ -250,7 +266,7 @@ Banner.showContentSection();
             maxlength="50" value="<%= CommonUtil.a2k(CommonUtil.getCookie(request, "okwriter")) %>">
         pw:<input type="password" class="memopw" name="memopass" maxlength="15">
 	    <input type="hidden" name="doublecheck" class="memodc" value="okjsp">
-	    <br /><span style="color:#f00">IP 노출됩니다. 예민한 얘기는 올리지 않으시는 게 사이트 운영에 도움이 됩니다.
+	    <br /><span style="color:#f00">IP 기록됩니다. 예민한 얘기는 올리지 않으시는 게 사이트 운영에 도움이 됩니다.
 	    <br />개조심할 필요는 있으니까요. 낮말은 새, 밤말은 쥐, 인터넷말은 검색엔진</span>
         <br /><input type="submit" name="send" value="Memo">
 <%

@@ -55,6 +55,19 @@ font-size: 1.2em;
 	margin-left: 3px;
 }
 
+.download img {
+    margin-top: 12px;
+    width: 64px;
+    height: 64px;
+}
+.download ul {
+    padding-left: 40px;
+    margin: 12px 0;
+}
+.download li {
+    list-style-type: decimal-leading-zero;
+}
+
 /* recent */
 #memorecent {
     margin-left: 24px;
