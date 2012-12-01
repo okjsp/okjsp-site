@@ -116,23 +116,27 @@ Banner.showContentSection();
         </td>
     </tr>
 <%-- 다운로드 파일 목록 --%>
+<%
+  ArrayList fileList = (ArrayList) request.getAttribute("arrdf");
+  if (fileList != null) {
+%>
     <tr>
         <td class="td download">
         <img src="/images/file.png" alt="file">
 <ul><%
-  ArrayList fileList = (ArrayList) request.getAttribute("arrdf");
-  if (fileList != null) {
     Iterator file = fileList.iterator();
     while (file.hasNext()) {
       DownFile df = (DownFile)file.next();
 %><li><a href="/bbs?act=DOWN&maskname=<%= df.getMaskName() %>&fileName=<%= df.getFileName() %>"><%= df.getFileName() %>
  <%= df.getFileSize() %> Bytes (<%=df.getDownload()%>)</a></li><%
     } // end while
-  }
 %>
 </ul>
         </td>
     </tr>
+<%
+  }
+%>
 </table>
 
 <div id="passwd_layer" style="position:absolute;display:none;width:220px;height:60px;padding:10px" align="center">
