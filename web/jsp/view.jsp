@@ -118,7 +118,7 @@ Banner.showContentSection();
 <%-- 다운로드 파일 목록 --%>
 <%
   ArrayList fileList = (ArrayList) request.getAttribute("arrdf");
-  if (fileList != null) {
+  if (fileList != null && !fileList.isEmpty()) {
 %>
     <tr>
         <td class="td download">
