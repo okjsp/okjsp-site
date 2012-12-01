@@ -19,23 +19,6 @@
     <script type="text/javascript" src="/js/banner.js" charset="utf-8"></script>
     <LINK rel="STYLESHEET" type="TEXT/CSS" HREF="/css/okjsp2007.css.jsp">
 
-    <style type="text/css">
-#newsmateList li:nth-child(even) {
-	background: #F8F8FF;
-}
-
-#newsmateList li {
-    padding-left: 20px;
-}
-#newsmateList li:first-child {
-    padding-left: 10px;
-}
-#newsmateList {
-    width: 639px;
-    margin-left: 3px;
-}
-
-</style>
 </head>
 
 <body class="body" style="margin:0">
@@ -90,7 +73,7 @@ $.ajax({
 			var li = $('<li>').append(record)
 			$('#newsmateList').append(li);
 		}
-		$('#newsmateList').addClass('tablestyle');
+		$('#newsmateList').addClass('tablestyle').fadeIn('slow');
 		
 	},
 	failure: function(err) {

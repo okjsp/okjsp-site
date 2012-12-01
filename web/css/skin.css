@@ -6,6 +6,23 @@ overflow: hidden;
 width: 80px;
 height: 17px;
 }
+
+#newsmateList li:nth-child(even) {
+	background: #F8F8FF;
+}
+
+#newsmateList li {
+    padding: 4px 0 4px 20px;
+}
+#newsmateList li:first-child {
+    padding-left: 10px;
+}
+#newsmateList {
+    width: 639px;
+    margin-left: 3px;
+    display: none;
+}
+
 .skinButton {
 	width: 10px;
 	height: 10px;
