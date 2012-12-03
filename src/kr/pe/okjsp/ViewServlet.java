@@ -115,7 +115,7 @@ public class ViewServlet extends HttpServlet {
 			if(rs.next()) {
 				req.setAttribute("prevSeq", rs.getString("seq"));
 				req.setAttribute("prevSubject", 
-						CommonUtil.a2k(rs.getString("subject")));
+						CommonUtil.a2k(CommonUtil.rplc(rs.getString("subject"), "{", "&#123;")));
 			}
 			rs.close();
 			pstmt.close();
@@ -128,7 +128,7 @@ public class ViewServlet extends HttpServlet {
 			if(rs.next()) {
 				req.setAttribute("nextSeq", rs.getString("seq"));
 				req.setAttribute("nextSubject", 
-						CommonUtil.a2k(rs.getString("subject")));
+						CommonUtil.a2k(CommonUtil.rplc(rs.getString("subject"), "{", "&#123;")));
 			}
 			rs.close();
 			pstmt.close();
