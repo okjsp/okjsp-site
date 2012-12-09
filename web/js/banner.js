@@ -10,11 +10,6 @@ main : [
 	"tag": '<a href="/f.jsp?http://onoffmix.com/event/10777" target="_blank">' +
 	'<img src="/images/banner/pag_473x98.jpg" ' +
 	'alt="국내 최고의 전문가들이 풀어가는 플랫폼 세미나"></a>'
-},
-{   "expire": '2012-12-04',
-	"tag": '<a href="/f.jsp?http://devgear.co.kr/products/er-studio-universal-data-models/eaa/udm-landing.html#okjsp" target="_blank">' +
-	'<img src="/images/banner/devgear_udm_473x98.jpg" ' +
-	'alt="렌 실버스톤 초청 세미나 안내"></a>'
 }
 ],
 contentRight : [
@@ -46,10 +41,6 @@ footer : [
 ],
 
 aside : [
-{	'expire': '2012-11-20',
-	'tag': '<a href="/f.jsp?http://devgear.co.kr/products/er-studio-universal-data-models/eaa/udm-landing.html">' +
-	'<img src="/images/banner/devgear_udm_150x67.gif" alt="렌 실버스톤 초청 세미나 안내"></a>'
-},
 {
 	'expire': "2013-01-14",
 	'tag': '<a href="/f.jsp?http://olc.oss.kr/offlec/list.jsp#okjsp150">' +
