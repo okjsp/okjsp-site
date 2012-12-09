@@ -6,8 +6,8 @@
 <option value="techtrend">TECH TREND</option>
 <option value="TOOL">개발툴</option>
 <option value="TOOLqna">개발툴 QnA</option>
-<option value="ajax">Ajax</option>
-<option value="ajaxqna">Ajax QnA</option>
+<option value="ajax">JavaScript</option>
+<option value="ajaxqna">JavaScript QnA</option>
 <option value="bbs6">사는 얘기</option>
 <option value="howmuch">얼마면돼</option>
 <option value="lifeqna">의견좀...</option>
