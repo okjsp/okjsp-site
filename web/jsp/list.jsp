@@ -19,7 +19,7 @@
 <%@page import="kr.pe.okjsp.ArticleDao"%><html>
 <head>
 <META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=utf-8">
-<title>OKJSP <c:out value="${bbsInfoMap[one.bbs].name}" /> </title>
+<title>OKJSP <c:out value="${bbsInfoMap[list.bbs].name}" /> </title>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="/js/okjsp.js"></script>
     <script type="text/javascript" src="/js/banner.js" charset="utf-8"></script>
