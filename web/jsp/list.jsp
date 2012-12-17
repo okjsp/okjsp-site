@@ -1,10 +1,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ page pageEncoding="utf-8"
-    import="kr.pe.okjsp.util.CommonUtil, java.util.Iterator,
-            kr.pe.okjsp.Article,kr.pe.okjsp.util.DateLabel" %>
-<%@page import="java.util.Map"%>
-<%@page import="kr.pe.okjsp.BbsInfoBean"%>
-<%@page import="java.util.Arrays"%>
+    import="kr.pe.okjsp.util.CommonUtil, java.util.*,
+            kr.pe.okjsp.Article,kr.pe.okjsp.util.DateLabel,
+            kr.pe.okjsp.BbsInfoBean"%>
 <% long stime = System.currentTimeMillis(); %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core"%>
 <%@ taglib uri="/WEB-INF/tld/ok-taglib.tld" prefix="okbbs" %>
@@ -21,7 +19,7 @@
 <%@page import="kr.pe.okjsp.ArticleDao"%><html>
 <head>
 <META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=utf-8">
-<title>okjsp</title>
+<title>OKJSP <c:out value="${bbsInfoMap[one.bbs].name}" /> </title>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="/js/okjsp.js"></script>
     <script type="text/javascript" src="/js/banner.js" charset="utf-8"></script>
