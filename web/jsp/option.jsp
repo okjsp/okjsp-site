@@ -10,7 +10,7 @@
 <option value="ajaxqna">JavaScript QnA</option>
 <option value="bbs6">사는 얘기</option>
 <option value="howmuch">얼마면돼</option>
-<option value="lifeqna">의견좀...</option>
+<option value="lifeqna">토론/기타 QnA</option>
 <option value="news">뉴스따라잡기</option>
 <option value="lecture">강좌</option>
 <option value="solo">싱글의 미학</option>
