@@ -29,6 +29,10 @@ public class MailUtil {
 
 	public void send(String mailto, String subject, String textMessage)
 			throws FileNotFoundException, MessagingException {
+		send(mailto, subject, textMessage, "text/plain; charset=euc-kr");
+	}
+	public void send(String mailto, String subject, String textMessage, String contentType)
+			throws FileNotFoundException, MessagingException {
 		Security.addProvider(new com.sun.net.ssl.internal.ssl.Provider());
 		Properties props = new Properties();
 		props.put("mail.smtp.user", smtpUsername);
@@ -42,18 +46,18 @@ public class MailUtil {
 				"javax.net.ssl.SSLSocketFactory");
 		props.put("mail.smtp.socketFactory.fallback", "false");
 		props.put("mail.smtp.ssl", "true");
-
+		
 		Authenticator auth = new SMTPAuthenticator();
 		Session smtpSession = Session.getInstance(props, auth);
 		smtpSession.setDebug(true);
-
+		
 		Message message = new MimeMessage(smtpSession);
 		InternetAddress[] address = { new InternetAddress(mailto) };
 		message.setRecipients(Message.RecipientType.TO, address);
 		message.setSubject(subject);
 		message.setSentDate(new Date());
-		message.setText(textMessage);
-
+		message.setContent(textMessage, contentType);
+		
 		Transport tr = smtpSession.getTransport("smtp");
 		tr.connect(smtpHost, smtpUsername, smtpPassword);
 		tr.sendMessage(message, message.getAllRecipients());
