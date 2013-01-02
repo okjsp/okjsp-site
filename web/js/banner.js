@@ -5,11 +5,6 @@ main : [
 	"tag": '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
 	'<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
 	'alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트"></a>'
-},
-{   "expire": '2012-12-13',
-	"tag": '<a href="/f.jsp?http://onoffmix.com/event/10777" target="_blank">' +
-	'<img src="/images/banner/pag_473x98.jpg" ' +
-	'alt="국내 최고의 전문가들이 풀어가는 플랫폼 세미나"></a>'
 }
 ],
 contentRight : [
