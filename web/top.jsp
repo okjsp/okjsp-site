@@ -1,4 +1,6 @@
-<%@ page pageEncoding="euc-kr"%>
+<%
+   int idx = response.getContentType().indexOf('=');
+   String charset = response.getContentType().substring(idx+1); %>
 <div id="wrap">
 <style type="text/css">
 @import url("/site2009/okjsp2009.css");
@@ -11,7 +13,7 @@
 		onsubmit="searchf1.q.value='site:okjsp.pe.kr '+searchf1.qt.value;">
 	<input name="q" value="site:okjsp.pe.kr " type="hidden"> 
 	<input name="qt" value="" type="text"> 
-	<input name="ie" value="euc-kr" type="hidden"> 
+	<input name="ie" value="<%= charset %>" type="hidden"> 
 	<input value="google" type="submit"></form>
 	</li>
 </ul>
