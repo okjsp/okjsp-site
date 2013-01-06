@@ -7,7 +7,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Date;
 
 import kr.pe.okjsp.member.PointDao;
 import kr.pe.okjsp.util.CommonUtil;
@@ -248,27 +247,6 @@ public class ArticleDao {
 	}
 
 	/**
-	 * 일련번호 가져오기
-	 * @param conn
-	 * @param query
-	 * @return 일련번호
-	 * @throws SQLException
-	 */
-	public int fetchNew(Connection conn, String query) throws SQLException {
-
-		int newSeq = 0;
-
-		PreparedStatement pstmt = conn.prepareStatement(query);
-		ResultSet rs = pstmt.executeQuery();
-		if (rs.next()) {
-			newSeq = rs.getInt(1);
-		}
-		dbCon.close(null, pstmt, rs);
-
-		return newSeq + 1;
-	}
-
-	/**
 	 * ref 그룹번호 가져오기
 	 * @param conn
 	 * @param query
@@ -303,10 +281,11 @@ public class ArticleDao {
 	 * @return
 	 * @throws SQLException
 	 */
+	DaoUtil daoUtil = new DaoUtil();
 	public int getSeq(Connection conn) throws SQLException {
 		return Math.max(
-			fetchNew(conn, QUERY_NEW_SEQ), 
-			fetchNew(conn, QUERY_NEW_SEQ_DELETED)
+			daoUtil.getNumber(conn, QUERY_NEW_SEQ), 
+			daoUtil.getNumber(conn, QUERY_NEW_SEQ_DELETED)
 		);
 	}
 
@@ -336,7 +315,7 @@ public class ArticleDao {
 	public void addFile(Connection conn, int seq, ArrayList<DownFile> arrdf)
 			throws SQLException {
 		// file 일련번호
-		int fseq = fetchNew(conn, QUERY_NEW_FILE_SEQ);
+		int fseq = daoUtil.getNumber(conn, QUERY_NEW_FILE_SEQ);
 
 		// file 입력
 		PreparedStatement pstmt = null;

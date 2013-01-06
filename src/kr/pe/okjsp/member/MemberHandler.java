@@ -4,6 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.Random;
 
+import kr.pe.okjsp.DaoUtil;
 import kr.pe.okjsp.Navigation;
 import kr.pe.okjsp.util.DbCon;
 import kr.pe.okjsp.util.MailUtil;
@@ -14,10 +15,6 @@ import kr.pe.okjsp.util.MailUtil;
  */
 public class MemberHandler {
 	DbCon dbCon = new DbCon();
-	/**
-	 * @uml.property  name="count"
-	 */
-	private int count;
 
 	static final String QUERY_EXISTS
 		= "select count(id) from okmember where lower(id)=lower(?)";
@@ -359,26 +356,7 @@ public class MemberHandler {
 	 * @uml.property  name="count"
 	 */
 	public int getCount() throws SQLException {
-		Connection pconn = dbCon.getConnection();
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
-
-		try{
-			pstmt = pconn.prepareStatement(QUERY_COUNT);
-
-			rs = pstmt.executeQuery();
-			if(rs.next()) {
-				count = rs.getInt(1);
-			}
-			rs.close();
-			pstmt.close();
-		}catch(Exception e){
-			System.out.println("getCount err:"+e.toString());
-		} finally {
-			dbCon.close(pconn, pstmt, rs);
-		} // end try catch
-
-		return count;
+		return new DaoUtil().getNumber(dbCon.getConnection(), QUERY_COUNT);
 	}
 
 	/**
