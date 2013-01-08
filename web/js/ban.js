@@ -1,6 +1,6 @@
 // 금지단어
 var ban = new Array(
-'카지노', 'qpr1000', '경마'
+'카지노', 'qpr1000', '경마', 'imc100', 'dmlover'
 );
 // 금지단어 판단
 function filterWord(content) {
