@@ -7,6 +7,7 @@ package kr.pe.okjsp.util;
 import java.util.Collection;
 
 import junit.framework.TestCase;
+import kr.pe.okjsp.BbsInfoBean;
 import kr.pe.okjsp.SiteSearch;
 
 /**
@@ -15,41 +16,16 @@ import kr.pe.okjsp.SiteSearch;
  */
 public class SiteSearchTest extends TestCase {
 
-	/**
-	 * Constructor for SiteSearchTest.
-	 * @param arg0
-	 */
-	public SiteSearchTest(String arg0) {
-		super(arg0);
-	}
-
-	public void testGetResult() {
-		String keyword="kenu";
+	public void testSearchContentWith() {
+		String keyword="hello";
 		SiteSearch ss = new SiteSearch();
-		ss.setKeyword(keyword);
 		try {
-			Collection hmap = ss.getResult();
-			assertNotNull(hmap);
-			assertTrue(hmap.size()>0);
-			System.out.println(hmap.size());
+			Collection<BbsInfoBean> result = ss.searchContentWith(keyword);
+			assertNotNull(result);
+			assertTrue(result.size()>0);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	}
-
-	/* (non-Javadoc)
-	 * @see junit.framework.TestCase#setUp()
-	 */
-	protected void setUp() throws Exception {
-		super.setUp();
-	}
-
-	/* (non-Javadoc)
-	 * @see junit.framework.TestCase#tearDown()
-	 */
-	protected void tearDown() throws Exception {
-		// 
-		super.tearDown();
 	}
 
 }

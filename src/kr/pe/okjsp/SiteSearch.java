@@ -10,6 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Collection;
 import java.util.LinkedList;
+import java.util.List;
 
 import kr.pe.okjsp.util.CommonUtil;
 import kr.pe.okjsp.util.DbCon;
@@ -33,19 +34,14 @@ public class SiteSearch {
 			" and okboard.content like ? " +
 			" and okboard_info.cseq = 1 group by okboard.bbsid";
 
-    /**
-     * 사이트 검색 결과를 반환합니다.
-     * @return Collection
-     * @throws Exception
-     */
-    public Collection getResult() throws Exception {
+    public Collection<BbsInfoBean> searchContentWith(String keyword) throws Exception {
 		if (keyword==null || keyword.length()<2) {
 			throw new Exception("검색어는 두 글자 이상입니다.");
 		}
 		
 		DbCon dbCon = new DbCon();
 
-		LinkedList list = new LinkedList();
+		List<BbsInfoBean> list = new LinkedList<BbsInfoBean>();
 
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -78,6 +74,16 @@ public class SiteSearch {
 		}
 
 		return list;
+   	
+    }
+    
+    /**
+     * 사이트 검색 결과를 반환합니다.
+     * @return Collection
+     * @throws Exception
+     */
+    public Collection<BbsInfoBean> getResult() throws Exception {
+		return searchContentWith(this.keyword);
 
 	}
 
