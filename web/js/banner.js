@@ -1,7 +1,7 @@
 var Banner = {
 main : [
 {
-	"expire": '2012-12-31',
+	"expire": '2013-01-31',
 	"tag": '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
 	'<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
 	'alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트"></a>'
@@ -36,6 +36,11 @@ footer : [
 ],
 
 aside : [
+{
+	'expire': "2013-02-15",
+	'tag': '<a href="/f.jsp?http://hanbitedu.or.kr/curriculum/programming01.html">' +
+	'<img src="/images/banner/hbi_150x67.gif" alt="전자정부 표준 프레임워크, 클라우드 빅데이터 에코시스템(하둡)"></a>'
+},
 {
 	'expire': "2013-01-14",
 	'tag': '<a href="/f.jsp?http://olc.oss.kr/offlec/list.jsp#okjsp150">' +
