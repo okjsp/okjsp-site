@@ -5,6 +5,12 @@ main : [
 	"tag": '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
 	'<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
 	'alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트"></a>'
+},
+{
+	"expire": '2013-03-22',
+	"tag": '<a href="/f.jsp?http://wasdevkr.com/?_pageVariable=OKJSP" target="_blank">' +
+	'<img src="/images/banner/ibm_473x98.jpg" ' +
+	'alt="IBM WAS V8.5 Liberty Profile 사용자 참여 콘테스트"></a>'
 }
 ],
 contentRight : [
