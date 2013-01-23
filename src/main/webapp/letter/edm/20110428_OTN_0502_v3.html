@@ -1,0 +1,410 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>OTN Developer Java Workshop</title>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<link rel=stylesheet href="http://www.oracle.com/kr/style.css" type=text/css>
+
+<style type="text/css">
+<!--
+a:link {
+	font-family: "돋음", "돋음체";
+	font-size: 12px;
+	color: #D90000;
+	text-decoration: none;
+}
+a:visited {
+	font-family: "돋음", "돋음체";
+	font-size: 12px;
+	color: #D90000;
+	text-decoration: none;
+}
+a:hover {
+	font-family: "돋음", "돋음체";
+	font-size: 12px;
+	color: D90000;
+	text-decoration: underline;
+}
+a:active {
+	font-family: "돋음", "돋음체";
+	font-size: 12px;
+	color: D90000;
+	text-decoration: none;
+}
+a.m:link {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: bold;
+}
+a.m:visited {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: bold;
+}
+a.m:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: FFFFFF;
+	text-decoration: underline;
+	font-weight: bold;
+}
+a.m:active {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: FFFFFF;
+	text-decoration: none;
+	font-weight: bold;
+}
+.style10 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #FF0000;
+}
+.style12 {color: #FF0000}
+.style14 {color: #FF0000; font-weight: bold; }
+-->
+</style>
+</head>
+
+<body>
+<center>
+
+<a name="#top"></a>
+<table border="0" width="632" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC" style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 1px solid #cccccc">
+<tr>
+		<td width="0" bgcolor="#CACACA"></td>
+      <td width="629" align="center" bgcolor="#FFFFFF"><table border="0" cellpadding="0" cellspacing="0" width="630" height="183">
+        <tr bgcolor="#FFFFFF">
+          <td align="center" bgcolor="#FFFFFF" style="padding-bottom:20px;"> 
+            <table width="613" border="0" cellpadding="0" cellspacing="0">   
+              <tr>
+                <td colspan="3"><img src="http://www.oracle-mkt.co.kr/eblast/image/top_0502.jpg" width="632" height="200">                  <!-- 헤더 이미지 URL
+          <img src="http://oracle.nowonplay.com/oracle_seminar/2010/04/0409_sun_welcome_event/images/top_img.gif" border="0">          
+          헤더 이미지 -->                  </td>
+                </tr>
+              </table><br>
+            <table border="0" cellpadding="0" cellspacing="0" width="600">
+              <tr>
+                <td align="right"> <font style="font-family:verdana;font-size:9pt;"> 
+                  <img src="http://www.oracle-mkt.co.kr/eblast/image/dot.gif" width="7" height="7"> 
+                  <a href="#01"><b>인사말</b></a>&nbsp; <img src="http://www.oracle-mkt.co.kr/eblast/image/dot.gif" width="7" height="7"> 
+                  <a href="#02"><b>AGENDA</b></a>&nbsp; <img src="http://www.oracle-mkt.co.kr/eblast/image/dot.gif" width="7" height="7"> 
+                  <a href="#02"><b>세미나 정보</b></a>&nbsp;<img src="http://www.oracle-mkt.co.kr/eblast/image/dot.gif" width="7" height="7"> 
+                  <a href="#04"><b>장소 안내</b></a>&nbsp; <!--img src="http://oracle.nowonplay.com/oracle_edu/2009/11/edu_11th_seminar/images/dot.gif" width="7" height="7"> 
+              <a href="#05"><b>경품안내</b></a-->                  </td>
+                </tr>
+              </table>
+            <br>
+            <table border="0" cellpadding="0" cellspacing="0" width="580">
+              <tr>
+                <td> 
+                  <table width="100%" border="0" cellpadding="1" cellspacing="0" bgcolor="#CCCCCC">
+                    <tr>
+                      <td height="9" bgcolor="#FFFFFF"><a name="01" id="01"></a><img src="http://www.oracle-mkt.co.kr/eblast/image/dot01.gif" width="13" height="13" align="absmiddle"><span style="font-family:'돋움', '돋움체'; font-size:14px; color:#FF0000"><strong> 인사말<br>
+                        <br>
+                      </strong></span></td>
+                      </tr>
+                    <tr bgcolor="#FFFFFF">
+                      <td height="40" bgcolor="#FFFFFF" style="padding-left:10px; line-height:1.5"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td width="70%" valign="top" style="line-height:1.5"><span style="font-family:'돋움', '돋움체'; font-size:12px; color:#555">                              Java 개발자들을 위해 준비했습니다.
+                              <br>
+                              <br>
+                              <span class="style10">OTN Developer Java Workshop에 Java 개발자 여러분을 초대합니다.</span> 
+                              <br>
+                              <br>
+                              특히 오는 5월 3일~4일, JCP(Java Community Process)에 참석하시는 Patrick Curran및 오라클 본사의 주요 인사를 모시고, 
+자바의 현재 이슈와 미래에 대한 세션을 준비 하였습니다. 
+아래 아젠다를 참고하시고 5월 2일 월요일 대한상공회의소에서 열리는 OTN Developer Java Workshop 에서 만나 뵙기를 희망합니다. 
+
+
+                              <br>
+                              <br>
+                              <span style="font-family:'돋움', '돋움체'; font-size:11px"> •본 행사는 Java 개발자들을 위한 행사입니다.<br>
+<span class="style12">•행사장의 제한된 좌석수로 인해 선착순 마감 예정이오니 서둘러 등록하여 <br>
+&nbsp;주시길 바랍니다.</span></span> <br>
+                          </span></td>
+                          <td width="30%" align="right" valign="top"><table width="90%" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td height="32" align="center" valign="middle" bgcolor="#FF0000"><a href="http://eventreg.oracle.com/webapps/events/ns/EventsDetail.jsp?p_eventId=125258&src=7009948&src=7009948&Act=145" target="_blank" class="m"><span style="font-family:'돋움', '돋움체'; font-size:12px">지금 등록하기</span></a></td>
+                            </tr>
+                            <tr>
+                              <td height="8" align="center" bgcolor="#DB0000"></td>
+                            </tr>
+                            <tr>
+                              <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                              <td style="line-height:1.5"><span style="font-family:'돋움', '돋움체'; font-size:12px; color:#555">
+                          <strong> 
+                            일시 :<br> 
+                            2011년 5월 2일(월) <br>
+                            13:00 ~ 17:10
+                            <br>
+                            <br>
+                            장소 : <br>
+                             대한상공회의소 <br>
+                             중회의실A<br>
+                          </strong>
+                        </span>      </td>
+                            </tr>
+                            <tr>
+                              <td>&nbsp;</td>
+                            </tr>
+                          </table></td>
+                        </tr>
+                      </table></td>
+                    </tr>
+                  </table>                 </td>
+                </tr>
+              </table>
+            <br>
+            <br>
+            
+            
+            
+            <table border="0" cellpadding="0" cellspacing="0" width="580">
+              <tr> 
+                <td><a name="02" id="02"></a><img src="http://www.oracle-mkt.co.kr/eblast/image/dot01.gif" width="13" height="13" align="absmiddle"><span style="font-family:'돋움', '돋움체'; font-size:14px; color:#FF0000"><strong> Agenda & 행사안내<br>
+                  <br>
+                </strong></span></td>
+                </tr>
+              <tr>
+                <td style="padding-left:10px; line-height:1.5"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td width="65%" valign="top" style="line-height:1.5"><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC" style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc">
+                      <tr align="left">
+                        <td height="50" align="center" valign="middle" bgcolor="#FFFFFF" style="border-bottom:1px solid #cccccc; border-right: 1px solid #cccccc; padding:4px 8px 2px 8px;"><span style="font-family:'돋움', '돋움체'; font-size:11px; color:#333333"><strong>13:00 ~ 13:30 </strong></span></td>
+                        <td height="50"  align="left" bgcolor="#E6E6E6" style="border-bottom:1px solid #cccccc; border-right: 1px solid #cccccc; padding:4px 8px 2px 8px;"><span style="font-family:'돋움', '돋움체'; font-size:11px; color:#333333; line-height:1.5;"><strong>등록</strong></span></td>
+                      <tr align="left">
+                        <td width="19%" height="50" align="center" valign="middle" bgcolor="#FFFFFF" style="border-bottom:1px solid #cccccc; border-right: 1px solid #cccccc; padding:4px 8px 2px 8px;"><span style="font-family:'돋움', '돋움체'; font-size:11px; color:#333333"><strong>13:30 ~ 14:10 </strong></span></td>
+                        <td width="81%" height="50"  align="left" bgcolor="#E6E6E6" style="border-bottom:1px solid #cccccc; border-right: 1px solid #cccccc; padding:4px 8px 2px 8px;"><span style="font-family:'돋움', '돋움체'; font-size:11px; color:#333333; line-height:1.5;"><strong>Java의 현재 이슈와 미래
+
+                              <br>
+                              / Patrick Curran , 
+Software Development Director, ORACLE
+
+
+</strong>
+                        </span></td>
+                      <tr align="left">
+                        <td height="50" align="center" valign="middle" bgcolor="#FFFFFF" style="border-bottom:1px solid #cccccc; border-right: 1px solid #cccccc; padding:4px 8px 2px 8px;"><span style="font-family:'돋움', '돋움체'; font-size:11px; color:#333333"><strong>14:10 ~ 14:50 </strong></span></td>
+                        <td height="50"  align="left" bgcolor="#E6E6E6" style="border-bottom:1px solid #cccccc; border-right: 1px solid #cccccc; padding:4px 8px 2px 8px;"><span style="font-family:'돋움', '돋움체'; font-size:11px; color:#333333; line-height:1.5;"><strong>One VM Many Languages 
+ <br>
+                          / Chuk-Munn Lee
+Product Management, Fusion Middleware, ORACLE 
+ </strong>&nbsp; <br>
+                        </span></td>
+                      <tr align="left">
+                        <td height="50" align="center" valign="middle" bgcolor="#FFFFFF" style="border-bottom:1px solid #cccccc; border-right: 1px solid #cccccc; padding:4px 8px 2px 8px;"><span style="font-family:'돋움', '돋움체'; font-size:11px; color:#333333"><strong>14:50 ~ 15:30
+ </strong></span></td>
+                        <td height="50"  align="left" bgcolor="#E6E6E6" style="border-bottom:1px solid #cccccc; border-right: 1px solid #cccccc; padding:4px 8px 2px 8px;"><span style="font-family:'돋움', '돋움체'; font-size:11px; color:#333333; line-height:1.5;"><strong>Java SE for Embedded: Overview and Tools Update
+
+                              <br>
+                              / Carlos Lucasius Principal Engineer, ORACLE
+
+</strong>&nbsp; <br>
+                        </span></td>
+                      <tr align="left">
+                        <td height="50" align="center" valign="middle" bgcolor="#FFFFFF" style="border-bottom:1px solid #cccccc; border-right: 1px solid #cccccc; padding:4px 8px 2px 8px;"><span style="font-family:'돋움', '돋움체'; font-size:11px; color:#333333"><strong>15:30 ~ 15:50 </strong></span></td>
+                        <td height="50"  align="left" bgcolor="#E6E6E6" style="border-bottom:1px solid #cccccc; border-right: 1px solid #cccccc; padding:4px 8px 2px 8px;"><span style="font-family:'돋움', '돋움체'; font-size:11px; color:#333333; line-height:1.5;"><strong> Break
+</strong> &nbsp; <br>
+                        </span></td>
+                      <tr align="left">
+                        <td height="50" align="center" valign="middle" bgcolor="#FFFFFF" style="border-bottom:1px solid #cccccc; border-right: 1px solid #cccccc; padding:4px 8px 2px 8px;"><span style="font-family:'돋움', '돋움체'; font-size:11px; color:#333333"><strong>15:50 ~ 16:30 </strong></span></td>
+                        <td height="50"  align="left" bgcolor="#E6E6E6" style="border-bottom:1px solid #cccccc; border-right: 1px solid #cccccc; padding:4px 8px 2px 8px;"><span style="font-family:'돋움', '돋움체'; font-size:11px; color:#333333; line-height:1.5;"><strong>Tuning the HotSpot Virtual Machine 
+ <br>
+                          / Chuk-Munn Lee
+Product Management, Fusion Middleware, ORACLE
+ </strong><br>
+                        </span></td>
+                      <tr align="left">
+                        <td height="50" align="center" valign="middle" bgcolor="#FFFFFF" style="border-bottom:1px solid #cccccc; border-right: 1px solid #cccccc; padding:4px 8px 2px 8px;"><span style="font-family:'돋움', '돋움체'; font-size:11px; color:#333333"><strong>16:30 ~ 17:10
+</strong></span></td>
+                        <td height="50"  align="left" bgcolor="#E6E6E6" style="border-bottom:1px solid #cccccc; border-right: 1px solid #cccccc; padding:4px 8px 2px 8px;"><span style="font-family:'돋움', '돋움체'; font-size:11px; color:#333333; line-height:1.5;"><strong>Java ME technology update presentation 
+
+                              <br>
+                              / Roger Riggs
+Principal Engineer, ORACLE
+
+</strong><br>
+                        </span></td>
+                      </table>                      
+                    <span style="font-family:'돋움', '돋움체'; font-size:12px; color:#555"><span style="font-family:'돋움', '돋움체'; font-size:12px; color:#333; line-height:3">* Agenda는 행사 당일 사정에 의해 변경될 수 있습니다. </span></span><span style="font-family:'돋움', '돋움체'; font-size:12px; color:#555"><br>
+                    </span></td>
+                    <td width="35%" align="right" valign="top"><table width="90%" border="0" cellpadding="0" cellspacing="0">
+                       <tr>
+                          <td height="28"><span style="font-family:'돋움', '돋움체'; font-size:12px; color:#FF0000"><strong><span style="font-family:'돋움', '돋움체'; font-size:11px; color:#555"><img src="http://www.oracle-mkt.co.kr/eblast/image/dot02.gif" width="4" height="15"></span> 행사 안내</strong></span></td>
+                        </tr>
+                        
+                        
+                        <tr>
+                          <td style="line-height:1.2"><span style="font-family:'돋움', '돋움체'; font-size:11px; color:#555"> 본 행사는 <span class="style12">좌석이 한정</span>되어 있으니 반드시 <span class="style12">온라인 행사 참가 신청</span>을 해 주시기 바랍니다.
+
+<br>
+<br>	
+등록 확인을 위해 명함을 지참해 주시기 바랍니다.(필요시 행사관계자가 신분증을 요구드릴 수 있으니, 양해하여 주시길 바랍니다) 
+<br><br>	
+주차는 지원되지 않으니 가급적 대중교통을 이용해 주시기 바랍니다.
+
+
+ <br>
+ <br>
+ 	행사 등록은 <span class="style12">선착순 마감</span>됩니다.
+
+                          <br>
+                          </span></td>
+                        </tr>
+                        <tr>
+                          <td height="28" style="line-height:1.2"><span style="font-family:'돋움', '돋움체'; font-size:11px; color:#555"><strong><img src="http://www.oracle-mkt.co.kr/eblast/image/dot02.gif" width="4" height="15"> 행사관련 문의처 </strong></span></td>
+                        </tr>
+                        <tr>
+                          <td style="line-height:1.2"><span style="font-family:'돋움', '돋움체'; font-size:11px; color:#555">Tel : 02-545-5836 <br>
+                            E-mail : <a href="mailto:oracle@mplanners.co.kr">oracle@mplanners.co.kr</a>
+                            <br>
+                          </span></td>
+                        </tr>
+                        
+                        <tr>
+                          <td align="center" style="line-height:1.2"><img src="http://www.oracle-mkt.co.kr/eblast/image/gift_0502.jpg" width="100" height="125"></td>
+                        </tr>
+                        
+                        
+                        
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="center" valign="top" style="line-height:1.5"><br>
+                      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td width="20%"><img src="http://www.oracle-mkt.co.kr/eblast/image/speaker_0502.jpg" width="100" height="126"><br></td>
+                        <td width="80%" valign="top" style="line-height:1.2"><span style="font-family:'돋움', '돋움체'; font-size:11px; color:#555"><span class="style12"><strong>Speaker 소개</strong></span> <strong><br>
+                          Patrick Curran - Software Development Director</strong><br>
+Patrick Curran는 JCP(자바기술표준협회)의 의장으로서 JCP 프로그램, 회원 관리, 특별한 관리자와 전문가 지도, 집행위원회 미팅 안내 등 모든 프로그램 경영을 총괄 합니다.<br> 
+ Patrick은 썬(현 오라클)에서 20년 가까이 일하였으며 총 25년 이상 소프트웨어 산업분야에서 일해 왔습니다. 그는 conformance testing 에서 오래된 기록을 보유하고 있으며 가장 최근에는 썬의 고객 소프트웨어 그룹 안에서 Java Conformance 엔지니어링 팀을 이끌고 있습니다. 그는 또한 JAVA 에 관련된 순응성과 양립가능성에 대한 정책과 전략에 대한 책임이 있는 썬의 Conformance 의회의 의장을 맡고 있습니다. 
+
+ <br>
+ Patrick은 여러 컨소시엄과 W3C (월드와이드웹 컨소시엄)과 같은 커뮤니티, OASIS 협회 같은 곳에 활동적으로 참가하고 있습니다.
+ </span></td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td valign="top" style="line-height:1.2"><span style="font-family:'돋움', '돋움체'; font-size:11px; color:#555"><strong><br>
+                          Roger Riggs 
+ - Principal Engineer
+</strong><br>
+로저 릭스는 오라클 기술팀의 주요 구성원으로서 자바 구조와 임베디드 및 모바일 장치의 사양에 관한 일을 하고 있다. 그는 많은 오라클 JCP 소형장치 사양의 스펙리드(spec lead)이다. 그는 1995년 이후로 자바 시스템을 설계 및 이행하고 있고, 자바 언어, 라이브러리 및 자바 가상 머신에 관한 광범위한 지식을 갖고 있다.
+</span></td>
+                      </tr>
+                    </table></td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" align="center" valign="top" style="line-height:1.5"><br>
+                      <img src="http://www.oracle-mkt.co.kr/eblast/image/otn_ct01.gif" width="560" height="303" border="0" usemap="#Map"></td>
+                  </tr>
+                </table></td>
+              </tr>
+              
+              
+              <tr> 
+                <td></td>
+                </tr>
+              </table>
+            <!-- zzzzz -->
+            <br>
+            <br>
+            <table border="0" cellpadding="0" cellspacing="0" width="580">
+              <tr>
+                <td><table width="580" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td><a name="04" id="04"></a><img src="http://www.oracle-mkt.co.kr/eblast/image/dot01.gif" width="13" height="13" align="absmiddle"><span style="font-family:'돋움', '돋움체'; font-size:14px; color:#FF0000"><strong> 장소 안내<br>
+                      <br>
+                    </strong></span></td>
+                    </tr>
+
+                  <tr>
+                    <td  align="center"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td width="50%"><img src="http://www.oracle-mkt.co.kr/eblast/image/map_0502.gif" width="277" height="252"></td>
+                        <td width="50%" valign="top" style="line-height:1.2"><span style="font-family:'돋움', '돋움체'; font-size:11px; color:#555"><br>
+                          주소 : 서울특별시 중구 남대문로 4가 45번지
+                            <br>
+                            <br>
+                            <br>
+                            <span class="style14">찾아 오시는 길</span>                            <br>
+                            <br>
+                            지하철 이용 시
+                            <br>
+                            지하철 2호선 시청역 9번출구 삼성본관방향 5분거리
+                            <br>
+                            지하철 4호선 회현역 5번출구 남대문 방향 5분거리
+
+                            <br>
+                            <br>
+                            버스 이용 시
+                            <br>
+                            삼성프라자, 시청앞 정류장에서 하차 후 남대문 방향 </span></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                  
+
+                  </table></td>
+                </tr>
+              </table>
+              <br>
+              <table width="630" border="0" cellpadding="0" cellspacing="0">
+    
+    <tr>
+      <td height="1" bgcolor="#CCCCCC"></td>
+    </tr>
+    <tr>
+      <td width="628"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="20">&nbsp;</td>
+          <td width="573"><img src="http://www.oracle-mkt.co.kr/eblast/image/info_company.gif" alt="THE INFORMATION COMPANY" border="0" vspace="10"></td>
+          <td width="20">&nbsp;</td>
+        </tr>
+      </table></td>
+      </tr>
+    <tr>
+      <td height="1" bgcolor="#cacaca"></td>
+      </tr>
+    <tr>
+      <td bgcolor="#ff0000">&nbsp;<img src="http://www.oracle-mkt.co.kr/eblast/image/oracle.gif"></td>
+    </tr>
+    <tr>
+      <td style="padding-left:5px; padding-top:5px; padding-bottom:5px;"><table width="100%" border="0" cellpadding="5" cellspacing="0">
+        <tr>
+          <td height="25"><font face="Arial, Helvetica, sans-serif" size="1" color="#000000">Copyright &copy; 2009, Oracle. All rights reserved.</font></td>
+          <td align="right"><font face="Arial, Helvetica, sans-serif" size="1" color="#000000"> <a href="http://www.oracle.com/global/kr/corporate/contact/index.html" target="_blank"><font color="#FF0000" size="1" face="돋움, Arial, Helvetica, sans-serif"><u>연락처</u></font></a> | <a href="http://www.oracle.com/global/kr/corporate/legal/copyright.html" target="_blank"><font color="#FF0000" size="1" face="돋움, Arial, Helvetica, sans-serif"><u>법적고지</u></font></a> | <a href="http://www.oracle.com/global/kr/corporate/legal/privacy.html" target="_blank"><font color="#FF0000" size="1" face="돋움, Arial, Helvetica, sans-serif"><u>개인정보보호정책</u></font></a></font></td>
+        </tr>
+      </table></td>
+    </tr>
+  </table>      </td>
+        </tr>
+          <tr>
+    <td>
+	<div id="footer">
+메일 수신 거부: 본 메일은 <a href="http://www.okjsp.pe.kr/" target="_blank">OKJSP.pe.kr</a> 사이트의 회원들에게 보내지는 발신 전용 홍보 메일입니다.
+앞으로 OKJSP의 메일 수신을 원치 않는 회원님은 <a href="http://www.okjsp.pe.kr/jsp/member/mailReject.jsp" target="_blank">여기</a>를 클릭하여 <a href="http://www.okjsp.pe.kr/jsp/member/mailReject.jsp" target="_blank">수신거부</a> 등록을 하여주십시오.<br />
+<a href="http://www.okjsp.pe.kr/">JSP/Eclipse 정보공유 http://www.okjsp.pe.kr/</a>
+	</div>
+</td>
+  </tr>
+          </table ></td>
+	</tr>
+</table> 
+
+  </center>
+
+
+
+<map name="Map"><area shape="rect" coords="188,264,255,281" href="http://www.oracle.com/technetwork/kr/index.html" target="_blank">
+<area shape="rect" coords="470,267,538,280" href="http://www.oracle.com/technetwork/kr/index.html" target="_blank">
+</map></body>
+</html>

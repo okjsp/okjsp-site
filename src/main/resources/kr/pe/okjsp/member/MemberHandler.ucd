@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="MemberHandler" size="911,479" id="kr.pe.okjsp.member" metadata="uml2-1.0" initialized="true" tag="1000" key="32303037303533312D31303030206F6B6A7370323030372F6B656E75">
+  <children xsi:type="editmodel:ClassEditModel" name="MemberHandler" location="50,50" size="170,409" id="kr.pe.okjsp.member/MemberHandler" runTimeClassModel="qUERY_LOGIN,qUERY_UPDATE,qUERY_EMAIL_EXISTS,qUERY_ROLE,reject(Ljava.lang.String;),qUERY_EXISTS,isEmailExist(Ljava.lang.String;),qUERY_ROLE_ADD,changeInfo(Lkr.pe.okjsp.member.Member;Ljava.lang.String;),qUERY_ADD,qUERY_PROFILELOG,qUERY_DELETE,isMailing(Ljava.lang.String;),isIdExist(Ljava.lang.String;),doLogin(Lkr.pe.okjsp.member.Member;),qUERY_COUNT,qUERY_MAILING_STATUS,qUERY_MAILING,profileLog(Ljava.lang.String;),count">
+    <children xsi:type="editmodel:CompartmentEditModel" size="147,234">
+      <children xsi:type="editmodel:AttributeEditModel" name="count" id="kr.pe.okjsp.member/MemberHandler#count"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_ADD" id="kr.pe.okjsp.member/MemberHandler#qUERY_ADD"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_COUNT" id="kr.pe.okjsp.member/MemberHandler#qUERY_COUNT"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_DELETE" id="kr.pe.okjsp.member/MemberHandler#qUERY_DELETE"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_EMAIL_EXISTS" id="kr.pe.okjsp.member/MemberHandler#qUERY_EMAIL_EXISTS"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_EXISTS" id="kr.pe.okjsp.member/MemberHandler#qUERY_EXISTS"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_LOGIN" id="kr.pe.okjsp.member/MemberHandler#qUERY_LOGIN"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_MAILING" id="kr.pe.okjsp.member/MemberHandler#qUERY_MAILING"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_MAILING_STATUS" id="kr.pe.okjsp.member/MemberHandler#qUERY_MAILING_STATUS"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_PROFILELOG" id="kr.pe.okjsp.member/MemberHandler#qUERY_PROFILELOG"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_ROLE" id="kr.pe.okjsp.member/MemberHandler#qUERY_ROLE"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_ROLE_ADD" id="kr.pe.okjsp.member/MemberHandler#qUERY_ROLE_ADD"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="qUERY_UPDATE" id="kr.pe.okjsp.member/MemberHandler#qUERY_UPDATE"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="71,126">
+      <children xsi:type="editmodel:MethodEditModel" name="changeInfo" id="kr.pe.okjsp.member/MemberHandler#changeInfo(Lkr.pe.okjsp.member.Member;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="doLogin" id="kr.pe.okjsp.member/MemberHandler#doLogin(Lkr.pe.okjsp.member.Member;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isEmailExist" id="kr.pe.okjsp.member/MemberHandler#isEmailExist(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isIdExist" id="kr.pe.okjsp.member/MemberHandler#isIdExist(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isMailing" id="kr.pe.okjsp.member/MemberHandler#isMailing(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="profileLog" id="kr.pe.okjsp.member/MemberHandler#profileLog(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="reject" id="kr.pe.okjsp.member/MemberHandler#reject(Ljava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" interactive="false" properties="open=kr.pe.okjsp.member/MemberHandler;wireOptions=1;Product=eUML2"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" showDependencyStereotype="true" showInterfaceStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

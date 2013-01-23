@@ -1,0 +1,77 @@
+#main dt {font-weight: bold; margin: 10px 0 4px}
+#top {width:100%;background:#1974FF;border-bottom:solid 2px #2020AA}
+#top div {float:right; top: 0; position:relative; padding: 6px 10px;}
+A:link {
+	font-size: 9pt;
+	font-family: verdana, arial, helvetica, geneva;
+	color: #666666;
+}
+
+A:visited {
+	font-size: 9pt;
+	font-family: verdana, arial, helvetica, geneva;
+	color: #666666;
+}
+
+A:active {
+	font-size: 9pt;
+	font-family: verdana, arial, helvetica, geneva;
+	color: #FF0000;
+}
+
+A:hover {
+	color: #444444;
+}
+
+TD {
+	FONT-SIZE: 10pt;
+	FONT-FAMILY: verdana, arial, helvetica, geneva
+}
+
+#top,#main,#heading,#footer {
+	width: 560px;
+	font-size: 10pt;
+	padding: 10px;
+}
+#top {
+	width: 580px;
+	padding: 0;
+}
+#heading,#footer {
+	border: 1 thin #888;
+	background-color: #ddd;
+	border-bottom: 1px thin #000
+}
+
+h1 {
+	font-size: larger;
+	background-color: #ddd;
+	padding: 6px
+}
+
+#ad_banners {
+	text-align: center;
+	border: 1px solid #0099B9;
+}
+
+#ad_banners ul {
+	margin: 4px 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+#adinfo {
+	margin-right: 10px;
+	margin-bottom: 4px;
+	text-align: right;
+}
+
+#adinfo a:link,#adinfo a:visited,#adinfo a:hover,#adinfo a:active {
+	font-size: 10px;
+	color: #888;
+}
+
+#footer li {
+	float: right;
+	margin-left: 30px
+}

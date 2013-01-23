@@ -1,0 +1,60 @@
+@import "skin.css";
+.body	{
+	background-color:#000000;
+	color:#00CC00;
+	font-size: small;
+	}
+.tablestyle {
+	background-color:#101010
+}
+.tablestyle tr:nth-child(even) {
+	background: #181810;
+}
+A:link      {color: #00CC33; text-decoration: none}
+A:visited   {color: #22CC22; text-decoration: none}
+A:active    {color: #00EE00; text-decoration: underline}
+A:hover     {border: 0; text-decoration: underline}
+li a:hover,a:active {
+	border-bottom: 1px dashed #F08080;
+}
+
+.td         {
+            border-top-width: 0px;
+            border-right-width: 0px;
+            border-bottom-width: 1px;
+            border-left-width: 0px;
+            border-bottom-style: solid;
+            border-color: #9FB2B0;
+            }
+.th         {background-color: #202020;}
+.reply      {}
+.tiny       {font : 10px "Arial Narrow" ;}
+.tiny:link  {font : 10px "Arial Narrow" ;}
+.tiny:visited, active, hover
+            {font : 10px "Arial Narrow" ;}
+.search     {color:#CB0000}
+
+#taglist .row {display:block; margin:6px;border-bottom: 1 solid #888888;}
+#m ul {
+	border-bottom:1px dashed #202020;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:66px;
+	padding:5px;
+	}
+#m li.d {margin-left:10px; font: smaller; color:#666}
+#m li.e a {margin-left:10px; color:#600}
+
+#formSection {
+	width: 238px;
+	height: 50px;
+	margin: 1px;
+	border: 1px solid #8080E0;
+}
+
+input, select, textarea {
+	background-color:#000000;
+	color:#00CC00;
+	font-weight:bold;
+}

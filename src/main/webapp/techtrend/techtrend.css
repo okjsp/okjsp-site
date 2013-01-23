@@ -1,0 +1,80 @@
+@CHARSET "EUC-KR";
+
+#techtrend {
+	margin-top: 10px;
+}
+
+#techtrend h1 {
+	border-bottom-color:#A06060;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	font-family: Times New Roman;
+	font-style: italic;
+	margin: 10px;
+	text-align: right;
+	width: 630px;
+}
+
+#techtrend h1 a:link,
+#techtrend h1 a:visited {
+	font-family: Times New Roman;
+	font-style: italic;
+	font-size: x-large;
+	padding-right: 20px;
+	text-weight: bold;
+}
+
+#techtrendrss {
+	position: relative;
+	left: 626px;
+	top: -30px;
+	padding: 0;
+}
+
+dl {
+	clear: both;
+	width: 630px;
+	margin: 0 8px;
+}
+
+dt {
+	padding: 6px 10px 2px;
+}
+
+dl a:hover {
+	text-decoration: underline;
+}
+
+dt a:link,dt a:visited {
+	font-weight: bold;
+	font-size: medium;
+}
+
+dd {
+	margin: 2px;
+}
+
+dd.content {
+	margin: 5px;
+}
+
+dd.content a:visited {
+	font-style: italic;
+	color: #A06060;
+}
+
+dd .more {
+	font-size: x-small;
+	font-style: italic;
+	color: #604040;
+}
+
+dd.icon {
+	float: left;
+	margin: 4px;
+}
+
+dd.when {
+	font-size: smaller;
+	float: right;
+}

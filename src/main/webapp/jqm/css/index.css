@@ -1,0 +1,39 @@
+.ws-normal {
+	white-space: normal;
+}
+
+.mxHeightNone {
+	max-height: none;
+}
+
+.fs-12 {
+	font-size: 12px;
+}
+
+.tmargin10 {
+	margin: 10px 0 0 0;
+}
+
+.bBorder1px {
+	border-bottom: 1px solid #cccccc;
+	padding: 0 0 10px 0;
+}
+.bBorder1px img,.tBorder1px img {
+	float:left; width:35px; margin-right:10px;
+}
+
+.tBorder1px {
+	border-top: 1px solid #cccccc;
+	padding: 10px 0 0 0;
+}
+
+.grayAnd8pt {
+	color: #999999;
+	font-size: 16px;
+}
+
+.hiddenAndEll {
+	height: 100px; 
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
