@@ -8,8 +8,8 @@ import junit.framework.TestCase;
 public class ProfileUtilTest extends TestCase {
 	ProfileUtil profileUtil = new ProfileUtil();
 	public void testCopy() throws Exception {
-		String basePath = "web/profile/base/";
-		String path = "web/profile/";
+		String basePath = "src/main/webapp/profile/base/";
+		String path = "src/main/webapp/profile/";
 		String sourceImage = basePath + ProfileUtil.defaultName;
 		String destImage = path + ProfileUtil.defaultName;
 		assertTrue(new File(sourceImage).exists());
@@ -22,7 +22,7 @@ public class ProfileUtilTest extends TestCase {
 		assertEquals(0, exitValue);
 	}
 	public void testCopyDefaultProfile() {
-		int result = profileUtil.copyDefaultProfile("web", 0);
+		int result = profileUtil.copyDefaultProfile("src/main/webapp", 0);
 		assertEquals(1, result);
 	}
 }
