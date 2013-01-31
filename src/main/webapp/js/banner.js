@@ -17,11 +17,6 @@ contentRight : [
 ],
 
 content : [
-{
-	'expire': '2013-01-14',
-	'tag': '<a href="/f.jsp?http://olc.oss.kr/offlec/list.jsp#okjsp">' +
-	'<img src="/images/banner/olc_468x60.gif" alt="Java Pattern &amp; Android, HTML5 &amp; CSS"></a>'
-}
 ],
 
 left : [
@@ -46,23 +41,10 @@ aside : [
 	'expire': "2013-02-15",
 	'tag': '<a href="/f.jsp?http://hanbitedu.or.kr/curriculum/programming01.html">' +
 	'<img src="/images/banner/hbi_150x67.gif" alt="전자정부 표준 프레임워크, 클라우드 빅데이터 에코시스템(하둡)"></a>'
-},
-{
-	'expire': "2013-01-14",
-	'tag': '<a href="/f.jsp?http://olc.oss.kr/offlec/list.jsp#okjsp150">' +
-	'<img src="/images/banner/olc_150x67.gif" alt="Java Pattern &amp; Android, HTML5 &amp; CSS"></a>'
 }
 ],
 
 asideApp : [
-{
-	tag : '<a href="/f.jsp?http://itunes.apple.com/kr/app/quick-note-lite-nog-eum-noteu/id458620350?mt=8" target="_blank"><img class="adapp" '+
-	'src="http://a1.mzstatic.com/us/r1000/061/Purple/v4/bc/b4/5a/bcb45adc-053f-128e-8708-2534010228e4/mza_582683320425701895.175x175-75.jpg" alt="QuickNote Lite"></a>'
-},
-{
-	tag : '<a href="/f.jsp?http://itunes.apple.com/app/id439910698?mt=8" target="_blank"><img class="adapp" '+
-	'src="/images/app/clien_150x150.png" alt="Hi Clien by iiixzu"></a>'
-},
 {
 	tag : '<a href="/f.jsp?http://itunes.apple.com/kr/app/oghyi/id515739111?mt=8" target="_blank"><img class="adapp" '+
 	'src="http://a4.mzstatic.com/us/r1000/096/Purple/v4/5d/d2/48/5dd24835-243d-9ec9-f6b1-c78691abc75b/V9809ELtPnNVvmabDtq5aw-temp-upload.siryfcqr.175x175-75.jpg" alt="옥희, 아이폰/아이패드앱"></a>'
