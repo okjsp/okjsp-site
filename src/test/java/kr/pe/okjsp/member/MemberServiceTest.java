@@ -23,20 +23,20 @@ public class MemberServiceTest extends TestCase {
 		String email = "okjspgwt@gmail.com";
 		String password = "okpass";
 		String passwordConfirm = "okpass";
-		assertEquals(1, service.changePassword(email, password, passwordConfirm));
+		assertEquals(1, service.changePassword(email, password, passwordConfirm, null));
 	}
 	
 	public void testChangePasswordDiffPassword() {
 		String email = "okjspgwt@gmail.com";
 		String password = "okpass";
 		String passwordConfirm = "other";
-		assertEquals(2, service.changePassword(email, password, passwordConfirm));
+		assertEquals(2, service.changePassword(email, password, passwordConfirm, null));
 	}
 
 	public void testChangePasswordNoUser() {
 		String email = "okjspgwt2@gmail.com";
 		String password = "okpass";
 		String passwordConfirm = "okpass";
-		assertEquals(3, service.changePassword(email, password, passwordConfirm));
+		assertEquals(3, service.changePassword(email, password, passwordConfirm, null));
 	}
 }

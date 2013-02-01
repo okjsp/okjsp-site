@@ -56,7 +56,7 @@ public class MemberController extends HttpServlet {
 				response.sendRedirect("/jsp/member/forgot/forgot.jsp");
 			}
 		} else if ("resetPassword".equals(action)) {
-			String token = request.getParameter("token");
+			String token = request.getParameter("t");
 			String email = request.getParameter("email");
 			String password = request.getParameter("password");
 			String confirmPassword = request.getParameter("confirmPassword");
