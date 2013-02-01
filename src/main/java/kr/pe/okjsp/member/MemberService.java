@@ -11,7 +11,7 @@ public class MemberService {
 		String subject = "[OKJSP]비밀번호 변경 안내";
 		String textMessage = "<h1>OKJSP 비밀번호 변경이 요청되었습니다.</h1>"
 				+ "요청하지 않은 메일이라면 무시하시기 바랍니다."
-				+ "<br /><br /><a href=\"http://dev.okjsp.pe.kr/jsp/member/forgot/recoverPassword.jsp?p="
+				+ "<br /><br /><a href=\"http://dev.okjsp.pe.kr/jsp/member/forgot/resetPassword.jsp?p="
 				+ email + "\">비번 변경하기</a><br />";
 
 		String success;
@@ -31,8 +31,8 @@ public class MemberService {
 	}
 
 	public int changePassword(String email, String password,
-			String passwordConfirm) {
-		if (password == null || !password.equals(passwordConfirm)) {
+			String confirmPassword) {
+		if (password == null || !password.equals(confirmPassword)) {
 			return 2;
 		}
 		if (!isMemberEmail(email)) {
@@ -57,6 +57,11 @@ public class MemberService {
 			e.printStackTrace();
 		}
 		return emailExist;
+	}
+
+	public int resetPassword(String email, String password) {
+		int result = 0;
+		return result;
 	}
 
 }
