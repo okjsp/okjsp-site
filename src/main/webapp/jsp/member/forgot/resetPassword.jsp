@@ -8,8 +8,8 @@
 </head>
 <body>
 <%
-	String email = request.getParameter("p");
-	String token = request.getParameter("t");
+	String email = (String)request.getAttribute("email");
+	String token = (String)request.getAttribute("t");
 %>
 <form action="/member?act=resetPassword" method="POST">
 <input type="hidden" id="t" name="t" value="<%= token %>" readonly="readonly">

@@ -34,8 +34,9 @@ public class MemberController extends HttpServlet {
 
 			int result = service.validateParams(email, token);
 			if (result == 1) {
-				response.sendRedirect("/jsp/member/forgot/resetPassword.jsp?p=" +
-						email + "&t=" + token);
+				request.setAttribute("email", email);
+				request.setAttribute("t", token);
+				request.getRequestDispatcher("/jsp/member/forgot/resetPassword.jsp");
 			} else {
 				request.getSession().setAttribute("msg", "유효하지 않은 링크입니다.");
 				response.sendRedirect("/jsp/member/forgot/forgot.jsp");
