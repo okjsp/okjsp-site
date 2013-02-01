@@ -7,6 +7,13 @@
 <title>비밀번호 찾기</title>
 </head>
 <body>
+<%
+	String msg = (String)session.getAttribute("msg");
+	if(msg != null) {
+%><div><%= msg %></div><%
+		session.removeAttribute("msg");
+	}
+%>
 <form action="/member?act=reset" method="POST">
 등록 email: <input type="email" id="email" name="email" value="kenu@okjsp.pe.kr" />
 <br />

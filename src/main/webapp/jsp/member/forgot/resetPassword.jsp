@@ -4,13 +4,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>초기화 메일 발송</title>
+<title>비밀번호 초기화</title>
 </head>
 <body>
 <%
-String email = request.getParameter("p");
+	String email = request.getParameter("p");
+	String token = request.getParameter("t");
 %>
 <form action="/member?act=resetPassword" method="POST">
+<input type="hidden" id="t" name="t" value="<%= token %>" readonly="readonly">
 email: <input type="email" id="email" name="email" value="<%= email %>" readonly="readonly">
 <br />
 새 비밀번호: <input type="password" id="password" name="password" required="required">

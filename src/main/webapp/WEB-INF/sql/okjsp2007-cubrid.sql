@@ -226,6 +226,14 @@ BEFORE DELETE ON "glo"
 EXECUTE 
 call destroy_data(obj);
 
+/* forgot */
+CREATE TABLE "forgot"(
+"seq" integer AUTO_INCREMENT(0,1) PRIMARY KEY,
+"email" character varying(102) NOT NULL,
+"token" character varying(102) NOT NULL,
+"used" integer default 0
+);
+
 /* ¿Œµ¶Ω∫ */
 CREATE INDEX "okboard_bbsid_idx" on "okboard" ("bbsid");
 CREATE INDEX "okboard_ref_idx" on "okboard" ("ref" desc);
@@ -240,3 +248,4 @@ CREATE UNIQUE INDEX "seq" on "poll_group" ("seq");
 CREATE UNIQUE INDEX "seq" on "poll_query" ("seq");
 CREATE INDEX "idx_pollitem" on "pollitem" ("seq");
 CREATE INDEX "idx_polllist" on "polllist" ("seq");
+CREATE UNIQUE INDEX "forgot_email_token_idx" on "forgot" ("email","token");
