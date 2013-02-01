@@ -25,7 +25,9 @@ public class MemberController extends HttpServlet {
     		throws ServletException, IOException {
 		String action = request.getParameter("act");
 
-    	if ("fromEmail".equals(action)) {
+    	if ("forgot".equals(action)) {
+    		response.sendRedirect("/jsp/member/forgot/forgot.jsp");
+    	} else if ("fromEmail".equals(action)) {
 			MemberService service = new MemberService();
 			String email = request.getParameter("p");
 			String token = request.getParameter("t");
