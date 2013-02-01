@@ -1,18 +1,19 @@
+<%@page import="kr.pe.okjsp.Navigation"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>비밀번호 초기화</title>
+<meta charset="utf-8">
+<title>비밀번호 변경하기</title>
 </head>
 <body>
-<% 
-String email = request.getParameter("email");
-String rc = request.getParameter("rc");
+<%
+	String msg = (String)session.getAttribute("msg");
+	session.removeAttribute("msg");
 %>
-<%= email %>
-<br />
-<%= rc %>
+<%= msg %>
+<div><a href="/">메인으로 돌아가기</a></div>
+<div><a href="<%= Navigation.getPath("LOGFORM") %>">로그인 하기</a></div>
 </body>
 </html>

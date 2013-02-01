@@ -5,6 +5,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class MemberController
@@ -45,6 +46,7 @@ public class MemberController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String action = request.getParameter("act");
+		HttpSession session = request.getSession();
 		if ("reset".equals(action)) {
 			String email = request.getParameter("email");
 			MemberService service = new MemberService();
@@ -52,7 +54,7 @@ public class MemberController extends HttpServlet {
 			if ("true".equals(result[0])) {
 				response.sendRedirect("/jsp/member/forgot/reset.jsp?email="+email);
 			} else {
-				request.getSession().setAttribute("msg", result[1]);
+				session.setAttribute("msg", result[1]);
 				response.sendRedirect("/jsp/member/forgot/forgot.jsp");
 			}
 		} else if ("resetPassword".equals(action)) {
@@ -63,6 +65,9 @@ public class MemberController extends HttpServlet {
 			
 			MemberService service = new MemberService();
 			int result = service.changePassword(email, password, confirmPassword, token);
+			if (result == 1) {
+				session.setAttribute("msg", arg1)
+			}
 			response.sendRedirect("/jsp/member/forgot/resetEnd.jsp?email="+email+"&rc="+result);
 		}
 	}
