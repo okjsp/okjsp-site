@@ -66,9 +66,12 @@ public class MemberController extends HttpServlet {
 			MemberService service = new MemberService();
 			int result = service.changePassword(email, password, confirmPassword, token);
 			if (result == 1) {
-				session.setAttribute("msg", arg1)
+				session.setAttribute("msg", "비밀번호가 잘 변경되었습니다.");
+			} else {
+				session.setAttribute("msg", "변경되지 않았습니다. " +
+						"<a href=\"mailto:kenu@okjsp.pe.kr\">kenu@okjsp.pe.kr</a>로 문의해주시기 바랍니다.");
 			}
-			response.sendRedirect("/jsp/member/forgot/resetEnd.jsp?email="+email+"&rc="+result);
+			response.sendRedirect("/jsp/member/forgot/resetEnd.jsp");
 		}
 	}
 
