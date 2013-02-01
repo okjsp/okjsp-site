@@ -51,6 +51,24 @@ public class MemberService {
 	}
 
 	public int changePassword(String email, String password,
+			String confirmPassword) {
+		if (password == null || !password.equals(confirmPassword)) {
+			return 2;
+		}
+		if (!isMemberEmail(email)) {
+			return 3;
+		}
+		MemberDao dao = new MemberDao();
+		int result = 0;
+		try {
+			result = dao.setPasswordByEmail(email, password);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+	public int changePassword(String email, String password,
 			String confirmPassword, String token) {
 		if (password == null || !password.equals(confirmPassword)) {
 			return 2;
@@ -70,7 +88,7 @@ public class MemberService {
 		}
 		return result;
 	}
-
+	
 	private boolean isMemberEmail(String email) {
 		MemberHandler handler = new MemberHandler();
 		boolean emailExist = false;
