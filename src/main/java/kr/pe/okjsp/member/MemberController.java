@@ -36,7 +36,7 @@ public class MemberController extends HttpServlet {
 			if (result == 1) {
 				request.setAttribute("email", email);
 				request.setAttribute("t", token);
-				request.getRequestDispatcher("/jsp/member/forgot/resetPassword.jsp");
+				request.getRequestDispatcher("/jsp/member/forgot/resetPassword.jsp").forward(request, response);
 			} else {
 				request.getSession().setAttribute("msg", "유효하지 않은 링크입니다.");
 				response.sendRedirect("/jsp/member/forgot/forgot.jsp");
