@@ -26,7 +26,7 @@ public class MemberController extends HttpServlet {
 		String action = request.getParameter("act");
 
     	if ("forgot".equals(action)) {
-    		request.getRequestDispatcher("/jsp/member/forgot/forgot.jsp");
+    		request.getRequestDispatcher("/jsp/member/forgot/forgot.jsp").forward(request, response);
     	} else if ("fromEmail".equals(action)) {
 			MemberService service = new MemberService();
 			String email = request.getParameter("p");
