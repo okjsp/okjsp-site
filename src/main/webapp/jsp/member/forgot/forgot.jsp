@@ -22,5 +22,6 @@
 <br />
 <input type="submit" value="리셋 안내 메일 보내기"/>
 </form>
+<jsp:include page="/googleAnalytics.jsp" />
 </body>
 </html>

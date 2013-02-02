@@ -15,5 +15,6 @@
 <%= msg %>
 <div><a href="/">메인으로 돌아가기</a></div>
 <div><a href="<%= Navigation.getPath("LOGFORM") %>">로그인 하기</a></div>
+<jsp:include page="/googleAnalytics.jsp" />
 </body>
 </html>

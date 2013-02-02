@@ -9,5 +9,6 @@
 <body>
 <%= request.getParameter("email") %>
 초기화 안내 메일을 발송했습니다.
+<jsp:include page="/googleAnalytics.jsp" />
 </body>
 </html>

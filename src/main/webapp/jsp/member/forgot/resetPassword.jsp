@@ -21,5 +21,6 @@ email: <input type="email" id="email" name="email" value="<%= email %>" readonly
 <br />
 <input type="submit" value="비밀번호 변경하기">
 </form>
+<jsp:include page="/googleAnalytics.jsp" />
 </body>
 </html>
