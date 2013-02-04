@@ -60,7 +60,7 @@ $.ajax({
 		var feed = d.responseData.feed;
 		var list = feed.entries;
 		
-		var logo = $('<img>').attr('src', '/images/newsmate_logo.png');
+		var logo = $('<img>').attr('src', 'http://readme.skplanet.co.kr/wp-content/themes/blaskan/img/logo30.png');
 		var title = $('<a>').attr('href', feed.link).
 		attr('target', '_blank').append(logo);
 		var li = $('<li>').append(title).addClass('th');
