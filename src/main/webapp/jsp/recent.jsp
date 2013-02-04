@@ -50,7 +50,7 @@ aladdin_ttb_height = '183';
 
 <div id="newsmate">
 <script type="text/javascript">
-var feedURL = "http://feeds.feedburner.com/newsmate/McKa";
+var feedURL = "http://feeds.feedburner.com/skpreadme";
 var ajaxURL = "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=5&q=" + feedURL;
 $.ajax({
 	url: ajaxURL,
