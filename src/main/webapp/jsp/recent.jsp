@@ -63,7 +63,7 @@ var newsList = [
     }    
 ];
 var newsIdx = Math.floor(Math.random() * newsList.length);
-var feedURL = newsList[newsIdx].feedUrl;
+var feedURL = newsList[newsIdx].feedURL;
 var ajaxURL = "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=5&q=" + feedURL;
 $.ajax({
 	url: ajaxURL,
