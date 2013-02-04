@@ -48,9 +48,22 @@ aladdin_ttb_height = '183';
 <script type="text/javascript" language="javascript" src="http://ttb2.aladin.co.kr/ad_ttb.aspx"></script>
 </div>
 
-<div id="newsmate">
+<div id="newsfeed">
 <script type="text/javascript">
-var feedURL = "http://feeds.feedburner.com/skpreadme";
+var newsList = [
+    {
+    	'feedURL': 'http://feeds.feedburner.com/skpreadme',
+    	'titleImgSrc': 'http://readme.skplanet.co.kr/wp-content/themes/blaskan/img/logo30.png',
+    	'startedAt': '2013-02-04' 
+    },
+    {
+    	'feedURL': 'http://feeds.feedburner.com/newsmate/McKa',
+    	'titleImgSrc': '/images/newsmate_logo.png',
+    	'startedAt': '2012-11-28' 
+    }    
+];
+var newsIdx = Math.floor(Math.random() * newsList.length);
+var feedURL = newsList[newsIdx].feedUrl;
 var ajaxURL = "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=5&q=" + feedURL;
 $.ajax({
 	url: ajaxURL,
@@ -60,21 +73,21 @@ $.ajax({
 		var feed = d.responseData.feed;
 		var list = feed.entries;
 		
-		var logo = $('<img>').attr('src', 'http://readme.skplanet.co.kr/wp-content/themes/blaskan/img/logo30.png');
+		var logo = $('<img>').attr('src', newsList[newsIdx].titleImgSrc);
 		var title = $('<a>').attr('href', feed.link).
 		attr('target', '_blank').append(logo);
 		var li = $('<li>').append(title).addClass('th');
 
-		$('#newsmateList').append(li);
+		$('#newsfeedList').append(li);
 
 		for(var i in list) {
 			var record = $('<a>').html(list[i].title + ' (' + $.timeago(Date.parse(list[i].publishedDate)) +')')
 			.attr('href', list[i].link)
 			.attr('target', '_blank');
 			var li = $('<li>').append(record)
-			$('#newsmateList').append(li);
+			$('#newsfeedList').append(li);
 		}
-		$('#newsmateList').addClass('tablestyle').fadeIn('slow');
+		$('#newsfeedList').addClass('tablestyle').fadeIn('slow');
 		
 	},
 	failure: function(err) {
@@ -86,7 +99,7 @@ $.ajax({
 });
 </script>
 
-<ul id='newsmateList'>
+<ul id='newsfeedList'>
 </ul>
 </div>
 <table>
