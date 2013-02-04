@@ -7,17 +7,17 @@ width: 80px;
 height: 17px;
 }
 
-#newsmateList li:nth-child(even) {
+#newsfeedList li:nth-child(even) {
 	background: #F8F8FF;
 }
 
-#newsmateList li {
+#newsfeedList li {
     padding: 4px 0 4px 20px;
 }
-#newsmateList li:first-child {
+#newsfeedList li:first-child {
     padding-left: 10px;
 }
-#newsmateList {
+#newsfeedList {
     width: 639px;
     margin-left: 3px;
     display: none;
