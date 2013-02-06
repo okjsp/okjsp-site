@@ -7,6 +7,6 @@ CREATE TABLE "forgot"(
 );
 CREATE UNIQUE INDEX "forgot_email_token_idx" on "forgot" ("email","token");
 
-select * from forgot;
+select * from forgot order by seq desc;
 
-delete from forgot;
+

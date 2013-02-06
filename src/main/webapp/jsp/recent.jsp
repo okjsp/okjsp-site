@@ -36,18 +36,18 @@ Banner.show();
 </ul>
 
 <div id="bookList">
-<div style="float:none; margin: 6px 0 0;"><b># OKJSP 추천 도서</b></div>
-
-<script type="text/javascript">
-/* okjsp-site */
-aladdin_ttb_key = 'ttbkenu1710002';
-aladdin_ttb_channel = '32572';
-aladdin_ttb_width = '505';
-aladdin_ttb_height = '183';
-</script>
-<!-- 
- <script type="text/javascript" language="javascript" src="http://ttb2.aladin.co.kr/ad_ttb.aspx"></script>
--->
+<h1># OKJSP 추천 도서</h1>
+<a href="/f.jsp?http://www.hanb.co.kr/ebook/look.html?isbn=9788979149685" target="_blank">
+<img src="http://image.hanb.co.kr/ebookcover/m_9788979149685.gif" class="cover">
+</a>
+<h2>
+<a href="/f.jsp?http://www.hanb.co.kr/ebook/look.html?isbn=9788979149685" target="_blank">
+[ebook]웹 프로그래머를 위한 서블릿 컨테이너의 이해</a></h2>
+<p>
+<a href="/f.jsp?http://www.hanb.co.kr/ebook/look.html?isbn=9788979149685" target="_blank">
+이 책은 웹을 개발하면서 겪어 봤을 서블릿 컨테이너 관련 문제점과 궁금증을 속 시원하게 풀어줍니다. 
+서블릿의 동작원리, 개발 시 겪게 되는 문제점과 유의해야 할 사항, 
+서블릿 컨테이너 관련 팁 등을 통해서 웹 프로그래머로서의 레벨을 한 단계 높일 수 있을 것입니다.</a></p>
 </div>
 
 <div id="newsfeed">

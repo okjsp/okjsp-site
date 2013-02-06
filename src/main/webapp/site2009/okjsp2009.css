@@ -111,9 +111,21 @@ ul {
 	border: 1px solid #D0E0F3;
 	width: 600px;
 }
+#bookList h1 {
+	margin: 8px 0 0;
+	font-size: medium;
+}
 
-#bookList div {
-	margin: 8px 2px
+#bookList .cover {
+	width: 90px;
+	float: left;
+	margin: 10px;
+}
+
+#bookList p {
+	text-align: left;
+	padding-right: 16px;
+	padding-bottom: 20px;
 }
 
 .book img {
