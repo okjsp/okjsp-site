@@ -33,7 +33,7 @@ td.subject div {
 	overflow: hidden;
 	text-align: left;
 	height: 17px;
-	width: 360px;
+	width: 350px;
 }
 
 td.writer div {
@@ -43,7 +43,7 @@ td.writer div {
 }
 
 td.when {
-	width: 40px;
+	width: 50px;
 }
 
 p {
