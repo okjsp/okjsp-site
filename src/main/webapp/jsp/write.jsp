@@ -20,7 +20,6 @@
     <script src="/js/okjsp.js"></script>
     <script src='/js/okboard.js'></script>
     <script src='/js/ban.js'></script>
-    <script src='/js/edit.js'></script>
     <script src="/js/banner.js" charset="utf-8"></script>
     <link rel="stylesheet" href="/css/style.css" type="text/css">
     <link rel="stylesheet" href="/css/okjsp2007.css.jsp" type="text/css">
@@ -89,143 +88,13 @@
     <td>제목</td>
     <td colspan="3">
       <input type="text" name="subject" value="<c:out value="${article.subject}" />" size="66">
-<% if (isMSIE) { %>
-      <input type="checkbox" name="html" value="2" checked onClick="changeToSource()"> 웹보기
-<% } else { %>
       <input type="hidden" name="html" value="<%= article.getHtml() %>">
-<% } %>
     </td>
   </tr>
   <tr>
     <td valign="top" height="163">내용</td>
     <td colspan="3" valign="top" height="163">
-<% if (isMSIE) { %>
-<font id='TextMode' style='display:inline'>
-<fieldset class='SelectBar'>
-<img src='/images/edit/MenuIcon/distinct.gif' border='0' align='absmiddle' WIDTH='2' HEIGHT='18'>&nbsp;
-<button OnClick="SelectionCommand(this,'Cut');" class='BtnImg' OnMouseOver='ButtonUp(this);' OnMouseOut='ButtonOut(this);'>
-<img src='/images/edit/MenuIcon/IconCut.gif'border='0' alt='잘라내기(Ctrl + X)'></button>
-<button OnClick="SelectionCommand(this,'Copy');" class='BtnImg' OnMouseOver='ButtonUp(this);' OnMouseOut='ButtonOut(this);'>
-<img src='/images/edit/MenuIcon/IconCopy.gif'border='0' alt='복사(Ctrl + C)'></button>
-<button OnClick="SelectionCommand(this,'Paste');" class='BtnImg' OnMouseOver='ButtonUp(this);' OnMouseOut='ButtonOut(this);'>
-<img src='/images/edit/MenuIcon/IconPaste.gif'border='0' alt='붙여넣기(Ctrl + V)'></button>
-<img src='/images/edit/MenuIcon/distinct.gif' border='0' align='absmiddle' WIDTH='2' HEIGHT='18'>&nbsp;
-<button OnClick="SelectionCommand(this,'Bold');" class='BtnImg' OnMouseOver='ButtonUp(this);' OnMouseOut='ButtonOut(this);'>
-<img src='/images/edit/MenuIcon/IconBold.gif'border='0' alt='볼드체(Ctrl + B)'></button>
-<button OnClick="SelectionCommand(this,'Italic');" class='BtnImg' OnMouseOver='ButtonUp(this);' OnMouseOut='ButtonOut(this);'>
-<img src='/images/edit/MenuIcon/IconItalic.gif'border='0' alt='이탤릭체(Ctrl + I)'></button>
-<button OnClick="SelectionCommand(this,'Underline');" class='BtnImg' OnMouseOver='ButtonUp(this);' OnMouseOut='ButtonOut(this);'>
-<img src='/images/edit/MenuIcon/IconUnderline.gif'border='0' alt='밑줄(Ctrl + U)'></button>
-<img src='/images/edit/MenuIcon/distinct.gif' border='0' align='absmiddle' WIDTH='2' HEIGHT='18'>&nbsp;
-<button OnClick="SelectionCommand(this,'JustifyLeft');" class='BtnImg' OnMouseOver='ButtonUp(this);' OnMouseOut='ButtonOut(this);'>
-<img src='/images/edit/MenuIcon/IconLeft.gif'border='0' alt='좌측정렬'></button>
-<button OnClick="SelectionCommand(this,'JustifyCenter');" class='BtnImg' OnMouseOver='ButtonUp(this);' OnMouseOut='ButtonOut(this);'>
-<img src='/images/edit/MenuIcon/IconCenter.gif'border='0' alt='가운데정렬'></button>
-<button OnClick="SelectionCommand(this,'JustifyRight');" class='BtnImg' OnMouseOver='ButtonUp(this);' OnMouseOut='ButtonOut(this);'>
-<img src='/images/edit/MenuIcon/IconRight.gif'border='0' alt='우측정렬'></button>
-<img src='/images/edit/MenuIcon/distinct.gif' border='0' align='absmiddle' WIDTH='2' HEIGHT='18'>&nbsp;
-<button OnClick="SelectionCommand(this,'Indent');" class='BtnImg' OnMouseOver='ButtonUp(this);' OnMouseOut='ButtonOut(this);'>
-<img src='/images/edit/MenuIcon/IconIndent.gif'border='0' alt='들여쓰기 늘임'></button>
-<button OnClick="SelectionCommand(this,'Outdent');" class='BtnImg' OnMouseOver='ButtonUp(this);' OnMouseOut='ButtonOut(this);'>
-<img src='/images/edit/MenuIcon/IconOutdent.gif'border='0' alt='들여쓰기 줄임'></button>
-<img src='/images/edit/MenuIcon/distinct.gif' border='0' align='absmiddle' WIDTH='2' HEIGHT='18'>&nbsp;
-<button OnClick="SelectionCommand(this,'InsertOrderedList');" class='BtnImg' OnMouseOver='ButtonUp(this);' OnMouseOut='ButtonOut(this);'>
-<img src='/images/edit/MenuIcon/IconOrdered.gif'border='0' alt='번호있는 목록'></button>
-<button OnClick="SelectionCommand(this,'InsertUnOrderedList');" class='BtnImg' OnMouseOver='ButtonUp(this);' OnMouseOut='ButtonOut(this);'>
-<img src='/images/edit/MenuIcon/IconUnOrdered.gif'border='0' alt='번호없는 목록'></button>
-<img src='/images/edit/MenuIcon/distinct.gif' border='0' align='absmiddle' WIDTH='2' HEIGHT='18'>&nbsp;
-<button OnClick="SelectionCommand(this,'CreateLink');" class='BtnImg' OnMouseOver='ButtonUp(this);' OnMouseOut='ButtonOut(this);'>
-<img src='/images/edit/MenuIcon/IconRelate.gif'border='0' alt='HyperLink'></button>
-</fieldset></font>
-
-<font id='TextMenuView' oncontextmenu='return false' onselectstart='return false'>
-
-<fieldset class='TextMenuBar'>
-<table cellpadding='3' cellspacing='0' border='0'><tr><td>
-<select class='solid' onchange="block_style(this, 'fontName')" onblur='this.selectedIndex=0;TextEditor.focus();'>
-<option value>글꼴
-<option value>------------
-<option value='굴림'>굴림
-<option value='궁서'>궁서
-<option value='돋움'>돋움
-<option value='바탕'>바탕
-<option value='Arial'>Arial
-<option value='Arial Black'>Arial Black
-<option value='Courier New'>Courier New
-<option value='Impact'>Impact
-<option value='Verdana'>Verdana
-<option value='Webdings'>Webdings
-<option value='Wingdings'>Wingdings
-</select>&nbsp;&nbsp;
-<select class='solid' onchange="block_style(this, 'FontSize')" onblur='this.selectedIndex=0;'>
-<option value>크기
-<option value='1'>1
-<option value='2'>2
-<option value='3'>3
-<option value='4'>4
-<option value='5'>5
-<option value='6'>6
-<option value='7'>7
-</select>&nbsp;&nbsp;
-<img src='/images/edit/MenuIcon/IconFontColor.gif' border='0' align='absmiddle'>
-<select class='solid' onchange="ChFontColor(this.value,'ForeColor')" onblur='this.selectedIndex=0;'>
-<option value>글자색
-<option value>기본색
-<option value='white'>흰색
-<option value='gray'>회색
-<option value='#ffff90'>연한노랑
-<option value='#ffffcf'>베이지
-<option value='#cf9000'>황토색
-<option value='maroon'>적갈색
-<option value='#ff9000'>주황색
-<option value='red'>빨간색
-<option value='#9090ff'>연보라색
-<option value='#902fcf'>보라색
-<option value='#cfffff'>옅은하늘색
-<option value='0099cc'>옅은파란색
-<option value='#6666FF'>파란색
-<option value='#2fff2f'>연두색
-<option value='green'>녹색
-<option value='black'>검정색
-</select>&nbsp;&nbsp;
-<img src='/images/edit/MenuIcon/IconFontBG.gif' border='0' align='absmiddle'>
-<select class='solid' onchange="ChFontColor(this.value,'BackColor')" onblur='this.selectedIndex=0;'>
-<option value>글자배경색
-<option value>기본색
-<option value='black'>검정색
-<option value='green'>녹색
-<option value='#2fff2f'>연두색
-<option value='#6666FF'>파란색
-<option value='0099cc'>옅은파란색
-<option value='#cfffff'>옅은하늘색
-<option value='#902fcf'>보라색
-<option value='#9090ff'>연보라색
-<option value='red'>빨간색
-<option value='#ff9000'>주황색
-<option value='maroon'>적갈색
-<option value='#cf9000'>황토색
-<option value='#ffffcf'>베이지
-<option value='#ffff90'>연한노랑
-<option value='gray'>회색
-<option value='white'>흰색
-</select>&nbsp;&nbsp;
-</td>
-<td>
-</td></tr>
-</table>
-</fieldset></font>
-
-<textarea style='display:none' name=content><%=CommonUtil.rplc(article.getContent(), "&", "&amp;")%></textarea>
-<input type=hidden name=bg_color value=white>
-<font id='TextEditView' style='width:480px; height:310px;display: inline;'>
-<iframe id='TextEditor' marginwidth='2' marginheight='1' style='width:480px; height:310px;'>
-</iframe>
-</font>
-<textarea id='TextView'
-style='border:1 solid; border-color:#D4D4D4; width:480px; height:310px;display: none;'></textarea>
-<% } else { %>
 <textarea style="width:480px; height:310px" name=content><%= CommonUtil.rplc(article.getContent(), "&", "&amp;") %></textarea>
-<% } // end if %>
     </td>
   </tr>
   <tr>
