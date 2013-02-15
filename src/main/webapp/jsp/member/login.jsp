@@ -65,6 +65,8 @@
 <input type="submit" value="로그인" id="login" name="login"/>
 <br>
 <a href='/jsp/member/agreement.jsp' title="Join in">회원가입</a>
+<br>
+<a href='/member?act=forgot' title="Join in">비밀번호를 잊었어요</a>
 </td>
 </tr>
 </tbody></table>
