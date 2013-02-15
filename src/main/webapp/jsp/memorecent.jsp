@@ -17,6 +17,7 @@
     <script src='/js/okboard.js'></script>
 	<link rel="stylesheet" href="/css/okjsp2007.css.jsp" type="text/css">
 	<link rel="stylesheet" href="/site2009/okjsp2009.css" type="text/css">
+    <meta name="google-translate-customization" content="f3a40b0f1ed271cb-c894f26c0728d180-g81c25d2f6b172513-f"></meta>
 </head>
 <body class="body" style="margin:0">
 <jsp:include page="/top.jsp" />
@@ -51,6 +52,12 @@
 </table>
 <jsp:include page="/footer.jsp" />
 <div id="sub_panel">
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'ko', includedLanguages: 'en,ja,zh-CN', layout: google.translate.TranslateElement.FloatPosition.TOP_RIGHT}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 	<div id="ad_banners">
 <script type="text/javascript">
 Banner.showAside();
