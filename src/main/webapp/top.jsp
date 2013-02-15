@@ -2,9 +2,6 @@
    int idx = response.getContentType().indexOf('=');
    String charset = response.getContentType().substring(idx+1); %>
 <div id="wrap">
-<style type="text/css">
-@import url("/site2009/okjsp2009.css");
-</style>
 <ul id="top">
 	<li id="logo"><a href="http://www.okjsp.pe.kr/bbs?act=FIRST_MAIN"><img src="/images/okjsp_160x50.gif" style="margin-left: -10px; "></a></li>
 	<li id="find">

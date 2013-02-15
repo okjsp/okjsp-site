@@ -19,21 +19,7 @@
     <script type="text/javascript" src="/js/banner.js" charset="utf-8"></script>
 	<script src="/js/ajax.js"></script>
     <script src="/js/okboard_view.js"></script>
-    <style type="text/css">
-.download img {
-    margin-top: 12px;
-    width: 64px;
-    height: 64px;
-}
-.download ul {
-    padding-left: 40px;
-    margin: 12px 0;
-}
-.download li {
-    list-style-type: decimal-leading-zero;
-}
-    
-    </style>
+    <meta name="google-translate-customization" content="f3a40b0f1ed271cb-c894f26c0728d180-g81c25d2f6b172513-f"></meta>
 </head>
 <body class="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 <jsp:include page="/top.jsp" />
@@ -386,6 +372,11 @@ while (iter.hasNext()) {
 	<jsp:param name="bbs" value="<%= one.getBbs() %>"/>
 </jsp:include>
 <div id="sub_panel">
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'ko', includedLanguages: 'en,ja,zh-CN', layout: google.translate.TranslateElement.FloatPosition.TOP_RIGHT}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 	<div id="ad_banners">
 <script type="text/javascript">
 Banner.showAside();

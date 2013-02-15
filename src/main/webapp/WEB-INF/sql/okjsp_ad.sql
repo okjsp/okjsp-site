@@ -1,6 +1,6 @@
 insert into okboard_ad (seq, startdate, enddate, priority) values 
-(211673, now(), '2013-02-28 23:59:59', 1);
-
+(212509, now(), '2013-02-20 23:59:59', 11);
+-- 11 free
 -- 185887)
 
 select * from okboard_ad order by aseq;
