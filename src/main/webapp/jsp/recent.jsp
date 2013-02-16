@@ -37,6 +37,21 @@ Banner.show();
 
 <div id="bookList">
 <h1># OKJSP 추천 도서</h1>
+<ul>
+<li>
+<a href="/f.jsp?http://www.hanb.co.kr/ebook/look.html?isbn=9788979149449" target="_blank">
+<img src="http://image.hanb.co.kr/ebookcover/m_9788979149449.gif" class="cover">
+</a>
+<h2>
+<a href="/f.jsp?http://www.hanb.co.kr/ebook/look.html?isbn=9788979149449" target="_blank">
+[ebook]프로젝트 성공을 위한 갑과 을의 상생협력 : 21명의 현직 전문가가 전하는 생생한 성공 노하우</a></h2>
+<p>
+<a href="/f.jsp?http://www.hanb.co.kr/ebook/look.html?isbn=9788979149449" target="_blank">
+이 책은 프로젝트 성공을 위해서 갑과 을이 어떻게 협력해야 할지를 알려준다. 저자와 함께 21명의 현직 전문가가 현장에서 
+겪었던 에피소드와 노하우를 바탕으로 갑이 을이 상생협력을 어떻게 해야 할지 알려준다. 이 책은 '갑-을' 입장에서 
+서로가 말하기 꺼리는 주제를 쉽고 재미있게 풀어냈으며, 이를 통해서 갑과 을의 가려운 곳을 시원하게 긁어 준다.</a></p>
+</li>
+<li style="display: none;">
 <a href="/f.jsp?http://www.hanb.co.kr/ebook/look.html?isbn=9788979149685" target="_blank">
 <img src="http://image.hanb.co.kr/ebookcover/m_9788979149685.gif" class="cover">
 </a>
@@ -48,6 +63,8 @@ Banner.show();
 이 책은 웹을 개발하면서 겪어 봤을 서블릿 컨테이너 관련 문제점과 궁금증을 속 시원하게 풀어줍니다. 
 서블릿의 동작원리, 개발 시 겪게 되는 문제점과 유의해야 할 사항, 
 서블릿 컨테이너 관련 팁 등을 통해서 웹 프로그래머로서의 레벨을 한 단계 높일 수 있을 것입니다.</a></p>
+</li>
+</ul>
 </div>
 
 <div id="newsfeed">
