@@ -102,24 +102,42 @@ function jumpto(e) {
 
 function saveBbslist(v) {
 	var saved = getCookie("bbslist");
-
-	if(saved) {
-		// remove duplicate
-		var reg = eval("/"+v+",/g");
-		saved = v + "," + (saved+",").replace(reg, "");
-		saved = saved.replace(/,*$/,"");
-	} else {
-		saved = v;
+	var changed = '';
+	var isNew = true;
+	var list = saved.split(',');
+	for(var idx in list) {
+		var item = list[idx].split(':');
+		if (item[0] == '') continue;
+		if (item[1] == undefined) {
+			item[1] = 1;
+		}
+		if (item[0] == v) {
+			item[1] = parseInt(item[1]) + 1;
+			isNew = false;
+		}
+		changed += item[0] + ':' + item[1] + ',';
 	}
+	if (isNew) {
+		changed += v + ":1,";
+	}
+	// sort array
+	var array = changed.split(',');
+	array.sort(function(a, b) {
+		return parseInt(b.split(':')[1]) - parseInt(a.split(':')[1]);
+	});
 	
-	setCookie("bbslist", saved, 365);
+	changed = array.join(',');
+
+	changed = changed.substring(0, changed.length - 1);
+	setCookie("bbslist", changed, 365);
 }
 
 function customizedList() {
 	var saved = getCookie("bbslist");
 	var list = saved.split(",").reverse();
 	for (idx in list) {
-		$("#bbslist option[value="+ list[idx] +"]").prependTo("#bbslist");
+		var item = list[idx].split(':');
+		$("#bbslist option[value="+ item[0] +"]").prependTo("#bbslist");
 	}
 }
 
@@ -383,4 +401,4 @@ function check(){
 
 $(function(){
 	customizedList();
-})
+});
