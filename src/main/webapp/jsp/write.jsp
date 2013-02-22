@@ -130,7 +130,7 @@
 <%
 	} //end ccl
 %><script type="text/javascript">
-	document.f1.ccl_id.value = "<%= article.getCcl_id() %>";
+	document.f1.ccl_id.value = "<%= CommonUtil.rplc(article.getCcl_id(), " ", "") %>";
 </script>
 <%
 	ArrayList fileList = (ArrayList)request.getAttribute("arrdf");
