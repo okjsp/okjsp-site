@@ -192,9 +192,9 @@ $.ajax({
 		}
 %>
     <tr class="body" align="center" style="height:32px">
-        <td class="ref tiny" style="width: 40px; font-weight: bold;">AD</td>
+        <td class="ref tiny" style="width: 40px; font-weight: bold;">Sponsored</td>
         <td class="subject" style="text-align: left">
-            <a href="/seq/<%= article.getSeq() %>" style="font-weight:bold"><%= article.getSubject() %></a>
+            <a href="/f.jsp?/seq/<%= article.getSeq() %>" style="font-weight:bold"><%= article.getSubject() %></a>
         </td>
         <td class="writer"><div><b><%= article.getWriter() %></b></div></td>
         <td class="writer"><img src="/profile/<%= article.getId() %>.jpg" style="width: 14px; height: 14px;" alt="<%= article.getWriter() %>"/></td>
