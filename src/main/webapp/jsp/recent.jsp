@@ -40,7 +40,7 @@ Banner.show();
 <ul>
 <li>
 <a href="/f.jsp?http://ji-n-son.co.kr/?post_type=bookinfo&p=2855" target="_blank">
-<img src="http://ji-n-son.co.kr/wp/wp-content/uploads/2013/02/%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98-%EC%BD%94%EB%93%9C-875x1024.jpg" class="cover">
+<img src="/upload/1362046827360.jpg" class="cover">
 </a>
 <h2>
 <a href="/f.jsp?http://ji-n-son.co.kr/?post_type=bookinfo&p=2855" target="_blank">
