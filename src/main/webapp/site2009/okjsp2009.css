@@ -124,8 +124,7 @@ ul {
 
 #bookList p {
 	text-align: left;
-	padding-right: 16px;
-	padding-bottom: 20px;
+	padding: 0 16px 20px;
 }
 
 .book img {

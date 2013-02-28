@@ -1,5 +1,5 @@
 insert into okboard_ad (seq, startdate, enddate, priority) values 
-(212509, now(), '2013-02-20 23:59:59', 11);
+(213309, now(), '2013-03-11 23:59:59', 10);
 -- 11 free
 -- 185887)
 

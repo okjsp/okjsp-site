@@ -39,6 +39,24 @@ Banner.show();
 <h1># OKJSP 추천 도서</h1>
 <ul>
 <li>
+<a href="/f.jsp?http://ji-n-son.co.kr/?post_type=bookinfo&p=2855" target="_blank">
+<img src="http://ji-n-son.co.kr/wp/wp-content/uploads/2013/02/%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98-%EC%BD%94%EB%93%9C-875x1024.jpg" class="cover">
+</a>
+<h2>
+<a href="/f.jsp?http://ji-n-son.co.kr/?post_type=bookinfo&p=2855" target="_blank">
+개발자의 코드 The Developer's Code</a></h2>
+<p>
+<a href="/f.jsp?http://ji-n-son.co.kr/?post_type=bookinfo&p=2855" target="_blank">
+What Real Programmers Do!!!
+<br>
+당신은 이미 훌륭한 코더이다.
+하지만 어려운 프로젝트를 통해 얻는 뛰어난 코딩 작업들은 언제나 충분하지 못하다.
+당신에게 필요한 50여 개의 지혜가 이 책에 담겨 있다.
+이 책은 베테랑 프로그래머에게는 웹 애플리케이션 개발에 대한 열정에 새로운 활기를 불어넣어 줄 것이며, 
+이제 막 프로그래머의 길에 들어선 초심자에게도 좋은 지침이 될 것이다.
+이 책을 통해 새롭고 현명한 방법으로 자신의 업무를 다시 생각하라.</a></p>
+</li>
+<li style="display: none;">
 <a href="/f.jsp?http://www.hanb.co.kr/ebook/look.html?isbn=9788979149449" target="_blank">
 <img src="http://image.hanb.co.kr/ebookcover/m_9788979149449.gif" class="cover">
 </a>
