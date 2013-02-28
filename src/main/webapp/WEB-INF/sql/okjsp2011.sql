@@ -12,3 +12,5 @@ select * from okboard_memo ORDER BY seq desc for orderby_num() between 1 and 100
 
 
 select * from okboard where seq = 117807;
+
+select * from okboard_info;
