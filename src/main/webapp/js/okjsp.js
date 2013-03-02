@@ -96,12 +96,12 @@ function errImage(n) {
 }
 
 function jumpto(e) {
-	saveBbslist(e.value);
+	saveBbslist("bbslist", e.value);
 	document.location.href='/bbs?act=LIST&bbs='+e.value;
 }
 
-function saveBbslist(v) {
-	var saved = getCookie("bbslist");
+function saveBbslist(key, v) {
+	var saved = getCookie(key);
 	var changed = '';
 	var isNew = true;
 	var list = saved.split(',');
@@ -129,7 +129,7 @@ function saveBbslist(v) {
 	
 	changed = array.join(',');
 
-	setCookie("bbslist", changed, 365);
+	setCookie(key, changed, 365);
 }
 
 function customizedList() {
