@@ -237,6 +237,8 @@ CREATE TABLE "forgot"(
 /* ¿Œµ¶Ω∫ */
 CREATE INDEX "okboard_bbsid_idx" on "okboard" ("bbsid");
 CREATE INDEX "okboard_ref_idx" on "okboard" ("ref" desc);
+CREATE INDEX "okboard_id_idx" on "okboard" ("id");
+
 CREATE INDEX "okboard_bookmark_id_idx" on "okboard_bookmark" ("id");
 CREATE UNIQUE INDEX "seq" on "okboard_category" ("seq");
 CREATE UNIQUE INDEX "fseq" on "okboard_file" ("fseq");
@@ -249,3 +251,5 @@ CREATE UNIQUE INDEX "seq" on "poll_query" ("seq");
 CREATE INDEX "idx_pollitem" on "pollitem" ("seq");
 CREATE INDEX "idx_polllist" on "polllist" ("seq");
 CREATE UNIQUE INDEX "forgot_email_token_idx" on "forgot" ("email","token");
+
+
