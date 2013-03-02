@@ -56,6 +56,14 @@ test('migration test', function() {
 	
 });
 
+test('NaN test', function() {
+	setCookie('bbslist', 'techtrend:7,,TOOL:NaN,recruit:13,ajax:2,bbs6:8,book:NaN,html5:5,android:2,lifeqna:1,springstudy:Na,lecture:1,bbs1:,docs:,bbs5');
+	ok('techtrend:7,,TOOL:NaN,recruit:13,ajax:2,bbs6:8,book:NaN,html5:5,android:2,lifeqna:1,springstudy:Na,lecture:1,bbs1:,docs:,bbs5' == getCookie('bbslist'), 'set test cookie');
+	saveBbslist('techtrend');
+	ok('recruit:13,techtrend:8,bbs6:8,html5:5,android:2,ajax:2,book:1,TOOL:1,lifeqna:1,springstudy:1,lecture:1,bbs1:1,docs:1,bbs5:1' == getCookie('bbslist'), 'clean up');
+	
+});
+
 var clearCookie = function(v) {
 	setCookie(v, null, -1);
 };

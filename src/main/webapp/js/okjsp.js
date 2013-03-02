@@ -108,7 +108,7 @@ function saveBbslist(v) {
 	for(var idx in list) {
 		var item = list[idx].split(':');
 		if (item[0] == '') continue;
-		if (item[1] == undefined) {
+		if (parseInt(item[1]).toString() == 'NaN') {
 			item[1] = 1;
 		}
 		if (item[0] == v) {
@@ -120,6 +120,7 @@ function saveBbslist(v) {
 	if (isNew) {
 		changed += v + ":1,";
 	}
+	changed = changed.substring(0,changed.length - 1);
 	// sort array
 	var array = changed.split(',');
 	array.sort(function(a, b) {
@@ -128,7 +129,6 @@ function saveBbslist(v) {
 	
 	changed = array.join(',');
 
-	changed = changed.substring(0, changed.length - 1);
 	setCookie("bbslist", changed, 365);
 }
 
