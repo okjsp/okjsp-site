@@ -3,11 +3,20 @@ test( "hello test", function() {
 	  ok( 2 == "2", "Passed!" );
 	});
 	
-var key = 'bbslisttest';
-test("okjsp.js saveBbslist", function() {
+module( 'Module One', {
+    setup: function() {
+    	clearTestCookie();
+    },
+    teardown: function() {
+    	clearTestCookie();
+    }
+});
+var clearTestCookie = function() {
 	clearCookie(key);
-	ok('' == getCookie(key), 'clear cookie');
-	
+	ok('' == getCookie(key), 'setup() clear cookie');
+} 
+var key = 'bbslisttest';
+test("okjsp.js saveBbslist", function() {	
 	saveBbslist(key, "techtrend");
 	ok('techtrend:1' == getCookie(key), 'save one');
 
@@ -46,8 +55,6 @@ test("okjsp.js saveBbslist", function() {
 	saveBbslist(key, "bbs1");
 	var str = getCookie(key);
 	ok('html5:2,techtrend:1,bbs1:1' == str, 'three and sort');
-	clearCookie(key);
-	ok('' == getCookie(key), 'clear cookie');
 });
 
 test('migration test', function() {
@@ -55,7 +62,6 @@ test('migration test', function() {
 	ok('html5,techtrend,bbs1' == getCookie(key));
 	saveBbslist(key, 'techtrend');
 	ok('techtrend:2,html5:1,bbs1:1' == getCookie(key));
-	clearCookie(key);
 });
 
 test('NaN test', function() {
@@ -63,7 +69,6 @@ test('NaN test', function() {
 	ok('techtrend:7,,TOOL:NaN,recruit:13,ajax:2,bbs6:8,book:NaN,html5:5,android:2,lifeqna:1,springstudy:Na,lecture:1,bbs1:,docs:,bbs5' == getCookie(key), 'set test cookie');
 	saveBbslist(key, 'techtrend');
 	ok('recruit:13,techtrend:8,bbs6:8,html5:5,android:2,ajax:2,book:1,TOOL:1,lifeqna:1,springstudy:1,lecture:1,bbs1:1,docs:1,bbs5:1' == getCookie(key), 'clean up');
-	clearCookie(key);
 });
 
 var clearCookie = function(v) {
