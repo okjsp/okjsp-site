@@ -14,6 +14,17 @@ import kr.pe.okjsp.util.DbCon;
 public class PointDaoTest extends TestCase {
 
 	PointDao pointDao = new PointDao();
+	@Override
+	protected void setUp() throws Exception {
+		super.setUp();
+		deleteTestData();
+	}
+	
+	@Override
+	protected void tearDown() throws Exception {
+		super.tearDown();
+		deleteTestData();
+	}
 	
 	public void testPointLog() throws Exception {
 		Member member = new Member();
@@ -117,17 +128,25 @@ public class PointDaoTest extends TestCase {
 
 		ArticleDao articleDao = new ArticleDao();
 		Article article = getArticle(member);
+		long start = System.currentTimeMillis();
+
 		int result = articleDao.write(article);
 		assertTrue(1 < result);
+		long lap1 = System.currentTimeMillis();
+		System.out.println(lap1 - start);
 		result = articleDao.write(article);
 		assertTrue(1 < result);
+		long lap2 = System.currentTimeMillis();
+		System.out.println(lap2 - lap1);
 		try {
 			result = articleDao.write(article);
+			long lap3 = System.currentTimeMillis();
+			System.out.println(lap3 - lap2);
 			fail();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+		deleteTestData();
 	}
 
 	private Article getArticle(Member member) {
@@ -141,7 +160,7 @@ public class PointDaoTest extends TestCase {
 		return article;
 	}
 	
-	public void testDeleteTestData() {
+	public void deleteTestData() {
 		Member member = getMember();
 		pointDao.deletePoint(member.getSid());
 	}
