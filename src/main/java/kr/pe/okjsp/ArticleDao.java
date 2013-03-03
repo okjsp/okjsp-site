@@ -42,6 +42,7 @@ public class ArticleDao {
 	
 	public static final String QUERY_ONE =
 		"select  bbsid, seq, \"ref\", step, lev, id, writer, subject, \"password\", email, hit, html, homepage, wtime, ip, memo, content, ccl_id from okboard where seq = ?";
+
 	public static final String QUERY_ONE_COUNTUP =
 		"select  bbsid, seq, \"ref\", step, lev, id, writer, subject, \"password\", email, incr(hit), html, homepage, wtime, ip, memo, content, ccl_id from okboard where seq = ?";
 
@@ -127,7 +128,7 @@ public class ArticleDao {
 	 * </pre>
 	 * @param conn
 	 * @param article
-	 * @return result record count
+	 * @return result record seq
 	 */
 	public int write(Connection conn, Article article) {
 		PreparedStatement pstmt = null;
@@ -380,6 +381,10 @@ public class ArticleDao {
 				checkSpam(conn, "recruit", String.valueOf(article.getSid()));
 			}
 			
+			if (CommonUtil.nchk(article.getSubject()).trim().equals("")) {
+				throw new IOException("No Subject");
+			}
+			
 			conn.setAutoCommit(false);
 
 			article.setSeq(getSeq(conn));
@@ -491,6 +496,33 @@ public class ArticleDao {
 		pstmt.close();
 		
 		return list;
+	}
+
+	public int delete(long seq) {
+		String sql = "delete from okboard where seq = ?";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int result = 0;
+		try {
+			conn = dbCon.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setLong(1, seq);
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				pstmt.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			try {
+				conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return result;
 	}
 
 }

@@ -1,6 +1,5 @@
 package kr.pe.okjsp.member;
 
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 
@@ -17,19 +16,18 @@ public class PointDaoTest extends TestCase {
 	@Override
 	protected void setUp() throws Exception {
 		super.setUp();
-		deleteTestData();
+		TestObject.deleteTestData();
 	}
 	
 	@Override
 	protected void tearDown() throws Exception {
 		super.tearDown();
-		deleteTestData();
+		TestObject.deleteTestData();
 	}
 	
 	public void testPointLog() throws Exception {
-		Member member = new Member();
-		member.setId("kenu1");
-		member.setSid(3582);
+		Member member = TestObject.getTestMember();
+		
 		boolean idExist = new MemberHandler().isIdExist(member.getId());
 		assertTrue(idExist);
 		
@@ -49,7 +47,7 @@ public class PointDaoTest extends TestCase {
 		pointDao.log(sid, code, point, info);
 		
 		// 로그인 1점, code 1
-		Member member = getMember();
+		Member member = TestObject.getTestMember();
 		member.setPassword("okpass");
 		
 		long pointBefore =  pointDao.getPoint(sid);
@@ -62,7 +60,7 @@ public class PointDaoTest extends TestCase {
 	
 	public void testPointHistoryWriteLogin() throws SQLException {
 		// login check
-		Member member = getMember();
+		Member member = TestObject.getTestMember();
 
 		// 글쓰기 10점, code 2
 		long pointBefore =  pointDao.getPoint(member.getSid());
@@ -83,15 +81,9 @@ public class PointDaoTest extends TestCase {
 		assertEquals(10, pointAfter - pointBefore);
 	}
 
-	private Member getMember() {
-		Member member = new Member();
-		member.setSid(3582);
-		member.setId("kenu1");
-		return member;
-	}
 	public void testPointHistoryMemoWriteLogin() throws SQLException {
 		// login check
-		Member member = getMember();
+		Member member = TestObject.getTestMember();
 		
 		// 메모글 1점, code 4
 		long pointBefore =  pointDao.getPoint(member.getSid());
@@ -112,52 +104,18 @@ public class PointDaoTest extends TestCase {
 		long pointAfter = pointDao.getPoint(member.getSid());
 		assertEquals(1, pointAfter - pointBefore);
 		conn.setAutoCommit(true);
-		// 메모글 삭제 -1점, code 5
+		// 메모글 삭제 0점, code 5
 		// 투표 1점 code 6
 		// 회원 탈퇴시 포인트 기록 삭제 테이블로 이동
 		
-		// 글삭제 -10점. code 3
+		// 글삭제 -50점. code 3
 		// DeleteServlet.doPost();
 		
 	}
 	
-	public void testCheckSpam() throws IOException {
-		Member member = new Member();
-		member.setId("kenu1");
-		member.setSid(3582);
-
-		ArticleDao articleDao = new ArticleDao();
-		Article article = getArticle(member);
-
-		int result = articleDao.write(article);
-		assertTrue(1 < result);
-
-		result = articleDao.write(article);
-		assertTrue(1 < result);
-
-		try {
-			result = articleDao.write(article);
-			fail();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		deleteTestData();
+	public void testLog() {
+		Member member = TestObject.getTestMember();
+		int log = pointDao.log(member.getSid(), 6, 1, "testLog");
+		assertTrue(log == 1);
 	}
-
-	private Article getArticle(Member member) {
-		Article article = new Article();
-		article.setBbs("recruit");
-		article.setSubject("subject");
-		article.setId(String.valueOf(member.getSid()));
-		article.setSid(member.getSid());
-		article.setContent("content");
-		article.setWriter(member.getId());
-		return article;
-	}
-	
-	public void deleteTestData() {
-		Member member = getMember();
-		pointDao.deletePoint(member.getSid());
-	}
-
 }

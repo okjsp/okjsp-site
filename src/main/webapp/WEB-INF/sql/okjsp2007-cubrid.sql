@@ -242,17 +242,18 @@ CREATE INDEX "okboard_bbsid_ref_idx" on "okboard" ("bbsid", "ref");
 CREATE INDEX "okboard_deleted_bbsid_idx" on "okboard_deleted" ("bbsid");
 CREATE INDEX "okboard_deleted_bbsid_ref_idx" on "okboard_deleted" ("bbsid", "ref");
 
-CREATE INDEX "okboard_bookmark_id_idx" on "okboard_bookmark" ("id");
 CREATE UNIQUE INDEX "seq" on "okboard_category" ("seq");
 CREATE UNIQUE INDEX "fseq" on "okboard_file" ("fseq");
 CREATE UNIQUE INDEX "mseq" on "okboard_memo" ("mseq");
 CREATE INDEX "memo_seq_idx" on "okboard_memo" ("seq");
 CREATE UNIQUE INDEX "tag" on "okboard_tag" ("tag");
 CREATE UNIQUE INDEX "id" on "okmember" ("id");
+
+CREATE UNIQUE INDEX "forgot_email_token_idx" on "forgot" ("email","token");
+CREATE INDEX "point_sid_idx" on "point_history" (sid);
+
+CREATE INDEX "okboard_bookmark_id_idx" on "okboard_bookmark" ("id");
 CREATE UNIQUE INDEX "seq" on "poll_group" ("seq");
 CREATE UNIQUE INDEX "seq" on "poll_query" ("seq");
 CREATE INDEX "idx_pollitem" on "pollitem" ("seq");
 CREATE INDEX "idx_polllist" on "polllist" ("seq");
-CREATE UNIQUE INDEX "forgot_email_token_idx" on "forgot" ("email","token");
-
-
