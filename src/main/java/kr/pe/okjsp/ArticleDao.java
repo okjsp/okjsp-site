@@ -29,10 +29,10 @@ public class ArticleDao {
 		" values (?,?,?,0,0, ?,?,?,?,old_password(?),?,?,0,0,1, SYSTIMESTAMP, ?,?,?)";
 
 	public static final String QUERY_NEW_REF =
-		"select max(\"ref\") from okboard where bbsid = ?";
+		"select max(`ref`) from okboard where bbsid = ?";
 
 	public static final String QUERY_NEW_REF_DELETED =
-		"select max(\"ref\") from okboard_deleted where bbsid = ?";
+		"select max(`ref`) from okboard_deleted where bbsid = ?";
 	
 	public static final String QUERY_ADD_FILE =
 		"insert into okboard_file (fseq, seq, filename, maskname, filesize, download) values (?,?,?,?,?,0)";

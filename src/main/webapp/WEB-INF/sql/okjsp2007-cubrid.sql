@@ -238,6 +238,9 @@ CREATE TABLE "forgot"(
 CREATE INDEX "okboard_bbsid_idx" on "okboard" ("bbsid");
 CREATE INDEX "okboard_ref_idx" on "okboard" ("ref" desc);
 CREATE INDEX "okboard_id_idx" on "okboard" ("id");
+CREATE INDEX "okboard_bbsid_ref_idx" on "okboard" ("bbsid", "ref");
+CREATE INDEX "okboard_deleted_bbsid_idx" on "okboard_deleted" ("bbsid");
+CREATE INDEX "okboard_deleted_bbsid_ref_idx" on "okboard_deleted" ("bbsid", "ref");
 
 CREATE INDEX "okboard_bookmark_id_idx" on "okboard_bookmark" ("id");
 CREATE UNIQUE INDEX "seq" on "okboard_category" ("seq");

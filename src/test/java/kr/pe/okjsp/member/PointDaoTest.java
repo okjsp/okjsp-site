@@ -128,20 +128,15 @@ public class PointDaoTest extends TestCase {
 
 		ArticleDao articleDao = new ArticleDao();
 		Article article = getArticle(member);
-		long start = System.currentTimeMillis();
 
 		int result = articleDao.write(article);
 		assertTrue(1 < result);
-		long lap1 = System.currentTimeMillis();
-		System.out.println(lap1 - start);
+
 		result = articleDao.write(article);
 		assertTrue(1 < result);
-		long lap2 = System.currentTimeMillis();
-		System.out.println(lap2 - lap1);
+
 		try {
 			result = articleDao.write(article);
-			long lap3 = System.currentTimeMillis();
-			System.out.println(lap3 - lap2);
 			fail();
 		} catch (IOException e) {
 			e.printStackTrace();
