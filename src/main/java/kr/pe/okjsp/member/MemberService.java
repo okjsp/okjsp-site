@@ -105,4 +105,9 @@ public class MemberService {
 		return dao.validateParams(email, token);
 	}
 
+	public boolean checkBySid(long sid) {
+		MemberDao dao = new MemberDao();
+		return dao.checkBySid(sid);
+	}
+
 }

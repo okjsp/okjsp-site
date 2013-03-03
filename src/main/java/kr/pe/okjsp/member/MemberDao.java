@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import kr.pe.okjsp.DaoUtil;
 import kr.pe.okjsp.util.DbCon;
 
 public class MemberDao {
@@ -76,4 +77,17 @@ public class MemberDao {
 		return result;
 	}
 
+	public boolean checkBySid(long sid) {
+		int result = 0;
+		try {
+			Connection pconn = dbCon.getConnection();
+			result = new DaoUtil().getCount(pconn,
+					"select count(*) from okmember where sid = ?",
+					new Object[] { sid });
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return result == 1;
+	}
 }
