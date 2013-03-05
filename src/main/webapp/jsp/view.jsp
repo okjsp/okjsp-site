@@ -67,11 +67,6 @@ http://www.okjsp.pe.kr/seq/<%= one.getSeq() %></a></div>
     <tr>
         <td class="td" class="wrap">
         <b><%= CommonUtil.showHtml(one.getSubject()) %></b>
-<%-- Twitter 공식 트윗 버튼 --%>
-<a href="//twitter.com/share" class="twitter-share-button"
-	data-count="horizontal" data-via="okjsp"
-	data-text="<%=CommonUtil.showHtml(one.getSubject())%>"> [Tweet]</a><script
-	type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
         </td>
     </tr>
     <tr>
@@ -310,6 +305,12 @@ while (iter.hasNext()) {
             <%= CommonUtil.showHtml(one.getSubject()) %>&nbsp;
             </a>
         <span class="tiny">[<%= one.getMemo() %>]</span>
+        <%-- Twitter 공식 트윗 버튼 --%>
+<a href="//twitter.com/share" class="twitter-share-button"
+	data-count="horizontal" data-via="okjsp"
+	data-text="<%=CommonUtil.showHtml(one.getSubject())%>"> [Tweet]</a><script
+	type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+        
         </td>
         <td><%= one.getWriter(9) %></td>
         <td class="tiny"><%= one.getRead() %></td>
