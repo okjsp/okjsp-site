@@ -39,6 +39,26 @@ Banner.show();
 <h1># OKJSP 추천 도서</h1>
 <ul>
 <li>
+<a href="/f.jsp?http://ji-n-son.co.kr/?bookinfo=%EA%B1%B0%EC%B9%A8%EC%97%86%EC%9D%B4-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC-%ED%8C%8C%EC%9D%B4" target="_blank">
+<img style="width: 160px" src="http://ji-n-son.co.kr/wp/wp-content/uploads/2013/03/%EB%8F%84%EC%84%9C%EC%A0%95%EB%B3%B4-%EC%83%81%EC%84%B8%EC%9D%B4%EB%AF%B8%EC%A7%80%ED%99%88%ED%94%BC.jpg" class="cover">
+</a>
+<h2>
+<a href="/f.jsp?http://ji-n-son.co.kr/?bookinfo=%EA%B1%B0%EC%B9%A8%EC%97%86%EC%9D%B4-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC-%ED%8C%8C%EC%9D%B4" target="_blank">
+거침없이 배우는 라즈베리 파이</a></h2>
+<p style="padding-bottom: 0">
+<a href="/f.jsp?http://ji-n-son.co.kr/?bookinfo=%EA%B1%B0%EC%B9%A8%EC%97%86%EC%9D%B4-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC-%ED%8C%8C%EC%9D%B4" target="_blank">
+라즈베리 파이의 공동 개발자인 에벤 업튼이 직접 저술한 책!
+<br />
+신용카드 크기만한 초소형 컴퓨터 라즈베리 파이의 활용과 임베디드 프로그래밍 입문을 위한 필수 지침서!
+</a>
+</p>
+<p style="text-align: right">
+에벤 업튼, 가레스 할퍼크리 공저/유하영, 전우영 공역
+<br />
+예약 판매중 3월 5일 ~ 3월 27일
+</p>
+</li>
+<li style="display: none;">
 <a href="/f.jsp?http://ji-n-son.co.kr/?post_type=bookinfo&p=2855" target="_blank">
 <img src="/upload/1362046827360.jpg" class="cover">
 </a>
