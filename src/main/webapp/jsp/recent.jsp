@@ -40,7 +40,7 @@ Banner.show();
 <ul>
 <li>
 <a href="/f.jsp?http://ji-n-son.co.kr/?bookinfo=%EA%B1%B0%EC%B9%A8%EC%97%86%EC%9D%B4-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC-%ED%8C%8C%EC%9D%B4" target="_blank">
-<img style="width: 160px" src="http://ji-n-son.co.kr/wp/wp-content/uploads/2013/03/%EB%8F%84%EC%84%9C%EC%A0%95%EB%B3%B4-%EC%83%81%EC%84%B8%EC%9D%B4%EB%AF%B8%EC%A7%80%ED%99%88%ED%94%BC.jpg" class="cover">
+<img style="width: 160px" src="http://ji-n-son.co.kr/wp/wp-content/uploads/2013/03/%EC%98%88%ED%8C%90%EC%9D%B4%EB%AF%B8%EC%A7%80_%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%EC%9A%A9-1024x849.jpg" class="cover">
 </a>
 <h2>
 <a href="/f.jsp?http://ji-n-son.co.kr/?bookinfo=%EA%B1%B0%EC%B9%A8%EC%97%86%EC%9D%B4-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC-%ED%8C%8C%EC%9D%B4" target="_blank">
@@ -75,32 +75,6 @@ What Real Programmers Do!!!
 이 책은 베테랑 프로그래머에게는 웹 애플리케이션 개발에 대한 열정에 새로운 활기를 불어넣어 줄 것이며, 
 이제 막 프로그래머의 길에 들어선 초심자에게도 좋은 지침이 될 것이다.
 이 책을 통해 새롭고 현명한 방법으로 자신의 업무를 다시 생각하라.</a></p>
-</li>
-<li style="display: none;">
-<a href="/f.jsp?http://www.hanb.co.kr/ebook/look.html?isbn=9788979149449" target="_blank">
-<img src="http://image.hanb.co.kr/ebookcover/m_9788979149449.gif" class="cover">
-</a>
-<h2>
-<a href="/f.jsp?http://www.hanb.co.kr/ebook/look.html?isbn=9788979149449" target="_blank">
-[ebook]프로젝트 성공을 위한 갑과 을의 상생협력 : 21명의 현직 전문가가 전하는 생생한 성공 노하우</a></h2>
-<p>
-<a href="/f.jsp?http://www.hanb.co.kr/ebook/look.html?isbn=9788979149449" target="_blank">
-이 책은 프로젝트 성공을 위해서 갑과 을이 어떻게 협력해야 할지를 알려준다. 저자와 함께 21명의 현직 전문가가 현장에서 
-겪었던 에피소드와 노하우를 바탕으로 갑이 을이 상생협력을 어떻게 해야 할지 알려준다. 이 책은 '갑-을' 입장에서 
-서로가 말하기 꺼리는 주제를 쉽고 재미있게 풀어냈으며, 이를 통해서 갑과 을의 가려운 곳을 시원하게 긁어 준다.</a></p>
-</li>
-<li style="display: none;">
-<a href="/f.jsp?http://www.hanb.co.kr/ebook/look.html?isbn=9788979149685" target="_blank">
-<img src="http://image.hanb.co.kr/ebookcover/m_9788979149685.gif" class="cover">
-</a>
-<h2>
-<a href="/f.jsp?http://www.hanb.co.kr/ebook/look.html?isbn=9788979149685" target="_blank">
-[ebook]웹 프로그래머를 위한 서블릿 컨테이너의 이해</a></h2>
-<p>
-<a href="/f.jsp?http://www.hanb.co.kr/ebook/look.html?isbn=9788979149685" target="_blank">
-이 책은 웹을 개발하면서 겪어 봤을 서블릿 컨테이너 관련 문제점과 궁금증을 속 시원하게 풀어줍니다. 
-서블릿의 동작원리, 개발 시 겪게 되는 문제점과 유의해야 할 사항, 
-서블릿 컨테이너 관련 팁 등을 통해서 웹 프로그래머로서의 레벨을 한 단계 높일 수 있을 것입니다.</a></p>
 </li>
 </ul>
 </div>
