@@ -148,10 +148,10 @@ $.ajax({
 		
 	},
 	failure: function(err) {
-		console.log(err);
+		window.console && console.log(err);
 	},
 	complete: function(d) {
-		console.log('complete ' + d);
+		window.console && console.log('complete ' + JSON.stringify(d));
 	}
 });
 </script>
