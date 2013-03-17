@@ -142,8 +142,17 @@ CREATE TABLE "okrole"(
 PRIMARY KEY("id","role")
 );
 
-CREATE TABLE "point_history"(
+CREATE TABLE "point_history" (
 "pseq" integer AUTO_INCREMENT(?,1) PRIMARY KEY,
+"sid" integer DEFAULT 0 NOT NULL,
+"code" character(4) DEFAULT '    ' NOT NULL,
+"point" integer DEFAULT 0 NOT NULL,
+"tstamp" timestamp DEFAULT TIMESTAMP'01/02/1970 00:00:00' NOT NULL,
+"info" character(202)
+);
+
+CREATE TABLE "point_history_backup" (
+"pseq" integer PRIMARY KEY,
 "sid" integer DEFAULT 0 NOT NULL,
 "code" character(4) DEFAULT '    ' NOT NULL,
 "point" integer DEFAULT 0 NOT NULL,
