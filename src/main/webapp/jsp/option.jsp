@@ -1,6 +1,7 @@
 <%@page pageEncoding="utf-8"%>
 <option value="book">책 얘기</option>
-<option value="recruit">구인/구직/홍보</option>
+<option value="recruit">구인/구직</option>
+<option value="pr">홍보</option>
 <option value="html5">HTML5</option>
 <option value="iphone">iOS</option>
 <option value="android">안드로이드</option>
@@ -35,19 +36,20 @@
 <option value="bbs7">소스자료실</option>
 <option value="docs">문서자료실</option>
 <option value="etc">기타자료실</option>
-<option value="japanlife">일본사는얘기</option>
-<option value="engdocs">english bbs</option>
 <option value="krtomcat">번역</option>
-<option value="model2jsp">모델2JSP책관련</option>
 <option value="okboard">자료실문답</option>
 <option value="javastudy">프로그램기초스터디</option>
-<option value="ns">자바패턴1기</option>
-<option value="dbstudy">DB스터디</option>
 <option value="springstudy">스프링 스터디</option>
+<option value="dbstudy">DB스터디</option>
+<option value="engdocs">english bbs</option>
+
+<option value="model2jsp">모델2JSP책관련</option>
 <option value="xf">SLF</option>
-<option value="twitter">트위터</option>
 <option value="ruby">Ruby on Rails</option>
 <option value="rubyqna">Ruby on Rails QnA</option>
 <option value="flex">Flex</option>
 <option value="flexqna">Flex QnA</option>
+<option value="japanlife">일본사는얘기</option>
+<option value="ns">자바패턴1기</option>
+<option value="twitter">트위터</option>
 <option value="trash">짬통</option>
