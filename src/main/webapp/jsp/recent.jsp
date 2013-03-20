@@ -11,7 +11,7 @@
 %>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
-    <title>NEW OKJSP with CUBRID</title>
+    <title>NEW OKJSP 2013</title>
 	<script type="text/javascript" src="/js/jquery/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="/js/jquery/jquery.timeago.js"></script>
 	<script type="text/javascript" src="/js/jquery/jquery.timeago.ko.js" charset="utf-8"></script>
