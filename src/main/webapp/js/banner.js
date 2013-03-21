@@ -68,7 +68,7 @@ showAside : function() {
         var idx = Math.floor(Math.random() * this.asideApp.length);
         html +=	this.asideApp[idx].tag;
     }
-    html += '<a href="http://platformadvisory.kr/archives/2633" target="_blank"><img src="/images/pag.png" alt="플랫폼 그룹"></a>'
+    html += '<a href="http://platformadvisory.kr/archives/2633" target="_blank"><img src="/images/pag.png" alt="플랫폼 그룹" style="width: 160px; margin: 1px;"></a>'
     document.writeln(html);
 },
 
