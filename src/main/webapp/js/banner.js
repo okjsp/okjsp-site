@@ -1,16 +1,10 @@
 var Banner = {
 main : [
 {
-	"expire": '2013-01-31',
+	"expire": '2013-03-31',
 	"tag": '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
 	'<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
 	'alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트"></a>'
-},
-{
-	"expire": '2013-03-22',
-	"tag": '<a href="/f.jsp?http://wasdevkr.com/?_pageVariable=OKJSP" target="_blank">' +
-	'<img src="/images/banner/ibm_473x98.jpg" ' +
-	'alt="IBM WAS V8.5 Liberty Profile 사용자 참여 콘테스트"></a>'
 }
 ],
 contentRight : [
@@ -38,8 +32,8 @@ footer : [
 
 aside : [
 {
-	'expire': "2013-02-15",
-	'tag': '<a href="/f.jsp?http://hanbitedu.or.kr/curriculum/programming01.html">' +
+	'expire': "2013-04-15",
+	'tag': '<a href="/f.jsp?http://hbiedu.co.kr">' +
 	'<img src="/images/banner/hbi_150x67.gif" alt="전자정부 표준 프레임워크, 클라우드 빅데이터 에코시스템(하둡)"></a>'
 }
 ],
