@@ -30,17 +30,12 @@ public class DbCon {
 			ds.setUrl(dbUrl);
 			ds.setUsername(dbUser);
 			ds.setPassword(dbPass);
-			ds.setValidationQuery("select 1");
-			ds.setValidationQueryTimeout(5);
 		} catch (Exception e) {
 			System.out.println("anable load DataSource~!");
 			e.printStackTrace();
 		} finally {
 			System.out.println("\n =============================================");
-			System.out.println(" ¡Ø DataBase Info ¡Ø");
 			System.out.println(" DRIVER : " + driver);
-			System.out.println(" DBURL : " + dbUrl);
-			System.out.println(" DBUSER : " + dbUser);
 			System.out.println(" =============================================\n");
 		}
 	}
@@ -77,7 +72,7 @@ public class DbCon {
 	
 	/**
 	 * <pre>
-	 * DataSourceÀÇ »óÅÂ¸¦ º¸¿©ÁØ´Ù.
+	 * DataSourceï¿½ï¿½ ï¿½ï¿½ï¿½Â¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø´ï¿½.
 	 * </pre>
 	 * @param ds
 	 * @throws SQLException
@@ -90,7 +85,7 @@ public class DbCon {
 
 	/**
 	 * <pre>
-	 * DataSource¸¦ Á¾·áÇÑ´Ù.
+	 * DataSourceï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
 	 * </pre>
 	 * @param ds
 	 * @throws SQLException
