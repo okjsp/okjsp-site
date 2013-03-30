@@ -19,8 +19,8 @@
 <option value="bbs5">머리식히는 곳</option>
 <option value="bbs2">DB Tips</option>
 <option value="bbs1">DB QnA</option>
-<option value="bbs4">JSP Tips</option>
-<option value="bbs3">JSP QnA</option>
+<option value="bbs4">JAVA/JSP Tips</option>
+<option value="bbs3">JAVA/JSP QnA</option>
 <option value="weblogic">j2ee Tips</option>
 <option value="weblgqna">j2ee QnA</option>
 <option value="mac">맥 정보</option>
