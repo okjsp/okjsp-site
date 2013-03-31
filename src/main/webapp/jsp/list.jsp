@@ -12,7 +12,7 @@
 <%
     response.setContentType("text/html;charset=euc-kr");
 
-	Iterator iter = list.getList().iterator();
+	Iterator iter = list.getList(request).iterator();
 	Article one = null;
 %>
 

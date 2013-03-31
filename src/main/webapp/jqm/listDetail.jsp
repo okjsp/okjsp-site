@@ -7,7 +7,7 @@
 			
 <%
 			list.setPageSize(15);
-			Iterator iter = list.getList().iterator();
+			Iterator iter = list.getList(request).iterator();
 			Article one = null;
 			
 			while (iter.hasNext()) {

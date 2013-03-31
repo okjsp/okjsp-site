@@ -215,18 +215,7 @@ Banner.showContentSection();
     memo = memoList.iterator();
     while (memo.hasNext()) {
       MemoBean mb = (MemoBean)memo.next(); 
-	
       
-      System.out.println("hateList : ["+ hateList +"]");
-      System.out.println("sid : ["+ mb.getSid() +"]");
-      System.out.println("sid : ["+  mb.getId().trim() +"]");
-      System.out.println("sid : ["+ mb.getWriter().trim() +"]");
-		System.out.println(hateList.indexOf(";" + Long.toString(mb.getSid()) + ";"));
-		System.out.println( hateList.indexOf(";" + mb.getId().trim() + ";"));
-		System.out.println(hateList.indexOf(";" + mb.getWriter().trim() + ";"));
-		
-	
-	
       if(hateList.indexOf(";" + Long.toString(mb.getSid()) + ";") != -1 || hateList.indexOf(";" + mb.getId().trim() + ";") != -1|| hateList.indexOf(";" + mb.getWriter().trim() + ";") != -1) continue;
 %>
 <a name="<%= mb.getMseq() %>"><!--()--></a>
