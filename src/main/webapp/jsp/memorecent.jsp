@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML>
 <%@ page pageEncoding="utf-8"
 	errorPage="error.jsp"
 	import="java.util.*,kr.pe.okjsp.*,
@@ -17,6 +17,7 @@
     <script src='/js/okboard.js'></script>
 	<link rel="stylesheet" href="/css/okjsp2007.css.jsp" type="text/css">
 	<link rel="stylesheet" href="/site2009/okjsp2009.css" type="text/css">
+	<meta charset="utf-8" />
     <meta name="google-translate-customization" content="f3a40b0f1ed271cb-c894f26c0728d180-g81c25d2f6b172513-f"></meta>
 </head>
 <body class="body" style="margin:0">
@@ -25,7 +26,9 @@
 <table class="bbsTable">
   <tr>
     <td valign='top'>
-
+<header>
+<h1>새 메모</h1>
+</header>
 <ul id="memorecent">
 <%
 	for (MemoBean memo: recent) {
