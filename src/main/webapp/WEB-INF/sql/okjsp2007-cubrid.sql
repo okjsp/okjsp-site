@@ -243,12 +243,12 @@ CREATE TABLE "forgot"(
 "used" integer default 0
 );
 
-CREATE TABLE "ok_hate" (
-   "sid" INTEGER NOT NULL, 
-   "idx" INTEGER AUTO_INCREMENT(1, 1) NOT NULL, 
-   "hate_key" CHARACTER(100), 
-   CONSTRAINT pk_ok_hate_sid_idx PRIMARY KEY("sid", "idx") 
-);
+CREATE TABLE "ok_hate" 
+( 
+"sid" INTEGER NOT NULL, 
+"hate_key" character varying(1000), 
+CONSTRAINT pk_ok_hate_sid PRIMARY KEY("sid") 
+); 	
 
 
 /* ¿Œµ¶Ω∫ */

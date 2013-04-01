@@ -28,11 +28,17 @@ public class ListHandler {
 	public static final String MINUS_HATE_LIST = 
 			" AND 0 = nvl(INSTR((SELECT hate_key FROM ok_hate WHERE sid = ?), ';'|| trim(ID) ||';') ,0) AND 0 = nvl( INSTR((SELECT hate_key FROM ok_hate WHERE sid = ?), ';'|| trim(WRITER) ||';') ,0)";
 
-	public static final String ARTICLE_LIST =
+	public static final String ARTICLE_LIST_MINUS_HATE_LIST =
 		"SELECT bbsid, seq, \"ref\", lev, subject, id, writer, hit, wtime, memo, content FROM okboard WHERE bbsid=? AND content LIKE ? "+ MINUS_HATE_LIST +" ORDER BY \"ref\" DESC, step for orderby_num() between ? and ?";
 
+	public static final String ARTICLE_LIST =
+			"SELECT bbsid, seq, \"ref\", lev, subject, id, writer, hit, wtime, memo, content FROM okboard WHERE bbsid=? AND content LIKE ? ORDER BY \"ref\" DESC, step for orderby_num() between ? and ?";
+
+	public static final String ARTICLE_LIST_COUNT_MINUS_HATE_LIST =
+			"SELECT COUNT(*), MAX(\"ref\") FROM okboard WHERE bbsid=? AND content LIKE ? "+ MINUS_HATE_LIST;
+	
 	public static final String ARTICLE_LIST_COUNT =
-		"SELECT COUNT(*), MAX(\"ref\") FROM okboard WHERE bbsid=? AND content LIKE ? "+ MINUS_HATE_LIST;
+		"SELECT COUNT(*), MAX(\"ref\") FROM okboard WHERE bbsid=? AND content LIKE ? ";
 
 	public static final String ARTICLE_LIST_RECENT =
 		"SELECT bbsid, seq, \"ref\", lev, subject, id, writer, hit, wtime, memo, content FROM okboard WHERE bbsid=? ORDER BY seq DESC for orderby_num() between 1 and ?";
@@ -66,9 +72,9 @@ public class ListHandler {
 			HttpSession s = request.getSession();
 			sid = ((Member)request.getSession().getAttribute("member")).getSid();
 		} catch (Exception e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
-		System.out.println("sid :::::::: " + sid);
+		//System.out.println("sid :::::::: " + sid);
 		
 		setCnt(sid);
 
@@ -77,13 +83,21 @@ public class ListHandler {
 		if (!EMPTY_KEYWORD) {
 			params.add("%"+keyword+"%");
 		}
-		params.add(sid);
-		params.add(sid);
+		
+		String LIST_QUERY = "";
+		//·Î±×ÀÎ½Ã¿¡¸¸ ignore Äõ¸®¹ÙÀÎµù
+		if(sid != 0 ){
+			params.add(sid);
+			params.add(sid);
+			LIST_QUERY = ARTICLE_LIST_MINUS_HATE_LIST;
+		}
+		//ºñ·Î±×ÀÎ½Ã ±×³É Á¶È¸Äõ¸® ¼öÇà
+		else LIST_QUERY = ARTICLE_LIST;
 		params.add(Integer.valueOf(pg*pageSize)+1);
 		params.add(Integer.valueOf((pg+1)*pageSize));
 		
 
-		return getList(ARTICLE_LIST, params);
+		return getList(LIST_QUERY, params);
 	}
 	
 	/**
@@ -159,22 +173,30 @@ public class ListHandler {
 			pconn = dbCon.getConnection();
 
 			int tmpCount = 1;
-			// ï¿½Ô½Ã¹ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			String sql = "";
+			
+			//·Î±×ÀÎ½Ã¿¡¸¸ ignore Äõ¸®¹ÙÀÎµù
+			if(sid==0) sql = ARTICLE_LIST_COUNT;
+			else sql = ARTICLE_LIST_COUNT_MINUS_HATE_LIST;
+			
 			if (EMPTY_KEYWORD) {
 				pstmt = pconn.prepareStatement(
-						CommonUtil.rplc(ARTICLE_LIST_COUNT, 
+						CommonUtil.rplc(sql, 
 								" AND content LIKE ?", 
 								"" ) );
 				pstmt.setString(tmpCount++,bbs);
 			} else {
 				pstmt = pconn.prepareStatement(
-						CommonUtil.rplc(ARTICLE_LIST_COUNT, "content", keyfield) );
+						CommonUtil.rplc(sql, "content", keyfield) );
 				pstmt.setString(tmpCount++,bbs);
 				pstmt.setString(tmpCount++,"%"+keyword+"%");	
 			}
-			pstmt.setLong(tmpCount++,sid);
-			pstmt.setLong(tmpCount++,sid);
 			
+			//·Î±×ÀÎ½Ã¿¡¸¸ ignore Äõ¸®¹ÙÀÎµù
+			if(sid!=0){
+				pstmt.setLong(tmpCount++,sid);
+				pstmt.setLong(tmpCount++,sid);
+			}
 			
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
@@ -210,7 +232,6 @@ public class ListHandler {
 				String query1 = query.substring(0, idxWhere);
 				String query2 = query.substring(idxWhere);
 				
-				// ï¿½Ô½Ã¹ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				if (EMPTY_KEYWORD) {
 					query2 = CommonUtil.rplc(query2,
 							" AND content LIKE ?",
@@ -326,7 +347,6 @@ public class ListHandler {
 
 	/**
 	 * Sets the keyword.
-	 * useBean ï¿½ï¿½ï¿½ï¿½ setter È£ï¿½ï¿½ï¿½ charset encodingï¿½ï¿½ 8859_1ï¿½ï¿½ ï¿½Ç´Â°ï¿½ ï¿½ï¿½ï¿½ï¿½
 	 * @param keyword The keyword to set
 	 */
 	public void setKeyword(String keyword) {

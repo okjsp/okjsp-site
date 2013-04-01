@@ -24,8 +24,8 @@ import javax.servlet.http.HttpServletResponse;
 import kr.pe.okjsp.member.Member;
 
 /** 
- * ê°„ë‹¨í•œ í´ëž˜ìŠ¤ ì„¤ëª… (short description about class)
- * ìžì„¸í•œ í´ëž˜ìŠ¤ ì„¤ëª… (full description about class)
+ * °£´ÜÇÑ Å¬·¡½º ¼³¸í (short description about class)
+ * ÀÚ¼¼ÇÑ Å¬·¡½º ¼³¸í (full description about class)
  * 
  * @author    jangmj 
  * @version   1.0 
@@ -45,25 +45,32 @@ public class HateServlet extends HttpServlet {
 		}
 		
 		HateDao dao = new HateDao();
-		//insert
-		if(hateString!=null){
+		//·Î±×ÀÎ½Ã¿¡¸¸ Äõ¸®¼öÇà > insert, update, select
+		if(sid!=0){						
+			//insert
+			if(hateString!=null){
+				try {
+					if(mode == null)
+						dao.insert(sid, hateString);
+					else dao.update(sid, hateString);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			
+			//select
 			try {
-				if(mode == null)
-					dao.insert(sid, hateString);
-				else dao.update(sid, hateString);
+				hateString = dao.select(sid);
+				request.setAttribute("result", hateString);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		}
 		
-		//select
 		try {
-			hateString = dao.select(sid);
-			request.setAttribute("result", hateString);
 			request.getRequestDispatcher("/jsp/ihateyou/hateList.jsp").forward(request, response);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		} catch (Exception e) {}
+		
 	}
 	
 	
