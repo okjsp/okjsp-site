@@ -1,5 +1,5 @@
 @CHARSET "EUC-KR";
-
+/* global */
 body {
 	margin: 0;
 	background: url(/images/okjspbg.gif);
@@ -72,7 +72,15 @@ font-size: 1.2em;
 #memorecent {
     margin-left: 24px;
 }
-ul {
+
+header h1 {
+    text-align: center;
+    background-color: skyblue;
+    padding: 20px;
+    margin: 4px;
+}
+
+#memorecent ul {
 	padding: 0;
 	margin: 0;
 	list-style-type: none;
