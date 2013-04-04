@@ -36,7 +36,7 @@ import kr.pe.okjsp.util.DbCon;
 
 public class HateDao {
 	
-	
+	//test 입니다.
 	public String select(long sid)throws Exception{
 		String hateList = ""; 
 		{
