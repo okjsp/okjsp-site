@@ -68,8 +68,7 @@ public class ControllerServlet extends HttpServlet {
     	if (member == null ) {
 			res.sendRedirect(loginPath);
 			return;
-    	} else if ( !( "Kenny".equals(member.getId()) ||
-    			"topolo".equals(member.getId()) ||
+    	} else if ( !( "sbroh".equals(member.getId()) ||
     			"kenu".equals(member.getId()) )){
     		throw new IOException("NO RIGHT TO WRITE!!!");
     	}

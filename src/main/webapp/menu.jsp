@@ -27,7 +27,7 @@
   <hr>
   <A href="/bbs?act=LIST&bbs=notice">공지사항</A>
   <br />
-  <A href="/bbs?act=MEMORECENT">새 메모</A>
+  <A href="/bbs?act=MEMORECENT">새 메모 <img src="/images/check.png" style="width:15px;height:15px"></A>
   <br />
   <hr />
   <A href="http://okjspgwt.appspot.com/gallery.html">이미지 검색<br />(Daum OpenAPI)</A>
