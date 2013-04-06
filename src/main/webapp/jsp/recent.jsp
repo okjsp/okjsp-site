@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html lang="ko">
 <%@ page errorPage="/jsp/error.jsp"
     import="kr.pe.okjsp.*,
@@ -10,7 +10,7 @@
 %><%@ taglib uri="/WEB-INF/tld/taglibs-string.tld" prefix="str"
 %>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+    <meta charset="euc-kr">
     <title>NEW OKJSP 2013</title>
 	<script type="text/javascript" src="/js/jquery/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="/js/jquery/jquery.timeago.js"></script>
@@ -39,23 +39,24 @@ Banner.show();
 <h1># OKJSP 추천 도서</h1>
 <ul>
 <li>
-<a href="/f.jsp?http://ji-n-son.co.kr/?bookinfo=%EA%B1%B0%EC%B9%A8%EC%97%86%EC%9D%B4-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC-%ED%8C%8C%EC%9D%B4" target="_blank">
-<img style="width: 160px" src="http://ji-n-son.co.kr/wp/wp-content/uploads/2013/03/%EC%98%88%ED%8C%90%EC%9D%B4%EB%AF%B8%EC%A7%80_%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%EC%9A%A9-1024x849.jpg" class="cover">
+<a href="/f.jsp?http://ji-n-son.co.kr/?bookinfo=%EC%9C%84%EB%8C%80%ED%95%9C-it-%EB%B2%A4%EC%B2%98%EC%9D%98-%ED%83%84%EC%83%9D" target="_blank">
+<img src="/images/book/jinson-20130403-greatitventure.jpg" class="cover">
 </a>
 <h2>
-<a href="/f.jsp?http://ji-n-son.co.kr/?bookinfo=%EA%B1%B0%EC%B9%A8%EC%97%86%EC%9D%B4-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC-%ED%8C%8C%EC%9D%B4" target="_blank">
-거침없이 배우는 라즈베리 파이</a></h2>
+<a href="/f.jsp?http://ji-n-son.co.kr/?bookinfo=%EC%9C%84%EB%8C%80%ED%95%9C-it-%EB%B2%A4%EC%B2%98%EC%9D%98-%ED%83%84%EC%83%9D" target="_blank">
+위대한 IT 벤처의 탄생</a></h2>
 <p style="padding-bottom: 0">
-<a href="/f.jsp?http://ji-n-son.co.kr/?bookinfo=%EA%B1%B0%EC%B9%A8%EC%97%86%EC%9D%B4-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC-%ED%8C%8C%EC%9D%B4" target="_blank">
-라즈베리 파이의 공동 개발자인 에벤 업튼이 직접 저술한 책!
-<br />
-신용카드 크기만한 초소형 컴퓨터 라즈베리 파이의 활용과 임베디드 프로그래밍 입문을 위한 필수 지침서!
+<a href="/f.jsp?http://ji-n-son.co.kr/?bookinfo=%EC%9C%84%EB%8C%80%ED%95%9C-it-%EB%B2%A4%EC%B2%98%EC%9D%98-%ED%83%84%EC%83%9D" target="_blank">
+“한국을 대표하는 9인의 스타트업, 그들의 진솔하고 위대한 이야기”
 </a>
-</p>
-<p style="text-align: right">
-에벤 업튼, 가레스 할퍼크리 공저/유하영, 전우영 공역
 <br />
-예약 판매중 3월 5일 ~ 3월 27일
+2012년부터 시작된 창업붐은 많은 일반인들뿐만 아니라 학생들을 창업의 길로 이끌고 있다. 특히 수많은 IT 관련 경진대회 등을 통해 
+기술력만으로도 창업이 가능하다고 생각하기 되면서 많은 학생들이 섣부른 도전으로 너무 이른 나이에 쓰라린 패배를 경험하게 되는 듯하다.
+<br />
+굳이 경험하지 않아도 되는 것들은 피해가는 것도 나쁘지 않다는 생각에 
+선배들의 경험을 나누어 주고자 하여 이 도서가 기획되었으며, 나누고자 하는 경험은 좋은 경험뿐만 아니라 나쁜 경험도 해당된다.
+<br />
+이미 창업을 한 선배들의 이야기와 그 이야기를 바탕으로 한 분석 등을 통해 창업준비생들에게 조금 더 실질적인 도움을 주고자 한다. 
 </p>
 </li>
 <li style="display: none;">
