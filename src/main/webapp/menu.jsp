@@ -30,8 +30,7 @@
   <A href="/bbs?act=MEMORECENT">새 메모 <img src="/images/check.png" style="width:15px;height:15px"></A>
   <br />
   <hr />
-  <A href="http://okjspgwt.appspot.com/gallery.html">이미지 검색<br />(Daum OpenAPI)</A>
-  <br />
+  open: <br />
   <A href="http://www.okjsp.pe.kr:8080" title="Jenkins CI tool">OKJSP Health</A>
   <br />
   <A href="https://github.com/okjsp/okjsp-site" title="OKJSP source">OKJSP 사이트소스</A>
