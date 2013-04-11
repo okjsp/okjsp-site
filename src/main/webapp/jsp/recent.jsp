@@ -12,7 +12,7 @@
 <head>
     <meta charset="euc-kr">
     <title>NEW OKJSP 2013</title>
-    <meta property="og:image" content="/images/okjsp_logo_cube_800.png"/>
+    <meta property="og:image" content="http://www.okjsp.pe.kr/images/okjsp_logo_cube_800.png"/>
 	<script type="text/javascript" src="/js/jquery/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="/js/jquery/jquery.timeago.js"></script>
 	<script type="text/javascript" src="/js/jquery/jquery.timeago.ko.js" charset="utf-8"></script>

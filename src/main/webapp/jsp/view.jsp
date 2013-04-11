@@ -11,7 +11,7 @@
 <html>
 <head>
     <META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=ksc5601">
-    <meta property="og:image" content="/images/okjsp_logo_cube_800.png"/>
+    <meta property="og:image" content="http://www.okjsp.pe.kr/images/okjsp_logo_cube_800.png"/>
     
     <link rel="stylesheet" href="/css/okjsp2007.css.jsp" type="text/css">
     <title>OKJSP: <%= one.getSubject() %></title>
