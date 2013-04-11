@@ -30,6 +30,14 @@ public class DbCon {
 			ds.setUrl(dbUrl);
 			ds.setUsername(dbUser);
 			ds.setPassword(dbPass);
+			
+			ds.setMaxIdle(10);
+			ds.setMaxActive(40);
+			ds.setMaxWait(1000);
+			ds.setValidationQuery("select 1/1");
+			ds.setValidationQueryTimeout(1);
+			ds.setTestOnBorrow(true);
+
 		} catch (Exception e) {
 			System.out.println("anable load DataSource~!");
 			e.printStackTrace();
