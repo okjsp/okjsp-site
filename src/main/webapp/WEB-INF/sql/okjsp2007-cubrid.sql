@@ -243,6 +243,14 @@ CREATE TABLE "forgot"(
 "used" integer default 0
 );
 
+CREATE TABLE "ok_hate" 
+( 
+"sid" INTEGER NOT NULL, 
+"hate_key" character varying(1000), 
+CONSTRAINT pk_ok_hate_sid PRIMARY KEY("sid") 
+); 	
+
+
 /* ¿Œµ¶Ω∫ */
 CREATE INDEX "okboard_bbsid_idx" on "okboard" ("bbsid");
 CREATE INDEX "okboard_ref_idx" on "okboard" ("ref" desc);

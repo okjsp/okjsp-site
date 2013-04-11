@@ -8,6 +8,10 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import kr.pe.okjsp.member.Member;
 import kr.pe.okjsp.util.CommonUtil;
 import kr.pe.okjsp.util.DbCon;
 import net.sf.ehcache.Cache;
@@ -20,22 +24,33 @@ import net.sf.ehcache.Element;
  */
 public class ListHandler {
 	DbCon dbCon = new DbCon();
+	
+	public static final String MINUS_HATE_LIST = 
+			" AND 0 = nvl(INSTR((SELECT hate_key FROM ok_hate WHERE sid = ?), ';'|| trim(ID) ||';') ,0) AND 0 = nvl( INSTR((SELECT hate_key FROM ok_hate WHERE sid = ?), ';'|| trim(WRITER) ||';') ,0)";
+
+	public static final String ARTICLE_LIST_MINUS_HATE_LIST =
+		"SELECT bbsid, seq, \"ref\", lev, subject, id, writer, hit, wtime, memo, content FROM okboard WHERE bbsid=? AND content LIKE ? "+ MINUS_HATE_LIST +" ORDER BY \"ref\" DESC, step for orderby_num() between ? and ?";
 
 	public static final String ARTICLE_LIST =
-		"SELECT bbsid, seq, \"ref\", lev, subject, id, writer, hit, wtime, memo, content FROM okboard WHERE bbsid=? AND content LIKE ? ORDER BY \"ref\" DESC, step for orderby_num() between ? and ?";
+			"SELECT bbsid, seq, \"ref\", lev, subject, id, writer, hit, wtime, memo, content FROM okboard WHERE bbsid=? AND content LIKE ? ORDER BY \"ref\" DESC, step for orderby_num() between ? and ?";
 
+	public static final String ARTICLE_LIST_COUNT_MINUS_HATE_LIST =
+			"SELECT COUNT(*), MAX(\"ref\") FROM okboard WHERE bbsid=? AND content LIKE ? "+ MINUS_HATE_LIST;
+	
 	public static final String ARTICLE_LIST_COUNT =
-		"SELECT COUNT(*), MAX(\"ref\") FROM okboard WHERE bbsid=? AND content LIKE ?";
+		"SELECT COUNT(*), MAX(\"ref\") FROM okboard WHERE bbsid=? AND content LIKE ? ";
 
 	public static final String ARTICLE_LIST_RECENT =
 		"SELECT bbsid, seq, \"ref\", lev, subject, id, writer, hit, wtime, memo, content FROM okboard WHERE bbsid=? ORDER BY seq DESC for orderby_num() between 1 and ?";
 
 	public static final String ARTICLE_LIST_ALL_RECENT =
-		"SELECT okboard.bbsid, seq, \"ref\", lev, subject, id, writer, hit, wtime, memo, content FROM okboard ORDER BY seq DESC for orderby_num() between 1 and ?";
+		"SELECT okboard.bbsid, seq, \"ref\", lev, subject, id, writer, hit, wtime, memo, content FROM okboard  ORDER BY seq DESC for orderby_num() between 1 and ?";
 	
 	public static final String ARTICLE_LIST_REF =
 		"SELECT bbsid, seq, \"ref\", lev, subject, id, writer, hit, wtime, memo, content FROM okboard WHERE bbsid=? AND \"ref\"=? ORDER BY \"ref\" DESC, step";
 
+	
+	
 	private String bbs;
 	private String keyfield = "content";
 	private String keyword = "";
@@ -49,18 +64,40 @@ public class ListHandler {
 	 * @return Collection
 	 * @throws SQLException
 	 */
-	public Collection getList() throws SQLException {
-		setCnt();
+	public Collection getList(HttpServletRequest request) throws SQLException {
+		
+		long sid = 0L;
+		
+		try {
+			HttpSession s = request.getSession();
+			sid = ((Member)request.getSession().getAttribute("member")).getSid();
+		} catch (Exception e) {
+			//e.printStackTrace();
+		}
+		//System.out.println("sid :::::::: " + sid);
+		
+		setCnt(sid);
 
 		ArrayList params = new ArrayList();
 		params.add(bbs);
 		if (!EMPTY_KEYWORD) {
 			params.add("%"+keyword+"%");
 		}
+		
+		String LIST_QUERY = "";
+		//로그인시에만 ignore 쿼리바인딩
+		if(sid != 0 ){
+			params.add(sid);
+			params.add(sid);
+			LIST_QUERY = ARTICLE_LIST_MINUS_HATE_LIST;
+		}
+		//비로그인시 그냥 조회쿼리 수행
+		else LIST_QUERY = ARTICLE_LIST;
 		params.add(Integer.valueOf(pg*pageSize)+1);
 		params.add(Integer.valueOf((pg+1)*pageSize));
+		
 
-		return getList(ARTICLE_LIST, params);
+		return getList(LIST_QUERY, params);
 	}
 	
 	/**
@@ -128,27 +165,39 @@ public class ListHandler {
 	/**
 	 * Sets the cnt.
 	 */
-	public void setCnt() throws SQLException {
+	public void setCnt(long sid) throws SQLException {
 		Connection pconn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		try{
 			pconn = dbCon.getConnection();
 
-			// 게시물 수 가져오기
+			int tmpCount = 1;
+			String sql = "";
+			
+			//로그인시에만 ignore 쿼리바인딩
+			if(sid==0) sql = ARTICLE_LIST_COUNT;
+			else sql = ARTICLE_LIST_COUNT_MINUS_HATE_LIST;
+			
 			if (EMPTY_KEYWORD) {
 				pstmt = pconn.prepareStatement(
-						CommonUtil.rplc(ARTICLE_LIST_COUNT, 
+						CommonUtil.rplc(sql, 
 								" AND content LIKE ?", 
 								"" ) );
-				pstmt.setString(1,bbs);
+				pstmt.setString(tmpCount++,bbs);
 			} else {
 				pstmt = pconn.prepareStatement(
-						CommonUtil.rplc(ARTICLE_LIST_COUNT, "content", keyfield) );
-				pstmt.setString(1,bbs);
-				pstmt.setString(2,"%"+keyword+"%");
+						CommonUtil.rplc(sql, "content", keyfield) );
+				pstmt.setString(tmpCount++,bbs);
+				pstmt.setString(tmpCount++,"%"+keyword+"%");	
 			}
-
+			
+			//로그인시에만 ignore 쿼리바인딩
+			if(sid!=0){
+				pstmt.setLong(tmpCount++,sid);
+				pstmt.setLong(tmpCount++,sid);
+			}
+			
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
 				this.cnt = rs.getInt(1);
@@ -160,7 +209,7 @@ public class ListHandler {
 			dbCon.close(pconn, pstmt, rs);
 		}
 	}
-
+	
 	/**
 	 * Method getList.
 	 * @param query
@@ -183,7 +232,6 @@ public class ListHandler {
 				String query1 = query.substring(0, idxWhere);
 				String query2 = query.substring(idxWhere);
 				
-				// 게시물 목록 가져오기
 				if (EMPTY_KEYWORD) {
 					query2 = CommonUtil.rplc(query2,
 							" AND content LIKE ?",
@@ -299,7 +347,6 @@ public class ListHandler {
 
 	/**
 	 * Sets the keyword.
-	 * useBean 에서 setter 호출시 charset encoding이 8859_1로 되는것 같음
 	 * @param keyword The keyword to set
 	 */
 	public void setKeyword(String keyword) {

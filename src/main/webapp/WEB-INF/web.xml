@@ -179,6 +179,16 @@
 		<url-pattern>/member</url-pattern>
 	</servlet-mapping>
 	<!--===========================mobile_END=========================  -->
+	<!-- i hate you start -->
+	<servlet>
+		<servlet-name>okhate</servlet-name>
+		<servlet-class>kr.pe.okjsp.HateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>okhate</servlet-name>
+		<url-pattern>/hateu</url-pattern>
+	</servlet-mapping>
+	<!-- i hate you end -->
 	<jsp-config>
 		<taglib>
 			<taglib-uri>http://java.sun.com/jstl/core</taglib-uri>

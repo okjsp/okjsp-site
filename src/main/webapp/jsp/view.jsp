@@ -201,13 +201,21 @@ Banner.showContentSection();
 	</div>
 <div id="m" class="tablestyle">
 <%
+	String hateList = "";
+	if (member.getSid() > 0)
+	{
+		HateDao dao = new HateDao();
+		hateList = dao.select(member.getSid());		
+	}
+
   ArrayList<MemoBean> memoList = new MemoHandler().getList(one.getSeq());
   Iterator memo = null;
   if (memoList != null) {
     memo = memoList.iterator();
     while (memo.hasNext()) {
-      MemoBean mb = (MemoBean)memo.next();
-
+      MemoBean mb = (MemoBean)memo.next(); 
+      
+      if(hateList.indexOf(";" + Long.toString(mb.getSid()) + ";") != -1 || hateList.indexOf(";" + mb.getId().trim() + ";") != -1|| hateList.indexOf(";" + mb.getWriter().trim() + ";") != -1) continue;
 %>
 <a name="<%= mb.getMseq() %>"><!--()--></a>
 <ul><li class="c">
@@ -222,12 +230,12 @@ Banner.showContentSection();
 %><%= mb.getWriter() %>
 <%
     if (member.getSid() > 0) {
-%><sub>(<%= pointDao.getPoint(mb.getSid()) %>)</sub>
+%><sub>(<%//= pointDao.getPoint(mb.getSid()) %>)</sub>
 <%
     }
 %>
 </li>
-<li class="d"><%= mb.getWhen("yyyy-MM-dd HH:mm:ss")
+<li class="d"><%//= mb.getWhen("yyyy-MM-dd HH:mm:ss")
 %></li><li class="e"><a href="javascript:show_memodel('<%= mb.getMseq() %>')">x</a>
 <%-- facebook like button --%>
 <iframe src="http://www.facebook.com/plugins/like.php?href=http://www.okjsp.pe.kr/seq/<%= mb.getSeq()+"%23"+mb.getMseq() %>"
