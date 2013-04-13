@@ -12,10 +12,6 @@
 <head>
     <meta charset="euc-kr">
     <title>NEW OKJSP 2013</title>
-    <meta property="og:image" content="http://www.okjsp.pe.kr/images/okjsp_logo_cube_800.png"/>
-    <meta property="og:url" content="http://www.okjsp.pe.kr/"/>
-    <meta property="og:title" content="OKJSP"/>
-    <meta property="og:description" content="OKJSP; the Korea Biggest Java Programmer Community, since 2000/12/05"/>
 	<script type="text/javascript" src="/js/jquery/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="/js/jquery/jquery.timeago.js"></script>
 	<script type="text/javascript" src="/js/jquery/jquery.timeago.ko.js" charset="utf-8"></script>
