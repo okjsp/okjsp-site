@@ -1,6 +1,6 @@
 <%@page import="kr.pe.okjsp.util.DomainUtil"%>
 <%@ page pageEncoding="euc-kr" %><%
-    String domain = DomainUtil.getBaseDomain(request.getRequestURL()), ;
+    String domain = DomainUtil.getBaseDomain(request.getRequestURL());
     kr.pe.okjsp.util.CommonUtil.setCookie(domain, response, "okid", "", 0);
     kr.pe.okjsp.util.CommonUtil.setCookie(domain, response, "sid", "", 0);
     kr.pe.okjsp.util.CommonUtil.setCookie(domain, response, "okwriter", "", 0);
