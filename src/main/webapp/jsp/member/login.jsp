@@ -1,4 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@page import="kr.pe.okjsp.util.DomainUtil"%>
 <%@page pageEncoding="euc-kr"%>
 <%@page import="kr.pe.okjsp.util.CommonUtil"%>
 <%@page import="kr.pe.okjsp.Navigation"%><html><head>
@@ -48,7 +49,7 @@
 </div>
 
 <div style="width:644px;float:left;margin-left:8px;">
-      <form name="f1" method="post" action="<%= Navigation.getPath("SECURE_DOMAIN") %>/jsp/member/login2.jsp" 
+      <form name="f1" method="post" action="<%= DomainUtil.getSecureDomain(request.getRequestURL()) %>/jsp/member/login2.jsp" 
       	class="form_write" onSubmit="return check_login(this)">
       <input type="hidden" name="returnPath" value="<%= CommonUtil.nchk(request.getParameter("returnPath"), "/") %>">
 <table>

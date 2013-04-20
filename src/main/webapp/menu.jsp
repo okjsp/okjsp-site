@@ -1,3 +1,4 @@
+<%@page import="kr.pe.okjsp.util.DomainUtil"%>
 <%@page pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core"%>
 <%@page import="kr.pe.okjsp.util.CommonUtil"%>
@@ -10,13 +11,13 @@
 	<jsp:useBean id="member" class="kr.pe.okjsp.member.Member" scope="session"/>
 	<jsp:setProperty name="member" property="id" value='<%= CommonUtil.getCookie(request, "okid") %>' />
 	<c:if test="${empty member.id}">
-		<a href="<%= Navigation.getPath("LOGFORM") %>">로그인</a>
+		<a href="<%= DomainUtil.getSecureDomain(request.getRequestURL()) %>/jsp/member/login.jsp">로그인</a>
 		<br />
 		<a href="/jsp/member/agreement.jsp"><b>회원가입</b></a>
 	</c:if>
 		<SPAN ID="member" style="display:block; margin-left:0px">
 		<c:if test="${!empty member.id}">
-			<a href="<%= Navigation.getPath("SECURE_DOMAIN") %>/jsp/member/info.jsp" ><b><%= member.getId() %></b> 회원정보</a> 
+			<a href="<%= DomainUtil.getSecureDomain(request.getRequestURL()) %>/jsp/member/info.jsp" ><b><%= member.getId() %></b> 회원정보</a> 
 <br>
 			<a href="/jsp/member/logout.jsp" >로그아웃</a>
 			<br>

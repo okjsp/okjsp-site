@@ -7,6 +7,7 @@
   --%>
 <%-- 세션의 회원정보 확인 
      세션이 없을 경우 로그인페이지로 이동 --%>
+<%@page import="kr.pe.okjsp.util.DomainUtil"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 <%@ page contentType="text/html;charset=euc-kr" %>
 <%@page import="kr.pe.okjsp.member.Member"%>
@@ -15,7 +16,8 @@
 	Member member = (Member)session.getAttribute("member");
 	if (member == null || member.getEmail() == null) {
 		response.sendRedirect(Navigation.getPath("LOGFORM")+"?returnPath="
-				+URLEncoder.encode(Navigation.getPath("SECURE_DOMAIN")+"/jsp/member/info.jsp","utf-8"));
+				+ URLEncoder.encode(DomainUtil.getSecureDomain(request.getRequestURL()) 
+						+ "/jsp/member/info.jsp","utf-8"));
 		return;
 	}
 %>

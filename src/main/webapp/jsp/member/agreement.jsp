@@ -53,7 +53,7 @@ h1 {
     </tr>
     <tr>
         <td align="center"><form name="form1" method="post" 
-        		action="<%= Navigation.getPath("SECURE_DOMAIN") %>/jsp/member/form.jsp">
+        		action="/jsp/member/form.jsp">
                 <input type="submit" name="Submit" value="동의합니다.">
                 <input type="button" name="Submit2" value="동의하지 않습니다."
                  onClick="window.close()">

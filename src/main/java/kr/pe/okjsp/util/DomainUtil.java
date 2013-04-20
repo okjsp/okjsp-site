@@ -25,4 +25,17 @@ public class DomainUtil {
 		return url.substring(0, idx);
 	}
 
+	public static String getDomain(StringBuffer url) {
+		return getDomain(url.toString());
+	}
+
+	public static String getSecureDomain(String url) {
+		return getSecureURL(getDomain(url));
+	}
+	
+	public static String getSecureDomain(StringBuffer url) {
+		return getSecureURL(getDomain(url.toString()));
+	}
+
+
 }
