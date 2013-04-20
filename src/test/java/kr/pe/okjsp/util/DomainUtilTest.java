@@ -19,4 +19,16 @@ public class DomainUtilTest extends TestCase {
 		assertEquals("http://www.okjsp.pe.kr/bbs", DomainUtil.getFixedURL("http://okjsp.pe.kr/bbs"));
 		assertEquals("http://www.OKJSP.pe.kr", DomainUtil.getFixedURL("http://OKJSP.pe.kr"));
 	}
+	
+	public void testOtherDomain() {
+		assertEquals("http://www.okjsp.net/", DomainUtil.getFixedURL("http://www.okjsp.net/"));
+	}
+	public void testOtherSecureDomain() {
+		assertEquals("https://www.okjsp.net/", DomainUtil.getSecureURL("http://www.okjsp.net/"));
+	}
+	public void testGetDomain() {
+		assertEquals("http://www.okjsp.net", DomainUtil.getDomain("http://www.okjsp.net/bbs?act=FIRST_MAIN"));
+	}
+	
+	
 }
