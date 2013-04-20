@@ -19,8 +19,8 @@ public class DomainUtil {
 	}
 
 	public static String getDomain(String url) {
-		if (url == null || url.length() <= 7 ) return url;
-		int idx = url.indexOf("/", 7);
+		if (url == null || url.length() <= 8 ) return url;
+		int idx = url.indexOf("/", 8);
 		
 		return url.substring(0, idx);
 	}

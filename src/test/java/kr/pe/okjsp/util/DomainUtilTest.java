@@ -33,6 +33,9 @@ public class DomainUtilTest extends TestCase {
 	public void testGetSecureDomain() {
 		assertEquals("https://www.okjsp.net", DomainUtil.getSecureDomain("http://www.okjsp.net/bbs?act=FIRST_MAIN"));
 	}
+	public void testGetSecureDomainFromURL() {
+		assertEquals("https://www.okjsp.net", DomainUtil.getSecureDomain("https://www.okjsp.net/jsp/member/login.jsp"));
+	}
 	
 	
 }

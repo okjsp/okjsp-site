@@ -5,7 +5,6 @@
 <%@page import="kr.pe.okjsp.Navigation"%><html><head>
 <script src="form.js"></script>
 <link rel="stylesheet" href="/css/okjsp2007.css.jsp" type="text/css">
-<link rel="stylesheet" href="/event/200908/nas.css" type="text/css">
 <style type="text/css">
 .form_write {
 	margin:100px auto;
