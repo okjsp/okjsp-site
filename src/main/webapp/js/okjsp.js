@@ -289,6 +289,8 @@ function setCookie( cookieName, cookieValue, expireDate ) {
  today.setDate( today.getDate() + parseInt( expireDate ) );
  document.cookie = cookieName + "=" + escape( cookieValue ) + "; expires=" + today.toGMTString() 
     + "; path=/; domain=okjsp.pe.kr;";
+ document.cookie = cookieName + "=" + escape( cookieValue ) + "; expires=" + today.toGMTString() 
+    + "; path=/; domain=okjsp.net;";
 }
 
 /**
@@ -306,6 +308,12 @@ function deleteCookie( cookieName )
  // temporarily
  document.cookie = cookieName + "= " + "; expires=" + expireDate.toGMTString() 
  + "; path=/; domain=www.okjsp.pe.kr";
+
+ document.cookie = cookieName + "= " + "; expires=" + expireDate.toGMTString() 
+ + "; path=/; domain=okjsp.net";
+ // temporarily
+ document.cookie = cookieName + "= " + "; expires=" + expireDate.toGMTString() 
+ + "; path=/; domain=www.okjsp.net";
 }
 
 /**

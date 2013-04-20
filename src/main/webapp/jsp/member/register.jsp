@@ -1,3 +1,5 @@
+<%@page import="kr.pe.okjsp.util.CommonUtil"%>
+<%@page import="kr.pe.okjsp.util.DomainUtil"%>
 <%@ page contentType="text/html;charset=euc-kr"
     import="kr.pe.okjsp.member.MemberHandler"
 	errorPage = "/jsp/error.jsp"
@@ -13,7 +15,7 @@
 %><%= msg %>
 <% 
   if("delete".equals(request.getParameter("pact"))) { 
-    kr.pe.okjsp.util.CommonUtil.setCookie(response, "okid", "", 0);
+    CommonUtil.setCookie(DomainUtil.getBaseDomain(request.getRequestURL()), response, "okid", "", 0);
     session.invalidate();
   } else { %><br>
 <a href="login.jsp" target="_self">login</a>

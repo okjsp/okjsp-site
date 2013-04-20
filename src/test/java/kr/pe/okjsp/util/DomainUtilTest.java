@@ -37,5 +37,9 @@ public class DomainUtilTest extends TestCase {
 		assertEquals("https://www.okjsp.net", DomainUtil.getSecureDomain("https://www.okjsp.net/jsp/member/login.jsp"));
 	}
 	
+	public void testGetBaseDomain() {
+		assertEquals("okjsp.net", DomainUtil.getBaseDomain("https://www.okjsp.net/jsp/member/login.jsp"));
+		assertEquals("okjsp.pe.kr", DomainUtil.getBaseDomain("http://www.okjsp.pe.kr/"));
+	}
 	
 }

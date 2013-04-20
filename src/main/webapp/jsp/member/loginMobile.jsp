@@ -11,8 +11,8 @@
     	String returnPath = DomainUtil.getFixedURL(request.getParameter("returnPath"));
     	
 		int daysOfCookieRemain = 60*24*90; // 90days
-	    CommonUtil.setCookie(response, "sid", Long.toString(member.getSid()), daysOfCookieRemain);
-	    CommonUtil.setCookie(response, "okid", member.getId(), daysOfCookieRemain);
+	    CommonUtil.setCookie(DomainUtil.getBaseDomain(request.getRequestURL()), response, "sid", Long.toString(member.getSid()), daysOfCookieRemain);
+	    CommonUtil.setCookie(DomainUtil.getBaseDomain(request.getRequestURL()), response, "okid", member.getId(), daysOfCookieRemain);
 }
 %></c:catch>
 

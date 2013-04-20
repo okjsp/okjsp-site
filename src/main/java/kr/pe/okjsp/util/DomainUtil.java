@@ -37,5 +37,14 @@ public class DomainUtil {
 		return getSecureURL(getDomain(url.toString()));
 	}
 
+	public static String getBaseDomain(String url) {
+		int idx = url.indexOf("www.");
+		return getDomain(url).substring(idx + 4);
+	}
+	
+	public static String getBaseDomain(StringBuffer url) {
+		return getBaseDomain(url.toString());
+	}
+
 
 }

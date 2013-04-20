@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import kr.pe.okjsp.MemoDao;
 import kr.pe.okjsp.util.CommonUtil;
 import kr.pe.okjsp.util.DbCon;
+import kr.pe.okjsp.util.DomainUtil;
 import kr.pe.okjsp.util.PropertyManager;
 
 public class MobileMemoServlet extends HttpServlet {
@@ -102,13 +103,13 @@ public class MobileMemoServlet extends HttpServlet {
 				
 				memocnt = memoDao.write(conn, id, sid, writer, bcomment,
 						memopass, ip, seq);
-				CommonUtil.setCookie(res, "memo", "true", 525600);
+				CommonUtil.setCookie(DomainUtil.getBaseDomain(req.getRequestURL()), res, "memo", "true", 525600);
 			}
 
 			memoDao.setCount(conn, seq, memocnt);
 			conn.commit();
 
-			CommonUtil.setCookie(res, "okwriter", writer);
+			CommonUtil.setCookie(DomainUtil.getBaseDomain(req.getRequestURL()), res, "okwriter", writer);
 		} catch (Exception e) {
 			System.out.println("MemoServlet:" + e.toString());
 		} finally {

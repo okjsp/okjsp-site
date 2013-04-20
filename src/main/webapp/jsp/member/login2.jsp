@@ -10,15 +10,17 @@
     if (mh.doLogin(member) == 1) {
     	String returnPath = DomainUtil.getFixedURL(request.getParameter("returnPath"));
     	if ("/".equals(returnPath)) {
-    		returnPath = "http://www.okjsp.pe.kr/";
+    		returnPath = DomainUtil.getDomain(request.getRequestURL());
     	}
 %>
 <c:out value="${member.id}"/> ´Ô ¹Ý°©½À´Ï´Ù.<br>
 <a href="<%= returnPath %>" target="_top"><%= returnPath %></a>
 <%
-	int daysOfCookieRemain = 60*24*90; // 90days
-    CommonUtil.setCookie(response, "sid", Long.toString(member.getSid()), daysOfCookieRemain);
-    CommonUtil.setCookie(response, "okid", member.getId(), daysOfCookieRemain);
+	int daysOfCookieRemain = 60 * 24 * 90; // 90days
+    CommonUtil.setCookie(DomainUtil.getBaseDomain(request.getRequestURL()), 
+    		response, "sid", Long.toString(member.getSid()), daysOfCookieRemain);
+    CommonUtil.setCookie(DomainUtil.getBaseDomain(request.getRequestURL()), 
+    		response, "okid", member.getId(), daysOfCookieRemain);
 }
 %></c:catch>
 <c:out value="${except.message}"/>

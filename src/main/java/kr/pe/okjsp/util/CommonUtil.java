@@ -208,9 +208,11 @@ public class CommonUtil {
 	 * @param name111
 	 * @param value
 	 * @param iMinute
+     * @param domain 
 	 * @throws UnsupportedEncodingException
 	 */
-	public static void setCookie(HttpServletResponse response,
+	public static void setCookie(String domain,
+                                 HttpServletResponse response,
                                  String name,
                                  String value,
                                  int iMinute)
@@ -219,7 +221,7 @@ public class CommonUtil {
     		CommonUtil.nchk(value), "utf-8"));
     	cookie.setMaxAge(60 * iMinute);
     	cookie.setPath("/");
-    	cookie.setDomain("okjsp.pe.kr");
+    	cookie.setDomain(domain);
     	response.addCookie(cookie);
     }
 
@@ -228,13 +230,15 @@ public class CommonUtil {
 	 * @param response
 	 * @param name
 	 * @param value
+     * @param domain 
 	 * @throws UnsupportedEncodingException
 	 */
-	public static void setCookie(HttpServletResponse response,
+	public static void setCookie(String domain,
+			                     HttpServletResponse response,
                                  String name,
                                  String value)
                                  throws java.io.UnsupportedEncodingException {
-        setCookie(response, name, value, 60*24*15);
+        setCookie(domain, response, name, value, 60*24*15);
     }
 
     /**

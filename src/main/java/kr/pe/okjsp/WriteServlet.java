@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import kr.pe.okjsp.util.CommonUtil;
 import kr.pe.okjsp.util.DbCon;
+import kr.pe.okjsp.util.DomainUtil;
 import kr.pe.okjsp.util.Spam;
 
 import com.oreilly.servlet.MultipartRequest;
@@ -74,7 +75,7 @@ public class WriteServlet extends HttpServlet {
 		// 트위터 글쓰기 추가
 		new TwitterUpdate().doUpdate(article, req);
 		
-		setWriterCookie(res, article);
+		setWriterCookie(DomainUtil.getBaseDomain(req.getRequestURL()), res, article);
 
 		return article.getBbs();
 	}
@@ -221,15 +222,15 @@ public class WriteServlet extends HttpServlet {
 			new TwitterUpdate().doUpdate(article, req);
 		}
 		
-		setWriterCookie(res, article);
+		setWriterCookie(DomainUtil.getBaseDomain(req.getRequestURL()), res, article);
 		
 		return article.getBbs();
 	}
 
-	private void setWriterCookie(HttpServletResponse res, Article article) {
+	private void setWriterCookie(String domain, HttpServletResponse res, Article article) {
 		try {
-			CommonUtil.setCookie(res, "sid", ""+article.getSid());
-			CommonUtil.setCookie(res, "okhome", ""+article.getHomepage());
+			CommonUtil.setCookie(domain, res, "sid", ""+article.getSid());
+			CommonUtil.setCookie(domain, res, "okhome", ""+article.getHomepage());
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
