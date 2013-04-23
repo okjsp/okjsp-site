@@ -32,9 +32,9 @@ footer : [
 
 aside : [
 {
-	'expire': "2013-04-15",
-	'tag': '<a href="/f.jsp?http://hbiedu.co.kr">' +
-	'<img src="/images/banner/hbi_150x67.gif" alt="전자정부 표준 프레임워크, 클라우드 빅데이터 에코시스템(하둡)"></a>'
+	'expire': "2013-04-26",
+	'tag': '<a href="/f.jsp?http://rndacademy.or.kr/request/person_privacy.asp">' +
+	'<img src="/images/banner/ktinfo_130423_150x67.gif" alt="기업맞춤형 모바일앱 개발 전문가 과정"></a>'
 }
 ],
 
