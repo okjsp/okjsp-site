@@ -220,21 +220,14 @@ $.ajax({
 	HashMap bbsInfoMap = (HashMap)application.getAttribute("bbsInfoMap");
 	iterList = list.getAllRecentList(108).iterator();
 	int i = 0;
-	while (iterList.hasNext() && i < 40) {
+	while (iterList.hasNext()) {
 
 	    one = (Article) iterList.next();
 	    BbsInfoBean bbsInfo = ((BbsInfoBean)(bbsInfoMap.get(one.getBbs())));
 	    if (bbsInfo == null) {
 	    	bbsInfo = new BbsInfoBean();
 	    }
-    	
-	    // 모바일웹 프로젝트 진행중에는 테스트 데이타인
-    	// twitter 와 null 은 보여지지 않습니다.
-    	if (bbsInfo.getCseq() == null || "".equals(bbsInfo.getCseq()) 
-    	|| "twitter".equals(bbsInfo.getBbs()) || "trash".equals(bbsInfo.getBbs())) {
-    		continue;
-    	}
-    	
+    	    	
 	    if ("2".equals(bbsInfo.getCseq())) {
 	    	continue;
 	    }
