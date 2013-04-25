@@ -32,6 +32,11 @@ footer : [
 
 aside : [
 {
+	'expire': "2013-05-02",
+	'tag': '<a href="/f.jsp?http://onoffmix.com/event/14444">' +
+	'<img src="/images/banner/w3labs_iosandroidapp_150x67.jpg" alt="모바일 청년 멘토링-아이폰 안드로이드 과정생 모집"></a>'
+},
+{
 	'expire': "2013-04-26",
 	'tag': '<a href="/f.jsp?http://rndacademy.or.kr/request/person_privacy.asp">' +
 	'<img src="/images/banner/ktinfo_130423_150x67.gif" alt="기업맞춤형 모바일앱 개발 전문가 과정"></a>'
