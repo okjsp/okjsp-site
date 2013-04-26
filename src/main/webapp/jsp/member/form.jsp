@@ -56,11 +56,11 @@
     <tr>
       <th>메일수신</th>
       <td>
-      	okjsp에서 비정기적으로 발행하는 뉴스레터와 홍보메일 수신 설정입니다.
+      	수신동의를 해주시면 유익한 정보가 가득 담긴 뉴스레터와 홍보메일을 받아보실 수 있습니다.
       	<br>
-        <input type="radio" name="mailing" id="y" value="Y">
+        <input type="radio" name="mailing" id="y" value="Y" checked="checked">
         <label for="y">허용</label> 
-        <input type="radio" name="mailing" id="n" value="N" checked>
+        <input type="radio" name="mailing" id="n" value="N">
         <label for="n">거부</label> 
       </td>
     </tr>
