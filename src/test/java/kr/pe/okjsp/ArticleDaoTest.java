@@ -36,7 +36,7 @@ public class ArticleDaoTest extends TestCase {
 		}
 	}
 
-	public void testWrite() throws Exception {
+	public void _testWrite() throws Exception {
 		ArticleDao articleDao = new ArticleDao();
 		Member member = TestObject.getTestMember();
 		Article article = TestObject.getTestArticle(member);
