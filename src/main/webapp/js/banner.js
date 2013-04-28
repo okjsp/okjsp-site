@@ -1,7 +1,7 @@
 var Banner = {
 main : [
 {
-	"expire": '2013-03-31',
+	"expire": '2013-04-30',
 	"tag": '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
 	'<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
 	'alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트"></a>'
@@ -37,9 +37,9 @@ aside : [
 	'<img src="/images/banner/w3labs_iosandroidapp_150x67.jpg" alt="모바일 청년 멘토링-아이폰 안드로이드 과정생 모집"></a>'
 },
 {
-	'expire': "2013-04-26",
-	'tag': '<a href="/f.jsp?http://rndacademy.or.kr/request/person_privacy.asp">' +
-	'<img src="/images/banner/ktinfo_130423_150x67.gif" alt="기업맞춤형 모바일앱 개발 전문가 과정"></a>'
+	'expire': "2013-05-06",
+	'tag': '<a href="/f.jsp?http://pushtk.com/D?l=6">' +
+	'<img src="/images/banner/cena_150x67.gif" alt="푸시삼국지 시즌2"></a>'
 }
 ],
 
