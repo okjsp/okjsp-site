@@ -149,6 +149,8 @@ Banner.showContentSection();
 <%
 // 관리자 일 경우 게시물 이동권한을 갖는다. 
 	boolean isAdmin = member != null && ("kenu".equals(member.getId()) 
+			|| "okjsp".equals(member.getId())
+			|| "kwamuki".equals(member.getId())
 			|| "sbroh".equals(member.getId()));
 	if (isAdmin) {
 %>
