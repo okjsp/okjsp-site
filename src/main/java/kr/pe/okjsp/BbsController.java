@@ -18,8 +18,9 @@ public class BbsController extends HttpServlet {
 			url = url.replaceAll("okjsp.pe.kr", "okjsp.net");
 			res.sendRedirect(url);
 			return;
+		} else {
+			service(req, res);
 		}
-		service(req, res);
 	}
 	protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		long seq = CommonUtil.getNumberedSeq(req.getPathInfo());
