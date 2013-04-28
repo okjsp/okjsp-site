@@ -13,6 +13,12 @@ public class BbsController extends HttpServlet {
 	private static final long serialVersionUID = -1812823350032335626L;
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		String url = req.getRequestURL().toString();
+		if (url.toLowerCase().contains("okjsp.pe.kr")) {
+			url = url.replaceAll("okjsp.pe.kr", "okjsp.net");
+			res.sendRedirect(url);
+			return;
+		}
 		service(req, res);
 	}
 	protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
