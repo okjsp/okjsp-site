@@ -39,7 +39,7 @@ public class ControllerServlet extends HttpServlet {
 
   public void doGet(HttpServletRequest req, HttpServletResponse res)
                         throws IOException {
-		String url = req.getRequestURL().toString();
+		String url = req.getRequestURL().toString()+"?"+req.getQueryString();
 		if (url.toLowerCase().contains("okjsp.pe.kr")) {
 			url = url.replaceAll("okjsp.pe.kr", "okjsp.net");
 			res.sendRedirect(url);
