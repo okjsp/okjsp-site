@@ -39,6 +39,13 @@ public class ControllerServlet extends HttpServlet {
 
   public void doGet(HttpServletRequest req, HttpServletResponse res)
                         throws IOException {
+		String url = req.getRequestURL().toString();
+		if (url.toLowerCase().contains("okjsp.pe.kr")) {
+			url = url.replaceAll("okjsp.pe.kr", "okjsp.net");
+			res.sendRedirect(url);
+			return;
+		}
+	  
     String act = CommonUtil.nchk(req.getParameter("act"),"VIEW");
 	String resourceName = Navigation.getPath(act);
     String bbs = CommonUtil.nchk(req.getParameter("bbs"));
