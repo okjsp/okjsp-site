@@ -33,12 +33,12 @@ footer : [
 aside : [
 {
 	'expire': "2013-05-02",
-	'tag': '<a href="/f.jsp?http://onoffmix.com/event/14444">' +
+	'tag': '<a href="/f.jsp?http://onoffmix.com/event/14444" target="_blank">' +
 	'<img src="/images/banner/w3labs_iosandroidapp_150x67.jpg" alt="모바일 청년 멘토링-아이폰 안드로이드 과정생 모집"></a>'
 },
 {
 	'expire': "2013-05-06",
-	'tag': '<a href="/f.jsp?http://pushtk.com/D?l=6">' +
+	'tag': '<a href="/f.jsp?http://pushtk.com/D?l=6" target="_blank">' +
 	'<img src="/images/banner/cena_150x67.gif" alt="푸시삼국지 시즌2"></a>'
 }
 ],
