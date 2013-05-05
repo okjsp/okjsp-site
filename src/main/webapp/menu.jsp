@@ -4,7 +4,7 @@
 <%@page import="kr.pe.okjsp.util.CommonUtil"%>
 <%@page import="kr.pe.okjsp.Navigation"%><div id="menuSect">
 <div style="margin-top:8px" id="menu_top">
-  <A href="/lecture/" target="_blank">OKJSP 강좌</A>
+  <A href="/bbs?act=LIST&bbs=lecture" target="_blank">OKJSP 강좌</A>
   <br />
 </div>
 	<div>
@@ -32,9 +32,9 @@
   <br />
   <hr />
   open: <br />
-  <A href="http://www.okjsp.pe.kr:8080" title="Jenkins CI tool">OKJSP Health</A>
-  <br />
   <A href="https://github.com/okjsp/okjsp-site" title="OKJSP source">OKJSP 사이트소스</A>
+  <br />
+  <A href="http://www.okjsp.net:8080" title="Jenkins CI tool">OKJSP Health</A>
   <br />
   <A href="http://kenu.github.com/tomcat70/docs" title="Tocmat7kr">톰캣7 문서 한글화</A>
 
@@ -62,11 +62,6 @@
    title="한국 소프트웨어 개발자 협회" target="akose">한국 소프트웨어 개발자 협회</A>
 	<hr>
   <br>
-<ul>
-<li>
-<a href="/jsp/alliance.jsp">동맹사이트</a>
-</li>
-</ul>
   <br>
   <br><a href="/rss" title="rss feed links"><img src="/images/rss-xml.png" style="border:0" alt="rss"/></a><br>
   <br>
@@ -86,8 +81,5 @@
 	 title="okjsp Database">
 	<img src="/images/banner/cubrid_88x31.gif" width="88" height="31" border="0"></a>
 	<br />
-	<a href="/f.jsp?http://www.skplanet.co.kr/" target="_blank"
-	 title="SK Planet">
-	<img src="/images/banner/skp_88x31.png" width="88" height="31" border="0"></a>
 </div>
 </div>
