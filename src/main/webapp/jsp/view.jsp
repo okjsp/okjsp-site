@@ -29,14 +29,14 @@
     <td valign='top'>
 
 <h1 id="bbstitle"><c:out value="${bbsInfoMap[one.bbs].name}" /></h1>
-<div id="permlink"><a href="http://www.okjsp.pe.kr/seq/<%= one.getSeq() %>">
-http://www.okjsp.pe.kr/seq/<%= one.getSeq() %></a></div>
+<div id="permlink"><a href="http://www.okjsp.net/seq/<%= one.getSeq() %>">
+http://www.okjsp.net/seq/<%= one.getSeq() %></a></div>
 <table class="tablestyle" border="0" cellpadding="3" cellspacing="0">
     <tr>
         <td class="td">
 <%
     if (one.getId() != null) {
-        %><img src="http://www.okjsp.pe.kr/profile/<%= one.getId() %>.jpg"
+        %><img src="http://www.okjsp.net/profile/<%= one.getId() %>.jpg"
         	alt="<%= one.getId() %>"
         	style="width:77px"><%
     }
@@ -78,7 +78,7 @@ Banner.showContentRight();
 </script>
 <p><%= CommonUtil.rplc(one.getContentView(), "movieseq=", "")  %></p></div>
 <%-- facebook like button --%>
-<iframe src="http://www.facebook.com/plugins/like.php?href=http://www.okjsp.pe.kr/seq/<%= one.getSeq() %>"
+<iframe src="http://www.facebook.com/plugins/like.php?href=http://www.okjsp.net/seq/<%= one.getSeq() %>"
         scrolling="no" frameborder="0"
         style="border:none; width:100%; height:60px"></iframe>
 
@@ -217,7 +217,7 @@ Banner.showContentSection();
 </li>
 <li class="w"><%
     if (mb.getId() != null) {
-        %><img src="http://www.okjsp.pe.kr/profile/<%= mb.getSid() %>.jpg"
+        %><img src="http://www.okjsp.net/profile/<%= mb.getSid() %>.jpg"
         	alt="<%= mb.getSid() %>"
         	style="width:36px;height:36px"><%
     }
@@ -232,7 +232,7 @@ Banner.showContentSection();
 <li class="d"><%= mb.getWhen("yyyy-MM-dd HH:mm:ss")
 %></li><li class="e"><a href="javascript:show_memodel('<%= mb.getMseq() %>')">x</a>
 <%-- facebook like button --%>
-<iframe src="http://www.facebook.com/plugins/like.php?href=http://www.okjsp.pe.kr/seq/<%= mb.getSeq()+"%23"+mb.getMseq() %>"
+<iframe src="http://www.facebook.com/plugins/like.php?href=http://www.okjsp.net/seq/<%= mb.getSeq()+"%23"+mb.getMseq() %>"
         scrolling="no" frameborder="0"
         style="border:none; width:100%; height:27px"></iframe>
 </li></ul>
