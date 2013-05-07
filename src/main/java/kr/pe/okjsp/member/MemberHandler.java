@@ -263,7 +263,7 @@ public class MemberHandler {
 				+ "\nYour temporary password : " + member.getPassword()
 				+ "\nAfter login you can change your password as you like."
 				+ "\n" + Navigation.getPath("LOGFORM") 
-				+ "\n\nJSP/Eclipse developer community http://www.okjsp.pe.kr ";
+				+ "\n\nJSP/Eclipse developer community http://www.okjsp.net ";
 			new MailUtil().send(mailto, subject, textMessage);
 			
 			ProfileUtil profileUtil = new ProfileUtil();
