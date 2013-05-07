@@ -61,14 +61,16 @@ showAside : function() {
     }
     document.writeln("</ul>");
 
-    var html = '<p id="adinfo"><a href="/seq/181976">광고안내</a></p>'+
-    '<p class="adapp_title">&middot; app ad</p>';
-    if (this.asideApp.length > 0) {
-        var idx = Math.floor(Math.random() * this.asideApp.length);
-        html +=	this.asideApp[idx].tag;
-    }
-    html += '<a href="http://platformadvisory.kr/archives/2633" target="_blank"><img src="/images/pag.png" alt="플랫폼 그룹" style="width: 160px; margin: 1px;"></a>'
-    document.writeln(html);
+},
+showAsideBottom : function() {
+	
+	var html = '<p id="adinfo"><a href="/seq/181976">광고안내</a></p>'+
+	'<p class="adapp_title">&middot; app ad</p>';
+	if (this.asideApp.length > 0) {
+		var idx = Math.floor(Math.random() * this.asideApp.length);
+		html +=	this.asideApp[idx].tag;
+	}
+	document.writeln(html);
 },
 
 showLeftSide : function() {
