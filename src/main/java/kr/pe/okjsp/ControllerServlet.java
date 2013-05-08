@@ -76,6 +76,8 @@ public class ControllerServlet extends HttpServlet {
 			res.sendRedirect(loginPath);
 			return;
     	} else if ( !( "sbroh".equals(member.getId()) ||
+    			"okjsp".equals(member.getId()) ||
+    			"kwamuki".equals(member.getId()) ||
     			"kenu".equals(member.getId()) )){
     		throw new IOException("NO RIGHT TO WRITE!!!");
     	}
