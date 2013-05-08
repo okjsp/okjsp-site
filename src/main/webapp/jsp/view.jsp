@@ -12,7 +12,7 @@
 <head>
     <META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=ksc5601">    
     <link rel="stylesheet" href="/css/okjsp2007.css.jsp" type="text/css">
-    <title>■OKJSP: <%= one.getSubject() %></title>
+    <title>OKJSP: <%= one.getSubject() %></title>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src='/js/ban.js'></script>
     <script src="/js/okjsp.js"></script>
@@ -383,6 +383,19 @@ function googleTranslateElementInit() {
 <script type="text/javascript">
 Banner.showAside();
 </script>
+
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8103607814406874";
+/* okjspad_160x600 */
+google_ad_slot = "6573675943";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
 <script src="http://widgetprovider.daum.net/view?url=http://widgetcfs1.daum.net/xml/16/widget/2008/09/24/15/28/48d9de0cd3a6e.xml&up_Category=0&up_WidgetStyle=A&up_Username=kenu.heo%40gmail.com&up_HideStatus=false&up_HideBottom=false&up_HideDateLocation=false&&width=166&height=355&widgetId=122&scrap=1" type="text/javascript"></script>
 
 <jsp:include page="/googleAnalytics.jsp" />
