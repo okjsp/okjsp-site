@@ -6,6 +6,13 @@ document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.
 </script>
 <script type="text/javascript">
 try {
+var _gaq = _gaq || [];
+var pluginUrl = 
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+_gaq.push(['_setAccount', 'UA-XXXXXX-Y']);
+_gaq.push(['_trackPageview']);
+
 var pageTracker = _gat._getTracker("UA-6707625-1");
 pageTracker._trackPageview();
 } catch(err) {}</script>
