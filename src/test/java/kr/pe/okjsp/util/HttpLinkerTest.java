@@ -4,6 +4,11 @@ package kr.pe.okjsp.util;
 import junit.framework.TestCase;
 
 public class HttpLinkerTest extends TestCase {
+	public void testLinkSpace() {
+		String source = "http://aaa.com/savePost 라는 컨트롤러를 안에서 실행할 수 있나요?";
+		String output = "<a href=\"http://aaa.com/savePost\" target=\"_blank\">http://aaa.com/savePost</a> 라는 컨트롤러를 안에서 실행할 수 있나요?";
+		assertEquals(output, HttpLinker.getLinkedSource(source));
+	}
 	public void testLinkFacebook() {
 		String source = "<div>사이트 만들기 참 쉽군요.</div><div><img src=\"/upload/1341426100854.jpg\">\n<br></div><div><br></div>from: http://www.facebook.com/photo.php?fbid=10150942108252659&set=p.10150942108252659&type=1&theater<div><br></div><div><br></div><div><br></div>";
 		String output = "<div>사이트 만들기 참 쉽군요.</div><div><img src=\"/upload/1341426100854.jpg\">\n<br></div><div><br></div>from: <a href=\"http://www.facebook.com/photo.php?fbid=10150942108252659&set=p.10150942108252659&type=1&theater\" target=\"_blank\">http://www.facebook.com/photo.php?fbid=10150942108252659&set=p.10150942108252659&type=1&theater</a><div><br></div><div><br></div><div><br></div>";
