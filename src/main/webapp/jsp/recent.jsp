@@ -39,25 +39,18 @@ Banner.show();
 <h1># OKJSP 추천 도서</h1>
 <ul>
 <li>
-<a href="/f.jsp?http://ji-n-son.co.kr/?bookinfo=%EC%9C%84%EB%8C%80%ED%95%9C-it-%EB%B2%A4%EC%B2%98%EC%9D%98-%ED%83%84%EC%83%9D" target="_blank">
-<img src="/images/book/jinson-20130403-greatitventure.jpg" class="cover">
+<a href="/f.jsp?http://hanb.co.kr/ebook/look.html?isbn=9788979149777" target="_blank">
+<img src="http://image.hanb.co.kr/ebookcover/m_9788979149777.gif" class="cover">
 </a>
 <h2>
-<a href="/f.jsp?http://ji-n-son.co.kr/?bookinfo=%EC%9C%84%EB%8C%80%ED%95%9C-it-%EB%B2%A4%EC%B2%98%EC%9D%98-%ED%83%84%EC%83%9D" target="_blank">
-위대한 IT 벤처의 탄생</a></h2>
+<a href="/f.jsp?http://hanb.co.kr/ebook/look.html?isbn=9788979149777" target="_blank">
+자바스크립트와 SVG로 쉽게 만드는 웹 기반 데이터 비주얼라이제이션 D3</a></h2>
 <p style="padding-bottom: 0">
-<a href="/f.jsp?http://ji-n-son.co.kr/?bookinfo=%EC%9C%84%EB%8C%80%ED%95%9C-it-%EB%B2%A4%EC%B2%98%EC%9D%98-%ED%83%84%EC%83%9D" target="_blank">
-“한국을 대표하는 9인의 스타트업, 그들의 진솔하고 위대한 이야기”
-</a>
-<br />
-2012년부터 시작된 창업붐은 많은 일반인들뿐만 아니라 학생들을 창업의 길로 이끌고 있다. 특히 수많은 IT 관련 경진대회 등을 통해 
-기술력만으로도 창업이 가능하다고 생각하기 되면서 많은 학생들이 섣부른 도전으로 너무 이른 나이에 쓰라린 패배를 경험하게 되는 듯하다.
-<br />
-굳이 경험하지 않아도 되는 것들은 피해가는 것도 나쁘지 않다는 생각에 
-선배들의 경험을 나누어 주고자 하여 이 도서가 기획되었으며, 나누고자 하는 경험은 좋은 경험뿐만 아니라 나쁜 경험도 해당된다.
-<br />
-이미 창업을 한 선배들의 이야기와 그 이야기를 바탕으로 한 분석 등을 통해 창업준비생들에게 조금 더 실질적인 도움을 주고자 한다. 
-</p>
+<a href="/f.jsp?http://hanb.co.kr/ebook/look.html?isbn=9788979149777" target="_blank">
+웹의 가치를 높여주는 비주얼라이제이션, D3!
+당신이 만드는 웹의 가치를 높여주고 싶은가? 그렇다면 D3를 이용하여 데이터 비주얼라이제이션(시각화)을 해보자. 
+데이터 시각화는 대용량 데이터 시대에서 주목받고 있는 분야 중 하나로, D3 자바스크립트 라이브러리는 자료를,
+보다 효율적으로 시각화하여 웹에 대한 사용자의 만족도를 높여준다. 그리고...</p>
 </li>
 <li style="display: none;">
 <a href="/f.jsp?http://ji-n-son.co.kr/?post_type=bookinfo&p=2855" target="_blank">
