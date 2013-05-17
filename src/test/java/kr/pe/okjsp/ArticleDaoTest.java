@@ -21,7 +21,7 @@ public class ArticleDaoTest extends TestCase {
 		conn.close();
 	}
 	
-	public void testÀÛ¼ºÀÚÙí() {
+	public void testì‘ì„±ìç„¡() {
 		ArticleDao articleDao = new ArticleDao();
 		Article article = new Article();
 		try {
