@@ -44,7 +44,7 @@ Banner.show();
 </a>
 <h2>
 <a href="/f.jsp?http://hanb.co.kr/ebook/look.html?isbn=9788979149777" target="_blank">
-자바스크립트와 SVG로 쉽게 만드는 웹 기반 데이터 비주얼라이제이션 D3</a></h2>
+자바스크립트와 SVG로 쉽게 만드는<br /> 웹 기반 데이터 비주얼라이제이션 D3</a></h2>
 <p style="padding-bottom: 0">
 <a href="/f.jsp?http://hanb.co.kr/ebook/look.html?isbn=9788979149777" target="_blank">
 웹의 가치를 높여주는 비주얼라이제이션, D3!
