@@ -21,7 +21,7 @@ public class ArticleDaoTest extends TestCase {
 		conn.close();
 	}
 	
-	public void test작성자無() {
+	public void testWriteEmpty() {
 		ArticleDao articleDao = new ArticleDao();
 		Article article = new Article();
 		try {
