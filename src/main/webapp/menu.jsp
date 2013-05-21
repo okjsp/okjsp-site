@@ -56,6 +56,7 @@
 	document.getElementById('bbslist').value = '<%= request.getParameter("bbs") %>';
 </script>
   <hr>
+   <br><A href="/bbs?act=LIST&bbs=cooper" title="협동조합준비위">◀협동조합준비위▶</A>
    <br><A href="http://it.nodong.net/zbxe/?mid=JOBQNA01"
    title="it.nodong.net" target="jobqna">일터Q&amp;A</A>
    <br><A href="http://www.akose.or.kr"

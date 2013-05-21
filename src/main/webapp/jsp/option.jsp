@@ -3,7 +3,6 @@
 <option value="recruit">구인/구직</option>
 <option value="pr">홍보</option>
 <option value="html5">HTML5</option>
-<!--<option value="iphone">iOS</option>-->
 <option value="android">안드로이드</option>
 <option value="techtrend">TECH TREND</option>
 <option value="TOOL">개발툴</option>
@@ -42,14 +41,14 @@
 <option value="springstudy">스프링 스터디</option>
 <option value="dbstudy">DB스터디</option>
 <option value="engdocs">english bbs</option>
-
 <option value="model2jsp">모델2JSP책관련</option>
-<!--<option value="xf">SLF</option> -->
 <option value="ruby">Ruby on Rails</option>
 <option value="rubyqna">Ruby on Rails QnA</option>
 <option value="flex">Flex</option>
 <option value="flexqna">Flex QnA</option>
 <option value="japanlife">일본사는얘기</option>
-<!--<option value="ns">자바패턴1기</option>-->
 <option value="twitter">트위터</option>
 <option value="trash">짬통</option>
+<!--<option value="iphone">iOS</option>-->
+<!--<option value="xf">SLF</option> -->
+<!--<option value="ns">자바패턴1기</option>-->
