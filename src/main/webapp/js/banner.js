@@ -33,8 +33,8 @@ footer : [
 aside : [
 {
 	'expire': "2013-05-02",
-	'tag': '<a href="/f.jsp?http://onoffmix.com/event/14444" target="_blank">' +
-	'<img src="/images/banner/w3labs_iosandroidapp_150x67.jpg" alt="모바일 청년 멘토링-아이폰 안드로이드 과정생 모집"></a>'
+	'tag': '<!--<a href="/f.jsp?http://onoffmix.com/event/14444" target="_blank">' +
+	'<img src="/images/banner/w3labs_iosandroidapp_150x67.jpg" alt="모바일 청년 멘토링-아이폰 안드로이드 과정생 모집"></a>-->'
 },
 {
 	'expire': "2013-05-06",
