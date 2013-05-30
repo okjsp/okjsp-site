@@ -96,6 +96,9 @@ function errImage(n) {
 }
 
 function jumpto(e) {
+	if (e.value === "") {
+		return false;
+	}
 	saveBbslist("bbslist", e.value);
 	document.location.href='/bbs?act=LIST&bbs='+e.value;
 }
