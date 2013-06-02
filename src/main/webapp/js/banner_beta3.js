@@ -32,6 +32,11 @@ footer : [
 
 aside : [
 {
+	'expire': "2013-05-02",
+	'tag': '<a href="/f.jsp?http://onoffmix.com/event/14444" target="_blank">' +
+	'<img src="/images/banner/w3labs_iosandroidapp_150x67.jpg" alt="모바일 청년 멘토링-아이폰 안드로이드 과정생 모집"></a>'
+},
+{
 	'expire': "2013-05-06",
 	'tag': '<a href="/f.jsp?http://pushtk.com/D?l=6" target="_blank">' +
 	'<img src="/images/banner/cena_150x67.gif" alt="푸시삼국지 시즌2"></a>'
@@ -41,7 +46,7 @@ aside : [
 asideApp : [
 {
 	tag : '<a href="/f.jsp?http://itunes.apple.com/kr/app/oghyi/id515739111?mt=8" target="_blank"><img class="adapp" '+
-	'src="http://a4.mzstatic.com/us/r1000/096/Purple/v4/5d/d2/48/5dd24835-243d-9ec9-f6b1-c78691abc75b/V9809ELtPnNVvmabDtq5aw-temp-upload.siryfcqr.175x175-75.jpg" alt="옥희, 아이폰/아이패드앱"></a>'
+	'src="http://a4.mzstatic.com/us/r1000/096/Purple/v4/5d/d2/48/5dd24835-243d-9ec9-f6b1-c78691abc75b/V9809ELtPnNVvmabDtq5aw-temp-upload.siryfcqr.175x175-75.jpg" width="130" alt="옥희, 아이폰/아이패드앱"></a>'
 }
 ],
 show : function() {
@@ -49,17 +54,17 @@ show : function() {
 },
 
 showAside : function() {
-	document.writeln('<a href="/f.jsp?http://www.eclipse.org/donate/" target="_blank"><img src="http://eclipse.org/donate/images/friendslogo200.jpg" style="width:150px"></a>');
-    document.writeln("<ul>");
+	//document.writeln('<a href="/f.jsp?http://www.eclipse.org/donate/" target="_blank"><img src="http://eclipse.org/donate/images/friendslogo200.jpg" style="width:150px"></a>');
+    //document.writeln("<ul>");
     for(var i = 0; i < this.aside.length; i++) {
-        document.writeln("<li>"+this.aside[i].tag+"</li>");
+        document.writeln("<div>"+this.aside[i].tag+"</div>");
     }
-    document.writeln("</ul>");
+    //document.writeln("</ul>");
 
 },
 showAsideBottom : function() {
 	
-	var html = '<p id="adinfo"><a href="/seq/181976">광고안내</a></p>'+
+	var html = '<a href="/seq/181976">광고안내</a>'+
 	'<p class="adapp_title">&middot; app ad</p>';
 	if (this.asideApp.length > 0) {
 		var idx = Math.floor(Math.random() * this.asideApp.length);
