@@ -113,6 +113,10 @@ header h1 {
 	font-weight: bold;
 }
 
+#memorecent.memo {
+	padding-bottom: 12px;
+}
+
 #bookList {
 	text-align: center;
 	margin: 20px 22px;
