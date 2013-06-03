@@ -20,6 +20,13 @@ left : [
 }
 ],
 
+left : [
+{
+	"expire" : "2013-06-30",
+	"tag": '<li><A href="/f.jsp?http://olc.oss.kr/offlec/list.jsp" title="2013 모델 커리큘럼 공개강좌" target="olc">모델 커리큘럼 공개강좌 수강생모집</A></li>'
+}
+],
+
 leftimg : [
 ],
 
@@ -49,7 +56,8 @@ show : function() {
 },
 
 showAside : function() {
-	document.writeln('<a href="/f.jsp?http://www.eclipse.org/donate/" target="_blank"><img src="http://eclipse.org/donate/images/friendslogo200.jpg" style="width:150px"></a>');
+	//document.writeln('<a href="/f.jsp?http://www.eclipse.org/donate/" target="_blank"><img src="http://eclipse.org/donate/images/friendslogo200.jpg" style="width:150px"></a>');
+	document.writeln('<a href="/f.jsp?http://olc.oss.kr/offlec/list.jsp" target="olc"><img src="/images/bnr_olc_rollingbanner-130604.gif" style="width:150px"></a>');
     document.writeln("<ul>");
     for(var i = 0; i < this.aside.length; i++) {
         document.writeln("<li>"+this.aside[i].tag+"</li>");
