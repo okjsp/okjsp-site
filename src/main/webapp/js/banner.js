@@ -18,6 +18,8 @@ left : [
 	"expire" : "2013-06-01",
 	"tag": '<li><A href="/f.jsp?http://www.innorix.com/DS/" title="대용량 파일/폴더 업로드 컴포넌트" target="innorix">업로드는 InnoDS</A></li>'
 }
+],
+left_bnr : [
 {
 	"expire" : "2013-06-30",
 	"tag": '<li><A href="/f.jsp?http://olc.oss.kr/offlec/list.jsp" title="2013 모델 커리큘럼 공개강좌" target="olc">모델 커리큘럼 공개강좌 수강생모집</A></li>'
@@ -79,6 +81,12 @@ showLeftSide : function() {
     }
 },
 
+showLeftSide_bnr : function() {
+    for(var i = 0; i < this.left_bnr.length; i++) {
+        document.writeln(this.left_bnr[i].tag);
+    }
+},
+
 showLeftSideImg : function() {
     for(var i = 0; i < this.leftimg.length; i++) {
         document.writeln(this.leftimg[i].tag);
@@ -106,4 +114,3 @@ showOne: function(list) {
 
 
 };
-
