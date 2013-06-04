@@ -20,7 +20,7 @@ select * from okrole where id like 'mangsang%';
 delete from okrole where id = 'mangsang00';
 
 select * from okmember where email like 'loger%';
-select * from okmember where sid = 20173;
+select * from okmember where sid = 21027
 
 update okmember set email = 'y@lycos.co.kr' where id = 'y';
 update okmember set joindate = '2011-10-28 17:15:27' where id = 'y';

@@ -47,6 +47,9 @@
   }
   </script>
   </ul>
+  <ul id="menuad">
+  <li><A href="/f.jsp?http://olc.oss.kr/offlec/list.jsp" title="2013 모델 커리큘럼 공개강좌" target="olc">모델 커리큘럼 공개강좌 수강생모집</A></li>
+  </ul>  
 
 <h2 id="bbslistmenu">BBS LIST</h2>
 <select id="bbslist" onchange="jumpto(this)" size="18">
