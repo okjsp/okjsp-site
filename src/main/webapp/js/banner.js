@@ -18,9 +18,6 @@ left : [
 	"expire" : "2013-06-01",
 	"tag": '<li><A href="/f.jsp?http://www.innorix.com/DS/" title="대용량 파일/폴더 업로드 컴포넌트" target="innorix">업로드는 InnoDS</A></li>'
 }
-],
-
-left : [
 {
 	"expire" : "2013-06-30",
 	"tag": '<li><A href="/f.jsp?http://olc.oss.kr/offlec/list.jsp" title="2013 모델 커리큘럼 공개강좌" target="olc">모델 커리큘럼 공개강좌 수강생모집</A></li>'
