@@ -48,11 +48,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.twitter4j</groupId>
-			<artifactId>twitter4j-core</artifactId>
-			<version>2.1.1</version>
-		</dependency>
-		<dependency>
 			<groupId>com.rosaloves</groupId>
 			<artifactId>bitlyj</artifactId>
 			<version>1.0</version>
@@ -102,6 +97,11 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aop</artifactId>
 			<version>3.1.1.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.twitter4j</groupId>
+			<artifactId>twitter4j-core</artifactId>
+			<version>[3.0,)</version>
 		</dependency>
 	</dependencies>
 	<build>

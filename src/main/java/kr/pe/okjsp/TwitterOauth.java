@@ -6,8 +6,8 @@ import java.io.InputStreamReader;
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
-import twitter4j.http.AccessToken;
-import twitter4j.http.RequestToken;
+import twitter4j.auth.AccessToken;
+import twitter4j.auth.RequestToken;
 
 public class TwitterOauth {
 
@@ -71,7 +71,7 @@ public class TwitterOauth {
 	 * useId : twitter 식별자
 	 * AccessToken : twitter acess 토큰
 	 */
-	private void storeAccessToken(String site_id,int useId, AccessToken at){
+	private void storeAccessToken(String site_id,long l, AccessToken at){
 		//to-do 저장방식 선정 
 		//store at.getToken()
 		//store at.getTokenSecret()
