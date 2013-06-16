@@ -10,6 +10,13 @@
 	<properties>
 		<publish.path>/web/kenu/okjsp.80port.net</publish.path>
 	</properties>
+	<repositories>
+		<repository>
+			<id>in-project</id>
+			<name>In Project Repo</name>
+			<url>file://${project.basedir}/libs</url>
+		</repository>
+	</repositories>
 	<dependencies>
 		<dependency>
 			<groupId>commons-dbcp</groupId>
@@ -52,22 +59,18 @@
 			<artifactId>bitlyj</artifactId>
 			<version>1.0</version>
 		</dependency>
-		
+
 		<!-- custom -->
 		<dependency>
 			<groupId>Acme.JPG</groupId>
 			<artifactId>AcmeGif</artifactId>
 			<version>1.0.0</version>
-			<scope>system</scope> 
-			<systemPath>${basedir}/libs/AcmeGif-1.0.0.jar</systemPath> 
 		</dependency>
 
 		<dependency>
 			<groupId>com.cubrid</groupId>
 			<artifactId>cubrid-jdbc</artifactId>
 			<version>8.3.1.0152</version>
-			<scope>system</scope> 
-			<systemPath>${basedir}/libs/cubrid-jdbc-8.3.1.0152.jar</systemPath> 
 		</dependency>
 
 		<!-- runtime -->
