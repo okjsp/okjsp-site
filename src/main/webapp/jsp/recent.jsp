@@ -36,97 +36,15 @@ Banner.show();
 </ul>
 
 <div id="bookList">
-<h1># OKJSP 추천 도서</h1>
 <ul>
 <li>
-<a href="/f.jsp?http://hanb.co.kr/ebook/look.html?isbn=9788979149777" target="_blank">
-<img src="http://image.hanb.co.kr/ebookcover/m_9788979149777.gif" class="cover">
+<a href="/f.jsp?http://www.okjsp.net/seq/222488">
+<img src="/images/okjsp_main_ebrainus(130610).jpg">
 </a>
-<h2>
-<a href="/f.jsp?http://hanb.co.kr/ebook/look.html?isbn=9788979149777" target="_blank">
-자바스크립트와 SVG로 쉽게 만드는<br /> 웹 기반 데이터 비주얼라이제이션 D3</a></h2>
-<p style="padding-bottom: 0">
-<a href="/f.jsp?http://hanb.co.kr/ebook/look.html?isbn=9788979149777" target="_blank">
-웹의 가치를 높여주는 비주얼라이제이션, D3!
-당신이 만드는 웹의 가치를 높여주고 싶은가? 그렇다면 D3를 이용하여 데이터 비주얼라이제이션(시각화)을 해보자. 
-데이터 시각화는 대용량 데이터 시대에서 주목받고 있는 분야 중 하나로, D3 자바스크립트 라이브러리는 자료를,
-보다 효율적으로 시각화하여 웹에 대한 사용자의 만족도를 높여준다. 그리고...</p>
-</li>
-<li style="display: none;">
-<a href="/f.jsp?http://ji-n-son.co.kr/?post_type=bookinfo&p=2855" target="_blank">
-<img src="/upload/1362046827360.jpg" class="cover">
-</a>
-<h2>
-<a href="/f.jsp?http://ji-n-son.co.kr/?post_type=bookinfo&p=2855" target="_blank">
-개발자의 코드 The Developer's Code</a></h2>
-<p>
-<a href="/f.jsp?http://ji-n-son.co.kr/?post_type=bookinfo&p=2855" target="_blank">
-What Real Programmers Do!!!
-<br>
-당신은 이미 훌륭한 코더이다.
-하지만 어려운 프로젝트를 통해 얻는 뛰어난 코딩 작업들은 언제나 충분하지 못하다.
-당신에게 필요한 50여 개의 지혜가 이 책에 담겨 있다.
-이 책은 베테랑 프로그래머에게는 웹 애플리케이션 개발에 대한 열정에 새로운 활기를 불어넣어 줄 것이며, 
-이제 막 프로그래머의 길에 들어선 초심자에게도 좋은 지침이 될 것이다.
-이 책을 통해 새롭고 현명한 방법으로 자신의 업무를 다시 생각하라.</a></p>
 </li>
 </ul>
 </div>
 
-<div id="newsfeed">
-<script type="text/javascript">
-var newsList = [
-    {
-    	'feedURL': 'http://feeds.feedburner.com/skpreadme',
-    	'titleImgSrc': 'http://readme.skplanet.co.kr/wp-content/themes/blaskan/img/logo30.png',
-    	'startedAt': '2013-02-04' 
-    },
-    {
-    	'feedURL': 'http://feeds.feedburner.com/newsmate/McKa',
-    	'titleImgSrc': '/images/newsmate_logo.png',
-    	'startedAt': '2012-11-28' 
-    }    
-];
-var newsIdx = Math.floor(Math.random() * newsList.length);
-var feedURL = newsList[newsIdx].feedURL;
-var ajaxURL = "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=5&q=" + feedURL;
-$.ajax({
-	url: ajaxURL,
-	dataType: 'jsonp',
-	jsonp: 'callback',
-	success: function(d) {
-		var feed = d.responseData.feed;
-		var list = feed.entries;
-		
-		var logo = $('<img>').attr('src', newsList[newsIdx].titleImgSrc);
-		var title = $('<a>').attr('href', feed.link).
-		attr('target', '_blank').append(logo);
-		var li = $('<li>').append(title).addClass('th');
-
-		$('#newsfeedList').append(li);
-
-		for(var i in list) {
-			var record = $('<a>').html(list[i].title + ' (' + $.timeago(Date.parse(list[i].publishedDate)) +')')
-			.attr('href', list[i].link)
-			.attr('target', '_blank');
-			var li = $('<li>').append(record)
-			$('#newsfeedList').append(li);
-		}
-		$('#newsfeedList').addClass('tablestyle').fadeIn('slow');
-		
-	},
-	failure: function(err) {
-		window.console && console.log(err);
-	},
-	complete: function(d) {
-		window.console && console.log('complete ' + JSON.stringify(d));
-	}
-});
-</script>
-
-<ul id='newsfeedList'>
-</ul>
-</div>
 <table>
   <tr>
     <td align="center" valign="top">
