@@ -73,7 +73,7 @@ public class WriteServlet extends HttpServlet {
 		new ArticleDao().write(article);
 		
 		// 트위터 글쓰기 추가
-		new TwitterUpdate().doUpdate(article, req);
+//		new TwitterUpdate().doUpdate(article, req);
 		
 		setWriterCookie(DomainUtil.getBaseDomain(req.getRequestURL()), res, article);
 
@@ -219,7 +219,7 @@ public class WriteServlet extends HttpServlet {
 		
 		if(!"MODIFY".equals(act) && !"REPLY".equals(act))
 		{
-			new TwitterUpdate().doUpdate(article, req);
+//			new TwitterUpdate().doUpdate(article, req);
 		}
 		
 		setWriterCookie(DomainUtil.getBaseDomain(req.getRequestURL()), res, article);
