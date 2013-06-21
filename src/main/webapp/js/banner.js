@@ -38,9 +38,9 @@ footer : [
 
 aside : [
 {
-	'expire': "2013-05-06",
-	'tag': '<a href="/f.jsp?http://pushtk.com/D?l=6" target="_blank">' +
-	'<img src="/images/banner/cena_150x67.gif" alt="푸시삼국지 시즌2"></a>'
+	'expire': "2013-06-30",
+	'tag': '<a href="/f.jsp?http://onoffmix.com/event/16291" target="_blank">' +
+	'<img src="/images/banner/bnr_androidpubanner.jpg" alt="플랫폼과 비즈니스 모델"></a>'
 }
 ],
 
