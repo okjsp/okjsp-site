@@ -40,7 +40,7 @@ aside : [
 {
 	'expire': "2013-06-30",
 	'tag': '<a href="/f.jsp?http://onoffmix.com/event/16291" target="_blank">' +
-	'<img src="/images/banner/bnr_androidpubanner.jpg" alt="플랫폼과 비즈니스 모델"></a>'
+	'<img src="/images/banner/bnr_androidpubanner.jpg" alt="플랫폼과 비즈니스 모델"></a>' 
 }
 ],
 
