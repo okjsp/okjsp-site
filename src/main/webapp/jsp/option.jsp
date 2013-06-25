@@ -14,6 +14,7 @@
 <option value="howmuch">얼마면돼</option>
 <option value="lifeqna">토론/기타 QnA</option>
 <option value="news">뉴스따라잡기</option>
+<option value="critical">정치 얘기</option>
 <option value="lecture">강좌</option>
 <option value="solo">싱글의 미학</option>
 <option value="bbs5">머리식히는 곳</option>
