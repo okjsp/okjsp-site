@@ -34,17 +34,17 @@ Banner.show();
 </script>
 </li>
 </ul>
-<!--  
+
 <div id="bookList">
 <ul>
 <li>
-<a href="/f.jsp?http://www.okjsp.net/seq/222488">
-<img src="/images/okjsp_main_ebrainus(130610).jpg">
+<a href="/f.jsp?http://www.okjsp.net/seq/224222">
+<img src="/images/okjsp_main_sbroh.jpg">
 </a>
 </li>
 </ul>
 </div>
--->
+
 <table>
   <tr>
     <td align="center" valign="top">
