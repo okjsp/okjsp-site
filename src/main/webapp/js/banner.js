@@ -21,8 +21,8 @@ left : [
 ],
 left_bnr : [
 {
-	"expire" : "2013-06-30",
-	"tag": '<li><A href="/f.jsp?http://olc.oss.kr/offlec/list.jsp" title="2013 모델 커리큘럼 공개강좌" target="olc">모델 커리큘럼 공개강좌 수강생모집</A></li>'
+	"expire" : "2013-07-31",
+	"tag": '<li></li>'
 }
 ],
 
@@ -38,9 +38,9 @@ footer : [
 
 aside : [
 {
-	'expire': "2013-06-30",
-	'tag': '<a href="/f.jsp?http://onoffmix.com/event/16289" target="_blank">' +
-	'<img src="/images/banner/bnr_androidpubanner.jpg" alt="플랫폼과 비즈니스 모델"></a>' 
+	'expire': "2013-05-06",
+	'tag': '<a href="/f.jsp?http://pushtk.com/D?l=6" target="_blank">' +
+	'<img src="/images/banner/cena_150x67.gif" alt="푸시삼국지 시즌2"></a>'
 }
 ],
 
@@ -56,7 +56,8 @@ show : function() {
 
 showAside : function() {
 	//document.writeln('<a href="/f.jsp?http://www.eclipse.org/donate/" target="_blank"><img src="http://eclipse.org/donate/images/friendslogo200.jpg" style="width:150px"></a>');
-	document.writeln('<a href="/f.jsp?http://olc.oss.kr/offlec/list.jsp" target="olc"><img src="/images/bnr_olc_rollingbanner-130604.gif" style="width:150px"></a>');
+	//document.writeln('<a href="/f.jsp?http://olc.oss.kr/offlec/list.jsp" target="olc"><img src="/images/bnr_olc_rollingbanner-130604.gif" style="width:150px"></a>');
+	document.writeln('<a href="/f.jsp?http://www.econovation.co.kr/@page/fair/fa_intro.asp" target="kteco"><img src="/images/banner/kt_battle_180x67.jpg" style="width:150px"></a>');
     document.writeln("<ul>");
     for(var i = 0; i < this.aside.length; i++) {
         document.writeln("<li>"+this.aside[i].tag+"</li>");
@@ -114,3 +115,4 @@ showOne: function(list) {
 
 
 };
+
