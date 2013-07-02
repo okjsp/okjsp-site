@@ -9,12 +9,6 @@
 		response.sendRedirect(Navigation.getPath("LOGFORM")+"?returnPath=/site2009/editor_jquery.jsp?bbs="+bbs);
 		return; 
 	}
-	
-	// hideIt
-	boolean isAdmin = BbsRoleHandler.isAdmin(sid);
-	if ("notice".equals(bbs) && !isAdmin) {
-		request.setAttribute("hideIt", new Boolean(true));
-	}
 
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -67,6 +61,13 @@ var sync = function() {
 <label for="bbs">bbs:</label>
 </dt>
 <dd>
+<%
+	// hideIt
+	boolean isAdmin = BbsRoleHandler.isAdmin(sid);
+	if (!isAdmin) {
+		request.setAttribute("hideIt", new Boolean(true));
+	}
+%>	
 <select id="bbs" name="bbs" size="1">
 <jsp:include page="/jsp/option.jsp"></jsp:include>
 </select>
