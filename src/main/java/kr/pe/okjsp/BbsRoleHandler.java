@@ -68,4 +68,25 @@ public class BbsRoleHandler {
 		return false;
 	}
 
+
+	public static boolean isAdmin(Member member) {
+		return isAdmin(member.getId());
+	}
+
+	public static boolean isAdmin(String id) {
+		return "sbroh".equals(id) || "okjsp".equals(id) || "kwamuki".equals(id)
+				|| "kenu".equals(id);
+	}
+	
+	public static boolean isAdmin(long sid) {
+		boolean isAdmin = false 
+				|| 8510 == sid
+				|| 21016 == sid
+				|| 21987 == sid
+				|| 163 == sid
+				;
+		return isAdmin;
+
+	}
+	
 }

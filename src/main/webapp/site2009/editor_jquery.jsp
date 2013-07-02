@@ -1,3 +1,4 @@
+<%@page import="kr.pe.okjsp.BbsRoleHandler"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%
@@ -10,7 +11,10 @@
 	}
 	
 	// hideIt
-	request.setAttribute("hideIt", new Boolean(true));
+	boolean isAdmin = BbsRoleHandler.isAdmin(sid);
+	if ("notice".equals(bbs) && !isAdmin) {
+		request.setAttribute("hideIt", new Boolean(true));
+	}
 
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
