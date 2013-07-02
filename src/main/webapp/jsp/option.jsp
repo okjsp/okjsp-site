@@ -27,8 +27,13 @@
 <option value="mac">맥 정보</option>
 <option value="useful">유용한 정보</option>
 <option value="ihaveadream">정부는 개발자를 위해</option>
-<option value="notice">공지사항</option>
-<option value="link">추천사이트</option>
+<%
+	Boolean hideIt = (Boolean)request.getAttribute("hideIt");
+	if (hideIt == null || !hideIt) {
+%><option value="notice">공지사항</option>
+<%
+	}
+%><option value="link">추천사이트</option>
 <option value="goodjob">좋은회사</option>
 <option value="market">장터</option>
 <option value="movie">movie story</option>
@@ -51,6 +56,6 @@
 <option value="japanlife">일본사는얘기</option>
 <option value="twitter">트위터</option>
 <option value="trash">짬통</option>
-<!--<option value="iphone">iOS</option>-->
-<!--<option value="xf">SLF</option> -->
-<!--<option value="ns">자바패턴1기</option>-->
+<%--<option value="iphone">iOS</option>--%>
+<%--<option value="xf">SLF</option> --%>
+<%--<option value="ns">자바패턴1기</option>--%>

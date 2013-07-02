@@ -8,6 +8,9 @@
 		response.sendRedirect(Navigation.getPath("LOGFORM")+"?returnPath=/site2009/editor_jquery.jsp?bbs="+bbs);
 		return; 
 	}
+	
+	// hideIt
+	request.setAttribute("hideIt", new Boolean(true));
 
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
