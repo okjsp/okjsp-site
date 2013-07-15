@@ -3,6 +3,7 @@
 <option value="book">책 얘기</option>
 <option value="recruit">구인/구직</option>
 <option value="pr">홍보</option>
+<option value="institute">학원</option>
 <option value="html5">HTML5</option>
 <option value="android">안드로이드</option>
 <option value="techtrend">TECH TREND</option>
