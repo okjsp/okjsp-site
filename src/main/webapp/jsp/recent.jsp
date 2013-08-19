@@ -168,9 +168,6 @@ Banner.show();
   </tr>
 </table>
 
-<div id="okevent" style="margin-left:3px">
-<iframe src="https://www.google.com/calendar/embed?src=mavru91b8uc53stgqbso2pl668%40group.calendar.google.com&ctz=Asia/Seoul" style="border: 0" width="642" height="480" frameborder="0" scrolling="no"></iframe>
-</div>
     </td>
   </tr>
 </table>

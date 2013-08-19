@@ -30,14 +30,15 @@
   <br />
   <A href="/bbs?act=MEMORECENT">새 메모 <img src="/images/check.png" style="width:15px;height:15px"></A>
   <br />
+  <!-- 
   <hr />
   open: <br />
   <A href="https://github.com/okjsp/okjsp-site" title="OKJSP source">OKJSP 사이트소스</A>
   <br />
-  <A href="http://www.okjsp.net:8080" title="Jenkins CI tool">OKJSP Health</A>
+  <A href="http://www.okjsp.net:1080" title="Jenkins CI tool">OKJSP Health</A>
   <br />
   <A href="http://kenu.github.com/tomcat70/docs" title="Tocmat7kr">톰캣7 문서 한글화</A>
-
+-->
   <hr>ad:
   <ul id="menuad">
   <script type="text/javascript">
@@ -46,11 +47,7 @@
     Banner.showLeftSideImg();
   }
   </script>
-  </ul>
-  <ul id="menuad">
-  <li><A href="/f.jsp?http://olc.oss.kr/offlec/list.jsp" title="2013 모델 커리큘럼 공개강좌" target="olc">모델 커리큘럼 공개강좌 수강생모집</A></li>
-  </ul>  
-
+ 
 <h2 id="bbslistmenu">BBS LIST</h2>
 <select id="bbslist" onchange="jumpto(this)" size="18">
 <jsp:include page="/jsp/option.jsp"></jsp:include>
@@ -62,8 +59,7 @@
    <br><A href="/bbs?act=LIST&bbs=cooper" title="협동조합준비위">◀협동조합준비위▶</A>
    <br><A href="http://it.nodong.net/zbxe/?mid=JOBQNA01"
    title="it.nodong.net" target="jobqna">일터Q&amp;A</A>
-   <br><A href="http://www.akose.or.kr"
-   title="한국 소프트웨어 개발자 협회" target="akose">한국 소프트웨어 개발자 협회</A>
+
 	<hr>
   <br>
   <br>
