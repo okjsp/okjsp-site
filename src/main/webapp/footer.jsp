@@ -8,9 +8,9 @@ if (typeof Banner == "object") { Banner.showFooter(); }
 <div>
 <ul style="padding-bottom: 40px">
 <li>java/jsp/eclipse
-<a href="/" style="font-size:11px">http://www.okjsp.pe.kr</a>
+<a href="/" style="font-size:11px">http://www.okjsp.net</a>
 </li>
-<li>사업자등록번호: 114-08-85833</li>
+<li>사업자등록번호: 220-09-04113 , 이브레인컨설팅</li>
 <li><a href="/jsp/member/agreement.jsp" target="privacy">개인정보취급방침</a>
 </li>
 <li><a href="https://github.com/okjsp/okjsp-site/issues" target="bugs">버그리포트</a>
