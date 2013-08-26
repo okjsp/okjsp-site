@@ -21,7 +21,8 @@ left : [
 ],
 left_bnr : [
 {
-
+	"expire" : "2013-07-31",
+	"tag": '<li></li>'
 }
 ],
 
@@ -37,7 +38,9 @@ footer : [
 
 aside : [
 {
-
+	'expire': "2013-08-23",
+	'tag': '<a href="#" target="_blank">' +
+	'</a>'
 }
 ],
 
