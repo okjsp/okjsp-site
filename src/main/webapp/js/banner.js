@@ -21,8 +21,7 @@ left : [
 ],
 left_bnr : [
 {
-	"expire" : "2013-07-31",
-	"tag": '<li></li>'
+
 }
 ],
 
@@ -38,9 +37,7 @@ footer : [
 
 aside : [
 {
-	'expire': "2013-08-23",
-	'tag': '<a href="/f.jsp?http://open.egovframe.go.kr/themes/egov/SuperK2.php" target="_blank">' +
-	'<img src="/images/banner/superk_banner_okjsp.jpg" alt="슈퍼개발자K 시즌2"></a>'
+
 }
 ],
 
