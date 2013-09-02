@@ -39,8 +39,8 @@ footer : [
 aside : [
 {
 	'expire': "2013-08-23",
-	'tag': '<a href="http://www.appcenter.kr" target="_blank">' +
-	'<img src="/images/banner/appcenter_150x120(130827).jpg" border="0"></a>'
+	'tag': '<a href="#" target="_blank">' +
+	'</a>'
 }
 ],
 
