@@ -47,6 +47,7 @@
     Banner.showLeftSideImg();
   }
   </script>
+  </ul>
  
 <h2 id="bbslistmenu">BBS LIST</h2>
 <select id="bbslist" onchange="jumpto(this)" size="18">
