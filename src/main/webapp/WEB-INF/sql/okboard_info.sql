@@ -1,7 +1,7 @@
 select * from okboard_info;
 
 insert into okboard_info (cseq, bbsid, name, header) 
-values (1, 'cooper', '협동조합준비위', '협동조합관련 정보를 널리 알리는 곳입니다.');
+values (1, 'institute', '학원', '배우고자 하는 학생 모집하는 게시판입니다.');
 
 select * from okboard_info where bbsid = 'bbs4';
 

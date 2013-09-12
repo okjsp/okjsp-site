@@ -9,4 +9,6 @@ CREATE UNIQUE INDEX "forgot_email_token_idx" on "forgot" ("email","token");
 
 select * from forgot order by seq desc;
 
+select * from forgot where email = 'lllyeajin@naver.com';
 
+select * from okmember where email = 'lllyeajin@naver.com';
