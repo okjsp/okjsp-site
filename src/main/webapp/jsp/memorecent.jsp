@@ -44,7 +44,7 @@
 	}
 %>
 </ul>
-<div style="width:100%; text-align: center;">
+<div style="width:100%; text-align: center; margin: 16px;">
 <a href="/bbs?act=MEMORECENT">Top</a>
 <a href="/bbs?act=MEMORECENT&amp;mp=<%= mp - 1 %>">Prev</a> |
 <%= mp %> |
