@@ -21,7 +21,6 @@
 <tr><th>#</th>
 <th>게시판</th>
 <th>제목</th>
-<th>내용</th>
 <th>일시</th>
 <th>연번</th>
 <th>닉네임</th>
@@ -48,7 +47,6 @@ ArticleDao dao = new kr.pe.okjsp.member.ArticleDao();
 <td><%= ++count %></td>
 <td><%= row.getBbs() %></td>
 <td class="title"><%= row.getSubject() %></td>
-<td class="preview"><%= row.getContent() %></td>
 <td><%= row.getWhen("yyyy-MM-dd HH:mm:ss") %></td>
 <td class="number"><a href="/seq/<%= row.getSeq() %>" target="_blank"><%= row.getSeq() %></a></td>
 <td><%= row.getWriter() %></td>

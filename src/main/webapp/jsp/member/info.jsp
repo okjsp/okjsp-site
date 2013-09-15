@@ -110,6 +110,11 @@ $(function(){
     </tr>
 	<tr>
 		<td>
+			<a href="/jsp/member/articlesByMe.jsp">내가 쓴 글</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
 			<a href="/jsp/member/profileForm.jsp">프로필 이미지 수정
 			<img alt="<%= member.getSid() %>" src="/profile/<%= member.getSid() %>.jpg">
 			</a>
