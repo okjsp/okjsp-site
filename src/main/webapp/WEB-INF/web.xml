@@ -74,6 +74,10 @@
 		<servlet-class>kr.pe.okjsp.TagController</servlet-class>
 	</servlet>
 	<servlet>
+		<servlet-name>myarticles</servlet-name>
+		<servlet-class>kr.pe.okjsp.MyArticlesController</servlet-class>
+	</servlet>
+	<servlet>
 		<servlet-name>seq</servlet-name>
 		<servlet-class>kr.pe.okjsp.BbsController</servlet-class>
 	</servlet>
@@ -152,6 +156,10 @@
 	<servlet-mapping>
 		<servlet-name>tag</servlet-name>
 		<url-pattern>/tag/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>myarticles</servlet-name>
+		<url-pattern>/myarticles/*</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>seq</servlet-name>

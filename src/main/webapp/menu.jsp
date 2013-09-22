@@ -19,9 +19,11 @@
 		<c:if test="${!empty member.id}">
 			<a href="<%= DomainUtil.getSecureDomain(request.getRequestURL()) %>/jsp/member/info.jsp" ><b><%= member.getId() %></b> 회원정보</a> 
 <br>
-			<a href="/jsp/member/logout.jsp" >로그아웃</a>
-			<br>
 			<a href="/bbs?act=BOOKMARK" >책갈피</a>
+			<br>
+			<a href="/myarticles" >내가 쓴 글</a>
+			<br>
+			<a href="/jsp/member/logout.jsp" >로그아웃</a>
 		</c:if>
 		</SPAN>
 	</div>
