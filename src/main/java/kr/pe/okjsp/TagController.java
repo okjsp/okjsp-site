@@ -11,6 +11,13 @@ public class TagController extends HttpServlet {
 	private static final long serialVersionUID = -1812823350032335626L;
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-			req.getRequestDispatcher("/jsp/member/articlesByMe.jsp").forward(req,res);
+		String pathInfo = req.getPathInfo();
+		int tagseq = 0;
+		try {
+			tagseq = new TagHandler().findTagseqByTag(pathInfo.substring(1));
+			req.getRequestDispatcher("/jsp/taglist.jsp?tagseq="+tagseq).forward(req,res);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
