@@ -84,5 +84,9 @@
 	 title="okjsp Database">
 	<img src="/images/banner/cubrid_88x31.gif" width="88" height="31" border="0"></a>
 	<br />
+	<a href="/f.jsp?http://hanb.co.kr" target="_blank"
+	 title="okjsp book">
+	<img src="/images/banner/hb_88x31.jpg" width="88" height="31" border="0"></a>
+	<br />
 </div>
 </div>
