@@ -122,10 +122,10 @@ Banner.showContentSection();
 <%-- Google Adsense middle --%>
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-8103607814406874";
-/* okjsp_middle */
-google_ad_slot = "6057883549";
-google_ad_width = 728;
-google_ad_height = 90;
+/* okjsp_middle2 */
+google_ad_slot = "7395015943";
+google_ad_width = 468;
+google_ad_height = 15;
 //-->
 </script>
 <script type="text/javascript"
