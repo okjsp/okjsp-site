@@ -119,6 +119,18 @@ Banner.showContentSection();
   }
 %>
 </table>
+<%-- Google Adsense middle --%>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8103607814406874";
+/* okjsp_middle */
+google_ad_slot = "6057883549";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
 
 <div id="passwd_layer" style="position:absolute;display:none;width:220px;height:60px;padding:10px" align="center">
 	<input type="password" id="passwd" name="passwd" maxlength="15">
