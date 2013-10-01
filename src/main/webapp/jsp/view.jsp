@@ -94,6 +94,20 @@ Banner.showContentSection();
 	<jsp:param name="c" value="<%= one.getCcl_id() %>"/>
 </jsp:include>
         </div>
+<br><br>
+<%-- Google Adsense middle --%>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8103607814406874";
+/* okjsp_middle2 */
+google_ad_slot = "7395015943";
+google_ad_width = 468;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+        
         </td>
     </tr>
 <%-- 다운로드 파일 목록 --%>
@@ -119,18 +133,6 @@ Banner.showContentSection();
   }
 %>
 </table>
-<%-- Google Adsense middle --%>
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-8103607814406874";
-/* okjsp_middle2 */
-google_ad_slot = "7395015943";
-google_ad_width = 468;
-google_ad_height = 15;
-//-->
-</script>
-<script type="text/javascript"
-src="//pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
 
 <div id="passwd_layer" style="position:absolute;display:none;width:220px;height:60px;padding:10px" align="center">
 	<input type="password" id="passwd" name="passwd" maxlength="15">
