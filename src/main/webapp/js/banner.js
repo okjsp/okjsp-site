@@ -117,7 +117,7 @@ showContentSection : function() {
 },
 
 showFooter : function() {
-	this.showOne(this.footer);
+	//this.showOne(this.footer);
 },
 
 showOne: function(list) {
