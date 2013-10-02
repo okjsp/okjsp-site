@@ -1,11 +1,23 @@
 var Banner = {
 main : [
-{
-	"expire": '2013-04-30',
-	"tag": '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
-	'<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
-	'alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트"></a>'
-}
+	{
+		"expire": '2013-04-30',
+		"tag": '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
+		'<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
+		'alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트"></a>'
+	},
+	{
+		"expire": '2013-11-04',
+		"tag": '<a href="/f.jsp?http://edu.kosta.or.kr/clazzregister/clazzRegister_findClazzForClazzRegister?page=1" target="_blank">' +
+		'<img src="/images/banner/banner_kosta_131002(473)_no01.jpg" ' +
+		'alt="KOSTA 재직자, 채용예정자 교육일정 안내"></a>'
+	}.
+	{
+		"expire": '2013-11-04',
+		"tag": '<a href="/f.jsp?http://edu.kosta.or.kr/clazzregister/findClazzByCourse?page=1&course.courseId=17&level2=%EC%B1%84%EC%9A%A9%EC%98%88%EC%A0%95%EC%9E%90" target="_blank">' +
+		'<img src="/images/banner/banner_kosta_131002(473)_no02.jpg" ' +
+		'alt="KOSTA 재직자, 채용예정자 교육일정 안내"></a>'
+	}
 ],
 contentRight : [
 ],
