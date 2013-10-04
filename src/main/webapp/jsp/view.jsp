@@ -264,7 +264,9 @@ Banner.showContentSection();
     }
 
 %>
+
 <%-- Google Adsense middle --%>
+<br><br><br>
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-8103607814406874";
 /* okkjsp_middle(view) */
@@ -276,6 +278,7 @@ google_ad_height = 60;
 <script type="text/javascript"
 src="//pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
+
     </td>
     </tr>
 </table>
