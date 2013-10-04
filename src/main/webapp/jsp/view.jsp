@@ -88,26 +88,12 @@ Banner.showContentRight();
 Banner.showContentSection();
 </script>
 </div>
-
         <div>
-<jsp:include flush="true" page="/ccl/licenses_skin.jsp">
-	<jsp:param name="c" value="<%= one.getCcl_id() %>"/>
-</jsp:include>
+			<jsp:include flush="true" page="/ccl/licenses_skin.jsp">
+				<jsp:param name="c" value="<%= one.getCcl_id() %>"/>
+			</jsp:include>
         </div>
-<br><br>
-<%-- Google Adsense middle --%>
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-8103607814406874";
-/* okjsp_middle2 */
-google_ad_slot = "7395015943";
-google_ad_width = 468;
-google_ad_height = 15;
-//-->
-</script>
-<script type="text/javascript"
-src="//pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-        
+			<br><br>
         </td>
     </tr>
 <%-- 다운로드 파일 목록 --%>
@@ -278,6 +264,18 @@ src="//pagead2.googlesyndication.com/pagead/show_ads.js">
     }
 
 %>
+<%-- Google Adsense middle --%>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8103607814406874";
+/* okkjsp_middle(view) */
+google_ad_slot = "3135953143";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
     </td>
     </tr>
 </table>
