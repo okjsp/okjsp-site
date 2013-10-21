@@ -71,6 +71,7 @@ showAside : function() {
 	//document.writeln('<a href="/f.jsp?http://www.econovation.co.kr/@page/fair/fa_intro.asp" target="kteco"><img src="/images/banner/kt_battle_180x85.jpg" style="width:150px"></a>');
 	//document.writeln('<a href="/f.jsp?http://www.okjsp.net/seq/228162" target="ebu"><img src="/images/ebrainus/banner_cp_130807(180).jpg" style="width:150px"></a>');
 	//document.writeln('<a href="/f.jsp?http://www.hanb.co.kr/events/funnytest/" target="ebu"><img src="/images/banner/banner_hb_130923(160).jpg" style="width:160px"></a>');
+	document.writeln('<a href="/f.jsp?http://www.hanb.co.kr/events/eventview.html?event_id=cleaninfo" target="hb"><img src="/images/banner/banner_hb_131021(175).jpg" style="width:160px"></a>');
 	document.writeln('<a href="/f.jsp?http://open.egovframe.go.kr/projects/notices/event/8496" target="ebu"><img src="/images/banner/banner_superk_131001(150).jpg" style="width:150px"></a>');
     document.writeln("<ul>");
     for(var i = 0; i < this.aside.length; i++) {
