@@ -1,8 +1,11 @@
 package kr.pe.okjsp.member;
 
+import java.io.FileNotFoundException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Random;
+
+import javax.mail.MessagingException;
 
 import kr.pe.okjsp.DaoUtil;
 import kr.pe.okjsp.Navigation;
@@ -50,14 +53,13 @@ public class MemberHandler {
 	 * @throws SQLException
 	 */
 	public boolean isIdExist(String id) throws SQLException {
-		boolean b_id_exist = true; // default true;
+		boolean b_id_exist = true;
 
-		if (id==null) return true;
+		if (id == null) return true;
 
 		Connection pconn = dbCon.getConnection();
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-
 
 		try{
 			pstmt = pconn.prepareStatement(QUERY_EXISTS);
@@ -74,7 +76,7 @@ public class MemberHandler {
 			System.out.println("Member Handler isIdExist err:"+e.getMessage());
 		} finally {
 			dbCon.close(pconn, pstmt, rs);
-		} // end try catch
+		} 
 
 		return b_id_exist;
 	}
@@ -140,8 +142,12 @@ public class MemberHandler {
 			switch (addMember(member, contextRoot)) {
 				case 1:
 					return "가입을 환영합니다.";
+				case -1:
+					return "중복된 이메일이 있습니다.";
+				case -2:
+					return "이미 사용중인 ID입니다.";
 				default:
-				   throw new SQLException("장애가 발생했습니다.");
+				    throw new SQLException("장애가 발생했습니다.");
 			}
 		}
 	}
@@ -214,8 +220,8 @@ public class MemberHandler {
 	 * @throws SQLException
 	 */
 	private int addMember(Member member, String contextRoot) throws SQLException {
-		if (isEmailExist(member.getEmail()))
-			throw new SQLException("중복된 email이 있습니다.");
+		if (isEmailExist(member.getEmail())) return -2;
+		if (isIdExist(member.getId())) return -2;
 
 		Connection pconn = dbCon.getConnection();
 		pconn.setAutoCommit(false);
@@ -250,21 +256,13 @@ public class MemberHandler {
 			pstmt.close();
 
 			pstmt = pconn.prepareStatement(QUERY_ROLE_ADD);
-			pstmt.setString(1,member.getId());
-			pstmt.setString(2,"friend");
+			pstmt.setString(1, member.getId());
+			pstmt.setString(2, "friend");
 
 			pstmt.executeUpdate();
 			pstmt.close();
 			
-			String mailto = member.getEmail();
-			String subject = "[OKJSP]Confirmation Mail #" + member.getSid();
-			String textMessage = "Thank you for joining OKJSP with id '" 
-			    + member.getId() + "'\n"
-				+ "\nYour temporary password : " + member.getPassword()
-				+ "\nAfter login you can change your password as you like."
-				+ "\n" + Navigation.getPath("LOGFORM") 
-				+ "\n\nJSP/Eclipse developer community http://www.okjsp.net ";
-			new MailUtil().send(mailto, subject, textMessage);
+			sendMail(member);
 			
 			ProfileUtil profileUtil = new ProfileUtil();
 			profileUtil.copyDefaultProfile(contextRoot, member.getSid());
@@ -279,6 +277,20 @@ public class MemberHandler {
 		} // end try catch
 
 		return insert_cnt;
+	}
+
+
+	public void sendMail(Member member) throws FileNotFoundException,
+			MessagingException {
+		String mailto = member.getEmail();
+		String subject = "[OKJSP]Confirmation Mail #" + member.getSid();
+		String textMessage = "Thank you for joining OKJSP with id '" 
+		    + member.getId() + "'\n"
+			+ "\nYour temporary password : " + member.getPassword()
+			+ "\nAfter login you can change your password as you like."
+			+ "\n" + Navigation.getPath("LOGFORM") 
+			+ "\n\nJSP/Eclipse developer community http://www.okjsp.net ";
+		new MailUtil().send(mailto, subject, textMessage);
 	}
 
 	/**

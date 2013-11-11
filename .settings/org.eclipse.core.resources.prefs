@@ -1,6 +1,7 @@
 eclipse.preferences.version=1
 encoding//docs/p.sh=UTF-8
 encoding//src/main/java/kr/pe/okjsp/ControllerServlet.java=euc-kr
+encoding//src/main/java/kr/pe/okjsp/member/MemberHandler.java=ms949
 encoding//src/main/webapp/WEB-INF/sql/okboard_info.sql=euc-kr
 encoding//src/main/webapp/js/ban.js=euc-kr
 encoding//src/main/webapp/js/banner.js=utf-8

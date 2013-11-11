@@ -14,8 +14,15 @@ update okmember set sid = 14901 where sid = 1;
 
 insert into okmember (id,name,password, sid) values ('kenu','kenu',old_password('163'), 163);
 
-select * from okmember where id like 'sbroh%';
+select * from okmember where id like 'leejoo%';
 select * from okrole where id like 'mangsang%';
+
+-- soobinpapa soobinpapa@naver.com 2013-11-07 10:54:42.0 NULL              NULL    NULL    N           0 25178
+
+delete from okmember where sid = 25217;
+delete from okrole where id like 'leejoo%';
+
+
 
 delete from okrole where id = 'mangsang00';
 
