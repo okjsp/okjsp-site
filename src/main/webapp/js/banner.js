@@ -5,18 +5,6 @@ main : [
 		"tag": '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
 		'<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
 		'alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트"></a>'
-	},
-	{
-		"expire": '2013-11-04',
-		"tag": '<a href="/f.jsp?http://edu.kosta.or.kr/clazzregister/clazzRegister_findClazzForClazzRegister?page=1" target="_blank">' +
-		'<img src="/images/banner/banner_kosta_131002(473)_no01.jpg" ' +
-		'alt="KOSTA 재직자, 채용예정자 교육일정 안내"></a>'
-	},
-	{
-		"expire": '2013-11-04',
-		"tag": '<a href="/f.jsp?http://edu.kosta.or.kr/clazzregister/findClazzByCourse?page=1&course.courseId=17&level2=%EC%B1%84%EC%9A%A9%EC%98%88%EC%A0%95%EC%9E%90" target="_blank">' +
-		'<img src="/images/banner/banner_kosta_131002(473)_no02.jpg" ' +
-		'alt="KOSTA 재직자, 채용예정자 교육일정 안내"></a>'
 	}
 ],
 contentRight : [
@@ -71,9 +59,9 @@ showAside : function() {
 	//document.writeln('<a href="/f.jsp?http://www.econovation.co.kr/@page/fair/fa_intro.asp" target="kteco"><img src="/images/banner/kt_battle_180x85.jpg" style="width:150px"></a>');
 	//document.writeln('<a href="/f.jsp?http://www.okjsp.net/seq/228162" target="ebu"><img src="/images/ebrainus/banner_cp_130807(180).jpg" style="width:150px"></a>');
 	//document.writeln('<a href="/f.jsp?http://www.hanb.co.kr/events/funnytest/" target="ebu"><img src="/images/banner/banner_hb_130923(160).jpg" style="width:160px"></a>');
-	document.writeln('<a href="/f.jsp?http://www.hanb.co.kr/events/eventview.html?event_id=cleaninfo" target="hb"><img src="/images/banner/banner_hb_131021(175).jpg" style="width:160px"></a>');
 	//document.writeln('<a href="/f.jsp?http://techplanet.skplanet.com" target="skp"><img src="/images/banner/banner_skp_131025.gif" style="width:160px"></a>');
 	//document.writeln('<a href="/f.jsp?http://open.egovframe.go.kr/projects/notices/event/8496" target="ebu"><img src="/images/banner/banner_superk_131001(150).jpg" style="width:150px"></a>');
+	document.writeln('<a href="/f.jsp?http://www.hanb.co.kr/events/eventview.html?event_id=cleaninfo" target="hb"><img src="/images/banner/banner_hb_131021(175).jpg" style="width:160px"></a>');
     document.writeln("<ul>");
     for(var i = 0; i < this.aside.length; i++) {
         document.writeln("<li>"+this.aside[i].tag+"</li>");
