@@ -2,7 +2,7 @@
 <%@ page pageEncoding="euc-kr" %>
 <%= new java.util.Date().toLocaleString() %>
 <br>
-Hello
+Hello afreeca!
 <br>
 path: <%= application.getRealPath("/") %>
 <br>
