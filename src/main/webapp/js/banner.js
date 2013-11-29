@@ -5,6 +5,12 @@ main : [
 		"tag": '<a href="/f.jsp?http://www.devlec.com/?_pageVariable=OKJSP" target="_blank">' +
 		'<img src="http://www.devlec.com/images/devlec_okjsp.gif" ' +
 		'alt="▒▒▒ 데브렉 ▒▒▒ 개발자를 위한 국내 최고 프로그래밍 전문 동영상강좌 사이트"></a>'
+	},
+	{
+		"expire": '2013-12-10',
+		"tag": '<a href="/f.jsp?http://onoffmix.com/event/21463" target="_pag">' +
+		'<img src="/images/banner/banner_pag_131129(478).jpg" ' +
+		'alt="플랫폼컨퍼런스"></a>'
 	}
 ],
 contentRight : [
@@ -53,7 +59,8 @@ showAside : function() {
 	//document.writeln('<a href="/f.jsp?http://www.hanb.co.kr/events/funnytest/" target="ebu"><img src="/images/banner/banner_hb_130923(160).jpg" style="width:160px"></a>');
 	//document.writeln('<a href="/f.jsp?http://techplanet.skplanet.com" target="skp"><img src="/images/banner/banner_skp_131025.gif" style="width:160px"></a>');
 	//document.writeln('<a href="/f.jsp?http://open.egovframe.go.kr/projects/notices/event/8496" target="ebu"><img src="/images/banner/banner_superk_131001(150).jpg" style="width:150px"></a>');
-	document.writeln('<a href="/f.jsp?http://www.hanb.co.kr/events/eventview.html?event_id=cleaninfo" target="hb"><img src="/images/banner/banner_hb_131021(175).jpg" style="width:160px"></a>');
+	//document.writeln('<a href="/f.jsp?http://www.hanb.co.kr/events/eventview.html?event_id=cleaninfo" target="hb"><img src="/images/banner/banner_hb_131021(175).jpg" style="width:160px"></a>');
+	document.writeln('<a href="/f.jsp?https://www.facebook.com/dailymaso?ref=ts&fref=ts" target="maso"><img src="/images/banner/banner_maso_131129(160).jpg" style="width:160px"></a>');
 },
 
 showAsideBottom : function() {
