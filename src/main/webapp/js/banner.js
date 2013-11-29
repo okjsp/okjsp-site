@@ -36,14 +36,6 @@ footer : [
 }
 ],
 
-aside : [
-{
-	'expire': "2013-08-23",
-	'tag': '<a href="#" target="_blank">' +
-	'</a>'
-}
-],
-
 asideApp : [
 {
 	tag : '<a href="/f.jsp?http://itunes.apple.com/kr/app/oghyi/id515739111?mt=8" target="_blank"><img class="adapp" '+
@@ -62,13 +54,8 @@ showAside : function() {
 	//document.writeln('<a href="/f.jsp?http://techplanet.skplanet.com" target="skp"><img src="/images/banner/banner_skp_131025.gif" style="width:160px"></a>');
 	//document.writeln('<a href="/f.jsp?http://open.egovframe.go.kr/projects/notices/event/8496" target="ebu"><img src="/images/banner/banner_superk_131001(150).jpg" style="width:150px"></a>');
 	document.writeln('<a href="/f.jsp?http://www.hanb.co.kr/events/eventview.html?event_id=cleaninfo" target="hb"><img src="/images/banner/banner_hb_131021(175).jpg" style="width:160px"></a>');
-    document.writeln("<ul>");
-    for(var i = 0; i < this.aside.length; i++) {
-        document.writeln("<li>"+this.aside[i].tag+"</li>");
-    }
-    document.writeln("</ul>");
-
 },
+
 showAsideBottom : function() {
 	
 	var html = '<p id="adinfo"><a href="/seq/181976">광고안내</a></p>'+
