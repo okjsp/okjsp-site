@@ -38,7 +38,7 @@ Banner.show();
 <div id="bookList">
 <ul>
 <li>
-<a href="/f.jsp?http://www.okjsp.net/seq/238190"><img src="/images/banner/banner_promotion_131211.jpg"></a>
+<a href="/f.jsp?http://www.hanb.co.kr/search/searchResult.html?keyword=angularjs"><img src="/images/banner/banner_hanb_promotion_book_131218.jpg"></a>
 </li>
 </ul>
 </div>
