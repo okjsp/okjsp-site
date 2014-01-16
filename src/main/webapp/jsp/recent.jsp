@@ -38,7 +38,7 @@ Banner.show();
 <div id="bookList">
 <ul>
 <li>
-<a href="/f.jsp?http://www.hanb.co.kr/search/searchResult.html?keyword=angularjs"><img src="/images/banner/banner_hanb_promotion_book_131218.jpg"></a>
+<a href="/f.jsp?http://edu.kosta.or.kr/clazzregister/findClazzByCourse?page=1&course.courseId=23&level2=%EC%BB%A8%EC%86%8C%EC%8B%9C%EC%97%84" target="_kosta"><img src="/images/banner/banner_kosta_main1_140115_600-200.jpg"></a>
 </li>
 </ul>
 </div>
