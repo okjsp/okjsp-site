@@ -126,7 +126,7 @@ public class MoveBean {
 			pstmt.close();
 			
 			MemoDao memoDao = new MemoDao();
-			int memocnt = memoDao.write(conn, writer, sid, writer, "MOVED FROM " + oldBbs, "okdel", ip, seq);
+			int memocnt = memoDao.write(conn, writer, sid, writer, "이전 게시판(code:" + oldBbs + ")에서 옮겨 왔습니다.", "okdel", ip, seq);
 			memoDao.setCount(conn, seq, memocnt);
 			
 			conn.commit();
