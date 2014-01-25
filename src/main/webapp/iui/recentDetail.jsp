@@ -26,7 +26,7 @@
 	    	bbsInfo = new BbsInfoBean();
 	    }
 	    
-	    if (bbsInfo.getCseq() == null || "".equals(bbsInfo.getCseq()) || "twitter".equals(bbsInfo.getBbs())) {
+	    if (bbsInfo.getCseq() == null || "".equals(bbsInfo.getCseq())) {
     		continue;
     	}
     	

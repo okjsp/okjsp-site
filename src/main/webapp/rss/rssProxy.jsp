@@ -5,7 +5,7 @@ contentType="text/xml;charset=utf-8"
 	String charset = request.getParameter("c");
 	String refresh = request.getParameter("r");
 	String feedData = RSSProxy.getCachedXML(url, charset, refresh);
-	if (charset.equals."euc-kr"){
+	if ("euc-kr".equals(charset)){
 		feedData = feedData.replaceFirst("EUC-KR","utf-8");
 	}
 	out.println(feedData);

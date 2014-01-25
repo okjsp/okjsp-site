@@ -72,9 +72,6 @@ public class WriteServlet extends HttpServlet {
 		
 		new ArticleDao().write(article);
 		
-		// 트위터 글쓰기 추가
-//		new TwitterUpdate().doUpdate(article, req);
-		
 		setWriterCookie(DomainUtil.getBaseDomain(req.getRequestURL()), res, article);
 
 		return article.getBbs();
@@ -209,17 +206,6 @@ public class WriteServlet extends HttpServlet {
 			System.out.println("WriteServlet err:" + CommonUtil.a2k(e.toString()));
 		} finally {
 			dbCon.close(conn, null);
-		}
-
-		/*
-			트위터 글쓰기 추가 
-			2010.03.25 윤정부[Coma] 수정 : 수정시 트위터 전송 안되게 처리함.
-			act 변수 위치 변경하였음.
-		*/
-		
-		if(!"MODIFY".equals(act) && !"REPLY".equals(act))
-		{
-//			new TwitterUpdate().doUpdate(article, req);
 		}
 		
 		setWriterCookie(DomainUtil.getBaseDomain(req.getRequestURL()), res, article);
