@@ -71,6 +71,13 @@ test('NaN test', function() {
 	ok('recruit:13,techtrend:8,bbs6:8,html5:5,android:2,ajax:2,book:1,TOOL:1,lifeqna:1,springstudy:1,lecture:1,bbs1:1,docs:1,bbs5:1' == getCookie(key), 'clean up');
 });
 
+test(',;: test', function() {
+	setCookie(key, 'TOOL:3,trash:3,flexqna:2,recruit:2,;:1,howmuch:1');
+	ok('TOOL:3,trash:3,flexqna:2,recruit:2,;:1,howmuch:1' == getCookie(key), 'clean up');
+	saveBbslist(key, 'flexqna');
+	ok('TOOL:3,trash:3,flexqna:3,recruit:2,howmuch:1' == getCookie(key), ',;: test');
+});
+
 var clearCookie = function(v) {
 	setCookie(v, null, -1);
 };

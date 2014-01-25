@@ -110,7 +110,7 @@ function saveBbslist(key, v) {
 	var list = saved.split(',');
 	for(var idx in list) {
 		var item = list[idx].split(':');
-		if (item[0] == '') continue;
+		if (item[0] == '' || item[0] == ';') continue;
 		if (parseInt(item[1]).toString() == 'NaN') {
 			item[1] = 1;
 		}
