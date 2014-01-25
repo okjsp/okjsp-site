@@ -140,6 +140,7 @@ function customizedList() {
 	var list = saved.split(",").reverse();
 	for (idx in list) {
 		var item = list[idx].split(':');
+		if (item[0] == ';') continue;
 		$("#bbslist option[value="+ item[0] +"]").prependTo("#bbslist");
 	}
 }
