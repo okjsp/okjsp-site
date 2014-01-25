@@ -18,6 +18,7 @@
     <script src='/js/sh/scripts/shCore.js'></script>
     <script src='/js/sh/scripts/shBrushJScript.js'></script>
     <script src='/js/sh/scripts/shBrushJava.js'></script>
+    <script>SyntaxHighlighter.all();</script>
     <link rel="stylesheet" href="/js/sh/styles/shCoreDefault.css" type="text/css">
 
     <script src='/js/ban.js'></script>
