@@ -413,4 +413,7 @@ function check(){
 
 $(function(){
 	customizedList();
+	if(getCookie('sid') != '25959') {
+	    $("[alt=25959]").parent().parent().hide();
+	}
 });
