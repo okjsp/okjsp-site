@@ -32,7 +32,7 @@
   <br />
   <A href="/bbs?act=MEMORECENT">새 메모 <img src="/images/check.png" style="width:15px;height:15px"></A>
   <br />
-  <!-- 
+  <%-- 
   <hr />
   open: <br />
   <A href="https://github.com/okjsp/okjsp-site" title="OKJSP source">OKJSP 사이트소스</A>
@@ -40,7 +40,7 @@
   <A href="http://www.okjsp.net:1080" title="Jenkins CI tool">OKJSP Health</A>
   <br />
   <A href="http://kenu.github.com/tomcat70/docs" title="Tocmat7kr">톰캣7 문서 한글화</A>
--->
+--%>
   <hr>ad:
   <ul id="menuad">
   <script type="text/javascript">
