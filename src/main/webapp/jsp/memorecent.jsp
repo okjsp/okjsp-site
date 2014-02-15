@@ -33,12 +33,12 @@
 <%
 	for (MemoBean memo: recent) {
 %><li>
-<a href="/seq/<%= memo.getSeq()+"#"+memo.getMseq() %>">
-<ul class="box"><li><img class="box" src="http://www.okjsp.pe.kr/profile/<%= memo.getSid() %>.jpg"></li>
+<ul class="box">
+<li><img class="box" alt="<%= memo.getSid() %>" src="http://www.okjsp.pe.kr/profile/<%= memo.getSid() %>.jpg"></li>
 <li class="writer"><%= memo.getWriter() %></li>
 <li><%= memo.getWhen("yyyy-MM-dd HH:mm:ss") %></li>
-<li class="memo"><%= CommonUtil.showHtml(memo.getBcomment()) %></li>
-</ul></a>
+<li class="memo"><a href="/seq/<%= memo.getSeq()+"#"+memo.getMseq() %>"><%= CommonUtil.showHtml(memo.getBcomment()) %></a></li>
+</ul>
 </li>
 <%
 	}
