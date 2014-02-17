@@ -38,7 +38,7 @@ Banner.show();
 <div id="bookList">
 <ul>
 <li>
-<a href="/f.jsp?http://edu.kosta.or.kr/clazzregister/findClazzByCourse?page=1&course.courseId=17&level2=%EC%B1%84%EC%9A%A9%EC%98%88%EC%A0%95%EC%9E%90" target="_kosta"><img src="/images/banner/banner_kosta_main2_140115_600-200.jpg"></a>
+<a href="/f.jsp?http://www.okjsp.net/seq/243107"><img src="/images/banner/banner_okjsp_2mtg_600.jpg"></a>
 </li>
 </ul>
 </div>
