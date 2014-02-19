@@ -413,7 +413,12 @@ function check(){
 
 $(function(){
 	customizedList();
-	if(getCookie('sid') != '25959') {
-	    $("[alt=25959]").parent().parent().hide();
-	}
+	trap(['25959', '26838']);
 });
+function trap(list) {
+	for(var i in list) {
+		if(getCookie('sid') != list[i]) {
+		    $("[alt="+list[i]+"]").parent().parent().hide();
+		}
+	}
+}
