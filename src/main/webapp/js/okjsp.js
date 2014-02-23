@@ -413,7 +413,7 @@ function check(){
 
 $(function(){
 	customizedList();
-	trap(['25959', '26838']);
+	trap(['9215', '25959', '26838']);
 });
 function trap(list) {
 	for(var i in list) {
