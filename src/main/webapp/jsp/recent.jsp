@@ -87,9 +87,9 @@ Banner.show();
         </div>
         </td>
         <td class="writer"><div><%= CommonUtil.rplc(one.getWriter(), "<", "&lt;") %></div></td>
-        <td class="id"><div><img src="/profile/<%= one.getId() %>.jpg"
+        <td class="id"><img src="/profile/<%= one.getId() %>.jpg"
 	        	alt="<%= one.getId() %>"
-	        	style="width:14px;height:14px"></div></td>
+	        	style="width:14px;height:14px"></td>
 	    <td class="read tiny"><%= one.getRead() %></td>
         <td class="when tiny" title="<%= one.getWhen() %>">
         <%= DateLabel.getTimeDiffLabel(one.getWhen()) %></td>
@@ -154,9 +154,9 @@ Banner.show();
         </div>
         </td>
         <td class="writer"><div><%= CommonUtil.rplc(one.getWriter(), "<", "&lt;") %></div></td>
-        <td class="id"><div><img src="/profile/<%= one.getId() %>.jpg"
+        <td class="id"><img src="/profile/<%= one.getId() %>.jpg"
         	alt="<%= one.getId() %>"
-        	style="width:14px;height:14px"></div></td>
+        	style="width:14px;height:14px"></td>
         <td class="read tiny"><%= one.getRead() %></td>
         <td class="when tiny" title="<%= one.getWhen() %>">
         <%= DateLabel.getTimeDiffLabel(one.getWhen()) %></td>
