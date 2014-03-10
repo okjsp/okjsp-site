@@ -38,8 +38,8 @@ footer : [
 
 asideApp : [
 {
-	tag : '<a href="/f.jsp?http://itunes.apple.com/kr/app/oghyi/id515739111?mt=8" target="_blank"><img class="adapp" '+
-	'src="http://a4.mzstatic.com/us/r1000/096/Purple/v4/5d/d2/48/5dd24835-243d-9ec9-f6b1-c78691abc75b/V9809ELtPnNVvmabDtq5aw-temp-upload.siryfcqr.175x175-75.jpg" alt="옥희, 아이폰/아이패드앱"></a>'
+	tag : '<a href="/f.jsp?https://itunes.apple.com/us/app/art-everyday-painting-gallery/id821350005?mt=8" target="_blank"><img class="adapp" '+
+	'src="/upload/1394461194950.jpg" alt="예술같은 오늘"></a>'
 }
 ],
 show : function() {
