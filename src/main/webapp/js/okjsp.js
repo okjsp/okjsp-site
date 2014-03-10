@@ -16,7 +16,7 @@ function m_start(n) {
 
 function goSearch(formObj) {
 	if (squeeze(formObj.keyword.value)<2) {
-		alert("2±ÛÀÚ ÀÌ»ó ÀÔ·ÂÇØ ÁÖ½Ê½Ã¿À.");
+		alert("2ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ ï¿½Ö½Ê½Ã¿ï¿½.");
 		formObj.keyword.focus();
 		return false;
 	}
@@ -29,18 +29,18 @@ function goSearch(formObj) {
     }
 }
 
-// ¹®ÀÚ¿­ ³»ÀÇ °ø¹é Á¦°Å ÈÄ ±æÀÌ ¹ÝÈ¯
+// ï¿½ï¿½ï¿½Ú¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
 function squeeze(str) {
     str = str.replace(/ /g, "");
     return str.length;
 }
 
 /* @author kenu@okjsp.pe.kr
-*  @date 2003-04-07 12:47¿ÀÀü
+*  @date 2003-04-07 12:47ï¿½ï¿½ï¿½ï¿½
 *  @contact http://okjsp.pe.kr
 */
 /*
- ¼­ºê¸Þ´º¸¦ º¸¿´´Ù ¾È º¸¿´´Ù Åä±ÛÇÏ´Â ÇÔ¼ö
+ ï¿½ï¿½ï¿½ï¿½ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½
 */
 function toggleMenu(currMenu) {
 	if (document.all) {
@@ -56,7 +56,7 @@ function toggleMenu(currMenu) {
 }
 
 /*
- ÄíÅ° °ª¿¡ µû¶ó ¼­ºê¸Þ´º¸¦ º¸ÀÌ´Â ÇÔ¼ö
+ ï¿½ï¿½Å° ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì´ï¿½ ï¿½Ô¼ï¿½
 */
 function setMenuDefault(currMenu) {
     if (document.all) {
@@ -74,7 +74,7 @@ function setMenuDefault(currMenu) {
 
 var oldMenu = null;
 /*
- ¼­ºê¸Þ´º¸¦ º¸ÀÌ´Â ÇÔ¼ö
+ ï¿½ï¿½ï¿½ï¿½ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì´ï¿½ ï¿½Ô¼ï¿½
 */
 function showMenu(currMenu) {
 	if (document.all) {
@@ -90,7 +90,7 @@ function showMenu(currMenu) {
 	return false;
 }
 
-// ¿¡·¯ÀÌ¹ÌÁö Ç¥½Ã
+// ï¿½ï¿½ï¿½ï¿½ï¿½Ì¹ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½
 function errImage(n) {
     n.src = "/images/bnr_okjsp.gif";
 }
@@ -147,7 +147,7 @@ function customizedList() {
 
 
 /* @author kenu@okjsp.pe.kr
-*  @date 2003-01-07 4:58¿ÀÀü
+*  @date 2003-01-07 4:58ï¿½ï¿½ï¿½ï¿½
 *  @contact http://okjsp.pe.kr
 */
 var item;
@@ -172,7 +172,7 @@ function showBanner(n) {
     }
 }
 
-// ÅØ½ºÆ® ¹è³Ê
+// ï¿½Ø½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½
 function showTextBanner(n) {
     item = n.split(",,");
     bannerContent+=("<a href='"+item[2]+"' target=_blank class='banner'>");
@@ -193,7 +193,7 @@ function makeBannerContent(n, col) {
     }
 }
 
-// ¹è³Ê Ç¥½ÃÇÏ±â
+// ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½ï¿½Ï±ï¿½
 function displayBanner(n, col) {
     this.col = col;
     box = n;
@@ -202,12 +202,12 @@ function displayBanner(n, col) {
     bannerContent='';
 }
 
-// ¹è³Ê ¹Ù²Ù±â
+// ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²Ù±ï¿½
 function changeModeButton() {
     bannerContent+=("<div onClick='changeMode()' style='cursor:hand'><font color='white'>"+
-        "<font color='red'>¡á</font> <b>Click to Change</b></font></div>");
+        "<font color='red'>ï¿½ï¿½</font> <b>Click to Change</b></font></div>");
 }
-// ¹è³Ê ¹Ù²Ù±â
+// ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²Ù±ï¿½
 function changeMode() {
     col = 2-col;
     makeBannerContent(box, col);
@@ -215,23 +215,23 @@ function changeMode() {
     bannerContent = '';
 }
 
-// ¹è³Ê¼¯±â ±âº» 1ÁÙ
+// ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ ï¿½âº» 1ï¿½ï¿½
 function bannerShuffle(n, count){
     bannerShuffle(n, count, 1);
 }
 
-// ¹è³Ê¼¯±â
+// ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½
 var box;
 var col;
 function bannerShuffle(n, count, col){
-    // ¹è³Ê µÚ¼¯¾î¼­, box ¹è¿­¿¡ ³Ö±â
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½Ú¼ï¿½ï¿½î¼­, box ï¿½è¿­ï¿½ï¿½ ï¿½Ö±ï¿½
     this.col = col;
     box = new Array();
     var idx = 0;
     var len = n.length;
-    // ¹è³Êµ¥ÀÌÅÍº¸´Ù Ç¥½Ã°¹¼ö°¡ ¸¹À» °æ¿ì ÃÖ´ë°ªÀ¸·Î ÇÑÁ¤
+    // ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½Íºï¿½ï¿½ï¿½ Ç¥ï¿½Ã°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ë°ªï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     if(count>len) count=len;
-    // ¹è³Ê µÚ¼¯±â
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½Ú¼ï¿½ï¿½ï¿½
     for(var i=0; i<count; i++) {
         idx = Math.floor(Math.random()*(len-i));
         box[i] = n[idx];
@@ -245,48 +245,48 @@ function bannerShuffle(n, count, col){
 }
 
 /**
- * ÄíÅ°°ª ÃßÃâ
- * @param cookieName ÄíÅ°¸í
+ * ï¿½ï¿½Å°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+ * @param cookieName ï¿½ï¿½Å°ï¿½ï¿½
  */
 function getCookie( cookieName )
 {
  var search = cookieName + "=";
  var cookie = document.cookie;
- // ÇöÀç ÄíÅ°°¡ Á¸ÀçÇÒ °æ¿ì
+ // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
  if( cookie.length > 0 )
  {
-  // ÇØ´ç ÄíÅ°¸íÀÌ Á¸ÀçÇÏ´ÂÁö °Ë»öÇÑ ÈÄ Á¸ÀçÇÏ¸é À§Ä¡¸¦ ¸®ÅÏ.
+  // ï¿½Ø´ï¿½ ï¿½ï¿½Å°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
   startIndex = cookie.indexOf( cookieName );
-  // ¸¸¾à Á¸ÀçÇÑ´Ù¸é
+  // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´Ù¸ï¿½
   if( startIndex != -1 )
   {
-   // °ªÀ» ¾ò¾î³»±â À§ÇØ ½ÃÀÛ ÀÎµ¦½º Á¶Àý
+   // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½î³»ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
    startIndex += cookieName.length;
-   // °ªÀ» ¾ò¾î³»±â À§ÇØ Á¾·á ÀÎµ¦½º ÃßÃâ
+   // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½î³»ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
    endIndex = cookie.indexOf( ";", startIndex );
-   // ¸¸¾à Á¾·á ÀÎµ¦½º¸¦ ¸øÃ£°Ô µÇ¸é ÄíÅ° ÀüÃ¼±æÀÌ·Î ¼³Á¤
+   // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã£ï¿½ï¿½ ï¿½Ç¸ï¿½ ï¿½ï¿½Å° ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½Ì·ï¿½ ï¿½ï¿½ï¿½ï¿½
    if( endIndex == -1) endIndex = cookie.length;
-   // ÄíÅ°°ªÀ» ÃßÃâÇÏ¿© ¸®ÅÏ
+   // ï¿½ï¿½Å°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½
    return unescape( cookie.substring( startIndex + 1, endIndex ) );
   }
   else
   {
-   // ÄíÅ° ³»¿¡ ÇØ´ç ÄíÅ°°¡ Á¸ÀçÇÏÁö ¾ÊÀ» °æ¿ì
+   // ï¿½ï¿½Å° ï¿½ï¿½ï¿½ï¿½ ï¿½Ø´ï¿½ ï¿½ï¿½Å°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
    return "";
   }
  }
  else
  {
-  // ÄíÅ° ÀÚÃ¼°¡ ¾øÀ» °æ¿ì
+  // ï¿½ï¿½Å° ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
   return "";
  }
 }
 
 /**
- * ÄíÅ° ¼³Á¤
- * @param cookieName ÄíÅ°¸í
- * @param cookieValue ÄíÅ°°ª
- * @param expireDay ÄíÅ° À¯È¿³¯Â¥
+ * ï¿½ï¿½Å° ï¿½ï¿½ï¿½ï¿½
+ * @param cookieName ï¿½ï¿½Å°ï¿½ï¿½
+ * @param cookieValue ï¿½ï¿½Å°ï¿½ï¿½
+ * @param expireDay ï¿½ï¿½Å° ï¿½ï¿½È¿ï¿½ï¿½Â¥
  */
 function setCookie( cookieName, cookieValue, expireDate ) {
  var today = new Date();
@@ -298,14 +298,14 @@ function setCookie( cookieName, cookieValue, expireDate ) {
 }
 
 /**
- * ÄíÅ° »èÁ¦
- * @param cookieName »èÁ¦ÇÒ ÄíÅ°¸í
+ * ï¿½ï¿½Å° ï¿½ï¿½ï¿½ï¿½
+ * @param cookieName ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å°ï¿½ï¿½
  */
 function deleteCookie( cookieName )
 {
  var expireDate = new Date();
  
- //¾îÁ¦ ³¯Â¥¸¦ ÄíÅ° ¼Ò¸ê ³¯Â¥·Î ¼³Á¤ÇÑ´Ù.
+ //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥ï¿½ï¿½ ï¿½ï¿½Å° ï¿½Ò¸ï¿½ ï¿½ï¿½Â¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
  expireDate.setDate( expireDate.getDate() - 1 );
  document.cookie = cookieName + "= " + "; expires=" + expireDate.toGMTString() 
     + "; path=/; domain=okjsp.pe.kr";
@@ -321,46 +321,46 @@ function deleteCookie( cookieName )
 }
 
 /**
- * ÀÚ½ÅÀÌ ÁöÁ¤ÇÑ °ªÀ¸·Î ÄíÅ° ¼³Á¤
+ * ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å° ï¿½ï¿½ï¿½ï¿½
  */
 function setMyCookie()
 {
  setCookie( form.setName.value, form.setValue.value, form.expire.value );
- viewCookie(); // ÀüÃ¼ ÄíÅ° Ãâ·Â °»½Å
+ viewCookie(); // ï¿½ï¿½Ã¼ ï¿½ï¿½Å° ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 }
 
 /**
- * ÀÚ½ÅÀÌ ÁöÁ¤ÇÑ ÄíÅ°¸íÀ¸·Î È®ÀÎ
+ * ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½
  */
 function getMyCookie()
 {
- alert( "ÄíÅ° °ª : " + getCookie( form.getName.value ) );
+ alert( "ï¿½ï¿½Å° ï¿½ï¿½ : " + getCookie( form.getName.value ) );
 }
 
 /**
- * ÀÚ½ÅÀÌ ÁöÁ¤ÇÑ ÄíÅ°¸íÀ¸·Î ÄíÅ° »èÁ¦
+ * ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å° ï¿½ï¿½ï¿½ï¿½
  */
 function deleteMyCookie()
 {
  deleteCookie( form.deleteName.value );
- alert("ÄíÅ°°¡ »èÁ¦µÇ¾ú½À´Ï´Ù.");
+ alert("ï¿½ï¿½Å°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
  viewCookie();
 }
 
 /**
- * ÀüÃ¼ ÄíÅ° Ãâ·Â
+ * ï¿½ï¿½Ã¼ ï¿½ï¿½Å° ï¿½ï¿½ï¿½ï¿½
  */
 function viewCookie()
 {
  if( document.cookie.length > 0 )
   cookieOut.innerText = document.cookie;
  else
-  cookieOut.innerText = "ÀúÀåµÈ ÄíÅ°°¡ ¾ø½À´Ï´Ù.";
+  cookieOut.innerText = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.";
 }
 
 
 /**
- * ½ºÅ² ¼³Á¤
+ * ï¿½ï¿½Å² ï¿½ï¿½ï¿½ï¿½
  */
 function setSkin(skinType) {
 	setCookie('skin', skinType, 100);
@@ -368,7 +368,7 @@ function setSkin(skinType) {
 }
 
 /**
- * Æ®¸² Ãß°¡
+ * Æ®ï¿½ï¿½ ï¿½ß°ï¿½
  */
 String.prototype.trim = function() {
 	return this.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
@@ -413,7 +413,7 @@ function check(){
 
 $(function(){
 	customizedList();
-	trap(['9215', '25959', '26838']);
+	trap(['26660', '22488', '9215', '25959', '26838']);
 });
 function trap(list) {
 	for(var i in list) {

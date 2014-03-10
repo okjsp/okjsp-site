@@ -38,7 +38,7 @@ Banner.show();
 <div id="bookList">
 <ul>
 <li>
-<a href="/f.jsp?http://www.okjsp.net/seq/243685"><img src="/images/banner/banner_okjsp_2mtg_600_after.jpg"></a>
+<a href="/f.jsp?http://www.yes24.com/Event/01_Book/2014/OT0228Java.aspx?CategoryNumber=001"><img src="/images/banner/banner_hb_1140305_600x200_no02.jpg"></a>
 </li>
 </ul>
 </div>
