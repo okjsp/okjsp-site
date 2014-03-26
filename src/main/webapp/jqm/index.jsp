@@ -2,6 +2,14 @@
 <jsp:useBean id="member" class="kr.pe.okjsp.member.Member" scope="session"/>
 <jsp:useBean id="list" class="kr.pe.okjsp.ListHandler"/>
 <jsp:setProperty name="list" property="*" />
+<%
+    String url = request.getRequestURL().toString();
+    if (url.contains("okjsp.pe.kr")) {
+        String path = url.replaceAll("okjsp.pe.kr", "okjsp.net");
+        response.sendRedirect(path);
+        return;
+    }
+%>
 <!DOCTYPE html> 
 <html>
 <head>
