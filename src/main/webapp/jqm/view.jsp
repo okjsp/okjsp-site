@@ -36,7 +36,7 @@
 %>
 		<div class="ui-body ui-body-d tmargin10">	
 			<p>
-				<img src="http://www.okjsp.pe.kr/profile/<%=mb.getSid()%>.jpg"
+				<img src="/profile/<%=mb.getSid()%>.jpg"
 					alt="<%=mb.getSid()%>"/>
 				<%=mb.getWriter()%><br/>
 				<span class="grayAnd8pt"><%=mb.getWhen("yyyy-MM-dd HH:mm:ss")%></span>
