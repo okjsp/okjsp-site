@@ -34,7 +34,7 @@ Banner.show();
 </script>
 </li>
 </ul>
-
+<!-- 
 <div id="bookList">
 <ul>
 <li>
@@ -42,7 +42,7 @@ Banner.show();
 </li>
 </ul>
 </div>
-
+ -->
 <table>
   <tr>
     <td align="center" valign="top">
