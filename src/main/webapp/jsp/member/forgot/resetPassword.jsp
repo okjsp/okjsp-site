@@ -15,9 +15,9 @@
 <input type="hidden" id="t" name="t" value="<%= token %>" readonly="readonly">
 email: <input type="email" id="email" name="email" value="<%= email %>" readonly="readonly">
 <br />
-새 비밀번호: <input type="password" id="password" name="password" maxlength="18" required="required">
+새 비밀번호: <input type="password" id="password" name="password" maxlength="31" required="required">
 <br />
-비밀번호 확인: <input type="password" id="confirmPassword" name="confirmPassword" maxlength="18" required="required">
+비밀번호 확인: <input type="password" id="confirmPassword" name="confirmPassword" maxlength="31" required="required">
 <br />
 <input type="submit" value="비밀번호 변경하기">
 </form>

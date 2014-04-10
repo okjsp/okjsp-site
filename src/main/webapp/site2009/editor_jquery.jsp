@@ -91,7 +91,7 @@ var sync = function() {
 <label for="password">password:</label>
 </dt>
 <dd>
-<input name="password" id="password" type="password" maxlength="18" class="write">
+<input name="password" id="password" type="password" maxlength="31" class="write">
 </dd>
 <dt>
 <label for="ccl_id">CCL:</label>

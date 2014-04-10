@@ -68,7 +68,7 @@
     <td>비밀번호</td>
     <td>
       <input type="password" name="password" 
-		value="<%= CommonUtil.nchk(request.getParameter("password")) %>" maxlength="18" >
+		value="<%= CommonUtil.nchk(request.getParameter("password")) %>" maxlength="31" >
     </td>
   </tr>
   <tr>

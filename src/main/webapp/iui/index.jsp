@@ -125,7 +125,7 @@
             <label>ID</label>
             <input id="artist" type="text" name="id" />
             <label>PW</label>
-            <input type="password" name="password" maxlength="18" />
+            <input type="password" name="password" maxlength="31" />
         </fieldset>
     </form>
 <!-- ----------/#loginForm ---------- -->
