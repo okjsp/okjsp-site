@@ -71,7 +71,7 @@
 	                		<label>ID : </label>
 	                		<input type="text" 		class="memoid" name="memoid" value="<%= member.getId() %>" style="padding: 0;width:80px;text-align:left;border:none;">
 	                		<label>PW : </label>
-	                		<input type="password" 	class="memopass" name="memopass" maxlength="50" value="" style="padding: 0;width:80px;text-align:left;border:none;">
+	                		<input type="password" 	class="memopass" name="memopass" maxlength="18" value="" style="padding: 0;width:80px;text-align:left;border:none;">
 	            		</div>
 	        		</fieldset>
 			        <a class="whiteButton" type="submit" href="#" target="_self">댓글 전송</a><br/>
@@ -105,7 +105,7 @@
 	        <a class="button leftButton" type="cancel" href="#">Cancel</a>
 	        <a class="button blueButton" type="submit" href="#">Delete</a>
 	        <label>암호:</label>
-	        <input id="password" type="password" name="password" maxlength="15"/>
+	        <input id="password" type="password" name="password" maxlength="18"/>
 	    </fieldset>
 	</form>
 	<!-- ################ 삭제 폼_끝 ##################### -->

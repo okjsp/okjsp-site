@@ -34,7 +34,7 @@
         </div>
         <div class="row">
             <label>Password</label>
-            <input type="password" name="password"  id="password" style="font-size:20px;font-family:Arial"/>
+            <input type="password" name="password"  id="password" maxlength="18" style="font-size:20px;font-family:Arial"/>
         </div>
         <div class="row">
             <label>CCL</label>

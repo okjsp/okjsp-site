@@ -68,12 +68,12 @@ $(function(){
         </tr>
         <tr> 
             <th>비밀번호</th>
-            <td> <input type="password" name="password" maxlength="12" > 
+            <td> <input type="password" name="password" maxlength="18" > 
             </td>
         </tr>
         <tr> 
             <th>비밀번호 확인</th>
-            <td> <input type="password" name="password2" maxlength="12" > 
+            <td> <input type="password" name="password2" maxlength="18" > 
             </td>
         </tr>
         <tr> 

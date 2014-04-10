@@ -128,7 +128,7 @@ Banner.showContentSection();
 </table>
 
 <div id="passwd_layer" style="position:absolute;display:none;width:220px;height:60px;padding:10px" align="center">
-	<input type="password" id="passwd" name="passwd" maxlength="15">
+	<input type="password" id="passwd" name="passwd" maxlength="18">
 	<br>
 	<input type="button" id="submit_type" onclick="return submit_passwd()">
 	<input type="button" value="취소" onclick="return toggleMenu('passwd_layer')">
@@ -201,7 +201,7 @@ Banner.showContentSection();
     <input type="hidden" name="bbs" value="<%= one.getBbs() %>">
     <input type="hidden" name="viewstamp" value="<%= System.currentTimeMillis() %>">
 	<div id="layer_delpass" style="position:absolute;display:none;width:220px;height:60px;padding:10px" align="center">
-		<input type="password" id="delpass" name="delpass" maxlength="15">
+		<input type="password" id="delpass" name="delpass" maxlength="18">
 		<input type="hidden" name="mseq">
 		<br>
 		<input type="submit" value="삭제">
@@ -257,7 +257,7 @@ Banner.showContentSection();
         <textarea name="bcomment" style="width:100%;height:80px"></textarea>
         id:<input type="text" class="memoid" name="writer"
             maxlength="50" value="<%= CommonUtil.a2k(CommonUtil.getCookie(request, "okwriter")) %>">
-        pw:<input type="password" class="memopw" name="memopass" maxlength="15">
+        pw:<input type="password" class="memopw" name="memopass" maxlength="18">
 	    <input type="hidden" name="doublecheck" class="memodc" value="okjsp">
 	    <br /><span style="color:#f00">IP 기록됩니다. 예민한 얘기는 올리지 않으시는 게 사이트 운영에 도움이 됩니다.
 	    <br />개조심할 필요는 있으니까요. 낮말은 새, 밤말은 쥐, 인터넷말은 검색엔진</span>
