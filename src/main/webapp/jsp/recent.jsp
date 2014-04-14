@@ -11,7 +11,7 @@
 %>
 <head>
     <meta charset="euc-kr">
-    <title>NEW OKJSP 2013</title>
+    <title>NEW OKJSP 2014</title>
 	<script type="text/javascript" src="/js/jquery/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="/js/jquery/jquery.timeago.js"></script>
 	<script type="text/javascript" src="/js/jquery/jquery.timeago.ko.js" charset="utf-8"></script>
@@ -47,7 +47,7 @@ Banner.show();
   <tr>
     <td align="center" valign="top">
 
-<!-- 최신 글 리스트 -->
+<!-- 占쌍쏙옙 占쏙옙 占쏙옙占쏙옙트 -->
 <%
 	long sTime=System.currentTimeMillis();
 	Iterator iterList = null;
@@ -56,7 +56,7 @@ Banner.show();
 <table class="tablestyle">
 <%
 	ArrayList arrayList = new ArrayList();
-	arrayList.add("notice|공지사항");
+	arrayList.add("notice|占쏙옙占쏙옙占쏙옙占쏙옙");
 
 	Iterator iter = arrayList.iterator();
 	String [] rec = null;
@@ -101,7 +101,7 @@ Banner.show();
 %>
 <tr>
     <td colspan="6" class="th">
-<b>전체 게시판</b>
+<b>占쏙옙체 占쌉쏙옙占쏙옙</b>
     </td>
 </tr>
 <%
