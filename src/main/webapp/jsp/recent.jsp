@@ -47,7 +47,7 @@ Banner.show();
   <tr>
     <td align="center" valign="top">
 
-<!-- ï¿½Ö½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® -->
+<!-- ÃÖ½Å±Û ¸®½ºÆ® -->
 <%
 	long sTime=System.currentTimeMillis();
 	Iterator iterList = null;
@@ -56,7 +56,7 @@ Banner.show();
 <table class="tablestyle">
 <%
 	ArrayList arrayList = new ArrayList();
-	arrayList.add("notice|ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+	arrayList.add("notice|°øÁö»çÇ×");
 
 	Iterator iter = arrayList.iterator();
 	String [] rec = null;
@@ -101,7 +101,7 @@ Banner.show();
 %>
 <tr>
     <td colspan="6" class="th">
-<b>ï¿½ï¿½Ã¼ ï¿½Ô½ï¿½ï¿½ï¿½</b>
+<b>ÀüÃ¼ °Ô½ÃÆÇ</b>
     </td>
 </tr>
 <%
