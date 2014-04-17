@@ -37,7 +37,7 @@ Banner.show();
 <div id="bookList">
 <ul>
 <li>
-<a href="/f.jsp?http://www.hanbit.co.kr/events/eventview.html?event_id=realtime_spring_event"><img src="/images/banner/banner_hanb_promotion_book_140417.jpg"></a>
+<a href="/f.jsp?http://www.hanbit.co.kr/events/eventview.html?event_id=realtime_spring_event" target="_hb"><img src="/images/banner/banner_hanb_promotion_book_140417.jpg"></a>
 </li>
 </ul>
 </div>
