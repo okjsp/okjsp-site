@@ -34,15 +34,13 @@ Banner.show();
 </script>
 </li>
 </ul>
-<!-- 
 <div id="bookList">
 <ul>
 <li>
-<a href="/f.jsp?http://www.yes24.com/Event/01_Book/2014/OT0228Java.aspx?CategoryNumber=001"><img src="/images/banner/banner_hb_1140305_600x200_no02.jpg"></a>
+<a href="/f.jsp?http://www.hanbit.co.kr/events/eventview.html?event_id=realtime_spring_event"><img src="/images/banner/banner_hanb_promotion_book_140417.jpg"></a>
 </li>
 </ul>
 </div>
- -->
 <table>
   <tr>
     <td align="center" valign="top">
