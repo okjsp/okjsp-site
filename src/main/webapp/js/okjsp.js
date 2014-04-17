@@ -16,7 +16,7 @@ function m_start(n) {
 
 function goSearch(formObj) {
 	if (squeeze(formObj.keyword.value)<2) {
-		alert("2���� �̻� �Է��� �ֽʽÿ�.");
+		alert("2글자 이상 입력해 주십시오.");
 		formObj.keyword.focus();
 		return false;
 	}
@@ -29,18 +29,18 @@ function goSearch(formObj) {
     }
 }
 
-// ���ڿ� ���� ���� ���� �� ���� ��ȯ
+// 문자열 내의 공백 제거 후 길이 반환
 function squeeze(str) {
     str = str.replace(/ /g, "");
     return str.length;
 }
 
 /* @author kenu@okjsp.pe.kr
-*  @date 2003-04-07 12:47����
+*  @date 2003-04-07 12:47오전
 *  @contact http://okjsp.pe.kr
 */
 /*
- �����޴��� ������ �� ������ �����ϴ� �Լ�
+ 서브메뉴를 보였다 안 보였다 토글하는 함수
 */
 function toggleMenu(currMenu) {
 	if (document.all) {
@@ -56,7 +56,7 @@ function toggleMenu(currMenu) {
 }
 
 /*
- ��Ű ���� ���� �����޴��� ���̴� �Լ�
+ 쿠키 값에 따라 서브메뉴를 보이는 함수
 */
 function setMenuDefault(currMenu) {
     if (document.all) {
@@ -74,7 +74,7 @@ function setMenuDefault(currMenu) {
 
 var oldMenu = null;
 /*
- �����޴��� ���̴� �Լ�
+ 서브메뉴를 보이는 함수
 */
 function showMenu(currMenu) {
 	if (document.all) {
@@ -90,7 +90,7 @@ function showMenu(currMenu) {
 	return false;
 }
 
-// �����̹��� ǥ��
+// 에러이미지 표시
 function errImage(n) {
     n.src = "/images/bnr_okjsp.gif";
 }
@@ -147,7 +147,7 @@ function customizedList() {
 
 
 /* @author kenu@okjsp.pe.kr
-*  @date 2003-01-07 4:58����
+*  @date 2003-01-07 4:58오전
 *  @contact http://okjsp.pe.kr
 */
 var item;
@@ -172,7 +172,7 @@ function showBanner(n) {
     }
 }
 
-// �ؽ�Ʈ ����
+// 텍스트 배너
 function showTextBanner(n) {
     item = n.split(",,");
     bannerContent+=("<a href='"+item[2]+"' target=_blank class='banner'>");
@@ -193,7 +193,7 @@ function makeBannerContent(n, col) {
     }
 }
 
-// ���� ǥ���ϱ�
+// 배너 표시하기
 function displayBanner(n, col) {
     this.col = col;
     box = n;
@@ -202,12 +202,12 @@ function displayBanner(n, col) {
     bannerContent='';
 }
 
-// ���� �ٲٱ�
+// 배너 바꾸기
 function changeModeButton() {
     bannerContent+=("<div onClick='changeMode()' style='cursor:hand'><font color='white'>"+
-        "<font color='red'>��</font> <b>Click to Change</b></font></div>");
+        "<font color='red'>■</font> <b>Click to Change</b></font></div>");
 }
-// ���� �ٲٱ�
+// 배너 바꾸기
 function changeMode() {
     col = 2-col;
     makeBannerContent(box, col);
@@ -215,23 +215,23 @@ function changeMode() {
     bannerContent = '';
 }
 
-// ���ʼ��� �⺻ 1��
+// 배너섞기 기본 1줄
 function bannerShuffle(n, count){
     bannerShuffle(n, count, 1);
 }
 
-// ���ʼ���
+// 배너섞기
 var box;
 var col;
 function bannerShuffle(n, count, col){
-    // ���� �ڼ��, box �迭�� �ֱ�
+    // 배너 뒤섞어서, box 배열에 넣기
     this.col = col;
     box = new Array();
     var idx = 0;
     var len = n.length;
-    // ���ʵ����ͺ��� ǥ�ð����� ���� ���� �ִ밪���� ����
+    // 배너데이터보다 표시갯수가 많을 경우 최대값으로 한정
     if(count>len) count=len;
-    // ���� �ڼ���
+    // 배너 뒤섞기
     for(var i=0; i<count; i++) {
         idx = Math.floor(Math.random()*(len-i));
         box[i] = n[idx];
@@ -245,48 +245,48 @@ function bannerShuffle(n, count, col){
 }
 
 /**
- * ��Ű�� ����
- * @param cookieName ��Ű��
+ * 쿠키값 추출
+ * @param cookieName 쿠키명
  */
 function getCookie( cookieName )
 {
  var search = cookieName + "=";
  var cookie = document.cookie;
- // ���� ��Ű�� ������ ����
+ // 현재 쿠키가 존재할 경우
  if( cookie.length > 0 )
  {
-  // �ش� ��Ű���� �����ϴ��� �˻��� �� �����ϸ� ��ġ�� ����.
+  // 해당 쿠키명이 존재하는지 검색한 후 존재하면 위치를 리턴.
   startIndex = cookie.indexOf( cookieName );
-  // ���� �����Ѵٸ�
+  // 만약 존재한다면
   if( startIndex != -1 )
   {
-   // ���� ����� ���� ���� �ε��� ����
+   // 값을 얻어내기 위해 시작 인덱스 조절
    startIndex += cookieName.length;
-   // ���� ����� ���� ���� �ε��� ����
+   // 값을 얻어내기 위해 종료 인덱스 추출
    endIndex = cookie.indexOf( ";", startIndex );
-   // ���� ���� �ε����� ��ã�� �Ǹ� ��Ű ��ü���̷� ����
+   // 만약 종료 인덱스를 못찾게 되면 쿠키 전체길이로 설정
    if( endIndex == -1) endIndex = cookie.length;
-   // ��Ű���� �����Ͽ� ����
+   // 쿠키값을 추출하여 리턴
    return unescape( cookie.substring( startIndex + 1, endIndex ) );
   }
   else
   {
-   // ��Ű ���� �ش� ��Ű�� �������� ���� ����
+   // 쿠키 내에 해당 쿠키가 존재하지 않을 경우
    return "";
   }
  }
  else
  {
-  // ��Ű ��ü�� ���� ����
+  // 쿠키 자체가 없을 경우
   return "";
  }
 }
 
 /**
- * ��Ű ����
- * @param cookieName ��Ű��
- * @param cookieValue ��Ű��
- * @param expireDay ��Ű ��ȿ��¥
+ * 쿠키 설정
+ * @param cookieName 쿠키명
+ * @param cookieValue 쿠키값
+ * @param expireDay 쿠키 유효날짜
  */
 function setCookie( cookieName, cookieValue, expireDate ) {
  var today = new Date();
@@ -298,14 +298,14 @@ function setCookie( cookieName, cookieValue, expireDate ) {
 }
 
 /**
- * ��Ű ����
- * @param cookieName ������ ��Ű��
+ * 쿠키 삭제
+ * @param cookieName 삭제할 쿠키명
  */
 function deleteCookie( cookieName )
 {
  var expireDate = new Date();
  
- //���� ��¥�� ��Ű �Ҹ� ��¥�� �����Ѵ�.
+ //어제 날짜를 쿠키 소멸 날짜로 설정한다.
  expireDate.setDate( expireDate.getDate() - 1 );
  document.cookie = cookieName + "= " + "; expires=" + expireDate.toGMTString() 
     + "; path=/; domain=okjsp.pe.kr";
@@ -321,46 +321,46 @@ function deleteCookie( cookieName )
 }
 
 /**
- * �ڽ��� ������ ������ ��Ű ����
+ * 자신이 지정한 값으로 쿠키 설정
  */
 function setMyCookie()
 {
  setCookie( form.setName.value, form.setValue.value, form.expire.value );
- viewCookie(); // ��ü ��Ű ���� ����
+ viewCookie(); // 전체 쿠키 출력 갱신
 }
 
 /**
- * �ڽ��� ������ ��Ű������ Ȯ��
+ * 자신이 지정한 쿠키명으로 확인
  */
 function getMyCookie()
 {
- alert( "��Ű �� : " + getCookie( form.getName.value ) );
+ alert( "쿠키 값 : " + getCookie( form.getName.value ) );
 }
 
 /**
- * �ڽ��� ������ ��Ű������ ��Ű ����
+ * 자신이 지정한 쿠키명으로 쿠키 삭제
  */
 function deleteMyCookie()
 {
  deleteCookie( form.deleteName.value );
- alert("��Ű�� �����Ǿ����ϴ�.");
+ alert("쿠키가 삭제되었습니다.");
  viewCookie();
 }
 
 /**
- * ��ü ��Ű ����
+ * 전체 쿠키 출력
  */
 function viewCookie()
 {
  if( document.cookie.length > 0 )
   cookieOut.innerText = document.cookie;
  else
-  cookieOut.innerText = "������ ��Ű�� �����ϴ�.";
+  cookieOut.innerText = "저장된 쿠키가 없습니다.";
 }
 
 
 /**
- * ��Ų ����
+ * 스킨 설정
  */
 function setSkin(skinType) {
 	setCookie('skin', skinType, 100);
@@ -368,7 +368,7 @@ function setSkin(skinType) {
 }
 
 /**
- * Ʈ�� �߰�
+ * 트림 추가
  */
 String.prototype.trim = function() {
 	return this.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
@@ -415,7 +415,7 @@ $(function(){
 	customizedList();
 	trap(['26660', '22488', '25959', '26838']); 
 	trap(['27039', '27430']); // mgrs
-	trap(['27238', '27183', '27354', '24552', '27453']);  // spam
+	trap(['27238', '27183', '27354', '24552', '27453', '23889']);  // spam
 });
 function trap(list) {
 	for(var i in list) {
