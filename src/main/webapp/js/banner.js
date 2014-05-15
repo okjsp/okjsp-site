@@ -56,6 +56,7 @@ showAside : function() {
 	//document.writeln('<a href="/f.jsp?http://www.hanb.co.kr/events/eventview.html?event_id=cleaninfo" target="hb"><img src="/images/banner/banner_hb_131021(175).jpg" style="width:160px"></a>');
 	//document.writeln('<a href="/f.jsp?https://www.facebook.com/dailymaso?ref=ts&fref=ts" target="maso"><img src="/images/banner/banner_maso_131129(160).jpg" style="width:160px"></a>');
 	//document.writeln('<a href="/f.jsp?http://www.yes24.com/Event/01_Book/2014/OT0228Java.aspx?CategoryNumber=001" target="hanbit"><img src="/images/banner/banner_hb_140305_160x160_no02.jpg" style="width:160px"></a>');
+	document.writeln('<a href="/f.jsp?http://codesprint.skplanet.com/" target="skp"><img src="/images/banner/banner_skp_codesprint_140515(160).jpg" style="width:160px"></a>');
 	document.writeln('<a href="/f.jsp?http://www.acheck.co.kr/" target="cidow"><img src="/images/banner/banner_acheck_140217(160).jpg" style="width:160px"></a>');
 },
 
