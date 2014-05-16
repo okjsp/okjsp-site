@@ -3,7 +3,7 @@
 }
 .recent_first {
 overflow: hidden;
-width: 90px;
+width: 96px;
 height: 17px;
 font-size: 0.89em;
 }
@@ -34,7 +34,7 @@ td.subject div {
 	overflow: hidden;
 	text-align: left;
 	height: 17px;
-	width: 340px;
+	width: 334px;
 }
 
 td.writer div {
