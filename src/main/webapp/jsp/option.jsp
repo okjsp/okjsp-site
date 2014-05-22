@@ -1,7 +1,8 @@
 <%@page pageEncoding="utf-8"%>
 <option value="cooper">협동조합준비위</option>
 <option value="book">책 얘기</option>
-<option value="recruit">구인/구직</option>
+<option value="getjob">구직</option>
+<option value="recruit">구인</option>
 <option value="pr">홍보</option>
 <option value="institute">학원</option>
 <option value="html5">HTML5</option>
