@@ -21,7 +21,7 @@ public class ReplyServlet extends HttpServlet {
     int seq = 0;
     try {
         seq = Integer.parseInt(req.getParameter("seq"));
-    } catch(Exception e) { e.printStackTrace(); }
+    } catch(Exception e) { System.out.println(e); }
 /*
     db 가져오기
 */

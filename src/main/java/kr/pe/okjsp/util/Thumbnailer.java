@@ -175,7 +175,7 @@ public class Thumbnailer {
  			encoder.encode(outImage);
 			os.close();
 		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println(e);
 		}
 	}
 }

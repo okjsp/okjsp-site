@@ -50,7 +50,7 @@ public class StringHelper {
 			encode = encode.replaceAll("%2F", "/");
 			encode = encode.replaceAll("%3F", "?");
 		} catch (UnsupportedEncodingException e) {
-			e.printStackTrace();
+			System.out.println(e);
 		}
 		return encode;
 	}

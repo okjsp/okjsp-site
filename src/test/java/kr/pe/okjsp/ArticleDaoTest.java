@@ -32,7 +32,7 @@ public class ArticleDaoTest extends TestCase {
 
 			fail("Write Empty Article");
 		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println(e);
 		}
 	}
 
@@ -63,7 +63,7 @@ public class ArticleDaoTest extends TestCase {
 			seq = articleDao.write(article);
 			fail("Write Spam Articles");
 		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println(e);
 		}
 		TestObject.deleteTestData();
 	}

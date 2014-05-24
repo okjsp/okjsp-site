@@ -24,7 +24,7 @@ public class SiteSearchTest extends TestCase {
 			assertNotNull(result);
 			assertTrue(result.size()>0);
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e);
 		}
 	}
 

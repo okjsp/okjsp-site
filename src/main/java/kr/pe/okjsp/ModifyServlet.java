@@ -84,9 +84,9 @@ public class ModifyServlet extends HttpServlet {
 
         req.setAttribute("arrdf", arrdf);
 
-    } catch(Throwable t) {
-        req.setAttribute("javax.servlet.jsp.jspException", t);
-        System.out.println("ModifyServlet err:"+seq+"|"+t.toString());
+    } catch(Exception e) {
+        req.setAttribute("javax.servlet.jsp.jspException", e);
+        System.out.println("ModifyServlet err:"+seq+"|"+e.toString());
     } finally {
 		dbCon.close(conn, pstmt, rs);
     }
@@ -113,7 +113,7 @@ public class ModifyServlet extends HttpServlet {
 				cryptedString = rs.getString(1);
 			}
 		} catch(Exception e) {
-			e.printStackTrace();
+			System.out.println(e);
 		} finally {
 			dbCon.close(null, pstmt, rs);
 		}

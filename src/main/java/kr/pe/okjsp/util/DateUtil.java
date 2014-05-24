@@ -16,7 +16,7 @@ public class DateUtil {
 		try {
 			format = sdf.format(sdf.parse(date));
 		} catch (ParseException e) {
-			e.printStackTrace();
+			System.out.println(e);
 		}
 		return date.equals(format);
 	}
@@ -33,7 +33,7 @@ public class DateUtil {
 			Date d = new Date(sdf.parse(date).getTime() + numberOfDays * 1000 * 60 * 60 * 24);
 			format = sdf.format(d);
 		} catch (ParseException e) {
-			e.printStackTrace();
+			System.out.println(e);
 		}
 		return format;
 	}
@@ -43,7 +43,7 @@ public class DateUtil {
 		try {
 			return sdf.parse(date);
 		} catch (ParseException e) {
-			e.printStackTrace();
+			System.out.println(e);
 		}
 		return null;
 	}

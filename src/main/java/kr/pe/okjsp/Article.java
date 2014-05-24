@@ -519,7 +519,7 @@ public class Article {
 					? 0 
 					: Long.parseLong(this.id);
 		} catch (NumberFormatException e) {
-			e.printStackTrace();
+			System.out.println(e);
 		}
 		return sid;
 	}

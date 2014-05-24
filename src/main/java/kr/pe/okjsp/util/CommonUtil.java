@@ -257,7 +257,7 @@ public class CommonUtil {
     			try {
 					value = java.net.URLDecoder.decode(cookies[i].getValue(),"utf-8");
 				} catch (UnsupportedEncodingException e) {
-					e.printStackTrace();
+					System.out.println(e);
 				}
     			break;
     		}

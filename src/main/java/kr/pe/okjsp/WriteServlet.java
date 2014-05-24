@@ -218,7 +218,7 @@ public class WriteServlet extends HttpServlet {
 			CommonUtil.setCookie(domain, res, "sid", ""+article.getSid());
 			CommonUtil.setCookie(domain, res, "okhome", ""+article.getHomepage());
 		} catch (UnsupportedEncodingException e) {
-			e.printStackTrace();
+			System.out.println(e);
 		}
 		
 	}

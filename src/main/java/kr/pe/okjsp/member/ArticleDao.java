@@ -46,7 +46,7 @@ public class ArticleDao extends MemberHandler {
 			}
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e);
 		} finally {
 			dbCon.close(conn, pstmt, rs);
 		}

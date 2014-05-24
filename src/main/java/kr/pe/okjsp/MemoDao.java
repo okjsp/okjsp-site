@@ -72,7 +72,7 @@ public class MemoDao {
 				new PointDao().log(sid, 2, 1, String.valueOf(mseq));
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e);
 		} finally {
 			dbCon.close(null, pstmt, rs);
 		}
@@ -96,10 +96,10 @@ public class MemoDao {
 			pstmt.executeUpdate();
 			pstmt.close();
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e);
 		} finally {
 			try { pstmt.close(); } catch (Exception e2) {
-				e2.printStackTrace();
+				System.out.println(e2);
 			}
 		}
     }
@@ -140,7 +140,7 @@ public class MemoDao {
 			    memocnt = rs.getInt(1);
 			
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e);
 		} finally {
 			dbCon.close(conn, pstmt, rs);
 		}

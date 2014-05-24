@@ -114,8 +114,6 @@ public class ArticleDao {
 				article.setCcl_id(rs.getString(18));
 			}
 
-		} catch (Exception e) {
-			e.printStackTrace();
 		} finally {
 			dbCon.close(null, pstmt, rs);
 		}
@@ -155,7 +153,7 @@ public class ArticleDao {
 				new PointDao().log(article.getSid(), 2, 10, String.valueOf(article.getSeq()));
 			}
 		} catch (SQLException e) {
-			e.printStackTrace();
+			System.out.println(e);
 		} finally {
 			dbCon.close(null, pstmt, rs);
 		}
@@ -339,7 +337,7 @@ public class ArticleDao {
 				}
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e);
 		} finally {
 			dbCon.close(null, pstmt);
 		}
@@ -362,7 +360,7 @@ public class ArticleDao {
 				pstmt.executeUpdate();
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e);
 		} finally {
 			dbCon.close(null, pstmt);
 		}
@@ -396,21 +394,21 @@ public class ArticleDao {
 			try {
 				conn.rollback();
 			} catch (SQLException e1) {
-				e1.printStackTrace();
+				System.out.println(e1);
 			}
 			System.out.println("write err: "+e);
 		} catch (IOException e) {
 			try {
 				conn.rollback();
 			} catch (SQLException e1) {
-				e1.printStackTrace();
+				System.out.println(e1);
 			}
 			throw e;
 		} finally {
 			try {
 				conn.setAutoCommit(true);
 			} catch (SQLException e) {
-				e.printStackTrace();
+				System.out.println(e);
 			}
 			dbCon.close(conn, null);
 		}
@@ -435,7 +433,7 @@ public class ArticleDao {
 			}
 
 		} catch (SQLException e) {
-			e.printStackTrace();
+			System.out.println(e);
 		} finally {
 			dbCon.close(null, pstmt, rs);
 		}
@@ -460,7 +458,7 @@ public class ArticleDao {
 			}
 
 		} catch (SQLException e) {
-			e.printStackTrace();
+			System.out.println(e);
 		} finally {
 			dbCon.close(conn, pstmt, rs);
 		}
@@ -509,17 +507,17 @@ public class ArticleDao {
 			pstmt.setLong(1, seq);
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
-			e.printStackTrace();
+			System.out.println(e);
 		} finally {
 			try {
 				pstmt.close();
 			} catch (SQLException e) {
-				e.printStackTrace();
+				System.out.println(e);
 			}
 			try {
 				conn.close();
 			} catch (SQLException e) {
-				e.printStackTrace();
+				System.out.println(e);
 			}
 		}
 		return result;

@@ -147,7 +147,7 @@ public class DownloadServlet extends HttpServlet {
 			pstmt.executeUpdate();
 			pstmt.close();
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e);
 		} finally {
 			dbCon.close(conn, pstmt);
 		}

@@ -12,7 +12,7 @@ public class MemoHandlerTest extends TestCase {
 			assertNotNull(recent);
 			assertEquals(20,recent.size());
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e);
 		}
 	}
 }

@@ -57,7 +57,7 @@ public class MobileDeleteServlet extends HttpServlet {
 		try {
 			seq = Integer.parseInt(req.getParameter("seq"));
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e);
 		}
 		/*
 		    db 가져오기
@@ -121,7 +121,7 @@ public class MobileDeleteServlet extends HttpServlet {
 			pstmt.setInt(1, seq);
 			pstmt.executeUpdate();
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e);
 		} finally {
 			dbCon.close(null, pstmt);
 		}

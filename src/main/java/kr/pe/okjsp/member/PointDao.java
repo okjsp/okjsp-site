@@ -48,7 +48,7 @@ public class PointDao {
 			
 			addPoint(conn, sid, point);
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e);
 		} finally {
 			dbCon.close(conn, pstmt);
 		}
@@ -150,7 +150,7 @@ public class PointDao {
 			result = pstmt.executeUpdate();
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e);
 		} finally {
 			dbCon.close(conn, pstmt);
 		}

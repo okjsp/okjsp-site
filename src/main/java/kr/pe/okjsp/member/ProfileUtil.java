@@ -13,9 +13,9 @@ public class ProfileUtil {
 		try {
 			result = 1 - copy(sourcePath, destPath);
 		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println(e);
 		} catch (InterruptedException e) {
-			e.printStackTrace();
+			System.out.println(e);
 		}
 		return result;
 	}

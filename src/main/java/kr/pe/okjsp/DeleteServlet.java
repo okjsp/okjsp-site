@@ -51,7 +51,7 @@ public class DeleteServlet extends HttpServlet {
 		try {
 			seq = Integer.parseInt(req.getParameter("seq"));
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e);
 		}
 		/*
 		    db 가져오기
@@ -92,7 +92,7 @@ public class DeleteServlet extends HttpServlet {
 					long sid = Long.parseLong(article.getId());
 					new PointDao().log(sid, 3, -50, String.valueOf(article.getSeq()));
 				} catch (Exception e) {
-					e.printStackTrace();
+					System.out.println(e);
 				}
 			} else {
 				resourceName = "/jsp/error.jsp";
@@ -116,7 +116,7 @@ public class DeleteServlet extends HttpServlet {
 			pstmt.setInt(1, seq);
 			pstmt.executeUpdate();
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e);
 		} finally {
 			dbCon.close(null, pstmt);
 		}

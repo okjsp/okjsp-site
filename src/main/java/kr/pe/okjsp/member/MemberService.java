@@ -29,7 +29,6 @@ public class MemberService {
 			success = "true";
 			message = email + "로 메일을 발송했습니다.";
 		} catch (Exception e) {
-			e.printStackTrace();
 			System.out.println(e.toString() + "\nfailed: " + email);
 			success = "false";
 			message = email + "로 발송하지 못했습니다.";
@@ -63,7 +62,7 @@ public class MemberService {
 		try {
 			result = dao.setPasswordByEmail(email, password);
 		} catch (SQLException e) {
-			e.printStackTrace();
+			System.out.println(e);
 		}
 		return result;
 	}
@@ -84,7 +83,7 @@ public class MemberService {
 				result = dao.setTokenUsed(token);
 			}
 		} catch (SQLException e) {
-			e.printStackTrace();
+			System.out.println(e);
 		}
 		return result;
 	}
@@ -95,7 +94,7 @@ public class MemberService {
 		try {
 			emailExist = handler.isEmailExist(email);
 		} catch (SQLException e) {
-			e.printStackTrace();
+			System.out.println(e);
 		}
 		return emailExist;
 	}

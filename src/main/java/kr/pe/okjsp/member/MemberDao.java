@@ -58,7 +58,7 @@ public class MemberDao {
 			pstmt.close();
 			rs.close();
 		} catch (SQLException e) {
-			e.printStackTrace();
+			System.out.println(e);
 		}
 		return count;
 	}
@@ -85,7 +85,7 @@ public class MemberDao {
 					"select count(*) from okmember where sid = ?",
 					new Object[] { sid });
 		} catch (SQLException e) {
-			e.printStackTrace();
+			System.out.println(e);
 		}
 
 		return result == 1;

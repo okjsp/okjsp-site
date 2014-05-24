@@ -27,7 +27,7 @@ public class AdLogDao {
 			result = pstmt.executeUpdate();
 			
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e);
 		} finally {
 			dbCon.close(conn, pstmt);
 		}

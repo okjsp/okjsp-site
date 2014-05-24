@@ -39,8 +39,7 @@ public class DbCon {
 			ds.setTestOnBorrow(true);
 
 		} catch (Exception e) {
-			System.out.println("anable load DataSource~!");
-			e.printStackTrace();
+			System.out.println("unable load DataSource~!" + e);
 		} finally {
 			System.out.println("\n =============================================");
 			System.out.println(" DRIVER : " + driver);
@@ -58,19 +57,19 @@ public class DbCon {
 			if (rs != null)
 				rs.close();
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e);
 		}
 		try {
 			if (pstmt != null)
 				pstmt.close();
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e);
 		}
 		try {
 			if (pconn != null)
 				pconn.close();
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e);
 		}
 	}
 
@@ -80,7 +79,7 @@ public class DbCon {
 	
 	/**
 	 * <pre>
-	 * DataSource�� ���¸� �����ش�.
+	 * DataSource info
 	 * </pre>
 	 * @param ds
 	 * @throws SQLException
@@ -93,7 +92,7 @@ public class DbCon {
 
 	/**
 	 * <pre>
-	 * DataSource�� �����Ѵ�.
+	 * DataSource shutdown
 	 * </pre>
 	 * @param ds
 	 * @throws SQLException

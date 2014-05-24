@@ -37,13 +37,6 @@ public class ControllerServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest req, HttpServletResponse res)
 			throws IOException {
-		String url = req.getRequestURL().toString() + "?"
-				+ req.getQueryString();
-		if (url.toLowerCase().contains("okjsp.pe.kr")) {
-			url = url.replaceAll("okjsp.pe.kr", "okjsp.net");
-			res.sendRedirect(url);
-			return;
-		}
 
 		String act = CommonUtil.nchk(req.getParameter("act"), "VIEW");
 		String resourceName = Navigation.getPath(act);
@@ -112,7 +105,7 @@ public class ControllerServlet extends HttpServlet {
 		try {
 			req.getRequestDispatcher(resourceName).forward(req, res);
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e);
 		}
 
 	} // end doGet()

@@ -16,9 +16,9 @@ public class PropertyManager {
 		try {
 			properties.load(new FileInputStream(file));
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			System.out.println(e);
 		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println(e);
 		}
 	}
 	

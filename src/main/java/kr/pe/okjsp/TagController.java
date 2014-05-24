@@ -17,7 +17,7 @@ public class TagController extends HttpServlet {
 			tagseq = new TagHandler().findTagseqByTag(pathInfo.substring(1));
 			req.getRequestDispatcher("/jsp/taglist.jsp?tagseq="+tagseq).forward(req,res);
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e);
 		}
 	}
 }
