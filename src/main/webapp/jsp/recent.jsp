@@ -34,15 +34,15 @@ Banner.show();
 </script>
 </li>
 </ul>
-<!-- 
+
 <div id="bookList">
 <ul>
 <li>
-<a href="/f.jsp?http://www.hanbit.co.kr/events/eventview.html?event_id=realtime_spring_event" target="_hb"><img src="/images/banner/banner_hanb_promotion_book_140417.jpg"></a>
+<a href="/f.jsp?http://www.okjsp.net/seq/251805" target="_okjspad"><img src="/images/banner/ok_banner_ad_notice_f.jpg"></a>
 </li>
 </ul>
 </div>
- -->
+
 <table>
   <tr>
     <td align="center" valign="top">
