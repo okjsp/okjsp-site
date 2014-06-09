@@ -204,7 +204,7 @@ Banner.showAsideBottom();
 	Iterator getCachedList(String bbsid) {
 		Iterator iter = null;
 		try {
-			iter = list.getRecentList(bbsid, 5).iterator();
+			iter = list.getRecentList(bbsid, 3).iterator();
 		} catch(Exception e) {
 			iter = new ArrayList().iterator();
 		}
