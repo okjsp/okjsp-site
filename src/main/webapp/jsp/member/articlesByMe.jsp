@@ -12,12 +12,11 @@
 <head>
 <meta charset="utf-8">
 <title>OKJSP member articles</title>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 <h1>member article</h1>
-<h2 class="warning">대외비(Credential)</h2>
-<table>
+<table id="articlesByMe">
 <tr><th>#</th>
 <th>게시판</th>
 <th>제목</th>
