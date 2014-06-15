@@ -62,3 +62,7 @@ input, select, textarea {
 	color:#000000;
 	font-weight:bold;
 }
+
+#writeForm td {
+	padding: 3px;
+}
