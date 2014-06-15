@@ -79,7 +79,7 @@ http://www.okjsp.net/seq/<%= one.getSeq() %></a></div>
     <tr>
         <td class="td" class="wrap" height="80" valign="top">
 <%-- 이미지 보이기 --%>
-        <div id="centent" class="wrap">
+        <div id="centent" class="wrap content">
 <script type="text/javascript">
 Banner.showContentRight();
 </script>

@@ -51,7 +51,7 @@
 <input type="hidden" name="ref" value="<c:out value="${article.ref}"/>">
 <input type="hidden" name="lev" value="<c:out value="${article.lev}"/>">
 <input type="hidden" name="step" value="<c:out value="${article.step}"/>">
-<table border="0" cellspacing="0" cellpadding="0">
+<table border="0" cellspacing="0" cellpadding="0" id="writeForm">
   <tr>
     <td>닉네임</td>
     <td>
@@ -72,10 +72,6 @@
     </td>
   </tr>
   <tr>
-    <td>Email</td>
-    <td colspan="3">이름+Email=개인식별가능정보; 그래서 안 받습니다.</td>
-  </tr>
-  <tr>
     <td>Homepage</td>
     <td colspan="3">
       <input type="text" name="homepage"
@@ -87,14 +83,14 @@
   <tr>
     <td>제목</td>
     <td colspan="3">
-      <input type="text" name="subject" value="<c:out value="${article.subject}" />" size="66">
+      <input type="text" name="subject" id="subject" value="<c:out value="${article.subject}" />">
       <input type="hidden" name="html" value="<%= article.getHtml() %>">
     </td>
   </tr>
   <tr>
     <td valign="top" height="163">내용</td>
     <td colspan="3" valign="top" height="163">
-<textarea style="width:480px; height:310px" name=content><%= CommonUtil.rplc(article.getContent(), "&", "&amp;") %></textarea>
+<textarea name="content" id="content"><%= CommonUtil.rplc(article.getContent(), "&", "&amp;") %></textarea>
     </td>
   </tr>
   <tr>
