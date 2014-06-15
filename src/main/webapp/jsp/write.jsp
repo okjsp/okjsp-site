@@ -84,7 +84,7 @@
     <td>Á¦¸ñ</td>
     <td colspan="3">
       <input type="text" name="subject" id="subject" value="<c:out value="${article.subject}" />">
-      <input type="hidden" name="html" value="<%= article.getHtml() %>">
+      <input type="hidden" name="html" id="html" value="<%= article.getHtml() %>">
     </td>
   </tr>
   <tr>
