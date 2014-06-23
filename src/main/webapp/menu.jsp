@@ -59,7 +59,7 @@
 	document.getElementById('bbslist').value = '<%= request.getParameter("bbs") %>';
 </script>
   <hr>
-  <h2 id="bbslistmenu">BBS LIST</h2>
+  <h2 id="bbslistmenu">Special BBS</h2>
    <br><A href="/bbs?act=LIST&bbs=egov" title="전자정부프레임웍">전자정부프레임웍</A>
    <br><A href="/bbs?act=LIST&bbs=cooper" title="협동조합준비위">협동조합준비위</A>
    <br><A href="http://it.nodong.net/zbxe/?mid=JOBQNA01"
