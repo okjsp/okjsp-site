@@ -18,7 +18,6 @@
     <script type="text/javascript" src="/js/okjsp.js"></script>
     <script type="text/javascript" src="/js/banner.js" charset="utf-8"></script>
     <LINK rel="STYLESHEET" type="TEXT/CSS" HREF="/css/okjsp2007.css.jsp">
-
 </head>
 
 <body class="body" style="margin:0">
