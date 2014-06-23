@@ -1,6 +1,6 @@
 <%@page pageEncoding="utf-8"%>
 <option value="cooper">협동조합준비위</option>
-<option value="egov">협동조합준비위</option>
+<option value="egov">전자정부프레임웍</option>
 <option value="book">책 얘기</option>
 <option value="getjob">구직</option>
 <option value="recruit">구인</option>
