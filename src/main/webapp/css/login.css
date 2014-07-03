@@ -1,0 +1,30 @@
+.form_write {
+	margin:100px auto;
+	width:210px;
+	padding: 8px;	
+}
+.form_write table {
+	height: 100px;
+	width: 210px;
+	text-align:center;
+}
+.form_write td,
+.form_write input {
+	font-family: Verdana;
+	font-size: medium;
+	border: 0;
+}
+.form_write input {
+	border-bottom: 1px dotted #00A;
+	width: 130px;
+}
+
+.form_write #login {
+	margin: 10px;
+	width: 80px;
+}
+.form_write, #login {
+	border: 1px solid #AAA;
+	border-right: 2px solid #88A;
+	border-bottom: 2px solid #88A;
+}

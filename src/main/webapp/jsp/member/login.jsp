@@ -1,47 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@page pageEncoding="utf-8"%>
 <%@page import="kr.pe.okjsp.util.DomainUtil"%>
-<%@page pageEncoding="euc-kr"%>
 <%@page import="kr.pe.okjsp.util.CommonUtil"%>
-<%@page import="kr.pe.okjsp.Navigation"%><html><head>
+<%@page import="kr.pe.okjsp.Navigation"%>
+<!DOCTYPE html>
+<html><head>
 <script src="form.js"></script>
 <link rel="stylesheet" href="/css/okjsp2007.css.jsp" type="text/css">
-<style type="text/css">
-.form_write {
-	margin:100px auto;
-	width:210px;
-	padding: 8px;	
-}
-.form_write table {
-	height: 100px;
-	width: 210px;
-	text-align:center;
-}
-.form_write td,
-.form_write input {
-	font-family: Verdana;
-	font-size: medium;
-	border: 0;
-}
-.form_write input {
-	border-bottom: 1px dotted #00A;
-	width: 130px;
-}
-
-.form_write #login {
-	margin: 10px;
-	width: 80px;
-}
-.form_write, #login {
-	border: 1px solid #AAA;
-	border-right: 2px solid #88A;
-	border-bottom: 2px solid #88A;
-}
-</style>
+<link rel="stylesheet" href="/css/login.css" type="text/css">
 <script type="text/javascript" src="/js/jquery/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="/js/okjsp.js"></script>
 <script type="text/javascript" src="/js/banner.js" charset="utf-8"></script>
+<script type="text/javascript">
+$(function(){
+	$("input[name='id']").focus();
+});
+</script>
 </head>
-<body onLoad="document.f1.id.focus()">
+<body>
 <jsp:include page="/top.jsp" />
 <div style="float:left">
 <jsp:include page="/menu.jsp" />
@@ -52,24 +27,26 @@
       	class="form_write" onSubmit="return check_login(this)">
       <input type="hidden" name="returnPath" value="<%= CommonUtil.nchk(request.getParameter("returnPath"), "/") %>">
 <table>
-<tbody><tr>
-<td>id</td>
-<td><input type="text" maxlength="15" name="id"/></td>
+<tbody>
+<tr>
+	<td>id</td>
+	<td><input type="text" maxlength="15" name="id"/></td>
 </tr>
 <tr>
-<td>password</td>
-<td><input type="password" maxlength="31" name="password"/></td>
+	<td>password</td>
+	<td><input type="password" maxlength="31" name="password"/></td>
 </tr>
 <tr>
-<td colspan="2">
-<input type="submit" value="·Î±×ÀÎ" id="login" name="login"/>
-<br>
-<a href='/jsp/member/agreement.jsp' title="Join in">È¸¿ø°¡ÀÔ</a>
-<br>
-<a href='/member?act=forgot' title="Join in">ºñ¹Ğ¹øÈ£¸¦ ÀØ¾ú¾î¿ä</a>
-</td>
+	<td colspan="2">
+		<input type="submit" value="ë¡œê·¸ì¸" id="login" name="login"/>
+		<br>
+		<a href='/jsp/member/agreement.jsp' title="Join in">íšŒì›ê°€ì…</a>
+		<br>
+		<a href='/member?act=forgot' title="Join in">ë¹„ë°€ë²ˆí˜¸ë¥¼ ìŠì—ˆì–´ìš”</a>
+	</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
       </form>
 
 </div>
