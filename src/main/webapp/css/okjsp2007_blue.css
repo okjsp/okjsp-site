@@ -28,10 +28,6 @@ li a:hover,a:active {
             }
 .th         {background-color: #3333CC;}
 .reply      {}
-.tiny       {font : 10px "Arial Narrow" ;}
-.tiny:link  {font : 10px "Arial Narrow" ;}
-.tiny:visited, active, hover
-            {font : 10px "Arial Narrow" ;}
 .search     {color:#CB0000}
 
 #taglist .row {display:block; margin:6px;border-bottom: 1 solid #888888;}

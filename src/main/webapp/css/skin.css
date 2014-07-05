@@ -440,6 +440,10 @@ td.subject div {
 	float: left;
 }
 
+.tiny {
+	font-size: xx-small;
+}
+
 td.writer div {
 	overflow: hidden;
 	width: 80px;
