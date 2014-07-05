@@ -15,8 +15,7 @@
     <script src="/js/okjsp.js"></script>
     <script type="text/javascript" src="/js/banner.js" charset="utf-8"></script>
     <script src='/js/okboard.js'></script>
-	<link rel="stylesheet" href="/css/okjsp2007.css.jsp" type="text/css">
-	<link rel="stylesheet" href="/site2009/okjsp2009.css" type="text/css">
+	<link rel="stylesheet" href="/css/skin.css" type="text/css">
 	<meta charset="utf-8" />
     <meta name="google-translate-customization" content="f3a40b0f1ed271cb-c894f26c0728d180-g81c25d2f6b172513-f"></meta>
 </head>
