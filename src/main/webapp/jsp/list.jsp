@@ -31,14 +31,14 @@
 <body class="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 <jsp:include page="/top.jsp" />
 <jsp:include page="/menu.jsp" />
-<table class="bbsTable">
+<table class="mainTable">
   <tr>
     <td valign='top'>
     <div style="font-size:10pt;font-weight:bold;margin:6px;padding:6px;">
       <c:out value="${requestScope.header}" escapeXml="false" /><br/>
       <c:out value="${bbsInfoMap[list.bbs].header}" escapeXml="false" />
     </div>
-    <div class="tablestyle" style="font-size:10pt;font-weight:bold;padding:6px 0px">
+    <div style="font-size:10pt;font-weight:bold;padding:6px 0px">
 <%
 	Map map = (Map)application.getAttribute("bbsInfoMap");
 	if (map != null) {
@@ -61,7 +61,15 @@
 
     </div>
 <!--<%= System.currentTimeMillis()-stime %>-->
-<table class="tablestyle" border="0" cellpadding="3" cellspacing="1">
+<table class="tablestyle">
+  <colgroup>
+    <col width="16%">
+    <col width="60%">
+    <col width="8%">
+    <col width="3%">
+    <col width="5%">
+    <col width="8%">
+  </colgroup>
 <%
 	boolean isAdBBS = "recruit".equals(list.getBbs()) && list.getPg() < 1;
 	if (isAdBBS) {
@@ -104,9 +112,9 @@ while (iter.hasNext()) {
             <okbbs:mark word='<%= keyword %>'>
 <%= CommonUtil.showHtml(one.getSubject()) %>&nbsp;
             </okbbs:mark>
-        <span class="tiny"><str:replace replace="[0]" with="">[<%= one.getMemo() %>]</str:replace></span>
             </a>
             </div>
+	        <span class="tiny"><str:replace replace="[0]" with="">[<%= one.getMemo() %>]</str:replace></span>
         </td>
         <td class="writer"><div><%= one.getWriter() %> </div></td>
         <td class="writer"><%

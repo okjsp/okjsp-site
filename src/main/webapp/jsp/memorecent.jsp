@@ -23,7 +23,7 @@
 <body class="body" style="margin:0">
 <jsp:include page="/top.jsp" />
 <jsp:include page="/menu.jsp" />
-<table class="bbsTable">
+<table class="tablestyle">
   <tr>
     <td valign='top'>
 <header>

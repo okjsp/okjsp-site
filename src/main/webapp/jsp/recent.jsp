@@ -42,10 +42,6 @@ Banner.show();
 </ul>
 </div>
 
-<table>
-  <tr>
-    <td align="center" valign="top">
-
 <!-- 최신글 리스트 -->
 <%
 	long sTime=System.currentTimeMillis();
@@ -53,6 +49,14 @@ Banner.show();
 	Article one = null;
 %>
 <table class="tablestyle">
+  <colgroup>
+    <col width="16%">
+    <col width="60%">
+    <col width="8%">
+    <col width="3%">
+    <col width="5%">
+    <col width="8%">
+  </colgroup>
 <%
 	ArrayList arrayList = new ArrayList();
 	arrayList.add("notice|공지사항");
@@ -64,11 +68,11 @@ Banner.show();
 	    rec = ((String)iter.next()).split("\\|");
 %>
 <tr>
-    <td colspan="6" class="th">
+    <th colspan="6">
 <a href="/bbs?act=LIST&bbs=<%= rec[0] %>">
 <b><%= rec[1] %></b>
 </a>
-    </td>
+    </th>
 </tr>
 <%
 
@@ -82,8 +86,8 @@ Banner.show();
             <a href="/seq/<%= one.getSeq() %>">
             <%= CommonUtil.rplc(one.getSubject(), "<", "&lt;") %>
             </a>
-        <span class="tiny"><str:replace replace="[0]" with="">[<%= one.getMemo() %>]</str:replace></span>
         </div>
+        <span class="tiny"><str:replace replace="[0]" with="">[<%= one.getMemo() %>]</str:replace></span>
         </td>
         <td class="writer"><div><%= CommonUtil.rplc(one.getWriter(), "<", "&lt;") %></div></td>
         <td class="id"><img src="/profile/<%= one.getId() %>.jpg"
@@ -99,9 +103,9 @@ Banner.show();
 } // end of while iter();
 %>
 <tr>
-    <td colspan="6" class="th">
+    <th colspan="6">
 <b>전체 게시판</b>
-    </td>
+    </th>
 </tr>
 <%
 	ArticleDao articleDao = new ArticleDao();
@@ -113,7 +117,7 @@ Banner.show();
 		}
 %>
     <tr class="body" align="center" style="height:32px">
-        <td class="ref tiny" style="width: 40px; font-weight: bold;">Sponsored</td>
+        <td class="ref tiny" style="font-weight: bold;">Sponsored</td>
         <td class="subject" style="text-align: left">
             <a href="/f.jsp?/seq/<%= article.getSeq() %>" style="font-weight:bold"><%= article.getSubject() %></a>
         </td>
@@ -149,8 +153,8 @@ Banner.show();
             <a href="/seq/<%= one.getSeq() %>">
             <%= CommonUtil.rplc(one.getSubject(), "<", "&lt;") %>
             </a>
-        <span class="tiny">[<%= one.getMemo() %>]</span>
         </div>
+        <span class="tiny">[<%= one.getMemo() %>]</span>
         </td>
         <td class="writer"><div><%= CommonUtil.rplc(one.getWriter(), "<", "&lt;") %></div></td>
         <td class="id"><img src="/profile/<%= one.getId() %>.jpg"
@@ -163,9 +167,6 @@ Banner.show();
 <%
 	}
 %></table>
-    </td>
-  </tr>
-</table>
 
     </td>
   </tr>

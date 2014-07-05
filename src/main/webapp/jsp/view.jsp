@@ -31,7 +31,7 @@
 <body class="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 <jsp:include page="/top.jsp" />
 <jsp:include page="/menu.jsp" />
-<table class="bbsTable">
+<table class="tablestyle">
   <tr>
     <td valign='top'>
 
@@ -40,7 +40,7 @@
 http://www.okjsp.net/seq/<%= one.getSeq() %></a></div>
 <table class="tablestyle" border="0" cellpadding="3" cellspacing="0">
     <tr>
-        <td class="td">
+        <td id="profile">
 <%
     if (one.getId() != null) {
         %><img src="http://www.okjsp.net/profile/<%= one.getId() %>.jpg"
@@ -72,9 +72,9 @@ http://www.okjsp.net/seq/<%= one.getSeq() %></a></div>
         </td>
     </tr>
     <tr>
-        <td class="td" class="wrap">
-        <b><%= CommonUtil.showHtml(one.getSubject()) %></b>
-        </td>
+        <th class="subject">
+        <%= CommonUtil.showHtml(one.getSubject()) %>
+        </th>
     </tr>
     <tr>
         <td class="td" class="wrap" height="80" valign="top">
@@ -86,8 +86,7 @@ Banner.showContentRight();
 <p><%= CommonUtil.rplc(one.getContentView(), "movieseq=", "")  %></p></div>
 <%-- facebook like button --%>
 <iframe src="http://www.facebook.com/plugins/like.php?href=http://www.okjsp.net/seq/<%= one.getSeq() %>"
-        scrolling="no" frameborder="0"
-        style="border:none; width:100%; height:60px"></iframe>
+        scrolling="no" frameborder="0" id="facebooklike"></iframe>
 
 <%-- 하단 배너 --%>
 <div style="margin:0 0 20px; width:100%;text-align:center;">
@@ -254,7 +253,7 @@ Banner.showContentSection();
 <%
     if (member.getSid() > 0) {
 %>
-        <textarea name="bcomment" style="width:100%;height:80px"></textarea>
+        <textarea name="bcomment" id="bcomment"></textarea><br>
         id:<input type="text" class="memoid" name="writer"
             maxlength="50" value="<%= CommonUtil.a2k(CommonUtil.getCookie(request, "okwriter")) %>">
         pw:<input type="password" class="memopw" name="memopass" maxlength="31">

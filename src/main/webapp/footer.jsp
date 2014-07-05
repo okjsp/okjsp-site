@@ -1,5 +1,5 @@
-<%@ page pageEncoding="euc-kr" %>
-<div id="footer" class="tablestyle">
+<%@ page pageEncoding="utf-8" %>
+<div id="footer">
 <div style="text-align:center">
 <script type="text/javascript">
 if (typeof Banner == "object") { Banner.showFooter(); }
@@ -10,15 +10,15 @@ if (typeof Banner == "object") { Banner.showFooter(); }
 <li>java/jsp/eclipse
 <a href="/" style="font-size:11px">http://www.okjsp.net</a>
 </li>
-<li>»ç¾÷ÀÚµî·Ï¹øÈ£: 220-09-04113 , ÀÌºê·¹ÀÎÄÁ¼³ÆÃ</li>
-<li><a href="/jsp/member/agreement.jsp" target="privacy">°³ÀÎÁ¤º¸Ãë±Ş¹æÄ§</a>
+<li>ì‚¬ì—…ìë“±ë¡ë²ˆí˜¸: 220-09-04113 , ì´ë¸Œë ˆì¸ì»¨ì„¤íŒ…</li>
+<li><a href="/jsp/member/agreement.jsp" target="privacy">ê°œì¸ì •ë³´ì·¨ê¸‰ë°©ì¹¨</a>
 </li>
-<li><a href="https://github.com/okjsp/okjsp-site/issues" target="bugs">¹ö±×¸®Æ÷Æ®</a>
+<li><a href="https://github.com/okjsp/okjsp-site/issues" target="bugs">ë²„ê·¸ë¦¬í¬íŠ¸</a>
 </li>
 <li>hosted by <a href="http://www.80port.com/">80port.com</a><br />
  <a href="http://www.80port.com/community"
  title="www.80port.com
- okjsp ¼­¹ö È£½ºÆÃ Áö¿ø, ¼­ºñ½º ÁÁ½À´Ï´Ù.">
+ okjsp ì„œë²„ í˜¸ìŠ¤íŒ… ì§€ì›, ì„œë¹„ìŠ¤ ì¢‹ìŠµë‹ˆë‹¤.">
  <img src="/images/bnr_80port.gif" border="0"></a>
 </li>
 </ul>

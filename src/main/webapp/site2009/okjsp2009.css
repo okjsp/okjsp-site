@@ -19,7 +19,7 @@ ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	width: 780px;
+	width: 100%;
 	height: 50px;
 	background-color: #1974ff
 }
@@ -49,16 +49,28 @@ ul {
 
 /* bbs */
 .tablestyle {
-	width: 642px;
+	width: 662px;
+	margin-left: 0;
 }
 
-.th {
+.tablestyle td {
+padding: 4px 0;
+border-bottom: 1px solid #dddddd;
+}
+
+
+.tablestyle tr:first-child td {
+border-top: 1px solid #dddddd;
+}
+
+th {
 padding: 5px 10px;
 font-size: 1.2em;
+background-color: #c0d0ff;
 }
 
-.bbsTable .tablestyle {
-	margin-left: 3px;
+th.subject {
+	text-align: left;
 }
 
 .download img {
@@ -156,13 +168,22 @@ cursor: pointer;
 
 /* menu */
 #menuSect {
-	width: 120px;
-	margin: 0 5px 0 6px;
+	float: left;
+	width: 125px;
+	padding: 0 6px;
+	padding-bottom: 400px;
+	background: #ffffff;
+}
+.mainTable {
 	float: left;
 }
-.bbsTable, .mainTable {
-	float: left;
+table {
+	padding: 0;
+	margin: 0;
+	border-spacing: 0;
 }
+
+
 #bbslist {
 	font-weight: normal;
 	width: 120px;
@@ -234,6 +255,7 @@ cursor: pointer;
 
 #wrap {
 	float: left;
+	background-color: #F0F0FF;
 }
 
 /* sub_panel */
@@ -321,7 +343,8 @@ cursor: pointer;
 /* footer */
 #footer {
 	text-align: right;
-	padding-top: 8px;
+	padding-top: 18px;
+	padding-right: 6px;
 	border-top: 1px dotted #96c0ff;
 	margin-left: 137px;
 }
