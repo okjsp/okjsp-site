@@ -11,7 +11,7 @@
 <HEAD>
     <META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=euc-kr">
     <TITLE>LogOut</TITLE>
-    <link rel="stylesheet" type="text/css" href="/css/okjsp2007.css.jsp" media="all" />
+    <link rel="stylesheet" type="text/css" href="/css/skin.css" media="all" />
     <script type="text/javascript" src="/js/okjsp.js"></script>
 	<script>
 	setTimeout("top.location.replace('/')", 1000);

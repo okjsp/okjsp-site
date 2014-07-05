@@ -6,7 +6,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 	<title>OKJSP Event::: LG NAS</title>
-    <link rel="stylesheet" href="/css/okjsp2007.css.jsp" type="text/css">
+    <link rel="stylesheet" href="/css/skin.css" type="text/css">
     <link rel="stylesheet" href="/event/200908/nas.css" type="text/css">
 	<script type="text/javascript" src="/js/okjsp.js"></script>
     <script type="text/javascript" src="/js/okboard_view.js"></script>

@@ -9,7 +9,7 @@
 <head>
     <META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=ksc5601">
     <title>JSTL: OKJSP members</title>
-    <LINK rel="STYLESHEET" type="TEXT/CSS" HREF="/css/okjsp2007.css.jsp">
+    <LINK rel="STYLESHEET" type="TEXT/CSS" HREF="/css/skin.css">
 </head>
 <body class="body">
 <fmt:bundle basename="kr.pe.okjsp.DB">

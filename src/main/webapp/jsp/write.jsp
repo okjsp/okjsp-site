@@ -22,7 +22,7 @@
     <script src='/js/ban.js'></script>
     <script src="/js/banner.js" charset="utf-8"></script>
     <link rel="stylesheet" href="/css/style.css" type="text/css">
-    <link rel="stylesheet" href="/css/okjsp2007.css.jsp" type="text/css">
+    <link rel="stylesheet" href="/css/skin.css" type="text/css">
     <title>okjsp write</title>
 </head>
 <body class="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">

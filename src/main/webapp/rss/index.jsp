@@ -2,7 +2,7 @@
 <%@ page pageEncoding="euc-kr" %>
 <html>
 <head>
-<link rel="stylesheet" href="/css/okjsp2007.css.jsp" type="text/css">
+<link rel="stylesheet" href="/css/skin.css" type="text/css">
 <META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=ksc5601">
 <script src="/js/okjsp.js"></script>
 </head>

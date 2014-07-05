@@ -11,7 +11,7 @@
 <html>
 <head>
     <META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=ksc5601">    
-    <link rel="stylesheet" href="/css/okjsp2007.css.jsp" type="text/css">
+    <link rel="stylesheet" href="/css/skin.css" type="text/css">
     <title>OKJSP: <%= one.getSubject() %></title>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 

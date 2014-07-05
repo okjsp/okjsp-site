@@ -7,7 +7,7 @@
 <html>
 <head>
     <META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=ksc5601">
-    <link rel="stylesheet" href="/css/okjsp2007.css.jsp" type="text/css">
+    <link rel="stylesheet" href="/css/skin.css" type="text/css">
     <title>OKJSP: <c:out value="${one.subject}"/></title>
     <script src='/js/ban.js'></script>
     <script src="/js/okjsp.js"></script>
