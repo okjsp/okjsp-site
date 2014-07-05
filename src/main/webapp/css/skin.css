@@ -397,12 +397,6 @@ div.wysiwyg {
 	width: 600px;
 }
 
-.recent_first {
-overflow: hidden;
-height: 17px;
-font-size: 0.89em;
-}
-
 #newsfeedList li:nth-child(even) {
 	background: #F8F8FF;
 }
@@ -429,15 +423,22 @@ font-size: 0.89em;
 	cursor: pointer;
 }
 
+td.subject {
+	text-align: left;
+}
 td.subject div {
 	white-space: nowrap;
 	overflow: hidden;
-	width: 360px;
+	max-width: 350px;
 	text-overflow: ellipsis;
 	text-align: left;
 	height: 17px;
 	padding-left: 4px;
 	float: left;
+}
+td.subject .tiny {
+	float: left;
+	margin-left: 4px;
 }
 
 .tiny {

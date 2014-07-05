@@ -146,7 +146,7 @@ Banner.show();
 	    i++;
 %>
     <tr align="center">
-        <td><div class="recent_first">
+        <td><div class="tiny">
         <a href="/bbs?act=LIST&bbs=<%= one.getBbs() %>">
         <%= bbsInfo.getName() %></a></div></td>
         <td class="subject"><div>
