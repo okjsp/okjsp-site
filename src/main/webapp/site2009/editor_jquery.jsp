@@ -1,6 +1,6 @@
 <%@page import="kr.pe.okjsp.BbsRoleHandler"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <%
 	long sid = CommonUtil.getCookieLong(request, "sid");
 	String bbs = CommonUtil.nchk(request.getParameter("bbs"), "perf");
@@ -98,13 +98,13 @@ var sync = function() {
 </dt>
 <dd>
 <select name="ccl_id" id="ccl_id">
-	<option value="0">Copyright-ÀúÀÛÀÚ¿¡°Ô ÀúÀÛ±Ç</option>
-	<option value="1">CCL-ÀúÀÛÀÚÇ¥½Ã</option>
-	<option value="2">CCL-ÀúÀÛÀÚÇ¥½Ã-µ¿ÀÏÁ¶°Çº¯°æÇã¶ô</option>
-	<option value="3">CCL-ÀúÀÛÀÚÇ¥½Ã-º¯°æ±ÝÁö</option>
-	<option value="4">CCL-ÀúÀÛÀÚÇ¥½Ã-ºñ¿µ¸®</option>
-	<option value="5">CCL-ÀúÀÛÀÚÇ¥½Ã-ºñ¿µ¸®-µ¿ÀÏÁ¶°Çº¯°æÇã¶ô</option>
-	<option value="6">CCL-ÀúÀÛÀÚÇ¥½Ã-ºñ¿µ¸®-º¯°æ±ÝÁö</option>
+	<option value="0">Copyright-ì €ìž‘ìžì—ê²Œ ì €ìž‘ê¶Œ</option>
+	<option value="1">CCL-ì €ìž‘ìží‘œì‹œ</option>
+	<option value="2">CCL-ì €ìž‘ìží‘œì‹œ-ë™ì¼ì¡°ê±´ë³€ê²½í—ˆë½</option>
+	<option value="3">CCL-ì €ìž‘ìží‘œì‹œ-ë³€ê²½ê¸ˆì§€</option>
+	<option value="4">CCL-ì €ìž‘ìží‘œì‹œ-ë¹„ì˜ë¦¬</option>
+	<option value="5">CCL-ì €ìž‘ìží‘œì‹œ-ë¹„ì˜ë¦¬-ë™ì¼ì¡°ê±´ë³€ê²½í—ˆë½</option>
+	<option value="6">CCL-ì €ìž‘ìží‘œì‹œ-ë¹„ì˜ë¦¬-ë³€ê²½ê¸ˆì§€</option>
 </select>
 </dd>
 <dt>
@@ -115,7 +115,7 @@ var sync = function() {
 </dd>
 <dd>
 <input type="hidden" name="msgbackup" id="msgbackup">
-<textarea name="content" id="content" rows="6" class="write">
+<textarea style="height: 300px;" name="content" id="content" rows="6" class="write">
 </textarea>
 </dd>
 <dd>
