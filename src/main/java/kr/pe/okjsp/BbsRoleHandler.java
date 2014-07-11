@@ -83,6 +83,7 @@ public class BbsRoleHandler {
 				|| 8510 == sid
 				|| 21016 == sid
 				|| 21987 == sid
+				|| 26138 == sid
 				|| 163 == sid
 				;
 		return isAdmin;
