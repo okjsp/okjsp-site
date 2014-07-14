@@ -1,6 +1,5 @@
 <%@page import="kr.pe.okjsp.BbsRoleHandler"%>
-<%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=ms949"%>
 <%
 	long sid = CommonUtil.getCookieLong(request, "sid");
 	String bbs = CommonUtil.nchk(request.getParameter("bbs"), "perf");
@@ -16,7 +15,7 @@
 <%@page import="kr.pe.okjsp.util.CommonUtil"%>
 <%@page import="kr.pe.okjsp.Navigation"%><html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=ms949">
 <title>okjsp editor</title>
 
 <link rel="stylesheet" href="/js/jquery/jwysiwyg-0.5/jquery.wysiwyg.css" type="text/css">
