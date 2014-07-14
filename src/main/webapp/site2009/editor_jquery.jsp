@@ -16,7 +16,7 @@
 <%@page import="kr.pe.okjsp.util.CommonUtil"%>
 <%@page import="kr.pe.okjsp.Navigation"%><html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>okjsp editor</title>
 
 <link rel="stylesheet" href="/js/jquery/jwysiwyg-0.5/jquery.wysiwyg.css" type="text/css">
