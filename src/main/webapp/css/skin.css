@@ -55,6 +55,7 @@ ul {
 /* bbs */
 .tablestyle {
 	width: 662px;
+	float:left;
 	margin-left: 0;
 }
 
