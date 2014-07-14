@@ -1,5 +1,6 @@
 <%@page import="kr.pe.okjsp.BbsRoleHandler"%>
-<%@ page language="java" contentType="text/html; charset=ms949"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <%
 	long sid = CommonUtil.getCookieLong(request, "sid");
 	String bbs = CommonUtil.nchk(request.getParameter("bbs"), "perf");
@@ -15,12 +16,12 @@
 <%@page import="kr.pe.okjsp.util.CommonUtil"%>
 <%@page import="kr.pe.okjsp.Navigation"%><html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ms949">
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>okjsp editor</title>
 
 <link rel="stylesheet" href="/js/jquery/jwysiwyg-0.5/jquery.wysiwyg.css" type="text/css">
 <link rel="stylesheet" href="/css/style.css" type="text/css">
-<link rel="stylesheet" href="/css/skin.css" type="text/css">
+<link rel="stylesheet" href="/css/okjsp2007.css.jsp" type="text/css">
 
 <script type="text/javascript" src="/js/banner.js" charset="utf-8"></script>
 <script type="text/javascript" src="/js/jquery/jquery-1.3.2.min.js"></script>
@@ -93,20 +94,6 @@ var sync = function() {
 <input name="password" id="password" type="password" maxlength="31" class="write">
 </dd>
 <dt>
-<label for="ccl_id">CCL:</label>
-</dt>
-<dd>
-<select name="ccl_id" id="ccl_id">
-	<option value="0">Copyright-저작자에게 저작권</option>
-	<option value="1">CCL-저작자표시</option>
-	<option value="2">CCL-저작자표시-동일조건변경허락</option>
-	<option value="3">CCL-저작자표시-변경금지</option>
-	<option value="4">CCL-저작자표시-비영리</option>
-	<option value="5">CCL-저작자표시-비영리-동일조건변경허락</option>
-	<option value="6">CCL-저작자표시-비영리-변경금지</option>
-</select>
-</dd>
-<dt>
 <label for="subject">Subject:</label>
 </dt>
 <dd>
@@ -114,7 +101,7 @@ var sync = function() {
 </dd>
 <dd>
 <input type="hidden" name="msgbackup" id="msgbackup">
-<textarea style="height: 300px;" name="content" id="content" rows="6" class="write">
+<textarea name="content" id="content" rows="6" class="write">
 </textarea>
 </dd>
 <dd>
