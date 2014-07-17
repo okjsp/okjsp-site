@@ -37,7 +37,7 @@ Banner.show();
 <div id="bookList">
 <ul>
 <li>
-<a href="/f.jsp?http://www.hanbit.co.kr/book/look.html?isbn=978-89-6848-103-1" target="_hb"><img src="/images/banner/banner_hanb_promotion_book_140616.jpg"></a>
+<a href="/f.jsp?http://www.okjsp.net/bbs?act=LIST&bbs=review" target="_okhee"><img src="/images/banner/okjsp_banner_review_java8_v1.jpg"></a>
 </li>
 </ul>
 </div>
