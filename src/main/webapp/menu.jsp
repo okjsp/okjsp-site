@@ -61,6 +61,7 @@
   <hr>
   <h2 id="bbslistmenu">Add BBS</h2>
    <br><A href="/bbs?act=LIST&bbs=egov" title="전자정부 표준프레임워크">전자정부<br>표준 프레임워크</A>
+   <br><A href="/bbs?act=LIST&bbs=review" title="OKJSP 리뷰">OKJSP 리뷰!!!</A>
    <br><A href="/bbs?act=LIST&bbs=okhee2" title="OKJSP 리뉴얼">OKJSP 리뉴얼</A>
    <br><A href="/bbs?act=LIST&bbs=cooper" title="협동조합준비위">협동조합준비위</A>
    <br><A href="http://it.nodong.net/zbxe/?mid=JOBQNA01"

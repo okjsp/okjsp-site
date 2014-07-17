@@ -1,4 +1,5 @@
 <%@page pageEncoding="utf-8"%>
+<option value="review">OKJSP 리뷰</option>
 <option value="cooper">협동조합준비위</option>
 <option value="okhee2">OKJSP 리뉴얼</option>
 <option value="egov">전자정부 표준프레임워크</option>
