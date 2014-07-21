@@ -181,6 +181,7 @@ cursor: pointer;
 	background: #ffffff;
 }
 .mainTable {
+	width: 662px;
 	float: left;
 }
 table {
