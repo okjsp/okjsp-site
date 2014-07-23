@@ -1,4 +1,5 @@
 <%@page pageEncoding="utf-8"%>
+<option value="guideline">프리랜서 가이드라인</option>
 <option value="review">OKJSP 리뷰</option>
 <option value="cooper">협동조합준비위</option>
 <option value="okhee2">OKJSP 리뉴얼</option>
