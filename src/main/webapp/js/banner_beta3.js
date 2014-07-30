@@ -39,7 +39,7 @@ aside : [
 {
 	'expire': "2013-05-06",
 	'tag': '<a href="/f.jsp?http://pushtk.com/D?l=6" target="_blank">' +
-	'<img src="/images/banner/cena_150x67.gif" alt="푸시삼국지 시즌2"></a>'
+	'<img src="/images/banner/cena_150x67.gif" alt="푸시삼국지 시즌2"></a>' 
 }
 ],
 
