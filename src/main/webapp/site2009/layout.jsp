@@ -16,8 +16,8 @@
 	<li id="find">
 	<form name="searchf1" method="get" target="okjspsearch"
 		action="http://www.google.com/search"
-		onsubmit="searchf1.q.value='site:okjsp.pe.kr '+searchf1.qt.value;">
-	<input name="q" value="site:okjsp.pe.kr " type="hidden"> 
+		onsubmit="searchf1.q.value='site:okjsp.net '+searchf1.qt.value;">
+	<input name="q" value="site:okjsp.net " type="hidden"> 
 	<input name="qt" value="" type="text"> 
 	<input value="google" type="submit"></form>
 	</li>

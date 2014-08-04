@@ -47,7 +47,7 @@ error:
 <hr>
 data from: <a href="http://openapi.seoul.go.kr:8088/xml/sample/서울시 강우량 정보/1/45" target="_blank">http://openapi.seoul.go.kr:8088/xml/sample/서울시 강우량 정보/1/50</a>
 <br />
-hosted in: <a href="http://www.okjsp.pe.kr/">http://www.okjsp.pe.kr/</a>
+hosted in: <a href="http://www.okjsp.net/">http://www.okjsp.net/</a>
 <jsp:include page="/googleAnalytics.jsp" />
 </body>
 </html>

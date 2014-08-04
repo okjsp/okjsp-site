@@ -97,11 +97,11 @@
 			</CATEGORIES>
 		</DATA-DEF>
 	</DATASCHEMA>
-	<POLICY name="OKJSP" opturi="http://www.okjsp.pe.kr/jsp/member/info.jsp" discuri="http://www.okjsp.pe.kr/jsp/member/agreement.jsp" >
+	<POLICY name="OKJSP" opturi="http://www.okjsp.net/jsp/member/info.jsp" discuri="http://www.okjsp.net/jsp/member/agreement.jsp" >
 		<ENTITY>
 			<DATA-GROUP>
 				<DATA ref="#business.name">OKJSP</DATA>
-				<DATA ref="#business.contact-info.online.uri">http://www.okjsp.pe.kr</DATA>
+				<DATA ref="#business.contact-info.online.uri">http://www.okjsp.net</DATA>
 			</DATA-GROUP>
 		</ENTITY>
 		<ACCESS>
@@ -128,14 +128,14 @@ OJKSP가 수집하는 개인정보의 보유 및 이용기간”에 명시된 �
 			</EXTENSION>
 		</ACCESS>
 		<DISPUTES-GROUP>
-			<DISPUTES resolution-type="service" service="http://www.okjsp.pe.kr/jsp/member/agreement.jsp" short-description="okjsp">
+			<DISPUTES resolution-type="service" service="http://www.okjsp.net/jsp/member/agreement.jsp" short-description="okjsp">
 				<EXTENSION optional="no">
 					<DATA ref="#business.pdepart.name">운영</DATA>
-					<DATA ref="#business.pdepart.email">kenu@okjsp.pe.kr</DATA>
-					<DATA ref="#business.pdepart.telephone">010-8595-2045</DATA>
+					<DATA ref="#business.pdepart.email">admin@okjsp.net</DATA>
+					<DATA ref="#business.pdepart.telephone">010-9486-2045</DATA>
 					<DATA ref="#business.cpo.name">허광남</DATA>
-					<DATA ref="#business.cpo.email">kenu@okjsp.pe.kr</DATA>
-					<DATA ref="#business.cpo.telephone">010-8595-2045</DATA>
+					<DATA ref="#business.cpo.email">admin@okjsp.net</DATA>
+					<DATA ref="#business.cpo.telephone">010-9486-2045</DATA>
 				</EXTENSION>
 				<REMEDIES><correct/><money/><law/></REMEDIES>
 			</DISPUTES>

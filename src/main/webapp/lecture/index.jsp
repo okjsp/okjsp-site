@@ -8,7 +8,7 @@
 <table border="1" cellspacing="0" cellpadding="2" bordercolordark="white" bordercolorlight="#203030">
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/ide/eclipse/eclipse_install.html">
+<a href="http://www.okjsp.net/lecture/ide/eclipse/eclipse_install.html">
 <b>Eclipse 시작하기</b>
 </a>
 </td>
@@ -17,7 +17,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec05/form01.html">
+<a href="http://www.okjsp.net/lecture/lec05/form01.html">
 <b>Form study #1</b>
 </a>
 </td>
@@ -26,7 +26,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec10/manager01.html">
+<a href="http://www.okjsp.net/lecture/lec10/manager01.html">
 <b>Tomcat 4 Manager 사용하기</b>
 </a>
 </td>
@@ -35,7 +35,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec03/jndijdbc01.html">
+<a href="http://www.okjsp.net/lecture/lec03/jndijdbc01.html">
 <b>JNDI로 jdbc 사용하기(Tomcat4)</b>
 </a>
 </td>
@@ -44,7 +44,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec10/log01.html">
+<a href="http://www.okjsp.net/lecture/lec10/log01.html">
 <b>jsp에서 log() 이용하기</b>
 </a>
 </td>
@@ -53,7 +53,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec10/war01.html">
+<a href="http://www.okjsp.net/lecture/lec10/war01.html">
 <b>WAR? Web ARchive</b>
 </a>
 </td>
@@ -62,7 +62,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec03/procedure01.html">
+<a href="http://www.okjsp.net/lecture/lec03/procedure01.html">
 <b>Procedure 사용하기</b>
 </a>
 </td>
@@ -71,7 +71,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec03/callable01.html">
+<a href="http://www.okjsp.net/lecture/lec03/callable01.html">
 <b>CallableStatement 사용하기</b>
 </a>
 </td>
@@ -80,7 +80,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec04/package01.html">
+<a href="http://www.okjsp.net/lecture/lec04/package01.html">
 <b>package 선언된 java 컴파일하기</b>
 </a>
 </td>
@@ -89,7 +89,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lecture01.htm">
+<a href="http://www.okjsp.net/lecture/lecture01.htm">
 <b>한글처리</b>
 </a>
 </td>
@@ -98,7 +98,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec04/bean04.htm">
+<a href="http://www.okjsp.net/lecture/lec04/bean04.htm">
 <b>한글처리 빈</b>
 </a>
 </td>
@@ -107,7 +107,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec08/servlet01.html">
+<a href="http://www.okjsp.net/lecture/lec08/servlet01.html">
 <b>Servlet 파일위치</b>
 </a>
 </td>
@@ -116,7 +116,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec08/servlet02.html">
+<a href="http://www.okjsp.net/lecture/lec08/servlet02.html">
 <b>servlet 한글출력</b>
 </a>
 </td>
@@ -125,7 +125,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec02/javamail01.htm">
+<a href="http://www.okjsp.net/lecture/lec02/javamail01.htm">
 <b>JavaMail 기본설치</b>
 </a>
 </td>
@@ -134,7 +134,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec02/javamail02.htm">
+<a href="http://www.okjsp.net/lecture/lec02/javamail02.htm">
 <b>JavaMail 폼메일</b>
 </a>
 </td>
@@ -143,7 +143,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec02/javamail03.htm">
+<a href="http://www.okjsp.net/lecture/lec02/javamail03.htm">
 <b>JavaMail 파일첨부메일</b>
 </a>
 </td>
@@ -152,7 +152,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec02/javamail04.htm">
+<a href="http://www.okjsp.net/lecture/lec02/javamail04.htm">
 <b>JavaMail 메일링리스트</b>
 </a>
 </td>
@@ -163,7 +163,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec03/mysql.htm">
+<a href="http://www.okjsp.net/lecture/lec03/mysql.htm">
 <b>MySQL 설치</b>
 </a>
 </td>
@@ -173,7 +173,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec03/mysql02.html">
+<a href="http://www.okjsp.net/lecture/lec03/mysql02.html">
 <b>MySQL 인증설정</b>
 </a>
 </td>
@@ -182,7 +182,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec03/jdbcmysql01.htm">
+<a href="http://www.okjsp.net/lecture/lec03/jdbcmysql01.htm">
 <b>MySQL 테이블생성</b>
 </a>
 </td>
@@ -191,7 +191,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec03/jdbcmysql02.htm">
+<a href="http://www.okjsp.net/lecture/lec03/jdbcmysql02.htm">
 <b>MySQL 자료입력</b>
 </a>
 </td>
@@ -200,7 +200,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec03/jdbcmysql03.htm">
+<a href="http://www.okjsp.net/lecture/lec03/jdbcmysql03.htm">
 <b>MySQL 자료조회</b>
 </a>
 </td>
@@ -209,7 +209,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec03/access_odbc.htm">
+<a href="http://www.okjsp.net/lecture/lec03/access_odbc.htm">
 <b>MS Access ODBC연결</b>
 </a>
 </td>
@@ -218,7 +218,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec03/oracle01.html">
+<a href="http://www.okjsp.net/lecture/lec03/oracle01.html">
 <b>Oracle8i 설치예</b>
 </a>
 </td>
@@ -227,7 +227,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec03/mssql01.html">
+<a href="http://www.okjsp.net/lecture/lec03/mssql01.html">
 <b>MSSQL7 연결(freeTds)</b>
 </a>
 </td>
@@ -236,7 +236,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lecture/lec04/bean01.htm">
+<a href="http://www.okjsp.net/lecture/lecture/lec04/bean01.htm">
 <b>useBean</b>
 </a>
 </td>
@@ -245,7 +245,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec04/bean02.htm">
+<a href="http://www.okjsp.net/lecture/lec04/bean02.htm">
 <b>session bean</b>
 </a>
 </td>
@@ -254,7 +254,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec04/bean03.htm">
+<a href="http://www.okjsp.net/lecture/lec04/bean03.htm">
 <b>bean 활용</b>
 </a>
 </td>
@@ -263,7 +263,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec04/bean04.htm">
+<a href="http://www.okjsp.net/lecture/lec04/bean04.htm">
 <b>bean 한글처리</b>
 </a>
 </td>
@@ -272,7 +272,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lecture/lec05/fileup01.htm">
+<a href="http://www.okjsp.net/lecture/lecture/lec05/fileup01.htm">
 <b>FileUpload</b>
 </a>
 </td>
@@ -281,7 +281,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec05/jspsmart01.htm">
+<a href="http://www.okjsp.net/lecture/lec05/jspsmart01.htm">
 <b>JspSmartUpload 설치</b>
 </a>
 </td>
@@ -290,7 +290,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec05/jspsmartuploadFAQ.htm">
+<a href="http://www.okjsp.net/lecture/lec05/jspsmartuploadFAQ.htm">
 <b>JspSmartUpload FAQ</b>
 </a>
 </td>
@@ -299,7 +299,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec10/debug01.html">
+<a href="http://www.okjsp.net/lecture/lec10/debug01.html">
 <b>jsp 에러잡기</b>
 </a>
 </td>
@@ -308,7 +308,7 @@
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec09/javac01.html">
+<a href="http://www.okjsp.net/lecture/lec09/javac01.html">
 <b>편집기 Ultraedit</b>
 </a>
 </td>
@@ -318,7 +318,7 @@ java 컴파일</td>
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec03/oracle2mdb.html">
+<a href="http://www.okjsp.net/lecture/lec03/oracle2mdb.html">
 <b>오라클에서 MS Access로 DB 이전하기</b>
 </a>
 </td>
@@ -327,7 +327,7 @@ java 컴파일</td>
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec04/include01.html">
+<a href="http://www.okjsp.net/lecture/lec04/include01.html">
 <b>include 집중분석</b>
 </a>
 </td>
@@ -336,7 +336,7 @@ java 컴파일</td>
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec12/taglib01.html">
+<a href="http://www.okjsp.net/lecture/lec12/taglib01.html">
 <b>JSP Tag Library 기초강좌</b>
 </a>
 </td>
@@ -345,7 +345,7 @@ java 컴파일</td>
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec13/acmejsp01.html">
+<a href="http://www.okjsp.net/lecture/lec13/acmejsp01.html">
 <b>동적이미지 생성</b>
 </a>
 </td>
@@ -357,7 +357,7 @@ java 컴파일</td>
 <table border="1" cellspacing="0" cellpadding="2" bordercolordark="white" bordercolorlight="#203030">
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec01/vhost02.html">
+<a href="http://www.okjsp.net/lecture/lec01/vhost02.html">
 <b>Tomcat 가상호스트 설정하기</b>
 </a>
 </td>
@@ -366,7 +366,7 @@ java 컴파일</td>
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec01/vhost01.html">
+<a href="http://www.okjsp.net/lecture/lec01/vhost01.html">
 <b>Apache 가상호스트 설정하기</b>
 </a>
 </td>
@@ -375,7 +375,7 @@ java 컴파일</td>
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec01/mod_jk01.html">
+<a href="http://www.okjsp.net/lecture/lec01/mod_jk01.html">
 <b>Tomcat4 Apache1.3.22연동(mod_jk)</b>
 </a>
 </td>
@@ -384,7 +384,7 @@ java 컴파일</td>
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec01/webapp01.html">
+<a href="http://www.okjsp.net/lecture/lec01/webapp01.html">
 <b>Tomcat4 Apache1.3.22연동(mod_webapp)</b>
 </a>
 </td>
@@ -393,7 +393,7 @@ java 컴파일</td>
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec01/jdk13.html">
+<a href="http://www.okjsp.net/lecture/lec01/jdk13.html">
 <b>jdk 설치하기</b>
 </a>
 </td>
@@ -402,7 +402,7 @@ java 컴파일</td>
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec01/tomcat4.html">
+<a href="http://www.okjsp.net/lecture/lec01/tomcat4.html">
 <b>Tomcat4 설치하기</b>
 </a>
 </td>
@@ -411,7 +411,7 @@ java 컴파일</td>
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/jspstart/jsp01.htm">
+<a href="http://www.okjsp.net/lecture/jspstart/jsp01.htm">
 <b>win98+apache+tomcat</b>
 </a>
 </td>
@@ -420,7 +420,7 @@ java 컴파일</td>
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/jspstart/jsp02.htm">
+<a href="http://www.okjsp.net/lecture/jspstart/jsp02.htm">
 <b>Tomcat-apache 연동</b>
 </a>
 </td>
@@ -429,7 +429,7 @@ java 컴파일</td>
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec01/tomcat4directory.html">
+<a href="http://www.okjsp.net/lecture/lec01/tomcat4directory.html">
 <b>Tomcat4.1 루트디렉토리 변경과 Context 추가</b>
 </a>
 </td>
@@ -438,7 +438,7 @@ java 컴파일</td>
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/jspstart/jsp03.htm">
+<a href="http://www.okjsp.net/lecture/jspstart/jsp03.htm">
 <b>Tomcat3 루트디렉토리</b>
 </a>
 </td>
@@ -447,7 +447,7 @@ java 컴파일</td>
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/jspstart/jsp04.htm">
+<a href="http://www.okjsp.net/lecture/jspstart/jsp04.htm">
 <b>win2000+apache+tomcat</b>
 </a>
 </td>
@@ -456,7 +456,7 @@ java 컴파일</td>
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/jspstart/resin01.htm">
+<a href="http://www.okjsp.net/lecture/jspstart/resin01.htm">
 <b>win2000+IIS5+Resin</b>
 </a>
 </td>
@@ -465,7 +465,7 @@ java 컴파일</td>
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/jspstart/resin02.htm">
+<a href="http://www.okjsp.net/lecture/jspstart/resin02.htm">
 <b>Resin 루트디렉토리</b>
 </a>
 </td>
@@ -474,7 +474,7 @@ java 컴파일</td>
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec11/tomcat_service01.html">
+<a href="http://www.okjsp.net/lecture/lec11/tomcat_service01.html">
 <b>Tomcat 서비스 설치하기</b>
 </a>
 </td>
@@ -483,7 +483,7 @@ java 컴파일</td>
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec02/iissmtp01.htm">
+<a href="http://www.okjsp.net/lecture/lec02/iissmtp01.htm">
 <b>win2k SMTP 설치</b>
 </a>
 </td>
@@ -493,7 +493,7 @@ java 컴파일</td>
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec11/tomcatiis01.html">
+<a href="http://www.okjsp.net/lecture/lec11/tomcatiis01.html">
 <b>win2k server + IIS + tomcat 3.2.3</b>
 </a>
 </td>
@@ -502,7 +502,7 @@ java 컴파일</td>
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/lec11/tomcatiis02.html">
+<a href="http://www.okjsp.net/lecture/lec11/tomcatiis02.html">
 <b>IIS + tomcat 3.2.3 Context추가하기</b>
 </a>
 </td>
@@ -514,7 +514,7 @@ java 컴파일</td>
 <table border="1" cellspacing="0" cellpadding="2" bordercolordark="white" bordercolorlight="#203030">
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/network/networkshare.htm">
+<a href="http://www.okjsp.net/lecture/network/networkshare.htm">
 <b>인터넷 공유</b>
 </a>
 </td>
@@ -523,7 +523,7 @@ java 컴파일</td>
 </tr>
 <tr height="40" valign="top">
 <td width="170">
-<a href="http://www.okjsp.pe.kr/lecture/network/smtpemwac.htm">
+<a href="http://www.okjsp.net/lecture/network/smtpemwac.htm">
 <b>EMWAC과 IIS의 SMTP 같이 사용하기</b>
 </a>
 </td>
@@ -531,7 +531,7 @@ java 컴파일</td>
 <td width="80" align="center">2001-08-05</td>
 </tr>
 </table>
-<a href="http://www.okjsp.pe.kr" target="_top">http://www.okjsp.pe.kr</a>
+<a href="http://www.okjsp.net" target="_top">http://www.okjsp.net</a>
 <jsp:include page="/googleAnalytics.jsp" />
 </body>
 </html>

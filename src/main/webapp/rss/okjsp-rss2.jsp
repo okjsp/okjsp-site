@@ -17,21 +17,21 @@ SimpleDateFormat sdf = new SimpleDateFormat("E, d MMM yyyy HH:mm:ss Z", Locale.U
 <rss version="2.0">
 	<channel>
 		<title>OKJSP: <c:out value="${bbsInfoMap[param.bbs].name}" /></title>
-		<link>http://www.okjsp.pe.kr</link>
+		<link>http://www.okjsp.net</link>
 		<description>OKJSP is about developing web application, developer life stories. We exchange anything helpful infomation for us.</description>
 		<language>ko-kr</language>
-		<copyright>Copyright 2000-2009 okjsp.pe.kr</copyright>
+		<copyright>Copyright 2000-2009 okjsp.net</copyright>
 		<lastBuildDate><%= sdf.format(new Date()) %></lastBuildDate>
 		<pubDate><%= sdf.format(new Date()) %></pubDate>
-		<docs>http://www.okjsp.pe.kr/rss</docs>
+		<docs>http://www.okjsp.net/rss</docs>
 		<generator>OKJSP Feed Generator 0.2</generator>
-		<managingEditor>kenu@okjsp.pe.kr</managingEditor>
-		<webMaster>kenu@okjsp.pe.kr</webMaster>
+		<managingEditor>kenu@okjsp.net</managingEditor>
+		<webMaster>kenu@okjsp.net</webMaster>
 		<ttl>60</ttl>
     		<image>
-    			<url>http://www.okjsp.pe.kr/images/okjsp_top.gif</url>
-			<title>OKJSP.PE.KR</title>
-			<link>http://www.okjsp.pe.kr</link>
+    			<url>http://www.okjsp.net/images/okjsp_top.gif</url>
+			<title>okjsp.net</title>
+			<link>http://www.okjsp.net</link>
     		</image>
 
 <%
@@ -44,13 +44,13 @@ while (iterList.hasNext()) {
     if (info == null) info = new BbsInfoBean();
 %>		<item>
 			<title><![CDATA[<%= one.getSubject() %>]]></title>
-			<link><![CDATA[http://www.okjsp.pe.kr/seq/<%= one.getSeq() %>]]></link>
+			<link><![CDATA[http://www.okjsp.net/seq/<%= one.getSeq() %>]]></link>
 			<description><![CDATA[<%= one.getContent() %>
 			]]></description>
 			<author><![CDATA[<%= one.getWriter() %>]]></author>
 			<category><![CDATA[<%= info.getName() %>]]></category>
 			<pubDate><%= sdf.format(one.getWhen()) %></pubDate>
-			<guid><![CDATA[http://www.okjsp.pe.kr/seq/<%= one.getSeq() %>]]></guid>
+			<guid><![CDATA[http://www.okjsp.net/seq/<%= one.getSeq() %>]]></guid>
 		</item>
 <%
 } // end while

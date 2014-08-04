@@ -9,7 +9,7 @@
 	<li id="find">
 	<form name="searchf1" method="get" target="okjspsearch"
 		action="http://www.google.com/search"
-		onsubmit="searchf1.q.value='site:okjsp.pe.kr '+searchf1.qt.value;">
+		onsubmit="searchf1.q.value='site:okjsp.net '+searchf1.qt.value;">
 	<input name="q" value="site:<%= domain %>" type="hidden"> 
 	<input name="qt" value="" type="text"> 
 	<input name="ie" value="<%= charset %>" type="hidden"> 
