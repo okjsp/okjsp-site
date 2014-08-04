@@ -618,3 +618,7 @@ input, select, textarea {
 	margin: 3px;
 }
 
+#tech, #life {
+	text-align: center;
+	margin-bottom: 20px;
+}
