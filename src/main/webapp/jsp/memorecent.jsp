@@ -33,7 +33,7 @@
 	for (MemoBean memo: recent) {
 %><li>
 <ul class="box">
-<li><img class="box" alt="<%= memo.getSid() %>" src="http://www.okjsp.pe.kr/profile/<%= memo.getSid() %>.jpg"></li>
+<li><img class="box" alt="<%= memo.getSid() %>" src="http://www.okjsp.net/profile/<%= memo.getSid() %>.jpg"></li>
 <li class="writer"><%= memo.getWriter() %></li>
 <li><%= memo.getWhen("yyyy-MM-dd HH:mm:ss") %></li>
 <li class="memo"><a href="/seq/<%= memo.getSeq()+"#"+memo.getMseq() %>"><%= CommonUtil.showHtml(memo.getBcomment()) %></a></li>

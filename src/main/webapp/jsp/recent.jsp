@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-<html lang="ko">
 <%@ page errorPage="/jsp/error.jsp"
     import="kr.pe.okjsp.*,
     	    kr.pe.okjsp.util.CommonUtil,
     	    kr.pe.okjsp.util.DateLabel,
             java.util.*,
             java.util.Iterator"
-    pageEncoding="euc-kr"
+    pageEncoding="utf-8"
 %><%@ taglib uri="/WEB-INF/tld/taglibs-string.tld" prefix="str"
-%>
+%><jsp:include page="/domainRedirect.jsp"></jsp:include>
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-    <meta charset="euc-kr">
+    <meta charset="utf-8">
     <title>NEW OKJSP 2014</title>
 	<script type="text/javascript" src="/js/jquery/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="/js/jquery/jquery.timeago.js"></script>
@@ -42,7 +42,7 @@ Banner.show();
 </ul>
 </div>
 
-<!-- ÃÖ½Å±Û ¸®½ºÆ® -->
+<!-- ìµœì‹ ê¸€ ë¦¬ìŠ¤íŠ¸ -->
 <%
 	long sTime=System.currentTimeMillis();
 	Iterator iterList = null;
@@ -59,7 +59,7 @@ Banner.show();
   </colgroup>
 <%
 	ArrayList arrayList = new ArrayList();
-	arrayList.add("notice|°øÁö»çÇ×");
+	arrayList.add("notice|ê³µì§€ì‚¬í•­");
 
 	Iterator iter = arrayList.iterator();
 	String [] rec = null;
@@ -104,7 +104,7 @@ Banner.show();
 %>
 <tr>
     <th colspan="6">
-<b>ÀüÃ¼ °Ô½ÃÆÇ</b>
+<b>ì „ì²´ ê²Œì‹œíŒ</b>
     </th>
 </tr>
 <%

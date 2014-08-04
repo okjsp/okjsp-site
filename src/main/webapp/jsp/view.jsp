@@ -6,6 +6,7 @@
 	pageEncoding="euc-kr" %>
 <%@page import="kr.pe.okjsp.member.Member"%>
 <%@page import="kr.pe.okjsp.member.MemberHandler"%>
+<jsp:include page="/domainRedirect.jsp"></jsp:include>
 <jsp:useBean id="one"  class="kr.pe.okjsp.Article" scope="request"/>
 <jsp:useBean id="list" class="kr.pe.okjsp.ListHandler" />
 <html>
