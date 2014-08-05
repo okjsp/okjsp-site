@@ -1,17 +1,18 @@
-<%@ page import="java.util.*, java.sql.*, kr.pe.okjsp.util.*, kr.pe.okjsp.BbsInfoBean, kr.pe.okjsp.Article" contentType='text/html;charset=euc-kr' %>
+<%@ page import="java.util.*, java.sql.*, kr.pe.okjsp.util.*, kr.pe.okjsp.BbsInfoBean, kr.pe.okjsp.Article"
+ contentType='text/html;charset=ms949' %>
 <jsp:useBean id="member" class="kr.pe.okjsp.member.Member" scope="session"/>
 <jsp:useBean id="list" class="kr.pe.okjsp.ListHandler"/>
 <jsp:setProperty name="list" property="*" />
-<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.1//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile11.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <title>OKJSP</title>
-<META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=ksc5601">
+<META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=ms949">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
 <link rel="apple-touch-icon" href="/iui/images/okJSP.png" />
 <meta name="apple-touch-fullscreen" content="YES" />
 <style type="text/css" media="screen">@import "/iui/iui/iui.css";</style>
-<script type="application/x-javascript" src="/iui/iui/iui.js"></script>
+<script src="/iui/iui/iui.js"></script>
 </head>
 <body>
 

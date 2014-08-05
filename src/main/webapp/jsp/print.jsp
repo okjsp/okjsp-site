@@ -1,4 +1,4 @@
-<% response.setContentType("text/html"); %>
+<% response.setContentType("text/html;charset=ms949"); %>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
 <%@ taglib uri="/WEB-INF/tld/ok-taglib.tld" prefix="okbbs" %>
 <%@ page import="kr.pe.okjsp.util.CommonUtil,kr.pe.okjsp.Article"  %>
@@ -6,7 +6,7 @@
 <jsp:useBean id="list" class="kr.pe.okjsp.ListHandler" />
 <html>
 <head>
-    <META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=ksc5601">
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=ms949">
     <link rel="stylesheet" href="/css/skin.css" type="text/css">
     <title>OKJSP: <c:out value="${one.subject}"/></title>
     <script src='/js/ban.js'></script>

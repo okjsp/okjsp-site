@@ -1,4 +1,4 @@
-<%@ page pageEncoding="MS949"%>
+<%@ page pageEncoding="ms949"%>
 <%@ taglib prefix="sql" uri="http://java.sun.com/jstl/sql" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
@@ -7,9 +7,9 @@
 </c:if>
 <html>
 <head>
-    <META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=ksc5601">
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=ms949">
     <title>JSTL: OKJSP members</title>
-    <LINK rel="STYLESHEET" type="TEXT/CSS" HREF="/css/skin.css">
+    <link rel="stylesheet" type="text/css" href="/css/skin.css">
 </head>
 <body class="body">
 <fmt:bundle basename="kr.pe.okjsp.DB">

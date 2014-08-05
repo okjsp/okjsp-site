@@ -12,12 +12,12 @@
 <head>
     <meta charset="utf-8">
     <title>NEW OKJSP 2014</title>
+    <link rel="stylesheet" type="text/css" href="/css/skin.css">
 	<script type="text/javascript" src="/js/jquery/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="/js/jquery/jquery.timeago.js"></script>
 	<script type="text/javascript" src="/js/jquery/jquery.timeago.ko.js" charset="utf-8"></script>
     <script type="text/javascript" src="/js/okjsp.js"></script>
     <script type="text/javascript" src="/js/banner.js" charset="utf-8"></script>
-    <LINK rel="STYLESHEET" type="TEXT/CSS" HREF="/css/skin.css">
 </head>
 
 <body class="body" style="margin:0">
