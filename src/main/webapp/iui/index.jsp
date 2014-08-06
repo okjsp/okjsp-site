@@ -1,5 +1,5 @@
 <%@ page import="java.util.*, java.sql.*, kr.pe.okjsp.util.*, kr.pe.okjsp.BbsInfoBean, kr.pe.okjsp.Article"
- contentType='text/html;charset=ms949' %>
+ contentType='text/html;charset=euc-kr' %>
 <jsp:useBean id="member" class="kr.pe.okjsp.member.Member" scope="session"/>
 <jsp:useBean id="list" class="kr.pe.okjsp.ListHandler"/>
 <jsp:setProperty name="list" property="*" />
@@ -7,7 +7,7 @@
 <html>
 <head>
 <title>OKJSP</title>
-<META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=ms949">
+<META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=euc-kr">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
 <link rel="apple-touch-icon" href="/iui/images/okJSP.png" />
 <meta name="apple-touch-fullscreen" content="YES" />

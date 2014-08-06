@@ -24,12 +24,7 @@ public class CommonUtil {
 	 * @return String
 	 */
 	public static String a2k(String str) {
-		try {
-//			return new String(str.getBytes("8859_1"),"MS949");
-			return str;
-		} catch (Exception e) {
-		    return "";
-		}
+		return str;
 	}
 
 	/**

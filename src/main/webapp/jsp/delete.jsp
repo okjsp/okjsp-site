@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=MS949" import="kr.pe.okjsp.util.CommonUtil" %>
+<%@ page contentType="text/html;charset=euc-kr" import="kr.pe.okjsp.util.CommonUtil" %>
 <html>
 <body>
 <center>

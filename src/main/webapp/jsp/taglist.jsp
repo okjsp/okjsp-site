@@ -1,4 +1,4 @@
-<%@ page pageEncoding="ms949"
+<%@ page pageEncoding="euc-kr"
 import="kr.pe.okjsp.*,
 kr.pe.okjsp.util.*,java.util.*" %><%
   int tagseq = Integer.parseInt(request.getParameter("tagseq"));
@@ -11,7 +11,7 @@ kr.pe.okjsp.util.*,java.util.*" %><%
 <html>
 <head>
 <link rel="stylesheet" href="/css/skin.css" type="text/css">
-<META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=ms949">
+<META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=euc-kr">
 <script src="/js/okjsp.js"></script>
 <script src="/js/banner.js" charset="utf-8"></script>
 </head>

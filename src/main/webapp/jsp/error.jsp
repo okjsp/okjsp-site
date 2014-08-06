@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
-<%@ page contentType="text/html;charset=MS949" isErrorPage="true" %>
+<%@ page contentType="text/html;charset=euc-kr" isErrorPage="true" %>
 <center>
 <table width="60%" height="60%">
     <tr><td align="center">
