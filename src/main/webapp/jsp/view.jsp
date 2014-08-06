@@ -3,7 +3,7 @@
 <%@page import="kr.pe.okjsp.util.HttpLinker"%>
 <%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %>
 <%@ page import="java.util.*,kr.pe.okjsp.util.CommonUtil,kr.pe.okjsp.*"
-	pageEncoding="ms949" %>
+	pageEncoding="euc-kr" %>
 <%@page import="kr.pe.okjsp.member.Member"%>
 <%@page import="kr.pe.okjsp.member.MemberHandler"%>
 <jsp:include page="/domainRedirect.jsp"></jsp:include>
@@ -11,7 +11,7 @@
 <jsp:useBean id="list" class="kr.pe.okjsp.ListHandler" />
 <html>
 <head>
-    <META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=ms949">    
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=euc-kr">    
     <link rel="stylesheet" href="/css/skin.css" type="text/css">
     <title>OKJSP: <%= one.getSubject() %></title>
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
