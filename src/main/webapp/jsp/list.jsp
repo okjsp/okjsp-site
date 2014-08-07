@@ -3,13 +3,14 @@
     import="kr.pe.okjsp.util.CommonUtil, java.util.*,
             kr.pe.okjsp.Article,kr.pe.okjsp.util.DateLabel,
             kr.pe.okjsp.BbsInfoBean"%>
-<% long stime = System.currentTimeMillis(); %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core"%>
 <%@ taglib uri="/WEB-INF/tld/ok-taglib.tld" prefix="okbbs" %>
 <%@ taglib uri="/WEB-INF/tld/taglibs-string.tld" prefix="str" %>
+<jsp:include page="/domainRedirect.jsp"></jsp:include>
 <jsp:useBean id="list" class="kr.pe.okjsp.ListHandler"/>
 <jsp:setProperty name="list" property="*" />
-<%
+<% 
+	long stime = System.currentTimeMillis();
     response.setContentType("text/html;charset=euc-kr");
 
 	Iterator iter = list.getList().iterator();
