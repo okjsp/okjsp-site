@@ -58,7 +58,8 @@ showAside : function() {
 	//document.writeln('<a href="/f.jsp?http://www.yes24.com/Event/01_Book/2014/OT0228Java.aspx?CategoryNumber=001" target="hanbit"><img src="/images/banner/banner_hb_140305_160x160_no02.jpg" style="width:160px"></a>');
 	//document.writeln('<a href="/f.jsp?http://codesprint.skplanet.com/" target="skp"><img src="/images/banner/banner_skp_codesprint_140515(160).jpg" style="width:160px"></a>');
 	//document.writeln('<a href="/f.jsp?http://www.acheck.co.kr/" target="cidow"><img src="/images/banner/banner_acheck_140217(160).jpg" style="width:160px"></a>');
-	document.writeln('<a href="/f.jsp?http://www.tobashop.co.kr/" target="cidow"><img src="/images/banner/banner_cidow_140716(160).gif" style="width:160px"></a>');
+	//document.writeln('<a href="/f.jsp?http://www.tobashop.co.kr/" target="cidow"><img src="/images/banner/banner_cidow_140716(160).gif" style="width:160px"></a>');
+	document.writeln('<a href="/f.jsp?http://www.yeamoonsa.com/shop.php?goPage=GoodDetail&g_code=20140808180545102" target="yeam"><img src="/images/banner/banner_book_jsp_160x320(140812)" style="width:160px"></a>');
 },
 
 showAsideBottom : function() {
