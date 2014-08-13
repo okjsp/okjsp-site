@@ -59,7 +59,7 @@ showAside : function() {
 	//document.writeln('<a href="/f.jsp?http://codesprint.skplanet.com/" target="skp"><img src="/images/banner/banner_skp_codesprint_140515(160).jpg" style="width:160px"></a>');
 	//document.writeln('<a href="/f.jsp?http://www.acheck.co.kr/" target="cidow"><img src="/images/banner/banner_acheck_140217(160).jpg" style="width:160px"></a>');
 	//document.writeln('<a href="/f.jsp?http://www.tobashop.co.kr/" target="cidow"><img src="/images/banner/banner_cidow_140716(160).gif" style="width:160px"></a>');
-	document.writeln('<a href="/f.jsp?http://www.yeamoonsa.com/shop.php?goPage=GoodDetail&g_code=20140808180545102" target="yeam"><img src="/images/banner/banner_book_jsp_160x320(140812)" style="width:160px"></a>');
+	document.writeln('<a href="/f.jsp?http://www.yeamoonsa.com/shop.php?goPage=GoodDetail&g_code=20140808180545102" target="yeam"><img src="/images/banner/banner_book_jsp_160x320(140812).jpg" style="width:160px"></a>');
 },
 
 showAsideBottom : function() {
