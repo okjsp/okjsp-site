@@ -52,8 +52,7 @@ import com.oreilly.servlet.MultipartRequest;
 			Thread.sleep(1000);
 		} catch (InterruptedException e1) {
 		}
-        boolean delete = file.delete();
-        System.out.println("del:"+delete);
+        file.delete();
 		// DB ±â·Ï
 		try {
 			storeProfileInfo(sid);
