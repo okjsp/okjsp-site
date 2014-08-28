@@ -37,7 +37,7 @@ Banner.show();
 <div id="bookList">
 <ul>
 <li>
-<a href="/f.jsp?http://www.aladin.co.kr/events/wevent_coupon_new.aspx?nType=jvNkVtOWWy4%3d&ptner=ekff7b" target="_hb"><img src="/images/banner/banner_hb_140813_600x200.jpg"></a>
+<a href="/f.jsp?http://www.okjsp.net/bbs?act=LIST&bbs=guideline"><img src="/images/banner/okjsp_banner_guideline_140828.jpg"></a>
 </li>
 </ul>
 </div>
