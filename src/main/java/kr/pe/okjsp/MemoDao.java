@@ -11,8 +11,7 @@ import kr.pe.okjsp.util.DbCon;
 public class MemoDao {
 	DbCon dbCon = new DbCon();
 
-	final static String QUERY_MEMO_SEQ =
-		"select max(mseq) seq from okboard_memo";
+	final static String QUERY_MEMO_SEQ = "select max(mseq) seq from okboard_memo";
 
 	final static String QUERY_MEMO_ADD =
 		"insert into okboard_memo (mseq, seq, id, sid, writer, bcomment, wtime, memopass, ip) values (?,?,?,?,?,?,SYSTIMESTAMP,old_password(?),?)";

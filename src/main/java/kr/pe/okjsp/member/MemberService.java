@@ -8,6 +8,7 @@ import kr.pe.okjsp.util.MailUtil;
 public class MemberService {
 
 	public String[] sendRecoverPassword(String email) {
+		
 		String mailto = email;
 		String token = getTokenWithEmail(email);
 		if (token == null) {

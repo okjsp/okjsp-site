@@ -14,8 +14,7 @@ public class MemberDao {
 	public int setPasswordByEmail(String email, String password)
 			throws SQLException {
 		Connection pconn = dbCon.getConnection();
-		PreparedStatement pstmt = pconn
-				.prepareStatement("update okmember set \"password\" = old_password(?) where email = ?");
+		PreparedStatement pstmt = pconn.prepareStatement("update okmember set \"password\" = old_password(?) where email = ?");
 		pstmt.setString(1, password);
 		pstmt.setString(2, email);
 
