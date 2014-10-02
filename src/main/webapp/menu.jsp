@@ -85,6 +85,10 @@
 	 okjsp standalone 호스팅을 지원해주시는 고마운 회사 팔공포트">
 	<img src="/images/bnr_80port.gif" width="88" height="31" border="0"></a>
 	<br />
+	<a href="http://alert.cidow.com/" target="_blank"
+	 title="okjsp 교육장소 제공">
+	<img src="/images/banner/banner_cidow_alert.gif" width="88" height="31" border="0"></a>
+	<br />
 	<a href="/f.jsp?http://www.cubrid.com/" target="_blank"
 	 title="okjsp Database">
 	<img src="/images/banner/cubrid_88x31.gif" width="88" height="31" border="0"></a>
