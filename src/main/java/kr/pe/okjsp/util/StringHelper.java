@@ -54,5 +54,22 @@ public class StringHelper {
 		}
 		return encode;
 	}
+	
+
+	public static String toStringWrapped(String[] words, String wrap) {
+		if (words == null) {
+			return "[]";
+		}
+		StringBuilder sb = new StringBuilder();
+		for (String word : words) {
+			sb.append(wrap + word + wrap + ", ");
+		}
+		if (words.length > 0) {
+			sb.deleteCharAt(sb.length() - 1);
+			sb.deleteCharAt(sb.length() - 1);
+		}
+		return "["+sb.toString() +"]";
+	}
+
 
 }

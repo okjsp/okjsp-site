@@ -19,7 +19,7 @@
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="/js/okjsp.js"></script>
     <script src='/js/okboard.js'></script>
-    <script src='/js/ban.js'></script>
+    <script src='/js/ban.jsp'></script>
     <script src="/js/banner.js" charset="utf-8"></script>
     <link rel="stylesheet" href="/css/style.css" type="text/css">
     <link rel="stylesheet" href="/css/skin.css" type="text/css">
