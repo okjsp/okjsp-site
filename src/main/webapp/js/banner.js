@@ -61,7 +61,8 @@ showAside : function() {
 	//document.writeln('<a href="/f.jsp?http://www.tobashop.co.kr/" target="cidow"><img src="/images/banner/banner_cidow_140716(160).gif" style="width:160px"></a>');
 	//document.writeln('<a href="/f.jsp?http://www.yes24.com/24/goods/13987902?scode=032&OzSrank=17" target="yeam"><img src="/images/banner/banner_book_jsp_160x320(140812).jpg" style="width:160px"></a>');
 	//document.writeln('<a href="/f.jsp?http://ciscocodefest.com/" target="cisco"><img src="/images/banner/banner_cisco_140918_160x160.jpg" style="width:160px"></a>');
-	document.writeln('<a href="/f.jsp?http://www.ebrain.kr/2014/10/egovframewok-kenu/" target="okjsp_acdm"><img src="/images/banner/banner_okjsp_160x160_141021.jpg" style="width:160px"></a>');
+	//document.writeln('<a href="/f.jsp?http://www.ebrain.kr/2014/10/egovframewok-kenu/" target="okjsp_acdm"><img src="/images/banner/banner_okjsp_160x160_141021.jpg" style="width:160px"></a>');
+	document.writeln('<a href="/f.jsp?http://www.okjsp.net/seq/264295" target="egov"><img src="/images/banner/banner_egov_super_160_141030.png" style="width:160px"></a>');
 	document.writeln('<a href="/f.jsp?http://tech.eventdirectory.kr/" target="ted"><img src="/images/banner/banner_ted_160x80_141023.jpg" style="width:160px"></a>');
 },
 
