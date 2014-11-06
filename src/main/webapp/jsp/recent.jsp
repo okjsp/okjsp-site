@@ -37,6 +37,7 @@ Banner.show();
 <div id="bookList">
 <ul>
 <li>
+<!-- 프리랜서 가이드라인 배너 -->
 <a href="/f.jsp?http://www.okjsp.net/bbs?act=LIST&bbs=guideline"><img src="/images/banner/okjsp_banner_guideline_140828.jpg"></a>
 </li>
 </ul>
