@@ -70,6 +70,10 @@ public class WriteServlet extends HttpServlet {
 		article.setCcl_id(ccl_id);
 		article.setIp(ip);
 		
+		if (Spam.checkContent(article)) {
+			throw new SecurityException("rejected");
+		}
+		
 		new ArticleDao().write(article);
 		
 		setWriterCookie(DomainUtil.getBaseDomain(req.getRequestURL()), res, article);
@@ -157,6 +161,8 @@ public class WriteServlet extends HttpServlet {
 
 		if (hasNothing(article)) {
 			throw new SecurityException("no content");
+		} else if (Spam.checkContent(article)) {
+			throw new SecurityException("rejected");
 		}
 		
 		/*
