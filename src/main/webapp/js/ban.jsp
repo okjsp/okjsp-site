@@ -1,3 +1,4 @@
+<%@page import="kr.pe.okjsp.util.Spam"%>
 <%@ page pageEncoding="utf-8" %>
 // 금지단어
 var ban = JSON.parse('<%= Spam.getBannedWords() %>');

@@ -18,8 +18,8 @@ import kr.pe.okjsp.util.PropertyManager;
 
 public class MemoServlet extends HttpServlet {
 	DbCon dbCon = new DbCon();
-	private String MASTER_MEMO;
-	private static final long serialVersionUID = 3617008659201077558L;
+	protected String MASTER_MEMO;
+	protected static final long serialVersionUID = 3617008659201077558L;
 	final static String QUERY_MEMO_DEL =
 		"delete from okboard_memo where memopass = old_password(?) and mseq = ?";
 	final static String QUERY_MEMO_DEL2 =
@@ -33,7 +33,19 @@ public class MemoServlet extends HttpServlet {
 	public void doPost(HttpServletRequest req, HttpServletResponse res)
                         throws IOException {
 	    
-	    String writer  = null;
+	    save(req, res);
+
+	    String togo = req.getHeader("referer");
+	    PrintWriter out = res.getWriter();
+	    res.setContentType("text/html");
+	    out.write("<META http-equiv=refresh content=\"0;url="+togo+"\">");
+	    out.close();
+	    
+	    //res.sendRedirect("/bbs?act=MLIST&bbs="+req.getParameter("bbs"));
+	} // end doPost()
+
+	protected void save(HttpServletRequest req, HttpServletResponse res) {
+		String writer  = null;
 	    String bcomment= null;
 	    String memopass= null;
 	    String ip      = req.getRemoteAddr();
@@ -113,17 +125,9 @@ public class MemoServlet extends HttpServlet {
 		} finally {
 			dbCon.close(conn, pstmt);
 		}
+	}
 
-	    String togo = req.getHeader("referer");
-	    PrintWriter out = res.getWriter();
-	    res.setContentType("text/html");
-	    out.write("<META http-equiv=refresh content=\"0;url="+togo+"\">");
-	    out.close();
-	    
-	    //res.sendRedirect("/bbs?act=MLIST&bbs="+req.getParameter("bbs"));
-	} // end doPost()
-
-	private String getDoubleCheck(HttpServletRequest req) {
+	protected String getDoubleCheck(HttpServletRequest req) {
 		String doubleCheck = null;
 		try {
 			doubleCheck = CommonUtil.getCookie(req, "memo");
