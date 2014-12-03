@@ -93,27 +93,9 @@ public class CommonUtilTest extends TestCase {
 
 	
 	public void testGetNumberedSeq() {
-		assertEquals(1234, getNumberedSeq("/1234"));
-		assertEquals(1234, getNumberedSeq("/1234?"));
-		assertEquals(1234, getNumberedSeq("/1234?567"));
-	}
-	public long getNumberedSeq(String pathInfo) {
-		
-		long seq = 0;
-		try {
-			seq = Long.parseLong(pathInfo.substring(1));
-		} catch (NumberFormatException e) {
-			int length = pathInfo.length();
-			for (int i = 1; i < length; i++) {
-				char charAt = pathInfo.charAt(i);
-				if (charAt >= '0' && charAt <= '9') {
-					seq = seq*10 + (charAt - '0');
-				} else {
-					break;
-				}
-			}
-		}
-		return seq;
+		assertEquals(1234, CommonUtil.getNumberedSeq("/1234"));
+		assertEquals(1234, CommonUtil.getNumberedSeq("/1234?"));
+		assertEquals(1234, CommonUtil.getNumberedSeq("/1234?567"));
 	}
 
 }
