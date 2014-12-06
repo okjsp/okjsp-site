@@ -27,8 +27,6 @@ public class DeleteServlet extends HttpServlet {
 		"delete from okboard where seq=?";
 	public static final String QUERY_DEL_SEQ_FILE =
 		"update okboard_file set sts=0 where seq=?";
-	private static String MASTER_PASSWORD = 
-		PropertyManager.getString("MASTER_PASSWORD");;
 
 	public void init(ServletConfig config) throws ServletException {
 		super.init(config);
@@ -42,6 +40,12 @@ public class DeleteServlet extends HttpServlet {
 	public void doPost(HttpServletRequest req, HttpServletResponse res)
 		throws ServletException, IOException {
 
+		String resourceName = saveArticle(req);
+		req.getRequestDispatcher(resourceName+"?bbs="+req.getParameter("bbs")).forward(req, res);
+
+	} // end doPost()
+
+	protected String saveArticle(HttpServletRequest req) {
 		/*
 		    seq 번호 가져오기
 		*/
@@ -79,7 +83,7 @@ public class DeleteServlet extends HttpServlet {
 			Article article = new ArticleDao().getArticle(seq);
 
 			// password 확인
-			if (confirmPassword.equals(MASTER_PASSWORD)
+			if (confirmPassword.equals(PropertyManager.getString("MASTER_PASSWORD"))
 				|| passwordCount == 1 ) {
 				// db에서 삭제 - 삭제 테이블로 이동
 				doQuery(conn, QUERY_MOVE, seq);
@@ -105,11 +109,10 @@ public class DeleteServlet extends HttpServlet {
 		} finally {
 			dbCon.close(conn, pstmt, rs);
 		}
-		req.getRequestDispatcher(resourceName+"?bbs="+req.getParameter("bbs")).forward(req, res);
+		return resourceName;
+	}
 
-	} // end doPost()
-
-	private void doQuery(Connection conn, String query, int seq) throws SQLException {
+	protected void doQuery(Connection conn, String query, int seq) throws SQLException {
 		PreparedStatement pstmt = null;
 		try {
 			pstmt = conn.prepareStatement(query);
