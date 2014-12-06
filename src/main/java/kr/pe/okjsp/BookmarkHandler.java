@@ -3,6 +3,7 @@ package kr.pe.okjsp;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import kr.pe.okjsp.util.CommonUtil;
@@ -14,6 +15,7 @@ public class BookmarkHandler {
 	public ArrayList getFavoriteList(int size) {
 		String query =
 			"select a.seq, count(*) cnt, b.subject, b.writer from okboard_bookmark a, okboard b where a.seq = b.seq group by a.seq, b.subject, b.writer order by 2 desc for orderby_num() between 1 and ?";
+
 		Connection conn = null;
 		PreparedStatement pstmt=null;
 		ResultSet rs = null;
@@ -24,11 +26,7 @@ public class BookmarkHandler {
 			pstmt.setInt(1, size);
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
-				BookmarkExtension b = new BookmarkExtension();
-				b.setSeq(rs.getInt("seq"));
-				b.setCount(rs.getInt("cnt"));
-				b.setSubject(CommonUtil.a2k(rs.getString("subject")));
-				b.setWriter(CommonUtil.a2k(rs.getString("writer")));
+				BookmarkExtension b = getBookmarkExtension(rs);
 				list.add(b);
 			}
 			rs.close();
@@ -40,6 +38,25 @@ public class BookmarkHandler {
 			dbCon.close(conn, pstmt, rs);
 		}
 		return list;
+	}
+
+	private BookmarkExtension getBookmarkExtension(ResultSet rs)
+			throws SQLException {
+		BookmarkExtension b = new BookmarkExtension();
+		b.setSeq(rs.getInt("seq"));
+		b.setCount(rs.getInt("cnt"));
+		b.setSubject(CommonUtil.a2k(rs.getString("subject")));
+		b.setWriter(CommonUtil.a2k(rs.getString("writer")));
+		return b;
+	}
+	private BookmarkExtension getBookmarkExtensionRecent(ResultSet rs)
+			throws SQLException {
+		BookmarkExtension b = new BookmarkExtension();
+		b.setSeq(rs.getInt("seq"));
+		b.setSubject(CommonUtil.a2k(rs.getString("subject")));
+		b.setWriter(CommonUtil.a2k(rs.getString("writer")));
+		b.setCredate(rs.getTimestamp("credate"));
+		return b;
 	}
 
 	public ArrayList getRecentList(int size) {
@@ -55,11 +72,7 @@ public class BookmarkHandler {
 			pstmt.setInt(1, size);
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
-				BookmarkExtension b = new BookmarkExtension();
-				b.setSeq(rs.getInt("seq"));
-				b.setSubject(CommonUtil.a2k(rs.getString("subject")));
-				b.setWriter(CommonUtil.a2k(rs.getString("writer")));
-				b.setCredate(rs.getTimestamp("credate"));
+				BookmarkExtension b = getBookmarkExtensionRecent(rs);
 				list.add(b);
 			}
 			rs.close();
@@ -72,5 +85,6 @@ public class BookmarkHandler {
 		}
 		return list;
 	}
+
 
 }
