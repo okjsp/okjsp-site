@@ -20,7 +20,7 @@ import kr.pe.okjsp.util.MailUtil;
  * @author  kenu
  */
 public class MemberHandler {
-	static Logger logger = LoggerFactory.getLogger(MemberHandler.class);
+	private static Logger LOGGER = LoggerFactory.getLogger(MemberHandler.class);
 	
 	DbCon dbCon = new DbCon();
 
@@ -58,34 +58,8 @@ public class MemberHandler {
 	 * @throws SQLException
 	 */
 	public boolean isIdExist(String id) throws SQLException {
-		boolean isExist = true;
-
 		if (id == null) return true;
-
-		Connection pconn = dbCon.getConnection();
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
-
-		try{
-			pstmt = pconn.prepareStatement(QUERY_EXISTS);
-			pstmt.setString(1,id);
-
-			rs = pstmt.executeQuery();
-			if(rs.next()) {
-				int cnt = rs.getInt(1);
-				if (cnt == 0) {
-					isExist = false;
-				}
-			}
-			rs.close();
-			pstmt.close();
-		}catch(Exception e){
-			logger.info("Member Handler isIdExist err:"+e.getMessage());
-		} finally {
-			dbCon.close(pconn, pstmt, rs);
-		} 
-
-		return isExist;
+		return isExist(id, QUERY_EXISTS);
 	}
 
 
@@ -96,18 +70,22 @@ public class MemberHandler {
 	 * @throws SQLException
 	 */
 	public boolean isEmailExist(String email) throws SQLException {
-		// default true;
-		boolean isExist = true; 
-
 		if (email==null) return true;
+		return isExist(email, QUERY_EMAIL_EXISTS);
 
+	}
+
+
+	private boolean isExist(String item, String queryExists)
+			throws SQLException {
+		boolean isExist = true;
 		Connection pconn = dbCon.getConnection();
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 
 		try{
-			pstmt = pconn.prepareStatement(QUERY_EMAIL_EXISTS);
-			pstmt.setString(1,email);
+			pstmt = pconn.prepareStatement(queryExists);
+			pstmt.setString(1,item);
 
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
@@ -119,13 +97,14 @@ public class MemberHandler {
 			rs.close();
 			pstmt.close();
 		}catch(Exception e){
-			logger.info("Member Handler isEmailExist err:"+e.getMessage());
+			LOGGER.info(e.getMessage());
 		} finally {
 			dbCon.close(pconn, pstmt, rs);
 		} 
 
 		return isExist;
 	}
+
 
 	/**
 	 * Method changeInfo
@@ -397,7 +376,7 @@ public class MemberHandler {
 
 			pstmt.close();
 		} catch(Exception e){
-			logger.info(e.toString());
+			LOGGER.info(e.toString());
 		} finally {
 			dbCon.close(pconn, pstmt);
 		} 
@@ -424,7 +403,7 @@ public class MemberHandler {
 			
 			pstmt.close();
 		} catch(Exception e){
-			logger.info(e.toString());
+			LOGGER.info(e.toString());
 		} finally {
 			dbCon.close(pconn, pstmt);
 		} 
@@ -467,7 +446,7 @@ public class MemberHandler {
 			rs.close();
 			pstmt.close();
 		}catch(Exception e){
-			logger.info("Member Handler isEmailExist err:"+e);
+			LOGGER.info("Member Handler isEmailExist err:"+e);
 		} finally {
 			dbCon.close(pconn, pstmt, rs);
 		} 
