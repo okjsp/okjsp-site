@@ -7,6 +7,9 @@ import java.util.Random;
 
 import javax.mail.MessagingException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import kr.pe.okjsp.DaoUtil;
 import kr.pe.okjsp.Navigation;
 import kr.pe.okjsp.util.DbCon;
@@ -17,6 +20,8 @@ import kr.pe.okjsp.util.MailUtil;
  * @author  kenu
  */
 public class MemberHandler {
+	static Logger logger = LoggerFactory.getLogger(MemberHandler.class);
+	
 	DbCon dbCon = new DbCon();
 
 	static final String QUERY_EXISTS
@@ -53,7 +58,7 @@ public class MemberHandler {
 	 * @throws SQLException
 	 */
 	public boolean isIdExist(String id) throws SQLException {
-		boolean b_id_exist = true;
+		boolean isExist = true;
 
 		if (id == null) return true;
 
@@ -68,17 +73,19 @@ public class MemberHandler {
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
 				int cnt = rs.getInt(1);
-				if (cnt == 0) b_id_exist = false;
+				if (cnt == 0) {
+					isExist = false;
+				}
 			}
 			rs.close();
 			pstmt.close();
 		}catch(Exception e){
-			System.out.println("Member Handler isIdExist err:"+e.getMessage());
+			logger.info("Member Handler isIdExist err:"+e.getMessage());
 		} finally {
 			dbCon.close(pconn, pstmt, rs);
 		} 
 
-		return b_id_exist;
+		return isExist;
 	}
 
 
@@ -89,7 +96,8 @@ public class MemberHandler {
 	 * @throws SQLException
 	 */
 	public boolean isEmailExist(String email) throws SQLException {
-		boolean b_email_exist = true; // default true;
+		// default true;
+		boolean isExist = true; 
 
 		if (email==null) return true;
 
@@ -104,17 +112,19 @@ public class MemberHandler {
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
 				int cnt = rs.getInt(1);
-				if (cnt == 0) b_email_exist = false;
+				if (cnt == 0) {
+					isExist = false;
+				}
 			}
 			rs.close();
 			pstmt.close();
 		}catch(Exception e){
-			System.out.println("Member Handler isEmailExist err:"+e.getMessage());
+			logger.info("Member Handler isEmailExist err:"+e.getMessage());
 		} finally {
 			dbCon.close(pconn, pstmt, rs);
-		} // end try catch
+		} 
 
-		return b_email_exist;
+		return isExist;
 	}
 
 	/**
@@ -125,29 +135,29 @@ public class MemberHandler {
 	 */
 	public String changeInfo(Member member, String pact, String contextRoot) throws SQLException {
 		if("modify".equals(pact)) {
-			switch (updateMember(member)) {
-				case 1:
-				   return "수정했습니다.";
-				default:
-				   throw new SQLException("장애가 발생했습니다.");
+			int updateMember = updateMember(member);
+			if (updateMember == 1) {
+				return "수정했습니다.";
+			} else {
+				throw new SQLException("장애가 발생했습니다.");
 			}
 		} else if ("delete".equals(pact)){
-			switch (deleteMember(member)) {
-				case 1:
-				   return "삭제되었습니다. 언제든 다시 가입하십시오.";
-				default:
-				   throw new SQLException("비밀번호가 틀리거나 장애가 발생했습니다.");
+			int deleteMember = deleteMember(member);
+			if (deleteMember == 1) {
+				return "삭제되었습니다. 언제든 다시 가입하십시오.";
+			} else {
+				throw new SQLException("비밀번호가 틀리거나 장애가 발생했습니다.");
 			}
 		} else {
-			switch (addMember(member, contextRoot)) {
-				case 1:
-					return "가입을 환영합니다.";
-				case -1:
-					return "중복된 이메일이 있습니다.";
-				case -2:
-					return "이미 사용중인 ID입니다.";
-				default:
-				    throw new SQLException("장애가 발생했습니다.");
+			int addMember = addMember(member, contextRoot);
+			if (addMember == 1) {
+				return "가입을 환영합니다.";
+			} else if (addMember == -1) {
+				return "중복된 이메일이 있습니다.";
+			} else if (addMember == -2) {
+				return "이미 사용중인 ID입니다.";
+			} else {
+				throw new SQLException("장애가 발생했습니다.");
 			}
 		}
 	}
@@ -175,7 +185,7 @@ public class MemberHandler {
 			throw new SQLException("Delete Info err:"+e.toString());
 		} finally {
 			dbCon.close(pconn, pstmt);
-		} // end try catch
+		}
 
 		return result_cnt;
 	}
@@ -208,7 +218,7 @@ public class MemberHandler {
 			throw new SQLException("Modify Info err:"+e.toString());
 		} finally {
 			dbCon.close(pconn, pstmt);
-		} // end try catch
+		} 
 
 		return result_cnt;
 	}
@@ -274,7 +284,7 @@ public class MemberHandler {
 		} finally {
 			pconn.setAutoCommit(true);
 			dbCon.close(pconn, pstmt, rs);
-		} // end try catch
+		}
 
 		return insert_cnt;
 	}
@@ -328,7 +338,8 @@ public class MemberHandler {
 			} else {
 				throw new SQLException("비밀번호가 틀립니다.");
 			}
-
+			
+			rs.close();
 			pstmt.close();
 
 			if (member.getSid() > 0) {
@@ -343,20 +354,19 @@ public class MemberHandler {
 				while(rs.next()) {
 					role.add(rs.getString(1));
 				}
-				rs.close();
-				pstmt.close();
 				member.setRole(role);
 				new PointDao().log(member.getSid(), 1, 1, "login");
 				sts = 1;
 			} else {
-				sts = 2; // wrong password
+				// wrong password
+				sts = 2; 
 			}
 
 		}catch(Exception e){
 			throw e;
 		} finally {
 			dbCon.close(pconn, pstmt, rs);
-		} // end try catch
+		} 
 
 		return sts;
 	}
@@ -387,9 +397,10 @@ public class MemberHandler {
 
 			pstmt.close();
 		} catch(Exception e){
+			logger.info(e.toString());
 		} finally {
 			dbCon.close(pconn, pstmt);
-		} // end try catch
+		} 
 
 	}
 	/**
@@ -413,16 +424,16 @@ public class MemberHandler {
 			
 			pstmt.close();
 		} catch(Exception e){
-			System.out.println(e.toString());
+			logger.info(e.toString());
 		} finally {
 			dbCon.close(pconn, pstmt);
-		} // end try catch
+		} 
 		
 		if (result == 1) {
 			return "메일 수신 거부 요청 처리되었습니다.";
 		} else {
 			return "메일 수신 거부 요청이 처리되지 않았습니다. <br> " +
-				" kenu@okjsp.pe.kr로 메일을 주시면 수동으로 수신거부요청을 처리해드리겠습니다.";
+				"admin@okjsp.net 으로 메일을 주시면 수동으로 수신거부요청을 처리해드리겠습니다.";
 		}
 	}
 	/**
@@ -432,9 +443,11 @@ public class MemberHandler {
 	 * @throws SQLException
 	 */
 	public boolean isMailing(String email) throws SQLException {
-		boolean b_email_exist = true; // default true;
+		boolean isExist = true; 
 
-		if (email==null) return true;
+		if (email==null) {
+			return true;
+		}
 
 		Connection pconn = dbCon.getConnection();
 		PreparedStatement pstmt = null;
@@ -447,17 +460,19 @@ public class MemberHandler {
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
 				int cnt = rs.getInt(1);
-				if (cnt == 0) b_email_exist = false;
+				if (cnt == 0) {
+					isExist = false;
+				}
 			}
 			rs.close();
 			pstmt.close();
 		}catch(Exception e){
-			System.out.println("Member Handler isEmailExist err:"+e);
+			logger.info("Member Handler isEmailExist err:"+e);
 		} finally {
 			dbCon.close(pconn, pstmt, rs);
-		} // end try catch
+		} 
 
-		return b_email_exist;
+		return isExist;
 	}
 
 }
