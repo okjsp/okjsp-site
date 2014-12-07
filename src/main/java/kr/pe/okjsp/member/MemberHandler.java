@@ -125,29 +125,29 @@ public class MemberHandler {
 	 */
 	public String changeInfo(Member member, String pact, String contextRoot) throws SQLException {
 		if("modify".equals(pact)) {
-			switch (updateMember(member)) {
-				case 1:
-				   return "수정했습니다.";
-				default:
-				   throw new SQLException("장애가 발생했습니다.");
+			int updateMember = updateMember(member);
+			if (updateMember == 1) {
+				return "수정했습니다.";
+			} else {
+				throw new SQLException("장애가 발생했습니다.");
 			}
 		} else if ("delete".equals(pact)){
-			switch (deleteMember(member)) {
-				case 1:
-				   return "삭제되었습니다. 언제든 다시 가입하십시오.";
-				default:
-				   throw new SQLException("비밀번호가 틀리거나 장애가 발생했습니다.");
+			int deleteMember = deleteMember(member);
+			if (deleteMember == 1) {
+				return "삭제되었습니다. 언제든 다시 가입하십시오.";
+			} else {
+				throw new SQLException("비밀번호가 틀리거나 장애가 발생했습니다.");
 			}
 		} else {
-			switch (addMember(member, contextRoot)) {
-				case 1:
-					return "가입을 환영합니다.";
-				case -1:
-					return "중복된 이메일이 있습니다.";
-				case -2:
-					return "이미 사용중인 ID입니다.";
-				default:
-				    throw new SQLException("장애가 발생했습니다.");
+			int addMember = addMember(member, contextRoot);
+			if (addMember == 1) {
+				return "가입을 환영합니다.";
+			} else if (addMember == -1) {
+				return "중복된 이메일이 있습니다.";
+			} else if (addMember == -2) {
+				return "이미 사용중인 ID입니다.";
+			} else {
+				throw new SQLException("장애가 발생했습니다.");
 			}
 		}
 	}
