@@ -113,7 +113,7 @@ public class PointDaoTest extends TestCase {
 		
 	}
 	
-	public void _testLog() {
+	public void testLog() {
 //		Member member = TestObject.getTestMember();
 //		int log = pointDao.log(member.getSid(), 6, 1, "testLog");
 		assertTrue(System.currentTimeMillis() > 1);
