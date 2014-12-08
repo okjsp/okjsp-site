@@ -1,14 +1,14 @@
 package kr.pe.okjsp.member;
 
 import java.io.FileNotFoundException;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Random;
 
 import javax.mail.MessagingException;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import kr.pe.okjsp.DaoUtil;
 import kr.pe.okjsp.Navigation;
@@ -20,7 +20,7 @@ import kr.pe.okjsp.util.MailUtil;
  * @author  kenu
  */
 public class MemberHandler {
-	private static Logger LOGGER = LoggerFactory.getLogger(MemberHandler.class);
+//	private static Logger LOGGER = LoggerFactory.getLogger(MemberHandler.class);
 	
 	DbCon dbCon = new DbCon();
 
@@ -97,7 +97,7 @@ public class MemberHandler {
 			rs.close();
 			pstmt.close();
 		}catch(Exception e){
-			LOGGER.info(e.getMessage());
+			System.out.println(e.getMessage());
 		} finally {
 			dbCon.close(pconn, pstmt, rs);
 		} 
@@ -376,7 +376,7 @@ public class MemberHandler {
 
 			pstmt.close();
 		} catch(Exception e){
-			LOGGER.info(e.toString());
+			System.out.println(e.toString());
 		} finally {
 			dbCon.close(pconn, pstmt);
 		} 
@@ -403,7 +403,7 @@ public class MemberHandler {
 			
 			pstmt.close();
 		} catch(Exception e){
-			LOGGER.info(e.toString());
+			System.out.println(e.toString());
 		} finally {
 			dbCon.close(pconn, pstmt);
 		} 
@@ -446,7 +446,7 @@ public class MemberHandler {
 			rs.close();
 			pstmt.close();
 		}catch(Exception e){
-			LOGGER.info("Member Handler isEmailExist err:"+e);
+			System.out.println("Member Handler isEmailExist err:"+e);
 		} finally {
 			dbCon.close(pconn, pstmt, rs);
 		} 
