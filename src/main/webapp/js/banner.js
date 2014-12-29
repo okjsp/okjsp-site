@@ -64,8 +64,8 @@ showAside : function() {
 	//document.writeln('<a href="/f.jsp?http://www.ebrain.kr/2014/10/egovframewok-kenu/" target="okjsp_acdm"><img src="/images/banner/banner_okjsp_160x160_141021.jpg" style="width:160px"></a>');
 	//document.writeln('<a href="/f.jsp?http://www.okjsp.net/seq/264295" target="egov"><img src="/images/banner/banner_egov_super_160_141030.png" style="width:160px"></a>');
 	document.writeln('<a href="/f.jsp?http://www.okjsp.net/seq/266076"><img src="/images/banner/banner_eml_160x80_141124.jpg" style="width:160px"></a>');
-	//document.writeln('<a href="/f.jsp?http://tech.eventdirectory.kr/" target="ted"><img src="/images/banner/banner_ted_160x80_141023.jpg" style="width:160px"></a>');
-	document.writeln('<a href="/f.jsp?http://www.ceart.kr/index.html" target="ceart"><img src="/images/banner/banner_platform_141219(160).jpg" style="width:160px"></a>');
+	document.writeln('<a href="/f.jsp?http://tech.eventdirectory.kr/" target="ted"><img src="/images/banner/banner_ted_160x80_141023.jpg" style="width:160px"></a>');
+	//document.writeln('<a href="/f.jsp?http://www.ceart.kr/index.html" target="ceart"><img src="/images/banner/banner_platform_141219(160).jpg" style="width:160px"></a>');
 },
 
 showAsideBottom : function() {
