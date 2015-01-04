@@ -11,7 +11,7 @@
 <html lang="ko">
 <head>
     <meta charset="utf-8">
-    <title>NEW OKJSP 2014</title>
+    <title>NEW OKJSP 2015</title>
     <link rel="stylesheet" type="text/css" href="/css/skin.css">
 	<script type="text/javascript" src="/js/jquery/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="/js/jquery/jquery.timeago.js"></script>
