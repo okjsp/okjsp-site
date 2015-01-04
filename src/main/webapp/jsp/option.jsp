@@ -11,6 +11,7 @@
 <option value="institute">학원</option>
 <option value="html5">HTML5</option>
 <option value="android">안드로이드</option>
+<option value="technews">기술 뉴스</option>
 <option value="techtrend">TECH TREND</option>
 <option value="TOOL">개발툴</option>
 <option value="TOOLqna">개발툴 QnA</option>
@@ -19,7 +20,7 @@
 <option value="bbs6">사는 얘기</option>
 <option value="howmuch">얼마면돼</option>
 <option value="lifeqna">토론/기타 QnA</option>
-<option value="news">뉴스따라잡기</option>
+<option value="news">시사 뉴스</option>
 <option value="critical">정치 얘기</option>
 <option value="lecture">강좌</option>
 <option value="solo">싱글의 미학</option>
