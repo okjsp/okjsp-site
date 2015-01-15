@@ -39,7 +39,7 @@ Banner.show();
 <li>
 <!-- 프리랜서 가이드라인 배너 
 <a href="/f.jsp?http://www.okjsp.net/bbs?act=LIST&bbs=guideline"><img src="/images/banner/okjsp_banner_guideline_140828.jpg"></a>-->
-<a href="/f.jsp?http://sw.kcu.ac/" target="_kcu"><img src="/images/banner/banner_kcu_141208(600).jpg"></a>
+<a href="/f.jsp?http://www.yes24.com/eWorld/EventWorld/Event?eventno=106532" target="_hanbit"><img src="/images/banner/banner_hb_150115_600x200.jpg"></a>
 </li>
 </ul>
 </div>
