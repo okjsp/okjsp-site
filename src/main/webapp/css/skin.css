@@ -615,7 +615,7 @@ input, select, textarea {
 }
 
 .content img {
-	margin: 3px;
+	margin: 0px;
 }
 
 #tech, #life {
